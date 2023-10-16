@@ -1,0 +1,31 @@
+{% comment %}
+
+  This snippet is used for rendering the icons
+  The style of the icon could be filled or outlined
+
+  icon - "string" *required,
+  style - "string" optional
+
+  Usage:
+
+  {%- render 'icon',
+      icon: your_id,
+      style: your_id
+  -%}
+
+{% endcomment %}
+
+{% style %}
+  .palette-one .fa, .palette-one .far {
+    color: var(--color-primary, #0B1A26);
+  }
+  .palette-two .fa, .palette-two .far {
+    color: var(--color-primary-2, #FFFFFF);
+  }
+{% endstyle %}
+
+{% unless icon == "empty" %}
+  <span class="icon">
+    <i class="{% if style == "outline" %}far{% else %}fa{% endif %} fa-{{- icon -}}" aria-hidden="true"></i>
+  </span>
+{% endunless %}

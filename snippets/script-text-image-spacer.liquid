@@ -1,0 +1,28 @@
+<script>
+  const sections = document.querySelectorAll('.text-image'),
+        first = 'palette-one',
+        second = 'palette-two';
+
+  sections.forEach(section => {
+    const children = [...section.children];
+
+    children.forEach(child => {
+      if(!child.classList.contains('text-image__spacer')) return false;
+
+      const prev = section.previousElementSibling;
+
+      if(!prev) return false;
+
+      const prevChildren = [...prev.children];
+
+      prevChildren.forEach(item => {
+        const isFirst = item.classList.contains(first),
+              isSecond = item.classList.contains(second);
+
+        return isFirst ? child.classList.replace(second, first)
+             : isSecond ? child.classList.replace(first, second)
+             : false;
+      })
+    })
+  })
+</script>

@@ -1,0 +1,73 @@
+{%- style -%}
+  bq-date-picker {
+    --date-picker-border-radius: var(--border-radius, 0);
+    --date-picker-cleanstate-padding: 11px 22px;
+    --date-picker-section-padding: 12px;
+    --date-picker-title-size: 16px;
+    --date-picker-text-size: 16px;
+    --date-picker-title-line-height: 1.5;
+    --date-picker-text-line-height: 1.5;
+
+    {%- if color_palette == "one" -%}
+      {%- if settings.background != blank -%}
+        --date-picker-background-color: {{- settings.background -}};
+      {%- endif -%}
+
+      {%- if settings.primary_color != blank -%}
+        --date-picker-text-color: {{- settings.primary_color -}};
+        --date-picker-placeholder-color: {{- settings.primary_color | append: "73" -}};
+        --date-picker-section-border: 1px solid {{ settings.primary_color | append: "26" }};
+      {%- endif -%}
+
+      {%- if settings.accent_background != blank -%}
+        --date-picker-cleanstate-background-color: {{- settings.accent_background -}};
+        --date-picker-box-shadow: 0 0 0 1px {{ settings.accent_background }};
+      {%- else -%}
+        --date-picker-cleanstate-background-color: {{- branding_color -}};
+        --date-picker-box-shadow: 0 0 0 1px {{ branding_color }};
+      {%- endif -%}
+
+      {%- if settings.accent_color != blank -%}
+        --date-picker-icon-color: {{- settings.accent_color -}};
+        --date-picker-cleanstate-text-color: {{- settings.accent_color -}};
+        --color-accent-foreground: {{- settings.accent_color -}};
+      {%- else -%}
+        --date-picker-icon-color: {%- if settings.primary_color != blank -%}{{- settings.primary_color -}}{%- endif -%};
+        --date-picker-cleanstate-text-color: {%- if settings.primary_color != blank -%}{{- settings.primary_color -}}{%- endif -%};
+        --color-accent-foreground: {%- if settings.primary_color != blank -%}{{- settings.primary_color -}}{%- endif -%};
+      {%- endif -%}
+
+    {%- elsif color_palette == "two" -%}
+      {%- if settings.background_2 != blank -%}
+        --date-picker-background-color: {{- settings.background_2 -}};
+      {%- endif -%}
+
+      {%- if settings.primary_color_2 != blank -%}
+        --date-picker-text-color: {{- settings.primary_color_2 -}};
+        --date-picker-placeholder-color: {{- settings.primary_color_2 | append: "73" -}};
+        --date-picker-section-border: 1px solid {{ settings.primary_color_2 | append: "47" }};
+      {%- endif -%}
+
+      {%- if settings.accent_background_2 != blank -%}
+        --date-picker-cleanstate-background-color: {{- settings.accent_background_2 -}};
+        --date-picker-box-shadow: 0 0 0 1px {{ settings.accent_background_2 }};
+      {%- else -%}
+        --date-picker-cleanstate-background-color: {{- branding_color -}};
+        --date-picker-box-shadow: 0 0 0 1px {{ branding_color }};
+      {%- endif -%}
+
+      {%- if settings.accent_color_2 != blank -%}
+        --date-picker-icon-color: {{- settings.accent_color_2 -}};
+        --date-picker-cleanstate-text-color: {{- settings.accent_color_2 -}};
+        --color-accent-foreground: {{- settings.accent_color_2 -}};
+      {%- else -%}
+        --date-picker-icon-color: {%- if settings.primary_color_2 != blank -%}{{- settings.primary_color_2 -}}{%- endif -%};
+        --date-picker-cleanstate-text-color: {%- if settings.primary_color_2 != blank -%}{{- settings.primary_color_2 -}}{%- endif -%};
+        --color-accent-foreground: {%- if settings.primary_color_2 != blank -%}{{- settings.primary_color_2 -}}{%- endif -%};
+      {%- endif -%}
+    {%- endif -%}
+  }
+{%- endstyle -%}
+
+<bq-date-picker></bq-date-picker>
+<bq-date-picker-modal branding-color="{{- background_accent -}}"></bq-date-picker-modal>

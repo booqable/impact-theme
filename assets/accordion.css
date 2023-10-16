@@ -1,0 +1,152 @@
+.accordion__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.accordion__wrapper--padding-top {
+  padding-top: var(--padding-top-mobile, 40px);
+}
+
+.accordion__wrapper--padding-bottom {
+  padding-bottom: var(--padding-bottom-mobile, 40px);
+}
+
+.accordion__container {
+  max-width: calc(var(--max-width-narrow) + var(--horizontal-padding, 16px) * 2);
+  position: relative;
+  z-index: 1;
+}
+
+.accordion__background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.accordion__background-wrapper svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
+.accordion__background-wrapper:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -120px;
+  right: 0;
+}
+
+.accordion__background-floral-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.accordion__background-floral-wrapper svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(-30px, 35%);
+  opacity: 0.2;
+}
+
+.accordion__background-floral-col {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.accordion__background-floral-col:last-child {
+  display: none;
+}
+
+.accordion__background-floral-col:last-child svg {
+  top: 0;
+  left: auto;
+  bottom: auto;
+  right: 0;
+  max-height: none;
+  transform: rotate(-80deg) scaleX(-1);
+}
+
+.accordion .section-header__text {
+  padding: 0 0 65px;
+}
+
+.accordion .palette-one .accordion__heading {
+  color: var(--color-primary, #0B1A26);
+}
+.accordion .palette-two .accordion__heading {
+  color: var(--color-primary-2, #FFFFFF);
+}
+
+.palette-one.accordion__wrapper {
+  background: var(--background-primary, #FFFFFF);
+  color: var(--color-third, #0B1A2666);
+}
+
+.palette-one .accordion-block__item {
+  background: var(--background-primary, #FFFFFF);
+}
+
+.palette-one .accordion__background-wrapper g,
+.palette-one .accordion__background-wrapper path,
+.palette-one .accordion__background-floral-wrapper g,
+.palette-one .accordion__background-floral-wrapper path {
+  fill: var(--color-primary, #0B1A26);
+}
+
+.palette-one .accordion__background-wrapper:after {
+  background: linear-gradient(180.44deg, var(--background-primary, #FFFFFF) 51.3%, var(--background-primary-00, #FFFFFF00) 81.06%);
+}
+
+.palette-two.accordion__wrapper {
+  background: var(--background-primary-2, #0B1A26);
+  color: var(--color-third-2, #FFFFFF66);
+}
+
+.palette-two .accordion-block__item {
+  background: var(--background-primary-2, #0B1A26);
+}
+
+.palette-two .accordion__background-wrapper g,
+.palette-two .accordion__background-wrapper path,
+.palette-two .accordion__background-floral-wrapper g,
+.palette-two .accordion__background-floral-wrapper path {
+  fill: var(--color-primary-2, #FFFFFF);
+}
+
+.palette-two .accordion__background-wrapper:after {
+  background: linear-gradient(180.44deg, var(--background-primary-2, #0B1A26) 51.3%, var(--background-primary-2-00, #0B1A2600) 81.06%);
+}
+
+@media (min-width: 667px) {
+  .accordion__background-wrapper svg {
+    height: auto;
+  }
+
+  .accordion__background-floral-col:last-child {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .accordion__wrapper--padding-top {
+    padding-top: var(--padding-top, 40px);
+  }
+
+  .accordion__wrapper--padding-bottom {
+    padding-bottom: var(--padding-bottom, 40px);
+  }
+}

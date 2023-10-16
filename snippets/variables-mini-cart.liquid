@@ -1,0 +1,47 @@
+{% style %}
+  bq-minicart-button {
+    --minicart-button-size: 22px;
+    --minicart-button-badge-size: 12px;
+    --minicart-button-border-radius: 50%;
+    --minicart-button-font-size: 14px;
+    --minicart-button-padding: 4px;
+    --minicart-button-hover-opacity: 1;
+    --minicart-button-transition-duration: var(--animation-duration, 200ms);
+    --minicart-button-font: var(--font-body, --minicart-font, sans-serif);
+
+    {%- if color_palette == "one" -%}
+      {%- if settings.primary_color != blank -%}
+        --minicart-button-color: var(--color-primary, #0B1A26);
+      {%- endif -%}
+
+      {%- if settings.accent_background != blank -%}
+        --minicart-button-accent-color: var(--background-accent, #F4B841);
+      {%- endif -%}
+
+      {% if settings.accent_color != blank %}
+        --minicart-button-badge-color: var(--color-accent, #0B1A26);
+      {% endif %}
+
+      {%- if settings.accent_outline != blank -%}
+        --minicart-button-hover-color: var(--color-outline-hover, #F4B841CC);
+      {%- endif -%}
+
+    {%- elsif color_palette == "two" -%}
+      {%- if settings.primary_color_2 != blank -%}
+        --minicart-button-color: var(--color-primary-2, #FFFFFF);
+      {%- endif -%}
+
+      {%- if settings.accent_background_2 != blank -%}
+        --minicart-button-accent-color: var(--background-accent-2, #F4B841);
+      {%- endif -%}
+
+      {% if settings.accent_color_2 != blank %}
+        --minicart-button-badge-color: var(--color-accent-2, #FFFFFF);
+      {% endif %}
+
+      {%- if settings.accent_outline_2 != blank -%}
+        --minicart-button-hover-color: var(--color-outline-2-hover, #F4B841CC);
+      {%- endif -%}
+    {%- endif -%}
+  }
+{% endstyle %}

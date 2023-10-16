@@ -1,0 +1,91 @@
+{% comment %}
+
+  This snippet is used for rendering the menus
+
+  items - { blocks } *required,
+  toggler - "string" *required,
+  sticky - boolean optional
+
+  Usage:
+
+  {%- render 'sidebar',
+      items: your_id,
+      toggler: your_id,
+      sticky: your_id
+  -%}
+
+{% endcomment %}
+
+{{ "sidebar.css" | asset_url | stylesheet_tag }}
+
+<input type="checkbox" id="sidebar-mobile-opener" style="display: none;">
+<label for="sidebar-mobile-opener" class="sidebar__nav-opener">
+  {{- toggler -}}
+
+  <i class="sidebar__nav-opener-icon">
+    {%- render 'icon-arrow-right' -%}
+  </i>
+</label>
+
+<nav class="sidebar__nav{% if sticky %} sidebar__nav--sticky{%- endif -%}">
+  {%- for item in items -%}
+    {%- assign heading = item.settings.heading -%}
+    {%- assign menu    = item.settings.menu -%}
+
+    {%- if menu != blank -%}
+      <div class="sidebar__menu" id="{{ item.id }}">
+        {%- if heading != blank -%}
+          <h2 class="sidebar__heading"> {{- heading -}} </h2>
+        {%- endif -%}
+
+        <ul class="sidebar__menu-list">
+          {%- for link in menu.items -%}
+            {%- assign link_index = forloop.index -%}
+
+            {%- if link != blank -%}
+              <li class="sidebar__menu-item">
+                <a href="{{ link.url }}" class="sidebar__menu-link">{{- link.title -}}</a>
+
+                {%- if link.items_count > 0 -%}
+                  <input type="checkbox" id="side-menu-opener-{{- link_index -}}-{{ item.id }}" style="display: none;">
+                  <label for="side-menu-opener-{{- link_index -}}-{{ item.id }}" class="sidebar__menu-opener"></label>
+
+                  <div class="sidebar__menu-wrapper" style="display: none;">
+                    <ul class="sidebar__menu-list">
+                      {%- for childlink in link.items -%}
+                        {%- assign childlink_index = forloop.index -%}
+
+                        {%- if childlink != blank -%}
+                          <li class="sidebar__menu-item">
+                            <a href="{{ childlink.url }}" class="sidebar__menu-link">{{- childlink.title -}}</a>
+
+                            {%- if childlink.items_count > 0 -%}
+                              <input type="checkbox" id="side-menu-opener-{{- link_index -}}-{{- childlink_index -}}-{{ item.id }}" style="display: none;">
+                              <label for="side-menu-opener-{{- link_index -}}-{{- childlink_index -}}-{{ item.id }}" class="sidebar__menu-opener"></label>
+
+                              <div class="sidebar__menu-wrapper">
+                                <ul class="sidebar__menu-list">
+                                  {%- for grandchildlink in childlink.items -%}
+                                    {%- if grandchildlink != blank -%}
+                                      <li class="sidebar__menu-item">
+                                        <a href="{{ grandchildlink.url }}" class="sidebar__menu-link">{{- grandchildlink.title -}}</a>
+                                      </li>
+                                    {%- endif -%}
+                                  {%- endfor -%}
+                                </ul>
+                              </div>
+                            {%- endif -%}
+                          </li>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                {%- endif -%}
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</nav>

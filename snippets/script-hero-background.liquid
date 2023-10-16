@@ -1,0 +1,29 @@
+<script>
+  const setColor = () => {
+    const section = document.querySelector('.hero').nextElementSibling,
+          body = document.querySelector('body'),
+          target = document.querySelector('.hero__overlay');
+
+    if (section) {
+      const children = [...section.children],
+            first = 'palette-one',
+            second = 'palette-two';
+
+      children.forEach(child => {
+        const isFirst = child.classList.contains(first),
+              isSecond = child.classList.contains(second);
+
+        return isFirst ? target.classList.add(first)
+             : isSecond ? target.classList.add(second)
+             : false;
+      })
+    } else {
+      const res = getComputedStyle(body).backgroundColor;
+
+      target.style.setProperty('background-color',`${res}`);
+    }
+  }
+
+  setTimeout(setColor, 350);
+
+</script>

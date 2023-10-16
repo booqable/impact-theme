@@ -1,0 +1,305 @@
+{%- assign show_bar = section.settings.show_bar -%}
+
+{%- if show_bar -%}
+  {{ "top-bar.css" | asset_url | stylesheet_tag }}
+
+  {%- assign icon                  = section.settings.icon -%}
+  {%- assign bar_text              = section.settings.bar_text -%}
+  {%- assign bar_message           = section.settings.bar_message -%}
+  {%- assign bar_menu              = section.settings.bar_menu -%}
+  {%- assign color_palette         = section.settings.color_palette -%}
+  {%- assign padding_top           = section.settings.padding_top -%}
+  {%- assign padding_bottom        = section.settings.padding_bottom -%}
+  {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+  {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+
+  {% comment %} CSS variables start {% endcomment %}
+  {%- capture variables -%}
+    {%- case padding_top -%}
+      {%- when 'small' -%}
+        --padding-top: 4px;
+      {%- when 'medium' -%}
+        --padding-top: 9px;
+      {%- when 'large' -%}
+        --padding-top: 12px;
+    {%- endcase -%}
+
+    {%- case padding_bottom -%}
+      {%- when 'small' -%}
+        --padding-bottom: 4px;
+      {%- when 'medium' -%}
+        --padding-bottom: 9px;
+      {%- when 'large' -%}
+        --padding-bottom: 12px;
+    {%- endcase -%}
+
+    {%- case padding_top_mobile -%}
+      {%- when 'small' -%}
+        --padding-top-mobile: 4px;
+      {%- when 'medium' -%}
+        --padding-top-mobile: 9px;
+      {%- when 'large' -%}
+        --padding-top-mobile: 12px;
+    {%- endcase -%}
+
+    {%- case padding_bottom_mobile -%}
+      {%- when 'small' -%}
+        --padding-bottom-mobile: 4px;
+      {%- when 'medium' -%}
+        --padding-bottom-mobile: 9px;
+      {%- when 'large' -%}
+        --padding-bottom-mobile: 12px;
+    {%- endcase -%}
+  {%- endcapture -%}
+  {% comment %} CSS variables end {% endcomment %}
+
+  <div
+    class="top-bar__wrapper{% if color_palette != blank %} palette-{{ color_palette }}{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} top-bar__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} top-bar__wrapper--padding-bottom{%- endif -%}"
+    style="{{- variables | escape -}}"
+  >
+    <div class="top-bar__container container">
+      <div class="top-bar__info">
+        {%- render 'icon', icon: icon -%}
+
+        {%- if bar_text != blank -%}
+          <span class="top-bar__text top-bar__message">
+            {{- bar_text -}}
+          </span>
+        {%- endif -%}
+      </div>
+
+      <span class="top-bar__text">
+        {%- if bar_message != blank -%}
+          {{- bar_message -}}
+        {%- endif -%}
+      </span>
+
+      <nav class="top-bar__menu">
+        {%- if bar_menu != blank -%}
+          <ul class="top-bar__menu-list">
+            {%- for link in bar_menu.items -%}
+              {%- if link != blank -%}
+                <li class="top-bar__menu-item">
+                  <a href="{{ link.url }}" class="top-bar__menu-link">
+                    {{- link.title -}}
+                  </a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </nav>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Top bar",
+    "tag": "section",
+    "class": "top-bar",
+    "templates": [],
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_bar",
+        "default": true,
+        "label": "Show top bar"
+      },
+      {
+        "type": "select",
+        "id": "color_palette",
+        "label": "Color palette",
+        "options": [
+          {
+            "value": "one",
+            "label": "Color set 1"
+          },
+          {
+            "value": "two",
+            "label": "Color set 2"
+          },
+          {
+            "value": "three",
+            "label": "Color set 3"
+          }
+        ],
+        "default": "three"
+      },
+      {
+        "type": "contentEditor",
+        "id": "bar_message",
+        "label": "Main message",
+        "default": "Free shipping from €50"
+      },
+      {
+        "type": "select",
+        "id": "icon",
+        "label": "Icon",
+        "options": [
+          {
+            "value": "empty",
+            "label": "No icon"
+          },
+          {
+            "value": "address-card",
+            "label": "Address card"
+          },
+          {
+            "value": "calendar",
+            "label": "Calendar"
+          },
+          {
+            "value": "clock-o",
+            "label": "Clock"
+          },
+          {
+            "value": "comments",
+            "label": "Comments"
+          },
+          {
+            "value": "credit-card-alt",
+            "label": "Credit card"
+          },
+          {
+            "value": "envelope",
+            "label": "Envelope"
+          },
+          {
+            "value": "exclamation",
+            "label": "Exclamation"
+          },
+          {
+            "value": "fax",
+            "label": "Fax"
+          },
+          {
+            "value": "globe",
+            "label": "Globe"
+          },
+          {
+            "value": "info",
+            "label": "Info"
+          },
+          {
+            "value": "phone",
+            "label": "Phone"
+          },
+          {
+            "value": "tag",
+            "label": "Tag"
+          },
+          {
+            "value": "warning",
+            "label": "Warning"
+          }
+        ],
+        "default": "phone"
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "contentEditor",
+        "id": "bar_text",
+        "label": "Secondary message",
+        "default": "Call Us 24/7 <a href=\"+1 755 302 8549\">+1 755 302 8549</a>"
+      },
+      {
+        "type": "menu",
+        "id": "bar_menu",
+        "label": "Menu",
+        "info": "Use menus with a maximum of a couple of links"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,146 @@
+{
+  "name": "Contact",
+  "sections": {
+    "contact-form": {
+      "type": "contact-form",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-tough-building-2.jpg",
+            "image_align": "top"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "image"
+      ],
+      "settings": {
+        "color_palette": "two",
+        "description": "Tell something about your company, describe what you do and what makes you unique.",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "placement": "left",
+        "title": "Contact us"
+      },
+      "disabled": null
+    },
+    "columns": {
+      "type": "columns",
+      "blocks": {
+        "column": {
+          "type": "column",
+          "settings": {
+            "button_label": "hello@info.com",
+            "button_style": "secondary",
+            "button_url": "{{ \"mailto:hello@info.com\" }}",
+            "icon": "envelope",
+            "title": "Email",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero."
+          },
+          "disabled": null
+        },
+        "column_785236": {
+          "type": "column",
+          "settings": {
+            "button_label": "+1 (555) 000-0000",
+            "button_style": "secondary",
+            "button_url": "{{ \"tel:+1 (555) 000-0000\" }}",
+            "icon": "phone",
+            "title": "Phone",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero."
+          },
+          "disabled": null
+        },
+        "column_789654": {
+          "type": "column",
+          "settings": {
+            "button_label": "123 Sample St, London Eng 2000 UK",
+            "icon": "map-marker",
+            "title": "Office",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero."
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "column",
+        "column_785236",
+        "column_789654"
+      ],
+      "settings": {
+        "color_palette": "one",
+        "grid": "three",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large"
+      },
+      "disabled": false
+    },
+    "title": {
+      "type": "title",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "bg_text": "",
+        "button_label": "",
+        "button_url": "",
+        "color_palette": "one",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "tag": "OUR OFFICES",
+        "title": "Visit our stores"
+      },
+      "disabled": null
+    },
+    "locations": {
+      "type": "locations",
+      "blocks": {
+        "tab": {
+          "type": "tab",
+          "settings": {},
+          "disabled": null
+        },
+        "tab_257387": {
+          "type": "tab",
+          "settings": {},
+          "disabled": null
+        },
+        "tab_257388": {
+          "type": "tab",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "tab",
+        "tab_257387",
+        "tab_257388"
+      ],
+      "settings": {
+        "color_palette": "one",
+        "icon": "booqable://assets/image-tough-marker.png",
+        "opener": "List of locations",
+        "placement": "right",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium"
+      },
+      "disabled": false
+    }
+  },
+  "order": [
+    "contact-form",
+    "columns",
+    "title",
+    "locations"
+  ]
+}

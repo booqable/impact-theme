@@ -1,0 +1,93 @@
+{% comment %}
+
+  This snippet is used for rendering the social networks icons
+
+  Usage:
+
+  {%- include 'socials' -%}
+
+{% endcomment %}
+
+{% style %}
+  .social-networks {
+    display: flex;
+    margin: 0 calc(-1 * var(--social-spacing, 6px));
+  }
+
+  .social-networks__item {
+    margin: 0 var(--social-spacing, 6px);
+  }
+{% endstyle %}
+
+<ul class="social-networks">
+  {% if settings.social_facebook_link != blank %}
+    <li class="social-networks__item">
+      <a href="{{ settings.social_facebook_link }}" target="_blank" class="social-networks__link">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if settings.social_instagram_link != blank %}
+    <li class="social-networks__item">
+      <a href="{{ settings.social_instagram_link }}" target="_blank" class="social-networks__link">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if settings.social_twitter_link != blank %}
+    <li class="social-networks__item">
+      <a href="{{ settings.social_twitter_link }}" target="_blank" class="social-networks__link">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if settings.social_linkedin_link != blank %}
+    <li class="social-networks__item">
+      <a href="{{ settings.social_linkedin_link }}" target="_blank" class="social-networks__link">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if settings.social_pinterest_link != blank %}
+    <li class="social-networks__item">
+      <a href="{{ settings.social_pinterest_link }}" target="_blank" class="social-networks__link">
+        <i class="fa-brands fa-pinterest"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if settings.social_tiktok_link != blank %}
+    <li class="social-networks__item">
+      <a href="{{ settings.social_tiktok_link }}" target="_blank" class="social-networks__link">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if settings.social_tumblr_link != blank %}
+    <li class="social-networks__item">
+      <a href="{{ settings.social_tumblr_link }}" target="_blank" class="social-networks__link">
+        <i class="fa-brands fa-tumblr"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if settings.social_snapchat_link != blank %}
+    <li class="social-networks__item">
+      <a href="{{ settings.social_snapchat_link }}" target="_blank" class="social-networks__link">
+        <i class="fa-brands fa-snapchat"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if settings.social_youtube_link != blank %}
+    <li class="social-networks__item">
+      <a href="{{ settings.social_youtube_link }}" target="_blank" class="social-networks__link">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if settings.social_vimeo_link != blank %}
+    <li class="social-networks__item">
+      <a href="{{ settings.social_vimeo_link }}" target="_blank" class="social-networks__link">
+        <i class="fa-brands fa-vimeo"></i>
+      </a>
+    </li>
+  {% endif %}
+</ul>

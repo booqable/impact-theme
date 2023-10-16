@@ -1,0 +1,62 @@
+{% comment %}
+
+  This snippet is used for rendering the accordion
+
+  blocks - { object } *required,
+  behavior - "string" *required
+
+  Usage:
+
+  {%- render 'accordion-block',
+      blocks: blocks,
+      behavior: your_id
+  -%}
+
+{% endcomment %}
+
+{%- if blocks.size > 0 -%}
+  <ul class="accordion-block">
+    {%- for block in blocks -%}
+      {%- assign heading = block.settings.heading -%}
+      {%- assign content = block.settings.content -%}
+
+      {% case block.type %}
+        {% when "details" %}
+          {%- assign heading = "Details" -%}
+          {%- assign content = block.settings.details -%}
+
+        {% when "shipping" %}
+          {%- assign heading = "Shipping" -%}
+          {%- assign content = block.settings.shipping -%}
+
+        {% when "returns" %}
+          {%- assign heading = "Returns" -%}
+          {%- assign content = block.settings.returns -%}
+      {% endcase %}
+
+      <li class="accordion-block__item" id="{{- block.id -}}">
+        {%- if heading != blank -%}
+          <input
+            {% if behavior == "single" %}type="radio"{% else %}type="checkbox"{% endif %}
+            class="accordion-block__trigger"
+            id="accordion-block-{{- block.id -}}"
+            name="accordion trigger"
+          />
+
+          <h3 class="accordion-block__heading">
+            <label class="accordion-block__label" for="accordion-block-{{- block.id -}}">
+              {{- heading -}}
+              {%- render 'icon-arrow-right' -%}
+            </label>
+          </h3>
+        {%- endif -%}
+
+        {%- if content != blank -%}
+          <div class="accordion-block__content">
+            <p>{{- content -}}</p>
+          </div>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}

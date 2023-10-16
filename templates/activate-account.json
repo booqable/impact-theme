@@ -1,0 +1,18 @@
+{
+  "name": "Activate account",
+  "layout": "session",
+  "sections": {
+    "activate-account": {
+      "type": "activate-account",
+      "blocks": {},
+      "settings": {
+        "color_palette": "one",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large"
+      }
+    }
+  },
+  "order": ["activate-account"]
+}

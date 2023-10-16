@@ -1,0 +1,115 @@
+{% comment %}
+
+  This snippet is used for rendering the product
+
+  product - { product } *required,
+  placeholder - image optional,
+  focal - boolean optional,
+  img_size - string optional,
+  show_excerpt - boolean *required
+
+  Usage:
+
+  {%- render 'product-card',
+      product: your_id,
+      placeholder: your_id,
+      focal: your_id,
+      img_size: your_string,
+      show_excerpt: true
+  -%}
+
+{% endcomment %}
+
+{%- assign id      = "" -%}
+{%- assign url     = "" -%}
+{%- assign image   = "" -%}
+{%- assign name    = "" -%}
+{%- assign excerpt = "" -%}
+{%- assign points  = "" -%}
+{%- assign price   = "" -%}
+{%- assign period  = "" -%}
+
+{%- if product != blank -%}
+  {%- if product.images != blank -%}
+    {%- assign image = product.images.first -%}
+  {%- elsif placeholder != blank -%}
+    {%- assign image = placeholder -%}
+  {%- else -%}
+    {%- assign image = blank -%}
+  {%- endif -%}
+
+  {%- if img_size == blank -%}
+    {%- assign img_size = 'm' -%}
+  {%- endif -%}
+
+  {% if focal %}
+    {%- assign points = image.coordinates -%}
+  {% endif %}
+
+  {%- assign id      = product.id -%}
+  {%- assign url     = product.url -%}
+  {%- assign name    = product.name -%}
+  {%- assign excerpt = product.description | truncate: 118, " ..." -%}
+  {%- assign price   = product | product_price -%}
+  {%- assign period  = product | product_price_label -%}
+
+{%- else -%}
+  {%- if placeholder != blank -%}
+    {%- assign image = placeholder -%}
+  {%- else -%}
+    {%- assign image = blank -%}
+  {%- endif -%}
+
+  {%- assign name    = "Product name" -%}
+  {%- assign excerpt = "Product description" -%}
+  {%- assign price   = "$50.00" -%}
+  {%- assign period  = "1 day" -%}
+{%- endif -%}
+
+<div class="product-card" {% if id != blank %}id="{{- id -}}"{%- endif -%}>
+  <div class="product-card__vision{% unless image != blank %} no-image{%- endunless -%}">
+    {%- if image.url != blank -%}
+      {%- render 'image',
+        image: image,
+        loading: 'lazy',
+        class: 'product-card__image',
+        focal: points,
+        size: img_size
+      -%}
+    {%- endif -%}
+
+    {%- if product != blank -%}
+      <a class="product-card__link" href="{{ url }}"></a>
+    {%- endif -%}
+  </div>
+
+  <div class="product-card__meta">
+    <div class="product-card__availability">
+      {%- if product != blank -%}
+        {{- product | product_availability -}}
+      {%- endif -%}
+    </div>
+
+    <h3 class="product-card__title">
+      {%- if product != blank -%}
+        <a class="product-card__link" href="{{ url }}">
+      {%- endif -%}
+          {{- name -}}
+      {%- if product != blank -%}
+        </a>
+      {%- endif -%}
+    </h3>
+
+    {%- if excerpt != blank and show_excerpt -%}
+      <div class="product-card__description">{{- excerpt -}}</div>
+    {%- endif -%}
+
+    <div class="product-card__price-info">
+      <div class="product-card__price-wrapper">
+        <span class="product-card__price">{{- price -}}</span>
+        <span class="product-card__price-separator">/</span>
+        <span class="product-card__period">{{- period -}}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,114 @@
+{
+  "name": "Product",
+  "sections": {
+    "hero-product": {
+      "type": "hero-product",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_palette": "two",
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_datepicker": true
+      },
+      "disabled": null
+    },
+    "product-page": {
+      "type": "product-page",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "breadcrumbs_label": "",
+        "breadcrumbs_url": "collections",
+        "infinity_scroll": true,
+        "color_palette": "one",
+        "message_label": "Free shipping over $50",
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_breadcrumbs": true,
+        "show_controls": true,
+        "show_thumbnails": true,
+        "variation_label": "Variant"
+      },
+      "disabled": null
+    },
+    "title": {
+      "type": "title",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "",
+        "button_url": "",
+        "color_palette": "one",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "tag": "",
+        "title": "Rent together with"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123455": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123456": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123457": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123452": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product",
+        "product_123455",
+        "product_123456",
+        "product_123457",
+        "product_123452"
+      ],
+      "settings": {
+        "color_palette": "one",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_carousel": true,
+        "show_excerpt": true,
+        "show_navigation": true,
+        "show_pagination": true,
+        "timer": 5
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero-product",
+    "product-page",
+    "title",
+    "products"
+  ]
+}

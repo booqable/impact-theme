@@ -1,0 +1,48 @@
+{% comment %}
+
+  This snippet is used for rendering the pagination buttons
+
+  Usage:
+
+  {%- include 'pagination' -%}
+
+{% endcomment %}
+
+{{ "pagination.css" | asset_url | stylesheet_tag }}
+
+{%- assign parts  = paginate.parts -%}
+{%- assign prev   = paginate.previous -%}
+{%- assign next   = paginate.next -%}
+
+<div class="pagination">
+  <span class="prev" data-enabled="{%- if prev != blank -%}true{%- else -%}false{%- endif -%}">
+    <a href="{%- if prev != blank -%}{{  prev.url }}{%- else -%}#!{%- endif -%}">
+      {%- render 'icon-arrow-right' -%}
+    </a>
+  </span>
+
+  {%- for part in parts -%}
+    {%- assign title_to_page = part.title | times: 1 -%}
+    {%- assign current_to_page = paginate.current_page | times: 1 -%}
+
+    {%- if part.is_link -%}
+      <span class="page">
+        {{- part.title | link_to: part.url -}}
+      </span>
+    {%- elsif current_to_page == title_to_page -%}
+      <span class="page current">
+        {{- part.title -}}
+      </span>
+    {%- else -%}
+      <span class="deco">
+        {{- part.title -}}
+      </span>
+    {%- endif -%}
+  {%- endfor -%}
+
+  <span class="next" data-enabled="{%- if next != blank -%}true{%- else -%}false{%- endif -%}">
+    <a href="{%- if next != blank -%}{{ next.url }}{%- else -%}#!{%- endif -%}">
+      {%- render 'icon-arrow-right' -%}
+    </a>
+  </span>
+</div>

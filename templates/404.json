@@ -1,0 +1,23 @@
+{
+  "name": "404",
+  "sections": {
+    "404": {
+      "type": "404",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_palette": "two",
+        "description": "Sorry, there's <b>nothing here</b>",
+        "button_label": "Go Home",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "404"
+  ]
+}

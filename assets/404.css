@@ -1,0 +1,170 @@
+.error-404 {
+  overflow: hidden;
+  position: relative;
+}
+
+.error-404__content {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-404__content--padding-top {
+  padding-top: var(--padding-top-mobile, 40px);
+}
+
+.error-404__content--padding-bottom {
+  padding-bottom: var(--padding-bottom-mobile, 60px);
+}
+
+.error-404__container {
+  position: relative;
+  z-index: 1;
+}
+
+.error-404__title {
+  font-size: clamp(72px, 10.3vw, 148px);
+  font-weight: var(--font-weight-light, 300);
+  line-height: var(--line-height-sm, 1.2);
+  text-align: center;
+  color: currentColor;
+}
+
+.error-404__description {
+  font-size: clamp(24px, 2.7vw, 40px);
+  font-weight: var(--font-weight-medium, 500);
+  line-height: var(--line-height-sm, 1.2);
+  text-align: center;
+  color: currentColor;
+  padding: 0 0 20px;
+}
+
+.error-404__description b {
+  font-weight: inherit;
+}
+
+.error-404__buttons {
+  padding: 18px 0 0;
+  margin-bottom: calc(-1 * var(--button-margin-bottom, 16px));
+  text-align: center;
+}
+
+.error-404__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.error-404__background-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.error-404__background-wrapper svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  min-width: 100%;
+  opacity: 0.1;
+}
+
+.error-404__background-floral-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.error-404__background-floral-wrapper svg {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  opacity: 0.2;
+  max-height: 100%;
+}
+
+.error-404__background-floral-col {
+  position: relative;
+  width: 100%;
+}
+
+.error-404__background-floral-col:first-child {
+  display: none;
+}
+
+.error-404__background-floral-col:first-child svg {
+  transform:rotate(180deg);
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  max-height: none;
+}
+
+.palette-one.error-404__content {
+  background: var(--background-primary, #FFFFFF);
+  color: var(--color-primary, #0B1A26);
+}
+
+.palette-one .error-404__description b {
+  color: var(--color-outline, #F4B841);
+}
+
+.palette-one .error-404__background-wrapper::after {
+  background: linear-gradient(173.19deg, var(--background-primary, #FFFFFF) 33.02%, var(--background-primary-00, #FFFFFF00) 93.23%);
+}
+
+.palette-one .error-404__background g,
+.palette-one .error-404__background path {
+  fill: var(--color-primary, #0B1A26);
+}
+
+.palette-two.error-404__content {
+  background: var(--background-primary-2, #0B1A26);
+  color: var(--color-primary-2, #FFFFFF);
+}
+
+.palette-two .error-404__description b {
+  color: var(--color-outline-2, #F4B841);
+}
+
+.palette-two .error-404__background-wrapper::after {
+  background: linear-gradient(173.19deg, var(--background-primary-2, #0B1A26) 33.02%, var(--background-primary-2-00, #0B1A2600) 93.23%);
+}
+
+.palette-two .error-404__background g,
+.palette-two .error-404__background path {
+  fill: var(--color-primary-2, #FFFFFF);
+}
+
+@media (min-width: 768px) {
+  .error-404__background-floral-col:first-child {
+    display: block;
+  }
+}
+
+@media (min-width: 810px) {
+  .error-404__background-wrapper svg {
+    min-height: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .error-404__content--padding-top {
+    padding-top: var(--padding-top, 50px);
+  }
+
+  .error-404__content--padding-bottom {
+    padding-bottom: var(--padding-bottom, 90px);
+  }
+}
+

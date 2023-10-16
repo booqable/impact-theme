@@ -1,0 +1,13 @@
+{%- if settings.heading_font != blank or settings.body_font != blank or settings.tagline_font != blank -%}
+  <link rel="preconnect" href="https://fonts.bunny.net">
+{%- endif -%}
+
+{%- if settings.heading_font != blank -%}
+  {{- settings.heading_font | font_link -}}
+{%- endif -%}
+{%- if settings.body_font != blank -%}
+  {{- settings.body_font | font_link -}}
+{%- endif -%}
+{%- if settings.tagline_font != blank -%}
+  {{- settings.tagline_font | font_link =}}
+{%- endif -%}

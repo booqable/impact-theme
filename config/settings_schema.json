@@ -1,0 +1,455 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Tough",
+    "theme_version": "0.1.0",
+    "theme_author": "Booqable"
+  },
+  {
+    "name": "General styling",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Element design"
+      },
+      {
+        "type": "paragraph",
+        "content": "Adjust the design of various elements throughout your website, including product cards and collection cards"
+      },
+      {
+        "type": "select",
+        "id": "element_design",
+        "options": [
+          {
+            "value": "modern",
+            "label": "Modern"
+          },
+          {
+            "value": "classic",
+            "label": "Classic"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Background style"
+      },
+      {
+        "type": "paragraph",
+        "content": "Show subtle background images on various sections of your website"
+      },
+      {
+        "type": "select",
+        "id": "background_style",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "cubes",
+            "label": "Isometric cubes"
+          },
+          {
+            "value": "floral",
+            "label": "Floral elements"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Note: If the accent colors are not set the company branding color will be applied instead"
+      },
+      {
+        "type": "header",
+        "content": "Color set 1"
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background"
+      },
+      {
+        "type": "color",
+        "id": "primary_color",
+        "label": "Primary text"
+      },
+      {
+        "type": "color",
+        "id": "secondary_color",
+        "label": "Secondary text"
+      },
+      {
+        "type": "color",
+        "id": "accent_background",
+        "label": "Accent background",
+        "info": "Used as a background of solid buttons, date picker, etc."
+      },
+      {
+        "type": "color",
+        "id": "accent_color",
+        "label": "Accent text",
+        "info": "Used for text on top of the accent background"
+      },
+      {
+        "type": "color",
+        "id": "accent_outline",
+        "label": "Accent outline",
+        "info": "Also used for accent text without background"
+      },
+      {
+        "type": "color",
+        "id": "overlay_background",
+        "label": "Alternative background",
+        "info": "Used to make text readable on top of the background images"
+      },
+      {
+        "type": "color",
+        "id": "overlay_color",
+        "label": "Alternative color",
+        "info": "Used for text on top of the background images"
+      },
+      {
+        "type": "header",
+        "content": "Color set 2"
+      },
+      {
+        "type": "color",
+        "id": "background_2",
+        "label": "Background"
+      },
+      {
+        "type": "color",
+        "id": "primary_color_2",
+        "label": "Primary text"
+      },
+      {
+        "type": "color",
+        "id": "secondary_color_2",
+        "label": "Secondary text"
+      },
+      {
+        "type": "color",
+        "id": "accent_background_2",
+        "label": "Accent background",
+        "info": "Used as a background of solid buttons, date picker, etc."
+      },
+      {
+        "type": "color",
+        "id": "accent_color_2",
+        "label": "Accent text",
+        "info": "Used for text on top of the accent background"
+      },
+      {
+        "type": "color",
+        "id": "accent_outline_2",
+        "label": "Accent outline",
+        "info": "Also used for accent text without background"
+      },
+      {
+        "type": "color",
+        "id": "overlay_background_2",
+        "label": "Alternative background",
+        "info": "Used to make text readable on top of the background images"
+      },
+      {
+        "type": "color",
+        "id": "overlay_color_2",
+        "label": "Alternative color",
+        "info": "Used for text on top of the background images"
+      },
+      {
+        "type": "header",
+        "content": "Color set 3"
+      },
+      {
+        "type": "paragraph",
+        "content": "Used for sections like 'Top bar' and 'Call to action'"
+      },
+      {
+        "type": "color",
+        "id": "background_3",
+        "label": "Background"
+      },
+      {
+        "type": "color",
+        "id": "primary_color_3",
+        "label": "Primary text"
+      },
+      {
+        "type": "color",
+        "id": "secondary_color_3",
+        "label": "Secondary text"
+      },
+      {
+        "type": "color",
+        "id": "accent_background_3",
+        "label": "Accent background",
+        "info": "Used as a background of solid buttons, etc."
+      },
+      {
+        "type": "color",
+        "id": "accent_color_3",
+        "label": "Accent text",
+        "info": "Used for text on top of the accent background"
+      },
+      {
+        "type": "color",
+        "id": "accent_outline_3",
+        "label": "Accent outline",
+        "info": "Also used for accent text without background"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Font family"
+      },
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Heading",
+        "info": "Font used for headers"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_font",
+        "label": "Body",
+        "info": "Font used for texts"
+      },
+      {
+        "type": "font_picker",
+        "id": "tagline_font",
+        "label": "Tagline",
+        "info": "Font used for taglines"
+      },
+      {
+        "type": "header",
+        "content": "Font sizes"
+      },
+      {
+        "type": "number",
+        "id": "h1_size",
+        "label": "Header 1",
+        "min": 40,
+        "max": 80,
+        "default": 56,
+        "info": "Min: 40, max: 80"
+      },
+      {
+        "type": "number",
+        "id": "h2_size",
+        "label": "Header 2",
+        "min": 30,
+        "max": 70,
+        "default": 48,
+        "info": "Min: 30, max: 70"
+      },
+      {
+        "type": "number",
+        "id": "h3_size",
+        "label": "Header 3",
+        "min": 25,
+        "max": 65,
+        "default": 40,
+        "info": "Min: 25, max: 65"
+      },
+      {
+        "type": "number",
+        "id": "h4_size",
+        "label": "Header 4",
+        "min": 20,
+        "max": 50,
+        "default": 32,
+        "info": "Min: 20, max: 50"
+      },
+      {
+        "type": "number",
+        "id": "h5_size",
+        "label": "Header 5",
+        "min": 18,
+        "max": 32,
+        "default": 24,
+        "info": "Min: 18, max: 32"
+      },
+      {
+        "type": "number",
+        "id": "h6_size",
+        "label": "Header 6",
+        "min": 16,
+        "max": 26,
+        "default": 20,
+        "info": "Min: 16, max: 26"
+      },
+      {
+        "type": "number",
+        "id": "tagline_size",
+        "label": "Tagline",
+        "min": 14,
+        "max": 50,
+        "info": "Min: 14, max: 50"
+      }
+    ]
+  },
+  {
+    "name": "Images",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "use_focal_images",
+        "label": "Use focal images",
+        "default": true,
+        "info": "Display point focused images for products instead of full sized"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_placeholder",
+        "label": "Image placeholder",
+        "info": "This image displays on products and collections if they don't have any images"
+      }
+    ]
+  },
+  {
+    "name": "Animation",
+    "settings": [
+      {
+        "type": "number",
+        "id": "animation_duration",
+        "label": "Duration",
+        "min": 0,
+        "max": 10000,
+        "default": 200,
+        "info": "Important note: Time counts in milliseconds, 1 second equals 1000 milliseconds. If this field is empty, by default, all animations use a 200ms duration. This time is used for changing colors of UI elements, opening menu, modals, etc. You can use positive numbers between 0 and 10000 only"
+      }
+    ]
+  },
+  {
+    "name": "Social media",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Sizes"
+      },
+      {
+        "type": "select",
+        "id": "social_size",
+        "label": "Size",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          },
+          {
+            "value": "lg",
+            "label": "Large"
+          }
+        ],
+        "default": "md"
+      },
+      {
+        "type": "select",
+        "id": "social_spacing",
+        "label": "Spacing",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          },
+          {
+            "value": "lg",
+            "label": "Large"
+          }
+        ],
+        "default": "md"
+      },
+      {
+        "type": "header",
+        "content": "Links"
+      },
+      {
+        "type": "paragraph",
+        "content": "Note: Leave the field blank if you don't want to use the social network"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook_link",
+        "label": "Facebook",
+        "default": "https://",
+        "info": "Example: https://facebook.com/booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": "Instagram",
+        "default": "https://",
+        "info": "Example: https://instagram.com/booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": "Twitter",
+        "default": "https://",
+        "info": "Example: https://twitter.com/booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_linkedin_link",
+        "label": "Linkedin",
+        "default": "https://",
+        "info": "Example: https://www.linkedin.com/company/booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest_link",
+        "label": "Pinterest",
+        "info": "Example: https://pinterest.com/booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok_link",
+        "label": "TikTok",
+        "info": "Example: https://tiktok.com/@booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_tumblr_link",
+        "label": "Tumblr",
+        "info": "Example: https://booqable.tumblr.com"
+      },
+      {
+        "type": "text",
+        "id": "social_snapchat_link",
+        "label": "Snapchat",
+        "info": "Example: https://snapchat.com/add/booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube_link",
+        "label": "YouTube",
+        "info": "Example: https://youtube.com/booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_vimeo_link",
+        "label": "Vimeo",
+        "info": "Example: https://vimeo.com/booqable"
+      }
+    ]
+  }
+]

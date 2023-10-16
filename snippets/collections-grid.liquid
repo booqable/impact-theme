@@ -1,0 +1,81 @@
+{% comment %}
+
+  This snippet is used for rendering the list of collections
+
+  items - { object } *required
+  items_type - "string" *required,
+  placeholder - image optional
+
+  Usage:
+
+  {%- render 'collections-grid',
+      items: your_id,
+      items_type: "your_string",
+      placeholder: your_id
+  -%}
+
+{% endcomment %}
+{%- assign multiple = false -%}
+
+{%- for item in items -%}
+  {%- if items.size > 1 -%}
+    {%- assign multiple = true -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<ul class="collections__list collections__list-{{ items.size }}{% if multiple %} collections__list--multiple{%- endif -%}">
+  {%- for item in items -%}
+    {%- case items_type -%}
+      {%- when "blocks" -%}
+        {%- assign collection = item.settings.collection -%}
+      {%- when "collections" -%}
+        {%- assign collection = item -%}
+    {%- endcase -%}
+
+    {%- assign id = item.id -%}
+    {%- assign url = "" -%}
+    {%- assign name = "" -%}
+    {%- assign image = "" -%}
+
+    {%- if collection != blank -%}
+      {%- assign url = collection.url -%}
+      {%- assign name = collection.name -%}
+      {%- assign first_product = collection.products | first -%}
+
+      {%- if collection.image -%}
+        {%- assign image = collection.image -%}
+      {%- elsif first_product and first_product.images.first != empty -%}
+        {%- assign image = first_product.images.first -%}
+      {%- endif -%}
+    {%- else -%}
+      {%- assign image = placeholder -%}
+    {%- endif -%}
+
+    <li class="collections__item" id="{{- id -}}">
+      {%- if collection != blank -%}
+        <a class="collections__link" href="{{ url }}">
+      {%- endif -%}
+          <span class="collections__image-item">
+            {%- render 'image',
+              image: image,
+              loading: 'lazy',
+              class: 'collections__image',
+              size: 'm'
+            -%}
+          </span>
+      {%- if collection != blank -%}
+        </a>
+      {%- endif -%}
+
+        <h3 class="collections__heading">
+          {%- if collection != blank -%}
+            <a href="{{ url }}">
+              {{- name -}}
+            </a>
+          {%- else -%}
+            Category
+          {%- endif -%}
+        </h3>
+    </li>
+  {%- endfor -%}
+</ul>

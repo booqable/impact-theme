@@ -1,0 +1,70 @@
+{% comment %}
+
+  This snippet is used for rendering the list of collections
+
+  image - image *required
+  loading - "string" optional,
+  class - "string" optional,
+  focal - image.coordinates optional
+  size - "string" optional,
+  custom_width: "string" optional,
+  custom_size: "string" optional,
+  custom_alt: "string" optional
+
+  Usage:
+
+  {%- render 'image',
+      image: image,
+      loading: 'lazy',
+      class: 'your_class',
+      focal: points,
+      size: 'm',              - use only this one property
+      custom_width: '170',    - or these two
+      custom_size: '170px',     instead of 'size' property
+      custom_alt: your_id
+  -%}
+
+{% endcomment %}
+
+{%- assign size = size | default: "m" -%}
+{%- assign alt = image.alt -%}
+
+{%- if custom_alt != blank -%}
+  {%- assign alt = custom_alt -%}
+{%- endif -%}
+
+{%- case size -%}
+  {%- when 'xs' -%}
+    {%- assign image_width = '25, 50' -%}
+    {%- assign image_sizes = '(min-width: 320px) 25px, (min-width: 768px) 50px' -%}
+  {%- when 's' -%}
+    {%- assign image_width = '150, 250, 400' -%}
+    {%- assign image_sizes = '(min-width: 320px) 150px, (min-width: 480px) 250px, (min-width: 768px) 400px' -%}
+  {%- when 'm' -%}
+    {%- assign image_width = '450, 550, 650' -%}
+    {%- assign image_sizes = '(min-width: 320px) 450px, (min-width: 480px) 550px, (min-width: 768px) 650px' -%}
+  {%- when 'l' -%}
+    {%- assign image_width = '600, 800, 1000' -%}
+    {%- assign image_sizes = '(min-width: 320px) 600px, (min-width: 576px) 800px, (min-width: 992px) 1000px' -%}
+  {%- when 'xl' -%}
+    {%- assign image_width = '450, 650, 800, 1000, 1400' -%}
+    {%- assign image_sizes = '(min-width: 320px) 450px, (min-width: 480px) 650px, (min-width: 576px) 800px, (min-width: 768px) 1000px, (min-width: 1200px) 1400px' -%}
+  {%- when 'xxl' -%}
+    {%- assign image_width = '450, 650, 800, 1000, 1400, 2000, 2500, 3840' -%}
+    {%- assign image_sizes = '(min-width: 320px) 450px, (min-width: 480px) 650px, (min-width: 576px) 800px, (min-width: 768px) 1000px, (min-width: 1200px) 1400px, (min-width: 1680px) 2000px, (min-width: 2400px) 2500px, (min-width: 3000px) 3840px' -%}
+{%- endcase -%}
+
+{%- if custom_width != blank and custom_size != blank -%}
+  {%- assign image_width = custom_width -%}
+  {%- assign image_sizes = custom_size -%}
+{%- endif -%}
+
+
+{{- image.url | image_tag:
+  loading: loading,
+  class: class,
+  widths: image_width,
+  sizes: image_sizes,
+  focal: focal,
+  alt: alt
+-}}

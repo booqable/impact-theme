@@ -1,0 +1,128 @@
+.top-bar {
+  position: relative;
+  z-index: 1;
+}
+
+.top-bar__wrapper {
+  font-size: 14px;
+  font-weight: var(--font-weight-medium, 500);
+  line-height: var(--line-height-xs, 1);
+}
+
+.top-bar__wrapper--padding-top {
+  padding-top: var(--padding-top-mobile, 0px);
+}
+
+.top-bar__wrapper--padding-bottom {
+  padding-bottom: var(--padding-bottom-mobile, 0px);
+}
+
+.top-bar__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0px 10px;
+  align-items: center;
+}
+
+.top-bar__text {
+  text-align: center;
+}
+
+.top-bar__text a {
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit;
+}
+
+.top-bar__text a:hover {
+  text-decoration: underline;
+}
+
+.top-bar__menu-list {
+  text-align: right;
+  margin: 0 -5px;
+}
+
+.top-bar__menu-link:hover {
+  text-decoration: underline;
+}
+
+.top-bar__menu-item {
+  display: inline-flex;
+  padding: 0 5px;
+}
+
+.top-bar__info,
+.top-bar__menu {
+  display: none;
+}
+
+.top-bar .fa,
+.top-bar .far {
+  margin: 0 13px 0 0;
+  max-width: 25px;
+}
+
+.palette-one.top-bar__wrapper {
+  color: var(--color-accent, #0B1A26);
+  background: var(--background-accent, #F4B841);
+}
+
+.palette-one.top-bar__wrapper .fa,
+.palette-one.top-bar__wrapper .far {
+  color: var(--color-accent, #0B1A26);
+}
+
+.palette-two.top-bar__wrapper {
+  color: var(--color-accent-2, #0B1A26);
+  background: var(--background-accent-2, #F4B841);
+}
+
+.palette-two.top-bar__wrapper .fa,
+.palette-two.top-bar__wrapper .far {
+  color: var(--color-accent-2, #0B1A26);
+}
+
+.palette-three.top-bar__wrapper {
+  color: var(--color-primary-3, #0B1A26);
+  background: var(--background-primary-3, #F4B841);
+}
+
+.palette-three.top-bar__wrapper .fa,
+.palette-three.top-bar__wrapper .far {
+  color: var(--color-primary-3, #0B1A26);
+}
+
+@media (min-width: 992px) {
+  .top-bar__wrapper--padding-top {
+    padding-top: var(--padding-top, 0px);
+  }
+
+  .top-bar__wrapper--padding-bottom {
+    padding-bottom: var(--padding-bottom, 0px);
+  }
+
+  .top-bar__container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .top-bar__text {
+    padding: 0 4px 0 0;
+  }
+
+  .top-bar__info,
+  .top-bar__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .top-bar__menu {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1100px) {
+  .top-bar__container {
+    grid-template-columns: 1fr 55% 1fr;
+  }
+}

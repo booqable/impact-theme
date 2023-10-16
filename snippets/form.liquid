@@ -1,0 +1,176 @@
+{% comment %}
+
+  This snippet is using for rendering the contact form
+
+  id - id
+  title - "string" optional,
+  description - "string" optional,
+  name - "string" optional,
+  email - "string" optional,
+  message - "string" optional,
+  success_message - "string" optional,
+  error_message - "string" optional,
+  button_label - "string" optional,
+  button_variables - "string" optional
+
+  Usage:
+
+  {%- render "form",
+      id: your_id,
+      title: your_id,
+      description: your_id,
+      name: your_id,
+      email: your_id,
+      message: your_id,
+      success_message: your_id,
+      error_message: your_id,
+      button_label: your_id,
+      button_variables
+  -%}
+
+{% endcomment %}
+
+{{ "form.css" | asset_url | stylesheet_tag }}
+
+<div id="{{- id -}}" class="form__inner" style="{{- button_variables | escape -}}">
+  <h2 class="form__title">
+    {%- if title != blank -%}
+      {{- title -}}
+    {%- else -%}
+      Contact us
+    {%- endif -%}
+  </h2>
+
+  <div class="form__text">
+    {%- if description != blank -%}
+      {{- description -}}
+    {%- else -%}
+      Tell something about your company, describe what you do and what makes you unique.
+    {%- endif -%}
+  </div>
+
+  {%- form 'contact' -%}
+    <div class="form__block{% if form.errors.author %} form__block--error{%- endif -%}">
+      <label class="form__label" for="author">
+        {%- if name != blank -%}
+          {{- name -}}
+        {%- else -%}
+          Name
+        {%- endif -%}
+
+        <span class="form__label-backlight">
+          {%- if name != blank -%}
+            {{- name -}}
+          {%- else -%}
+            Name
+          {%- endif -%}
+        </span>
+      </label>
+
+      <input
+        value="{{- form.author -}}"
+        placeholder=" "
+        class="form__input"
+        autocomplete="author"
+        type="text"
+        name="form[author]"
+        id="author"
+        title="(e.g. Jon Doe)"
+      >
+
+      <div class="form__error-message">
+        {{- form.errors.author -}}
+      </div>
+    </div>
+
+    <div class="form__block{% if form.errors.email %} form__block--error{%- endif -%}">
+      <label class="form__label" for="email">
+        {%- if email != blank -%}
+          {{- email -}}
+        {%- else -%}
+          Email
+        {%- endif -%}
+
+        <span class="form__label-backlight">
+          {%- if email != blank -%}
+            {{- email -}}
+          {%- else -%}
+            Email
+          {%- endif -%}
+        </span>
+      </label>
+
+      <input
+        value="{{- form.email -}}"
+        placeholder=" "
+        class="form__input"
+        autocomplete="email"
+        type="email"
+        name="form[email]"
+        id="email"
+        title="(e.g. mail@domain.com)"
+      >
+
+      <div class="form__error-message">
+        {{- form.errors.email -}}
+      </div>
+    </div>
+
+    <div class="form__block form__message{% if form.errors.body %} form__block--error{%- endif -%}">
+      <label class="form__label" for="body">
+        {%- if message != blank -%}
+          {{- message -}}
+        {%- else -%}
+          Message
+        {%- endif -%}
+
+        <span class="form__label-backlight">
+          {%- if message != blank -%}
+            {{- message -}}
+          {%- else -%}
+            Message
+          {%- endif -%}
+        </span>
+      </label>
+
+      <textarea
+        value=" "
+        placeholder=" "
+        class="form__textarea"
+        name="form[body]"
+        id="body"
+        title="Describe what you want in more detail"
+      >
+        {%- if form.posted_successfully -%}{{- form.body | strip -}}{%- endif -%}
+      </textarea>
+
+      <div class="form__error-message">
+        {{- form.errors.body | strip -}}
+      </div>
+    </div>
+
+    <div class="form__info">
+      {%- if form.posted_successfully -%}
+        <p class="success">
+          <i class="fa-solid fa-circle-check"></i> {%- if success_message != blank -%}{{- success_message -}}{%- else -%}Thanks for your message! We'll get back to you shortly{%- endif -%}
+        </p>
+      {%- endif -%}
+
+      {%- if form.errors != blank -%}
+        <p class="error">
+          <i class="fa-solid fa-circle-exclamation"></i> {%- if error_message != blank -%}{{- error_message -}}{%- else -%}Oops, something went wrong. Please fix the errors and try again{%- endif -%}
+        </p>
+      {%- endif -%}
+    </div>
+
+    <div class="form__submit">
+      <button class="button button--large button--primary">
+        {%- if button_label != blank -%}
+          {{- button_label -}}
+        {%- else -%}
+          Submit
+        {%- endif -%}
+      </button>
+    </div>
+  {%- endform -%}
+</div>

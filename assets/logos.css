@@ -1,0 +1,122 @@
+.logos__wrapper--padding-top {
+  padding-top: var(--padding-top-mobile, 60px);
+}
+
+.logos__wrapper--padding-bottom {
+  padding-bottom: var(--padding-bottom-mobile, 29px);
+}
+
+.logos__columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.logos__col {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.logos__title {
+  width: 100%;
+  padding: 0 var(--padding-x, 16px);
+  margin-bottom: 32px;
+  font-weight: var(--font-weight-regular, 400);
+  text-align: var(--text-align-mobile, center);
+}
+
+.logos__logos {
+  margin: 0 -8px;
+  width: calc(100% + 16px);
+}
+
+.logos__image-wrapper {
+  padding: 0 8px 31px;
+  max-width: 176px;
+}
+
+.logos__image-wrapper img {
+  max-height: 64px;
+}
+
+.logos__image-wrapper.no-image {
+  width: 100%;
+  position: relative;
+}
+
+.logos__image-wrapper.no-image:after {
+  content: "";
+  display: block;
+  height: 64px;
+}
+
+.palette-one.logos__wrapper {
+  background: var(--background-primary, #FFFFFF);
+}
+
+.palette-one .logos__title {
+  color: var(--color-secondary, #4E5D78);
+}
+
+.palette-one .logos__image-wrapper.no-image:after {
+  background: var(--color-image-placeholder, #0B1A2626);
+}
+
+.palette-two.logos__wrapper {
+  background: var(--background-primary-2, #0B1A26);
+}
+
+.palette-two .logos__title {
+  color: var(--color-secondary-2, #4E5D78);
+}
+
+.palette-two .logos__image-wrapper.no-image:after {
+  background: var(--color-image-placeholder-2, #FFFFFF47);
+}
+
+@media (min-width: 992px) {
+  .logos__wrapper--padding-top {
+    padding-top: var(--padding-top, 96px);
+  }
+
+  .logos__wrapper--padding-bottom {
+    padding-bottom: var(--padding-bottom, 84px);
+  }
+
+  .logos__columns {
+    flex-direction: var(--flex-direction, row);
+    align-items: var(--align-items, flex-start);
+  }
+
+  .logos__col:not(.logos__logos) {
+    max-width: var(--text-max-width, 280px);
+    min-width: 180px;
+    width: auto;
+  }
+
+  .logos__logos {
+    align-items: center;
+  }
+
+  .logos__col + .logos__logos {
+    justify-content: var(--justify-content, flex-start);
+    padding: var(--padding, 0px);
+  }
+
+  .logos__title {
+    padding: 0;
+    margin: 0;
+    text-align: var(--text-align, left);
+  }
+
+  .logos__image-wrapper {
+    padding-bottom: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logos__col + .logos__logos {
+    padding-left: 7.2%;
+  }
+}

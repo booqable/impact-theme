@@ -1,0 +1,47 @@
+{% comment %}
+
+  This snippet is used for rendering the payments icons
+
+  Usage:
+
+  {%- include 'payments' -%}
+
+{% endcomment %}
+
+{% style %}
+  .payment {
+    padding: 0 16px 0 0;
+    margin: 0 calc(-1 * (var(--social-spacing, 6px) - 6px));
+  }
+
+  .payment i {
+    margin: 0 calc(var(--social-spacing, 6px) - 6px);
+  }
+{% endstyle %}
+
+{%- if payment_methods.size > 0 -%}
+  <div class="payment">
+    {%- for provider in payment_methods -%}
+      {%- case provider -%}
+        {%- when "paypal" -%}
+          <i class="fa-brands fa-cc-paypal" title="PayPal"></i>
+        {%- when "creditcard" -%}
+          <i class="fa-brands fa-cc-visa" title="Visa"></i>
+          <i class="fa-brands fa-cc-mastercard" title="MasterCard"></i>
+          <i class="fa-brands fa-cc-amex" title="American Express"></i>
+        {%- when "ideal" -%}
+          <i class="fa-brands fa-ideal" title="iDEAL"></i>
+        {%- when "alipay" -%}
+          <i class="fa-brands fa-alipay" title="Alipay"></i>
+        {%- when "p24" -%}
+          {%- render "icon-p24" -%}
+        {%- when "eps" -%}
+          {%- render "icon-eps" -%}
+        {%- when "bancontact" -%}
+          {%- render "icon-bancontact" -%}
+        {%- when "giropay" -%}
+          {%- render "icon-giropay" -%}
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+{%- endif -%}

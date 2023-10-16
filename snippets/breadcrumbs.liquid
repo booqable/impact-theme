@@ -1,0 +1,110 @@
+{% comment %}
+
+  This snippet is used for rendering the breadcrumbs links
+
+  product - { product } *required,
+  show - boolean *required,
+  label - "string" *required,
+  url - url *required
+
+  Usage:
+
+  {%- render 'breadcrumbs',
+    product: your_id,
+    show: your_id,
+    label: your_id,
+    url: your_id
+  -%}
+
+{% endcomment %}
+
+{%- if show -%}
+  {% style %}
+    .breadcrumbs {
+      padding: 30px 0 26px;
+      font-size: 14px;
+      line-height: var(--line-height-xs, 1);
+    }
+
+    .breadcrumbs__separator {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 12px;
+    }
+
+    .breadcrumbs__name {
+      font-weight: var(--font-weight-semibold, 600);
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .palette-one .breadcrumbs {
+      color: var(--color-third, #0B1A2666);
+    }
+
+    .palette-one .breadcrumbs path {
+      fill: var(--color-primary, #0B1A26);
+    }
+
+    .palette-one .breadcrumbs a:hover {
+      color: var(--color-primary, #0B1A26);
+    }
+
+    .palette-one .breadcrumbs__name {
+      color: var(--color-outline, #F4B841);
+    }
+
+    .palette-two .breadcrumbs {
+      color: var(--color-third-2, #FFFFFF66);
+    }
+
+    .palette-two .breadcrumbs path {
+      fill: var(--color-primary-2, #FFFFFF);
+    }
+
+    .palette-two .breadcrumbs a:hover {
+      color: var(--color-primary-2, #FFFFFF);
+    }
+
+    .palette-two .breadcrumbs__name {
+      color: var(--color-outline-2, #F4B841);
+    }
+  {% endstyle %}
+
+  {%- assign collections = product.collections -%}
+  {%- assign first = collections | first -%}
+
+  {%- capture separator --%}
+    <span class="breadcrumbs__separator" aria-hidden="true">
+      {%- render 'icon-arrow-right' -%}
+    </span>
+  {%- endcapture --%}
+
+  <nav
+    class="breadcrumbs"
+    role="navigation"
+    aria-label="breadcrumbs">
+    <div class="breadcrumbs__container">
+      {%- if label != blank and url != blank-%}
+        <a href="{{ url }}" class="breadcrumbs__link" title="{{- label -}}">
+          {{- label -}}
+        </a>
+
+        {{- separator -}}
+      {%- endif -%}
+
+      {%- if first.url -%}
+        <a href="{{ first.url }}" class="breadcrumbs__link" title="{{- first.name -}}">
+          {{- first.name -}}
+        </a>
+
+        {{- separator -}}
+      {%- endif -%}
+
+      <span class="breadcrumbs__name" title="{{- product.name -}}">
+        {{- product.name -}}
+      </span>
+    </div>
+  </nav>
+{%- endif -%}
+
