@@ -286,67 +286,6 @@
       },
       "disabled": null
     },
-    "numbered-blocks": {
-      "type": "numbered-blocks",
-      "blocks": {
-        "block": {
-          "type": "block",
-          "settings": {
-            "button_1": "Button",
-            "button_url_1": "booqable://root/",
-            "button_2": "Button",
-            "button_url_2": "booqable://root/",
-            "heading": "Medium length section heading goes here",
-            "image": "booqable://assets/image-tough-step-1.jpg",
-            "image_position": "right",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-            "text_alignment": "middle"
-          },
-          "disabled": null
-        },
-        "block_242972": {
-          "type": "block",
-          "settings": {
-            "button_1": "Button",
-            "button_2": "Button",
-            "button_url_2": "booqable://root/",
-            "heading": "Medium length section heading goes here",
-            "image": "booqable://assets/image-tough-step-2.jpg",
-            "image_position": "left",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-            "text_alignment": "middle"
-          },
-          "disabled": null
-        },
-        "block_535502": {
-          "type": "block",
-          "settings": {
-            "button_1": "Button",
-            "button_url_1": "booqable://root/",
-            "button_2": "Button",
-            "heading": "Medium length section heading goes here",
-            "image": "booqable://assets/image-tough-step-3.jpg",
-            "image_position": "right",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-            "text_alignment": "middle"
-          },
-          "disabled": null
-        }
-      },
-      "block_order": [
-        "block",
-        "block_242972",
-        "block_535502"
-      ],
-      "settings": {
-        "color_palette": "one",
-        "padding_bottom": "medium",
-        "padding_bottom_mobile": "large",
-        "padding_top": "small",
-        "padding_top_mobile": "small"
-      },
-      "disabled": null
-    },
     "title_987656": {
       "type": "title",
       "blocks": {},
@@ -509,7 +448,6 @@
     "title_987654",
     "products",
     "title_987655",
-    "numbered-blocks",
     "title_987656",
     "mosaic",
     "title_987650",

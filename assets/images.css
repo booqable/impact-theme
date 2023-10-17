@@ -197,23 +197,23 @@
 
 .palette-one .overlay-dark .images__vision,
 .palette-one .overlay-dark ~ .images__vision {
-  background: var(--background-overlay, #0B1A26);
+  background: var(--background-overlay, #1A3333);
 }
 
 .palette-one .overlay-dark .images__vision .images__vision-wrapper--overlay:after,
 .palette-one .overlay-dark ~ .images__vision .images__vision-wrapper--overlay:after {
-  background: linear-gradient(357.73deg, var(--background-overlay, #0B1A26) 3.03%, var(--background-overlay-00, #0B1A2600) 31.83%),
-   linear-gradient(180deg, var(--background-overlay, #0B1A26) 6.67%, var(--background-overlay-00, #0B1A2600) 105.81%),
-   linear-gradient(0deg, var(--background-overlay-45, #0B1A2673), var(--background-overlay-45, #0B1A2673));
+  background: linear-gradient(357.73deg, var(--background-overlay, #1A3333) 3.03%, var(--background-overlay-00, #1A333300) 31.83%),
+   linear-gradient(180deg, var(--background-overlay, #1A3333) 6.67%, var(--background-overlay-00, #1A333300) 105.81%),
+   linear-gradient(0deg, var(--background-overlay-45, #1A333373), var(--background-overlay-45, #1A333373));
 }
 
 .palette-one .overlay-light .images__title,
 .palette-one .overlay-light .images__description {
-  color: var(--background-overlay, #0B1A26);
+  color: var(--background-overlay, #1A3333);
 }
 
 .palette-one .overlay-light .images__buttons .button--outlined {
-  color: var(--background-overlay, #0B1A26);
+  color: var(--background-overlay, #1A3333);
 }
 
 .palette-one .overlay-light .images__vision,
@@ -234,12 +234,12 @@
 
 .palette-one > .overlay-light ~ .images__date-picker path,
 .palette-one .images__date-picker.show-overlay-light .images__date-picker-icon path {
-  fill: var(--background-overlay, #0B1A26);
+  fill: var(--background-overlay, #1A3333);
 }
 
 .palette-one > .overlay-light ~ .images__date-picker .images__date-picker-title,
 .palette-one .images__date-picker.show-overlay-light .images__date-picker-title {
-  color: var(--background-overlay, #0B1A26);
+  color: var(--background-overlay, #1A3333);
 }
 
 .palette-one > .overlay-dark ~ .images__date-picker path,
@@ -263,23 +263,23 @@
 
 .palette-two .overlay-dark .images__vision,
 .palette-two .overlay-dark ~ .images__vision {
-  background: var(--background-overlay-2, #0B1A26);
+  background: var(--background-overlay-2, #1A3333);
 }
 
 .palette-two .overlay-dark .images__vision .images__vision-wrapper--overlay:after,
 .palette-two .overlay-dark ~ .images__vision .images__vision-wrapper--overlay:after {
-  background: linear-gradient(357.73deg, var(--background-overlay-2, #0B1A26) 3.03%, var(--background-overlay-2-00, #0B1A2600) 31.83%),
-   linear-gradient(180deg, var(--background-overlay-2, #0B1A26) 6.67%, var(--background-overlay-2-00, #0B1A2600) 105.81%),
-   linear-gradient(0deg, var(--background-overlay-2-45, #0B1A2673), var(--background-overlay-2-45, #0B1A2673));
+  background: linear-gradient(357.73deg, var(--background-overlay-2, #1A3333) 3.03%, var(--background-overlay-2-00, #1A333300) 31.83%),
+   linear-gradient(180deg, var(--background-overlay-2, #1A3333) 6.67%, var(--background-overlay-2-00, #1A333300) 105.81%),
+   linear-gradient(0deg, var(--background-overlay-2-45, #1A333373), var(--background-overlay-2-45, #1A333373));
 }
 
 .palette-two .overlay-light .images__title,
 .palette-two .overlay-light .images__description {
-  color: var(--background-overlay-2, #0B1A26);
+  color: var(--background-overlay-2, #1A3333);
 }
 
 .palette-two .overlay-light .images__buttons .button--outlined {
-  color: var(--background-overlay-2, #0B1A26);
+  color: var(--background-overlay-2, #1A3333);
 }
 
 .palette-two .overlay-light .images__vision,
@@ -295,17 +295,17 @@
 }
 
 .palette-two .images__date-picker-overlay {
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2, #1A3333);
 }
 
 .palette-two > .overlay-light ~ .images__date-picker path,
 .palette-two .images__date-picker.show-overlay-light .images__date-picker-icon path {
-  fill: var(--background-overlay-2, #0B1A26);
+  fill: var(--background-overlay-2, #1A3333);
 }
 
 .palette-two > .overlay-light ~ .images__date-picker .images__date-picker-title,
 .palette-two .images__date-picker.show-overlay-light .images__date-picker-title {
-  color: var(--background-overlay-2, #0B1A26);
+  color: var(--background-overlay-2, #1A3333);
 }
 
 .palette-two > .overlay-dark ~ .images__date-picker path,

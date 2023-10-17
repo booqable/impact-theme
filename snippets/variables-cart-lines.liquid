@@ -19,15 +19,15 @@
 
     {% if color_palette == "one" %}
       {% if settings.primary_color != blank %}
-        --line-title-color: var(--color-primary, #0B1A26);
-        --line-price-color: var(--color-primary, #0B1A26);
-        --line-input-color: var(--color-primary, #0B1A26);
-        --line-bundle-item-quantity-color: var(--color-primary, #0B1A26);
-        --line-bundle-item-name-color: var(--color-primary, #0B1A26);
-        --line-border: 1px solid var(--color-border, #0B1A2626);
-        --line-image-border: 1px solid var(--color-border, #0B1A2626);
-        --line-control-border: 1px solid var(--color-border, #0B1A2626);
-        --line-variations-color: var(--color-third, #0B1A2666);
+        --line-title-color: var(--color-primary, #1A3333);
+        --line-price-color: var(--color-primary, #1A3333);
+        --line-input-color: var(--color-primary, #1A3333);
+        --line-bundle-item-quantity-color: var(--color-primary, #1A3333);
+        --line-bundle-item-name-color: var(--color-primary, #1A3333);
+        --line-border: 1px solid var(--color-border, #1A333326);
+        --line-image-border: 1px solid var(--color-border, #1A333326);
+        --line-control-border: 1px solid var(--color-border, #1A333326);
+        --line-variations-color: var(--color-third, #1A333366);
       {% endif %}
 
       {% if settings.background != blank %}
@@ -35,11 +35,11 @@
       {% endif %}
 
       {% if settings.accent_background != blank %}
-        --line-toggle-color: var(--background-accent, #F4B841);
+        --line-toggle-color: var(--background-accent, #1A3333);
       {% endif %}
 
       {% if settings.accent_outline != blank %}
-        --line-icon-color: var(--color-outline, #F4B841);
+        --line-icon-color: var(--color-outline, #53C787);
       {% endif %}
 
     {% elsif color_palette == "two" %}
@@ -56,7 +56,7 @@
       {% endif %}
 
       {% if settings.background_2 != blank %}
-        --line-bundle-item-quantity-background: var(--background-primary-2, #0B1A26);
+        --line-bundle-item-quantity-background: var(--background-primary-2, #1A3333);
       {% endif %}
 
       {% if settings.accent_background_2 != blank %}

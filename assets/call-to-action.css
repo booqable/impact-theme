@@ -117,50 +117,40 @@
 }
 
 .palette-one.cta__wrapper {
-  background: var(--background-accent, #F4B841);
-  color: var(--color-primary, #0B1A26);
+  background: var(--background-accent, #1A3333);
+  color: var(--color-primary, #1A3333);
 }
 
 .palette-one .cta__header-button.button--primary {
-  background: var(--color-primary, #0B1A26);
-  border-color: var(--color-primary, #0B1A26);
+  background: var(--color-primary, #1A3333);
+  border-color: var(--color-primary, #1A3333);
   color: var(--background-primary, #FFFFFF);
 }
 
 .palette-one .cta__header-button.button--primary:hover {
-  background: var(--color-primary, #0B1A26);
-  border-color: var(--color-primary, #0B1A26);
+  background: var(--color-primary, #1A3333);
+  border-color: var(--color-primary, #1A3333);
   opacity: 0.85;
-}
-
-.palette-one .cta__header-button.button--primary:active {
-  background: var(--color-primary, #0B1A26);
-  border-color: var(--color-primary, #0B1A26);
-  opacity: 0.8;
 }
 
 .palette-one .cta__header-button.button--outlined {
   color: var(--background-primary, #FFFFFF);
-  border-color: var(--color-primary, #0B1A26);
+  border-color: var(--color-primary, #1A3333);
 }
 
 .palette-one .cta__header-button.button--outlined:hover {
-  background: var(--color-primary-hover, #0B1A2652);
-}
-
-.palette-one .cta__header-button.button--outlined:active {
-  background: var(--color-primary-active, #0B1A268F);
+  background: var(--color-primary-hover, #1A333352);
 }
 
 .palette-one .cta__image-floral-wrapper g,
 .palette-one .cta__image-floral-wrapper path,
 .palette-one .cta__image-wrapper g,
 .palette-one .cta__image-wrapper path {
-  fill: var(--color-primary, #0B1A26);
+  fill: var(--color-primary, #1A3333);
 }
 
 .palette-one .cta__image-wrapper:after {
-  background: linear-gradient(180.44deg, var(--background-accent, #F4B841) 51.3%, var(--background-accent-00, #F4B84100) 81.06%);
+  background: linear-gradient(180.44deg, var(--background-accent, #1A3333) 51.3%, var(--background-accent-00, #1A333300) 81.06%);
 }
 
 .palette-two.cta__wrapper {
@@ -171,7 +161,7 @@
 .palette-two .cta__header-button.button--primary {
   background: var(--color-primary-2, #FFFFFF);
   border-color: var(--color-primary-2, #FFFFFF);
-  color: var(--background-primary-2, #0B1A26);
+  color: var(--background-primary-2, #1A3333);
 }
 
 .palette-two .cta__header-button.button--primary:hover {
@@ -180,23 +170,13 @@
   opacity: 0.85;
 }
 
-.palette-two .cta__header-button.button--primary:active {
-  background: var(--color-primary-2, #FFFFFF);
-  border-color: var(--color-primary-2, #FFFFFF);
-  opacity: 0.8;
-}
-
 .palette-two .cta__header-button.button--outlined {
-  color: var(--background-primary-2, #0B1A26);
+  color: var(--background-primary-2, #1A3333);
   border-color: var(--color-primary-2, #FFFFFF);
 }
 
 .palette-two .cta__header-button.button--outlined:hover {
   background: var(--color-primary-2-hover, #FFFFFF52);
-}
-
-.palette-two .cta__header-button.button--outlined:active {
-  background: var(--color-primary-2-active, #FFFFFF8F);
 }
 
 .palette-two .cta__image-floral-wrapper g,
@@ -211,8 +191,8 @@
 }
 
 .palette-three.cta__wrapper {
-  background: var(--background-primary-3, #F4B841);
-  color: var(--color-secondary-3, #FFFFFF);
+  background: var(--background-primary-3, #E06B48);
+  color: var(--color-secondary-3, #1A3333);
 }
 
 .palette-three .cta__header-button.button--primary {
@@ -227,12 +207,6 @@
   opacity: 0.85;
 }
 
-.palette-three .cta__header-button.button--primary:active {
-  background: var(--background-accent-3, #0B1A26);
-  border-color: var(--background-accent-3, #0B1A26);
-  opacity: 0.8;
-}
-
 .palette-three .cta__header-button.button--outlined {
   color: var(--color-accent-3, #FFFFFF);
   border-color: var(--background-accent-3, #0B1A26);
@@ -242,19 +216,15 @@
   background: var(--background-accent-3-hover, #0B1A2652);
 }
 
-.palette-three .cta__header-button.button--outlined:active {
-  background: var(--background-accent-3-active, #0B1A268F);
-}
-
 .palette-three .cta__image-floral-wrapper g,
 .palette-three .cta__image-floral-wrapper path,
 .palette-three .cta__image-wrapper g,
 .palette-three .cta__image-wrapper path {
-  fill: var(--color-secondary-3, #FFFFFF);
+  fill: var(--color-secondary-3, #1A3333);
 }
 
 .palette-three .cta__image-wrapper:after {
-  background: linear-gradient(180.44deg, var(--background-primary-3, #F4B841) 51.3%, var(--background-primary-3-00, #F4B84100) 81.06%);
+  background: linear-gradient(180.44deg, var(--background-primary-3, #E06B48) 51.3%, var(--background-primary-3-00, #E06B4800) 81.06%);
 }
 
 @media (min-width: 667px) {

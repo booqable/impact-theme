@@ -62,17 +62,9 @@
 }
 
 .palette-one .map .ol-control button:hover {
-  border-color: var(--background-accent-hover, #F4B841CC);
-}
-
-.palette-one .map .ol-control button:active {
-  border-color: var(--background-accent-active, #F4B841BA);
+  border-color: var(--background-accent-hover, #1A3333CC);
 }
 
 .palette-two .map .ol-control button:hover {
   border-color: var(--background-accent-2-hover, #F4B841CC);
-}
-
-.palette-two .map .ol-control button:active {
-  border-color: var(--background-accent-2-active, #F4B841BA);
 }

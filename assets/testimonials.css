@@ -65,23 +65,23 @@
 }
 
 .palette-one.testimonials__wrapper {
-  background: var(--background-primary, #0B1A26);
+  background: var(--background-primary, #FFFFFF);
 }
 
 .palette-one .testimonials__blockquote {
-  color: var(--color-third, #0B1A2666);
+  color: var(--color-third, #1A333366);
 }
 
 .palette-one .testimonials__cite {
-  color: var(--color-primary, #0B1A26);
+  color: var(--color-primary, #1A3333);
 }
 
 .palette-one .testimonials__small {
-  color: var(--color-secondary, #4E5D78);
+  color: var(--color-secondary, #768585);
 }
 
 .palette-two.testimonials__wrapper {
-  background: var(--background-primary-2, #FFFFFF);
+  background: var(--background-primary-2, #1A3333);
 }
 
 .palette-two .testimonials__blockquote {

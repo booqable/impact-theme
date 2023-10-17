@@ -361,7 +361,7 @@
 .palette-one .bq-content.rx-content h4,
 .palette-one .bq-content.rx-content h5,
 .palette-one .bq-content.rx-content h6  {
-  color: var(--color-primary, #0B1A26);
+  color: var(--color-primary, #1A3333);
 }
 
 .palette-one .bq-content.rx-content a,
@@ -371,34 +371,24 @@
 .palette-one .bq-content.rx-content h4 a,
 .palette-one .bq-content.rx-content h5 a,
 .palette-one .bq-content.rx-content h6 a {
-  color: var(--color-outline, #F4B841);
+  color: var(--color-outline, #53C787);
 }
 
 .palette-one .bq-content.rx-content a:hover,
-.palette-one .bq-content.rx-content h1 a:hover,
-.palette-one .bq-content.rx-content h2 a:hover,
-.palette-one .bq-content.rx-content h3 a:hover,
-.palette-one .bq-content.rx-content h4 a:hover,
-.palette-one .bq-content.rx-content h5 a:hover,
-.palette-one .bq-content.rx-content h6 a:hover {
-  color: var(--color-outline-hover, #F4B841CC);
-}
-
-.palette-one .bq-content.rx-content a:active,
 .palette-one .bq-content.rx-content a:focus,
+.palette-one .bq-content.rx-content h1 a:hover,
 .palette-one .bq-content.rx-content h1 a:focus,
-.palette-one .bq-content.rx-content h1 a:active,
+.palette-one .bq-content.rx-content h2 a:hover,
 .palette-one .bq-content.rx-content h2 a:focus,
-.palette-one .bq-content.rx-content h2 a:active,
+.palette-one .bq-content.rx-content h3 a:hover,
 .palette-one .bq-content.rx-content h3 a:focus,
-.palette-one .bq-content.rx-content h3 a:active,
+.palette-one .bq-content.rx-content h4 a:hover,
 .palette-one .bq-content.rx-content h4 a:focus,
-.palette-one .bq-content.rx-content h4 a:active,
+.palette-one .bq-content.rx-content h5 a:hover,
 .palette-one .bq-content.rx-content h5 a:focus,
-.palette-one .bq-content.rx-content h5 a:active,
-.palette-one .bq-content.rx-content h6 a:focus,
-.palette-one .bq-content.rx-content h6 a:active {
-  color: var(--color-outline-active, #F4B841BA);
+.palette-one .bq-content.rx-content h6 a:hover,
+.palette-one .bq-content.rx-content h6 a:focus {
+  color: var(--color-outline-hover, #53C787CC);
 }
 
 .palette-one .bq-content.rx-content pre {
@@ -408,17 +398,17 @@
 .palette-one .bq-content.rx-content td,
 .palette-one .bq-content.rx-content th,
 .palette-one .bq-content.rx-content kbd {
-  border: 1px solid var(--color-border, #0B1A2626);
+  border: 1px solid var(--color-border, #1A333326);
 }
 
 .palette-one .bq-content.rx-content dfn[title],
 .palette-one .bq-content.rx-content abbr[title] {
-  border-bottom: 1px dotted var(--color-border, #0B1A2626);
+  border-bottom: 1px dotted var(--color-border, #1A333326);
 }
 
 .palette-one .bq-content.rx-content dfn[title],
 .palette-one .bq-content.rx-content abbr[title] {
-  border-top-color: var(--color-border, #0B1A2626);
+  border-top-color: var(--color-border, #1A333326);
 }
 
 .palette-two .bq-content.rx-content,
@@ -442,34 +432,24 @@
 }
 
 .palette-two .bq-content.rx-content a:hover,
+.palette-two .bq-content.rx-content a:focus,
 .palette-two .bq-content.rx-content h1 a:hover,
+.palette-two .bq-content.rx-content h1 a:focus,
 .palette-two .bq-content.rx-content h2 a:hover,
+.palette-two .bq-content.rx-content h2 a:focus,
 .palette-two .bq-content.rx-content h3 a:hover,
+.palette-two .bq-content.rx-content h3 a:focus,
 .palette-two .bq-content.rx-content h4 a:hover,
+.palette-two .bq-content.rx-content h4 a:focus,
 .palette-two .bq-content.rx-content h5 a:hover,
+.palette-two .bq-content.rx-content h5 a:focus,
+.palette-two .bq-content.rx-content h6 a:focus,
 .palette-two .bq-content.rx-content h6 a:hover {
   color: var(--color-outline-2-hover, #F4B841CC);
 }
 
-.palette-two .bq-content.rx-content a:active,
-.palette-two .bq-content.rx-content a:focus,
-.palette-two .bq-content.rx-content h1 a:focus,
-.palette-two .bq-content.rx-content h1 a:active,
-.palette-two .bq-content.rx-content h2 a:focus,
-.palette-two .bq-content.rx-content h2 a:active,
-.palette-two .bq-content.rx-content h3 a:focus,
-.palette-two .bq-content.rx-content h3 a:active,
-.palette-two .bq-content.rx-content h4 a:focus,
-.palette-two .bq-content.rx-content h4 a:active,
-.palette-two .bq-content.rx-content h5 a:focus,
-.palette-two .bq-content.rx-content h5 a:active,
-.palette-two .bq-content.rx-content h6 a:focus,
-.palette-two .bq-content.rx-content h6 a:active {
-  color: var(--color-outline-2-active, #F4B841BA);
-}
-
 .palette-two .bq-content.rx-content pre {
-  background-color: var(--background-primary-2-60, #0B1A2699);
+  background-color: var(--background-primary-2-60, #1A333399);
 }
 
 .palette-two .bq-content.rx-content td,

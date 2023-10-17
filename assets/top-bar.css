@@ -64,13 +64,13 @@
 }
 
 .palette-one.top-bar__wrapper {
-  color: var(--color-accent, #0B1A26);
-  background: var(--background-accent, #F4B841);
+  color: var(--color-accent, #FFFFFF);
+  background: var(--background-accent, #1A3333);
 }
 
 .palette-one.top-bar__wrapper .fa,
 .palette-one.top-bar__wrapper .far {
-  color: var(--color-accent, #0B1A26);
+  color: var(--color-accent, #FFFFFF);
 }
 
 .palette-two.top-bar__wrapper {
@@ -84,13 +84,13 @@
 }
 
 .palette-three.top-bar__wrapper {
-  color: var(--color-primary-3, #0B1A26);
-  background: var(--background-primary-3, #F4B841);
+  color: var(--color-primary-3, #F6F4F2);
+  background: var(--background-primary-3, #E06B48);
 }
 
 .palette-three.top-bar__wrapper .fa,
 .palette-three.top-bar__wrapper .far {
-  color: var(--color-primary-3, #0B1A26);
+  color: var(--color-primary-3, #F6F4F2);
 }
 
 @media (min-width: 992px) {

@@ -107,14 +107,14 @@
 }
 
 .palette-one.text-image__wrapper {
-  color: var(--color-third, #0B1A2666);
+  color: var(--color-third, #1A333366);
   background: var(--background-primary, #FFFFFF);
 }
 
 .palette-one .text-image__bg-floral-wrapper g,
 .palette-one .text-image__bg-floral-wrapper path,
 .palette-one .text-image__bg-default-wrapper path {
-  fill: var(--color-primary, #0B1A26);
+  fill: var(--color-primary, #1A3333);
 }
 
 .palette-one .text-image__bg-overlay::before {
@@ -123,7 +123,7 @@
 
 .palette-two.text-image__wrapper {
   color: var(--color-third-2, #FFFFFF66);
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2, #1A3333);
 }
 
 .palette-two .text-image__bg-floral-wrapper g,
@@ -133,7 +133,7 @@
 }
 
 .palette-two .text-image__bg-overlay::before {
-  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary-2, #0B1A26) 0%, var(--background-primary-2-00, #0B1A2600) 100%);
+  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary-2, #1A3333) 0%, var(--background-primary-2-00, #1A333300) 100%);
 }
 
 @media (min-width: 768px) {
@@ -191,7 +191,7 @@
   }
 
   .palette-one .text-image__holder {
-    border: 2px solid var(--background-accent, #F4B841);
+    border: 2px solid var(--background-accent, #1A3333);
   }
 
   .palette-one .text-image__bg-overlay::before {
@@ -211,15 +211,15 @@
   }
 
   .palette-two .text-image__bg-overlay::before {
-    background: radial-gradient(63.68% 231.83% at var(--overlay-rotate), var(--background-primary-2, #0B1A26) 0%, var(--background-primary-2-00, #0B1A2600) 100%);
+    background: radial-gradient(63.68% 231.83% at var(--overlay-rotate), var(--background-primary-2, #1A3333) 0%, var(--background-primary-2-00, #1A333300) 100%);
   }
 
   .palette-two .text-image__bg-overlay::after {
-    background: linear-gradient(to var(--overlay-direction), var(--background-primary-2-00, #0B1A2600) 0%, var(--background-primary-2-10, #0B1A261A) 20%, var(--background-primary-2-45, #0B1A2673) 40%, var(--background-primary-2, #0B1A26) 100%);
+    background: linear-gradient(to var(--overlay-direction), var(--background-primary-2-00, #1A333300) 0%, var(--background-primary-2-10, #1A33331A) 20%, var(--background-primary-2-45, #1A333373) 40%, var(--background-primary-2, #1A3333) 100%);
   }
 
   .palette-two.text-image__spacer {
-    background: var(--background-primary-2, #0B1A26);
+    background: var(--background-primary-2, #1A3333);
   }
 }
 

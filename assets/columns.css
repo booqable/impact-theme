@@ -79,30 +79,30 @@
 }
 
 .palette-one.columns__wrapper {
-  background: var(--color-fourth, #0B1A2626);
+  background: var(--color-fourth, #1A333326);
 }
 
 .palette-one .columns__item {
-  color: var(--color-primary, #0B1A26);
+  color: var(--color-primary, #1A3333);
   background: var(--background-primary, #FFFFFF);
-  border-color: var(--color-fourth, #0B1A2626);
+  border-color: var(--color-fourth, #1A333326);
 }
 
 .palette-one .columns__icon-wrapper i {
-  color: var(--color-outline, #F4B841);
+  color: var(--color-outline, #53C787);
 }
 
 .palette-one .columns__description {
-  color: var(--color-secondary, #4E5D78);
+  color: var(--color-secondary, #768585);
 }
 
 .palette-two.columns__wrapper {
-  background: var(--background-primary-2-60, #0B1A2699);
+  background: var(--background-primary-2-60, #1A333399);
 }
 
 .palette-two .columns__item {
   color: var(--color-primary-2, #FFFFFF);
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2, #1A3333);
   border-color: var(--color-fourth-2, #FFFFFF47);
 }
 

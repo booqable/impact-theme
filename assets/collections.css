@@ -78,7 +78,7 @@
 }
 
 .palette-two.collections__wrapper {
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2, #1A3333);
 }
 
 @media (min-width: 768px) {

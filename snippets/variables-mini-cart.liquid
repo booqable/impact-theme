@@ -11,19 +11,19 @@
 
     {%- if color_palette == "one" -%}
       {%- if settings.primary_color != blank -%}
-        --minicart-button-color: var(--color-primary, #0B1A26);
+        --minicart-button-color: var(--color-primary, #1A3333);
       {%- endif -%}
 
       {%- if settings.accent_background != blank -%}
-        --minicart-button-accent-color: var(--background-accent, #F4B841);
+        --minicart-button-accent-color: var(--background-accent, #1A3333);
       {%- endif -%}
 
       {% if settings.accent_color != blank %}
-        --minicart-button-badge-color: var(--color-accent, #0B1A26);
+        --minicart-button-badge-color: var(--color-accent, #FFFFFF);
       {% endif %}
 
       {%- if settings.accent_outline != blank -%}
-        --minicart-button-hover-color: var(--color-outline-hover, #F4B841CC);
+        --minicart-button-hover-color: var(--color-outline-hover, #53C787CC);
       {%- endif -%}
 
     {%- elsif color_palette == "two" -%}

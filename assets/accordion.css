@@ -85,7 +85,7 @@
 }
 
 .accordion .palette-one .accordion__heading {
-  color: var(--color-primary, #0B1A26);
+  color: var(--color-primary, #1A3333);
 }
 .accordion .palette-two .accordion__heading {
   color: var(--color-primary-2, #FFFFFF);
@@ -93,7 +93,7 @@
 
 .palette-one.accordion__wrapper {
   background: var(--background-primary, #FFFFFF);
-  color: var(--color-third, #0B1A2666);
+  color: var(--color-third, #1A333366);
 }
 
 .palette-one .accordion-block__item {
@@ -104,7 +104,7 @@
 .palette-one .accordion__background-wrapper path,
 .palette-one .accordion__background-floral-wrapper g,
 .palette-one .accordion__background-floral-wrapper path {
-  fill: var(--color-primary, #0B1A26);
+  fill: var(--color-primary, #1A3333);
 }
 
 .palette-one .accordion__background-wrapper:after {
@@ -112,12 +112,12 @@
 }
 
 .palette-two.accordion__wrapper {
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2, #1A3333);
   color: var(--color-third-2, #FFFFFF66);
 }
 
 .palette-two .accordion-block__item {
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2, #1A3333);
 }
 
 .palette-two .accordion__background-wrapper g,
@@ -128,7 +128,7 @@
 }
 
 .palette-two .accordion__background-wrapper:after {
-  background: linear-gradient(180.44deg, var(--background-primary-2, #0B1A26) 51.3%, var(--background-primary-2-00, #0B1A2600) 81.06%);
+  background: linear-gradient(180.44deg, var(--background-primary-2, #1A3333) 51.3%, var(--background-primary-2-00, #1A333300) 81.06%);
 }
 
 @media (min-width: 667px) {

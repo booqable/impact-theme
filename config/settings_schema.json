@@ -19,46 +19,54 @@
       {
         "type": "color",
         "id": "background",
-        "label": "Background"
+        "label": "Background",
+        "default": "#FFFFFF"
       },
       {
         "type": "color",
         "id": "primary_color",
-        "label": "Primary text"
+        "label": "Primary text",
+        "default": "#1A3333"
       },
       {
         "type": "color",
         "id": "secondary_color",
-        "label": "Secondary text"
+        "label": "Secondary text",
+        "default": "#768585"
       },
       {
         "type": "color",
         "id": "accent_background",
         "label": "Accent background",
+        "default": "#1A3333",
         "info": "Used as a background of solid buttons, date picker, etc."
       },
       {
         "type": "color",
         "id": "accent_color",
         "label": "Accent text",
+        "default": "#FFFFFF",
         "info": "Used for text on top of the accent background"
       },
       {
         "type": "color",
         "id": "accent_outline",
         "label": "Accent outline",
+        "default": "#53C787",
         "info": "Also used for accent text without background"
       },
       {
         "type": "color",
         "id": "overlay_background",
         "label": "Alternative background",
+        "default": "#1A3333",
         "info": "Used to make text readable on top of the background images"
       },
       {
         "type": "color",
         "id": "overlay_color",
         "label": "Alternative color",
+        "default": "#FFFFFF",
         "info": "Used for text on top of the background images"
       },
       {
@@ -68,46 +76,54 @@
       {
         "type": "color",
         "id": "background_2",
-        "label": "Background"
+        "label": "Background",
+        "default": "#1A3333"
       },
       {
         "type": "color",
         "id": "primary_color_2",
-        "label": "Primary text"
+        "label": "Primary text",
+        "default": "#FFFFFF"
       },
       {
         "type": "color",
         "id": "secondary_color_2",
-        "label": "Secondary text"
+        "label": "Secondary text",
+        "default": "#CECECE"
       },
       {
         "type": "color",
         "id": "accent_background_2",
         "label": "Accent background",
+        "default": "#FFFFFF",
         "info": "Used as a background of solid buttons, date picker, etc."
       },
       {
         "type": "color",
         "id": "accent_color_2",
         "label": "Accent text",
+        "default": "#1A3333",
         "info": "Used for text on top of the accent background"
       },
       {
         "type": "color",
         "id": "accent_outline_2",
         "label": "Accent outline",
+        "default": "#53C787",
         "info": "Also used for accent text without background"
       },
       {
         "type": "color",
         "id": "overlay_background_2",
         "label": "Alternative background",
+        "default": "#1A3333",
         "info": "Used to make text readable on top of the background images"
       },
       {
         "type": "color",
         "id": "overlay_color_2",
         "label": "Alternative color",
+        "default": "#FFFFFF",
         "info": "Used for text on top of the background images"
       },
       {
@@ -115,41 +131,57 @@
         "content": "Color set 3"
       },
       {
-        "type": "paragraph",
-        "content": "Used for sections like 'Top bar' and 'Call to action'"
-      },
-      {
         "type": "color",
         "id": "background_3",
-        "label": "Background"
+        "label": "Background",
+        "default": "#E06B48"
       },
       {
         "type": "color",
         "id": "primary_color_3",
-        "label": "Primary text"
+        "label": "Primary text",
+        "default": "#F6F4F2"
       },
       {
         "type": "color",
         "id": "secondary_color_3",
-        "label": "Secondary text"
+        "label": "Secondary text",
+        "default": "#1A3333"
       },
       {
         "type": "color",
         "id": "accent_background_3",
         "label": "Accent background",
-        "info": "Used as a background of solid buttons, etc."
+        "default": "#53C787",
+        "info": "Used as a background of solid buttons, date picker, etc."
       },
       {
         "type": "color",
         "id": "accent_color_3",
         "label": "Accent text",
+        "default": "#FFFFFF",
         "info": "Used for text on top of the accent background"
       },
       {
         "type": "color",
         "id": "accent_outline_3",
         "label": "Accent outline",
+        "default": "#53C787",
         "info": "Also used for accent text without background"
+      },
+      {
+        "type": "color",
+        "id": "overlay_background_3",
+        "label": "Alternative background",
+        "default": "#1A3333",
+        "info": "Used to make text readable on top of the background images"
+      },
+      {
+        "type": "color",
+        "id": "overlay_color_3",
+        "label": "Alternative color",
+        "default": "#FFFFFF",
+        "info": "Used for text on top of the background images"
       }
     ]
   },
@@ -163,19 +195,20 @@
       {
         "type": "font_picker",
         "id": "heading_font",
-        "label": "Heading",
-        "info": "Font used for headings"
+        "label": "Headings",
+        "default": "barlow"
       },
       {
         "type": "font_picker",
         "id": "body_font",
-        "label": "Body",
-        "info": "Font used for texts"
+        "label": "Body text",
+        "default": "barlow"
       },
       {
         "type": "font_picker",
         "id": "tagline_font",
         "label": "Tagline",
+        "default": "barlow",
         "info": "Font used for taglines"
       },
       {
@@ -188,7 +221,7 @@
         "label": "Heading 1",
         "min": 40,
         "max": 80,
-        "default": 56,
+        "default": 80,
         "info": "Min: 40, max: 80"
       },
       {
@@ -197,7 +230,7 @@
         "label": "Heading 2",
         "min": 30,
         "max": 70,
-        "default": 48,
+        "default": 64,
         "info": "Min: 30, max: 70"
       },
       {
@@ -206,7 +239,7 @@
         "label": "Heading 3",
         "min": 25,
         "max": 65,
-        "default": 40,
+        "default": 56,
         "info": "Min: 25, max: 65"
       },
       {
@@ -215,7 +248,7 @@
         "label": "Heading 4",
         "min": 20,
         "max": 50,
-        "default": 32,
+        "default": 40,
         "info": "Min: 20, max: 50"
       },
       {
@@ -241,8 +274,9 @@
         "id": "tagline_size",
         "label": "Tagline",
         "min": 14,
-        "max": 50,
-        "info": "Min: 14, max: 50"
+        "max": 30,
+        "default": 20,
+        "info": "Min: 14, max: 30"
       },
       {
         "type": "number",
@@ -250,6 +284,7 @@
         "label": "Large text",
         "min": 18,
         "max": 28,
+        "default": 18,
         "info": "Min: 18, max: 28"
       },
       {
@@ -258,6 +293,7 @@
         "label": "Regular text",
         "min": 12,
         "max": 20,
+        "default": 16,
         "info": "Min: 12, max: 20"
       }
     ]
@@ -286,7 +322,8 @@
             "value": "fully_round",
             "label": "Fully round"
           }
-        ]
+        ],
+        "default": "fully_round"
       },
       {
         "type": "header",
@@ -309,7 +346,8 @@
             "value": "not2",
             "label": "Not set in specs"
           }
-        ]
+        ],
+        "default": "not1"
       },
       {
         "type": "select",
@@ -336,7 +374,8 @@
             "value": "grit",
             "label": "Grit"
           }
-        ]
+        ],
+        "default": "grid"
       },
       {
         "type": "header",
@@ -359,7 +398,8 @@
             "value": "sketch",
             "label": "Sketch"
           }
-        ]
+        ],
+        "default": "sketch"
       }
     ]
   },
@@ -377,6 +417,7 @@
         "type": "image_picker",
         "id": "image_placeholder",
         "label": "Image placeholder",
+        "default": "booqable://assets/image-placeholder.png",
         "info": "This image displays on products and collections if they don't have any images"
       }
     ]

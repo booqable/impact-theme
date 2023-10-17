@@ -116,24 +116,24 @@
 
 .palette-one.contact-form__wrapper {
   background: var(--background-primary, #FFFFFF);
-  color: var(--color-third, #0B1A2666);
+  color: var(--color-third, #1A333366);
 }
 
 .palette-one .contact-form__heading {
-  color: var(--color-primary, #0B1A26);
+  color: var(--color-primary, #1A3333);
 }
 
 .palette-one .contact-form__holder.no-image {
-  background: var(--color-image-placeholder, #0B1A2626);
+  background: var(--color-image-placeholder, #1A333326);
 }
 
 .palette-one .contact-form__button.button--outlined {
-  color: var(--color-primary, #0B1A26);
+  color: var(--color-primary, #1A3333);
 }
 
 .palette-one .contact-form__background g,
 .palette-one .contact-form__background path {
-  fill: var(--color-primary, #0B1A26);
+  fill: var(--color-primary, #1A3333);
 }
 
 .palette-one .contact-form__background:after {
@@ -145,7 +145,7 @@
 }
 
 .palette-two.contact-form__wrapper {
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2, #1A3333);
   color: var(--color-third-2, #FFFFFF66);
 }
 
@@ -167,11 +167,11 @@
 }
 
 .palette-two .contact-form__background:after {
-  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary-2, #0B1A26) 0%, var(--background-primary-2-00, #0B1A2600) 100%);
+  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary-2, #1A3333) 0%, var(--background-primary-2-00, #1A333300) 100%);
 }
 
 .palette-two .contact-form__background:before {
-  background: linear-gradient(to var(--overlay-direction), var(--background-primary-2-00, #0B1A2600) 0%, var(--background-primary-2-10, #0B1A261A) 20%, var(--background-primary-2-45, #0B1A2673) 40%, var(--background-primary-2, #0B1A26) 100%);
+  background: linear-gradient(to var(--overlay-direction), var(--background-primary-2-00, #1A333300) 0%, var(--background-primary-2-10, #1A33331A) 20%, var(--background-primary-2-45, #1A333373) 40%, var(--background-primary-2, #1A3333) 100%);
 }
 
 @media (min-width: 810px) {
@@ -232,7 +232,7 @@
 
   .palette-one .contact-form__holder.no-image:after,
   .palette-one .contact-form__image-wrapper:after {
-    border-color: var(--background-accent, #F4B841);
+    border-color: var(--background-accent, #1A3333);
   }
 
   .palette-two .contact-form__holder.no-image:after,

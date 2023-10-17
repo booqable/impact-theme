@@ -111,11 +111,11 @@
 
 .palette-one.error-404__content {
   background: var(--background-primary, #FFFFFF);
-  color: var(--color-primary, #0B1A26);
+  color: var(--color-primary, #1A3333);
 }
 
 .palette-one .error-404__description b {
-  color: var(--color-outline, #F4B841);
+  color: var(--color-outline, #53C787);
 }
 
 .palette-one .error-404__background-wrapper::after {
@@ -124,11 +124,11 @@
 
 .palette-one .error-404__background g,
 .palette-one .error-404__background path {
-  fill: var(--color-primary, #0B1A26);
+  fill: var(--color-primary, #1A3333);
 }
 
 .palette-two.error-404__content {
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2, #1A3333);
   color: var(--color-primary-2, #FFFFFF);
 }
 
@@ -137,7 +137,7 @@
 }
 
 .palette-two .error-404__background-wrapper::after {
-  background: linear-gradient(173.19deg, var(--background-primary-2, #0B1A26) 33.02%, var(--background-primary-2-00, #0B1A2600) 93.23%);
+  background: linear-gradient(173.19deg, var(--background-primary-2, #1A3333) 33.02%, var(--background-primary-2-00, #1A333300) 93.23%);
 }
 
 .palette-two .error-404__background g,

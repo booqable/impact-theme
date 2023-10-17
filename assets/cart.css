@@ -17,13 +17,13 @@
 }
 
 .palette-one.cart__wrapper {
-  color: var(--color-third, #0B1A2666);
+  color: var(--color-third, #1A333366);
   background: var(--background-primary, #FFFFFF);
 }
 
 .palette-two.cart__wrapper {
   color: var(--color-third-2, #FFFFFF66);
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2, #1A3333);
 }
 
 @media screen and (min-width: 667px) {

@@ -53,42 +53,35 @@
 }
 
 .palette-one .pagination span {
-  border-color: var(--color-border, #0B1A2626);
+  border-color: var(--color-border, #1A333326);
 }
 
 .palette-one .pagination .deco,
 .palette-one .pagination .current,
 .palette-one .pagination span a {
-  color: var(--color-secondary, #4E5D78);
+  color: var(--color-secondary, #768585);
 }
 
 .palette-one .pagination .deco,
 .palette-one .pagination .current {
-  background: var(--background-accent, #F4B841);
-  color: var(--color-accent, #0B1A26);
+  background: var(--background-accent, #1A3333);
+  color: var(--color-accent, #FFFFFF);
 }
 
 .palette-one .pagination .page:not(.current):hover,
 .palette-one .pagination .prev:not([data-enabled="false"]):hover,
 .palette-one .pagination .next:not([data-enabled="false"]):hover {
-  background: var(--background-accent-hover, #F4B841CC);
-  color: var(--color-accent, #0B1A26);
-}
-
-.palette-one .pagination .page:not(.current):active,
-.palette-one .pagination .prev:not([data-enabled="false"]):active,
-.palette-one .pagination .next:not([data-enabled="false"]):active {
-  background: var(--background-accent-active, #F4B841BA);
-  color: var(--color-accent, #0B1A26);
+  background: var(--background-accent-hover, #1A3333CC);
+  color: var(--color-accent, #FFFFFF);
 }
 
 .palette-one .pagination path {
-  fill: var(--color-secondary, #4E5D78);
+  fill: var(--color-secondary, #768585);
 }
 
 .palette-one .pagination .prev[data-enabled="true"] a:hover path,
 .palette-one .pagination .next[data-enabled="true"] a:hover path {
-  fill: var(--color-accent, #0B1A26);
+  fill: var(--color-accent, #FFFFFF);
 }
 
 .palette-two .pagination span {
@@ -111,13 +104,6 @@
 .palette-two .pagination .prev:not([data-enabled="false"]):hover,
 .palette-two .pagination .next:not([data-enabled="false"]):hover {
   background: var(--background-accent-2-hover, #F4B841CC);
-  color: var(--color-accent-2, #0B1A26);
-}
-
-.palette-two .pagination .page:not(.current):active,
-.palette-two .pagination .prev:not([data-enabled="false"]):active,
-.palette-two .pagination .next:not([data-enabled="false"]):active {
-  background: var(--background-accent-2-active, #F4B841BA);
   color: var(--color-accent-2, #0B1A26);
 }
 

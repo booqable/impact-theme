@@ -131,7 +131,7 @@
 }
 
 .palette-one.hero__wrapper {
-  color: var(--color-third, #0B1A2666);
+  color: var(--color-third, #1A333366);
   background: var(--background-primary, #FFFFFF);
 }
 
@@ -140,7 +140,7 @@
 }
 
 .palette-one .hero__title {
-  color: var(--color-primary, #0B1A26);
+  color: var(--color-primary, #1A3333);
 }
 
 .palette-one .hero__vision {
@@ -158,16 +158,16 @@
 .palette-one .hero__vision-floral-wrapper g,
 .palette-one .hero__vision-floral-wrapper path,
 .palette-one .hero__vision-wrapper path {
-  fill: var(--color-primary, #0B1A26);
+  fill: var(--color-primary, #1A3333);
 }
 
 .palette-two.hero__wrapper {
   color: var(--color-third-2, #FFFFFF66);
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2, #1A3333);
 }
 
 .palette-two.hero__overlay {
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2, #1A3333);
 }
 
 .palette-two .hero__title {
@@ -175,15 +175,15 @@
 }
 
 .palette-two .hero__vision {
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2, #1A3333);
 }
 
 .palette-two .hero__vision-wrapper-overlay:after {
-  background: linear-gradient(to right, var(--background-primary-2, #0B1A26) 0%, var(--background-primary-2, #0B1A26) 90%, var(--background-primary-2-00, #0B1A2600) 100%);
+  background: linear-gradient(to right, var(--background-primary-2, #1A3333) 0%, var(--background-primary-2, #1A3333) 90%, var(--background-primary-2-00, #1A333300) 100%);
 }
 
 .palette-two .hero__vision-wrapper-overlay:before {
-  background: radial-gradient(43.14% 157.06% at 17.22% 51.25%, var(--background-primary-2, #0B1A26) 0%, var(--background-primary-2-00, #0B1A2600) 100%);
+  background: radial-gradient(43.14% 157.06% at 17.22% 51.25%, var(--background-primary-2, #1A3333) 0%, var(--background-primary-2-00, #1A333300) 100%);
 }
 
 .palette-two .hero__vision-floral-wrapper g,
