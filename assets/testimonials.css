@@ -96,19 +96,6 @@
   color: var(--color-secondary-2, #E1E4E8);
 }
 
-.classic-design .testimonials__image {
-  padding: 8px;
-  border: 1px solid transparent;
-}
-
-.classic-design .palette-one .testimonials__image {
-  border-color: var(--background-accent, #F4B841);
-}
-
-.classic-design .palette-two .testimonials__image {
-  border-color: var(--background-accent-2, #F4B841);
-}
-
 @media (min-width: 992px) {
   .testimonials__wrapper--padding-top {
     padding-top: var(--padding-top, 80px);

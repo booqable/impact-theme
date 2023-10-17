@@ -136,19 +136,6 @@
   background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary-2, #0B1A26) 0%, var(--background-primary-2-00, #0B1A2600) 100%);
 }
 
-.classic-design .text-image__image {
-  padding: 8px;
-  border: 1px solid transparent;
-}
-
-.classic-design .palette-one .text-image__image {
-  border-color: var(--background-accent, #F4B841);
-}
-
-.classic-design .palette-two .text-image__image {
-  border-color: var(--background-accent-2, #F4B841);
-}
-
 @media (min-width: 768px) {
   .text-image__spacer {
     height: var(--height, 0px);
@@ -233,19 +220,6 @@
 
   .palette-two.text-image__spacer {
     background: var(--background-primary-2, #0B1A26);
-  }
-
-  .classic-design .text-image__holder {
-    position: static;
-    width: auto;
-    margin: 0;
-    border: none;
-  }
-
-  .classic-design .text-image__image-wrapper {
-    right: var(--image-right-classic);
-    left: var(--image-left-classic);
-    min-width: calc(100% + 16px);
   }
 }
 

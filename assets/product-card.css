@@ -147,33 +147,6 @@ bq-product-availability[visible="true"] {
   color: var(--color-outline-2, #F4B841);
 }
 
-.classic-design .product-card {
-  padding: 8px;
-}
-
-.classic-design .product-card .product-card__vision {
-  border-bottom: 0;
-}
-
-.classic-design .product-card__meta,
-.classic-design .product-card__price-info {
-  align-items: center;
-}
-
-.classic-design .product-card__meta {
-  padding-bottom: 8px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.classic-design .palette-one .product-card {
-  border: 1px solid var(--background-accent, #F4B841);
-}
-
-.classic-design .palette-one .product-card {
-  border: 1px solid var(--background-accent-2, #F4B841);
-}
-
 @media (min-width: 992px) {
   .product-card {
     min-width: 285px;

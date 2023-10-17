@@ -220,6 +220,12 @@
     {%- if settings.tagline_size != blank -%}
       --font-size-tagline: {{- settings.tagline_size | append: "px" -}};
     {%- endif -%}
+    {%- if settings.large_text_size != blank -%}
+      --font-size-large: {{- settings.large_text_size | append: "px" -}};
+    {%- endif -%}
+    {%- if settings.regular_text_size != blank -%}
+      --font-size-regular: {{- settings.regular_text_size | append: "px" -}};
+    {%- endif -%}
 
     {%- if settings.animation_duration != blank -%}
       --animation-duration: {{- settings.animation_duration | append: "ms"-}};

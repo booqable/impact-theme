@@ -18,10 +18,6 @@
   background: var(--background-primary-2, #0B1A26);
 }
 
-.classic-design .products__wrapper {
-  text-align: center;
-}
-
 @media (min-width: 1200px) {
   .products__wrapper--padding-top {
     padding-top: var(--padding-top, 112px);

@@ -105,7 +105,6 @@
         "disabled": null
       }
     },
-    "element_design": "modern",
     "background_style": "cubes",
     "background": "#FFFFFF",
     "background_2": "#0B1A26",
@@ -242,7 +241,6 @@
           "disabled": null
         }
       },
-      "element_design": "modern",
       "background_style": "cubes",
       "background": "#FFFFFF",
       "background_2": "#0B1A26",

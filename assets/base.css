@@ -106,7 +106,7 @@ html {
 body {
   background: var(--background-primary, #FFFFFF);
   color: var(--color-primary, #0B1A26);
-  font-size: 16px;
+  font-size: var(--font-size-regular, 16px);
   line-height: var(--line-height-lg, 1.5);
   display: flex;
   flex-direction: column;
@@ -242,21 +242,6 @@ h6,
   line-height: 1.4;
 }
 
-.classic-design h1,
-.classic-design h2,
-.classic-design h3,
-.classic-design h4,
-.classic-design h5,
-.classic-design h6,
-.classic-design .h1,
-.classic-design .h2,
-.classic-design .h3,
-.classic-design .h4,
-.classic-design .h5,
-.classic-design .h6 {
-  font-weight: var(--font-weight-regular, 400);
-}
-
 a {
   display: inline-block;
   vertical-align: top;
@@ -325,27 +310,12 @@ img {
 }
 
 .text-large {
-  font-size: 1.25rem;
-  line-height: var(--line-height-lg, 1.5);
-}
-
-.text-medium {
-  font-size: 1.125rem;
+  font-size: var(--font-size-large, 18px);
   line-height: var(--line-height-lg, 1.5);
 }
 
 .text-regular {
-  font-size: 1rem;
-  line-height: var(--line-height-lg, 1.5);
-}
-
-.text-small {
-  font-size: 0.875rem;
-  line-height: var(--line-height-lg, 1.5);
-}
-
-.text-tiny {
-  font-size: 0.75rem;
+  font-size: var(--font-size-regular, 16px);
   line-height: var(--line-height-lg, 1.5);
 }
 
@@ -382,7 +352,7 @@ img {
   justify-content: center;
   align-items: center;
   font-family: var(--font-body, sans-serif);
-  font-size: 16px;
+  font-size: var(--font-size-regular, 16px);
   letter-spacing: -0.01em;
   font-weight: var(--font-weight-semibold, 600);
   line-height: var(--line-height-sm, 1.2);
