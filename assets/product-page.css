@@ -136,7 +136,7 @@
 
 .palette-two .product-main__shipping-info,
 .palette-two .product-main__info .accordion__content {
-  color: var(--color-secondary-2, #4E5D78);
+  color: var(--color-secondary-2, #CECECE);
 }
 
 .palette-two .product-main__info .accordion {
@@ -149,7 +149,7 @@
 }
 
 .palette-two .product-main__info .accordion__content {
-  color: var(--color-secondary-2, #4E5D78);
+  color: var(--color-secondary-2, #CECECE);
 }
 
 @media (min-width: 768px) {

@@ -496,7 +496,7 @@
 .palette-two .menu__opener:hover span,
 .palette-two .menu__opener:hover:before,
 .palette-two .menu__opener:hover:after {
-  background: var(--color-outline-2-hover, #F4B841CC);
+  background: var(--color-outline-2-hover, #53C787CC);
 }
 
 .palette-two .menu__wrapper {
@@ -516,7 +516,7 @@
 .palette-two .menu__dropdown-item:hover > .menu__dropdown-link,
 .palette-two .menu__dropdown > .menu__dropdown-wrapper > .menu__dropdown-opener:hover,
 .palette-two .menu__social .social-networks__link:hover {
-  color: var(--color-outline-2-hover, #F4B841CC);
+  color: var(--color-outline-2-hover, #53C787CC);
 }
 
 .palette-two .menu__dropdown-opener path {
@@ -526,7 +526,7 @@
 .palette-two .menu__dropdown-opener:hover path,
 .palette-two .menu__item:hover > .menu__dropdown-opener path,
 .palette-two .menu__dropdown-item:hover > .menu__dropdown-opener path {
-  stroke: var(--color-outline-2-hover, #F4B841CC);
+  stroke: var(--color-outline-2-hover, #53C787CC);
 }
 
 .palette-two .menu__dropdown-wrapper {
@@ -1125,7 +1125,7 @@
   }
 
   .palette-two .menu__item > .menu__link:after {
-    background: var(--background-accent-2, #F4B841);
+    background: var(--background-accent-2, #FFFFFF);
   }
 
   .palette-two .menu__link:hover,
@@ -1145,7 +1145,7 @@
   }
 
   .palette-two .menu__dropdown-wrapper {
-    border-bottom-color: var(--background-accent-2, #F4B841);
+    border-bottom-color: var(--background-accent-2, #FFFFFF);
   }
 
   .palette-two .menu__item > .menu__dropdown > .menu__dropdown-wrapper {

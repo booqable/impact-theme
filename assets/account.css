@@ -398,17 +398,17 @@ div.account-fieldset--error .account-fieldset__input:focus {
 
 .palette-two .account-fieldset__label {
   background: var(--background-primary-2, #1A3333);
-  color: var(--color-secondary-2, #E1E4E8);
+  color: var(--color-secondary-2, #CECECE);
 }
 
 .palette-two .account-fieldset__label:not(:has(+ input:focus)):has(+ input:placeholder-shown) {
   background-color: transparent;
-  color: var(--color-secondary-2, #E1E4E8);
+  color: var(--color-secondary-2, #CECECE);
 }
 
 .palette-two .account-fieldset__static-label,
 .palette-two .account-fieldset__radio-label {
-  color: var(--color-secondary-2, #E1E4E8);
+  color: var(--color-secondary-2, #CECECE);
 }
 
 .palette-two .account-fieldset__input {
@@ -418,15 +418,15 @@ div.account-fieldset--error .account-fieldset__input:focus {
 }
 
 .palette-two .account-fieldset__input:focus {
-  border-color: var(--background-accent-2-hover, #F4B841CC);
+  border-color: var(--background-accent-2-hover, #FFFFFFCC);
 }
 
 .palette-two .account__link {
-  color: var(--color-outline-2, #F4B841);
+  color: var(--color-outline-2, #53C787);
 }
 
 .palette-two .account__link:hover {
-  color: var(--color-outline-2-hover, #F4B841CC);
+  color: var(--color-outline-2-hover, #53C787CC);
 }
 
 .palette-two .account__alert--info {
@@ -441,8 +441,8 @@ div.account-fieldset--error .account-fieldset__input:focus {
 
 .palette-two [id^='user_legal_type']:checked + .account-fieldset__radio-label:before,
 .palette-two [id^='user_agreement_accepted']:checked + .account-checkbox__label:before {
-  border-color: var(--background-accent-2, #F4B841);
-  background: var(--background-accent-2, #F4B841);
+  border-color: var(--background-accent-2, #FFFFFF);
+  background: var(--background-accent-2, #FFFFFF);
 }
 
 .palette-two [id^='user_legal_type']:checked + .account-fieldset__radio-label:after,

@@ -107,11 +107,11 @@
 }
 
 .palette-two .columns__icon-wrapper i {
-  color: var(--color-outline-2, #F4B841);
+  color: var(--color-outline-2, #53C787);
 }
 
 .palette-two .columns__description {
-  color: var(--color-secondary-2, #4E5D78);
+  color: var(--color-secondary-2, #CECECE);
 }
 
 @media (min-width: 992px) {

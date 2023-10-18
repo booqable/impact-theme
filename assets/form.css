@@ -193,7 +193,7 @@ div.form__block--error .form__textarea:focus {
 
 .palette-two .form__label {
   background: var(--background-primary-2, #1A3333);
-  color: var(--color-secondary-2, #E1E4E8);
+  color: var(--color-secondary-2, #CECECE);
 }
 
 .palette-two .form__input,
@@ -207,7 +207,7 @@ div.form__block--error .form__textarea:focus {
 .palette-two .form__input:focus-visible,
 .palette-two .form__textarea:focus,
 .palette-two .form__textarea:focus-visible {
-  border-color: var(--background-accent-2, #F4B841);
+  border-color: var(--background-accent-2, #FFFFFF);
 }
 
 .palette-two .form__info .success {

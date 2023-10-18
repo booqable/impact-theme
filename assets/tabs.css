@@ -149,7 +149,7 @@
 }
 
 .palette-two .tabs {
-  color: var(--color-secondary-2, #4E5D78);
+  color: var(--color-secondary-2, #CECECE);
 }
 
 .palette-two .tabs__trigger {
@@ -157,7 +157,7 @@
 }
 
 .palette-two .tabs__trigger:before {
-  background: var(--background-accent-2, #F4B841);
+  background: var(--background-accent-2, #FFFFFF);
 }
 
 .palette-two .tabs__heading {

@@ -431,41 +431,41 @@ img {
 
 .overlay-dark .button.button--primary,
 .palette-two .button.button--primary {
-  color: var(--color-accent-2, #0B1A26);
-  background: var(--background-accent-2, #F4B841);
-  border-color: var(--background-accent-2, #F4B841);
+  color: var(--color-accent-2, #1A3333);
+  background: var(--background-accent-2, #FFFFFF);
+  border-color: var(--background-accent-2, #FFFFFF);
 }
 
 .overlay-dark .button.button--primary:hover,
 .palette-two .button.button--primary:hover {
-  background: var(--background-accent-2-hover, #F4B841CC);
-  border-color: var(--background-accent-2-hover, #F4B841CC);
+  background: var(--background-accent-2-hover, #FFFFFFCC);
+  border-color: var(--background-accent-2-hover, #FFFFFFCC);
 }
 
 .overlay-dark .button.button--secondary,
 .palette-two .button.button--secondary {
-  color: var(--color-outline-2, #F4B841);
+  color: var(--color-outline-2, #53C787);
 }
 
 .overlay-dark .button.button--secondary path,
 .palette-two .button.button--secondary path {
-  fill: var(--color-outline-2, #F4B841);
+  fill: var(--color-outline-2, #53C787);
 }
 
 .overlay-dark .button.button--secondary:hover,
 .palette-two .button.button--secondary:hover {
-  text-shadow: 0.5px 0 var(--color-outline-2, #F4B841);
+  text-shadow: 0.5px 0 var(--color-outline-2, #53C787);
 }
 
 .overlay-dark .button.button--outlined,
 .palette-two .button.button--outlined {
-  color: var(--background-accent-2, #F4B841);
-  border-color: var(--background-accent-2, #F4B841);
+  color: var(--background-accent-2, #FFFFFF);
+  border-color: var(--background-accent-2, #FFFFFF);
 }
 
 .overlay-dark .button.button--outlined:hover,
 .palette-two .button.button--outlined:hover {
-  background: var(--background-accent-secondary-2-hover, #F4B84133);
+  background: var(--background-accent-secondary-2-hover, #FFFFFF33);
 }
 
 .container {
@@ -510,7 +510,7 @@ img {
 }
 
 .palette-two .tagline {
-  color: var(--color-outline-2, #F4B841);
+  color: var(--color-outline-2, #53C787);
 }
 
 @media (min-width: 1100px) {

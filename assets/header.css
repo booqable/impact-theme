@@ -285,13 +285,13 @@
 
 .palette-two .header__search-reset:hover:after,
 .palette-two .header__search-reset:hover:before {
-  background: var(--color-outline-2-hover, #F4B841CC);
+  background: var(--color-outline-2-hover, #53C787CC);
 }
 
 .palette-two .header__search-input {
   color: var(--color-primary-2, #FFFFFF);
   background: var(--background-primary-2, #1A3333);
-  border-color: var(--background-accent-2, #F4B841);
+  border-color: var(--background-accent-2, #FFFFFF);
 }
 
 .palette-two .header__search-input::placeholder {
@@ -309,11 +309,11 @@
 }
 
 .palette-two .header__search #search-opener:checked ~ .header__search-opener g {
-  stroke: var(--color-outline-2, #F4B841);
+  stroke: var(--color-outline-2, #53C787);
 }
 
 .palette-two .header__search-opener:hover g {
-  stroke: var(--color-outline-2-hover, #F4B841CC);
+  stroke: var(--color-outline-2-hover, #53C787CC);
 }
 
 .palette-two .header__cart .bq-icon-cart::before {
@@ -321,11 +321,11 @@
 }
 
 .palette-two .bq-cart-button:hover .bq-icon-cart::before {
-  color: var(--color-outline-2-hover, #F4B841CC);
+  color: var(--color-outline-2-hover, #53C787CC);
 }
 
 .palette-two .bq-cart-button__line-count {
-  color: var(--color-outline-2, #F4B841) !important;
+  color: var(--color-outline-2, #53C787) !important;
 }
 
 @media (min-width: 576px) {
@@ -472,7 +472,7 @@
   }
 
   .palette-two.header-menu-bottom .header__search-input:focus {
-    border-color: var(--background-accent-2, #F4B841);
+    border-color: var(--background-accent-2, #FFFFFF);
   }
 
   .palette-two.header-menu-bottom .header__links:before {

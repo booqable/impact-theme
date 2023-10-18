@@ -133,7 +133,7 @@
 }
 
 .palette-two .error-404__description b {
-  color: var(--color-outline-2, #F4B841);
+  color: var(--color-outline-2, #53C787);
 }
 
 .palette-two .error-404__background-wrapper::after {

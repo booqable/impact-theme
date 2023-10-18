@@ -74,8 +74,6 @@
     {%- if settings.primary_color_2 != blank -%}
       --color-primary-2: {{- settings.primary_color_2 -}};
       --color-primary-2-30: {{- settings.primary_color_2 | append: "4D" -}};
-      --color-primary-2-45: {{- settings.primary_color_2 | append: "73" -}};
-      --color-primary-2-80: {{- settings.primary_color_2 | append: "CC" -}};
       --color-primary-2-hover: {{- settings.primary_color_2 | append: "52" -}};
       --color-third-2: {{- settings.primary_color_2 | append: "66"-}};
       --color-fourth-2: {{- settings.primary_color_2 | append: "47" -}};
@@ -119,7 +117,6 @@
       --background-overlay-2-00: {{- settings.overlay_background_2 | append: "00" -}};
       --background-overlay-2-08: {{- settings.overlay_background_2 | append: "14" -}};
       --background-overlay-2-45: {{- settings.overlay_background_2 | append: "73" -}};
-      --background-overlay-2-gray: {{- settings.overlay_background_2 | append: "59" -}};
     {%- endif -%}
 
     {%- if settings.overlay_color_2 != blank -%}
@@ -127,7 +124,6 @@
       --color-overlay-2-00: {{- settings.overlay_color_2 | append: "00" -}};
       --color-overlay-2-08: {{- settings.overlay_color_2 | append: "14" -}};
       --color-overlay-2-45: {{- settings.overlay_color_2 | append: "73" -}};
-      --color-overlay-2-gray: {{- settings.overlay_color_2 | append: "59" -}};
     {%- endif -%}
 
     {%- if settings.background_3 != blank -%}
@@ -137,7 +133,6 @@
 
     {%- if settings.primary_color_3 != blank -%}
       --color-primary-3: {{- settings.primary_color_3 -}};
-      --color-primary-3-hover: {{- settings.primary_color_3 | append: "52" -}};
     {%- endif -%}
 
     {%- if settings.secondary_color_3 != blank -%}
@@ -156,30 +151,6 @@
       --color-accent-3: {{- settings.accent_color_3 -}};
     {%- else -%}
       --color-accent-3: {%- if settings.primary_color_3 != blank -%}{{- settings.primary_color_3 -}}{%- endif -%};
-    {%- endif -%}
-
-    {%- if settings.accent_outline_3 != blank -%}
-      --color-outline-3: {{- settings.accent_outline_3 -}};
-      --color-outline-3-hover: {{- settings.accent_outline_3 | append: "CC" -}};
-    {%- else -%}
-      --color-outline-3: {{- branding_color -}};
-      --color-outline-3-hover: {{- branding_color | append: "CC" -}};
-    {%- endif -%}
-
-    {%- if settings.overlay_background_3 != blank -%}
-      --background-overlay-3: {{- settings.overlay_background_3 -}};
-      --background-overlay-3-00: {{- settings.overlay_background_3 | append: "00" -}};
-      --background-overlay-3-08: {{- settings.overlay_background_3 | append: "14" -}};
-      --background-overlay-3-45: {{- settings.overlay_background_3 | append: "73" -}};
-      --background-overlay-3-gray: {{- settings.overlay_background_3 | append: "59" -}};
-    {%- endif -%}
-
-    {%- if settings.overlay_color_3 != blank -%}
-      --color-overlay-3: {{- settings.overlay_color_3 -}};
-      --color-overlay-3-00: {{- settings.overlay_color_3 | append: "00" -}};
-      --color-overlay-3-08: {{- settings.overlay_color_3 | append: "14" -}};
-      --color-overlay-3-45: {{- settings.overlay_color_3 | append: "73" -}};
-      --color-overlay-3-gray: {{- settings.overlay_color_3 | append: "59" -}};
     {%- endif -%}
 
     {%- if settings.heading_font != blank -%}

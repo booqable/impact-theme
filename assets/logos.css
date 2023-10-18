@@ -68,7 +68,7 @@
 }
 
 .palette-two .logos__title {
-  color: var(--color-secondary-2, #4E5D78);
+  color: var(--color-secondary-2, #CECECE);
 }
 
 .palette-two .logos__image-wrapper.no-image:after {

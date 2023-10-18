@@ -93,7 +93,7 @@
 }
 
 .palette-two .testimonials__small {
-  color: var(--color-secondary-2, #E1E4E8);
+  color: var(--color-secondary-2, #CECECE);
 }
 
 @media (min-width: 992px) {

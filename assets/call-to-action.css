@@ -154,7 +154,7 @@
 }
 
 .palette-two.cta__wrapper {
-  background: var(--background-accent-2, #F4B841);
+  background: var(--background-accent-2, #FFFFFF);
   color: var(--color-primary-2, #FFFFFF);
 }
 
@@ -187,7 +187,7 @@
 }
 
 .palette-two .cta__image-wrapper:after {
-  background: linear-gradient(180.44deg, var(--background-accent-2, #F4B841) 51.3%, var(--background-accent-2-00, #F4B84100) 81.06%);
+  background: linear-gradient(180.44deg, var(--background-accent-2, #FFFFFF) 51.3%, var(--background-accent-2-00, #FFFFFF00) 81.06%);
 }
 
 .palette-three.cta__wrapper {
@@ -196,24 +196,24 @@
 }
 
 .palette-three .cta__header-button.button--primary {
-  background: var(--background-accent-3, #0B1A26);
-  border-color: var(--background-accent-3, #0B1A26);
+  background: var(--background-accent-3, #53C787);
+  border-color: var(--background-accent-3, #53C787);
   color: var(--color-accent-3, #FFFFFF);
 }
 
 .palette-three .cta__header-button.button--primary:hover {
-  background: var(--background-accent-3, #0B1A26);
-  border-color: var(--background-accent-3, #0B1A26);
+  background: var(--background-accent-3, #53C787);
+  border-color: var(--background-accent-3, #53C787);
   opacity: 0.85;
 }
 
 .palette-three .cta__header-button.button--outlined {
   color: var(--color-accent-3, #FFFFFF);
-  border-color: var(--background-accent-3, #0B1A26);
+  border-color: var(--background-accent-3, #53C787);
 }
 
 .palette-three .cta__header-button.button--outlined:hover {
-  background: var(--background-accent-3-hover, #0B1A2652);
+  background: var(--background-accent-3-hover, #53C78752);
 }
 
 .palette-three .cta__image-floral-wrapper g,

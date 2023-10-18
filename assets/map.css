@@ -66,5 +66,5 @@
 }
 
 .palette-two .map .ol-control button:hover {
-  border-color: var(--background-accent-2-hover, #F4B841CC);
+  border-color: var(--background-accent-2-hover, #FFFFFFCC);
 }

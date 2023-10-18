@@ -207,7 +207,7 @@
   }
 
   .palette-two .text-image__holder {
-    border: 2px solid var(--background-accent-2, #F4B841);
+    border: 2px solid var(--background-accent-2, #FFFFFF);
   }
 
   .palette-two .text-image__bg-overlay::before {

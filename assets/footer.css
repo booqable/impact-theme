@@ -134,7 +134,7 @@
 }
 
 .palette-two .footer__menu-list {
-  color: var(--color-secondary-2, #4E5D78);
+  color: var(--color-secondary-2, #CECECE);
 }
 
 .palette-two .footer__copy {
@@ -143,7 +143,7 @@
 
 .palette-two .footer__menu-link:hover,
 .palette-two .footer__social .social-networks__link:hover {
-  color: var(--color-outline-2-hover, #F4B841CC);
+  color: var(--color-outline-2-hover, #53C787CC);
 }
 
 .palette-two .footer__bottom {

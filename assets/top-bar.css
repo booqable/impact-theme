@@ -74,13 +74,13 @@
 }
 
 .palette-two.top-bar__wrapper {
-  color: var(--color-accent-2, #0B1A26);
-  background: var(--background-accent-2, #F4B841);
+  color: var(--color-accent-2, #1A3333);
+  background: var(--background-accent-2, #FFFFFF);
 }
 
 .palette-two.top-bar__wrapper .fa,
 .palette-two.top-bar__wrapper .far {
-  color: var(--color-accent-2, #0B1A26);
+  color: var(--color-accent-2, #1A3333);
 }
 
 .palette-three.top-bar__wrapper {

@@ -237,7 +237,7 @@
 
   .palette-two .contact-form__holder.no-image:after,
   .palette-two .contact-form__image-wrapper:after {
-    border-color: var(--background-accent-2, #F4B841);
+    border-color: var(--background-accent-2, #FFFFFF);
   }
 }
 

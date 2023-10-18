@@ -174,11 +174,11 @@
 }
 
 .palette-two .sidebar__nav-opener path {
-  fill: var(--color-outline-2, #F4B841);
+  fill: var(--color-outline-2, #53C787);
 }
 
 .palette-two .sidebar__menu a:hover {
-  color: var(--color-outline-2-hover, #F4B841CC);
+  color: var(--color-outline-2-hover, #53C787CC);
 }
 
 .palette-two .sidebar__menu {
@@ -187,12 +187,12 @@
 
 .palette-two .sidebar__menu-opener:before,
 .palette-two .sidebar__menu-opener:after {
-  background: var(--color-outline-2, #F4B841);
+  background: var(--color-outline-2, #53C787);
 }
 
 .palette-two .sidebar__menu-opener:hover:before,
 .palette-two .sidebar__menu-opener:hover:after {
-  background: var(--color-outline-2-hover, #F4B841CC);
+  background: var(--color-outline-2-hover, #53C787CC);
 }
 
 .loaded .sidebar__menu-wrapper {

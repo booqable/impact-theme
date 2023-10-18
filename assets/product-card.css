@@ -144,7 +144,7 @@ bq-product-availability[visible="true"] {
 
 .palette-two .product-card__price,
 .palette-two bq-product-price {
-  color: var(--color-outline-2, #F4B841);
+  color: var(--color-outline-2, #53C787);
 }
 
 @media (min-width: 992px) {

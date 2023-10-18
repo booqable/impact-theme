@@ -428,7 +428,7 @@
 .palette-two .bq-content.rx-content h4 a,
 .palette-two .bq-content.rx-content h5 a,
 .palette-two .bq-content.rx-content h6 a {
-  color: var(--color-outline-2, #F4B841);
+  color: var(--color-outline-2, #53C787);
 }
 
 .palette-two .bq-content.rx-content a:hover,
@@ -445,7 +445,7 @@
 .palette-two .bq-content.rx-content h5 a:focus,
 .palette-two .bq-content.rx-content h6 a:focus,
 .palette-two .bq-content.rx-content h6 a:hover {
-  color: var(--color-outline-2-hover, #F4B841CC);
+  color: var(--color-outline-2-hover, #53C787CC);
 }
 
 .palette-two .bq-content.rx-content pre {

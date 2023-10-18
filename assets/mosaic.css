@@ -134,7 +134,7 @@
 }
 
 .palette-two.mosaic__wrapper {
-  color: var(--color-secondary-2, #4E5D78);
+  color: var(--color-secondary-2, #CECECE);
   background: var(--background-primary-2, #1A3333);
 }
 

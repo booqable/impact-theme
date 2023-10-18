@@ -91,27 +91,27 @@
 .palette-two .pagination .deco,
 .palette-two .pagination .current,
 .palette-two .pagination span a {
-  color: var(--color-secondary-2, #4E5D78);
+  color: var(--color-secondary-2, #CECECE);
 }
 
 .palette-two .pagination .deco,
 .palette-two .pagination .current {
-  background: var(--background-accent-2, #F4B841);
-  color: var(--color-accent-2, #0B1A26);
+  background: var(--background-accent-2, #FFFFFF);
+  color: var(--color-accent-2, #1A3333);
 }
 
 .palette-two .pagination .page:not(.current):hover,
 .palette-two .pagination .prev:not([data-enabled="false"]):hover,
 .palette-two .pagination .next:not([data-enabled="false"]):hover {
-  background: var(--background-accent-2-hover, #F4B841CC);
-  color: var(--color-accent-2, #0B1A26);
+  background: var(--background-accent-2-hover, #FFFFFFCC);
+  color: var(--color-accent-2, #1A3333);
 }
 
 .palette-two .pagination path {
-  fill: var(--color-secondary-2, #4E5D78);
+  fill: var(--color-secondary-2, #CECECE);
 }
 
 .palette-two .pagination .prev[data-enabled="true"] a:hover path,
 .palette-two .pagination .next[data-enabled="true"] a:hover path {
-  fill: var(--color-accent-2, #0B1A26);
+  fill: var(--color-accent-2, #1A3333);
 }
