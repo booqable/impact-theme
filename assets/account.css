@@ -223,7 +223,7 @@
 
 .account__alert--info {
   background: var(--color-azureish-white, #D7E2FF);
-  color: var(--color-black, #0B1A26);
+  color: var(--color-black, #1A3333);
 }
 
 .account__alert--danger {

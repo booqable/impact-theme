@@ -244,33 +244,6 @@
       },
       {
         "type": "number",
-        "id": "h4_size",
-        "label": "Heading 4",
-        "min": 20,
-        "max": 50,
-        "default": 40,
-        "info": "Min: 20, max: 50"
-      },
-      {
-        "type": "number",
-        "id": "h5_size",
-        "label": "Heading 5",
-        "min": 18,
-        "max": 32,
-        "default": 24,
-        "info": "Min: 18, max: 32"
-      },
-      {
-        "type": "number",
-        "id": "h6_size",
-        "label": "Heading 6",
-        "min": 16,
-        "max": 26,
-        "default": 20,
-        "info": "Min: 16, max: 26"
-      },
-      {
-        "type": "number",
         "id": "tagline_size",
         "label": "Tagline",
         "min": 14,

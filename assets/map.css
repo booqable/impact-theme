@@ -31,7 +31,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: var(--color-black-08, #0B1A2673);
+  background: var(--color-black-08, #1A333373);
 }
 
 .map .ol-control {
@@ -42,7 +42,7 @@
   display: block;
   margin: 0;
   padding: 0;
-  color: var(--black, #0B1A26);
+  color: var(--color-black, #1A3333);
   font-size: inherit;
   font-weight: var(--font-weight-semibold, 600);
   line-height: 1;
@@ -50,7 +50,7 @@
   text-decoration: none;
   height: 24px;
   width: 24px;
-  background-color: var(--white, #FFFFFF);
+  background-color: var(--color-white, #FFFFFF);
   border: 1px solid transparent;
   transition: all var(--animation-duration, 200ms) var(--transition-function-ease-out);
   pointer-events: all !important;
