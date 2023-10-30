@@ -11,11 +11,11 @@
 }
 
 .text-image__wrapper--padding-top {
-  padding-top: var(--padding-top-mobile, 56px);
+  padding-top: var(--padding-top-mobile);
 }
 
 .text-image__wrapper--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile, 56px);
+  padding-bottom: var(--padding-bottom-mobile);
 }
 
 .text-image__container {
@@ -25,17 +25,17 @@
 
 .text-image__columns {
   display: flex;
-  flex-direction: var(--flex-direction-mobile, column);
+  flex-direction: var(--flex-direction-mobile);
 }
 
 .text-image__title {
-  font-weight: var(--font-weight-bold, 700);
+  font-weight: var(--font-weight-bold);
   margin-bottom: 25px;
 }
 
 .text-image__buttons {
   margin-top: 37px;
-  margin-bottom: calc(-1 * var(--button-margin-bottom, 16px));
+  margin-bottom: calc(-1 * var(--button-margin-bottom));
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -107,50 +107,50 @@
 }
 
 .palette-one.text-image__wrapper {
-  color: var(--color-third, #1A333366);
-  background: var(--background-primary, #FFFFFF);
+  color: var(--color-third-1);
+  background: var(--background-primary-1);
 }
 
 .palette-one .text-image__bg-floral-wrapper g,
 .palette-one .text-image__bg-floral-wrapper path,
 .palette-one .text-image__bg-default-wrapper path {
-  fill: var(--color-primary, #1A3333);
+  fill: var(--color-primary-1);
 }
 
 .palette-one .text-image__bg-overlay::before {
-  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary, #FFFFFF) 0%, var(--background-primary-00, #FFFFFF00) 100%);
+  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary-1) 0%, var(--background-primary-1-00) 100%);
 }
 
 .palette-two.text-image__wrapper {
-  color: var(--color-third-2, #FFFFFF66);
-  background: var(--background-primary-2, #1A3333);
+  color: var(--color-third-2);
+  background: var(--background-primary-2);
 }
 
 .palette-two .text-image__bg-floral-wrapper g,
 .palette-two .text-image__bg-floral-wrapper path,
 .palette-two .text-image__bg-default-wrapper path {
-  fill: var(--color-primary-2, #FFFFFF);
+  fill: var(--color-primary-2);
 }
 
 .palette-two .text-image__bg-overlay::before {
-  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary-2, #1A3333) 0%, var(--background-primary-2-00, #1A333300) 100%);
+  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary-2) 0%, var(--background-primary-2-00) 100%);
 }
 
 @media (min-width: 768px) {
   .text-image__spacer {
-    height: var(--height, 0px);
+    height: var(--height);
   }
 
   .text-image__columns {
     justify-content: space-between;
-    flex-direction: var(--flex-direction, row);
+    flex-direction: var(--flex-direction);
     align-items: center;
-    margin: 0 calc(-1 * var(--horizontal-padding, 16px));
+    margin: 0 calc(-1 * var(--horizontal-padding));
   }
 
   .text-image__col {
     width: 100%;
-    padding: 0 var(--horizontal-padding, 16px);
+    padding: 0 var(--horizontal-padding);
   }
 
   .text-image__holder {
@@ -191,35 +191,35 @@
   }
 
   .palette-one .text-image__holder {
-    border: 2px solid var(--background-accent, #1A3333);
+    border: 2px solid var(--background-accent-1);
   }
 
   .palette-one .text-image__bg-overlay::before {
-    background: radial-gradient(63.68% 231.83% at var(--overlay-rotate), var(--background-primary, #FFFFFF) 0%, var(--background-primary-00, #FFFFFF00) 100%);
+    background: radial-gradient(63.68% 231.83% at var(--overlay-rotate), var(--background-primary-1) 0%, var(--background-primary-1-00) 100%);
   }
 
   .palette-one .text-image__bg-overlay::after {
-    background: linear-gradient(to var(--overlay-direction), var(--background-primary-00, #FFFFFF00) 0%, var(--background-primary-10, #FFFFFF1A) 20%, var(--background-primary-45, #FFFFFF73) 40%, var(--background-primary, #FFFFFF) 100%);
+    background: linear-gradient(to var(--overlay-direction), var(--background-primary-1-00) 0%, var(--background-primary-1-10) 20%, var(--background-primary-1-45) 40%, var(--background-primary-1) 100%);
   }
 
   .palette-one.text-image__spacer {
-    background: var(--background-primary, #FFFFFF);
+    background: var(--background-primary-1);
   }
 
   .palette-two .text-image__holder {
-    border: 2px solid var(--background-accent-2, #FFFFFF);
+    border: 2px solid var(--background-accent-2);
   }
 
   .palette-two .text-image__bg-overlay::before {
-    background: radial-gradient(63.68% 231.83% at var(--overlay-rotate), var(--background-primary-2, #1A3333) 0%, var(--background-primary-2-00, #1A333300) 100%);
+    background: radial-gradient(63.68% 231.83% at var(--overlay-rotate), var(--background-primary-2) 0%, var(--background-primary-2-00) 100%);
   }
 
   .palette-two .text-image__bg-overlay::after {
-    background: linear-gradient(to var(--overlay-direction), var(--background-primary-2-00, #1A333300) 0%, var(--background-primary-2-10, #1A33331A) 20%, var(--background-primary-2-45, #1A333373) 40%, var(--background-primary-2, #1A3333) 100%);
+    background: linear-gradient(to var(--overlay-direction), var(--background-primary-2-00) 0%, var(--background-primary-2-10) 20%, var(--background-primary-2-45) 40%, var(--background-primary-2) 100%);
   }
 
   .palette-two.text-image__spacer {
-    background: var(--background-primary-2, #1A3333);
+    background: var(--background-primary-2);
   }
 }
 
@@ -232,11 +232,11 @@
 
 @media (min-width: 1200px) {
   .text-image__wrapper--padding-top {
-    padding-top: var(--padding-top, 100px);
+    padding-top: var(--padding-top);
   }
 
   .text-image__wrapper--padding-bottom {
-    padding-bottom: var(--padding-bottom, 100px);
+    padding-bottom: var(--padding-bottom);
   }
 
   .text-image__description {

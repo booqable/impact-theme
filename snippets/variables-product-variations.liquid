@@ -4,36 +4,42 @@
     --variation-select-font-size: 16px;
     --variation-select-padding: 0 40px 0 10px;
     --variation-select-control-height: 50px;
-    --variation-select-border-radius: var(--border-radius, 0);
+    --variation-select-border-radius: var(--border-radius);
     --bundle-items-image-size: 50px;
-    --bundle-items-image-border-radius: var(--border-radius, 0);
+    --bundle-items-image-border-radius: var(--border-radius);
     --bundle-items-cell-padding: 5px;
     --bundle-items-font-size: 15px;
 
     {%- if color_palette == "one" -%}
-      {%- if settings.background != blank -%}
-        --variation-select-background-color: var(--background-primary, #FFFFFF);
-        --bundle-items-background-color: var(--background-primary, #FFFFFF);
+      {%- if settings.background_1 != blank -%}
+        --variation-select-background-color: var(--background-primary-1);
+        --bundle-items-background-color: var(--background-primary-1);
       {%- endif -%}
 
-      {%- if settings.primary_color != blank -%}
-        --variation-select-color: var(--color-primary, #1A3333);
-        --variation-select-border: 1px solid var(--color-border, #1A333326);
-        --bundle-items-color: var(--color-primary, #1A3333);
-        --bundle-items-image-border: 1px solid var(--color-border, #1A333326);
+      {%- if settings.primary_color_1 != blank -%}
+        --variation-select-color: var(--color-primary-1);
+        --bundle-items-color: var(--color-primary-1);
+      {%- endif -%}
+
+      {%- if settings.border_color_1 != blank -%}
+        --variation-select-border: 1px solid var(--color-border-1);
+        --bundle-items-image-border: 1px solid var(--color-border-1);
       {%- endif -%}
 
     {%- elsif color_palette == "two" -%}
       {%- if settings.background_2 != blank -%}
-        --variation-select-background-color: var(--background-primary-2, #1A3333);
-        --bundle-items-background-color: var(--background-primary-2, #1A3333);
+        --variation-select-background-color: var(--background-primary-2);
+        --bundle-items-background-color: var(--background-primary-2);
       {%- endif -%}
 
       {%- if settings.primary_color_2 != blank -%}
-        --variation-select-color: var(--color-primary-2, #FFFFFF);
-        --variation-select-border: 1px solid var(--color-border-2, #FFFFFF47);
-        --bundle-items-color: var(--color-primary-2, #FFFFFF);
-        --bundle-items-image-border: 1px solid var(--color-border-2, #FFFFFF47);
+        --variation-select-color: var(--color-primary-2);
+        --bundle-items-color: var(--color-primary-2);
+      {%- endif -%}
+
+      {%- if settings.border_color_2 != blank -%}
+        --variation-select-border: 1px solid var(--color-border-2);
+        --bundle-items-image-border: 1px solid var(--color-border-2);
       {%- endif -%}
     {%- endif -%}
   }

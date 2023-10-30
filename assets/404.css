@@ -12,11 +12,11 @@
 }
 
 .error-404__content--padding-top {
-  padding-top: var(--padding-top-mobile, 40px);
+  padding-top: var(--padding-top-mobile);
 }
 
 .error-404__content--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile, 60px);
+  padding-bottom: var(--padding-bottom-mobile);
 }
 
 .error-404__container {
@@ -26,16 +26,16 @@
 
 .error-404__title {
   font-size: clamp(72px, 10.3vw, 148px);
-  font-weight: var(--font-weight-light, 300);
-  line-height: var(--line-height-sm, 1.2);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-sm);
   text-align: center;
   color: currentColor;
 }
 
-.error-404__description {
+div.error-404__container .error-404__description {
   font-size: clamp(24px, 2.7vw, 40px);
-  font-weight: var(--font-weight-medium, 500);
-  line-height: var(--line-height-sm, 1.2);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-sm);
   text-align: center;
   color: currentColor;
   padding: 0 0 20px;
@@ -47,7 +47,7 @@
 
 .error-404__buttons {
   padding: 18px 0 0;
-  margin-bottom: calc(-1 * var(--button-margin-bottom, 16px));
+  margin-bottom: calc(-1 * var(--button-margin-bottom));
   text-align: center;
 }
 
@@ -110,39 +110,39 @@
 }
 
 .palette-one.error-404__content {
-  background: var(--background-primary, #FFFFFF);
-  color: var(--color-primary, #1A3333);
+  background: var(--background-primary-1);
+  color: var(--color-primary-1);
 }
 
 .palette-one .error-404__description b {
-  color: var(--color-outline, #53C787);
+  color: var(--color-outline-1);
 }
 
 .palette-one .error-404__background-wrapper::after {
-  background: linear-gradient(173.19deg, var(--background-primary, #FFFFFF) 33.02%, var(--background-primary-00, #FFFFFF00) 93.23%);
+  background: linear-gradient(173.19deg, var(--background-primary-1) 33.02%, var(--background-primary-1-00) 93.23%);
 }
 
 .palette-one .error-404__background g,
 .palette-one .error-404__background path {
-  fill: var(--color-primary, #1A3333);
+  fill: var(--color-primary-1);
 }
 
 .palette-two.error-404__content {
-  background: var(--background-primary-2, #1A3333);
-  color: var(--color-primary-2, #FFFFFF);
+  background: var(--background-primary-2);
+  color: var(--color-primary-2);
 }
 
 .palette-two .error-404__description b {
-  color: var(--color-outline-2, #53C787);
+  color: var(--color-outline-2);
 }
 
 .palette-two .error-404__background-wrapper::after {
-  background: linear-gradient(173.19deg, var(--background-primary-2, #1A3333) 33.02%, var(--background-primary-2-00, #1A333300) 93.23%);
+  background: linear-gradient(173.19deg, var(--background-primary-2) 33.02%, var(--background-primary-2-00) 93.23%);
 }
 
 .palette-two .error-404__background g,
 .palette-two .error-404__background path {
-  fill: var(--color-primary-2, #FFFFFF);
+  fill: var(--color-primary-2);
 }
 
 @media (min-width: 768px) {
@@ -160,11 +160,10 @@
 
 @media (min-width: 992px) {
   .error-404__content--padding-top {
-    padding-top: var(--padding-top, 50px);
+    padding-top: var(--padding-top);
   }
 
   .error-404__content--padding-bottom {
-    padding-bottom: var(--padding-bottom, 90px);
+    padding-bottom: var(--padding-bottom);
   }
 }
-

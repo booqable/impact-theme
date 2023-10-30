@@ -1,9 +1,9 @@
 .products__wrapper--padding-top {
-  padding-top: var(--padding-top-mobile, 40px);
+  padding-top: var(--padding-top-mobile);
 }
 
 .products__wrapper--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile, 40px);
+  padding-bottom: var(--padding-bottom-mobile);
 }
 
 .products__list {
@@ -11,19 +11,19 @@
 }
 
 .palette-one.products__wrapper {
-  background: var(--background-primary, #FFFFFF);
+  background: var(--background-primary-1);
 }
 
 .palette-two.products__wrapper {
-  background: var(--background-primary-2, #1A3333);
+  background: var(--background-primary-2);
 }
 
 @media (min-width: 1200px) {
   .products__wrapper--padding-top {
-    padding-top: var(--padding-top, 112px);
+    padding-top: var(--padding-top);
   }
 
   .products__wrapper--padding-bottom {
-    padding-bottom: var(--padding-bottom, 112px);
+    padding-bottom: var(--padding-bottom);
   }
 }

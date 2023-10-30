@@ -1,63 +1,63 @@
 {% style %}
   bq-cart-totals {
     --book-button-label-weight: 700;
-    --book-button-input-border-radius: var(--border-radius, 0);
-    --book-button-button-border-radius: var(--border-radius, 0);
+    --book-button-input-border-radius: var(--border-radius);
+    --book-button-button-border-radius: var(--border-radius);
     --book-button-control-height: 50px;
     --book-button-button-padding: 14px 24px;
     --book-button-button-width: 100%;
-    --book-button-error-color: var(--color-red, #C23434);
+    --book-button-error-color: var(--color-red);
     --totals-breakdown-font-size: 16px;
     --totals-breakdown-font-weight: 400;
     --totals-total-font-size: 20px;
     --totals-total-font-weight: 700;
     --totals-error-padding: 8px 16px;
-    --totals-error-border-radius: var(--border-radius, 0);
-    --totals-error-background-color: var(--color-red-light, #F5CFCF);
-    --totals-error-color: var(--color-red, #C23434);
+    --totals-error-border-radius: var(--border-radius-none);
+    --totals-error-background-color: var(--color-red-light);
+    --totals-error-color: var(--color-red);
     --totals-error-gap: 10px;
     --totals-error-font-size: 16px;
     --totals-error-font-weight: 400;
 
     {%- if color_palette == "one" -%}
-      {% if settings.primary_color != blank %}
-        --secondary-button-button-label-color: var(--color-primary, #1A3333);
-        --totals-text-color: var(--color-primary, #1A3333);
-        --totals-border: 1px solid var(--color-border, #1A333326);
-      {% endif %}
+      {%- if settings.primary_color_1 != blank -%}
+        --secondary-button-button-label-color: var(--color-primary-1);
+        --totals-text-color: var(--color-primary-1);
+        --totals-border: 1px solid var(--color-border-1);
+      {%- endif -%}
 
-      {% if settings.background != blank %}
-        --secondary-button-button-color: var(--background-primary, #FFFFFF);
-      {% endif %}
+      {%- if settings.background_1 != blank -%}
+        --secondary-button-button-color: var(--background-primary-1);
+      {%- endif -%}
 
-      {% if settings.accent_background != blank %}
-        --book-button-button-color: var(--background-accent, #1A3333);
-        --secondary-button-button-border: 1px solid var(--background-accent, #1A3333);
-      {% endif %}
+      {%- if settings.accent_background_1 != blank -%}
+        --book-button-button-color: var(--background-accent-1);
+        --secondary-button-button-border: 1px solid var(--background-accent-1);
+      {%- endif -%}
 
-      {% if settings.accent_color != blank %}
-        --book-button-button-label-color: var(--color-accent, #FFFFFF);
-      {% endif %}
+      {%- if settings.accent_color_1 != blank -%}
+        --book-button-button-label-color: var(--color-accent-1);
+      {%- endif -%}
 
     {%- elsif color_palette == "two" -%}
-      {% if settings.primary_color_2 != blank %}
-        --secondary-button-button-label-color: var(--color-primary-2, #FFFFFF);
-        --totals-text-color: var(--color-primary-2, #FFFFFF);
-        --totals-border: 1px solid var(--color-border-2, #FFFFFF47);
-      {% endif %}
+      {%- if settings.primary_color_2 != blank -%}
+        --secondary-button-button-label-color: var(--color-primary-2);
+        --totals-text-color: var(--color-primary-2);
+        --totals-border: 1px solid var(--color-border-2);
+      {%- endif -%}
 
-      {% if settings.background_2 != blank %}
-        --secondary-button-button-color: var(--background-primary-2, #1A3333);
-      {% endif %}
+      {%- if settings.background_2 != blank -%}
+        --secondary-button-button-color: var(--background-primary-2);
+      {%- endif -%}
 
-      {% if settings.accent_background_2 != blank %}
-        --book-button-button-color: var(--background-accent-2, #FFFFFF);
-        --secondary-button-button-border: 1px solid var(--background-accent-2, #FFFFFF);
-      {% endif %}
+      {%- if settings.accent_background_2 != blank -%}
+        --book-button-button-color: var(--background-accent-2);
+        --secondary-button-button-border: 1px solid var(--background-accent-2);
+      {%- endif -%}
 
-      {% if settings.accent_color_2 != blank %}
-        --book-button-button-label-color: var(--color-accent-2, #1A3333);
-      {% endif %}
+      {%- if settings.accent_color_2 != blank -%}
+        --book-button-button-label-color: var(--color-accent-2);
+      {%- endif -%}
     {%- endif -%}
   }
 {% endstyle %}

@@ -18,56 +18,42 @@
       },
       {
         "type": "color",
-        "id": "background",
+        "id": "background_1",
         "label": "Background",
         "default": "#FFFFFF"
       },
       {
         "type": "color",
-        "id": "primary_color",
+        "id": "primary_color_1",
         "label": "Primary text",
         "default": "#1A3333"
       },
       {
         "type": "color",
-        "id": "secondary_color",
+        "id": "secondary_color_1",
         "label": "Secondary text",
         "default": "#768585"
       },
       {
         "type": "color",
-        "id": "accent_background",
+        "id": "accent_background_1",
         "label": "Accent background",
-        "default": "#1A3333",
+        "default": "#53C787",
         "info": "Used as a background of solid buttons, date picker, etc."
       },
       {
         "type": "color",
-        "id": "accent_color",
+        "id": "accent_color_1",
         "label": "Accent text",
-        "default": "#FFFFFF",
+        "default": "#1A3333",
         "info": "Used for text on top of the accent background"
       },
       {
         "type": "color",
-        "id": "accent_outline",
+        "id": "accent_outline_1",
         "label": "Accent outline",
         "default": "#53C787",
         "info": "Also used for accent text without background"
-      },
-      {
-        "type": "color",
-        "id": "overlay_background",
-        "label": "Alternative background",
-        "default": "#1A3333",
-        "info": "Used to make text readable on top of the background images"
-      },
-      {
-        "type": "color",
-        "id": "overlay_color",
-        "label": "Alternative color",
-        "default": "#FFFFFF",
-        "info": "Used for text on top of the background images"
       },
       {
         "type": "header",
@@ -77,19 +63,19 @@
         "type": "color",
         "id": "background_2",
         "label": "Background",
-        "default": "#1A3333"
+        "default": "#53C787"
       },
       {
         "type": "color",
         "id": "primary_color_2",
         "label": "Primary text",
-        "default": "#FFFFFF"
+        "default": "#1A3333"
       },
       {
         "type": "color",
         "id": "secondary_color_2",
         "label": "Secondary text",
-        "default": "#CECECE"
+        "default": "#2A5044"
       },
       {
         "type": "color",
@@ -109,22 +95,8 @@
         "type": "color",
         "id": "accent_outline_2",
         "label": "Accent outline",
-        "default": "#53C787",
-        "info": "Also used for accent text without background"
-      },
-      {
-        "type": "color",
-        "id": "overlay_background_2",
-        "label": "Alternative background",
-        "default": "#1A3333",
-        "info": "Used to make text readable on top of the background images"
-      },
-      {
-        "type": "color",
-        "id": "overlay_color_2",
-        "label": "Alternative color",
         "default": "#FFFFFF",
-        "info": "Used for text on top of the background images"
+        "info": "Also used for accent text without background"
       },
       {
         "type": "header",
@@ -146,42 +118,114 @@
         "type": "color",
         "id": "secondary_color_3",
         "label": "Secondary text",
-        "default": "#1A3333"
+        "default": "#E0D4CE"
       },
       {
         "type": "color",
         "id": "accent_background_3",
         "label": "Accent background",
-        "default": "#53C787",
+        "default": "#F6F4F2",
         "info": "Used as a background of solid buttons, date picker, etc."
       },
       {
         "type": "color",
         "id": "accent_color_3",
         "label": "Accent text",
-        "default": "#FFFFFF",
+        "default": "#1A3333",
         "info": "Used for text on top of the accent background"
       },
       {
         "type": "color",
         "id": "accent_outline_3",
         "label": "Accent outline",
+        "default": "#1A3333",
+        "info": "Also used for accent text without background"
+      },
+      {
+        "type": "header",
+        "content": "Color set 4"
+      },
+      {
+        "type": "color",
+        "id": "background_4",
+        "label": "Primary background",
+        "default": "#1A3333"
+      },
+      {
+        "type": "color",
+        "id": "primary_color_4",
+        "label": "Primary text",
+        "default": "#F6F4F2"
+      },
+      {
+        "type": "color",
+        "id": "secondary_color_4",
+        "label": "Secondary text",
+        "default": "#A0A6A6"
+      },
+      {
+        "type": "color",
+        "id": "accent_background_4",
+        "label": "Accent background",
+        "default": "#53C787",
+        "info": "Used as a background of solid buttons, date picker, etc."
+      },
+      {
+        "type": "color",
+        "id": "accent_color_4",
+        "label": "Accent text",
+        "default": "#1A3333",
+        "info": "Used for text on top of the accent background"
+      },
+      {
+        "type": "color",
+        "id": "accent_outline_4",
+        "label": "Accent outline",
         "default": "#53C787",
         "info": "Also used for accent text without background"
       },
       {
-        "type": "color",
-        "id": "overlay_background_3",
-        "label": "Alternative background",
-        "default": "#1A3333",
-        "info": "Used to make text readable on top of the background images"
+        "type": "header",
+        "content": "Color set 5"
       },
       {
         "type": "color",
-        "id": "overlay_color_3",
-        "label": "Alternative color",
-        "default": "#FFFFFF",
-        "info": "Used for text on top of the background images"
+        "id": "background_5",
+        "label": "Background",
+        "default": "#F6F4F2"
+      },
+      {
+        "type": "color",
+        "id": "primary_color_5",
+        "label": "Primary text",
+        "default": "#1A3333"
+      },
+      {
+        "type": "color",
+        "id": "secondary_color_5",
+        "label": "Secondary text",
+        "default": "#768585"
+      },
+      {
+        "type": "color",
+        "id": "accent_background_5",
+        "label": "Accent background",
+        "default": "#53C787",
+        "info": "Used as a background of solid buttons, date picker, etc."
+      },
+      {
+        "type": "color",
+        "id": "accent_color_5",
+        "label": "Accent text",
+        "default": "#1A3333",
+        "info": "Used for text on top of the accent background"
+      },
+      {
+        "type": "color",
+        "id": "accent_outline_5",
+        "label": "Accent outline",
+        "default": "#53C787",
+        "info": "Also used for accent text without background"
       }
     ]
   },
@@ -196,20 +240,19 @@
         "type": "font_picker",
         "id": "heading_font",
         "label": "Headings",
-        "default": "barlow"
+        "default": "darker-grotesque"
       },
       {
         "type": "font_picker",
         "id": "body_font",
         "label": "Body text",
-        "default": "barlow"
+        "default": "open-sans"
       },
       {
         "type": "font_picker",
         "id": "tagline_font",
         "label": "Tagline",
-        "default": "barlow",
-        "info": "Font used for taglines"
+        "default": "open-sans"
       },
       {
         "type": "header",
@@ -403,9 +446,9 @@
         "id": "animation_duration",
         "label": "Duration",
         "min": 0,
-        "max": 10000,
-        "default": 200,
-        "info": "Leave empty for use default 200ms duration. 1 second = 1000 milliseconds. Min: 0, max: 10000"
+        "max": 10,
+        "default": 0.2,
+        "info": "Unit - seconds. Leave empty for use default 0.2s duration. Min: 0, max: 10"
       }
     ]
   },

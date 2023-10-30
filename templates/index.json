@@ -131,11 +131,6 @@
           "settings": {},
           "disabled": null
         },
-        "collection_242542": {
-          "type": "collection",
-          "settings": {},
-          "disabled": null
-        },
         "collection_535502": {
           "type": "collection",
           "settings": {},
@@ -145,7 +140,6 @@
       "block_order": [
         "collection",
         "collection_242972",
-        "collection_242542",
         "collection_535502"
       ],
       "settings": {

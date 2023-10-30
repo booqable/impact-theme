@@ -14,19 +14,19 @@
 }
 
 .images__container--padding-top {
-  padding-top: var(--padding-top-mobile, 40px);
+  padding-top: var(--padding-top-mobile);
 }
 
 .images__container--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile, 40px);
+  padding-bottom: var(--padding-bottom-mobile);
 }
 
 .images__text-area {
   height: 100%;
   display: flex;
-  justify-content: var(--text-justify-content-mobile, flex-start);
-  align-items: var(--text-align-items-mobile, flex-start);
-  text-align: var(--text-align-mobile, left);
+  justify-content: var(--text-justify-content-mobile);
+  align-items: var(--text-align-items-mobile);
+  text-align: var(--text-align-mobile);
   margin: 0 var(--margin-right-mobile) 0 var(--margin-left-mobile);
 }
 
@@ -35,7 +35,7 @@
 }
 
 .images__title * {
-  font-family: var(--font-heading, sans-serif);
+  font-family: var(--font-heading);
 }
 
 .images__description:not(:last-child) {
@@ -47,7 +47,7 @@
 }
 
 .images__buttons {
-  margin: 0 -8px calc(-1 * var(--button-margin-bottom, 16px));
+  margin: 0 -8px calc(-1 * var(--button-margin-bottom));
 }
 
 .images__button {
@@ -85,7 +85,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: var(--opacity-overlay, 100%);
+  opacity: var(--opacity-overlay);
 }
 
 .images__image {
@@ -134,7 +134,7 @@
 }
 
 .images__wrapper-with-date-picker .images__container--padding-bottom {
-  padding-bottom: calc(var(--padding-bottom-mobile, 40px) + var(--date-picker-block-height, 70px));
+  padding-bottom: calc(var(--padding-bottom-mobile) + var(--date-picker-block-height, 70px));
 }
 
 .images__wrapper-with-date-picker .images__vision {
@@ -170,11 +170,11 @@
 .images__date-picker-title {
   display: flex;
   font-size: 18px;
-  font-weight: var(--font-weight-regular, 400);
+  font-weight: var(--font-weight-regular);
 }
 
 .images__date-picker-component {
-  min-height: var(--date-picker-height, 70px);
+  min-height: var(--date-picker-height);
   margin: 0 1px;
 }
 
@@ -188,134 +188,134 @@
 
 .palette-one .overlay-dark .images__title,
 .palette-one .overlay-dark .images__description {
-  color: var(--color-overlay, #FFFFFF);
+  color: var(--color-overlay-1);
 }
 
 .palette-one .overlay-dark .images__buttons .button--outlined {
-  color: var(--color-overlay, #FFFFFF);
+  color: var(--color-overlay-1);
 }
 
 .palette-one .overlay-dark .images__vision,
 .palette-one .overlay-dark ~ .images__vision {
-  background: var(--background-overlay, #1A3333);
+  background: var(--background-overlay-1);
 }
 
 .palette-one .overlay-dark .images__vision .images__vision-wrapper--overlay:after,
 .palette-one .overlay-dark ~ .images__vision .images__vision-wrapper--overlay:after {
-  background: linear-gradient(357.73deg, var(--background-overlay, #1A3333) 3.03%, var(--background-overlay-00, #1A333300) 31.83%),
-   linear-gradient(180deg, var(--background-overlay, #1A3333) 6.67%, var(--background-overlay-00, #1A333300) 105.81%),
-   linear-gradient(0deg, var(--background-overlay-45, #1A333373), var(--background-overlay-45, #1A333373));
+  background: linear-gradient(357.73deg, var(--background-overlay-1) 3.03%, var(--background-overlay-1-00) 31.83%),
+   linear-gradient(180deg, var(--background-overlay-1) 6.67%, var(--background-overlay-1-00) 105.81%),
+   linear-gradient(0deg, var(--background-overlay-1-45), var(--background-overlay-1-45));
 }
 
 .palette-one .overlay-light .images__title,
 .palette-one .overlay-light .images__description {
-  color: var(--background-overlay, #1A3333);
+  color: var(--background-overlay-1);
 }
 
 .palette-one .overlay-light .images__buttons .button--outlined {
-  color: var(--background-overlay, #1A3333);
+  color: var(--background-overlay-1);
 }
 
 .palette-one .overlay-light .images__vision,
 .palette-one .overlay-light ~ .images__vision {
-  background: var(--color-overlay, #FFFFFF);
+  background: var(--color-overlay-1);
 }
 
 .palette-one .overlay-light .images__vision .images__vision-wrapper--overlay:after,
 .palette-one .overlay-light ~ .images__vision .images__vision-wrapper--overlay:after {
-  background: linear-gradient(357.73deg, var(--color-overlay, #FFFFFF) 3.03%, var(--color-overlay-00, #FFFFFF00) 31.83%),
-   linear-gradient(180deg, var(--color-overlay, #FFFFFF) 6.67%, var(--color-overlay-00, #FFFFFF00) 105.81%),
-   linear-gradient(0deg, var(--color-overlay-45, #FFFFFF73), var(--color-overlay-45, #FFFFFF73));
+  background: linear-gradient(357.73deg, var(--color-overlay-1) 3.03%, var(--color-overlay-1-00) 31.83%),
+   linear-gradient(180deg, var(--color-overlay-1) 6.67%, var(--color-overlay-1-00) 105.81%),
+   linear-gradient(0deg, var(--color-overlay-1-45), var(--color-overlay-1-45));
 }
 
 .palette-one .images__date-picker-overlay {
-  background: var(--background-primary, #FFFFFF);
+  background: var(--background-primary-1);
 }
 
 .palette-one > .overlay-light ~ .images__date-picker path,
 .palette-one .images__date-picker.show-overlay-light .images__date-picker-icon path {
-  fill: var(--background-overlay, #1A3333);
+  fill: var(--background-overlay-1);
 }
 
 .palette-one > .overlay-light ~ .images__date-picker .images__date-picker-title,
 .palette-one .images__date-picker.show-overlay-light .images__date-picker-title {
-  color: var(--background-overlay, #1A3333);
+  color: var(--background-overlay-1);
 }
 
 .palette-one > .overlay-dark ~ .images__date-picker path,
 .palette-one .images__date-picker.show-overlay-dark .images__date-picker-icon path {
-  fill: var(--color-overlay, #FFFFFF);
+  fill: var(--color-overlay-1);
 }
 
 .palette-one > .overlay-dark ~ .images__date-picker .images__date-picker-title,
 .palette-one .images__date-picker.show-overlay-dark .images__date-picker-title {
-  color: var(--color-overlay, #FFFFFF);
+  color: var(--color-overlay-1);
 }
 
 .palette-two .overlay-dark .images__title,
 .palette-two .overlay-dark .images__description {
-  color: var(--color-overlay-2, #FFFFFF);
+  color: var(--color-overlay-2);
 }
 
 .palette-two .overlay-dark .images__buttons .button--outlined {
-  color: var(--color-overlay-2, #FFFFFF);
+  color: var(--color-overlay-2);
 }
 
 .palette-two .overlay-dark .images__vision,
 .palette-two .overlay-dark ~ .images__vision {
-  background: var(--background-overlay-2, #1A3333);
+  background: var(--background-overlay-2);
 }
 
 .palette-two .overlay-dark .images__vision .images__vision-wrapper--overlay:after,
 .palette-two .overlay-dark ~ .images__vision .images__vision-wrapper--overlay:after {
-  background: linear-gradient(357.73deg, var(--background-overlay-2, #1A3333) 3.03%, var(--background-overlay-2-00, #1A333300) 31.83%),
-   linear-gradient(180deg, var(--background-overlay-2, #1A3333) 6.67%, var(--background-overlay-2-00, #1A333300) 105.81%),
-   linear-gradient(0deg, var(--background-overlay-2-45, #1A333373), var(--background-overlay-2-45, #1A333373));
+  background: linear-gradient(357.73deg, var(--background-overlay-2) 3.03%, var(--background-overlay-2-00) 31.83%),
+   linear-gradient(180deg, var(--background-overlay-2) 6.67%, var(--background-overlay-2-00) 105.81%),
+   linear-gradient(0deg, var(--background-overlay-2-45), var(--background-overlay-2-45));
 }
 
 .palette-two .overlay-light .images__title,
 .palette-two .overlay-light .images__description {
-  color: var(--background-overlay-2, #1A3333);
+  color: var(--background-overlay-2);
 }
 
 .palette-two .overlay-light .images__buttons .button--outlined {
-  color: var(--background-overlay-2, #1A3333);
+  color: var(--background-overlay-2);
 }
 
 .palette-two .overlay-light .images__vision,
 .palette-two .overlay-light ~ .images__vision {
-  background: var(--color-overlay-2, #FFFFFF);
+  background: var(--color-overlay-2);
 }
 
 .palette-two .overlay-light .images__vision .images__vision-wrapper--overlay:after,
 .palette-two .overlay-light ~ .images__vision .images__vision-wrapper--overlay:after {
-  background: linear-gradient(357.73deg, var(--color-overlay-2, #FFFFFF) 3.03%, var(--color-overlay-2-00, #FFFFFF00) 31.83%),
-   linear-gradient(180deg, var(--color-overlay-2, #FFFFFF) 6.67%, var(--color-overlay-2-00, #FFFFFF00) 105.81%),
-   linear-gradient(0deg, var(--color-overlay-2-45, #FFFFFF73), var(--color-overlay-2-45, #FFFFFF73));
+  background: linear-gradient(357.73deg, var(--color-overlay-2) 3.03%, var(--color-overlay-2-00) 31.83%),
+   linear-gradient(180deg, var(--color-overlay-2) 6.67%, var(--color-overlay-2-00) 105.81%),
+   linear-gradient(0deg, var(--color-overlay-2-45), var(--color-overlay-2-45));
 }
 
 .palette-two .images__date-picker-overlay {
-  background: var(--background-primary-2, #1A3333);
+  background: var(--background-primary-2);
 }
 
 .palette-two > .overlay-light ~ .images__date-picker path,
 .palette-two .images__date-picker.show-overlay-light .images__date-picker-icon path {
-  fill: var(--background-overlay-2, #1A3333);
+  fill: var(--background-overlay-2);
 }
 
 .palette-two > .overlay-light ~ .images__date-picker .images__date-picker-title,
 .palette-two .images__date-picker.show-overlay-light .images__date-picker-title {
-  color: var(--background-overlay-2, #1A3333);
+  color: var(--background-overlay-2);
 }
 
 .palette-two > .overlay-dark ~ .images__date-picker path,
 .palette-two .images__date-picker.show-overlay-dark .images__date-picker-icon path {
-  fill: var(--color-overlay-2, #FFFFFF);
+  fill: var(--color-overlay-2);
 }
 
 .palette-two > .overlay-dark ~ .images__date-picker .images__date-picker-title,
 .palette-two .images__date-picker.show-overlay-dark .images__date-picker-title {
-  color: var(--color-overlay-2, #FFFFFF);
+  color: var(--color-overlay-2);
 }
 
 @media (min-width: 428px) {
@@ -340,11 +340,11 @@
   }
 
   .images__container--padding-top {
-    padding-top: var(--padding-top, 60px);
+    padding-top: var(--padding-top);
   }
 
   .images__container--padding-bottom {
-    padding-bottom: var(--padding-bottom, 60px);
+    padding-bottom: var(--padding-bottom);
   }
 
   .images__vision-wrapper {
@@ -368,9 +368,9 @@
   }
 
   .images__text-area {
-    justify-content: var(--text-justify-content, flex-start);
-    align-items: var(--text-align-items, center);
-    text-align: var(--text-align, left);
+    justify-content: var(--text-justify-content);
+    align-items: var(--text-align-items);
+    text-align: var(--text-align);
     margin: 0 var(--margin-right) 0 var(--margin-left);
   }
 
@@ -379,8 +379,8 @@
   }
 
   .images__description {
-    padding-left: var(--padding-left, 0px);
-    padding-right: var(--padding-right, 0px);
+    padding-left: var(--padding-left);
+    padding-right: var(--padding-right);
   }
 
   .images__wrapper-full-height .images__video {
@@ -389,11 +389,11 @@
   }
 
   .images__wrapper-with-date-picker .images__container {
-    height: calc(var(--height, auto) - var(--header-height, 105px) + var(--date-picker-block-height, 70px) + var(--padding-bottom, 60px));
+    height: calc(var(--height, auto) - var(--header-height, 105px) + var(--date-picker-block-height, 70px) + var(--padding-bottom));
   }
 
   .images__wrapper-with-date-picker .images__container--padding-bottom {
-    padding-bottom: calc(var(--padding-bottom, 60px) + var(--date-picker-block-height, 70px));
+    padding-bottom: calc(var(--padding-bottom) + var(--date-picker-block-height, 70px));
   }
 }
 

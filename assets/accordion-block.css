@@ -16,7 +16,7 @@
 .accordion-block__heading {
   color: currentColor;
   font-size: 18px;
-  font-weight: var(--font-weight-medium, 500);
+  font-weight: var(--font-weight-medium);
   margin: 0;
   line-height: inherit;
   position: relative;
@@ -29,7 +29,7 @@
   width: auto;
   height: auto;
   margin: 10px;
-  transition: transform var(--animation-duration, 200ms) var(--transition-function-ease-out);
+  transition: transform var(--animation-duration) var(--transition-function-ease-out);
 }
 
 .accordion-block__heading path {
@@ -72,11 +72,11 @@
 }
 
 .palette-one .accordion-block__item {
-  border-color: var(--color-border, #1A333326);
+  border-color: var(--color-border-1);
 }
 
 .palette-two .accordion-block__item {
-  border-color: var(--color-border-2, #FFFFFF47);
+  border-color: var(--color-border-2);
 }
 
 @media (min-width: 1100px) {

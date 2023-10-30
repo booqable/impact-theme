@@ -27,7 +27,7 @@
   width: 2px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity var(--animation-duration, 200ms) var(--transition-function-ease-out);
+  transition: opacity var(--animation-duration) var(--transition-function-ease-out);
 }
 
 .tabs__trigger.active:before,
@@ -43,7 +43,7 @@
 
 .tabs__heading {
   font-size: 24px;
-  font-weight: var(--font-weight-semibold, 600);
+  font-weight: var(--font-weight-semibold);
   line-height: 1.4;
   display: inline-block;
   vertical-align: top;
@@ -92,13 +92,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  font-weight: var(--font-weight-semibold, 600);
+  font-weight: var(--font-weight-semibold);
   border: 1px solid transparent;
 }
 
 .tabs__select-opener svg {
   transform: rotate(90deg);
-  transition: all var(--animation-duration, 200ms) var(--transition-function-ease-out);
+  transition: all var(--animation-duration) var(--transition-function-ease-out);
 }
 
 .tabs__select-drop {
@@ -109,8 +109,8 @@
   border: 1px solid transparent;
   border-top-width: 0;
   border-bottom-width: 0;
-  transition: all var(--animation-duration, 200ms) var(--transition-function-ease-out),
-      max-height var(--animation-duration, 200ms) var(--transition-function-ease-out);;
+  transition: all var(--animation-duration) var(--transition-function-ease-out),
+      max-height var(--animation-duration) var(--transition-function-ease-out);;
 }
 
 .tabs__select #tabs-select-opener:checked ~ .tabs__select-drop {
@@ -124,59 +124,59 @@
 }
 
 .palette-one .tabs {
-  color: var(--color-secondary, #768585);
+  color: var(--color-secondary-1);
 }
 
 .palette-one .tabs__trigger {
-  border-bottom-color: var(--color-border, #1A333326);
+  border-bottom-color: var(--color-border-1);
 }
 
 .palette-one .tabs__trigger:before {
-  background: var(--background-accent, #1A3333);
+  background: var(--background-accent-1);
 }
 
 .palette-one .tabs__heading {
-  color: var(--color-primary, #1A3333);
+  color: var(--color-primary-1);
 }
 
 .palette-one .tabs__image-wrapper.no-image {
-  background: var(--color-image-placeholder, #1A333326);
+  background: var(--color-image-placeholder-1);
 }
 
 .palette-one .tabs__select-opener,
 .palette-one .tabs__select-drop {
-  border-color: var(--color-border, #1A333326);
+  border-color: var(--color-border-1);
 }
 
 .palette-two .tabs {
-  color: var(--color-secondary-2, #CECECE);
+  color: var(--color-secondary-2);
 }
 
 .palette-two .tabs__trigger {
-  border-bottom-color: var(--color-border-2, #FFFFFF47);
+  border-bottom-color: var(--color-border-2);
 }
 
 .palette-two .tabs__trigger:before {
-  background: var(--background-accent-2, #FFFFFF);
+  background: var(--background-accent-2);
 }
 
 .palette-two .tabs__heading {
-  color: var(--color-primary-2, #FFFFFF);
+  color: var(--color-primary-2);
 }
 
 .palette-two .tabs__image-wrapper.no-image {
-  background: var(--color-image-placeholder-2, #FFFFFF47);
+  background: var(--color-image-placeholder-2);
 }
 
 .palette-two .tabs__select-opener,
 .palette-two .tabs__select-drop {
-  border-color: var(--color-border-2, #FFFFFF47);
+  border-color: var(--color-border-2);
 }
 
 @media (min-width: 768px) {
   .tabs {
     grid-template-columns: 1.5fr 2fr;
-    direction : var(--direction, ltr);
+    direction : var(--direction);
   }
 
   .tabs__select-opener {
@@ -203,11 +203,11 @@
   }
 
   .palette-one .tabs__trigger {
-    border-color: var(--color-border, #1A333326);
+    border-color: var(--color-border-1);
   }
 
   .palette-two .tabs__trigger {
-    border-color: var(--color-border-2, #FFFFFF47);
+    border-color: var(--color-border-2);
   }
 }
 

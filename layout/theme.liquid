@@ -51,6 +51,14 @@
       <script src="{{ "images.js" | asset_url }}" defer></script>
     {%- endif -%}
 
+    {%- if settings.accent_background != blank -%}
+      {%- assign background_accent = settings.accent_background -%}
+    {%- else -%}
+      {%- assign background_accent = branding_color -%}
+    {%- endif -%}
+
+    <bq-date-picker-modal branding-color="{{- background_accent -}}"></bq-date-picker-modal>
+
     {{ content_for_body }}
 
   </body>

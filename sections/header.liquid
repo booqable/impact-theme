@@ -278,14 +278,17 @@
 
 {% comment %} Right side buttons component {% endcomment %}
 {%- capture header_links -%}
-  <div class="header__links">
+  <div class="header__links{% if show_search %} header__links--with-search{% endif %}{% if show_mini_cart %} header__links--with-cart{%- endif -%}">
     {%- if show_search -%}
       {{- header_search -}}
     {%- endif -%}
 
-    <div class="header__cart">
-      {{- cart_button -}}
-    </div>
+    {%- if show_mini_cart -%}
+      <div class="header__cart">
+        {{- cart_button -}}
+        <i class="fa-regular fa-spinner-third fa-spin"></i>
+      </div>
+    {%- endif -%}
   </div>
 {%- endcapture -%}
 
@@ -295,7 +298,7 @@
 >
   <div class="header__content{% if padding_top != blank or padding_top_mobile != blank %} header__content--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} header__content--padding-bottom{%- endif -%}">
     <div class="header__container container">
-      <div class="header__content-inner{% if menu != blank %} header__mobile-menu-opener-{{- menu_opener_mobile -}}{%- endif -%}">
+      <div class="header__content-inner{% if menu_position == "left-center" %} header__menu-position--centered{% endif %}{% if menu != blank %} header__mobile-menu-opener-{{- menu_opener_mobile -}}{%- endif -%}">
         <div class="header__logo-wrapper">
           <a href="{{ routes.root_url }}" class="header__logo">
             {{- header_logo -}}
@@ -348,7 +351,7 @@
       {
         "type": "text",
         "id": "custom_title",
-        "label": "Custom title",
+        "label": "Site title",
         "info": "Displayed when no logo is added"
       },
       {

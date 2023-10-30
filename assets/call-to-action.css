@@ -8,11 +8,11 @@
 }
 
 .cta__wrapper--padding-top {
-  padding-top: var(--padding-top-mobile, 56px);
+  padding-top: var(--padding-top-mobile);
 }
 
 .cta__wrapper--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile, 56px);
+  padding-bottom: var(--padding-bottom-mobile);
 }
 
 .cta__container {
@@ -37,7 +37,7 @@
 
 .cta__header-buttons {
   padding-top: 38px;
-  margin-bottom: calc(-1 * var(--button-margin-bottom, 16px));
+  margin-bottom: calc(-1 * var(--button-margin-bottom));
 }
 
 .cta__header-button {
@@ -117,114 +117,114 @@
 }
 
 .palette-one.cta__wrapper {
-  background: var(--background-accent, #1A3333);
-  color: var(--color-primary, #1A3333);
+  background: var(--background-accent-1);
+  color: var(--color-primary-1);
 }
 
 .palette-one .cta__header-button.button--primary {
-  background: var(--color-primary, #1A3333);
-  border-color: var(--color-primary, #1A3333);
-  color: var(--background-primary, #FFFFFF);
+  background: var(--color-primary-1);
+  border-color: var(--color-primary-1);
+  color: var(--background-primary-1);
 }
 
 .palette-one .cta__header-button.button--primary:hover {
-  background: var(--color-primary, #1A3333);
-  border-color: var(--color-primary, #1A3333);
+  background: var(--color-primary-1);
+  border-color: var(--color-primary-1);
   opacity: 0.85;
 }
 
 .palette-one .cta__header-button.button--outlined {
-  color: var(--background-primary, #FFFFFF);
-  border-color: var(--color-primary, #1A3333);
+  color: var(--background-primary-1);
+  border-color: var(--color-primary-1);
 }
 
 .palette-one .cta__header-button.button--outlined:hover {
-  background: var(--color-primary-hover, #1A333352);
+  background: var(--color-primary-1-hover);
 }
 
 .palette-one .cta__image-floral-wrapper g,
 .palette-one .cta__image-floral-wrapper path,
 .palette-one .cta__image-wrapper g,
 .palette-one .cta__image-wrapper path {
-  fill: var(--color-primary, #1A3333);
+  fill: var(--color-primary-1);
 }
 
 .palette-one .cta__image-wrapper:after {
-  background: linear-gradient(180.44deg, var(--background-accent, #1A3333) 51.3%, var(--background-accent-00, #1A333300) 81.06%);
+  background: linear-gradient(180.44deg, var(--background-accent-1) 51.3%, var(--background-accent-1-00) 81.06%);
 }
 
 .palette-two.cta__wrapper {
-  background: var(--background-accent-2, #FFFFFF);
-  color: var(--color-primary-2, #FFFFFF);
+  background: var(--background-accent-2);
+  color: var(--color-primary-2);
 }
 
 .palette-two .cta__header-button.button--primary {
-  background: var(--color-primary-2, #FFFFFF);
-  border-color: var(--color-primary-2, #FFFFFF);
-  color: var(--background-primary-2, #1A3333);
+  background: var(--color-primary-2);
+  border-color: var(--color-primary-2);
+  color: var(--background-primary-2);
 }
 
 .palette-two .cta__header-button.button--primary:hover {
-  background: var(--color-primary-2, #FFFFFF);
-  border-color: var(--color-primary-2, #FFFFFF);
+  background: var(--color-primary-2);
+  border-color: var(--color-primary-2);
   opacity: 0.85;
 }
 
 .palette-two .cta__header-button.button--outlined {
-  color: var(--background-primary-2, #1A3333);
-  border-color: var(--color-primary-2, #FFFFFF);
+  color: var(--background-primary-2);
+  border-color: var(--color-primary-2);
 }
 
 .palette-two .cta__header-button.button--outlined:hover {
-  background: var(--color-primary-2-hover, #FFFFFF52);
+  background: var(--color-primary-2-hover);
 }
 
 .palette-two .cta__image-floral-wrapper g,
 .palette-two .cta__image-floral-wrapper path,
 .palette-two .cta__image-wrapper g,
 .palette-two .cta__image-wrapper path {
-  fill: var(--color-primary-2, #FFFFFF);
+  fill: var(--color-primary-2);
 }
 
 .palette-two .cta__image-wrapper:after {
-  background: linear-gradient(180.44deg, var(--background-accent-2, #FFFFFF) 51.3%, var(--background-accent-2-00, #FFFFFF00) 81.06%);
+  background: linear-gradient(180.44deg, var(--background-accent-2) 51.3%, var(--background-accent-2-00) 81.06%);
 }
 
 .palette-three.cta__wrapper {
-  background: var(--background-primary-3, #E06B48);
-  color: var(--color-secondary-3, #1A3333);
+  background: var(--background-primary-3);
+  color: var(--color-secondary-3);
 }
 
 .palette-three .cta__header-button.button--primary {
-  background: var(--background-accent-3, #53C787);
-  border-color: var(--background-accent-3, #53C787);
-  color: var(--color-accent-3, #FFFFFF);
+  background: var(--background-accent-3);
+  border-color: var(--background-accent-3);
+  color: var(--color-accent-3);
 }
 
 .palette-three .cta__header-button.button--primary:hover {
-  background: var(--background-accent-3, #53C787);
-  border-color: var(--background-accent-3, #53C787);
+  background: var(--background-accent-3);
+  border-color: var(--background-accent-3);
   opacity: 0.85;
 }
 
 .palette-three .cta__header-button.button--outlined {
-  color: var(--color-accent-3, #FFFFFF);
-  border-color: var(--background-accent-3, #53C787);
+  color: var(--color-accent-3);
+  border-color: var(--background-accent-3);
 }
 
 .palette-three .cta__header-button.button--outlined:hover {
-  background: var(--background-accent-3-hover, #53C78752);
+  background: var(--background-accent-3-hover);
 }
 
 .palette-three .cta__image-floral-wrapper g,
 .palette-three .cta__image-floral-wrapper path,
 .palette-three .cta__image-wrapper g,
 .palette-three .cta__image-wrapper path {
-  fill: var(--color-secondary-3, #1A3333);
+  fill: var(--color-secondary-3);
 }
 
 .palette-three .cta__image-wrapper:after {
-  background: linear-gradient(180.44deg, var(--background-primary-3, #E06B48) 51.3%, var(--background-primary-3-00, #E06B4800) 81.06%);
+  background: linear-gradient(180.44deg, var(--background-primary-3) 51.3%, var(--background-primary-3-00) 81.06%);
 }
 
 @media (min-width: 667px) {
@@ -247,11 +247,11 @@
 
 @media (min-width: 992px) {
   .cta__wrapper--padding-top {
-    padding-top: var(--padding-top, 112px);
+    padding-top: var(--padding-top);
   }
 
   .cta__wrapper--padding-bottom {
-    padding-bottom: var(--padding-bottom, 112px);
+    padding-bottom: var(--padding-bottom);
   }
 
   .cta__image-wrapper:after {
