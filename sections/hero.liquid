@@ -13,9 +13,17 @@
 
 {%- if show_datepicker -%}
   {%- if color_palette == "one" -%}
-    {%- assign background_accent = settings.accent_background -%}
+    {%- if settings.accent_background != blank -%}
+      {%- assign background_accent = settings.accent_background -%}
+    {%- else -%}
+      {%- assign background_accent = branding_color -%}
+    {%- endif -%}
   {%- elsif color_palette == "two" -%}
-    {%- assign background_accent = settings.accent_background_2 -%}
+    {%- if settings.accent_background_2 != blank -%}
+      {%- assign background_accent = settings.accent_background_2 -%}
+    {%- else -%}
+      {%- assign background_accent = branding_color -%}
+    {%- endif -%}
   {%- endif -%}
 {%- endif -%}
 
@@ -69,7 +77,7 @@
       {%- endif -%}
 
       {%- if custom_description != blank -%}
-        <div class="hero__description text-medium">{{- custom_description -}}</div>
+        <div class="hero__description text-medium bq-content rx-content">{{- custom_description -}}</div>
       {%- else -%}
         {%- if page_description != blank -%}
           <div class="hero__description text-medium">{{- page_description -}}</div>

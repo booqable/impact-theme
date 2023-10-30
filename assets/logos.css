@@ -1,9 +1,9 @@
 .logos__wrapper--padding-top {
-  padding-top: var(--padding-top-mobile, 60px);
+  padding-top: var(--padding-top-mobile);
 }
 
 .logos__wrapper--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile, 29px);
+  padding-bottom: var(--padding-bottom-mobile);
 }
 
 .logos__columns {
@@ -20,10 +20,10 @@
 
 .logos__title {
   width: 100%;
-  padding: 0 var(--padding-x, 16px);
+  padding: 0 var(--padding-x);
   margin-bottom: 32px;
-  font-weight: var(--font-weight-regular, 400);
-  text-align: var(--text-align-mobile, center);
+  font-weight: var(--font-weight-regular);
+  text-align: var(--text-align-mobile);
 }
 
 .logos__logos {
@@ -52,45 +52,45 @@
 }
 
 .palette-one.logos__wrapper {
-  background: var(--background-primary, #FFFFFF);
+  background: var(--background-primary-1);
 }
 
 .palette-one .logos__title {
-  color: var(--color-secondary, #4E5D78);
+  color: var(--color-secondary-1);
 }
 
 .palette-one .logos__image-wrapper.no-image:after {
-  background: var(--color-image-placeholder, #0B1A2626);
+  background: var(--color-image-placeholder-1);
 }
 
 .palette-two.logos__wrapper {
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2);
 }
 
 .palette-two .logos__title {
-  color: var(--color-secondary-2, #4E5D78);
+  color: var(--color-secondary-2);
 }
 
 .palette-two .logos__image-wrapper.no-image:after {
-  background: var(--color-image-placeholder-2, #FFFFFF47);
+  background: var(--color-image-placeholder-2);
 }
 
 @media (min-width: 992px) {
   .logos__wrapper--padding-top {
-    padding-top: var(--padding-top, 96px);
+    padding-top: var(--padding-top);
   }
 
   .logos__wrapper--padding-bottom {
-    padding-bottom: var(--padding-bottom, 84px);
+    padding-bottom: var(--padding-bottom);
   }
 
   .logos__columns {
-    flex-direction: var(--flex-direction, row);
-    align-items: var(--align-items, flex-start);
+    flex-direction: var(--flex-direction);
+    align-items: var(--align-items);
   }
 
   .logos__col:not(.logos__logos) {
-    max-width: var(--text-max-width, 280px);
+    max-width: var(--text-max-width);
     min-width: 180px;
     width: auto;
   }
@@ -100,23 +100,17 @@
   }
 
   .logos__col + .logos__logos {
-    justify-content: var(--justify-content, flex-start);
-    padding: var(--padding, 0px);
+    justify-content: var(--justify-content);
+    padding: var(--padding);
   }
 
   .logos__title {
     padding: 0;
     margin: 0;
-    text-align: var(--text-align, left);
+    text-align: var(--text-align);
   }
 
   .logos__image-wrapper {
     padding-bottom: 16px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .logos__col + .logos__logos {
-    padding-left: 7.2%;
   }
 }

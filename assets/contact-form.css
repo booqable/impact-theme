@@ -1,14 +1,14 @@
 .contact-form__wrapper {
   position: relative;
-  line-height: var(--line-height-lg, 1.5);
+  line-height: var(--line-height-lg);
 }
 
 .contact-form__wrapper--padding-top {
-  padding-top: var(--padding-top-mobile, 40px);
+  padding-top: var(--padding-top-mobile);
 }
 
 .contact-form__wrapper--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile, 40px);
+  padding-bottom: var(--padding-bottom-mobile);
 }
 
 .contact-form__container {
@@ -25,31 +25,31 @@
 .contact-form__content {
   display: flex;
   flex-direction: column;
-  align-items: var(--justify-content, left);
+  align-items: var(--justify-content);
 }
 
 .contact-form__heading {
   font-size: 48px;
-  font-weight: var(--font-weight-bold, 700);
-  line-height: var(--line-height-sm, 1.2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
   margin-bottom: 22px;
-  text-align: var(--text-align, left);
+  text-align: var(--text-align);
 }
 
 .contact-form__heading--sm {
-  font-size: var(--font-size-h3, 40px);
+  font-size: var(--font-size-h3);
 }
 
 .contact-form__heading--md {
-  font-size: var(--font-size-h2, 48px);
+  font-size: var(--font-size-h2);
 }
 
 .contact-form__heading--lg {
-  font-size: var(--font-size-h1, 56px);
+  font-size: var(--font-size-h1);
 }
 
 .contact-form__text {
-  text-align: var(--text-align, left);
+  text-align: var(--text-align);
 }
 
 .contact-form__button {
@@ -107,71 +107,71 @@
 
 .contact-form__background-floral svg {
   position: absolute;
-  left: var(--bg-left, 30px);
-  right: var(--bg-right, auto);
+  left: var(--bg-left);
+  right: var(--bg-right);
   bottom: 0;
   opacity: 0.2;
   max-height: 100%;
 }
 
 .palette-one.contact-form__wrapper {
-  background: var(--background-primary, #FFFFFF);
-  color: var(--color-third, #0B1A2666);
+  background: var(--background-primary-1);
+  color: var(--color-third-1);
 }
 
 .palette-one .contact-form__heading {
-  color: var(--color-primary, #0B1A26);
+  color: var(--color-primary-1);
 }
 
 .palette-one .contact-form__holder.no-image {
-  background: var(--color-image-placeholder, #0B1A2626);
+  background: var(--color-image-placeholder-1);
 }
 
 .palette-one .contact-form__button.button--outlined {
-  color: var(--color-primary, #0B1A26);
+  color: var(--color-primary-1);
 }
 
 .palette-one .contact-form__background g,
 .palette-one .contact-form__background path {
-  fill: var(--color-primary, #0B1A26);
+  fill: var(--color-primary-1);
 }
 
 .palette-one .contact-form__background:after {
-  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary, #FFFFFF) 0%, var(--background-primary-00, #FFFFFF00) 100%);
+  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary-1) 0%, var(--background-primary-1-00) 100%);
 }
 
 .palette-one .contact-form__background:before {
-  background: linear-gradient(to var(--overlay-direction), var(--background-primary-00, #FFFFFF00) 0%, var(--background-primary-10, #FFFFFF1A) 20%, var(--background-primary-45, #FFFFFF73) 40%, var(--background-primary, #FFFFFF) 100%);
+  background: linear-gradient(to var(--overlay-direction), var(--background-primary-1-00) 0%, var(--background-primary-1-10) 20%, var(--background-primary-1-45) 40%, var(--background-primary-1) 100%);
 }
 
 .palette-two.contact-form__wrapper {
-  background: var(--background-primary-2, #0B1A26);
-  color: var(--color-third-2, #FFFFFF66);
+  background: var(--background-primary-2);
+  color: var(--color-third-2);
 }
 
 .palette-two .contact-form__heading {
-  color: var(--color-primary-2, #FFFFFF);
+  color: var(--color-primary-2);
 }
 
 .palette-two .contact-form__holder.no-image {
-  background: var(--color-image-placeholder-2, #FFFFFF47);
+  background: var(--color-image-placeholder-2);
 }
 
 .palette-two .contact-form__button.button--outlined {
-  color: var(--color-primary-2, #FFFFFF);
+  color: var(--color-primary-2);
 }
 
 .palette-two .contact-form__background g,
 .palette-two .contact-form__background path {
-  fill: var(--color-primary-2, #FFFFFF);
+  fill: var(--color-primary-2);
 }
 
 .palette-two .contact-form__background:after {
-  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary-2, #0B1A26) 0%, var(--background-primary-2-00, #0B1A2600) 100%);
+  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary-2) 0%, var(--background-primary-2-00) 100%);
 }
 
 .palette-two .contact-form__background:before {
-  background: linear-gradient(to var(--overlay-direction), var(--background-primary-2-00, #0B1A2600) 0%, var(--background-primary-2-10, #0B1A261A) 20%, var(--background-primary-2-45, #0B1A2673) 40%, var(--background-primary-2, #0B1A26) 100%);
+  background: linear-gradient(to var(--overlay-direction), var(--background-primary-2-00) 0%, var(--background-primary-2-10) 20%, var(--background-primary-2-45) 40%, var(--background-primary-2) 100%);
 }
 
 @media (min-width: 810px) {
@@ -183,11 +183,11 @@
 
 @media (min-width: 992px) {
   .contact-form__wrapper--padding-top {
-    padding-top: var(--padding-top, 70px);
+    padding-top: var(--padding-top);
   }
 
   .contact-form__wrapper--padding-bottom {
-    padding-bottom: var(--padding-bottom, 70px);
+    padding-bottom: var(--padding-bottom);
   }
 
   .contact-form__inner--grid {
@@ -196,16 +196,16 @@
   }
 
   .contact-form__content {
-    justify-content: var(--align-items, flex-start);
-    padding: 0 0 var(--padding-bottom, 0px);
-    order : var(--order, 1);
+    justify-content: var(--align-items);
+    padding: 0 0 var(--padding-bottom);
+    order : var(--order);
   }
 
   .contact-form__holder {
     display: flex;
     flex-direction: column;
-    justify-content: var(--image-align, flex-start);
-    order : var(--order, 1);
+    justify-content: var(--image-align);
+    order : var(--order);
   }
 
   .contact-form__image-wrapper {
@@ -217,8 +217,8 @@
     content: "";
     position: absolute;
     top: 30px;
-    left: var(--left, 0px);
-    right: var(--right, 0px);
+    left: var(--left);
+    right: var(--right);
     width: 100%;
     height: 100%;
     border: 2px solid transparent;
@@ -226,36 +226,18 @@
   }
 
   .contact-form__wrapper--bg-reverse .contact-form__background-floral svg {
-    left: var(--bg-right, auto);
-    right: var(--bg-left, 30px);
+    left: var(--bg-right);
+    right: var(--bg-left);
   }
 
   .palette-one .contact-form__holder.no-image:after,
   .palette-one .contact-form__image-wrapper:after {
-    border-color: var(--background-accent, #F4B841);
+    border-color: var(--background-accent-1);
   }
 
   .palette-two .contact-form__holder.no-image:after,
   .palette-two .contact-form__image-wrapper:after {
-    border-color: var(--background-accent-2, #F4B841);
-  }
-
-  .classic-design .contact-form__holder.no-image:after,
-  .classic-design .contact-form__image-wrapper:after {
-    display: none;
-  }
-
-  .classic-design .contact-form__image {
-    padding: 8px;
-    border: 1px solid transparent;
-  }
-
-  .classic-design .palette-one .contact-form__image {
-    border-color: var(--background-accent, #F4B841);
-  }
-
-  .classic-design .palette-two .contact-form__image {
-    border-color: var(--background-accent-2, #F4B841);
+    border-color: var(--background-accent-2);
   }
 }
 

@@ -5,16 +5,16 @@
 
 .top-bar__wrapper {
   font-size: 14px;
-  font-weight: var(--font-weight-medium, 500);
-  line-height: var(--line-height-xs, 1);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-xs);
 }
 
 .top-bar__wrapper--padding-top {
-  padding-top: var(--padding-top-mobile, 0px);
+  padding-top: var(--padding-top-mobile);
 }
 
 .top-bar__wrapper--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile, 0px);
+  padding-bottom: var(--padding-bottom-mobile);
 }
 
 .top-bar__container {
@@ -35,6 +35,7 @@
 }
 
 .top-bar__text a:hover {
+  color: inherit;
   text-decoration: underline;
 }
 
@@ -64,50 +65,50 @@
 }
 
 .palette-one.top-bar__wrapper {
-  color: var(--color-accent, #0B1A26);
-  background: var(--background-accent, #F4B841);
+  color: var(--color-accent-1);
+  background: var(--background-accent-1);
 }
 
 .palette-one.top-bar__wrapper .fa,
 .palette-one.top-bar__wrapper .far {
-  color: var(--color-accent, #0B1A26);
+  color: var(--color-accent-1);
 }
 
 .palette-two.top-bar__wrapper {
-  color: var(--color-accent-2, #0B1A26);
-  background: var(--background-accent-2, #F4B841);
+  color: var(--color-accent-2);
+  background: var(--background-accent-2);
 }
 
 .palette-two.top-bar__wrapper .fa,
 .palette-two.top-bar__wrapper .far {
-  color: var(--color-accent-2, #0B1A26);
+  color: var(--color-accent-2);
 }
 
 .palette-three.top-bar__wrapper {
-  color: var(--color-primary-3, #0B1A26);
-  background: var(--background-primary-3, #F4B841);
+  color: var(--color-primary-3);
+  background: var(--background-primary-3);
 }
 
 .palette-three.top-bar__wrapper .fa,
 .palette-three.top-bar__wrapper .far {
-  color: var(--color-primary-3, #0B1A26);
+  color: var(--color-primary-3);
 }
 
 @media (min-width: 992px) {
   .top-bar__wrapper--padding-top {
-    padding-top: var(--padding-top, 0px);
+    padding-top: var(--padding-top);
   }
 
   .top-bar__wrapper--padding-bottom {
-    padding-bottom: var(--padding-bottom, 0px);
+    padding-bottom: var(--padding-bottom);
   }
 
   .top-bar__container {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .top-bar__text {
-    padding: 0 4px 0 0;
+  .top-bar__text:not(.top-bar__message) {
+    padding: 0 10px;
   }
 
   .top-bar__info,

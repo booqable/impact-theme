@@ -99,17 +99,17 @@
             <div class="mosaic__item-col">
               <div class="mosaic__text-area">
                 {%- if article_tag != blank -%}
-                  <span class="mosaic__tag tagline">{{- article_tag -}}</span>
+                  <strong class="mosaic__tag tagline">{{- article_tag -}}</strong>
                 {%- endif -%}
 
                 {%- if heading != blank -%}
-                  <h4 class="mosaic__heading">
+                  <h3 class="mosaic__heading h4">
                     {{- heading -}}
-                  </h4>
+                  </h3>
                 {%- endif -%}
 
                 {%- if text != blank -%}
-                  <div class="mosaic__text">{{- text | truncate: 200, " ..."  -}}</div>
+                  <div class="mosaic__text bq-content rx-content">{{- text | truncate: 200, " ..."  -}}</div>
                 {%- endif -%}
 
                 {%- if article_btn != blank and article_btn_url != blank -%}

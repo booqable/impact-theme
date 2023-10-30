@@ -1,9 +1,9 @@
 .search__container--padding-top {
-  padding-top: var(--padding-top-mobile, 24px);
+  padding-top: var(--padding-top-mobile);
 }
 
 .search__container--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile, 24px);
+  padding-bottom: var(--padding-bottom-mobile);
 }
 
 .search-results {
@@ -15,8 +15,8 @@
 
 .search__grid {
   font-size: 16px;
-  font-weight: var(--font-weight-regular, 400);
-  line-height: var(--line-height-lg, 1.5);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-lg);
 }
 
 .search-results .product-card {
@@ -24,11 +24,11 @@
 }
 
 .palette-one.search__wrapper {
-  background: var(--background-primary, #FFFFFF);
+  background: var(--background-primary-1);
 }
 
 .palette-two.search__wrapper {
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2);
 }
 
 @media (min-width: 768px) {
@@ -40,11 +40,11 @@
 
 @media (min-width: 992px) {
   .search__container--padding-top {
-    padding-top: var(--padding-top, 24px);
+    padding-top: var(--padding-top);
   }
 
   .search__container--padding-bottom {
-    padding-bottom: var(--padding-bottom, 24px);
+    padding-bottom: var(--padding-bottom);
   }
 
   .search-results {
@@ -77,6 +77,6 @@
 @media (min-width: 1080px) {
   .search-results {
     gap: 20px 32px;
-    grid-template-columns: repeat(var(--grid-element, 3), minmax(210px, 1fr));
+    grid-template-columns: repeat(var(--grid-element), minmax(210px, 1fr));
   }
 }

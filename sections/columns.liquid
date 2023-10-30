@@ -96,11 +96,11 @@
             {%- if title != blank or text != blank or button_label != blank -%}
               <div class="columns__text">
                 {%- if title != blank -%}
-                  <h4 class="columns__title">{{- title -}}</h4>
+                  <strong class="columns__title h4">{{- title -}}</strong>
                 {%- endif -%}
 
                 {%- if text != blank -%}
-                  <div class="columns__description">{{- text -}}</div>
+                  <div class="columns__description bq-content rx-content">{{- text -}}</div>
                 {%- endif -%}
 
                 {%- if button_label != blank -%}
@@ -183,7 +183,7 @@
               },
               {
                 "value": "tag",
-                "label": "Tagline"
+                "label": "Tag"
               }
             ],
             "default": "phone",

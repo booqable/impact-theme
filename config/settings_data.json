@@ -104,36 +104,7 @@
         },
         "disabled": null
       }
-    },
-    "element_design": "modern",
-    "background_style": "cubes",
-    "background": "#FFFFFF",
-    "background_2": "#0B1A26",
-    "background_3": "#F4B841",
-    "primary_color": "#0B1A26",
-    "primary_color_2": "#FFFFFF",
-    "primary_color_3": "#0B1A26",
-    "secondary_color": "#4E5D78",
-    "secondary_color_2": "#E1E4E8",
-    "secondary_color_3": "#FFFFFF",
-    "accent_background": "#F4B841",
-    "accent_background_2": "#F4B841",
-    "accent_background_3": "#0B1A26",
-    "accent_color": "#0B1A26",
-    "accent_color_2": "#0B1A26",
-    "accent_color_3": "#FFFFFF",
-    "accent_outline": "#F4B841",
-    "accent_outline_2": "#F4B841",
-    "accent_outline_3": "#0B1A26",
-    "overlay_background": "#0B1A26",
-    "overlay_background_2": "#0B1A26",
-    "overlay_color": "#FFFFFF",
-    "overlay_color_2": "#FFFFFF",
-    "heading_font": "barlow",
-    "body_font": "barlow",
-    "tagline_font": "barlow",
-    "tagline_size": 14,
-    "image_placeholder": "booqable://assets/image-tough-placeholder.png"
+    }
   },
   "variations": {
     "default": {
@@ -241,36 +212,7 @@
           },
           "disabled": null
         }
-      },
-      "element_design": "modern",
-      "background_style": "cubes",
-      "background": "#FFFFFF",
-      "background_2": "#0B1A26",
-      "background_3": "#F4B841",
-      "primary_color": "#0B1A26",
-      "primary_color_2": "#FFFFFF",
-      "primary_color_3": "#0B1A26",
-      "secondary_color": "#4E5D78",
-      "secondary_color_2": "#E1E4E8",
-      "secondary_color_3": "#FFFFFF",
-      "accent_background": "#F4B841",
-      "accent_background_2": "#F4B841",
-      "accent_background_3": "#0B1A26",
-      "accent_color": "#0B1A26",
-      "accent_color_2": "#0B1A26",
-      "accent_color_3": "#FFFFFF",
-      "accent_outline": "#F4B841",
-      "accent_outline_2": "#F4B841",
-      "accent_outline_3": "#0B1A26",
-      "overlay_background": "#0B1A26",
-      "overlay_background_2": "#0B1A26",
-      "overlay_color": "#FFFFFF",
-      "overlay_color_2": "#FFFFFF",
-      "heading_font": "barlow",
-      "body_font": "barlow",
-      "tagline_font": "barlow",
-      "tagline_size": 14,
-      "image_placeholder": "booqable://assets/image-tough-placeholder.png"
+      }
     }
   }
 }

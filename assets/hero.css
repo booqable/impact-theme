@@ -15,7 +15,7 @@
   bottom: 0;
   height: calc(var(--date-picker-height, 80px) / 2);
   z-index: -1;
-  background: var(--background-primary, #FFFFFF);
+  background: var(--background-primary-1);
 }
 
 .hero__container {
@@ -25,12 +25,12 @@
 
 .hero__date-picker--padding-top,
 .hero__container--padding-top {
-  padding-top: var(--padding-top-mobile, 60px);
+  padding-top: var(--padding-top-mobile);
 }
 
 .hero__date-picker--padding-bottom,
 .hero__container--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile, 60px);
+  padding-bottom: var(--padding-bottom-mobile);
 }
 
 .hero__title {
@@ -131,65 +131,65 @@
 }
 
 .palette-one.hero__wrapper {
-  color: var(--color-third, #0B1A2666);
-  background: var(--background-primary, #FFFFFF);
+  color: var(--color-third-1);
+  background: var(--background-primary-1);
 }
 
 .palette-one.hero__overlay {
-  background: var(--background-primary, #FFFFFF);
+  background: var(--background-primary-1);
 }
 
 .palette-one .hero__title {
-  color: var(--color-primary, #0B1A26);
+  color: var(--color-primary-1);
 }
 
 .palette-one .hero__vision {
-  background: var(--background-primary, #FFFFFF);
+  background: var(--background-primary-1);
 }
 
 .palette-one .hero__vision-wrapper-overlay:after {
-  background: linear-gradient(to right, var(--background-primary, #FFFFFF) 0%, var(--background-primary, #FFFFFF) 90%, var(--background-primary-00, #FFFFFF00) 100%);
+  background: linear-gradient(to right, var(--background-primary-1) 0%, var(--background-primary-1) 90%, var(--background-primary-1-00) 100%);
 }
 
 .palette-one .hero__vision-wrapper-overlay:before {
-  background: radial-gradient(43.14% 157.06% at 17.22% 51.25%, var(--background-primary, #FFFFFF) 0%, var(--background-primary-00, #FFFFFF00) 100%);
+  background: radial-gradient(43.14% 157.06% at 17.22% 51.25%, var(--background-primary-1) 0%, var(--background-primary-1-00) 100%);
 }
 
 .palette-one .hero__vision-floral-wrapper g,
 .palette-one .hero__vision-floral-wrapper path,
 .palette-one .hero__vision-wrapper path {
-  fill: var(--color-primary, #0B1A26);
+  fill: var(--color-primary-1);
 }
 
 .palette-two.hero__wrapper {
-  color: var(--color-third-2, #FFFFFF66);
-  background: var(--background-primary-2, #0B1A26);
+  color: var(--color-third-2);
+  background: var(--background-primary-2);
 }
 
 .palette-two.hero__overlay {
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2);
 }
 
 .palette-two .hero__title {
-  color: var(--color-primary-2, #FFFFFF);
+  color: var(--color-primary-2);
 }
 
 .palette-two .hero__vision {
-  background: var(--background-primary-2, #0B1A26);
+  background: var(--background-primary-2);
 }
 
 .palette-two .hero__vision-wrapper-overlay:after {
-  background: linear-gradient(to right, var(--background-primary-2, #0B1A26) 0%, var(--background-primary-2, #0B1A26) 90%, var(--background-primary-2-00, #0B1A2600) 100%);
+  background: linear-gradient(to right, var(--background-primary-2) 0%, var(--background-primary-2) 90%, var(--background-primary-2-00) 100%);
 }
 
 .palette-two .hero__vision-wrapper-overlay:before {
-  background: radial-gradient(43.14% 157.06% at 17.22% 51.25%, var(--background-primary-2, #0B1A26) 0%, var(--background-primary-2-00, #0B1A2600) 100%);
+  background: radial-gradient(43.14% 157.06% at 17.22% 51.25%, var(--background-primary-2) 0%, var(--background-primary-2-00) 100%);
 }
 
 .palette-two .hero__vision-floral-wrapper g,
 .palette-two .hero__vision-floral-wrapper path,
 .palette-two .hero__vision-wrapper path {
-  fill: var(--color-primary-2, #FFFFFF);
+  fill: var(--color-primary-2);
 }
 
 @media (min-width: 810px) {
@@ -202,11 +202,11 @@
 @media (min-width: 992px) {
   .hero__date-picker--padding-top,
   .hero__container--padding-top {
-    padding-top: var(--padding-top, 60px);
+    padding-top: var(--padding-top);
   }
 
   .hero__date-picker--padding-bottom,
   .hero__container--padding-bottom {
-    padding-bottom: var(--padding-bottom, 60px);
+    padding-bottom: var(--padding-bottom);
   }
 }

@@ -10,9 +10,17 @@
 
 {%- if show_datepicker -%}
   {%- if color_palette == "one" -%}
-    {%- assign background_accent = settings.accent_background -%}
+    {%- if settings.accent_background != blank -%}
+      {%- assign background_accent = settings.accent_background -%}
+    {%- else -%}
+      {%- assign background_accent = branding_color -%}
+    {%- endif -%}
   {%- elsif color_palette == "two" -%}
-    {%- assign background_accent = settings.accent_background_2 -%}
+    {%- if settings.accent_background_2 != blank -%}
+      {%- assign background_accent = settings.accent_background_2 -%}
+    {%- else -%}
+      {%- assign background_accent = branding_color -%}
+    {%- endif -%}
   {%- endif -%}
 {%- endif -%}
 

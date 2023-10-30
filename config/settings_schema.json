@@ -6,59 +6,6 @@
     "theme_author": "Booqable"
   },
   {
-    "name": "General styling",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Element design"
-      },
-      {
-        "type": "paragraph",
-        "content": "Adjust the design of various elements throughout your website, including product cards and collection cards"
-      },
-      {
-        "type": "select",
-        "id": "element_design",
-        "options": [
-          {
-            "value": "modern",
-            "label": "Modern"
-          },
-          {
-            "value": "classic",
-            "label": "Classic"
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "content": "Background style"
-      },
-      {
-        "type": "paragraph",
-        "content": "Show subtle background images on various sections of your website"
-      },
-      {
-        "type": "select",
-        "id": "background_style",
-        "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
-          {
-            "value": "cubes",
-            "label": "Isometric cubes"
-          },
-          {
-            "value": "floral",
-            "label": "Floral elements"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "name": "Colors",
     "settings": [
       {
@@ -71,48 +18,42 @@
       },
       {
         "type": "color",
-        "id": "background",
-        "label": "Background"
+        "id": "background_1",
+        "label": "Background",
+        "default": "#FFFFFF"
       },
       {
         "type": "color",
-        "id": "primary_color",
-        "label": "Primary text"
+        "id": "primary_color_1",
+        "label": "Primary text",
+        "default": "#1A3333"
       },
       {
         "type": "color",
-        "id": "secondary_color",
-        "label": "Secondary text"
+        "id": "secondary_color_1",
+        "label": "Secondary text",
+        "default": "#768585"
       },
       {
         "type": "color",
-        "id": "accent_background",
+        "id": "accent_background_1",
         "label": "Accent background",
+        "default": "#53C787",
         "info": "Used as a background of solid buttons, date picker, etc."
       },
       {
         "type": "color",
-        "id": "accent_color",
+        "id": "accent_color_1",
         "label": "Accent text",
+        "default": "#1A3333",
         "info": "Used for text on top of the accent background"
       },
       {
         "type": "color",
-        "id": "accent_outline",
+        "id": "accent_outline_1",
         "label": "Accent outline",
+        "default": "#53C787",
         "info": "Also used for accent text without background"
-      },
-      {
-        "type": "color",
-        "id": "overlay_background",
-        "label": "Alternative background",
-        "info": "Used to make text readable on top of the background images"
-      },
-      {
-        "type": "color",
-        "id": "overlay_color",
-        "label": "Alternative color",
-        "info": "Used for text on top of the background images"
       },
       {
         "type": "header",
@@ -121,87 +62,169 @@
       {
         "type": "color",
         "id": "background_2",
-        "label": "Background"
+        "label": "Background",
+        "default": "#53C787"
       },
       {
         "type": "color",
         "id": "primary_color_2",
-        "label": "Primary text"
+        "label": "Primary text",
+        "default": "#1A3333"
       },
       {
         "type": "color",
         "id": "secondary_color_2",
-        "label": "Secondary text"
+        "label": "Secondary text",
+        "default": "#2A5044"
       },
       {
         "type": "color",
         "id": "accent_background_2",
         "label": "Accent background",
+        "default": "#FFFFFF",
         "info": "Used as a background of solid buttons, date picker, etc."
       },
       {
         "type": "color",
         "id": "accent_color_2",
         "label": "Accent text",
+        "default": "#1A3333",
         "info": "Used for text on top of the accent background"
       },
       {
         "type": "color",
         "id": "accent_outline_2",
         "label": "Accent outline",
+        "default": "#FFFFFF",
         "info": "Also used for accent text without background"
-      },
-      {
-        "type": "color",
-        "id": "overlay_background_2",
-        "label": "Alternative background",
-        "info": "Used to make text readable on top of the background images"
-      },
-      {
-        "type": "color",
-        "id": "overlay_color_2",
-        "label": "Alternative color",
-        "info": "Used for text on top of the background images"
       },
       {
         "type": "header",
         "content": "Color set 3"
       },
       {
-        "type": "paragraph",
-        "content": "Used for sections like 'Top bar' and 'Call to action'"
-      },
-      {
         "type": "color",
         "id": "background_3",
-        "label": "Background"
+        "label": "Background",
+        "default": "#E06B48"
       },
       {
         "type": "color",
         "id": "primary_color_3",
-        "label": "Primary text"
+        "label": "Primary text",
+        "default": "#F6F4F2"
       },
       {
         "type": "color",
         "id": "secondary_color_3",
-        "label": "Secondary text"
+        "label": "Secondary text",
+        "default": "#E0D4CE"
       },
       {
         "type": "color",
         "id": "accent_background_3",
         "label": "Accent background",
-        "info": "Used as a background of solid buttons, etc."
+        "default": "#F6F4F2",
+        "info": "Used as a background of solid buttons, date picker, etc."
       },
       {
         "type": "color",
         "id": "accent_color_3",
         "label": "Accent text",
+        "default": "#1A3333",
         "info": "Used for text on top of the accent background"
       },
       {
         "type": "color",
         "id": "accent_outline_3",
         "label": "Accent outline",
+        "default": "#1A3333",
+        "info": "Also used for accent text without background"
+      },
+      {
+        "type": "header",
+        "content": "Color set 4"
+      },
+      {
+        "type": "color",
+        "id": "background_4",
+        "label": "Primary background",
+        "default": "#1A3333"
+      },
+      {
+        "type": "color",
+        "id": "primary_color_4",
+        "label": "Primary text",
+        "default": "#F6F4F2"
+      },
+      {
+        "type": "color",
+        "id": "secondary_color_4",
+        "label": "Secondary text",
+        "default": "#A0A6A6"
+      },
+      {
+        "type": "color",
+        "id": "accent_background_4",
+        "label": "Accent background",
+        "default": "#53C787",
+        "info": "Used as a background of solid buttons, date picker, etc."
+      },
+      {
+        "type": "color",
+        "id": "accent_color_4",
+        "label": "Accent text",
+        "default": "#1A3333",
+        "info": "Used for text on top of the accent background"
+      },
+      {
+        "type": "color",
+        "id": "accent_outline_4",
+        "label": "Accent outline",
+        "default": "#53C787",
+        "info": "Also used for accent text without background"
+      },
+      {
+        "type": "header",
+        "content": "Color set 5"
+      },
+      {
+        "type": "color",
+        "id": "background_5",
+        "label": "Background",
+        "default": "#F6F4F2"
+      },
+      {
+        "type": "color",
+        "id": "primary_color_5",
+        "label": "Primary text",
+        "default": "#1A3333"
+      },
+      {
+        "type": "color",
+        "id": "secondary_color_5",
+        "label": "Secondary text",
+        "default": "#768585"
+      },
+      {
+        "type": "color",
+        "id": "accent_background_5",
+        "label": "Accent background",
+        "default": "#53C787",
+        "info": "Used as a background of solid buttons, date picker, etc."
+      },
+      {
+        "type": "color",
+        "id": "accent_color_5",
+        "label": "Accent text",
+        "default": "#1A3333",
+        "info": "Used for text on top of the accent background"
+      },
+      {
+        "type": "color",
+        "id": "accent_outline_5",
+        "label": "Accent outline",
+        "default": "#53C787",
         "info": "Also used for accent text without background"
       }
     ]
@@ -216,20 +239,20 @@
       {
         "type": "font_picker",
         "id": "heading_font",
-        "label": "Heading",
-        "info": "Font used for headers"
+        "label": "Headings",
+        "default": "darker-grotesque"
       },
       {
         "type": "font_picker",
         "id": "body_font",
-        "label": "Body",
-        "info": "Font used for texts"
+        "label": "Body text",
+        "default": "open-sans"
       },
       {
         "type": "font_picker",
         "id": "tagline_font",
         "label": "Tagline",
-        "info": "Font used for taglines"
+        "default": "open-sans"
       },
       {
         "type": "header",
@@ -238,64 +261,161 @@
       {
         "type": "number",
         "id": "h1_size",
-        "label": "Header 1",
+        "label": "Heading 1",
         "min": 40,
         "max": 80,
-        "default": 56,
+        "default": 80,
         "info": "Min: 40, max: 80"
       },
       {
         "type": "number",
         "id": "h2_size",
-        "label": "Header 2",
+        "label": "Heading 2",
         "min": 30,
         "max": 70,
-        "default": 48,
+        "default": 64,
         "info": "Min: 30, max: 70"
       },
       {
         "type": "number",
         "id": "h3_size",
-        "label": "Header 3",
+        "label": "Heading 3",
         "min": 25,
         "max": 65,
-        "default": 40,
+        "default": 56,
         "info": "Min: 25, max: 65"
-      },
-      {
-        "type": "number",
-        "id": "h4_size",
-        "label": "Header 4",
-        "min": 20,
-        "max": 50,
-        "default": 32,
-        "info": "Min: 20, max: 50"
-      },
-      {
-        "type": "number",
-        "id": "h5_size",
-        "label": "Header 5",
-        "min": 18,
-        "max": 32,
-        "default": 24,
-        "info": "Min: 18, max: 32"
-      },
-      {
-        "type": "number",
-        "id": "h6_size",
-        "label": "Header 6",
-        "min": 16,
-        "max": 26,
-        "default": 20,
-        "info": "Min: 16, max: 26"
       },
       {
         "type": "number",
         "id": "tagline_size",
         "label": "Tagline",
         "min": 14,
-        "max": 50,
-        "info": "Min: 14, max: 50"
+        "max": 30,
+        "default": 20,
+        "info": "Min: 14, max: 30"
+      },
+      {
+        "type": "number",
+        "id": "large_text_size",
+        "label": "Large text",
+        "min": 18,
+        "max": 28,
+        "default": 18,
+        "info": "Min: 18, max: 28"
+      },
+      {
+        "type": "number",
+        "id": "regular_text_size",
+        "label": "Regular text",
+        "min": 12,
+        "max": 20,
+        "default": 16,
+        "info": "Min: 12, max: 20"
+      }
+    ]
+  },
+  {
+    "name": "Style",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Corners"
+      },
+      {
+        "type": "select",
+        "id": "corner_radius",
+        "label": "Corner radius",
+        "options": [
+          {
+            "value": "square",
+            "label": "Square"
+          },
+          {
+            "value": "rounded",
+            "label": "Rounded"
+          },
+          {
+            "value": "fully_round",
+            "label": "Fully round"
+          }
+        ],
+        "default": "fully_round"
+      },
+      {
+        "type": "header",
+        "content": "Backgrounds"
+      },
+      {
+        "type": "select",
+        "id": "background_element",
+        "label": "Background element",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "not1",
+            "label": "Not set in specs"
+          },
+          {
+            "value": "not2",
+            "label": "Not set in specs"
+          }
+        ],
+        "default": "not1"
+      },
+      {
+        "type": "select",
+        "id": "background_visual",
+        "label": "Background visual",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "terrain",
+            "label": "Terrain"
+          },
+          {
+            "value": "grid",
+            "label": "Grid"
+          },
+          {
+            "value": "mountains",
+            "label": "Mountains"
+          },
+          {
+            "value": "grit",
+            "label": "Grit"
+          }
+        ],
+        "default": "grid"
+      },
+      {
+        "type": "header",
+        "content": "Section transitions"
+      },
+      {
+        "type": "select",
+        "id": "transition_style",
+        "label": "Transition style",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "fade",
+            "label": "Fade"
+          },
+          {
+            "value": "sketch",
+            "label": "Sketch"
+          }
+        ],
+        "default": "sketch"
       }
     ]
   },
@@ -313,6 +433,7 @@
         "type": "image_picker",
         "id": "image_placeholder",
         "label": "Image placeholder",
+        "default": "booqable://assets/image-placeholder.png",
         "info": "This image displays on products and collections if they don't have any images"
       }
     ]
@@ -325,9 +446,9 @@
         "id": "animation_duration",
         "label": "Duration",
         "min": 0,
-        "max": 10000,
-        "default": 200,
-        "info": "Important note: Time counts in milliseconds, 1 second equals 1000 milliseconds. If this field is empty, by default, all animations use a 200ms duration. This time is used for changing colors of UI elements, opening menu, modals, etc. You can use positive numbers between 0 and 10000 only"
+        "max": 10,
+        "default": 0.2,
+        "info": "Unit is seconds. Leave blank to use default duration of 0.2s. Min: 0, max: 10"
       }
     ]
   },
@@ -341,7 +462,7 @@
       {
         "type": "select",
         "id": "social_size",
-        "label": "Size",
+        "label": "Icon size",
         "options": [
           {
             "value": "sm",
@@ -361,7 +482,7 @@
       {
         "type": "select",
         "id": "social_spacing",
-        "label": "Spacing",
+        "label": "Spacing between icons",
         "options": [
           {
             "value": "sm",
