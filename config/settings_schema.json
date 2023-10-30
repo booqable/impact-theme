@@ -448,7 +448,7 @@
         "min": 0,
         "max": 10,
         "default": 0.2,
-        "info": "Unit - seconds. Leave empty for use default 0.2s duration. Min: 0, max: 10"
+        "info": "Unit is seconds. Leave blank to use default duration of 0.2s. Min: 0, max: 10"
       }
     ]
   },
