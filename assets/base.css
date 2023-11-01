@@ -370,7 +370,7 @@ img {
   font-family: var(--font-body);
   font-size: var(--font-size-regular);
   font-weight: var(--font-weight-extrabold);
-  line-height: var(--line-height-sm);
+  line-height: var(--line-height-xs);
   color: currentColor;
   border: 1px solid transparent;
   border-radius: var(--border-radius);
@@ -393,7 +393,7 @@ img {
 }
 
 .button.button--small {
-  padding: 8px 18px;
+  padding: 8px 20px;
 }
 
 .button.button--large {

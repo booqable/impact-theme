@@ -10,9 +10,6 @@ class Header {
       view: ".preview-bar__container",
       headerNav: ".header__nav-wrapper",
       menu: ".menu",
-      menuItem: ".menu__item",
-      menuDrop: ".has-dropdown",
-      menuBottom: ".header-menu-bottom",
       menuOpener: "#mobile-menu-opener",
       search: ".header__search",
       searchOpener: "#search-opener",
@@ -38,17 +35,11 @@ class Header {
       height: '--header-height',
       barHeight: '--top-bar-height',
       viewHeight: '--preview-height',
-      linkHeight: '--menu-position',
       transform: '--header-transform'
     }
 
     this.props = {
       fixed: 'fixed'
-    }
-
-    this.event = {
-      mouseenter: 'mouseenter',
-      mouseleave: 'mouseleave'
     }
 
     this.attr = {
@@ -81,9 +72,6 @@ class Header {
     this.bar = this.block.querySelector(this.selector.bar);
     this.barBlocks = this.block.querySelectorAll(this.selector.barBlock);
     this.menu = this.block.querySelector(this.selector.menu);
-    this.menuBottom = this.block.querySelector(this.selector.menuBottom);
-    this.menuItem = this.block.querySelector(this.selector.menuItem);
-    this.menuDrops = this.block.querySelectorAll(this.selector.menuDrop);
     this.menuOpener = this.block.querySelector(this.selector.menuOpener);
     this.searchOpener = this.block.querySelector(this.selector.searchOpener);
     this.searchInput = this.block.querySelector(this.selector.searchInput);
@@ -96,8 +84,6 @@ class Header {
   events() {
     this.headerFixed();
     this.headerHeight();
-    this.menuPosition();
-    this.hoverClose();
     this.setEmailPhone();
     this.searchAutoFill();
 
@@ -108,7 +94,6 @@ class Header {
     document.addEventListener("keyup", this.showClearButton.bind(this));
     window.addEventListener("scroll", this.scrollProps.bind(this));
     window.addEventListener("resize", this.headerHeight.bind(this));
-    window.addEventListener("resize", this.menuPosition.bind(this));
     window.addEventListener("resize", this.closeMenuResize.bind(this));
   }
 
@@ -165,15 +150,6 @@ class Header {
     }
 
     this.last = current;
-  }
-
-  // add css variable when desktop menu is in bottom mode for menu positioning
-  menuPosition() {
-    if (!this.menuBottom) return false;
-
-    const height = this.menuItem.getBoundingClientRect().height;
-
-    this.setCssVar(this.cssVar.linkHeight, height);
   }
 
   // adding overflow:hidden when menu opened while header is not sticky on mobile
@@ -234,37 +210,6 @@ class Header {
     if (outside !== null) return false;
 
     elem.checked = false;
-  }
-
-  // closing modal windows of header on hover and add class on menu items on desktop
-  hoverClose() {
-    if (!this.menuDrops.length) return false;
-
-    const event = e => {
-      const target = e.target,
-            type = e.type,
-            time = 500;
-
-      switch (type) {
-        case this.event.mouseenter:
-          this.closeModals(e);
-          target.classList.add(this.modifier.active);
-
-          break;
-
-        case this.event.mouseleave:
-          setTimeout(() => {
-            target.classList.remove(this.modifier.active);
-          }, time);
-
-          break;
-      }
-    };
-
-    this.menuDrops.forEach((item) => {
-      item.addEventListener(this.event.mouseenter, event);
-      item.addEventListener(this.event.mouseleave, event);
-    });
   }
 
   addOverflow() {
