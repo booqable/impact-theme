@@ -145,6 +145,12 @@
         </div>
       {%- endif -%}
 
+      {%- if notice -%}
+        <div class="account__alert account__alert--info">
+          {{- notice -}}
+        </div>
+      {%- endif -%}
+
       <div class="account__divider">
         <button
           type="submit"
