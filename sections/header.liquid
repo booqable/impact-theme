@@ -16,8 +16,12 @@
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign show_payments         = section.settings.show_payments -%}
+{%- assign show_payments_mobile  = section.settings.show_payments_mobile -%}
 {%- assign login_placeholder     = section.settings.login_placeholder -%}
+{%- assign logout_placeholder    = section.settings.logout_placeholder -%}
 {%- assign signup_placeholder    = section.settings.signup_placeholder -%}
+{%- assign follow_us             = section.settings.follow_us -%}
 {%- assign image_placeholder     = settings.image_placeholder -%}
 {%- assign facebook              = settings.social_facebook_link -%}
 {%- assign instagram             = settings.social_instagram_link -%}
@@ -93,8 +97,8 @@
 
 {% comment %} Login buttons component {% endcomment %}
 {%- capture header_login -%}
-  <div class="header__login">
-    <a href="" class="header__login-button button button--outlined button--large">
+  <div class="menu__login">
+    <a href="" class="menu__login-button button button--outlined button--large">
       {%- render 'icon-user' -%}
       {%- if login_placeholder != blank -%}
         {{- login_placeholder -}}
@@ -102,11 +106,18 @@
         Log in
       {%- endif -%}
     </a>
-    <a href="" class="header__login-button button button--outlined button--large">
+    <a href="" class="menu__login-button button button--outlined button--large">
       {%- if signup_placeholder != blank -%}
         {{- signup_placeholder -}}
       {%- else -%}
         Create account
+      {%- endif -%}
+    </a>
+    <a href="" class="menu__login-button button button--outlined button--large">
+      {%- if logout_placeholder != blank -%}
+        {{- logout_placeholder -}}
+      {%- else -%}
+        Log out
       {%- endif -%}
     </a>
   </div>
@@ -117,13 +128,23 @@
   <div class="menu__bottom">
     {{- header_login -}}
 
-    {%- if facebook != blank or instagram != blank or twitter != blank or linkedin != blank or pinterest != blank or tiktok != blank or tumblr != blank or snapchat != blank or youtube != blank or vimeo != blank -%}
-      <div class="menu__icons">
+    <div class="menu__icons">
+      {%- if facebook != blank or instagram != blank or twitter != blank or linkedin != blank or pinterest != blank or tiktok != blank or tumblr != blank or snapchat != blank or youtube != blank or vimeo != blank -%}
         <div class="menu__social">
-          {%- include "socials" -%}
+          {%- if follow_us != blank -%}
+            <span class="menu__social-label">{{- follow_us -}}</span>
+          {%- endif -%}
+
+          {%- render "socials", settings: settings -%}
         </div>
-      </div>
-    {%- endif -%}
+      {%- endif -%}
+
+      {%- if payment_methods.size > 0 and show_payments_mobile or payment_methods.size > 0 and show_payments-%}
+        <div class="menu__payments payments{% if show_payments_mobile %} menu__payments--mobile{% endif %}{% if show_payments %} menu__payments--desktop{%- endif -%}" style="{{- payment_variables | escape -}}">
+          {%- render "payments", payments: payment_methods -%}
+        </div>
+      {%- endif -%}
+    </div>
   </div>
 {%- endcapture -%}
 
@@ -133,15 +154,17 @@
     {%- if menu != blank -%}
       <input type="checkbox" id="mobile-menu-opener" style="display: none;">
       <label for="mobile-menu-opener" class="menu__opener button button--primary button--small">
-        <b>{{- menu_opener_label -}}</b>
+        {%- if menu_opener_label != blank -%}
+          <b>{{- menu_opener_label -}}</b>
+        {%- endif -%}
         <i>
           <span></span>
         </i>
       </label>
 
-      <nav class="header__nav menu" style="display: none;">
+      <nav class="menu" style="display: none;">
         <div class="menu__wrapper">
-          <ul class="header__nav-list menu__list">
+          <ul class="menu__list">
             <li class="menu__label"><b>{{- menu_opener_label -}}</b></li>
             {%- for link in menu.items -%}
               {%- assign link_index = forloop.index -%}
@@ -234,6 +257,8 @@
           {{- menu_bottom -}}
         </div>
       </nav>
+
+      <div class="menu__overlay"></div>
     {%- endif -%}
   </div>
 {%- endcapture -%}
@@ -298,17 +323,14 @@
   </div>
 </div>
 
-{%- if sticky_header -%}
-  <script>
-    const header = document.querySelector('.header');
+<script>
+  const header = document.querySelector('.header');
+  {% if sticky_header %}
     header.classList.add('header--sticky')
-  </script>
-{%- else -%}
-  <script>
-    const header = document.querySelector('.header');
+  {% else %}
     header.classList.add('header--not-sticky')
-  </script>
-{%- endif -%}
+  {% endif %}
+</script>
 
 {% schema %}
   {
@@ -328,6 +350,12 @@
         "label": "Stick to top"
       },
       {
+        "type": "checkbox",
+        "id": "transparent_bg",
+        "default": true,
+        "label": "Use transparent background"
+      },
+      {
         "type": "image_picker",
         "id": "logo",
         "label": "Logo"
@@ -337,17 +365,6 @@
         "id": "custom_title",
         "label": "Site title",
         "info": "Displayed when no logo is added"
-      },
-      {
-        "type": "menu",
-        "id": "menu",
-        "label": "Menu"
-      },
-      {
-        "type": "text",
-        "id": "menu_opener_label",
-        "label": "Menu button label",
-        "default": "Menu"
       },
       {
         "type": "select",
@@ -361,9 +378,27 @@
           {
             "value": "two",
             "label": "Color set 2"
+          },
+          {
+            "value": "three",
+            "label": "Color set 3"
+          },
+          {
+            "value": "four",
+            "label": "Color set 4"
+          },
+          {
+            "value": "five",
+            "label": "Color set 5"
           }
         ],
-        "default": "two"
+        "default": "one"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_picker",
+        "default": true,
+        "label": "Show period picker"
       },
       {
         "type": "checkbox",
@@ -378,28 +413,37 @@
         "default": "Search"
       },
       {
-        "type": "checkbox",
-        "id": "show_picker",
-        "default": true,
-        "label": "Show period picker"
+        "type": "header",
+        "content": "Menu settings"
       },
       {
-        "type": "checkbox",
-        "id": "transparent_bg",
-        "default": true,
-        "label": "Use transparent background"
+        "type": "menu",
+        "id": "menu",
+        "label": "Menu"
       },
       {
         "type": "text",
         "id": "login_placeholder",
-        "label": "Login button label",
+        "label": "'Log in' button label",
         "default": "Log in"
       },
       {
         "type": "text",
+        "id": "logout_placeholder",
+        "label": "'Log out' button label",
+        "default": "Log out"
+      },
+      {
+        "type": "text",
         "id": "signup_placeholder",
-        "label": "Create account button label",
+        "label": "'Register' button label",
         "default": "Create account"
+      },
+      {
+        "type": "text",
+        "id": "follow_us",
+        "label": "Socials label",
+        "default": "Follow us on"
       },
       {
         "type": "header",
@@ -444,6 +488,19 @@
           }
         ],
         "default": "small"
+      },
+      {
+        "type": "text",
+        "id": "menu_opener_label",
+        "label": "Menu button label",
+        "default": "Menu",
+        "info": "Leave blank to hide the button label"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_payments",
+        "default": false,
+        "label": "Show payments"
       },
       {
         "type": "header",
@@ -504,6 +561,12 @@
           }
         ],
         "default": "medium"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_payments_mobile",
+        "default": true,
+        "label": "Show payments"
       }
     ]
   }

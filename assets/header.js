@@ -53,7 +53,6 @@ class Header {
     }
 
     this.minHeight = 180;
-    this.mediaQuery = 1100;
     this.last = 0;
     this.url = new URL(window.location.href);
   }
@@ -87,14 +86,12 @@ class Header {
     this.setEmailPhone();
     this.searchAutoFill();
 
-    document.addEventListener("click", this.menuOverflow.bind(this));
     document.addEventListener("click", this.closeModals.bind(this));
     document.addEventListener("click", this.searchFocus.bind(this));
     document.addEventListener("click", this.searchClear.bind(this));
     document.addEventListener("keyup", this.showClearButton.bind(this));
     window.addEventListener("scroll", this.scrollProps.bind(this));
     window.addEventListener("resize", this.headerHeight.bind(this));
-    window.addEventListener("resize", this.closeMenuResize.bind(this));
   }
 
   headerFixed() {
@@ -152,35 +149,6 @@ class Header {
     this.last = current;
   }
 
-  // adding overflow:hidden when menu opened while header is not sticky on mobile
-  menuOverflow(e) {
-    const target = e?.target.previousElementSibling;
-
-    if (target !== this.menuOpener) return false;
-
-    this.menuOpener && this.menuOpener.checked ? this.closeMenu() : this.addOverflow()
-  }
-
-  closeMenu() {
-    this.removeOverflow();
-    this.closeMobileDrop();
-  }
-
-  closeMenuResize() {
-    if (window.innerWidth >= this.mediaQuery) {
-      this.closeMenu();
-
-      if (this.menuOpener) this.menuOpener.checked = false;
-    }
-  }
-
-  // closing all dropdowns when mobile menu closed
-  closeMobileDrop() {
-    if (!this.checkboxes?.length) return false;
-
-    this.checkboxes.forEach(checkbox => checkbox.checked = false);
-  }
-
   // closing modals of search and mobile menu on click on header icons
   closeModals(e) {
     this.killModal(e, this.searchOpener, this.selector.search);
@@ -194,8 +162,19 @@ class Header {
 
     if (target === searchOpener && isChecked) {
       const block = this.selector.headerNav;
-      this.closeMobileDrop();
-      this.removeOverflow();
+
+      this.doc.removeAttribute(this.attr.class);
+
+      if (this.notSticky) {
+        window.scrollTo(0, 0);
+        this.block.classList.remove(this.classes.opened);
+        this.block.removeAttribute(this.attr.style);
+      }
+
+      if (this.checkboxes?.length) {
+        this.checkboxes.forEach(checkbox => checkbox.checked = false);
+      }
+
       this.killModal(e, this.menuOpener, block);
     }
   }
@@ -210,25 +189,6 @@ class Header {
     if (outside !== null) return false;
 
     elem.checked = false;
-  }
-
-  addOverflow() {
-    this.doc.classList.add(this.modifier.overflow);
-
-    if (!this.notSticky) return false;
-
-    this.block.classList.add(this.classes.opened);
-    this.block.style.position = this.props.fixed;
-  }
-
-  removeOverflow() {
-    this.doc.classList.remove(this.modifier.overflow);
-
-    if (!this.notSticky) return false;
-
-    this.block.classList.remove(this.classes.opened);
-    window.scrollTo(0, 0);
-    this.block.removeAttribute(this.attr.style);
   }
 
   // convert links to allow users to send emails and call phone numbers
