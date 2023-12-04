@@ -12,8 +12,7 @@ class Main {
     }
 
     this.modifier = {
-      loaded: "loaded",
-      resize: "resize-active"
+      loaded: "loaded"
     }
 
     this.params = {
@@ -43,7 +42,6 @@ class Main {
 
     this.time = 500;
     this.timeScroll = 300;
-    this.timer = undefined;
     this.focalImageTimeout;
   }
 
@@ -67,7 +65,6 @@ class Main {
     setTimeout(() => this.getDatePickerHeight(), 1000);
 
     window.addEventListener("resize", this.getDatePickerHeight.bind(this));
-    window.addEventListener("resize", this.setResizeClass.bind(this));
     window.addEventListener("message", this.messagesListener.bind(this));
   }
 
@@ -86,16 +83,6 @@ class Main {
       `${key}`,
       `${val}px`
     )
-  }
-
-  // adding class while resizing window
-  setResizeClass() {
-    this.block.classList.add(this.modifier.resize);
-    clearTimeout(this.timer);
-
-    this.timer = setTimeout(() => {
-      this.block.classList.remove(this.modifier.resize);
-    }, this.time);
   }
 
   // adding class after loading content

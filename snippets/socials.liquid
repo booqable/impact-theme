@@ -4,18 +4,46 @@
 
   Usage:
 
-  {%- include 'socials' -%}
+  {%- render 'socials', settings: settings -%}
 
 {% endcomment %}
 
 {% style %}
   .social-networks {
     display: flex;
-    margin: 0 calc(-1 * var(--social-spacing));
+    flex-wrap: wrap;
+    margin: 0 calc(-1 * var(--social-spacing)) calc(-1 * var(--social-spacing));
+    font-size: var(--social-size);
   }
 
   .social-networks__item {
-    margin: 0 var(--social-spacing);
+    margin: 0 var(--social-spacing) var(--social-spacing);
+  }
+
+  .palette-one .social-networks__link:hover {
+    color: var(--color-outline-1-hover);
+  }
+
+  .palette-two .social-networks__link:hover {
+    color: var(--color-outline-2-hover);
+  }
+
+  .palette-three .social-networks__link:hover {
+    color: var(--color-outline-3-hover);
+  }
+
+  .palette-four .social-networks__link:hover {
+    color: var(--color-outline-4-hover);
+  }
+
+  .palette-five .social-networks__link:hover {
+    color: var(--color-outline-5-hover);
+  }
+
+  @media (min-width: 992px) {
+    .social-networks {
+      justify-content: flex-end;
+    }
   }
 {% endstyle %}
 
@@ -37,7 +65,7 @@
   {% if settings.social_twitter_link != blank %}
     <li class="social-networks__item">
       <a href="{{ settings.social_twitter_link }}" target="_blank" class="social-networks__link">
-        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-x-twitter"></i>
       </a>
     </li>
   {% endif %}

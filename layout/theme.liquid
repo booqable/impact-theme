@@ -45,11 +45,9 @@
     <script src="{{ "touch-device-notch.js" | asset_url }}" defer></script>
     <script src="{{ "main.js" | asset_url }}" defer></script>
     <script src="{{ "header.js" | asset_url }}" defer></script>
+    <script src="{{ "mega-menu.js" | asset_url }}" defer></script>
     <script src="{{ "carousel.js" | asset_url }}" defer></script>
-
-    {%- if template == "index" -%}
-      <script src="{{ "images.js" | asset_url }}" defer></script>
-    {%- endif -%}
+    <script src="{{ "images.js" | asset_url }}" defer></script>
 
     {%- if settings.accent_background != blank -%}
       {%- assign background_accent = settings.accent_background -%}
