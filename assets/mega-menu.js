@@ -1,4 +1,4 @@
-class GlobalMenu {
+class MegaMenu {
   constructor(menu) {
     this.menu = menu;
 
@@ -91,7 +91,7 @@ class GlobalMenu {
   }
 }
 
-const menu = new GlobalMenu(document.querySelector('.menu'));
+const menu = new MegaMenu(document.querySelector('.menu'));
 
 document.addEventListener("readystatechange", (e) => {
   if (e.target.readyState === "complete") menu.init();
