@@ -1,58 +1,143 @@
+{% comment %}
+
+  This snippet is used for rendering the Date picker
+
+  key: section id *required,
+  color_palette: "string" *required,
+  background: "string" *required,
+  settings: settings *required (global store settings)
+
+  Usage:
+
+  {%- render 'date-picker',
+      key: section.key,
+      color_palette: color_palette,
+      background: background_accent,
+      settings: settings
+  -%}
+
+{% endcomment %}
+
 {%- style -%}
-  bq-date-picker {
-    --date-picker-border-radius: var(--border-radius);
+  #section-{{ key }} bq-date-picker {
+    --date-picker-border-radius: var(--border-radius, 0);
     --date-picker-cleanstate-padding: 11px 22px;
     --date-picker-section-padding: 12px;
     --date-picker-title-size: 16px;
     --date-picker-text-size: 16px;
-    --date-picker-title-line-height: var(--line-height-lg);
-    --date-picker-text-line-height: var(--line-height-lg);
+    --date-picker-title-line-height: 1.5;
+    --date-picker-text-line-height: 1.5;
 
-    {%- if color_palette == "one" -%}
-      {%- if settings.background_1 != blank -%}
+    {% if color_palette == "one" %}
+      {% if settings.background_1 != blank %}
         --date-picker-background-color: var(--background-primary-1);
-      {%- endif -%}
+      {% else %}
+        --date-picker-background-color: #FFFFFF;
+      {% endif %}
 
-      {%- if settings.primary_color_1 != blank -%}
+      {% if settings.primary_color_1 != blank %}
         --date-picker-text-color: var(--color-primary-1);
         --date-picker-placeholder-color: var(--color-placeholder-1);
         --date-picker-section-border: 1px solid var(--color-border-1);
-      {%- endif -%}
+      {% else %}
+        --date-picker-text-color: #0B1A26;
+        --date-picker-placeholder-color: #0B1A2659;
+        --date-picker-section-border: 1px solid #0B1A2626;
+      {% endif %}
 
-      {%- if settings.accent_background_1 != blank -%}
+      {% if settings.accent_background_1 != blank %}
         --date-picker-cleanstate-background-color: var(--background-accent-1);
         --date-picker-box-shadow: 0 0 0 1px var(--background-accent-1);
-      {%- endif -%}
+      {% else %}
+        --date-picker-cleanstate-background-color: #F4B841;
+        --date-picker-box-shadow: 0 0 0 1px #F4B841;
+      {% endif %}
 
-      {%- if settings.accent_color_1 != blank -%}
+      {% if settings.accent_color_1 != blank %}
         --date-picker-icon-color: var(--color-accent-1);
         --date-picker-cleanstate-text-color: var(--color-accent-1);
         --color-accent-foreground: var(--color-accent-1);
-      {%- endif -%}
+      {% else %}
+        --date-picker-icon-color: #0B1A26;
+        --date-picker-cleanstate-text-color: #0B1A26;
+        --color-accent-foreground: #0B1A26;
+      {% endif %}
 
-    {%- elsif color_palette == "two" -%}
-      {%- if settings.background_2 != blank -%}
+    {% elsif color_palette == "two" %}
+      {% if settings.background_2 != blank %}
         --date-picker-background-color: var(--background-primary-2);
-      {%- endif -%}
+      {% else %}
+        --date-picker-background-color: #0B1A26;
+      {% endif %}
 
-      {%- if settings.primary_color_2 != blank -%}
+      {% if settings.primary_color_2 != blank %}
         --date-picker-text-color: var(--color-primary-2);
         --date-picker-placeholder-color: var(--color-placeholder-2);
         --date-picker-section-border: 1px solid var(--color-border-2);
-      {%- endif -%}
+      {% else %}
+        --date-picker-text-color: #FFFFFF;
+        --date-picker-placeholder-color: #FFFFFF59;
+        --date-picker-section-border: 1px solid #FFFFFF47;
+      {% endif %}
 
-      {%- if settings.accent_background_2 != blank -%}
+      {% if settings.accent_background_2 != blank %}
         --date-picker-cleanstate-background-color: var(--background-accent-2);
         --date-picker-box-shadow: 0 0 0 1px var(--background-accent-2);
-      {%- endif -%}
+      {% else %}
+        --date-picker-cleanstate-background-color: #F4B841;
+        --date-picker-box-shadow: 0 0 0 1px #F4B841;
+      {% endif %}
 
-      {%- if settings.accent_color_2 != blank -%}
+      {% if settings.accent_color_2 != blank %}
         --date-picker-icon-color: var(--color-accent-2);
         --date-picker-cleanstate-text-color: var(--color-accent-2);
         --color-accent-foreground: var(--color-accent-2);
-      {%- endif -%}
+      {% else %}
+        --date-picker-icon-color: #0B1A26;
+        --date-picker-cleanstate-text-color: #0B1A26;
+        --color-accent-foreground: #0B1A26;
+      {% endif %}
+
+    {% elsif color_palette == "three" %}
+      {% if settings.background_3 != blank %}
+        --date-picker-background-color: var(--background-primary-3);
+      {% else %}
+        --date-picker-background-color: #F4B841;
+      {% endif %}
+
+      {% if settings.primary_color_3 != blank %}
+        --date-picker-text-color: var(--color-primary-3);
+        --date-picker-placeholder-color: var(--color-placeholder-3);
+        --date-picker-section-border: 1px solid var(--color-border-3);
+      {% else %}
+        --date-picker-text-color: #0B1A26;
+        --date-picker-placeholder-color: #0B1A2659;
+        --date-picker-section-border: 1px solid #0B1A2626;
+      {% endif %}
+
+      {% if settings.accent_background_3 != blank %}
+        --date-picker-cleanstate-background-color: var(--background-accent-3);
+        --date-picker-box-shadow: 0 0 0 1px var(--background-accent-3);
+      {% else %}
+        --date-picker-cleanstate-background-color: #0B1A26;
+        --date-picker-box-shadow: 0 0 0 1px #0B1A26;
+      {% endif %}
+
+      {% if settings.accent_color_3 != blank %}
+        --date-picker-icon-color: var(--color-accent-3);
+        --date-picker-cleanstate-text-color: var(--color-accent-3);
+        --color-accent-foreground: var(--color-accent-3);
+      {% else %}
+        --date-picker-icon-color: #FFFFFF;
+        --date-picker-cleanstate-text-color: #FFFFFF;
+        --color-accent-foreground: #FFFFFF;
+      {% endif %}
     {%- endif -%}
   }
 {%- endstyle -%}
 
-<bq-date-picker branding-color="{{- background_accent -}}"></bq-date-picker>
+<div class="date-picker__instance">
+  <div class="date-picker__component">
+    <bq-date-picker branding-color="{{- background -}}"></bq-date-picker>
+  </div>
+</div>

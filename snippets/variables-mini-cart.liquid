@@ -10,38 +10,44 @@
     --minicart-button-font: var(--font-body, --minicart-font, sans-serif);
 
     {%- if color_palette == "one" -%}
-      {%- if settings.primary_color_1 != blank -%}
-        --minicart-button-color: var(--color-primary-1);
-      {%- endif -%}
-
-      {%- if settings.accent_background_1 != blank -%}
-        --minicart-button-accent-color: var(--background-accent-1);
-      {%- endif -%}
-
-      {% if settings.accent_color_1 != blank %}
-        --minicart-button-badge-color: var(--color-accent-1);
-      {% endif %}
-
-      {%- if settings.accent_outline_1 != blank -%}
-        --minicart-button-hover-color: var(--color-outline-1-hover);
-      {%- endif -%}
-
+      --minicart-button-color: var(--background-primary-1);
+      --minicart-button-accent-color: var(--background-accent-1);
+      --minicart-button-badge-color: var(--color-accent-1);
+      --minicart-button-hover-color: var(--color-outline-1-hover);
     {%- elsif color_palette == "two" -%}
-      {%- if settings.primary_color_2 != blank -%}
-        --minicart-button-color: var(--color-primary-2);
-      {%- endif -%}
+      --minicart-button-color: var(--background-primary-2);
+      --minicart-button-accent-color: var(--background-accent-2);
+      --minicart-button-badge-color: var(--color-accent-2);
+      --minicart-button-hover-color: var(--color-outline-2-hover);
+    {%- elsif color_palette == "three" -%}
+      --minicart-button-color: var(--background-primary-3);
+      --minicart-button-accent-color: var(--background-accent-3);
+      --minicart-button-badge-color: var(--color-accent-3);
+      --minicart-button-hover-color: var(--color-outline-3-hover);
+    {%- elsif color_palette == "four" -%}
+      --minicart-button-color: var(--background-primary-4);
+      --minicart-button-accent-color: var(--background-accent-4);
+      --minicart-button-badge-color: var(--color-accent-4);
+      --minicart-button-hover-color: var(--color-outline-4-hover);
+    {%- elsif color_palette == "five" -%}
+      --minicart-button-color: var(--background-primary-5);
+      --minicart-button-accent-color: var(--background-accent-5);
+      --minicart-button-badge-color: var(--color-accent-5);
+      --minicart-button-hover-color: var(--color-outline-5-hover);
+    {%- endif -%}
+  }
 
-      {%- if settings.accent_background_2 != blank -%}
-        --minicart-button-accent-color: var(--background-accent-2);
-      {%- endif -%}
-
-      {% if settings.accent_color_2 != blank %}
-        --minicart-button-badge-color: var(--color-accent-2);
-      {% endif %}
-
-      {%- if settings.accent_outline_2 != blank -%}
-        --minicart-button-hover-color: var(--color-outline-2-hover);
-      {%- endif -%}
+  .header__inner--background bq-minicart-button {
+    {%- if color_palette == "one" -%}
+      --minicart-button-color: var(--color-primary-1);
+    {%- elsif color_palette == "two" -%}
+      --minicart-button-color: var(--color-primary-2);
+    {%- elsif color_palette == "three" -%}
+      --minicart-button-color: var(--color-primary-3);
+    {%- elsif color_palette == "four" -%}
+      --minicart-button-color: var(--color-primary-4);
+    {%- elsif color_palette == "five" -%}
+      --minicart-button-color: var(--color-primary-5);
     {%- endif -%}
   }
 {% endstyle %}

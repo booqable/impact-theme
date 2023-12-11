@@ -1,34 +1,25 @@
 class Header {
-  constructor(block) {
-    this.block = block;
+  constructor(header) {
+    this.header = header;
 
     this.selector = {
       body: "body",
-      link: "a",
       bar: ".top-bar",
       barBlock: ".top-bar__text",
       view: ".preview-bar__container",
-      headerNav: ".header__nav-wrapper",
-      menu: ".menu",
-      menuOpener: "#mobile-menu-opener",
-      search: ".header__search",
-      searchOpener: "#search-opener",
-      searchInput: ".header__search-input",
-      searchReset: ".header__search-reset",
-      checkbox: "input[type=checkbox]"
+      inner: ".header__inner",
+      link: "a"
     }
 
     this.classes = {
       sticky: "header--sticky",
-      notSticky: "header--not-sticky",
-      opened: "header--menu-opened",
-      filled: "filled"
+      background: "header__inner--background"
     }
 
     this.modifier = {
       scroll: "scrolled-down",
-      overflow: "overflow-hidden",
-      active: "active"
+      scrolled: "page-scrolled",
+      transparent: "header--transparent"
     }
 
     this.cssVar = {
@@ -39,26 +30,20 @@ class Header {
     }
 
     this.props = {
-      fixed: 'fixed'
+      fixed: 'fixed',
+      absolute: "absolute"
     }
 
     this.attr = {
-      href: "href",
-      class: "class",
-      style: "style"
-    }
-
-    this.params = {
-      q: "q"
+      href: "href"
     }
 
     this.minHeight = 180;
     this.last = 0;
-    this.url = new URL(window.location.href);
   }
 
   init() {
-    if (!this.block) return false;
+    if (!this.header) return false;
 
     this.elements();
     this.events();
@@ -68,41 +53,34 @@ class Header {
     this.doc = document.documentElement;
     this.body = document.querySelector(this.selector.body);
     this.preview = document.querySelector(this.selector.view);
-    this.bar = this.block.querySelector(this.selector.bar);
-    this.barBlocks = this.block.querySelectorAll(this.selector.barBlock);
-    this.menu = this.block.querySelector(this.selector.menu);
-    this.menuOpener = this.block.querySelector(this.selector.menuOpener);
-    this.searchOpener = this.block.querySelector(this.selector.searchOpener);
-    this.searchInput = this.block.querySelector(this.selector.searchInput);
-    this.searchReset = this.block.querySelector(this.selector.searchReset);
-    this.checkboxes = this.menu?.querySelectorAll(this.selector.checkbox);
-    this.sticky = this.block.classList.contains(this.classes.sticky);
-    this.notSticky = this.block.classList.contains(this.classes.notSticky);
+    this.bar = this.header.querySelector(this.selector.bar);
+    this.barBlocks = this.header.querySelectorAll(this.selector.barBlock);
+    this.inner = this.header.querySelector(this.selector.inner);
+    this.isSticky = this.header.classList.contains(this.classes.sticky);
+    this.isColored = this.inner.classList.contains(this.classes.background);
   }
 
   events() {
-    this.headerFixed();
     this.headerHeight();
+    this.headerFixed();
     this.setEmailPhone();
-    this.searchAutoFill();
 
-    document.addEventListener("click", this.closeModals.bind(this));
-    document.addEventListener("click", this.searchFocus.bind(this));
-    document.addEventListener("click", this.searchClear.bind(this));
-    document.addEventListener("keyup", this.showClearButton.bind(this));
     window.addEventListener("scroll", this.scrollProps.bind(this));
     window.addEventListener("resize", this.headerHeight.bind(this));
   }
 
   headerFixed() {
-    if (!this.sticky) return false;
+    if (!this.isColored) {
+      this.header.classList.add(this.modifier.transparent)
+      this.inner.style.position = this.props.absolute
+    }
 
-    this.block.style.position = this.props.fixed;
+    if (this.isSticky) this.header.style.position = this.props.fixed
   }
 
   // getting height of header and set css variables
   headerHeight() {
-    let height = this.block.getBoundingClientRect().height,
+    let height = this.header.getBoundingClientRect().height,
         barHeight = 0,
         viewHeight = 0;
 
@@ -114,7 +92,7 @@ class Header {
     if (this.preview) {
       viewHeight = this.preview.getBoundingClientRect().height;
 
-      if (this.sticky) height += viewHeight;
+      if (this.isSticky) height += viewHeight;
 
       this.setCssVar(this.cssVar.viewHeight, Math.floor(viewHeight));
     }
@@ -124,6 +102,10 @@ class Header {
 
   // setting properties when scroll page
   scrollProps() {
+    window.scrollY > this.minHeight
+      ? this.body.classList.add(this.modifier.scrolled)
+      : this.body.classList.remove(this.modifier.scrolled)
+
     if (!this.bar) return false;
 
     let isScroll = this.body.classList.contains(this.modifier.scroll),
@@ -147,48 +129,6 @@ class Header {
     }
 
     this.last = current;
-  }
-
-  // closing modals of search and mobile menu on click on header icons
-  closeModals(e) {
-    this.killModal(e, this.searchOpener, this.selector.search);
-
-    const target = e.target,
-          searchOpener = this.searchOpener;
-
-    let isChecked = false;
-
-    if (this.menuOpener) isChecked = this.menuOpener.checked;
-
-    if (target === searchOpener && isChecked) {
-      const block = this.selector.headerNav;
-
-      this.doc.removeAttribute(this.attr.class);
-
-      if (this.notSticky) {
-        window.scrollTo(0, 0);
-        this.block.classList.remove(this.classes.opened);
-        this.block.removeAttribute(this.attr.style);
-      }
-
-      if (this.checkboxes?.length) {
-        this.checkboxes.forEach(checkbox => checkbox.checked = false);
-      }
-
-      this.killModal(e, this.menuOpener, block);
-    }
-  }
-
-  // closing modal window on click outside it
-  killModal(e, elem, parent) {
-    if (!elem) return false;
-
-    const target = e.target,
-          outside = target.closest(parent);
-
-    if (outside !== null) return false;
-
-    elem.checked = false;
   }
 
   // convert links to allow users to send emails and call phone numbers
@@ -221,50 +161,6 @@ class Header {
     })
   }
 
-  // set focus to the input field when opening the search popup
-  searchFocus(event) {
-    const target = event?.target;
-
-    if (target !== this.searchOpener) return false;
-
-    setTimeout(() => {
-      this.searchInput.focus();
-
-      this.showClearButton();
-    }, 30);
-  }
-
-  // clear input field
-  searchClear(event) {
-    const target = event?.target;
-
-    if (target !== this.searchReset) return false;
-
-    this.searchInput.value = "";
-    this.searchInput.parentElement.classList.remove(this.classes.filled);
-    this.searchInput.focus();
-  }
-
-  // add/remove class to parent of search input field
-  showClearButton() {
-    if (!this.searchInput) return false;
-
-    this.searchInput.value.length !== 0
-      ? this.searchInput.parentElement.classList.add(this.classes.filled)
-      : this.searchInput.parentElement.classList.remove(this.classes.filled)
-  }
-
-  // autofill search input field
-  searchAutoFill() {
-    if (!this.searchInput) return false;
-
-    const query = this.url.searchParams.get(this.params.q);
-
-    if (!query) return false;
-
-    this.searchInput.value = query;
-  }
-
   setCssVar(key, val) {
     this.doc.style.setProperty(
       `${key}`,
@@ -273,8 +169,8 @@ class Header {
   }
 }
 
-const stickyHeader = new Header(document.querySelector('.header'));
+const initHeader = new Header(document.querySelector('.header'));
 
 document.addEventListener("readystatechange", (e) => {
-  if (e.target.readyState === "complete") stickyHeader.init();
+  if (e.target.readyState === "complete") initHeader.init();
 })

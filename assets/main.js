@@ -1,10 +1,8 @@
 class Main {
-  constructor(block) {
-    this.block = block;
+  constructor(body) {
+    this.body = body;
 
     this.selector = {
-      datePicker: "bq-date-picker",
-      datePickerBlock: ".date-picker",
       footer: "footer",
       search: "#search",
       image: ".focal-image",
@@ -36,8 +34,7 @@ class Main {
     }
 
     this.cssVar = {
-      datePickerHeight: '--date-picker-height',
-      datePickerBlockHeight: '--date-picker-block-height',
+      bodyHeight: '--body-height'
     }
 
     this.time = 500;
@@ -46,7 +43,7 @@ class Main {
   }
 
   init() {
-    if (!this.block) return false;
+    if (!this.body) return false;
 
     this.elements();
     this.events();
@@ -55,27 +52,21 @@ class Main {
   elements() {
     this.footer = document.querySelector(this.selector.footer);
     this.search = document.querySelector(this.selector.search);
-    this.datePicker = document.querySelector(this.selector.datePicker);
-    this.datePickerBlock = document.querySelector(this.selector.datePickerBlock);
   }
 
   events() {
+    this.getBodyHeight();
     this.setLoadedClass();
     this.focalImages();
-    setTimeout(() => this.getDatePickerHeight(), 1000);
 
-    window.addEventListener("resize", this.getDatePickerHeight.bind(this));
+    window.addEventListener("resize", this.getBodyHeight.bind(this));
     window.addEventListener("message", this.messagesListener.bind(this));
   }
 
-  getDatePickerHeight() {
-    if (!this.datePicker) return false;
+  getBodyHeight() {
+    const height = this.body.getBoundingClientRect().height
 
-    const datePickerHeight = parseInt(this.datePicker.getBoundingClientRect().height);
-    const datePickerBlockHeight = parseInt(this.datePickerBlock.getBoundingClientRect().height);
-
-    this.setCssVar(this.cssVar.datePickerHeight, datePickerHeight);
-    this.setCssVar(this.cssVar.datePickerBlockHeight, datePickerBlockHeight);
+    this.setCssVar(this.cssVar.bodyHeight, height);
   }
 
   setCssVar(key, val) {
@@ -87,7 +78,7 @@ class Main {
 
   // adding class after loading content
   setLoadedClass() {
-    this.block.classList.add(this.modifier.loaded);
+    this.body.classList.add(this.modifier.loaded);
   }
 
   // change focus positioning of image

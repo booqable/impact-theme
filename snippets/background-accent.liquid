@@ -1,0 +1,31 @@
+{%- if color_palette == "one" -%}
+  {%- if settings.accent_background != blank -%}
+    {%- assign background_accent = settings.accent_background -%}
+  {%- else -%}
+    {%- assign background_accent = branding_color -%}
+  {%- endif -%}
+{%- elsif color_palette == "two" -%}
+  {%- if settings.accent_background_2 != blank -%}
+    {%- assign background_accent = settings.accent_background_2 -%}
+  {%- else -%}
+    {%- assign background_accent = branding_color -%}
+  {%- endif -%}
+{%- elsif color_palette == "three" -%}
+  {%- if settings.accent_background_3 != blank -%}
+    {%- assign background_accent = settings.accent_background_3 -%}
+  {%- else -%}
+    {%- assign background_accent = branding_color -%}
+  {%- endif -%}
+{%- elsif color_palette == "four" -%}
+  {%- if settings.accent_background_4 != blank -%}
+    {%- assign background_accent = settings.accent_background_4 -%}
+  {%- else -%}
+    {%- assign background_accent = branding_color -%}
+  {%- endif -%}
+{%- elsif color_palette == "five" -%}
+  {%- if settings.accent_background_5 != blank -%}
+    {%- assign background_accent = settings.accent_background_5 -%}
+  {%- else -%}
+    {%- assign background_accent = branding_color -%}
+  {%- endif -%}
+{%- endif -%}

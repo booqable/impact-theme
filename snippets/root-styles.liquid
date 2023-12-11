@@ -343,15 +343,15 @@
 
     {%- if settings.corner_radius == 'square' -%}
       --border-radius: 0;
-      --border-radius-circle: 50%;
+      --border-radius-circle-dynamic: 50%;
       --border-radius-rounded: 0px;
     {%- elsif settings.corner_radius == 'rounded' -%}
       --border-radius: 4px;
-      --border-radius-circle: 16px;
+      --border-radius-circle-dynamic: 16px;
       --border-radius-rounded: 4px;
     {%- elsif settings.corner_radius == 'fully_round' -%}
       --border-radius: 50px;
-      --border-radius-circle: 50%;
+      --border-radius-circle-dynamic: 50%;
       --border-radius-rounded: 8px;
     {%- endif -%}
 
