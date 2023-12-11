@@ -37,8 +37,7 @@
           "signup_placeholder": "Create account",
           "show_picker": true,
           "show_search": true,
-          "sticky_header": true,
-          "transparent_bg": true
+          "sticky_header": true
         },
         "disabled": null
       },
@@ -147,8 +146,7 @@
             "signup_placeholder": "Create account",
             "show_picker": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "sticky_header": true
           },
           "disabled": null
         },

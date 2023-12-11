@@ -11,7 +11,6 @@
 {%- assign show_search           = section.settings.show_search -%}
 {%- assign search_placeholder    = section.settings.search_placeholder -%}
 {%- assign show_picker           = section.settings.show_picker -%}
-{%- assign transparent_bg        = section.settings.transparent_bg -%}
 {%- assign padding_top           = section.settings.padding_top -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
@@ -100,25 +99,13 @@
   <div class="menu__login">
     <a href="" class="menu__login-button button button--outlined button--large">
       {%- render 'icon-user' -%}
-      {%- if login_placeholder != blank -%}
-        {{- login_placeholder -}}
-      {%- else -%}
-        Log in
-      {%- endif -%}
+      {{- login_placeholder | default: 'Log in' -}}
     </a>
     <a href="" class="menu__login-button button button--outlined button--large">
-      {%- if signup_placeholder != blank -%}
-        {{- signup_placeholder -}}
-      {%- else -%}
-        Create account
-      {%- endif -%}
+      {{- signup_placeholder | default: 'Create account' -}}
     </a>
     <a href="" class="menu__login-button button button--outlined button--large">
-      {%- if logout_placeholder != blank -%}
-        {{- logout_placeholder -}}
-      {%- else -%}
-        Log out
-      {%- endif -%}
+      {{- logout_placeholder | default: 'Log out' -}}
     </a>
   </div>
 {%- endcapture -%}
@@ -348,12 +335,6 @@
         "id": "sticky_header",
         "default": true,
         "label": "Stick to top"
-      },
-      {
-        "type": "checkbox",
-        "id": "transparent_bg",
-        "default": true,
-        "label": "Use transparent background"
       },
       {
         "type": "image_picker",
