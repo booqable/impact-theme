@@ -10,9 +10,6 @@ class Header {
       view: ".preview-bar__container",
       headerNav: ".header__nav-wrapper",
       menu: ".menu",
-      menuItem: ".menu__item",
-      menuDrop: ".has-dropdown",
-      menuBottom: ".header-menu-bottom",
       menuOpener: "#mobile-menu-opener",
       search: ".header__search",
       searchOpener: "#search-opener",
@@ -38,17 +35,11 @@ class Header {
       height: '--header-height',
       barHeight: '--top-bar-height',
       viewHeight: '--preview-height',
-      linkHeight: '--menu-position',
       transform: '--header-transform'
     }
 
     this.props = {
       fixed: 'fixed'
-    }
-
-    this.event = {
-      mouseenter: 'mouseenter',
-      mouseleave: 'mouseleave'
     }
 
     this.attr = {
@@ -62,7 +53,6 @@ class Header {
     }
 
     this.minHeight = 180;
-    this.mediaQuery = 1100;
     this.last = 0;
     this.url = new URL(window.location.href);
   }
@@ -81,9 +71,6 @@ class Header {
     this.bar = this.block.querySelector(this.selector.bar);
     this.barBlocks = this.block.querySelectorAll(this.selector.barBlock);
     this.menu = this.block.querySelector(this.selector.menu);
-    this.menuBottom = this.block.querySelector(this.selector.menuBottom);
-    this.menuItem = this.block.querySelector(this.selector.menuItem);
-    this.menuDrops = this.block.querySelectorAll(this.selector.menuDrop);
     this.menuOpener = this.block.querySelector(this.selector.menuOpener);
     this.searchOpener = this.block.querySelector(this.selector.searchOpener);
     this.searchInput = this.block.querySelector(this.selector.searchInput);
@@ -96,20 +83,15 @@ class Header {
   events() {
     this.headerFixed();
     this.headerHeight();
-    this.menuPosition();
-    this.hoverClose();
     this.setEmailPhone();
     this.searchAutoFill();
 
-    document.addEventListener("click", this.menuOverflow.bind(this));
     document.addEventListener("click", this.closeModals.bind(this));
     document.addEventListener("click", this.searchFocus.bind(this));
     document.addEventListener("click", this.searchClear.bind(this));
     document.addEventListener("keyup", this.showClearButton.bind(this));
     window.addEventListener("scroll", this.scrollProps.bind(this));
     window.addEventListener("resize", this.headerHeight.bind(this));
-    window.addEventListener("resize", this.menuPosition.bind(this));
-    window.addEventListener("resize", this.closeMenuResize.bind(this));
   }
 
   headerFixed() {
@@ -167,44 +149,6 @@ class Header {
     this.last = current;
   }
 
-  // add css variable when desktop menu is in bottom mode for menu positioning
-  menuPosition() {
-    if (!this.menuBottom) return false;
-
-    const height = this.menuItem.getBoundingClientRect().height;
-
-    this.setCssVar(this.cssVar.linkHeight, height);
-  }
-
-  // adding overflow:hidden when menu opened while header is not sticky on mobile
-  menuOverflow(e) {
-    const target = e?.target.previousElementSibling;
-
-    if (target !== this.menuOpener) return false;
-
-    this.menuOpener && this.menuOpener.checked ? this.closeMenu() : this.addOverflow()
-  }
-
-  closeMenu() {
-    this.removeOverflow();
-    this.closeMobileDrop();
-  }
-
-  closeMenuResize() {
-    if (window.innerWidth >= this.mediaQuery) {
-      this.closeMenu();
-
-      if (this.menuOpener) this.menuOpener.checked = false;
-    }
-  }
-
-  // closing all dropdowns when mobile menu closed
-  closeMobileDrop() {
-    if (!this.checkboxes?.length) return false;
-
-    this.checkboxes.forEach(checkbox => checkbox.checked = false);
-  }
-
   // closing modals of search and mobile menu on click on header icons
   closeModals(e) {
     this.killModal(e, this.searchOpener, this.selector.search);
@@ -218,8 +162,19 @@ class Header {
 
     if (target === searchOpener && isChecked) {
       const block = this.selector.headerNav;
-      this.closeMobileDrop();
-      this.removeOverflow();
+
+      this.doc.removeAttribute(this.attr.class);
+
+      if (this.notSticky) {
+        window.scrollTo(0, 0);
+        this.block.classList.remove(this.classes.opened);
+        this.block.removeAttribute(this.attr.style);
+      }
+
+      if (this.checkboxes?.length) {
+        this.checkboxes.forEach(checkbox => checkbox.checked = false);
+      }
+
       this.killModal(e, this.menuOpener, block);
     }
   }
@@ -234,56 +189,6 @@ class Header {
     if (outside !== null) return false;
 
     elem.checked = false;
-  }
-
-  // closing modal windows of header on hover and add class on menu items on desktop
-  hoverClose() {
-    if (!this.menuDrops.length) return false;
-
-    const event = e => {
-      const target = e.target,
-            type = e.type,
-            time = 500;
-
-      switch (type) {
-        case this.event.mouseenter:
-          this.closeModals(e);
-          target.classList.add(this.modifier.active);
-
-          break;
-
-        case this.event.mouseleave:
-          setTimeout(() => {
-            target.classList.remove(this.modifier.active);
-          }, time);
-
-          break;
-      }
-    };
-
-    this.menuDrops.forEach((item) => {
-      item.addEventListener(this.event.mouseenter, event);
-      item.addEventListener(this.event.mouseleave, event);
-    });
-  }
-
-  addOverflow() {
-    this.doc.classList.add(this.modifier.overflow);
-
-    if (!this.notSticky) return false;
-
-    this.block.classList.add(this.classes.opened);
-    this.block.style.position = this.props.fixed;
-  }
-
-  removeOverflow() {
-    this.doc.classList.remove(this.modifier.overflow);
-
-    if (!this.notSticky) return false;
-
-    this.block.classList.remove(this.classes.opened);
-    window.scrollTo(0, 0);
-    this.block.removeAttribute(this.attr.style);
   }
 
   // convert links to allow users to send emails and call phone numbers

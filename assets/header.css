@@ -33,13 +33,11 @@
 .header__mobile-menu-opener-left {
   grid-template-areas:
     "column-2 column-1 column-3";
-  margin-left: -8px;
 }
 
 .header__mobile-menu-opener-right {
   grid-template-areas:
     "column-1 column-3 column-2";
-  margin-right: -8px;
 }
 
 .header__logo-wrapper {
@@ -185,7 +183,7 @@
   font-size: 16px;
   line-height: var(--line-height-sm);
   border: 1px solid transparent;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-rounded);
 }
 
 .header__search-input:focus {
@@ -367,172 +365,5 @@
 
   .header__search-wrapper {
     min-width: 800px;
-  }
-}
-
-@media (min-width: 1100px) and (hover: hover) {
-  .header__content-inner {
-    grid-template-columns: max-content 1fr max-content;
-    grid-template-areas: "column-1 column-2 column-3";
-    gap: 0px;
-  }
-
-  .header__content-inner.header__menu-position--centered {
-    grid-template-columns: 160px 1fr 160px;
-  }
-
-  .header__logo-wrapper:not(:empty) {
-    margin-right: 33px;
-  }
-
-  .header__links:not(:empty) {
-    margin-left: 33px;
-  }
-
-  .header__search-wrapper {
-    right: -5px;
-  }
-
-  .header__search-input-wrapper ~ .header__search-reset {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .header__search-input-wrapper.filled ~ .header__search-reset {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .header__search {
-    margin: 0;
-  }
-
-  .header__cart {
-    margin: 0 0 0 32px;
-  }
-
-  .header__cart:only-child {
-    margin: 0;
-  }
-
-  .header__mobile-menu-opener-left,
-  .header__mobile-menu-opener-right,
-  .header__mobile-menu-opener-left .header__nav-wrapper,
-  .header__mobile-menu-opener-right .header__nav-wrapper {
-    margin: 0;
-  }
-
-  .header-logo-centered .header__content-inner {
-    grid-template-columns: 1fr max-content 1fr;
-    grid-template-areas:
-      "column-2 column-1 column-3";
-  }
-
-  .header-logo-centered .header__logo-wrapper {
-    margin: 0 33px;
-  }
-
-  .header-menu-bottom .header__content-inner {
-    grid-template-columns: max-content 1fr;
-    grid-template-areas:
-      "column-1 column-3"
-      "column-2 column-2";
-  }
-
-  .header-menu-bottom .header__search {
-    flex-grow: 1;
-    padding: 0 40px 0 20px;
-    margin: 0 auto;
-    max-width: 640px;
-  }
-
-  .header-menu-bottom .header__search-wrapper {
-    display: block !important;
-    position: static;
-    padding: 0;
-    width: 100%;
-    min-width: auto;
-    transform: translate(0, 0);
-    visibility: visible;
-    pointer-events: all;
-    opacity: 1;
-    transition: none;
-  }
-
-  .header-menu-bottom .header__search-opener {
-    display: none;
-  }
-
-  .header-menu-bottom .header__search-input {
-    padding-right: 12px;
-  }
-
-  .header-menu-bottom .header__logo-wrapper {
-    padding: 0 0 16px;
-  }
-
-  .header-menu-bottom .header__links {
-    justify-content: flex-end;
-    padding: 0 0 16px;
-    margin: 0;
-    position: relative;
-  }
-
-  .header-menu-bottom .header__links.header__links--with-search {
-    justify-content: space-between;
-  }
-
-  .header-menu-bottom .header__links.header__links--with-search .header__search {
-    padding-right: 195px;
-    max-width: 795px;
-  }
-
-  .header-menu-bottom .header__links.header__links--with-search.header__links--with-cart .header__search {
-    padding-right: 141px;
-    max-width: 741px;
-  }
-
-  .header-menu-bottom .header__nav-wrapper {
-    height: auto;
-  }
-
-  .header-menu-bottom .header__links:before {
-    content: "";
-    position: absolute;
-    height: 1px;
-    width: 9999px;
-    left: 50%;
-    top: 100%;
-    z-index: 1;
-    transform: translate(-50%, 0);
-  }
-
-  .header__mobile-menu-opener-left .header__links:not(.header__links--with-cart) .header__search-wrapper,
-  .header__mobile-menu-opener-right .header__links:not(.header__links--with-cart) .header__search-wrapper {
-    right: 0;
-  }
-
-  .palette-one.header-menu-bottom .header__search-input {
-    border-color: var(--color-primary-1);
-  }
-
-  .palette-one.header-menu-bottom .header__search-input:focus {
-    border-color: var(--background-accent-1);
-  }
-
-  .palette-one.header-menu-bottom .header__links:before {
-    background: var(--color-border-1);
-  }
-
-  .palette-two.header-menu-bottom .header__search-input {
-    border-color: var(--color-primary-2);
-  }
-
-  .palette-two.header-menu-bottom .header__search-input:focus {
-    border-color: var(--background-accent-2);
-  }
-
-  .palette-two.header-menu-bottom .header__links:before {
-    background: var(--color-border-2);
   }
 }

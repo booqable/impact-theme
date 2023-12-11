@@ -477,7 +477,7 @@
             "label": "Large"
           }
         ],
-        "default": "md"
+        "default": "lg"
       },
       {
         "type": "select",

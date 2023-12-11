@@ -8,6 +8,7 @@
 
     {%- if settings.primary_color_1 != blank -%}
       --color-primary-1: {{- settings.primary_color_1 -}};
+      --color-primary-1-67: {{- settings.primary_color_1 | append: "AB" -}};
       --color-third-1: {{- settings.primary_color_1 | append: "66" -}};
       --color-fourth-1: {{- settings.primary_color_1 | append: "26" -}};
       --color-image-placeholder-1: {{- settings.primary_color_1 | append: "26" -}};
@@ -15,6 +16,7 @@
       --color-border-1: {{- settings.primary_color_1 | append: "26" -}};
     {%- else -%}
       --color-primary-1: #1A3333;
+      --color-primary-1-67: #1A3333AB;
       --color-third-1: #1A333366;
       --color-fourth-1: #1A333326;
       --color-image-placeholder-1: #1A333326;
@@ -48,8 +50,10 @@
 
     {%- if settings.accent_outline_1 != blank -%}
       --color-outline-1: {{- settings.accent_outline_1 -}};
+      --color-outline-1-hover: {{- settings.accent_outline_1 | append: 'CC' -}};
     {%- else -%}
       --color-outline-1: #53C787;
+      --color-outline-1-hover: #53C787CC;
     {%- endif -%}
 
     {%- if settings.background_2 != blank -%}
@@ -60,6 +64,7 @@
 
     {%- if settings.primary_color_2 != blank -%}
       --color-primary-2: {{- settings.primary_color_2 -}};
+      --color-primary-2-67: {{- settings.primary_color_2 | append: "AB" -}};
       --color-third-2: {{- settings.primary_color_2 | append: "66" -}};
       --color-fourth-2: {{- settings.primary_color_2 | append: "26" -}};
       --color-image-placeholder-2: {{- settings.primary_color_2 | append: "26" -}};
@@ -67,6 +72,7 @@
       --color-border-2: {{- settings.primary_color_2 | append: "26" -}};
     {%- else -%}
       --color-primary-2: #1A3333;
+      --color-primary-2-67: #1A3333AB;
       --color-third-2: #1A333366;
       --color-fourth-2: #1A333326;
       --color-image-placeholder-2: #1A333326;
@@ -100,8 +106,10 @@
 
     {%- if settings.accent_outline_2 != blank -%}
       --color-outline-2: {{- settings.accent_outline_2 -}};
+      --color-outline-2-hover: {{- settings.accent_outline_2 | append: 'CC' -}};
     {%- else -%}
       --color-outline-2: #FFFFFF;
+      --color-outline-2-hover: #FFFFFFCC;
     {%- endif -%}
 
     {%- if settings.background_3 != blank -%}
@@ -112,6 +120,7 @@
 
     {%- if settings.primary_color_3 != blank -%}
       --color-primary-3: {{- settings.primary_color_3 -}};
+      --color-primary-3-67: {{- settings.primary_color_3 | append: "AB" -}};
       --color-third-3: {{- settings.primary_color_3 | append: "66" -}};
       --color-fourth-3: {{- settings.primary_color_3 | append: "26" -}};
       --color-image-placeholder-3: {{- settings.primary_color_3 | append: "26" -}};
@@ -119,6 +128,7 @@
       --color-border-3: {{- settings.primary_color_3 | append: "26" -}};
     {%- else -%}
       --color-primary-3: #F6F4F2;
+      --color-primary-3-67: #F6F4F2AB;
       --color-third-3: #F6F4F266;
       --color-fourth-3: #F6F4F226;
       --color-image-placeholder-3: #F6F4F226;
@@ -152,8 +162,10 @@
 
     {%- if settings.accent_outline_3 != blank -%}
       --color-outline-3: {{- settings.accent_outline_3 -}};
+      --color-outline-3-hover: {{- settings.accent_outline_3 | append: 'CC' -}};
     {%- else -%}
       --color-outline-3: #1A3333;
+      --color-outline-3-hover: #1A3333CC;
     {%- endif -%}
 
     {%- if settings.background_4 != blank -%}
@@ -164,6 +176,7 @@
 
     {%- if settings.primary_color_4 != blank -%}
       --color-primary-4: {{- settings.primary_color_4 -}};
+      --color-primary-4-67: {{- settings.primary_color_4 | append: "AB" -}};
       --color-third-4: {{- settings.primary_color_4 | append: "66" -}};
       --color-fourth-4: {{- settings.primary_color_4 | append: "26" -}};
       --color-image-placeholder-4: {{- settings.primary_color_4 | append: "26" -}};
@@ -171,6 +184,7 @@
       --color-border-4: {{- settings.primary_color_4 | append: "26" -}};
     {%- else -%}
       --color-primary-4: #F6F4F2;
+      --color-primary-4-67: #F6F4F2AB;
       --color-third-4: #F6F4F266;
       --color-fourth-4: #F6F4F226;
       --color-image-placeholder-4: #F6F4F226;
@@ -204,8 +218,10 @@
 
     {%- if settings.accent_outline_4 != blank -%}
       --color-outline-4: {{- settings.accent_outline_4 -}};
+      --color-outline-4-hover: {{- settings.accent_outline_4 | append: 'CC' -}};
     {%- else -%}
       --color-outline-4: #53C787;
+      --color-outline-4-hover: #53C787CC;
     {%- endif -%}
 
     {%- if settings.background_5 != blank -%}
@@ -216,6 +232,7 @@
 
     {%- if settings.primary_color_5 != blank -%}
       --color-primary-5: {{- settings.primary_color_5 -}};
+      --color-primary-5-67: {{- settings.primary_color_5 | append: "AB" -}};
       --color-third-5: {{- settings.primary_color_5 | append: "66" -}};
       --color-fourth-5: {{- settings.primary_color_5 | append: "26" -}};
       --color-image-placeholder-5: {{- settings.primary_color_5 | append: "26" -}};
@@ -223,6 +240,7 @@
       --color-border-5: {{- settings.primary_color_5 | append: "26" -}};
     {%- else -%}
       --color-primary-5: #1A3333;
+      --color-primary-5-67: #1A3333AB;
       --color-third-5: #1A333366;
       --color-fourth-5: #1A333326;
       --color-image-placeholder-5: #1A333326;
@@ -256,8 +274,10 @@
 
     {%- if settings.accent_outline_5 != blank -%}
       --color-outline-5: {{- settings.accent_outline_5 -}};
+      --color-outline-5-hover: {{- settings.accent_outline_5 | append: 'CC' -}};
     {%- else -%}
       --color-outline-5: #53C787;
+      --color-outline-5-hover: #53C787CC;
     {%- endif -%}
 
 
@@ -323,10 +343,16 @@
 
     {%- if settings.corner_radius == 'square' -%}
       --border-radius: 0;
+      --border-radius-circle: 50%;
+      --border-radius-rounded: 0px;
     {%- elsif settings.corner_radius == 'rounded' -%}
       --border-radius: 4px;
+      --border-radius-circle: 16px;
+      --border-radius-rounded: 4px;
     {%- elsif settings.corner_radius == 'fully_round' -%}
       --border-radius: 50px;
+      --border-radius-circle: 50%;
+      --border-radius-rounded: 8px;
     {%- endif -%}
 
     {%- case settings.social_size -%}
