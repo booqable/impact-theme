@@ -106,25 +106,13 @@
   <div class="menu__login">
     <a href="" class="menu__login-button button button--outlined button--large">
       {%- render 'icon-user' -%}
-      {%- if login_placeholder != blank -%}
-        {{- login_placeholder -}}
-      {%- else -%}
-        Log in
-      {%- endif -%}
+      {{- login_placeholder | default: 'Log in' -}}
     </a>
     <a href="" class="menu__login-button button button--outlined button--large">
-      {%- if signup_placeholder != blank -%}
-        {{- signup_placeholder -}}
-      {%- else -%}
-        Create account
-      {%- endif -%}
+      {{- signup_placeholder | default: 'Create account' -}}
     </a>
     <a href="" class="menu__login-button button button--outlined button--large">
-      {%- if logout_placeholder != blank -%}
-        {{- logout_placeholder -}}
-      {%- else -%}
-        Log out
-      {%- endif -%}
+      {{- logout_placeholder | default: 'Log out' -}}
     </a>
   </div>
 {%- endcapture -%}
@@ -295,7 +283,7 @@
 
 {% comment %} Right side buttons component {% endcomment %}
 {%- capture header_links -%}
-  <div class="header__links">
+  <div class="header__links{% if show_search %} header__links--with-search{% endif %}{% if show_mini_cart %} header__links--with-cart{%- endif -%}">
     {%- if show_search -%}
       {{- header_search -}}
     {%- endif -%}
