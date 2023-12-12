@@ -252,7 +252,6 @@
         </div>
       </nav>
 
-      <div class="menu__overlay"></div>
     {%- endif -%}
   </div>
 {%- endcapture -%}
@@ -298,7 +297,7 @@
 {%- endcapture -%}
 
 <div
-  class="header__inner{% unless transparent_bg %} header__inner--background{% endunless %}{% if color_palette != blank %} palette-{{ color_palette }}{% endif %}"
+  class="header__inner{% unless transparent_bg %} header__inner-background{% endunless %}{% if color_palette != blank %} palette-{{ color_palette }}{% endif %}"
   style="{{- variables | escape -}}"
 >
   <div class="header__content{% if padding_top != blank or padding_top_mobile != blank %} header__content--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} header__content--padding-bottom{%- endif -%}">
@@ -332,12 +331,17 @@
   </div>
 </div>
 
-{% if sticky_header %}
-  <script>
-    const header = document.querySelector('.header');
-    header.classList.add('header--sticky')
-  </script>
-{% endif %}
+<script>
+  const header = document.querySelector('.header');
+
+  {% if transparent_bg %}
+    header.classList.add('header-transparent')
+  {% endif %}
+
+  {% if sticky_header %}
+    header.classList.add('header-sticky')
+  {% endif %}
+</script>
 
 {% schema %}
   {

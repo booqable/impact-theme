@@ -12,14 +12,12 @@ class Header {
     }
 
     this.classes = {
-      sticky: "header--sticky",
-      background: "header__inner--background"
+      sticky: "header-sticky"
     }
 
     this.modifier = {
-      scroll: "scrolled-down",
-      scrolled: "page-scrolled",
-      transparent: "header--transparent"
+      scrollDown: "scrolled-down",
+      scrolled: "page-scrolled"
     }
 
     this.cssVar = {
@@ -29,16 +27,11 @@ class Header {
       transform: '--header-transform'
     }
 
-    this.props = {
-      fixed: 'fixed',
-      absolute: "absolute"
-    }
-
     this.attr = {
       href: "href"
     }
 
-    this.minHeight = 180;
+    this.minHeight = 120;
     this.last = 0;
   }
 
@@ -57,35 +50,27 @@ class Header {
     this.barBlocks = this.header.querySelectorAll(this.selector.barBlock);
     this.inner = this.header.querySelector(this.selector.inner);
     this.isSticky = this.header.classList.contains(this.classes.sticky);
-    this.isColored = this.inner.classList.contains(this.classes.background);
   }
 
   events() {
     this.headerHeight();
-    this.headerFixed();
     this.setEmailPhone();
 
     window.addEventListener("scroll", this.scrollProps.bind(this));
     window.addEventListener("resize", this.headerHeight.bind(this));
   }
 
-  headerFixed() {
-    if (!this.isColored) {
-      this.header.classList.add(this.modifier.transparent)
-      this.inner.style.position = this.props.absolute
-    }
-
-    if (this.isSticky) this.header.style.position = this.props.fixed
-  }
-
   // getting height of header and set css variables
   headerHeight() {
-    let height = this.header.getBoundingClientRect().height,
+    let height = this.inner.children[0].getBoundingClientRect().height,
         barHeight = 0,
         viewHeight = 0;
 
     if (this.bar) {
       barHeight = this.bar.getBoundingClientRect().height;
+
+      height += barHeight;
+
       this.setCssVar(this.cssVar.barHeight, Math.floor(barHeight));
     }
 
@@ -108,23 +93,23 @@ class Header {
 
     if (!this.bar) return false;
 
-    let isScroll = this.body.classList.contains(this.modifier.scroll),
+    let isScroll = this.body.classList.contains(this.modifier.scrollDown),
         current = window.scrollY,
         height = this.bar.getBoundingClientRect().height;
 
     if (current <= this.minHeight) {
-      this.body.classList.remove(this.modifier.scroll);
+      this.body.classList.remove(this.modifier.scrollDown);
       this.setCssVar(this.cssVar.transform, 0);
 
       return;
     }
 
     if (current > this.last && !isScroll) { // down
-      this.body.classList.add(this.modifier.scroll);
+      this.body.classList.add(this.modifier.scrollDown);
       this.setCssVar(this.cssVar.transform, -height);
 
     } else if (current < this.last - 10 && isScroll) { // up
-      this.body.classList.remove(this.modifier.scroll);
+      this.body.classList.remove(this.modifier.scrollDown);
       this.setCssVar(this.cssVar.transform, 0);
     }
 

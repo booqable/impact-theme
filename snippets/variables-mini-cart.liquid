@@ -37,7 +37,10 @@
     {%- endif -%}
   }
 
-  .header__inner--background bq-minicart-button {
+  .page-scrolled .header-transparent bq-minicart-button,
+  .header__inner-background bq-minicart-button,
+  .header__inner:has(#search-opener:checked) bq-minicart-button,
+  .header__inner:has(#mobile-menu-opener:checked) bq-minicart-button  {
     {%- if color_palette == "one" -%}
       --minicart-button-color: var(--color-primary-1);
     {%- elsif color_palette == "two" -%}

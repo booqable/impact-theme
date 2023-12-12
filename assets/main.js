@@ -4,7 +4,6 @@ class Main {
 
     this.selector = {
       footer: "footer",
-      search: "#search",
       image: ".focal-image",
       focus: "[data-focus]"
     }
@@ -37,7 +36,6 @@ class Main {
       bodyHeight: '--body-height'
     }
 
-    this.time = 500;
     this.timeScroll = 300;
     this.focalImageTimeout;
   }
@@ -51,7 +49,6 @@ class Main {
 
   elements() {
     this.footer = document.querySelector(this.selector.footer);
-    this.search = document.querySelector(this.selector.search);
   }
 
   events() {

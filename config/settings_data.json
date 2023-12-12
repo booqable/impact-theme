@@ -7,7 +7,7 @@
         "block_order": [],
         "settings": {
           "bar_message": "Free shipping from €50",
-          "bar_text": "Call Us 24/7 <a href=\"+1 755 302 8549\">+1 755 302 8549</a>",
+          "bar_text": "Call Us 24/7 <a href=\"+1 555 302 8549\">+1 555 302 8549</a>",
           "color_palette": "three",
           "icon": "phone",
           "padding_top": "medium",
@@ -24,9 +24,9 @@
         "settings": {
           "color_palette": "one",
           "custom_title": "{{ shop.name }}",
-          "follow_us": "Follow us",
-          "login_placeholder": "Log in",
-          "logout_placeholder": "Log out",
+          "follow_us": "Follow us on",
+          "login_placeholder": "",
+          "logout_placeholder": "",
           "logo": "booqable://assets/image-store-logo.png",
           "menu": "main-menu",
           "menu_opener_label": "Menu",
@@ -36,12 +36,13 @@
           "padding_bottom": "medium",
           "padding_bottom_mobile": "medium",
           "search_placeholder": "Where are you looking for?",
-          "signup_placeholder": "Create account",
+          "signup_placeholder": "",
           "show_datepicker": false,
           "show_payments": false,
           "show_payments_mobile": true,
           "show_search": true,
-          "sticky_header": true
+          "sticky_header": true,
+          "transparent_bg": true
         },
         "disabled": null
       },
@@ -120,7 +121,7 @@
           "block_order": [],
           "settings": {
             "bar_message": "Free shipping from €50",
-            "bar_text": "Call Us 24/7 <a href=\"+1 755 302 8549\">+1 755 302 8549</a>",
+            "bar_text": "Call Us 24/7 <a href=\"+1 555 302 8549\">+1 555 302 8549</a>",
             "color_palette": "three",
             "icon": "phone",
             "padding_top": "medium",
@@ -137,20 +138,25 @@
           "settings": {
             "color_palette": "one",
             "custom_title": "{{ shop.name }}",
-            "login_placeholder": "Log in",
+            "follow_us": "Follow us on",
+            "login_placeholder": "",
+            "logout_placeholder": "",
             "logo": "booqable://assets/image-store-logo.png",
             "menu": "main-menu",
             "menu_opener_label": "Menu",
             "menu_opener_mobile": "right",
             "padding_top": "medium",
             "padding_top_mobile": "medium",
-            "padding_bottom": "small",
+            "padding_bottom": "medium",
             "padding_bottom_mobile": "medium",
-            "search_placeholder": "Search",
-            "signup_placeholder": "Create account",
-            "show_picker": true,
+            "search_placeholder": "Where are you looking for?",
+            "signup_placeholder": "",
+            "show_datepicker": false,
+            "show_payments": false,
+            "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true
+            "sticky_header": true,
+            "transparent_bg": true
           },
           "disabled": null
         },

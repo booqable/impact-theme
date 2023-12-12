@@ -23,115 +23,57 @@
     --date-picker-border-radius: var(--border-radius, 0);
     --date-picker-cleanstate-padding: 11px 22px;
     --date-picker-section-padding: 12px;
-    --date-picker-title-size: 16px;
+    --date-picker-text-line-height: var(--line-height-lg, 1.5);
     --date-picker-text-size: 16px;
-    --date-picker-title-line-height: 1.5;
-    --date-picker-text-line-height: 1.5;
+    --date-picker-title-line-height: var(--line-height-lg, 1.5);
+    --date-picker-title-size: 16px;
+    --date-picker-wrapper-padding: 10px;
 
     {% if color_palette == "one" %}
-      {% if settings.background_1 != blank %}
-        --date-picker-background-color: var(--background-primary-1);
-      {% else %}
-        --date-picker-background-color: #FFFFFF;
-      {% endif %}
-
-      {% if settings.primary_color_1 != blank %}
-        --date-picker-text-color: var(--color-primary-1);
-        --date-picker-placeholder-color: var(--color-placeholder-1);
-        --date-picker-section-border: 1px solid var(--color-border-1);
-      {% else %}
-        --date-picker-text-color: #0B1A26;
-        --date-picker-placeholder-color: #0B1A2659;
-        --date-picker-section-border: 1px solid #0B1A2626;
-      {% endif %}
-
-      {% if settings.accent_background_1 != blank %}
-        --date-picker-cleanstate-background-color: var(--background-accent-1);
-        --date-picker-box-shadow: 0 0 0 1px var(--background-accent-1);
-      {% else %}
-        --date-picker-cleanstate-background-color: #F4B841;
-        --date-picker-box-shadow: 0 0 0 1px #F4B841;
-      {% endif %}
-
-      {% if settings.accent_color_1 != blank %}
-        --date-picker-icon-color: var(--color-accent-1);
-        --date-picker-cleanstate-text-color: var(--color-accent-1);
-        --color-accent-foreground: var(--color-accent-1);
-      {% else %}
-        --date-picker-icon-color: #0B1A26;
-        --date-picker-cleanstate-text-color: #0B1A26;
-        --color-accent-foreground: #0B1A26;
-      {% endif %}
-
+      --date-picker-background-color: var(--background-primary-1);
+      --date-picker-box-shadow: 0 0 0 1px var(--background-accent-1);
+      --date-picker-cleanstate-background-color: var(--background-accent-1);
+      --date-picker-cleanstate-text-color: var(--color-accent-1);
+      --date-picker-icon-color: var(--color-accent-1);
+      --date-picker-placeholder-color: var(--color-placeholder-1);
+      --date-picker-section-border: 1px solid var(--color-border-1);
+      --date-picker-text-color: var(--color-primary-1);
     {% elsif color_palette == "two" %}
-      {% if settings.background_2 != blank %}
-        --date-picker-background-color: var(--background-primary-2);
-      {% else %}
-        --date-picker-background-color: #0B1A26;
-      {% endif %}
-
-      {% if settings.primary_color_2 != blank %}
-        --date-picker-text-color: var(--color-primary-2);
-        --date-picker-placeholder-color: var(--color-placeholder-2);
-        --date-picker-section-border: 1px solid var(--color-border-2);
-      {% else %}
-        --date-picker-text-color: #FFFFFF;
-        --date-picker-placeholder-color: #FFFFFF59;
-        --date-picker-section-border: 1px solid #FFFFFF47;
-      {% endif %}
-
-      {% if settings.accent_background_2 != blank %}
-        --date-picker-cleanstate-background-color: var(--background-accent-2);
-        --date-picker-box-shadow: 0 0 0 1px var(--background-accent-2);
-      {% else %}
-        --date-picker-cleanstate-background-color: #F4B841;
-        --date-picker-box-shadow: 0 0 0 1px #F4B841;
-      {% endif %}
-
-      {% if settings.accent_color_2 != blank %}
-        --date-picker-icon-color: var(--color-accent-2);
-        --date-picker-cleanstate-text-color: var(--color-accent-2);
-        --color-accent-foreground: var(--color-accent-2);
-      {% else %}
-        --date-picker-icon-color: #0B1A26;
-        --date-picker-cleanstate-text-color: #0B1A26;
-        --color-accent-foreground: #0B1A26;
-      {% endif %}
-
+      --date-picker-background-color: var(--background-primary-2);
+      --date-picker-box-shadow: 0 0 0 1px var(--background-accent-2);
+      --date-picker-cleanstate-background-color: var(--background-accent-2);
+      --date-picker-cleanstate-text-color: var(--color-accent-2);
+      --date-picker-icon-color: var(--color-accent-2);
+      --date-picker-placeholder-color: var(--color-placeholder-2);
+      --date-picker-section-border: 1px solid var(--color-border-2);
+      --date-picker-text-color: var(--color-primary-2);
     {% elsif color_palette == "three" %}
-      {% if settings.background_3 != blank %}
-        --date-picker-background-color: var(--background-primary-3);
-      {% else %}
-        --date-picker-background-color: #F4B841;
-      {% endif %}
-
-      {% if settings.primary_color_3 != blank %}
-        --date-picker-text-color: var(--color-primary-3);
-        --date-picker-placeholder-color: var(--color-placeholder-3);
-        --date-picker-section-border: 1px solid var(--color-border-3);
-      {% else %}
-        --date-picker-text-color: #0B1A26;
-        --date-picker-placeholder-color: #0B1A2659;
-        --date-picker-section-border: 1px solid #0B1A2626;
-      {% endif %}
-
-      {% if settings.accent_background_3 != blank %}
-        --date-picker-cleanstate-background-color: var(--background-accent-3);
-        --date-picker-box-shadow: 0 0 0 1px var(--background-accent-3);
-      {% else %}
-        --date-picker-cleanstate-background-color: #0B1A26;
-        --date-picker-box-shadow: 0 0 0 1px #0B1A26;
-      {% endif %}
-
-      {% if settings.accent_color_3 != blank %}
-        --date-picker-icon-color: var(--color-accent-3);
-        --date-picker-cleanstate-text-color: var(--color-accent-3);
-        --color-accent-foreground: var(--color-accent-3);
-      {% else %}
-        --date-picker-icon-color: #FFFFFF;
-        --date-picker-cleanstate-text-color: #FFFFFF;
-        --color-accent-foreground: #FFFFFF;
-      {% endif %}
+      --date-picker-background-color: var(--background-primary-3);
+      --date-picker-box-shadow: 0 0 0 1px var(--background-accent-3);
+      --date-picker-cleanstate-background-color: var(--background-accent-3);
+      --date-picker-cleanstate-text-color: var(--color-accent-3);
+      --date-picker-icon-color: var(--color-accent-3);
+      --date-picker-placeholder-color: var(--color-placeholder-3);
+      --date-picker-section-border: 1px solid var(--color-border-3);
+      --date-picker-text-color: var(--color-primary-3);
+    {% elsif color_palette == "four" %}
+      --date-picker-background-color: var(--background-primary-4);
+      --date-picker-box-shadow: 0 0 0 1px var(--background-accent-4);
+      --date-picker-cleanstate-background-color: var(--background-accent-4);
+      --date-picker-cleanstate-text-color: var(--color-accent-4);
+      --date-picker-icon-color: var(--color-accent-4);
+      --date-picker-placeholder-color: var(--color-placeholder-4);
+      --date-picker-section-border: 1px solid var(--color-border-4);
+      --date-picker-text-color: var(--color-primary-4);
+    {% elsif color_palette == "five" %}
+      --date-picker-background-color: var(--background-primary-5);
+      --date-picker-box-shadow: 0 0 0 1px var(--background-accent-5);
+      --date-picker-cleanstate-background-color: var(--background-accent-5);
+      --date-picker-cleanstate-text-color: var(--color-accent-5);
+      --date-picker-icon-color: var(--color-accent-5);
+      --date-picker-placeholder-color: var(--color-placeholder-5);
+      --date-picker-section-border: 1px solid var(--color-border-5);
+      --date-picker-text-color: var(--color-primary-5);
     {%- endif -%}
   }
 {%- endstyle -%}
