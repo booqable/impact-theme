@@ -17,16 +17,14 @@
 
     {% include 'page-metadata' %}
 
-    {%- if template == "index" -%}
-      <script>
-        // Loading the IFrame Player API code asynchronously.
-        const tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
+    <script>
+      // Loading the IFrame Player API code asynchronously.
+      const tag = document.createElement('script');
 
-        const firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-      </script>
-    {%- endif -%}
+      tag.src = 'https://www.youtube.cim/iframe_api';
+
+      document.body.appendChild(tag);
+    </script>
   </head>
   <body>
 
@@ -48,6 +46,7 @@
     <script src="{{ "mega-menu.js" | asset_url }}" defer></script>
     <script src="{{ "carousel.js" | asset_url }}" defer></script>
     <script src="{{ "images.js" | asset_url }}" defer></script>
+    <script src="{{ "search.js" | asset_url }}" defer></script>
 
     {%- if settings.accent_background != blank -%}
       {%- assign background_accent = settings.accent_background -%}

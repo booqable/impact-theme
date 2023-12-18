@@ -6,7 +6,7 @@
   --safe-area-left: env(safe-area-inset-left);
 
   /* Sizes */
-  --max-width: 1312px;
+  --max-width: 1440px;
   --max-width-narrow: 770px;
   --horizontal-padding: 64px;
   --horizontal-padding-mobile: 16px;
@@ -33,6 +33,7 @@
   --color-white-90: #FFFFFFE6;
 
   /* Border radius */
+  --border-radius-circle: 50%;
   --border-radius-none: 0;
 
   /* Font weights */
@@ -139,17 +140,29 @@ body .stretch > section:first-child{
   flex-grow: 1;
 }
 
-.header--sticky ~ #main {
+.header-sticky:not(.header-transparent) ~ #main {
   padding-top: calc(var(--header-height) - 1px);
 }
 
-.preview-bar__container ~ .header--sticky ~ #main {
-  padding-top: calc(var(--header-height) - 3px);
+.header-sticky.header-transparent ~ #main {
+  padding-top: calc(var(--top-bar-height) - 1px);
 }
 
-.header--not-sticky.header--menu-opened ~ #main {
+.preview-bar__container ~ .header-sticky:not(.header-transparent) ~ #main {
+  padding-top: calc(var(--header-height) - 2px);
+}
+
+.preview-bar__container ~ .header-sticky.header-transparent ~ #main {
+  padding-top: calc(var(--top-bar-height) + var(--preview-height) - 2px);
+}
+
+.header-menu-opened ~ #main {
   margin-top: var(--preview-height);
-  padding-top: calc(var(--header-height) - 1px);
+  padding-top: var(--header-height);
+}
+
+.header-menu-opened.header-transparent ~ #main {
+  padding-top: var(--top-bar-height);
 }
 
 .preview-bar__container {

@@ -5,12 +5,14 @@ class MegaMenu {
     this.selector = {
       header: ".header",
       menuOpener: "#mobile-menu-opener",
+      searchOpener: ".header__search-opener",
+      cartOpener: "bq-minicart-button",
       checkbox: "input[type=checkbox]"
     }
 
     this.classes = {
-      sticky: "header--sticky",
-      opened: "header--menu-opened"
+      opened: "header-menu-opened",
+      sticky: "header-sticky"
     }
 
     this.modifier = {
@@ -43,12 +45,13 @@ class MegaMenu {
   }
 
   events() {
-    document.addEventListener("click", this.menuOverflow.bind(this));
+    document.addEventListener("click", this.openMenu.bind(this));
+    document.addEventListener("click", this.closeMenuOutside.bind(this));
   }
 
   // adding overflow:hidden when menu opened while header is not sticky
-  menuOverflow(e) {
-    const target = e?.target.previousElementSibling;
+  openMenu(event) {
+    const target = event.target.previousElementSibling;
 
     if (!target || target !== this.menuOpener) return false;
 
@@ -75,7 +78,11 @@ class MegaMenu {
   }
 
   removeOverflow() {
-    this.doc.removeAttribute(this.attr.class);
+    const classes = this.doc.classList;
+
+    classes.length > 1
+      ? this.doc.classList.remove(this.modifier.overflow)
+      : this.doc.removeAttribute(this.attr.class)
 
     if (this.isSticky) return false;
 
@@ -83,16 +90,30 @@ class MegaMenu {
     this.header.removeAttribute(this.attr.style);
   }
 
-  // closing all dropdowns when mobile menu closed
+  // closing all dropdowns when menu closed
   closeMenuDrops() {
     if (!this.checkboxes?.length) return false;
 
     this.checkboxes.forEach(checkbox => checkbox.checked = false);
   }
+
+  // closing menu on click search and cart icons
+  closeMenuOutside(event) {
+    const target = event.target,
+          menuOpened = this.menuOpener.checked,
+          cartOpener = this.header.querySelector(this.selector.cartOpener),
+          searchOpener = this.header.parentElement.querySelector(this.selector.searchOpener);
+
+    if (target === searchOpener && menuOpened || target === cartOpener && menuOpened) {
+      this.menuOpener.checked = false
+      this.removeOverflow()
+      this.closeMenuDrops()
+    }
+  }
 }
 
-const menu = new MegaMenu(document.querySelector('.menu'));
+const initMenu = new MegaMenu(document.querySelector('.menu'));
 
 document.addEventListener("readystatechange", (e) => {
-  if (e.target.readyState === "complete") menu.init();
+  if (e.target.readyState === "complete") initMenu.init();
 })
