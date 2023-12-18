@@ -1,5 +1,3 @@
-
-
 {%- assign blocks = section.blocks -%}
 
 {%- if blocks.size > 0 -%}
@@ -14,8 +12,6 @@
   {%- assign timer                 = section.settings.timer -%}
   {%- assign pause                 = section.settings.pause -%}
   {%- assign effect                = section.settings.effect -%}
-  {%- assign datepicker_title      = section.settings.datepicker_title -%}
-  {%- assign show_datepicker       = section.settings.show_datepicker -%}
 
   {%- assign carousel = false -%}
 
@@ -23,22 +19,6 @@
     {{ "carousel.css" | asset_url | stylesheet_tag }}
 
     {%- assign carousel = true -%}
-  {%- endif -%}
-
-  {%- if show_datepicker -%}
-    {%- if color_palette == "one" -%}
-      {%- if settings.accent_background != blank -%}
-        {%- assign background_accent = settings.accent_background -%}
-      {%- else -%}
-        {%- assign background_accent = branding_color -%}
-      {%- endif -%}
-    {%- elsif color_palette == "two" -%}
-      {%- if settings.accent_background_2 != blank -%}
-        {%- assign background_accent = settings.accent_background_2 -%}
-      {%- else -%}
-        {%- assign background_accent = branding_color -%}
-      {%- endif -%}
-    {%- endif -%}
   {%- endif -%}
 
   {% comment %} CSS variables start {% endcomment %}
@@ -105,9 +85,9 @@
   {%- endcapture -%}
   {% comment %} CSS variables end {% endcomment %}
 
-  <div class="images__wrapper{% if height == "full" or height == "large" %} images__wrapper-full-height{% endif %}{% if show_datepicker %} images__wrapper-with-date-picker{% endif %}{% if color_palette != blank %} palette-{{ color_palette }}{%- endif -%}" style="{{- variables | escape -}}">
+  <div class="images__wrapper{% if height == "full" or height == "large" %} images__wrapper-full-height{% endif %}{% if color_palette != blank %} palette-{{ color_palette }}{%- endif -%}" style="{{- variables | escape -}}">
     {%- if carousel -%}
-      <div class="carousel carousel__edges carousel__{{- effect -}}-effect{% if pause %} carousel__pause{% endif %}{% if show_datepicker %} carousel-with-date-picker{%- endif -%}" aria-label="Gallery">
+      <div class="carousel carousel__edges carousel__{{- effect -}}-effect{% if pause %} carousel__pause{%- endif -%}" aria-label="Gallery">
         <input class="carousel__timer" type="hidden" name="hidden" value="{{- timer -}}">
         <div class="carousel__wrapper">
     {%- endif -%}
@@ -422,27 +402,6 @@
         </div>
       </div>
     {%- endif -%}
-
-    {%- if show_datepicker -%}
-      <div class="images__date-picker date-picker">
-        <div class="images__date-picker-container container">
-          {%- if datepicker_title != blank -%}
-            <h2 class="images__date-picker-title">
-              <span class="images__date-picker-icon">
-                {%- render 'icon-arrow-right-full' -%}
-              </span>
-              {{- datepicker_title -}}
-            </h2>
-          {%- endif -%}
-
-          <div class="images__date-picker-component date-picker__component">
-            {%- include 'date-picker' -%}
-          </div>
-        </div>
-
-        <div class="images__date-picker-overlay"></div>
-      </div>
-    {%- endif -%}
   </div>
 {%- endif -%}
 
@@ -673,18 +632,6 @@
       {
         "type": "header",
         "content": "Date picker settings"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_datepicker",
-        "default": true,
-        "label": "Show date picker"
-      },
-      {
-        "type": "text",
-        "id": "datepicker_title",
-        "label": "Title",
-        "default": "Check availability:"
       },
       {
         "type": "header",
