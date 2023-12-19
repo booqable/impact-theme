@@ -199,7 +199,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 var(--horizontal-padding);
+  padding: 0 var(--horizontal-padding-mobile);
   margin: 0;
 }
 
@@ -215,6 +215,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.carousel__edges .carousel__btn svg {
+  padding-left: 3px;
 }
 
 .carousel__edges .carousel__btn.prev {
@@ -258,7 +262,7 @@
   justify-content: flex-end;
   align-items: center;
   font-size: 18px;
-  padding: 0 var(--horizontal-padding);
+  padding: 0 var(--horizontal-padding-mobile);
 }
 
 .carousel__edges .carousel__divider {
@@ -311,98 +315,106 @@
   fill: var(--color-primary-2);
 }
 
-.palette-one .carousel__edges .show-overlay-light ~ .carousel__navigation .carousel__btn,
-.palette-one .carousel__edges .carousel__btn {
-  background: var(--background-overlay-08);
+.palette-three .carousel__dot:after {
+  background: var(--color-primary-3-30);
+}
+
+.palette-three .carousel__dot.active:after {
+  background: var(--color-primary-3);
+}
+
+.palette-three .carousel__btn {
+  border-color: var(--color-border-3);
+}
+
+.palette-three .carousel__btn path {
+  fill: var(--color-primary-3);
+}
+
+.palette-four .carousel__dot:after {
+  background: var(--color-primary-4-30);
+}
+
+.palette-four .carousel__dot.active:after {
+  background: var(--color-primary-4);
+}
+
+.palette-four .carousel__btn {
+  border-color: var(--color-border-4);
+}
+
+.palette-four .carousel__btn path {
+  fill: var(--color-primary-4);
+}
+
+.palette-five .carousel__dot:after {
+  background: var(--color-primary-5-30);
+}
+
+.palette-five .carousel__dot.active:after {
+  background: var(--color-primary-5);
+}
+
+.palette-five .carousel__btn {
+  border-color: var(--color-border-5);
+}
+
+.palette-five .carousel__btn path {
+  fill: var(--color-primary-5);
+}
+
+.palette-one .carousel__edges .carousel__btn,
+.palette-two .carousel__edges .carousel__btn,
+.palette-three .carousel__edges .carousel__btn,
+.palette-four .carousel__edges .carousel__btn,
+.palette-five .carousel__edges .carousel__btn {
+  background: var(--overlay-color-08);
   border-color: transparent;
 }
 
-.palette-one .carousel__edges .show-overlay-dark ~ .carousel__navigation .carousel__btn {
-  background: var(--color-overlay-08);
-  border-color: transparent;
+.palette-one .carousel__edges .carousel__btn:hover,
+.palette-two .carousel__edges .carousel__btn:hover,
+.palette-three .carousel__edges .carousel__btn:hover,
+.palette-four .carousel__edges .carousel__btn:hover,
+.palette-five .carousel__edges .carousel__btn:hover {
+  border-color: var(--overlay-color);
 }
 
-.palette-one .carousel__edges .show-overlay-light ~ .carousel__navigation .carousel__btn path,
-.palette-one .carousel__edges .carousel__btn path {
-  fill: var(--background-overlay);
+.palette-one .carousel__edges .carousel__btn path,
+.palette-two .carousel__edges .carousel__btn path,
+.palette-three .carousel__edges .carousel__btn path,
+.palette-four .carousel__edges .carousel__btn path,
+.palette-five .carousel__edges .carousel__btn path {
+  fill: var(--overlay-color);
 }
 
-.palette-one .carousel__edges .show-overlay-dark ~ .carousel__navigation .carousel__btn path {
-  fill: var(--color-overlay);
+.palette-one .carousel__edges .carousel__dot:after,
+.palette-two .carousel__edges .carousel__dot:after,
+.palette-three .carousel__edges .carousel__dot:after,
+.palette-four .carousel__edges .carousel__dot:after,
+.palette-five .carousel__edges .carousel__dot:after {
+  background: var(--overlay-color-45);
 }
 
-.palette-one .carousel__edges .show-overlay-light ~ .carousel__pagination .carousel__dot:after,
-.palette-one .carousel__edges .carousel__dot:after {
-  background: var(--background-overlay-45);
+.palette-one .carousel__edges .carousel__dot.active:after,
+.palette-one .carousel__edges .carousel__dot:hover:after,
+.palette-two .carousel__edges .carousel__dot.active:after,
+.palette-two .carousel__edges .carousel__dot:hover:after,
+.palette-three .carousel__edges .carousel__dot.active:after,
+.palette-three .carousel__edges .carousel__dot:hover:after,
+.palette-four .carousel__edges .carousel__dot.active:after,
+.palette-four .carousel__edges .carousel__dot:hover:after,
+.palette-five .carousel__edges .carousel__dot.active:after,
+.palette-five .carousel__edges .carousel__dot:hover:after {
+  background: var(--overlay-color);
 }
 
-.palette-one .carousel__edges .show-overlay-dark ~ .carousel__pagination .carousel__dot:after {
-  background: var(--color-overlay-45);
-}
-
-.palette-one .carousel__edges .show-overlay-light ~ .carousel__pagination .carousel__dot.active:after,
-.palette-one .carousel__edges .carousel__dot.active:after {
-  background: var(--background-overlay);
-}
-
-.palette-one .carousel__edges .show-overlay-dark ~ .carousel__pagination .carousel__dot.active:after {
-  background: var(--color-overlay);
-}
-
-.palette-one .carousel__edges .show-overlay-light ~ .carousel__counter,
-.palette-one .carousel__edges .carousel__counter {
-  color: var(--background-overlay);
-}
-
-.palette-one .carousel__edges .show-overlay-dark ~ .carousel__counter {
-  color: var(--color-overlay);
-}
-
-.palette-two .carousel__edges .show-overlay-light ~ .carousel__navigation .carousel__btn,
-.palette-two .carousel__edges .carousel__btn {
-  background: var(--background-overlay-2-08);
-  border-color: transparent;
-}
-
-.palette-two .carousel__edges .show-overlay-dark ~ .carousel__navigation .carousel__btn {
-  background: var(--color-overlay-2-08);
-  border-color: transparent;
-}
-
-.palette-two .carousel__edges .show-overlay-light ~ .carousel__navigation .carousel__btn path,
-.palette-two .carousel__edges .carousel__btn path {
-  fill: var(--background-overlay-2);
-}
-
-.palette-two .carousel__edges .show-overlay-dark ~ .carousel__navigation .carousel__btn path {
-  fill: var(--color-overlay-2);
-}
-
-.palette-two .carousel__edges .show-overlay-light ~ .carousel__pagination .carousel__dot:after,
-.palette-two .carousel__edges .carousel__dot:after {
-  background: var(--background-overlay-2-45);
-}
-
-.palette-two .carousel__edges .show-overlay-dark ~ .carousel__pagination .carousel__dot:after {
-  background: var(--color-overlay-2-45);
-}
-
-.palette-two .carousel__edges .show-overlay-light ~ .carousel__pagination .carousel__dot.active:after,
-.palette-two .carousel__edges .carousel__dot.active:after {
-  background: var(--background-overlay-2);
-}
-
-.palette-two .carousel__edges .show-overlay-dark ~ .carousel__pagination .carousel__dot.active:after {
-  background: var(--color-overlay-2);
-}
-
-.palette-two .carousel__edges .show-overlay-light ~ .carousel__counter,
-.palette-two .carousel__edges .carousel__counter {
-  color: var(--background-overlay-2);
-}
-
-.palette-two .carousel__edges .show-overlay-dark ~ .carousel__counter {
-  color: var(--color-overlay-2);
+.palette-one .carousel__edges .carousel__counter,
+.palette-two .carousel__edges .carousel__counter,
+.palette-three .carousel__edges .carousel__counter,
+.palette-four .carousel__edges .carousel__counter,
+.palette-five .carousel__edges .carousel__counter {
+  color: var(--overlay-color);
 }
 
 @media (min-width: 992px) {
@@ -491,6 +503,13 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .carousel__edges .carousel__navigation,
+  .carousel__edges .carousel__counter {
+    padding: 0 var(--horizontal-padding);
+  }
+}
+
 @media (min-width: 1273px) {
   .carousel__wrapper {
     margin: 0;
@@ -543,37 +562,37 @@
 
   .palette-one .carousel__edges .show-overlay-light ~ .carousel__navigation .carousel__btn:hover,
   .palette-one .carousel__edges .carousel__btn:hover {
-    border-color: var(--background-overlay);
+    border-color: var(--overlay-background);
   }
 
   .palette-one .carousel__edges .show-overlay-dark ~ .carousel__navigation .carousel__btn:hover {
-    border-color: var(--color-overlay);
+    border-color: var(--overlay-color);
   }
 
   .palette-one .carousel__edges .show-overlay-light ~ .carousel__pagination .carousel__dot:hover:after,
   .palette-one .carousel__edges .carousel__dot:hover:after {
-    background: var(--background-overlay);
+    background: var(--overlay-background);
   }
 
   .palette-one .carousel__edges .show-overlay-dark ~ .carousel__pagination .carousel__dot:hover:after {
-    background: var(--color-overlay);
+    background: var(--overlay-color);
   }
 
   .palette-two .carousel__edges .show-overlay-light ~ .carousel__navigation .carousel__btn:hover,
   .palette-two .carousel__edges .carousel__btn:hover {
-    border-color: var(--background-overlay-2);
+    border-color: var(--overlay-background-2);
   }
 
   .palette-two .carousel__edges .show-overlay-dark ~ .carousel__navigation .carousel__btn:hover {
-    border-color: var(--color-overlay-2);
+    border-color: var(--overlay-color-2);
   }
 
   .palette-two .carousel__edges .show-overlay-light ~ .carousel__pagination .carousel__dot:hover:after,
   .palette-two .carousel__edges .carousel__dot:hover:after {
-    background: var(--background-overlay-2);
+    background: var(--overlay-background-2);
   }
 
   .palette-two .carousel__edges .show-overlay-dark ~ .carousel__pagination .carousel__dot:hover:after {
-    background: var(--color-overlay-2);
+    background: var(--overlay-color-2);
   }
 }

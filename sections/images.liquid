@@ -19,6 +19,13 @@
     {{ "carousel.css" | asset_url | stylesheet_tag }}
 
     {%- assign carousel = true -%}
+
+  {%- else -%}
+    {%- assign overlay_color = nil -%}
+
+    {%- for block in blocks -%}
+      {%- assign overlay_color = block.settings.overlay_color -%}
+    {%- endfor -%}
   {%- endif -%}
 
   {% comment %} CSS variables start {% endcomment %}
@@ -26,15 +33,15 @@
     {%- if carousel -%}
       --slide-width: 100%;
       --slide-width-mobile: 100%;
+    {%- else -%}
+      --overlay-color: {{- overlay_color -}};
     {%- endif -%}
 
     {%- case height -%}
       {%- when 'small' -%}
-        --height: 640px;
-      {%- when 'medium' -%}
         --height: 790px;
-      {%- when 'large' -%}
-        --height: 940px;
+      {%- when 'medium' -%}
+        --height: 913px;
       {%- when 'full' -%}
         --height: 100vh;
     {%- endcase -%}
@@ -85,10 +92,24 @@
   {%- endcapture -%}
   {% comment %} CSS variables end {% endcomment %}
 
-  <div class="images__wrapper{% if height == "full" or height == "large" %} images__wrapper-full-height{% endif %}{% if color_palette != blank %} palette-{{ color_palette }}{%- endif -%}" style="{{- variables | escape -}}">
+  {%- assign default_color = nil -%}
+
+  {%- if color_palette == "one" -%}
+    {%- assign default_color = settings.primary_color_1 | default : #1A3333 -%}
+  {%- elsif color_palette == "two" -%}
+    {%- assign default_color = settings.primary_color_2 | default : #1A3333 -%}
+  {%- elsif color_palette == "three" -%}
+    {%- assign default_color = settings.primary_color_3 | default : #F6F4F2 -%}
+  {%- elsif color_palette == "four" -%}
+    {%- assign default_color = settings.primary_color_4 | default : #F6F4F2 -%}
+  {%- elsif color_palette == "five" -%}
+    {%- assign default_color = settings.primary_color_5 | default : #1A3333 -%}
+  {%- endif -%}
+
+  <div class="images__wrapper{% if height == "full" or height == "medium" %} images__wrapper-full-height{% endif %}{% if color_palette != blank %} palette-{{ color_palette }}{%- endif -%}" style="{{- variables | escape -}}">
     {%- if carousel -%}
-      <div class="carousel carousel__edges carousel__{{- effect -}}-effect{% if pause %} carousel__pause{%- endif -%}" aria-label="Gallery">
-        <input class="carousel__timer" type="hidden" name="hidden" value="{{- timer -}}">
+      <div class="carousel carousel__edges carousel__{{- effect -}}-effect{% if pause %} carousel__pause{%- endif -%}" aria-role="Gallery" data-dafault-color="{{- default_color -}}">
+        <input class="carousel__timer" type="hidden" name="hidden" value="{{- timer -}}" aria-hidden="true">
         <div class="carousel__wrapper">
     {%- endif -%}
 
@@ -107,11 +128,13 @@
             {%- assign image                = block.settings.image -%}
             {%- assign image_mobile         = block.settings.image_mobile -%}
             {%- assign overlay_opacity      = block.settings.overlay_opacity -%}
-            {%- assign color_overlay        = block.settings.color_overlay -%}
+            {%- assign overlay_background   = block.settings.overlay_background -%}
+            {%- assign overlay_color        = block.settings.overlay_color -%}
+            {%- assign show_overlay         = block.settings.show_overlay -%}
 
             {% comment %} CSS variables start {% endcomment %}
             {%- capture text_variables -%}
-              {%- case text_position -%}
+              {% case text_position %}
                 {%- when 'top-left' -%}
                   --text-justify-content: flex-start;
                   --text-align-items: flex-start;
@@ -119,8 +142,6 @@
                   --margin-bottom: 70px;
                   --margin-left: 0;
                   --margin-right: auto;
-                  --padding-left: 0;
-                  --padding-right: 37px;
                 {%- when 'top-center' -%}
                   --text-justify-content: center;
                   --text-align-items: flex-start;
@@ -128,8 +149,6 @@
                   --margin-bottom: 70px;
                   --margin-left: auto;
                   --margin-right: auto;
-                  --padding-left: 0;
-                  --padding-right: 0;
                 {%- when 'top-right' -%}
                   --text-justify-content: flex-end;
                   --text-align-items: flex-start;
@@ -137,8 +156,6 @@
                   --margin-bottom: 70px;
                   --margin-left: auto;
                   --margin-right: 0;
-                  --padding-left: 37px;
-                  --padding-right: 0;
                 {%- when 'middle-left' -%}
                   --text-justify-content: flex-start;
                   --text-align-items: center;
@@ -146,8 +163,6 @@
                   --margin-bottom: 70px;
                   --margin-left: 0;
                   --margin-right: auto;
-                  --padding-left: 0;
-                  --padding-right: 37px;
                 {%- when 'center' -%}
                   --text-justify-content: center;
                   --text-align-items: center;
@@ -155,8 +170,6 @@
                   --margin-bottom: 70px;
                   --margin-left: auto;
                   --margin-right: auto;
-                  --padding-left: 0;
-                  --padding-right: 0;
                 {%- when 'middle-right' -%}
                   --text-justify-content: flex-end;
                   --text-align-items: center;
@@ -164,8 +177,6 @@
                   --margin-bottom: 70px;
                   --margin-left: auto;
                   --margin-right: 0;
-                  --padding-left: 37px;
-                  --padding-right: 0;
                 {%- when 'bottom-left' -%}
                   --text-justify-content: flex-start;
                   --text-align-items: flex-end;
@@ -173,8 +184,6 @@
                   --margin-bottom: 70px;
                   --margin-left: 0;
                   --margin-right: auto;
-                  --padding-left: 0;
-                  --padding-right: 37px;
                 {%- when 'bottom-center' -%}
                   --text-justify-content: center;
                   --text-align-items: flex-end;
@@ -182,8 +191,6 @@
                   --margin-bottom: 70px;
                   --margin-left: auto;
                   --margin-right: auto;
-                  --padding-left: 0;
-                  --padding-right: 0;
                 {%- when 'bottom-right' -%}
                   --text-justify-content: flex-end;
                   --text-align-items: flex-end;
@@ -191,11 +198,9 @@
                   --margin-bottom: 70px;
                   --margin-left: auto;
                   --margin-right: 0;
-                  --padding-left: 37px;
-                  --padding-right: 0;
-              {%- endcase -%}
+              {% endcase %}
 
-              {%- case text_position_mobile -%}
+              {% case text_position_mobile %}
                 {%- when 'top-left' -%}
                   --text-justify-content-mobile: flex-start;
                   --text-align-items-mobile: flex-start;
@@ -259,46 +264,98 @@
                   --margin-bottom-mobile: 60px;
                   --margin-left-mobile: auto;
                   --margin-right-mobile: 0;
-              {%- endcase -%}
-            {%- endcapture -%}
+              {% endcase %}
 
-            {%- capture image_variables -%}
-              {%- if overlay_opacity != blank -%}
-                --opacity-overlay: {{ overlay_opacity | append: "%"}};
+              {% if show_overlay %}
+                --overlay-color: {{- overlay_color -}};
               {%- endif -%}
             {%- endcapture -%}
+
+            {%- if show_overlay -%}
+              {%- capture image_variables -%}
+                --overlay-opacity: {{ overlay_opacity | append: "%"}};
+                --overlay-background: {{- overlay_background -}};
+                --overlay-background-00: {{- overlay_background | append: "00" -}};
+
+                {% case text_position %}
+                  {%- when 'top-left' -%}
+                    --direction-overlay: 127deg;
+                  {%- when 'top-center' -%}
+                    --direction-overlay: 127deg;
+                  {%- when 'top-right' -%}
+                    --direction-overlay: 217deg;
+                  {%- when 'middle-left' -%}
+                    --direction-overlay: 127deg;
+                  {%- when 'center' -%}
+                    --direction-overlay: 127deg;
+                  {%- when 'middle-right' -%}
+                    --direction-overlay: 217deg;
+                  {%- when 'bottom-left' -%}
+                    --direction-overlay: 37deg;
+                  {%- when 'bottom-center' -%}
+                    --direction-overlay: 37deg;
+                  {%- when 'bottom-right' -%}
+                    --direction-overlay: 307deg;
+                {% endcase %}
+
+                {% case text_position_mobile %}
+                  {%- when 'top-left' -%}
+                    --direction-overlay-mobile: 127deg;
+                  {%- when 'top-center' -%}
+                    --direction-overlay-mobile: 127deg;
+                  {%- when 'top-right' -%}
+                    --direction-overlay-mobile: 217deg;
+                  {%- when 'middle-left' -%}
+                    --direction-overlay-mobile: 127deg;
+                  {%- when 'center' -%}
+                    --direction-overlay-mobile: 127deg;
+                  {%- when 'middle-right' -%}
+                    --direction-overlay-mobile: 217deg;
+                  {%- when 'bottom-left' -%}
+                    --direction-overlay-mobile: 37deg;
+                  {%- when 'bottom-center' -%}
+                    --direction-overlay-mobile: 37deg;
+                  {%- when 'bottom-right' -%}
+                    --direction-overlay-mobile: 307deg;
+                {% endcase %}
+              {%- endcapture -%}
+            {%- endif -%}
             {% comment %} CSS variables end {% endcomment %}
 
             {%- if carousel -%}
-              <div class="carousel__item overlay-{{ color_overlay }}{% if effect == 'fade' and first == false %} hide{% endif %}{% if effect == 'fade' and first %} show{%- endif -%}">
+              <div class="carousel__item{% if effect == 'fade' and first == false %} hide{% endif %}{% if effect == 'fade' and first %} show{%- endif -%}"{% if show_overlay %} data-overlay-color="{{- overlay_color | escape -}}"{%- endif -%}>
                 <div class="carousel__inner">
             {%- endif -%}
                   <div
-                    class="images__container container{% unless carousel %} overlay-{{ color_overlay }}{% endunless %}{% if padding_top != blank or padding_top_mobile != blank %} images__container--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} images__container--padding-bottom{%  endif %}"
+                    class="images__container container{% if padding_top != blank or padding_top_mobile != blank %} images__container--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} images__container--padding-bottom{%- endif -%}"
                     style="{{- text_variables | escape -}}"
                   >
-                    <div class="images__text-area">
+                    <div class="images__text-area{% if show_overlay %} images__text-area--color{%- endif -%}">
                       <div class="images__content">
                         {%- if tag != blank -%}
                           <strong class="images__tag tagline">{{- tag -}}</strong>
                         {%- endif -%}
 
                         {%- if title != blank -%}
-                          <h1 class="images__title bq-content rx-content">{{- title -}}</h1>
+                          {%- if carousel -%}
+                            <h2 class="images__title bq-content rx-content">{{- title -}}</h2>
+                          {%- else -%}
+                            <h1 class="images__title bq-content rx-content">{{- title -}}</h1>
+                          {%- endif -%}
                         {%- endif -%}
 
                         {%- if description != blank -%}
-                          <div class="images__description text-medium bq-content rx-content">{{- description | truncate: 150, " ..." -}}</div>
+                          <div class="images__description text-medium bq-content rx-content">{{- description | strip_html | truncate: 150, " ..." -}}</div>
                         {%- endif -%}
 
                         {%- if button_1 != blank or button_2 != blank -%}
                           <div class="images__buttons">
                             {%- if button_1 != blank and button_url_1 != blank -%}
-                              <a href="{{  button_url_1 }}" class="images__button button button--primary button--large">{{- button_1 -}}</a>
+                              <a href="{{ button_url_1 }}" class="images__button button button--primary button--large">{{- button_1 -}}</a>
                             {%- endif -%}
 
                             {%- if button_2 != blank and button_url_2 != blank -%}
-                              <a href="{{  button_url_2 }}" class="images__button button button--outlined button--large">{{- button_2 -}}</a>
+                              <a href="{{ button_url_2 }}" class="images__button button button--outlined button--large">{{- button_2 -}}</a>
                             {%- endif -%}
                           </div>
                         {%- endif -%}
@@ -307,21 +364,32 @@
                     </div>
                   </div>
 
-                  <div class="images__vision" style="{{- image_variables | escape -}}">
+                  <div class="images__vision"{% if show_overlay %} style="{{- image_variables | escape -}}"{%- endif -%}">
                     {%- if video_url contains "youtube.com" -%}
                       {%- assign video_drop = video_url | split: "?v=" -%}
                       {%- assign video_id   = video_drop | last | strip -%}
 
-                      <div class="images__vision-wrapper images__vision-wrapper--overlay">
-                        <input id="video-{{- section.key -}}{{- block.id -}}" value="{{- video_id -}}" class="images__video-id" type="hidden" name="hidden">
-                        <div id="player-{{- section.key -}}{{- block.id -}}" class="images__video"></div>
+                      <div class="images__vision-wrapper{% if show_overlay %} images__vision-wrapper--overlay{%- endif -%}">
+                        <iframe
+                          class="images__video"
+                          width="1920"
+                          height="1080"
+                          src="https://www.youtube.com/embed/{{- video_id -}}?playlist={{- video_id -}}&autoplay=1&mute=1&loop=1&controls=0&disablekb=1&fs=0&playsinline=1&enablejsapi=1&iv_load_policy=3&modestbranding=1"
+                          frameborder="0"
+                          allow="autoplay; muted; encrypted-media; fullscreen"
+                          allowfullscreen
+                          autoplay
+                          loop
+                          mute
+                          playsinline
+                        ></iframe>
                       </div>
 
                     {%- elsif video_url contains "vimeo.com" -%}
                       {%- assign video_drop = video_url | split: "/" -%}
                       {%- assign video_id   = video_drop | last | strip -%}
 
-                      <div class="images__vision-wrapper images__vision-wrapper--overlay">
+                      <div class="images__vision-wrapper{% if show_overlay %} images__vision-wrapper--overlay{%- endif -%}">
                         <iframe
                           class="images__video"
                           src="https://player.vimeo.com/video/{{- video_id -}}?autoplay=1&muted=1&loop=1&autopause=0&controls=0&background=1"
@@ -338,7 +406,7 @@
 
                     {%- elsif image != blank or image_mobile != blank -%}
                       {%- if image != blank -%}
-                        <div class="images__vision-wrapper{% if image_mobile != blank %} images__vision-wrapper--desktop{% endif %} images__vision-wrapper--overlay">
+                        <div class="images__vision-wrapper{% if image_mobile != blank %} images__vision-wrapper--desktop{% endif %}{% if show_overlay %} images__vision-wrapper--overlay{%- endif -%}">
                           {%- render 'image',
                             image: image,
                             loading: 'lazy',
@@ -349,7 +417,7 @@
                       {%- endif -%}
 
                       {%- if image_mobile != blank -%}
-                        <div class="images__vision-wrapper images__vision-wrapper--mobile images__vision-wrapper--overlay">
+                        <div class="images__vision-wrapper images__vision-wrapper--mobile{% if show_overlay %} images__vision-wrapper--overlay{%- endif -%}">
                           {%- render 'image',
                             image: image,
                             loading: 'lazy',
@@ -369,24 +437,24 @@
     {%- if carousel -%}
         </div>
 
-        <div class="carousel__navigation" aria-label="Carousel navigation" aria-hidden="true">
-          <span class="carousel__btn prev" title="Prev slide">
+        <div class="carousel__navigation" aria-role="Carousel navigation">
+          <span class="carousel__btn prev" aria-label="Prev slide">
             Previous slide
             {%- render 'icon-arrow-right' -%}
           </span>
-          <span class="carousel__btn next" title="Next slide">
+          <span class="carousel__btn next" aria-label="Next slide">
             Next slide
             {%- render 'icon-arrow-right' -%}
           </span>
         </div>
 
-        <div class="carousel__pagination" aria-label="Carousel pagination" aria-hidden="true">
+        <div class="carousel__pagination" aria-role="Carousel pagination">
           {%- for block in blocks -%}
             {%- assign first = forloop.first -%}
             {%- assign index = forloop.index -%}
 
-            <span class="carousel__dot{% if first %} active{%- endif -%}" data-index="{{- index -}}" title="Jump to slide {{ index -}}">
-              Go to slide {{ index -}}
+            <span class="carousel__dot{% if first %} active{%- endif -%}" data-index="{{- index -}}" aria-label="Jump to slide {{ index }}">
+              Go to slide {{ index }}
             </span>
           {%- endfor -%}
         </div>
@@ -425,7 +493,7 @@
             "type": "image_picker",
             "id": "image",
             "label": "Image",
-            "default": "booqable://assets/image-tough-hero.jpg"
+            "default": "booqable://assets/image-hero.jpeg"
           },
           {
             "type": "image_picker",
@@ -448,37 +516,43 @@
             "type": "contentEditor",
             "id": "title",
             "label": "Title",
-            "default": "Rent heavy equipment"
+            "default": "Explore like <br> a daredevil"
           },
           {
             "type": "contentEditor",
             "id": "description",
             "label": "Description",
-            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <br> varius enim in eros elementum tristique."
           },
           {
-            "type": "select",
-            "id": "color_overlay",
-            "label": "Image overlay color",
-            "options": [
-              {
-                "value": "dark",
-                "label": "Dark"
-              },
-              {
-                "value": "light",
-                "label": "Light"
-              }
-            ],
-            "default": "dark"
+            "type": "header",
+            "content": "Image overlay"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_overlay",
+            "label": "Show overlay",
+            "default": true
+          },
+          {
+            "type": "color",
+            "id": "overlay_background",
+            "label": "Overlay background color",
+            "default": "#1A3333"
+          },
+          {
+            "type": "color",
+            "id": "overlay_color",
+            "label": "Overlay text color",
+            "default": "#FFFFFF"
           },
           {
             "type": "number",
             "id": "overlay_opacity",
-            "label": "Image overlay percentage",
+            "label": "Overlay percentage",
             "min": 0,
             "max": 100,
-            "default": 80
+            "default": 72
           },
           {
             "type": "header",
@@ -625,13 +699,21 @@
           {
             "value": "two",
             "label": "Color set 2"
+          },
+          {
+            "value": "three",
+            "label": "Color set 3"
+          },
+          {
+            "value": "four",
+            "label": "Color set 4"
+          },
+          {
+            "value": "five",
+            "label": "Color set 5"
           }
         ],
-        "default": "two"
-      },
-      {
-        "type": "header",
-        "content": "Date picker settings"
+        "default": "four"
       },
       {
         "type": "header",
@@ -686,15 +768,11 @@
             "label": "Medium"
           },
           {
-            "value": "large",
-            "label": "Large"
-          },
-          {
             "value": "full",
             "label": "Full"
           }
         ],
-        "default": "large"
+        "default": "medium"
       },
       {
         "type": "select",
