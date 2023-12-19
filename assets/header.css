@@ -286,6 +286,22 @@
   display: flex !important;
 }
 
+.header-transparent .header__logo-inner {
+  display: none;
+}
+
+.header-transparent .header__logo-inner--transparent {
+  display: inline;
+}
+
+.page-scrolled .header-transparent .header__logo-inner--transparent {
+  display: none;
+}
+
+.page-scrolled .header-transparent .header__logo-inner:not(.header__logo-inner--transparent) {
+  display: inline;
+}
+
 .preview-bar__container ~ .header-sticky .header__inner-background .header__search-inner {
   padding-top: calc(18px + var(--header-height, 39px) - var(--preview-height, 72px));
 }

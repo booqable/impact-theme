@@ -3,6 +3,7 @@
 
 {%- assign sticky_header         = section.settings.sticky_header -%}
 {%- assign logo                  = section.settings.logo -%}
+{%- assign logo_transparent      = section.settings.logo_transparent -%}
 {%- assign custom_title          = section.settings.custom_title -%}
 {%- assign menu                  = section.settings.menu -%}
 {%- assign menu_opener_mobile    = section.settings.menu_opener_mobile -%}
@@ -84,14 +85,29 @@
 
 {% comment %} Logo component {% endcomment %}
 {%- capture header_logo -%}
-  {%- if logo.url != blank -%}
-    {%- render 'image',
-        image: logo,
-        class: 'header__logo-image',
-        custom_width: '170',
-        custom_size: '170px',
-        custom_alt: shop.name
-    -%}
+  {%- if logo.url != blank or logo_transparent.url != blank and transparent_bg -%}
+    {%- if logo.url != blank -%}
+      <span class="header__logo-inner">
+        {%- render 'image',
+            image: logo,
+            class: 'header__logo-image',
+            custom_width: '170',
+            custom_size: '170px',
+            custom_alt: shop.name
+        -%}
+      </span>
+    {%- endif -%}
+    {%- if logo_transparent.url != blank and transparent_bg -%}
+      <span class="header__logo-inner header__logo-inner--transparent">
+        {%- render 'image',
+            image: logo_transparent,
+            class: 'header__logo-image',
+            custom_width: '170',
+            custom_size: '170px',
+            custom_alt: shop.name
+        -%}
+      </span>
+    {%- endif -%}
   {%- elsif custom_title != blank -%}
     <h2 class="header__logo-text">{{- custom_title -}}</h2>
   {%- elsif shop.logo_url != blank -%}
@@ -370,6 +386,12 @@
         "type": "image_picker",
         "id": "logo",
         "label": "Logo"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_transparent",
+        "label": "Logo (optional)",
+        "info": "Will be shown while the header has a transparent background"
       },
       {
         "type": "text",
