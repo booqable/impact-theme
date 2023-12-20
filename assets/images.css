@@ -202,6 +202,10 @@
     min-height: calc(var(--height, auto) - var(--header-height, 105px));
   }
 
+  .header-transparent ~ main .images__container {
+    min-height: calc(var(--height, auto) - var(--top-bar-height, 35px));
+  }
+
   .images__container--padding-top {
     padding-top: var(--padding-top);
   }
