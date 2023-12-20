@@ -39,9 +39,9 @@
 
     {%- case height -%}
       {%- when 'small' -%}
-        --height: 790px;
+        --height: 730px;
       {%- when 'medium' -%}
-        --height: 913px;
+        --height: 839px;
       {%- when 'full' -%}
         --height: 100vh;
     {%- endcase -%}
@@ -273,19 +273,19 @@
                   {%- when 'top-left' -%}
                     --direction-overlay: 127deg;
                   {%- when 'top-center' -%}
-                    --direction-overlay: 127deg;
+                    --direction-overlay: 180deg;
                   {%- when 'top-right' -%}
                     --direction-overlay: 217deg;
                   {%- when 'middle-left' -%}
                     --direction-overlay: 127deg;
                   {%- when 'center' -%}
-                    --direction-overlay: 127deg;
+                    --direction-overlay: 180deg;
                   {%- when 'middle-right' -%}
                     --direction-overlay: 217deg;
                   {%- when 'bottom-left' -%}
                     --direction-overlay: 37deg;
                   {%- when 'bottom-center' -%}
-                    --direction-overlay: 37deg;
+                    --direction-overlay: 0deg;
                   {%- when 'bottom-right' -%}
                     --direction-overlay: 307deg;
                 {% endcase %}
@@ -294,19 +294,19 @@
                   {%- when 'top-left' -%}
                     --direction-overlay-mobile: 127deg;
                   {%- when 'top-center' -%}
-                    --direction-overlay-mobile: 127deg;
+                    --direction-overlay-mobile: 180deg;
                   {%- when 'top-right' -%}
                     --direction-overlay-mobile: 217deg;
                   {%- when 'middle-left' -%}
                     --direction-overlay-mobile: 127deg;
                   {%- when 'center' -%}
-                    --direction-overlay-mobile: 127deg;
+                    --direction-overlay-mobile: 180deg;
                   {%- when 'middle-right' -%}
                     --direction-overlay-mobile: 217deg;
                   {%- when 'bottom-left' -%}
                     --direction-overlay-mobile: 37deg;
                   {%- when 'bottom-center' -%}
-                    --direction-overlay-mobile: 37deg;
+                    --direction-overlay-mobile: 0deg;
                   {%- when 'bottom-right' -%}
                     --direction-overlay-mobile: 307deg;
                 {% endcase %}
@@ -337,7 +337,7 @@
                         {%- endif -%}
 
                         {%- if description != blank -%}
-                          <div class="images__description text-medium bq-content rx-content">{{- description | strip_html | truncate: 150, " ..." -}}</div>
+                          <div class="images__description text-medium bq-content rx-content">{{- description | truncatewords: 20, " ..." -}}</div>
                         {%- endif -%}
 
                         {%- if button_1 != blank or button_2 != blank -%}
