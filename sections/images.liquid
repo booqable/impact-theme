@@ -47,47 +47,39 @@
     {%- endcase -%}
 
     {%- case padding_top -%}
-      {%- when 'none' -%}
-        --padding-top: 0;
       {%- when 'small' -%}
-        --padding-top: 24px;
+        --padding-top: 30px;
       {%- when 'medium' -%}
-        --padding-top: 35px;
-      {%- when 'large' -%}
         --padding-top: 60px;
+      {%- when 'large' -%}
+        --padding-top: 100px;
     {%- endcase -%}
 
     {%- case padding_bottom -%}
-      {%- when 'none' -%}
-        --padding-bottom: 0;
       {%- when 'small' -%}
-        --padding-bottom: 24px;
+        --padding-bottom: 30px;
       {%- when 'medium' -%}
-        --padding-bottom: 35px;
-      {%- when 'large' -%}
         --padding-bottom: 60px;
+      {%- when 'large' -%}
+        --padding-bottom: 100px;
     {%- endcase -%}
 
     {%- case padding_top_mobile -%}
-      {%- when 'none' -%}
-        --padding-top-mobile: 0;
       {%- when 'small' -%}
-        --padding-top-mobile: 24px;
+        --padding-top-mobile: 30px;
       {%- when 'medium' -%}
-        --padding-top-mobile: 32px;
+        --padding-top-mobile: 50px;
       {%- when 'large' -%}
-        --padding-top-mobile: 40px;
+        --padding-top-mobile: 80px;
     {%- endcase -%}
 
     {%- case padding_bottom_mobile -%}
-      {%- when 'none' -%}
-        --padding-bottom-mobile: 0;
       {%- when 'small' -%}
-        --padding-bottom-mobile: 24px;
+        --padding-bottom-mobile: 30px;
       {%- when 'medium' -%}
-        --padding-bottom-mobile: 32px;
+        --padding-bottom-mobile: 50px;
       {%- when 'large' -%}
-        --padding-bottom-mobile: 40px;
+        --padding-bottom-mobile: 80px;
     {%- endcase -%}
   {%- endcapture -%}
   {% comment %} CSS variables end {% endcomment %}
@@ -780,10 +772,6 @@
         "label": "Padding top",
         "options": [
           {
-            "value": "none",
-            "label": "None"
-          },
-          {
             "value": "small",
             "label": "Small"
           },
@@ -803,10 +791,6 @@
         "id": "padding_bottom",
         "label": "Padding bottom",
         "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
           {
             "value": "small",
             "label": "Small"
@@ -832,10 +816,6 @@
         "label": "Padding top",
         "options": [
           {
-            "value": "none",
-            "label": "None"
-          },
-          {
             "value": "small",
             "label": "Small"
           },
@@ -855,10 +835,6 @@
         "id": "padding_bottom_mobile",
         "label": "Padding bottom",
         "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
           {
             "value": "small",
             "label": "Small"
