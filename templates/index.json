@@ -143,12 +143,16 @@
         "collection_535502"
       ],
       "settings": {
-        "color_overlay": "dark",
-        "color_palette": "one",
-        "padding_bottom": "large",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "small",
-        "padding_top_mobile": "small"
+        "color_palette": "four",
+        "grid": "three",
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "show_amount": true,
+        "show_arrow": true,
+        "spacing": "none",
+        "spacing_mobile": "none"
       },
       "disabled": null
     },

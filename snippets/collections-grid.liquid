@@ -4,26 +4,39 @@
 
   items - { object } *required
   items_type - "string" *required,
-  placeholder - image optional
+  show_amount: boolean optional,
+  show_arrow: boolean optional,
+  placeholder - image optional,
+  counter_label: "string" optional
 
   Usage:
 
   {%- render 'collections-grid',
       items: your_id,
       items_type: "your_string",
-      placeholder: your_id
+      show_amount: boolean,
+      show_arrow: boolean,
+      placeholder: your_id,
+      counter_label: your_id
   -%}
 
 {% endcomment %}
-{%- assign multiple = false -%}
 
-{%- for item in items -%}
-  {%- if items.size > 1 -%}
-    {%- assign multiple = true -%}
+{%- assign counter_label = counter_label | split: "," -%}
+{%- assign counter_label_single = "" -%}
+{%- assign counter_label_plural = "" -%}
+
+{%- for label in counter_label -%}
+  {%- assign first = forloop.first -%}
+
+  {%- if first -%}
+    {%- assign counter_label_single = label -%}
+  {%- else -%}
+    {%- assign counter_label_plural = label -%}
   {%- endif -%}
 {%- endfor -%}
 
-<ul class="collections__list collections__list-{{ items.size }}{% if multiple %} collections__list--multiple{%- endif -%}">
+<ul class="collections__list">
   {%- for item in items -%}
     {%- case items_type -%}
       {%- when "blocks" -%}
@@ -41,6 +54,7 @@
       {%- assign url = collection.url -%}
       {%- assign name = collection.name -%}
       {%- assign first_product = collection.products | first -%}
+      {%- assign counter = collection.items_count -%}
 
       {%- if collection.image -%}
         {%- assign image = collection.image -%}
@@ -52,30 +66,40 @@
     {%- endif -%}
 
     <li class="collections__item" id="{{- id -}}">
-      {%- if collection != blank -%}
-        <a class="collections__link" href="{{ url }}">
-      {%- endif -%}
-          <span class="collections__image-item">
-            {%- render 'image',
-              image: image,
-              loading: 'lazy',
-              class: 'collections__image',
-              size: 'm'
-            -%}
-          </span>
-      {%- if collection != blank -%}
-        </a>
-      {%- endif -%}
+      <span class="collections__image-item">
+        {%- render 'image',
+          image: image,
+          loading: 'lazy',
+          class: 'collections__image',
+          size: 'm'
+        -%}
+      </span>
 
-        <h3 class="collections__heading">
-          {%- if collection != blank -%}
-            <a href="{{ url }}">
-              {{- name -}}
-            </a>
-          {%- else -%}
-            Category
+      <span class="collections__bottom">
+        <span class="collections__text-area">
+          <h3 class="collections__heading">
+            {{- name | default: "Category" -}}
+          </h3>
+          {%- if show_amount and collection != blank -%}
+            <span class="collections__amount">
+              {{ counter }}
+              {%- if counter > 1 -%}
+                {{ counter_label_plural }}
+              {%- else -%}
+                {{ counter_label_single }}
+              {%- endif -%}
+            </span>
           {%- endif -%}
-        </h3>
+        </span>
+        {%- if show_arrow and collection != blank -%}
+          <span class="collections__arrow">
+            {%- render 'icon-arrow-right-full' -%}
+          </span>
+        {%- endif -%}
+      </span>
+      {%- if collection != blank -%}
+        <a class="collections__link" href="{{ url }}"></a>
+      {%- endif -%}
     </li>
   {%- endfor -%}
 </ul>
