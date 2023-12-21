@@ -168,21 +168,25 @@
 
       <hr class="account__separator" />
 
-      <a href="{{ routes.register_url }}" class="account__button button button--outlined button--large">
-        {%- if create_account_label != blank -%}
-          {{- create_account_label -}}
-        {%- else -%}
-          Create an account
-        {%- endif -%}
-      </a>
+      {%- if shop.allow_signup -%}
+        <a href="{{ routes.register_url }}" class="account__button button button--outlined button--large">
+          {%- if create_account_label != blank -%}
+            {{- create_account_label -}}
+          {%- else -%}
+            Create an account
+          {%- endif -%}
+        </a>
+      {%- endif -%}
 
-      <a href="#!" class="account__button account__button--minimal">
-        {%- if guest_label != blank -%}
-          {{- guest_label -}}
-        {%- else -%}
-          Continue as guest
-        {%- endif -%}
-      </a>
+      {%- if shop.allow_guest_checkout and guest_checkout_url -%}
+        <a href="{{ guest_checkout_url }}" class="account__button account__button--minimal">
+          {%- if guest_label != blank -%}
+            {{- guest_label -}}
+          {%- else -%}
+            Continue as guest
+          {%- endif -%}
+        </a>
+      {%- endif -%}
     {%- endform -%}
   </div>
 </div>
