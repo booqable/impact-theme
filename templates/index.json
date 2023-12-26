@@ -11,14 +11,17 @@
             "button_url_1": "booqable://products/",
             "button_2": "More info",
             "button_url_2": "booqable://root/",
-            "color_overlay": "dark",
-            "description": "Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Suspendisse varius enim in <br> eros elementum tristique.",
-            "image": "booqable://assets/image-tough-hero.jpg",
-            "image_mobile": "booqable://assets/image-tough-hero-mobile.jpg",
-            "overlay_opacity": 80,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <br> varius enim in eros elementum tristique.",
+            "image": "booqable://assets/image-hero.jpeg",
+            "image_mobile": "",
+            "overlay_background": "#1A3333",
+            "overlay_color": "#FFFFFF",
+            "overlay_opacity": 72,
+            "show_overlay": true,
+            "tag": "",
             "text_position": "middle-left",
-            "text_position_mobile": "top-left",
-            "title": "Rent heavy <br> equipment"
+            "text_position_mobile": "middle-left",
+            "title": "Explore like <br> a daredevil"
           },
           "disabled": null
         }
@@ -27,16 +30,14 @@
         "slide"
       ],
       "settings": {
-        "color_palette": "two",
+        "color_palette": "four",
         "effect": "slide",
-        "height": "small",
-        "padding_bottom": "medium",
+        "height": "medium",
+        "padding_bottom": "large",
         "padding_bottom_mobile": "large",
-        "padding_top": "medium",
+        "padding_top": "large",
         "padding_top_mobile": "large",
         "pause": true,
-        "show_datepicker": true,
-        "datepicker_title": "",
         "timer": 5
       },
       "disabled": null

@@ -12,8 +12,7 @@ class Carousel {
       wrapper: ".carousel__wrapper",
       item: ".carousel__item",
       timer: ".carousel__timer",
-      count: ".carousel__count",
-      datePicker: ".date-picker"
+      count: ".carousel__count"
     }
 
     this.classes = {
@@ -25,11 +24,7 @@ class Carousel {
       dot: "carousel__dot",
       prev: "prev",
       next: "next",
-      init: "initialized",
-      dark: "overlay-dark",
-      light: "overlay-light",
-      showDark: "show-overlay-dark",
-      showLight: "show-overlay-light"
+      init: "initialized"
     }
 
     this.modifiers = {
@@ -40,7 +35,15 @@ class Carousel {
     }
 
     this.data = {
-      index: "data-index"
+      index: "data-index",
+      overlayColor: "data-overlay-color",
+      defaultColor: "data-dafault-color"
+    }
+
+    this.cssVar = {
+      overlay: "--overlay-color",
+      overlay08: "--overlay-color-08",
+      overlay45: "--overlay-color-45"
     }
 
     this.event = {
@@ -443,55 +446,36 @@ class Carousel {
     return { index, dots };
   }
 
-  // add/change overlay class to change colors of navigation/pagination buttons of images carousel with overlay
+  // add/change overlay values to change colors of navigation/pagination buttons of images carousel with overlay
   setOverlay(index) {
     const isEdge = this.block.classList.contains(this.classes.edges);
 
     if (!isEdge || !index || index > this.items.length) return false;
 
-    const elements = {
-      wrap: this.wrap,
-      datePicker: this.getSiblingElement(this.block, this.selector.datePicker, this.event.next)
-    }
+    const defaultColor = this.block.getAttribute(this.data.defaultColor);
 
     this.items.forEach((item, itemIndex) => {
-      const isLight = item.classList.contains(this.classes.light),
-            isDark = item.classList.contains(this.classes.dark);
-
-      const optionsLight = {
-        addClass: this.classes.showLight,
-        oldClass: this.classes.showDark,
-        newClass: this.classes.showLight
-      }
-
-      const optionsDark = {
-        addClass: this.classes.showDark,
-        oldClass: this.classes.showLight,
-        newClass: this.classes.showDark
-      }
+      const overlayColor = item.getAttribute(this.data.overlayColor);
 
       if (itemIndex + 1 === index) {
-        if (isLight) this.setClass(elements, optionsLight);
-        if (isDark) this.setClass(elements, optionsDark);
+        if (overlayColor) {
+          this.setCssVar(this.cssVar.overlay, overlayColor);
+          this.setCssVar(this.cssVar.overlay08, `${overlayColor}24`);
+          this.setCssVar(this.cssVar.overlay45, `${overlayColor}73`);
+        } else {
+          this.setCssVar(this.cssVar.overlay, defaultColor);
+          this.setCssVar(this.cssVar.overlay08, `${defaultColor}24`);
+          this.setCssVar(this.cssVar.overlay45, `${defaultColor}73`);
+        }
       }
     })
   }
 
-  setClass(elements, options) {
-    const { addClass, oldClass, newClass } = options;
-
-    let isOld, isNew;
-
-    Object.values(elements).forEach(element => {
-      if (!element) return false;
-
-      isOld = element.classList.contains(oldClass);
-      isNew = element.classList.contains(newClass);
-
-      !isOld && !isNew
-        ? element.classList.add(addClass)
-        : element.classList.replace(oldClass, newClass)
-    })
+  setCssVar(key, val) {
+    this.block.parentElement.style.setProperty(
+      `${key}`,
+      `${val}`
+    )
   }
 
   scrollTo(options) {
