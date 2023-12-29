@@ -38,6 +38,10 @@
   padding-bottom: 95px;
 }
 
+.carousel--controls .carousel__wrapper {
+  padding-bottom: 95px;
+}
+
 .carousel__inner {
   padding: 0 0 0 16px;
   height: 100%;
@@ -102,7 +106,7 @@
 
 .carousel__navigation {
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: 0;
   margin: 0 -8px;
   display: flex;
@@ -124,7 +128,7 @@
   justify-content: center;
   cursor: pointer;
   text-indent: -9999px;
-  transition: border var(--animation-duration) var(--transition-function-ease-out);
+  transition: all var(--animation-duration) var(--transition-function-ease-out);
 }
 
 .carousel__btn svg {
@@ -207,8 +211,8 @@
   position: relative;
   border-color: transparent;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   margin: 0;
   z-index: 2;
   line-height: var(--line-height-xs);
@@ -222,7 +226,7 @@
 }
 
 .carousel__edges .carousel__btn.prev {
-  margin-right: 24px;
+  margin-right: 16px;
 }
 
 .carousel__edges .carousel__btn.prev svg {
@@ -292,11 +296,11 @@
 }
 
 .palette-one .carousel__btn {
-  border-color: var(--color-border-1);
+  border-color: var(--background-accent-1);
 }
 
 .palette-one .carousel__btn path {
-  fill: var(--color-primary-1);
+  fill: var(--background-accent-1);
 }
 
 .palette-two .carousel__dot:after {
@@ -308,11 +312,11 @@
 }
 
 .palette-two .carousel__btn {
-  border-color: var(--color-border-2);
+  border-color: var(--background-accent-2);
 }
 
 .palette-two .carousel__btn path {
-  fill: var(--color-primary-2);
+  fill: var(--background-accent-2);
 }
 
 .palette-three .carousel__dot:after {
@@ -324,11 +328,11 @@
 }
 
 .palette-three .carousel__btn {
-  border-color: var(--color-border-3);
+  border-color: var(--background-accent-3);
 }
 
 .palette-three .carousel__btn path {
-  fill: var(--color-primary-3);
+  fill: var(--background-accent-3);
 }
 
 .palette-four .carousel__dot:after {
@@ -340,11 +344,11 @@
 }
 
 .palette-four .carousel__btn {
-  border-color: var(--color-border-4);
+  border-color: var(--background-accent-4);
 }
 
 .palette-four .carousel__btn path {
-  fill: var(--color-primary-4);
+  fill: var(--background-accent-4);
 }
 
 .palette-five .carousel__dot:after {
@@ -356,11 +360,11 @@
 }
 
 .palette-five .carousel__btn {
-  border-color: var(--color-border-5);
+  border-color: var(--background-accent-5);
 }
 
 .palette-five .carousel__btn path {
-  fill: var(--color-primary-5);
+  fill: var(--background-accent-5);
 }
 
 .palette-one .carousel__edges .carousel__btn,
@@ -471,6 +475,10 @@
     height: 2px;
   }
 
+  .carousel__edges .carousel__btn.prev {
+    margin-right: 24px;
+  }
+
   .carousel__edges .carousel__counter {
     bottom: 33px;
   }
@@ -545,7 +553,11 @@
   }
 
   .palette-one .carousel__btn:hover {
-    border-color: var(--color-primary-1);
+    background: var(--background-accent-1);
+  }
+
+  .palette-one .carousel__btn:hover path {
+    fill: var(--color-accent-1);
   }
 
   .palette-one .carousel__dot:hover:after {
@@ -553,46 +565,66 @@
   }
 
   .palette-two .carousel__btn:hover {
-    border-color: var(--color-primary-2);
+    background: var(--background-accent-2);
+  }
+
+  .palette-two .carousel__btn:hover path {
+    fill: var(--color-accent-2);
   }
 
   .palette-two .carousel__dot:hover:after {
     background: var(--color-primary-2);
   }
 
-  .palette-one .carousel__edges .show-overlay-light ~ .carousel__navigation .carousel__btn:hover,
-  .palette-one .carousel__edges .carousel__btn:hover {
-    border-color: var(--overlay-background);
+  .palette-three .carousel__btn:hover {
+    background: var(--background-accent-3);
   }
 
-  .palette-one .carousel__edges .show-overlay-dark ~ .carousel__navigation .carousel__btn:hover {
+  .palette-three .carousel__btn:hover path {
+    fill: var(--color-accent-3);
+  }
+
+  .palette-three .carousel__dot:hover:after {
+    background: var(--color-primary-3);
+  }
+
+  .palette-four .carousel__btn:hover {
+    background: var(--background-accent-4);
+  }
+
+  .palette-four .carousel__btn:hover path {
+    fill: var(--color-accent-4);
+  }
+
+  .palette-four .carousel__dot:hover:after {
+    background: var(--color-primary-4);
+  }
+
+  .palette-five .carousel__btn:hover {
+    background: var(--background-accent-5);
+  }
+
+  .palette-five .carousel__btn:hover path {
+    fill: var(--color-accent-5);
+  }
+
+  .palette-five .carousel__dot:hover:after {
+    background: var(--color-primary-5);
+  }
+
+  .palette-one .carousel__edges .carousel__btn:hover,
+  .palette-two .carousel__edges .carousel__btn:hover,
+  .palette-three .carousel__edges .carousel__btn:hover,
+  .palette-four .carousel__edges .carousel__btn:hover,
+  .palette-five .carousel__edges .carousel__btn:hover {
     border-color: var(--overlay-color);
   }
 
-  .palette-one .carousel__edges .show-overlay-light ~ .carousel__pagination .carousel__dot:hover:after,
-  .palette-one .carousel__edges .carousel__dot:hover:after {
-    background: var(--overlay-background);
-  }
-
-  .palette-one .carousel__edges .show-overlay-dark ~ .carousel__pagination .carousel__dot:hover:after {
+  .palette-one .carousel__edges .carousel__dot:hover:after,
+  .palette-two .carousel__edges .carousel__dot:hover:after,
+  .palette-three .carousel__edges .carousel__dot:hover:after,
+  .palette-four .carousel__edges .carousel__dot:hover:after,
+  .palette-five .carousel__edges .carousel__dot:hover:after {
     background: var(--overlay-color);
-  }
-
-  .palette-two .carousel__edges .show-overlay-light ~ .carousel__navigation .carousel__btn:hover,
-  .palette-two .carousel__edges .carousel__btn:hover {
-    border-color: var(--overlay-background-2);
-  }
-
-  .palette-two .carousel__edges .show-overlay-dark ~ .carousel__navigation .carousel__btn:hover {
-    border-color: var(--overlay-color-2);
-  }
-
-  .palette-two .carousel__edges .show-overlay-light ~ .carousel__pagination .carousel__dot:hover:after,
-  .palette-two .carousel__edges .carousel__dot:hover:after {
-    background: var(--overlay-background-2);
-  }
-
-  .palette-two .carousel__edges .show-overlay-dark ~ .carousel__pagination .carousel__dot:hover:after {
-    background: var(--overlay-color-2);
   }
 }

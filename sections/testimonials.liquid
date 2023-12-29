@@ -24,10 +24,8 @@
 
   {% comment %} CSS variables start {% endcomment %}
   {%- capture variables -%}
-    {%- if carousel -%}
-      --slide-width: 351px;
-      --slide-width-mobile: 364px;
-    {%- endif -%}
+    --slide-width: 367px;
+    --slide-width-mobile: 364px;
 
     {%- case padding_top -%}
       {%- when 'none' -%}
@@ -89,12 +87,25 @@
   {% comment %} CSS variables end {% endcomment %}
 
   <div
-    class="testimonials__wrapper palette-{{ color_palette }}{% if padding_top != blank or padding_top_mobile != blank %} testimonials__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} testimonials__wrapper--padding-bottom{%- endif -%}"
+    class="testimonials__wrapper{% if blocks.size > 3 %} testimonials__wrapper--wide{% endif %} palette-{{ color_palette }}{% if padding_top != blank or padding_top_mobile != blank %} testimonials__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} testimonials__wrapper--padding-bottom{%- endif -%}"
     style="{{- variables | escape -}}"
   >
     <div class="testimonials__container container">
-      {%- if title != blank -%}
-        <h2 class="testimonials__title">{{- title -}}</h2>
+      {%- if title != blank or image_bg != blank -%}
+        <div class="testimonials__side{% if title == blank and image_bg != blank %} testimonials__side--desktop-hidden{%- endif -%}">
+          <h2 class="testimonials__title">{{- title -}}</h2>
+
+          {%- if image_bg != blank -%}
+            <div class="testimonials__bg-image-wrapper">
+              {%- render 'image',
+                  image: image_bg,
+                  loading: 'lazy',
+                  class: 'testimonials__bg-image',
+                  size: 'm'
+              -%}
+            </div>
+          {%- endif -%}
+        </div>
       {%- endif -%}
 
       {%- if carousel -%}
@@ -224,11 +235,6 @@
         "default": "What people <br>say about us"
       },
       {
-        "type": "image_picker",
-        "id": "image_bg",
-        "label": "Image (optional)"
-      },
-      {
         "type": "checkbox",
         "id": "show_navigation",
         "default": true,
@@ -261,6 +267,11 @@
       {
         "type": "header",
         "content": "Desktop settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_bg",
+        "label": "Image (optional)"
       },
       {
         "type": "select",
