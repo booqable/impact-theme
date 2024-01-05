@@ -16,6 +16,7 @@
   --slide-width: 318px;
   --slide-width-mobile: 250px;
   --thumbnail-size: 92px;
+  --title-max-width: 302px;
 
   /* Mosaic section grid */
   --grid-row: 2;

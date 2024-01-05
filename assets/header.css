@@ -376,7 +376,8 @@
   stroke: var(--color-outline-1);
 }
 
-.palette-one .header__search-opener:hover g {
+.palette-one .header__search-opener:hover g,
+.page-scrolled .header-transparent .palette-one .header__search-opener:hover g {
   stroke: var(--color-outline-1-hover);
 }
 
@@ -458,7 +459,8 @@
   stroke: var(--color-outline-2);
 }
 
-.palette-two .header__search-opener:hover g {
+.palette-two .header__search-opener:hover g,
+.page-scrolled .header-transparent .palette-two .header__search-opener:hover g {
   stroke: var(--color-outline-2-hover);
 }
 
@@ -540,7 +542,8 @@
   stroke: var(--color-outline-3);
 }
 
-.palette-three .header__search-opener:hover g {
+.palette-three .header__search-opener:hover g,
+.page-scrolled .header-transparent .palette-three .header__search-opener:hover g {
   stroke: var(--color-outline-3-hover);
 }
 
@@ -622,7 +625,8 @@
   stroke: var(--color-outline-4);
 }
 
-.palette-four .header__search-opener:hover g {
+.palette-four .header__search-opener:hover g,
+.page-scrolled .header-transparent .palette-four .header__search-opener:hover g {
   stroke: var(--color-outline-4-hover);
 }
 
@@ -705,7 +709,8 @@
   stroke: var(--color-outline-5);
 }
 
-.palette-five .header__search-opener:hover g {
+.palette-five .header__search-opener:hover g,
+.page-scrolled .header-transparent .palette-five .header__search-opener:hover g {
   stroke: var(--color-outline-5-hover);
 }
 
