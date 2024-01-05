@@ -1,9 +1,6 @@
 {%- assign blocks = section.blocks -%}
 
 {%- if blocks.size > 0 -%}
-
-  {{ "testimonials.css" | asset_url | stylesheet_tag }}
-
   {%- assign title                 = section.settings.title -%}
   {%- assign image_bg              = section.settings.image_bg -%}
   {%- assign rounded_corners       = section.settings.rounded_corners -%}
@@ -21,6 +18,8 @@
 
     {%- assign carousel = true -%}
   {%- endif -%}
+
+  {{ "testimonials.css" | asset_url | stylesheet_tag }}
 
   {% comment %} CSS variables start {% endcomment %}
   {%- capture variables -%}
