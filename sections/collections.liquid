@@ -2,21 +2,22 @@
 
   {{ "collections.css" | asset_url | stylesheet_tag }}
 
-  {%- assign color_palette         = section.settings.color_palette -%}
-  {%- assign counter_label         = section.settings.counter_label -%}
-  {%- assign grid                  = section.settings.grid -%}
-  {%- assign overlay_opacity       = section.settings.overlay_opacity -%}
-  {%- assign padding_top           = section.settings.padding_top -%}
-  {%- assign padding_bottom        = section.settings.padding_bottom -%}
-  {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
-  {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-  {%- assign rounded_corners       = section.settings.rounded_corners -%}
-  {%- assign show_amount           = section.settings.show_amount -%}
-  {%- assign show_arrow            = section.settings.show_arrow -%}
-  {%- assign show_overlay          = section.settings.show_overlay -%}
-  {%- assign spacing               = section.settings.spacing -%}
-  {%- assign spacing_mobile        = section.settings.spacing_mobile -%}
-  {%- assign image_placeholder     = settings.image_placeholder -%}
+  {%- assign color_palette          = section.settings.color_palette -%}
+  {%- assign counter_singular       = section.settings.counter_singular -%}
+  {%- assign counter_plural         = section.settings.counter_plural -%}
+  {%- assign grid                   = section.settings.grid -%}
+  {%- assign overlay_opacity        = section.settings.overlay_opacity -%}
+  {%- assign padding_top            = section.settings.padding_top -%}
+  {%- assign padding_bottom         = section.settings.padding_bottom -%}
+  {%- assign padding_top_mobile     = section.settings.padding_top_mobile -%}
+  {%- assign padding_bottom_mobile  = section.settings.padding_bottom_mobile -%}
+  {%- assign rounded_corners        = section.settings.rounded_corners -%}
+  {%- assign show_amount            = section.settings.show_amount -%}
+  {%- assign show_arrow             = section.settings.show_arrow -%}
+  {%- assign show_overlay           = section.settings.show_overlay -%}
+  {%- assign spacing                = section.settings.spacing -%}
+  {%- assign spacing_mobile         = section.settings.spacing_mobile -%}
+  {%- assign image_placeholder      = settings.image_placeholder -%}
 
   {% comment %} CSS variables start {% endcomment %}
   {%- capture variables -%}
@@ -125,7 +126,8 @@
           show_amount: show_amount,
           show_arrow: show_arrow,
           placeholder: image_placeholder,
-          counter_label: counter_label
+          counter_singular: counter_singular,
+          counter_plural: counter_plural
       -%}
     </div>
   </div>
@@ -208,10 +210,15 @@
       },
       {
         "type": "text",
-        "id": "counter_label",
-        "label": "Product amount labels",
-        "default": "Item, Items",
-        "info": "Please indicate singular and plural by comma"
+        "id": "counter_singular",
+        "label": "Product amount label singular",
+        "default": "Item"
+      },
+      {
+        "type": "text",
+        "id": "counter_plural",
+        "label": "Product amount label plural",
+        "default": "Items"
       },
       {
         "type": "header",
@@ -404,7 +411,7 @@
         "default": "none"
       }
     ],
-    "max_blocks": 4,
+    "max_blocks": 8,
     "blocks": [
       {
         "type": "collection",

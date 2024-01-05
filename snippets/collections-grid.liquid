@@ -17,24 +17,11 @@
       show_amount: boolean,
       show_arrow: boolean,
       placeholder: your_id,
-      counter_label: your_id
+      counter_singular: your_id,
+      counter_plural: your_id
   -%}
 
 {% endcomment %}
-
-{%- assign counter_label = counter_label | split: "," -%}
-{%- assign counter_label_single = "" -%}
-{%- assign counter_label_plural = "" -%}
-
-{%- for label in counter_label -%}
-  {%- assign first = forloop.first -%}
-
-  {%- if first -%}
-    {%- assign counter_label_single = label -%}
-  {%- else -%}
-    {%- assign counter_label_plural = label -%}
-  {%- endif -%}
-{%- endfor -%}
 
 <ul class="collections__list">
   {%- for item in items -%}
@@ -83,11 +70,11 @@
           {%- if show_amount and collection != blank -%}
             <span class="collections__amount">
               {{ counter }}
-              {%- if counter > 1 -%}
-                {{ counter_label_plural }}
-              {%- else -%}
-                {{ counter_label_single }}
-              {%- endif -%}
+              {% if counter > 1 %}
+                {{ counter_plural }}
+              {% else %}
+                {{ counter_singular }}
+              {% endif %}
             </span>
           {%- endif -%}
         </span>

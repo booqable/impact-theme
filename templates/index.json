@@ -144,7 +144,8 @@
       ],
       "settings": {
         "color_palette": "four",
-        "counter_label": "Item, Items",
+        "counter_singular": "Item",
+        "counter_plural": "Items",
         "grid": "three",
         "overlay_opacity": 100,
         "padding_bottom": "none",
