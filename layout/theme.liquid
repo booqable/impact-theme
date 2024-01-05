@@ -16,15 +16,6 @@
     {% include 'root-styles' %}
 
     {% include 'page-metadata' %}
-
-    <script>
-      // Loading the IFrame Player API code asynchronously.
-      const tag = document.createElement('script');
-
-      tag.src = 'https://www.youtube.cim/iframe_api';
-
-      document.body.appendChild(tag);
-    </script>
   </head>
   <body>
 
@@ -45,7 +36,6 @@
     <script src="{{ "header.js" | asset_url }}" defer></script>
     <script src="{{ "mega-menu.js" | asset_url }}" defer></script>
     <script src="{{ "carousel.js" | asset_url }}" defer></script>
-    <script src="{{ "images.js" | asset_url }}" defer></script>
     <script src="{{ "search.js" | asset_url }}" defer></script>
 
     {%- if settings.accent_background != blank -%}

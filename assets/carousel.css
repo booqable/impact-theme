@@ -153,144 +153,6 @@
   padding-right: 16px;
 }
 
-.carousel__edges .carousel__item:last-child {
-  min-width: var(--slide-width-mobile);
-}
-
-.carousel__edges .carousel__item:not(:first-child) {
-  display: none;
-}
-
-.carousel__edges .carousel__inner,
-.carousel__edges .carousel__item:last-child .carousel__inner {
-  display: flex;
-  align-items: stretch;
-  padding: 0;
-}
-
-.carousel__edges .carousel__item.show {
-  position: static;
-  opacity: 1;
-  visibility: visible;
-  transition: visibility calc(var(--animation-duration) + 0.2s) var(--transition-function-ease-out),
-        opacity calc(var(--animation-duration) + 0.2s) var(--transition-function-ease-out);
-}
-
-.carousel__edges .carousel__item.hide {
-  position: absolute;
-  z-index: -1;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility calc(var(--animation-duration) + 0.2s) var(--transition-function-ease-in),
-        opacity calc(var(--animation-duration) + 0.2s) var(--transition-function-ease-in);
-}
-
-.carousel__edges .images__text-area {
-  margin-bottom: var(--margin-bottom-mobile);
-}
-
-.carousel__edges .carousel__navigation {
-  bottom: 18px;
-  right: auto;
-  left: 50%;
-  width: 100%;
-  max-width: var(--max-width);
-  transform: translate(-50%, 0);
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0 var(--horizontal-padding);
-  margin: 0;
-}
-
-.carousel__edges .carousel__btn {
-  position: relative;
-  border-color: transparent;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  margin: 0;
-  z-index: 2;
-  line-height: var(--line-height-xs);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel__edges .carousel__btn.prev {
-  margin-right: 24px;
-}
-
-.carousel__edges .carousel__btn.prev svg {
-  transform: rotate(180deg);
-}
-
-.carousel__edges .carousel__pagination {
-  bottom: 31px;
-  left: 50%;
-  z-index: 2;
-  max-width: calc(var(--max-width) - var(--horizontal-padding) * 3 - 104px * 2);
-  transform: translate(-50%, 0);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel__edges .carousel__dot {
-  opacity: 1;
-  margin-bottom: 0;
-}
-
-.carousel__edges .carousel__dot.active {
-  opacity: 1;
-}
-
-.carousel__edges .carousel__counter {
-  position: absolute;
-  z-index: 0;
-  bottom: 28px;
-  right: 50%;
-  width: 100%;
-  max-width: var(--max-width);
-  transform: translate(50%, 0);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-size: 18px;
-  padding: 0 var(--horizontal-padding);
-}
-
-.carousel__edges .carousel__divider {
-  margin: 0 16px;
-}
-
-.carousel__edges .carousel__divider,
-.carousel__edges .carousel__divider + span {
-  opacity: 0.4;
-}
-
-.carousel.carousel__edges.initialized .carousel__item,
-.carousel.carousel__edges.initialized .carousel__item:not(:first-child) {
-  display: block;
-}
-
-.carousel.carousel__edges.carousel__fade-effect .carousel__wrapper {
-  overflow: hidden;
-}
-
-.carousel-with-date-picker.carousel__edges .carousel__navigation {
-  bottom: calc(18px + var(--date-picker-block-height));
-}
-
-.carousel-with-date-picker.carousel__edges .carousel__pagination {
-  bottom: calc(31px + var(--date-picker-block-height));
-}
-
-.carousel-with-date-picker.carousel__edges .carousel__counter {
-  bottom: calc(28px + var(--date-picker-block-height));
-}
-
 .palette-one .carousel__dot:after {
   background: var(--color-primary-1-30);
 }
@@ -323,98 +185,52 @@
   fill: var(--color-primary-2);
 }
 
-.palette-one .carousel__edges .show-overlay-light ~ .carousel__navigation .carousel__btn,
-.palette-one .carousel__edges .carousel__btn {
-  background: var(--background-overlay-08);
-  border-color: transparent;
+.palette-three .carousel__dot:after {
+  background: var(--color-primary-3-30);
 }
 
-.palette-one .carousel__edges .show-overlay-dark ~ .carousel__navigation .carousel__btn {
-  background: var(--color-overlay-08);
-  border-color: transparent;
+.palette-three .carousel__dot.active:after {
+  background: var(--color-primary-3);
 }
 
-.palette-one .carousel__edges .show-overlay-light ~ .carousel__navigation .carousel__btn path,
-.palette-one .carousel__edges .carousel__btn path {
-  fill: var(--background-overlay);
+.palette-three .carousel__btn {
+  border-color: var(--color-border-3);
 }
 
-.palette-one .carousel__edges .show-overlay-dark ~ .carousel__navigation .carousel__btn path {
-  fill: var(--color-overlay);
+.palette-three .carousel__btn path {
+  fill: var(--color-primary-3);
 }
 
-.palette-one .carousel__edges .show-overlay-light ~ .carousel__pagination .carousel__dot:after,
-.palette-one .carousel__edges .carousel__dot:after {
-  background: var(--background-overlay-45);
+.palette-four .carousel__dot:after {
+  background: var(--color-primary-4-30);
 }
 
-.palette-one .carousel__edges .show-overlay-dark ~ .carousel__pagination .carousel__dot:after {
-  background: var(--color-overlay-45);
+.palette-four .carousel__dot.active:after {
+  background: var(--color-primary-4);
 }
 
-.palette-one .carousel__edges .show-overlay-light ~ .carousel__pagination .carousel__dot.active:after,
-.palette-one .carousel__edges .carousel__dot.active:after {
-  background: var(--background-overlay);
+.palette-four .carousel__btn {
+  border-color: var(--color-border-4);
 }
 
-.palette-one .carousel__edges .show-overlay-dark ~ .carousel__pagination .carousel__dot.active:after {
-  background: var(--color-overlay);
+.palette-four .carousel__btn path {
+  fill: var(--color-primary-4);
 }
 
-.palette-one .carousel__edges .show-overlay-light ~ .carousel__counter,
-.palette-one .carousel__edges .carousel__counter {
-  color: var(--background-overlay);
+.palette-five .carousel__dot:after {
+  background: var(--color-primary-5-30);
 }
 
-.palette-one .carousel__edges .show-overlay-dark ~ .carousel__counter {
-  color: var(--color-overlay);
+.palette-five .carousel__dot.active:after {
+  background: var(--color-primary-5);
 }
 
-.palette-two .carousel__edges .show-overlay-light ~ .carousel__navigation .carousel__btn,
-.palette-two .carousel__edges .carousel__btn {
-  background: var(--background-overlay-2-08);
-  border-color: transparent;
+.palette-five .carousel__btn {
+  border-color: var(--color-border-5);
 }
 
-.palette-two .carousel__edges .show-overlay-dark ~ .carousel__navigation .carousel__btn {
-  background: var(--color-overlay-2-08);
-  border-color: transparent;
-}
-
-.palette-two .carousel__edges .show-overlay-light ~ .carousel__navigation .carousel__btn path,
-.palette-two .carousel__edges .carousel__btn path {
-  fill: var(--background-overlay-2);
-}
-
-.palette-two .carousel__edges .show-overlay-dark ~ .carousel__navigation .carousel__btn path {
-  fill: var(--color-overlay-2);
-}
-
-.palette-two .carousel__edges .show-overlay-light ~ .carousel__pagination .carousel__dot:after,
-.palette-two .carousel__edges .carousel__dot:after {
-  background: var(--background-overlay-2-45);
-}
-
-.palette-two .carousel__edges .show-overlay-dark ~ .carousel__pagination .carousel__dot:after {
-  background: var(--color-overlay-2-45);
-}
-
-.palette-two .carousel__edges .show-overlay-light ~ .carousel__pagination .carousel__dot.active:after,
-.palette-two .carousel__edges .carousel__dot.active:after {
-  background: var(--background-overlay-2);
-}
-
-.palette-two .carousel__edges .show-overlay-dark ~ .carousel__pagination .carousel__dot.active:after {
-  background: var(--color-overlay-2);
-}
-
-.palette-two .carousel__edges .show-overlay-light ~ .carousel__counter,
-.palette-two .carousel__edges .carousel__counter {
-  color: var(--background-overlay-2);
-}
-
-.palette-two .carousel__edges .show-overlay-dark ~ .carousel__counter {
-  color: var(--color-overlay-2);
+.palette-five .carousel__btn path {
+  fill: var(--color-primary-5);
 }
 
 @media (min-width: 992px) {
@@ -444,37 +260,6 @@
     padding-right: 32px;
   }
 
-  .carousel__edges .carousel__item,
-  .carousel__edges .carousel__item:last-child {
-    min-width: var(--slide-width);
-  }
-
-  .carousel__edges .images__text-area {
-    margin-bottom: var(--margin-bottom);
-  }
-
-  .carousel__edges .carousel__navigation {
-    bottom: 33px;
-  }
-
-  .carousel__edges .carousel__dot {
-    width: 48px;
-    height: 16px;
-    margin-right: 4px;
-    margin-left: 4px;
-    margin-bottom: 3px;
-  }
-
-  .carousel__edges .carousel__dot:after {
-    border-radius: 50%;
-    width: 100%;
-    height: 2px;
-  }
-
-  .carousel__edges .carousel__counter {
-    bottom: 33px;
-  }
-
   .carousel__destroy .carousel__wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
@@ -500,14 +285,6 @@
   .carousel__destroy .carousel__navigation,
   .carousel__destroy .carousel__pagination {
     display: none;
-  }
-
-  .carousel-with-date-picker.carousel__edges .carousel__navigation {
-    bottom: calc(33px + var(--date-picker-block-height));
-  }
-
-  .carousel-with-date-picker.carousel__edges .carousel__counter {
-    bottom: calc(33px + var(--date-picker-block-height));
   }
 }
 
@@ -541,10 +318,6 @@
 }
 
 @media (hover: hover) {
-  .carousel__edges .carousel__dot:hover {
-    opacity: 1;
-  }
-
   .palette-one .carousel__btn:hover {
     border-color: var(--color-primary-1);
   }
@@ -559,41 +332,5 @@
 
   .palette-two .carousel__dot:hover:after {
     background: var(--color-primary-2);
-  }
-
-  .palette-one .carousel__edges .show-overlay-light ~ .carousel__navigation .carousel__btn:hover,
-  .palette-one .carousel__edges .carousel__btn:hover {
-    border-color: var(--background-overlay);
-  }
-
-  .palette-one .carousel__edges .show-overlay-dark ~ .carousel__navigation .carousel__btn:hover {
-    border-color: var(--color-overlay);
-  }
-
-  .palette-one .carousel__edges .show-overlay-light ~ .carousel__pagination .carousel__dot:hover:after,
-  .palette-one .carousel__edges .carousel__dot:hover:after {
-    background: var(--background-overlay);
-  }
-
-  .palette-one .carousel__edges .show-overlay-dark ~ .carousel__pagination .carousel__dot:hover:after {
-    background: var(--color-overlay);
-  }
-
-  .palette-two .carousel__edges .show-overlay-light ~ .carousel__navigation .carousel__btn:hover,
-  .palette-two .carousel__edges .carousel__btn:hover {
-    border-color: var(--background-overlay-2);
-  }
-
-  .palette-two .carousel__edges .show-overlay-dark ~ .carousel__navigation .carousel__btn:hover {
-    border-color: var(--color-overlay-2);
-  }
-
-  .palette-two .carousel__edges .show-overlay-light ~ .carousel__pagination .carousel__dot:hover:after,
-  .palette-two .carousel__edges .carousel__dot:hover:after {
-    background: var(--background-overlay-2);
-  }
-
-  .palette-two .carousel__edges .show-overlay-dark ~ .carousel__pagination .carousel__dot:hover:after {
-    background: var(--color-overlay-2);
   }
 }

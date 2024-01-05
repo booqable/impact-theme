@@ -1,23 +1,6 @@
 {
   "name": "Search",
   "sections": {
-    "hero-search": {
-      "type": "hero-search",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "button_label": "Browse products",
-        "color_palette": "two",
-        "message": "No results found",
-        "padding_bottom": "large",
-        "padding_bottom_mobile": "large",
-        "padding_top": "large",
-        "padding_top_mobile": "large",
-        "results_label": "results",
-        "title": "Search results for"
-      },
-      "disabled": null
-    },
     "search": {
       "type": "search",
       "blocks": {
@@ -49,7 +32,6 @@
     }
   },
   "order": [
-    "hero-search",
     "search"
   ]
 }

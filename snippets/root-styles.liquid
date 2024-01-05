@@ -2,12 +2,15 @@
   :root {
     {%- if settings.background_1 != blank -%}
       --background-primary-1: {{- settings.background_1 -}};
+      --background-primary-1-00: {{- settings.background_1 | append: "00" -}};
     {%- else -%}
       --background-primary-1: #FFFFFF;
+      --background-primary-1-00: #FFFFFF00;
     {%- endif -%}
 
     {%- if settings.primary_color_1 != blank -%}
       --color-primary-1: {{- settings.primary_color_1 -}};
+      --color-primary-1-30: {{- settings.primary_color_1 | append: "4D" -}};
       --color-primary-1-67: {{- settings.primary_color_1 | append: "AB" -}};
       --color-third-1: {{- settings.primary_color_1 | append: "66" -}};
       --color-fourth-1: {{- settings.primary_color_1 | append: "26" -}};
@@ -16,6 +19,7 @@
       --color-border-1: {{- settings.primary_color_1 | append: "26" -}};
     {%- else -%}
       --color-primary-1: #1A3333;
+      --color-primary-1-30: #1A33334D;
       --color-primary-1-67: #1A3333AB;
       --color-third-1: #1A333366;
       --color-fourth-1: #1A333326;
@@ -58,12 +62,15 @@
 
     {%- if settings.background_2 != blank -%}
       --background-primary-2: {{- settings.background_2 -}};
+      --background-primary-2-00: {{- settings.background_2 | append: "00" -}};
     {%- else -%}
       --background-primary-2: #53C787;
+      --background-primary-2-00: #53C78700;
     {%- endif -%}
 
     {%- if settings.primary_color_2 != blank -%}
       --color-primary-2: {{- settings.primary_color_2 -}};
+      --color-primary-2-30: {{- settings.primary_color_2 | append: "4D" -}};
       --color-primary-2-67: {{- settings.primary_color_2 | append: "AB" -}};
       --color-third-2: {{- settings.primary_color_2 | append: "66" -}};
       --color-fourth-2: {{- settings.primary_color_2 | append: "26" -}};
@@ -72,6 +79,7 @@
       --color-border-2: {{- settings.primary_color_2 | append: "26" -}};
     {%- else -%}
       --color-primary-2: #1A3333;
+      --color-primary-2-30: #1A33334D;
       --color-primary-2-67: #1A3333AB;
       --color-third-2: #1A333366;
       --color-fourth-2: #1A333326;
@@ -114,12 +122,15 @@
 
     {%- if settings.background_3 != blank -%}
       --background-primary-3: {{- settings.background_3 -}};
+      --background-primary-3-00: {{- settings.background_3 | append: "00" -}};
     {%- else -%}
       --background-primary-3: #E06B48;
+      --background-primary-3-00: #E06B4800;
     {%- endif -%}
 
     {%- if settings.primary_color_3 != blank -%}
       --color-primary-3: {{- settings.primary_color_3 -}};
+      --color-primary-3-30: {{- settings.primary_color_3 | append: "4D" -}};
       --color-primary-3-67: {{- settings.primary_color_3 | append: "AB" -}};
       --color-third-3: {{- settings.primary_color_3 | append: "66" -}};
       --color-fourth-3: {{- settings.primary_color_3 | append: "26" -}};
@@ -128,6 +139,7 @@
       --color-border-3: {{- settings.primary_color_3 | append: "26" -}};
     {%- else -%}
       --color-primary-3: #F6F4F2;
+      --color-primary-3-30: #F6F4F24D;
       --color-primary-3-67: #F6F4F2AB;
       --color-third-3: #F6F4F266;
       --color-fourth-3: #F6F4F226;
@@ -170,12 +182,15 @@
 
     {%- if settings.background_4 != blank -%}
       --background-primary-4: {{- settings.background_4 -}};
+      --background-primary-4-00: {{- settings.background_4 | append: "00" -}};
     {%- else -%}
       --background-primary-4: #1A3333;
+      --background-primary-4-00: #1A333300;
     {%- endif -%}
 
     {%- if settings.primary_color_4 != blank -%}
       --color-primary-4: {{- settings.primary_color_4 -}};
+      --color-primary-4-30: {{- settings.primary_color_4 | append: "4D" -}};
       --color-primary-4-67: {{- settings.primary_color_4 | append: "AB" -}};
       --color-third-4: {{- settings.primary_color_4 | append: "66" -}};
       --color-fourth-4: {{- settings.primary_color_4 | append: "26" -}};
@@ -184,6 +199,7 @@
       --color-border-4: {{- settings.primary_color_4 | append: "26" -}};
     {%- else -%}
       --color-primary-4: #F6F4F2;
+      --color-primary-4-30: #F6F4F24D;
       --color-primary-4-67: #F6F4F2AB;
       --color-third-4: #F6F4F266;
       --color-fourth-4: #F6F4F226;
@@ -226,12 +242,15 @@
 
     {%- if settings.background_5 != blank -%}
       --background-primary-5: {{- settings.background_5 -}};
+      --background-primary-5-00: {{- settings.background_5 | append: "00" -}};
     {%- else -%}
       --background-primary-5: #F6F4F2;
+      --background-primary-5-00: #F6F4F200;
     {%- endif -%}
 
     {%- if settings.primary_color_5 != blank -%}
       --color-primary-5: {{- settings.primary_color_5 -}};
+      --color-primary-5-30: {{- settings.primary_color_5 | append: "4D" -}};
       --color-primary-5-67: {{- settings.primary_color_5 | append: "AB" -}};
       --color-third-5: {{- settings.primary_color_5 | append: "66" -}};
       --color-fourth-5: {{- settings.primary_color_5 | append: "26" -}};
@@ -240,6 +259,7 @@
       --color-border-5: {{- settings.primary_color_5 | append: "26" -}};
     {%- else -%}
       --color-primary-5: #1A3333;
+      --color-primary-5-30: #1A33334D;
       --color-primary-5-67: #1A3333AB;
       --color-third-5: #1A333366;
       --color-fourth-5: #1A333326;
