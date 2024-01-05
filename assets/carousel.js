@@ -11,15 +11,11 @@ class Carousel {
       dot: ".carousel__dot",
       wrapper: ".carousel__wrapper",
       item: ".carousel__item",
-      timer: ".carousel__timer",
-      count: ".carousel__count"
+      timer: ".carousel__timer"
     }
 
     this.classes = {
-      show: "show",
-      fade: "carousel__fade-effect",
       full: "carousel__full-width",
-      edges: "carousel__edges",
       pause: "carousel__pause",
       dot: "carousel__dot",
       prev: "prev",
@@ -29,21 +25,11 @@ class Carousel {
 
     this.modifiers = {
       active: "active",
-      hidden: "hidden",
-      show: "show",
-      hide: "hide"
+      hidden: "hidden"
     }
 
     this.data = {
-      index: "data-index",
-      overlayColor: "data-overlay-color",
-      defaultColor: "data-dafault-color"
-    }
-
-    this.cssVar = {
-      overlay: "--overlay-color",
-      overlay08: "--overlay-color-08",
-      overlay45: "--overlay-color-45"
+      index: "data-index"
     }
 
     this.event = {
@@ -79,7 +65,6 @@ class Carousel {
     this.items = this.block.querySelectorAll(this.selector.item);
     this.btns = this.block.querySelectorAll(this.selector.btn);
     this.dots = this.block.querySelectorAll(this.selector.dot);
-    this.count = this.block.querySelector(this.selector.count);
     this.timers = this.block.querySelectorAll(this.selector.timer);
   }
 
@@ -89,7 +74,6 @@ class Carousel {
     this.pauseAutoRotate();
     this.hideControls();
     this.hidePaginationDots();
-    this.setOverlay(1);
 
     this.listener(this.dots, 'click', this.pagination);
     this.listener(this.dots, 'click', this.navigation);
@@ -147,8 +131,7 @@ class Carousel {
 
     if (!isPrev && !isNext && !isDot && !time) return false;
 
-    const isFade = this.block.classList.contains(this.classes.fade),
-          isFull = this.block.classList.contains(this.classes.full),
+    const isFull = this.block.classList.contains(this.classes.full),
           width = this.item.getBoundingClientRect().width,
           index = parseInt(target?.getAttribute(this.data.index)),
           prev = this.event.prev,
@@ -168,66 +151,40 @@ class Carousel {
     if (isFull) scrollX = width * children.length;
 
     if (isPrev) {
-      if (!isFade) {
-        const options = {
-          currentScroll: left,
-          clientVal: clientX,
-          scrollVal: scrollX,
-          scrollToVal: valueLeft,
-          size: width,
-          trigger: prev
-        }
-
-        valueLeft = this.slideEfect(event, options);
-
-      } else {
-        const options = {
-          items: children,
-          index: 0,
-          last: this.items.length
-        }
-
-        this.fadeEffect(event, options);
+      const options = {
+        currentScroll: left,
+        clientVal: clientX,
+        scrollVal: scrollX,
+        scrollToVal: valueLeft,
+        size: width,
+        trigger: prev
       }
+
+      valueLeft = this.slideEfect(event, options);
     }
 
     if (isNext || time) {
-      if (!isFade) {
-        const options = {
-          currentScroll: left,
-          clientVal: clientX,
-          scrollVal: scrollX,
-          scrollToVal: valueLeft,
-          size: width,
-          trigger: next
-        }
-
-        valueLeft = this.slideEfect(event, options);
-
-      } else {
-        const options = {
-          items: children,
-          index: this.items.length,
-          last: 1,
-          nextNumber: 1,
-          nextIndex: 2
-        }
-
-        this.fadeEffect(event, options);
-      }
-    }
-
-    if (isDot && !isFade) valueLeft = width * (index - 1);
-
-    if (!isFade) {
       const options = {
-        element: element,
-        left: valueLeft,
-        top: 0
+        currentScroll: left,
+        clientVal: clientX,
+        scrollVal: scrollX,
+        scrollToVal: valueLeft,
+        size: width,
+        trigger: next
       }
 
-      this.scrollTo(options);
+      valueLeft = this.slideEfect(event, options);
     }
+
+    if (isDot) valueLeft = width * (index - 1);
+
+    const options = {
+      element: element,
+      left: valueLeft,
+      top: 0
+    }
+
+    this.scrollTo(options);
   }
 
   // logic of Carousel's Prev and Next buttons (including vertical carousel)
@@ -263,36 +220,6 @@ class Carousel {
     return scrollToVal;
   }
 
-  // search new index for active slide on Fade carousel mode
-  fadeEffect(event, options) {
-    const { items, index, last, nextNumber, nextIndex } = options;
-    let i;
-
-    items.forEach((item, itemIndex) => {
-      if (item.classList.contains(this.classes.show)) {
-        const condition = itemIndex + (nextNumber ?? 0),
-              next = itemIndex + (nextIndex ?? 0);
-
-        i = condition === index ? last : next
-      }
-    })
-
-    this.pagination(event, i);
-    this.fadeClass(i);
-  }
-
-  // change slides in Fade effect mode
-  fadeClass(index) {
-    const isFade = this.block.classList.contains(this.classes.fade);
-
-    if (!isFade || !index || index > this.items.length) return false;
-
-    this.items.forEach((item, itemIndex) => {
-      item.classList.replace(this.modifiers.show, this.modifiers.hide);
-      if (itemIndex + 1 === index) item.classList.replace(this.modifiers.hide, this.modifiers.show);
-    })
-  }
-
   // change active dot of the pagination
   pagination(event, index) {
     const target = event?.target,
@@ -309,10 +236,6 @@ class Carousel {
       if (activeIndex === index) dot.classList.add(this.modifiers.active);
       if (typeof index === 'undefined') index = parseInt(target.getAttribute(this.data.index));
     })
-
-    this.counter(index);
-    this.fadeClass(index);
-    this.setOverlay(index);
   }
 
   // hide not used dots of the pagination
@@ -352,19 +275,6 @@ class Carousel {
          this.pagi?.classList.remove(this.modifiers.hidden))
   }
 
-  // change index of counter of slides
-  counter(i) {
-    if (!this.count) return false;
-
-    if (i === 0 || typeof i === 'undefined') return false;
-
-    let num = "";
-
-    if (i < 10) num = 0;
-
-    this.count.innerHTML = `${num}${i}`;
-  }
-
   // touchpoints detection on touch screens
   touchscreenPoints(event) {
     const wrap = event?.target.closest(this.selector.wrapper),
@@ -386,24 +296,16 @@ class Carousel {
           client = wrap?.clientWidth,
           next = wrap?.parentElement.querySelector(this.selector.next),
           prev = wrap?.parentElement.querySelector(this.selector.prev),
-          isFade = wrap?.parentElement.classList.contains(this.classes.fade),
           leftSwipe = this.touchstart > this.touchend,
-          rightSwipe = this.touchend > this.touchstart,
-          dots = this.getCurrentDot().dots,
-          index = this.getCurrentDot().index;
+          rightSwipe = this.touchend > this.touchstart;
 
-    if (!isFade) {
-      if (left >= 0 && left <= scroll - client) {
-        this.infinite = false;
+    if (left >= 0 && left <= scroll - client) {
+      this.infinite = false;
 
-        if (leftSwipe) this.trigger(next, this.event.click);
-        if (rightSwipe) this.trigger(prev, this.event.click);
+      if (leftSwipe) this.trigger(next, this.event.click);
+      if (rightSwipe) this.trigger(prev, this.event.click);
 
-        this.infinite = true;
-      }
-    } else {
-      if (leftSwipe && index < dots.length) this.pagination(undefined, index + 1);
-      if (rightSwipe && index > 1) this.pagination(undefined, index - 1);
+      this.infinite = true;
     }
   }
 
@@ -444,31 +346,6 @@ class Carousel {
     })
 
     return { index, dots };
-  }
-
-  // add/change overlay values to change colors of navigation/pagination buttons of images carousel with overlay
-  setOverlay(index) {
-    const isEdge = this.block.classList.contains(this.classes.edges);
-
-    if (!isEdge || !index || index > this.items.length) return false;
-
-    const defaultColor = this.block.getAttribute(this.data.defaultColor);
-
-    this.items.forEach((item, itemIndex) => {
-      const overlayColor = item.getAttribute(this.data.overlayColor);
-
-      if (itemIndex + 1 === index) {
-        if (overlayColor) {
-          this.setCssVar(this.cssVar.overlay, overlayColor);
-          this.setCssVar(this.cssVar.overlay08, `${overlayColor}24`);
-          this.setCssVar(this.cssVar.overlay45, `${overlayColor}73`);
-        } else {
-          this.setCssVar(this.cssVar.overlay, defaultColor);
-          this.setCssVar(this.cssVar.overlay08, `${defaultColor}24`);
-          this.setCssVar(this.cssVar.overlay45, `${defaultColor}73`);
-        }
-      }
-    })
   }
 
   setCssVar(key, val) {
