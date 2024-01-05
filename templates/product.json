@@ -1,20 +1,6 @@
 {
   "name": "Product",
   "sections": {
-    "hero-product": {
-      "type": "hero-product",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "color_palette": "two",
-        "padding_bottom": "none",
-        "padding_bottom_mobile": "none",
-        "padding_top": "small",
-        "padding_top_mobile": "small",
-        "show_datepicker": true
-      },
-      "disabled": null
-    },
     "product-page": {
       "type": "product-page",
       "blocks": {},
@@ -106,7 +92,6 @@
     }
   },
   "order": [
-    "hero-product",
     "product-page",
     "title",
     "products"

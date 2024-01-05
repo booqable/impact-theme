@@ -6,7 +6,7 @@
   list-style: decimal;
 }
 
-.bq-content.rx-content:not(.images__title) {
+.bq-content.rx-content:not(.hero__title) {
   font-family: var(--font-body);
   line-height: var(--line-height-lg);
   font-size: inherit;
