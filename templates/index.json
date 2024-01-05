@@ -88,14 +88,12 @@
         "logo_478118"
       ],
       "settings": {
-        "color_palette": "two",
-        "title": "Used by the world's most average companies",
-        "text_position": "left",
-        "text_position_mobile": "center",
-        "padding_bottom": "medium",
+        "color_palette": "three",
+        "title": "TRUSTED BY:",
+        "padding_bottom": "small",
         "padding_bottom_mobile": "small",
-        "padding_top": "large",
-        "padding_top_mobile": "large"
+        "padding_top": "small",
+        "padding_top_mobile": "small"
       },
       "disabled": false
     },
