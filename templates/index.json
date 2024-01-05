@@ -1,43 +1,33 @@
 {
   "name": "Home",
   "sections": {
-    "images": {
-      "type": "images",
-      "blocks": {
-        "slide": {
-          "type": "slide",
-          "settings": {
-            "button_1": "Check out products",
-            "button_url_1": "booqable://products/",
-            "button_2": "More info",
-            "button_url_2": "booqable://root/",
-            "color_overlay": "dark",
-            "description": "Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Suspendisse varius enim in <br> eros elementum tristique.",
-            "image": "booqable://assets/image-tough-hero.jpg",
-            "image_mobile": "booqable://assets/image-tough-hero-mobile.jpg",
-            "overlay_opacity": 80,
-            "text_position": "middle-left",
-            "text_position_mobile": "top-left",
-            "title": "Rent heavy <br> equipment"
-          },
-          "disabled": null
-        }
-      },
-      "block_order": [
-        "slide"
-      ],
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
       "settings": {
-        "color_palette": "two",
-        "effect": "slide",
-        "height": "small",
-        "padding_bottom": "medium",
+        "button_1": "Check out products",
+        "button_url_1": "booqable://products/",
+        "button_2": "More info",
+        "button_url_2": "booqable://root/",
+        "color_palette": "four",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <br> varius enim in eros elementum tristique.",
+        "height": "medium",
+        "image": "booqable://assets/image-hero.jpeg",
+        "image_mobile": "",
+        "overlay_background": "#1A3333",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 72,
+        "padding_bottom": "large",
         "padding_bottom_mobile": "large",
-        "padding_top": "medium",
+        "padding_top": "large",
         "padding_top_mobile": "large",
-        "pause": true,
-        "show_datepicker": true,
-        "datepicker_title": "",
-        "timer": 5
+        "show_overlay": true,
+        "tag": "",
+        "text_position": "left",
+        "text_position_mobile": "left",
+        "title": "Explore like <br> a daredevil",
+        "video_url": ""
       },
       "disabled": null
     },
@@ -434,7 +424,7 @@
     }
   },
   "order": [
-    "images",
+    "hero",
     "logos",
     "title",
     "collections",

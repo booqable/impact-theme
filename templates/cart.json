@@ -1,19 +1,6 @@
 {
   "name": "Cart",
   "sections": {
-    "hero": {
-      "type": "hero",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "padding_bottom": "medium",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "medium",
-        "padding_top_mobile": "medium",
-        "show_datepicker": true
-      },
-      "disabled": null
-    },
     "cart": {
       "type": "cart",
       "blocks": [],
@@ -28,7 +15,6 @@
     }
   },
   "order": [
-    "hero",
     "cart"
   ]
 }
