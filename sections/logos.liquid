@@ -13,9 +13,6 @@
   {% comment %} CSS variables start {% endcomment %}
   {%- capture variables -%}
     {%- case padding_top -%}
-      {%- when 'none' -%}
-        --padding-top: 1px;
-        --margin-top: -1px;
       {%- when 'small' -%}
         --padding-top: 40px;
       {%- when 'medium' -%}
@@ -25,8 +22,6 @@
     {%- endcase -%}
 
     {%- case padding_bottom -%}
-      {%- when 'none' -%}
-        --padding-bottom: 0;
       {%- when 'small' -%}
         --padding-bottom: 40px;
       {%- when 'medium' -%}
@@ -36,9 +31,6 @@
     {%- endcase -%}
 
     {%- case padding_top_mobile -%}
-      {%- when 'none' -%}
-        --padding-top-mobile: 1px;
-        --margin-top-mobile: -1px;
       {%- when 'small' -%}
         --padding-top-mobile: 40px;
       {%- when 'medium' -%}
@@ -48,8 +40,6 @@
     {%- endcase -%}
 
     {%- case padding_bottom_mobile -%}
-      {%- when 'none' -%}
-        --padding-bottom-mobile: 0;
       {%- when 'small' -%}
         --padding-bottom-mobile: 40px;
       {%- when 'medium' -%}
@@ -65,40 +55,34 @@
     style="{{- variables | escape -}}"
   >
     <div class="logos__container container">
-      <div class="logos__columns">
-        {%- if title != blank -%}
-          <div class="logos__col">
-            <h2 class="logos__title h6">{{- title -}}</h2>
+      {%- if title != blank -%}
+        <h2 class="logos__title h6">{{- title -}}</h2>
+      {%- endif -%}
+
+      <div class="logos__images">
+        {%- for block in section.blocks -%}
+          {%- assign image = block.settings.image -%}
+
+          {%- if image != blank -%}
+            {%- assign image = image -%}
+          {%- elsif image_placeholder != blank -%}
+            {%- assign image = image_placeholder -%}
+          {%- else -%}
+            {%- assign image = blank -%}
+          {%- endif -%}
+
+          <div class="logos__image-wrapper{% if image == blank %} no-image{% endif %}" id="{{- block.id -}}">
+            {%- if image.url != blank -%}
+              {%- render 'image',
+                image: image,
+                loading: 'lazy',
+                class: 'logos__image',
+                custom_width: '256',
+                custom_size: '256px'
+              -%}
+            {%- endif -%}
           </div>
-        {%- endif -%}
-
-        {%- if section.blocks.size >= 1 -%}
-          <div class="logos__col logos__logos">
-            {%- for block in section.blocks -%}
-              {%- assign image = block.settings.image -%}
-
-              {%- if image != blank -%}
-                {%- assign image = image -%}
-              {%- elsif image_placeholder != blank -%}
-                {%- assign image = image_placeholder -%}
-              {%- else -%}
-                {%- assign image = blank -%}
-              {%- endif -%}
-
-              <div class="logos__image-wrapper{% if image == blank %} no-image{% endif %}" id="{{- block.id -}}">
-                {%- if image.url != blank -%}
-                  {%- render 'image',
-                    image: image,
-                    loading: 'lazy',
-                    class: 'logos__image',
-                    custom_width: '150',
-                    custom_size: '150px'
-                  -%}
-                {%- endif -%}
-              </div>
-            {%- endfor -%}
-          </div>
-        {%- endif -%}
+        {%- endfor -%}
       </div>
     </div>
   </div>

@@ -1,26 +1,13 @@
 .logos__wrapper--padding-top {
-  padding-top: var(--padding-top-mobile);
-  margin-top: var(--margin-top-mobile, 0px);
+  padding-top: var(--padding-top-mobile, 0px);
 }
 
 .header-transparent ~ main .logos:first-child .logos__wrapper--padding-top {
-  padding-top: calc(var(--padding-top-mobile) + var(--header-height, 110px) - var(--top-bar-height, 0px));
+  padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
 }
 
 .logos__wrapper--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile);
-}
-
-.logos__columns {
-  display: flex;
-  flex-direction: column;
-}
-
-.logos__col {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
+  padding-bottom: var(--padding-bottom-mobile, 0px);
 }
 
 .logos__title {
@@ -28,18 +15,23 @@
   text-align: center;
 }
 
-.logos__logos {
-  margin: 0 -8px;
-  width: calc(100% + 16px);
+.logos__images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding-top: 15px;
 }
 
 .logos__image-wrapper {
-  padding: 0 8px 31px;
-  max-width: 256px;
+  padding: 15px 0 6px;
 }
 
 .logos__image-wrapper img {
-  max-height: 64px;
+  max-height: 100px;
+  max-width: 150px;
+  margin: 0 auto;
 }
 
 .logos__image-wrapper.no-image {
@@ -115,45 +107,28 @@
 
 @media (min-width: 992px) {
   .logos__wrapper--padding-top {
-    padding-top: var(--padding-top);
-    margin-top: var(--margin-top, 0px);
+    padding-top: var(--padding-top, 0px);
   }
 
   .header-transparent ~ main .logos:first-child .logos__wrapper--padding-top {
-    padding-top: calc(var(--padding-top) + var(--header-height, 110px) - var(--top-bar-height, 0px));
+    padding-top: calc(var(--padding-top, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
   }
 
   .logos__wrapper--padding-bottom {
-    padding-bottom: var(--padding-bottom);
+    padding-bottom: var(--padding-bottom, 0px);
   }
 
-  .logos__columns {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .logos__col:not(.logos__logos) {
-    max-width: none;
-    min-width: 180px;
-    width: auto;
-  }
-
-  .logos__logos {
-    align-items: center;
-  }
-
-  .logos__col + .logos__logos {
-    justify-content: center;
-    padding: 36px 0 0;
-  }
-
-  .logos__title {
-    padding: 0;
-    margin: 0;
-    text-align: center;
+  .logos__images {
+    gap: 52px;
+    padding-top: 31px;
   }
 
   .logos__image-wrapper {
-    padding-bottom: 16px;
+    padding: 0;
+  }
+
+  .logos__image-wrapper img {
+    max-height: 150px;
+    max-width: 100%;
   }
 }
