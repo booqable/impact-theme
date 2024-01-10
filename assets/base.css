@@ -16,6 +16,7 @@
   --slide-width: 318px;
   --slide-width-mobile: 250px;
   --thumbnail-size: 92px;
+  --title-max-width: 302px;
 
   /* Mosaic section grid */
   --grid-row: 2;
@@ -209,9 +210,9 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 20px;
-  line-height: 1.4;
-  letter-spacing: 0;
-  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+  letter-spacing: 2px;
+  font-weight: var(--font-weight-medium);
 }
 
 .palette-one :is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {

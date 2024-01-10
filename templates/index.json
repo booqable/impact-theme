@@ -37,35 +37,35 @@
         "logo": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-1-white.png"
+            "image": "booqable://assets/image-partner-logo-1-black.png"
           },
           "disabled": null
         },
         "logo_478138": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2-white.png"
+            "image": "booqable://assets/image-partner-logo-2-black.png"
           },
           "disabled": null
         },
         "logo_478148": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3-white.png"
+            "image": "booqable://assets/image-partner-logo-3-black.png"
           },
           "disabled": null
         },
         "logo_478178": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-1-white.png"
+            "image": "booqable://assets/image-partner-logo-1-black.png"
           },
           "disabled": null
         },
         "logo_478118": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3-white.png"
+            "image": "booqable://assets/image-partner-logo-3-black.png"
           },
           "disabled": null
         }
@@ -78,14 +78,12 @@
         "logo_478118"
       ],
       "settings": {
-        "color_palette": "two",
-        "title": "Used by the world's most average companies",
-        "text_position": "left",
-        "text_position_mobile": "center",
-        "padding_bottom": "medium",
-        "padding_bottom_mobile": "small",
-        "padding_top": "large",
-        "padding_top_mobile": "large"
+        "color_palette": "three",
+        "title": "TRUSTED BY:",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "small"
       },
       "disabled": false
     },
@@ -174,21 +172,45 @@
       },
       "disabled": null
     },
-    "title_987654": {
-      "type": "title",
-      "blocks": {},
-      "block_order": [],
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial": {
+          "type": "testimonial",
+          "settings": {
+            "button": "Check review online",
+            "button_url": "booqable://root/",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234567": {
+          "type": "testimonial",
+          "settings": {
+            "button": "Check review online",
+            "button_url": "booqable://root/",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial",
+        "testimonial_234567"
+      ],
       "settings": {
-        "button_label": "View all",
-        "button_url": "/collections/all",
-        "color_palette": "one",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "large",
+        "color_palette": "three",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
         "padding_top_mobile": "medium",
-        "tag": "TAGLINE",
-        "title": "Products"
+        "rounded_corners": "none",
+        "show_navigation": true,
+        "title": "What people <br>say about us"
       },
       "disabled": null
     },
@@ -440,7 +462,7 @@
     "title",
     "collections",
     "text-with-image",
-    "title_987654",
+    "testimonials",
     "products",
     "title_987655",
     "title_987656",

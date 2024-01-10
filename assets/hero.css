@@ -14,15 +14,15 @@
 }
 
 .hero__container--padding-top {
-  padding-top: var(--padding-top-mobile);
+  padding-top: var(--padding-top-mobile, 0);
 }
 
 .header-transparent ~ main .hero:first-child .hero__container--padding-top {
-  padding-top: calc(var(--padding-top-mobile) + var(--header-height, 110px) - var(--top-bar-height, 0px));
+  padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
 }
 
 .hero__container--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile);
+  padding-bottom: var(--padding-bottom-mobile, 0);
 }
 
 .hero__text-area {
@@ -200,15 +200,15 @@
   }
 
   .hero__container--padding-top {
-    padding-top: var(--padding-top);
+    padding-top: var(--padding-top, 0);
   }
 
   .header-transparent ~ main .hero:first-child .hero__container--padding-top {
-    padding-top: calc(var(--padding-top) + var(--header-height, 110px) - var(--top-bar-height, 0px));
+    padding-top: calc(var(--padding-top, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
   }
 
   .hero__container--padding-bottom {
-    padding-bottom: var(--padding-bottom);
+    padding-bottom: var(--padding-bottom, 0);
   }
 
   .hero__vision-wrapper {
