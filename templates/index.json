@@ -172,21 +172,45 @@
       },
       "disabled": null
     },
-    "title_987654": {
-      "type": "title",
-      "blocks": {},
-      "block_order": [],
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial": {
+          "type": "testimonial",
+          "settings": {
+            "button": "Check review online",
+            "button_url": "booqable://root/",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234567": {
+          "type": "testimonial",
+          "settings": {
+            "button": "Check review online",
+            "button_url": "booqable://root/",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial",
+        "testimonial_234567"
+      ],
       "settings": {
-        "button_label": "View all",
-        "button_url": "/collections/all",
-        "color_palette": "one",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "large",
+        "color_palette": "three",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
         "padding_top_mobile": "medium",
-        "tag": "TAGLINE",
-        "title": "Products"
+        "rounded_corners": "none",
+        "show_navigation": true,
+        "title": "What people <br>say about us"
       },
       "disabled": null
     },
@@ -436,7 +460,7 @@
     "title",
     "collections",
     "text-with-image",
-    "title_987654",
+    "testimonials",
     "products",
     "title_987655",
     "title_987656",

@@ -1,5 +1,5 @@
 .logos__wrapper--padding-top {
-  padding-top: var(--padding-top-mobile, 0px);
+  padding-top: var(--padding-top-mobile, 0);
 }
 
 .header-transparent ~ main .logos:first-child .logos__wrapper--padding-top {
@@ -7,7 +7,7 @@
 }
 
 .logos__wrapper--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile, 0px);
+  padding-bottom: var(--padding-bottom-mobile, 0);
 }
 
 .logos__title {
@@ -107,7 +107,7 @@
 
 @media (min-width: 992px) {
   .logos__wrapper--padding-top {
-    padding-top: var(--padding-top, 0px);
+    padding-top: var(--padding-top, 0);
   }
 
   .header-transparent ~ main .logos:first-child .logos__wrapper--padding-top {
@@ -115,7 +115,7 @@
   }
 
   .logos__wrapper--padding-bottom {
-    padding-bottom: var(--padding-bottom, 0px);
+    padding-bottom: var(--padding-bottom, 0);
   }
 
   .logos__images {
