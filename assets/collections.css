@@ -4,16 +4,15 @@
 }
 
 .collections__wrapper--padding-top {
-  padding-top: var(--padding-top-mobile);
-  margin-top: var(--margin-top-mobile, 0px);
+  padding-top: var(--padding-top-mobile, 0);
 }
 
 .header-transparent ~ main .collections:first-child .collections__wrapper--padding-top {
-  padding-top: calc(var(--padding-top-mobile) + var(--header-height, 110px) - var(--top-bar-height, 0px));
+  padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
 }
 
 .collections__wrapper--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile);
+  padding-bottom: var(--padding-bottom-mobile, 0);
 }
 
 .collections__list {
@@ -246,16 +245,15 @@
 
 @media (min-width: 1100px) {
   .collections__wrapper--padding-top {
-    padding-top: var(--padding-top);
-    margin-top: var(--margin-top, 0px);
+    padding-top: var(--padding-top, 0);
   }
 
   .header-transparent ~ main .collections:first-child .collections__wrapper--padding-top {
-    padding-top: calc(var(--padding-top) + var(--header-height, 110px) - var(--top-bar-height, 0px));
+    padding-top: calc(var(--padding-top, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
   }
 
   .collections__wrapper--padding-bottom {
-    padding-bottom: var(--padding-bottom);
+    padding-bottom: var(--padding-bottom, 0);
   }
 
   .collections__list {

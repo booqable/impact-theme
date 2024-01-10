@@ -1,5 +1,5 @@
 .testimonials__wrapper--padding-top {
-  padding-top: var(--padding-top-mobile, 0px);
+  padding-top: var(--padding-top-mobile, 0);
 }
 
 .header-transparent ~ main .testimonials:first-child .testimonials__wrapper--padding-top {
@@ -7,7 +7,7 @@
 }
 
 .testimonials__wrapper--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile, 0px);
+  padding-bottom: var(--padding-bottom-mobile, 0);
 }
 
 .testimonials__side {
@@ -207,7 +207,7 @@
 
 @media (min-width: 992px) {
   .testimonials__wrapper--padding-top {
-    padding-top: var(--padding-top, 0px);
+    padding-top: var(--padding-top, 0);
   }
 
   .header-transparent ~ main .testimonials:first-child .testimonials__wrapper--padding-top {
@@ -215,7 +215,7 @@
   }
 
   .testimonials__wrapper--padding-bottom {
-    padding-bottom: var(--padding-bottom, 0px);
+    padding-bottom: var(--padding-bottom, 0);
   }
 
   .testimonials__container {
