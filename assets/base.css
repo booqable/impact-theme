@@ -210,9 +210,9 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 20px;
-  line-height: 1.4;
-  letter-spacing: 0;
-  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+  letter-spacing: 2px;
+  font-weight: var(--font-weight-medium);
 }
 
 .palette-one :is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
