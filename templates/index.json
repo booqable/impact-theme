@@ -306,10 +306,10 @@
           "settings": {
             "article_btn": "Read more",
             "article_btn_url": "booqable://root/",
-            "article_tag": "TAGLINE",
-            "heading": "Our biggest project",
+            "article_tag": "Tagline",
+            "heading": "Medium length section heading goes here",
             "image": "booqable://assets/image-tough-mosaic.jpg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
           },
           "disabled": null
         },
@@ -317,10 +317,11 @@
           "type": "article",
           "settings": {
             "article_btn": "Read more",
-            "article_tag": "TAGLINE",
-            "heading": "January Update",
-            "image": "booqable://assets/image-tough-bell.png",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Tagline",
+            "heading": "Medium length section heading goes here",
+            "image": "booqable://assets/image-tough-mosaic.jpg",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
           },
           "disabled": null
         },
@@ -328,10 +329,11 @@
           "type": "article",
           "settings": {
             "article_btn": "Read more",
-            "article_tag": "TAGLINE",
-            "heading": "December Update",
-            "image": "booqable://assets/image-tough-bell.png",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Tagline",
+            "heading": "Medium length section heading goes here",
+            "image": "booqable://assets/image-tough-mosaic.jpg",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
           },
           "disabled": null
         }
@@ -343,12 +345,12 @@
       ],
       "settings": {
         "button_label": "See all Articles",
-        "color_palette": "one",
-        "layout": "left",
+        "color_palette": "four",
         "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
         "padding_top": "small",
-        "padding_top_mobile": "small"
+        "padding_top_mobile": "small",
+        "title": "What's in the news"
       },
       "disabled": null
     },
