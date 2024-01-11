@@ -18,18 +18,18 @@
   {%- capture variables -%}
     {%- case padding_top -%}
       {%- when 'small' -%}
-        --padding-top: 24px;
+        --padding-top: 40px;
       {%- when 'medium' -%}
-        --padding-top: 68px;
+        --padding-top: 80px;
       {%- when 'large' -%}
         --padding-top: 112px;
     {%- endcase -%}
 
     {%- case padding_bottom -%}
       {%- when 'small' -%}
-        --padding-bottom: 24px;
+        --padding-bottom: 40px;
       {%- when 'medium' -%}
-        --padding-bottom: 68px;
+        --padding-bottom: 80px;
       {%- when 'large' -%}
         --padding-bottom: 112px;
     {%- endcase -%}
@@ -59,11 +59,23 @@
     style="{{- variables | escape -}}"
   >
     <div class="mosaic__container container">
-      {%- if title != blank -%}
-        <h2 class="mosaic__title h4">{{- title -}}</h2>
+      {%- if title != blank or button_label != blank and button_url != blank -%}
+        <div class="mosaic__top">
+          {%- if title != blank -%}
+            <h2 class="mosaic__title h4">{{- title -}}</h2>
+          {%- endif -%}
+
+          {%- if button_label != blank and button_url != blank -%}
+            <div class="mosaic__show-wrapper">
+              <a href="{{ button_url }}" class="mosaic__show-button button button--outlined button--large">
+                {{- button_label -}}
+              </a>
+            </div>
+          {%- endif -%}
+        </div>
       {%- endif -%}
 
-      <div class="mosaic__list{% if blocks.size > 3 %} mosaic__list-two-rows{%- endif -%}">
+      <div class="mosaic__list mosaic__list--{{- blocks.size -}}">
         {%- for block in blocks -%}
           {%- assign article_tag     = block.settings.article_tag -%}
           {%- assign heading         = block.settings.heading -%}
@@ -81,7 +93,7 @@
           {%- endif -%}
 
           <div class="mosaic__item" id="{{- block.id -}}">
-            <div class="mosaic__item-col{% if image == blank %} no-image{% else %} mosaic__item-col--image{%- endif -%}">
+            <div class="mosaic__image-wrapper{% if image == blank %} no-image{%- endif -%}">
               {%- if image != blank -%}
                 {%- render 'image',
                   image: image,
@@ -92,16 +104,14 @@
               {%- endif -%}
             </div>
 
-            <div class="mosaic__item-col">
+            {%- if article_tag != blank or heading != blank or text != blank or article_btn != blank and article_btn_url != blank -%}
               <div class="mosaic__text-area">
                 {%- if article_tag != blank -%}
                   <strong class="mosaic__tag tagline">{{- article_tag -}}</strong>
                 {%- endif -%}
 
                 {%- if heading != blank -%}
-                  <h3 class="mosaic__heading h5">
-                    {{- heading -}}
-                  </h3>
+                  <h3 class="mosaic__heading h5">{{- heading -}}</h3>
                 {%- endif -%}
 
                 {%- if text != blank -%}
@@ -116,14 +126,14 @@
                   </div>
                 {%- endif -%}
               </div>
-            </div>
+            {%- endif -%}
           </div>
         {%- endfor -%}
       </div>
 
       {%- if button_label != blank and button_url != blank -%}
-        <div class="mosaic__show-wrapper">
-          <a href="{{ button_url }}" class="mosaic__show button button--outlined button--large">
+        <div class="mosaic__show-wrapper mosaic__bottom">
+          <a href="{{ button_url }}" class="mosaic__show-button button button--outlined button--large">
             {{- button_label -}}
           </a>
         </div>
@@ -312,20 +322,20 @@
             "type": "text",
             "id": "article_tag",
             "label": "Tagline",
-            "default": "TAGLINE",
+            "default": "Tagline",
             "info": "Leave blank to hide tagline"
           },
           {
             "type": "text",
             "id": "heading",
             "label": "Title",
-            "default": "Our biggest project"
+            "default": "Medium length section heading goes here"
           },
           {
             "type": "contentEditor",
             "id": "text",
             "label": "Description",
-            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
           },
           {
             "type": "image_picker",
