@@ -18,10 +18,6 @@
   --thumbnail-size: 92px;
   --title-max-width: 302px;
 
-  /* Mosaic section grid */
-  --grid-row: 2;
-  --grid-auto-flow: dense;
-
   /* Colors */
   --color-azureish-white: #D7E2FF;
   --color-begonia: #FF6E6E;

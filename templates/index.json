@@ -214,6 +214,63 @@
       },
       "disabled": null
     },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Tagline",
+            "heading": "Medium length section heading goes here",
+            "image": "booqable://assets/image-articles-1.jpg",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+          },
+          "disabled": null
+        },
+        "article_456231": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Tagline",
+            "heading": "Medium length section heading goes here",
+            "image": "booqable://assets/image-articles-2.jpg",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+          },
+          "disabled": null
+        },
+        "article_456232": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Tagline",
+            "heading": "Medium length section heading goes here",
+            "image": "booqable://assets/image-articles-3.jpg",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article",
+        "article_456231",
+        "article_456232"
+      ],
+      "settings": {
+        "button_label": "See all Articles",
+        "button_url": "booqable://root/",
+        "color_palette": "four",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "title": "What's in the news"
+      },
+      "disabled": null
+    },
     "products": {
       "type": "products",
       "blocks": {
@@ -320,60 +377,6 @@
       },
       "disabled": null
     },
-    "mosaic": {
-      "type": "mosaic",
-      "blocks": {
-        "article": {
-          "type": "article",
-          "settings": {
-            "article_btn": "Read more",
-            "article_btn_url": "booqable://root/",
-            "article_tag": "TAGLINE",
-            "heading": "Our biggest project",
-            "image": "booqable://assets/image-tough-mosaic.jpg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          },
-          "disabled": null
-        },
-        "article_456231": {
-          "type": "article",
-          "settings": {
-            "article_btn": "Read more",
-            "article_tag": "TAGLINE",
-            "heading": "January Update",
-            "image": "booqable://assets/image-tough-bell.png",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          },
-          "disabled": null
-        },
-        "article_456232": {
-          "type": "article",
-          "settings": {
-            "article_btn": "Read more",
-            "article_tag": "TAGLINE",
-            "heading": "December Update",
-            "image": "booqable://assets/image-tough-bell.png",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          },
-          "disabled": null
-        }
-      },
-      "block_order": [
-        "article",
-        "article_456231",
-        "article_456232"
-      ],
-      "settings": {
-        "button_label": "See all Articles",
-        "color_palette": "one",
-        "layout": "left",
-        "padding_bottom": "large",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "small",
-        "padding_top_mobile": "small"
-      },
-      "disabled": null
-    },
     "title_987650": {
       "type": "title",
       "blocks": {},
@@ -456,17 +459,17 @@
   },
   "order": [
     "hero",
-    "logos",
-    "title",
+    "call-to-action",
     "collections",
-    "text-with-image",
-    "testimonials",
     "products",
-    "title_987655",
-    "title_987656",
-    "mosaic",
+    "testimonials",
+    "logos",
+    "articles",
     "title_987650",
     "accordion",
-    "call-to-action"
+    "text-with-image",
+    "title",
+    "title_987655",
+    "title_987656"
   ]
 }
