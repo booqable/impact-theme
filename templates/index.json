@@ -214,8 +214,8 @@
       },
       "disabled": null
     },
-    "mosaic": {
-      "type": "mosaic",
+    "articles": {
+      "type": "articles",
       "blocks": {
         "article": {
           "type": "article",
@@ -224,7 +224,7 @@
             "article_btn_url": "booqable://root/",
             "article_tag": "Tagline",
             "heading": "Medium length section heading goes here",
-            "image": "booqable://assets/image-mosaic-1.jpg",
+            "image": "booqable://assets/image-articles-1.jpg",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
           },
           "disabled": null
@@ -236,7 +236,7 @@
             "article_btn_url": "booqable://root/",
             "article_tag": "Tagline",
             "heading": "Medium length section heading goes here",
-            "image": "booqable://assets/image-mosaic-2.jpg",
+            "image": "booqable://assets/image-articles-2.jpg",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
           },
           "disabled": null
@@ -248,7 +248,7 @@
             "article_btn_url": "booqable://root/",
             "article_tag": "Tagline",
             "heading": "Medium length section heading goes here",
-            "image": "booqable://assets/image-mosaic-3.jpg",
+            "image": "booqable://assets/image-articles-3.jpg",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
           },
           "disabled": null
@@ -464,7 +464,7 @@
     "products",
     "testimonials",
     "logos",
-    "mosaic",
+    "articles",
     "title_987650",
     "accordion",
     "text-with-image",

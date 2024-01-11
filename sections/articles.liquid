@@ -2,7 +2,7 @@
 
 {%- if blocks.size > 0 -%}
 
-  {{ "mosaic.css" | asset_url | stylesheet_tag }}
+  {{ "articles.css" | asset_url | stylesheet_tag }}
 
   {%- assign button_label          = section.settings.button_label -%}
   {%- assign button_url            = section.settings.button_url -%}
@@ -55,19 +55,19 @@
   {% comment %} CSS variables end {% endcomment %}
 
   <div
-    class="mosaic__wrapper palette-{{ color_palette }}{% if padding_top != blank or padding_top_mobile != blank %} mosaic__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} mosaic__wrapper--padding-bottom{%- endif -%}"
+    class="articles__wrapper palette-{{ color_palette }}{% if padding_top != blank or padding_top_mobile != blank %} articles__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} articles__wrapper--padding-bottom{%- endif -%}"
     style="{{- variables | escape -}}"
   >
-    <div class="mosaic__container container">
+    <div class="articles__container container">
       {%- if title != blank or button_label != blank and button_url != blank -%}
-        <div class="mosaic__top">
+        <div class="articles__top">
           {%- if title != blank -%}
-            <h2 class="mosaic__title h4">{{- title -}}</h2>
+            <h2 class="articles__title h4">{{- title -}}</h2>
           {%- endif -%}
 
           {%- if button_label != blank and button_url != blank -%}
-            <div class="mosaic__show-wrapper">
-              <a href="{{ button_url }}" class="mosaic__show-button button button--outlined button--large">
+            <div class="articles__show-wrapper">
+              <a href="{{ button_url }}" class="articles__show-button button button--outlined button--large">
                 {{- button_label -}}
               </a>
             </div>
@@ -75,7 +75,7 @@
         </div>
       {%- endif -%}
 
-      <div class="mosaic__list mosaic__list--{{- blocks.size -}}">
+      <div class="articles__list articles__list--{{- blocks.size -}}">
         {%- for block in blocks -%}
           {%- assign article_tag     = block.settings.article_tag -%}
           {%- assign heading         = block.settings.heading -%}
@@ -92,35 +92,35 @@
             {%- assign image = blank -%}
           {%- endif -%}
 
-          <div class="mosaic__item" id="{{- block.id -}}">
-            <div class="mosaic__image-wrapper{% if image == blank %} no-image{%- endif -%}">
+          <div class="articles__item" id="{{- block.id -}}">
+            <div class="articles__image-wrapper{% if image == blank %} no-image{%- endif -%}">
               {%- if image != blank -%}
                 {%- render 'image',
                   image: image,
                   loading: 'lazy',
-                  class: 'mosaic__image',
+                  class: 'articles__image',
                   size: 'm'
                 -%}
               {%- endif -%}
             </div>
 
             {%- if article_tag != blank or heading != blank or text != blank or article_btn != blank and article_btn_url != blank -%}
-              <div class="mosaic__text-area">
+              <div class="articles__text-area">
                 {%- if article_tag != blank -%}
-                  <strong class="mosaic__tag tagline">{{- article_tag -}}</strong>
+                  <strong class="articles__tag tagline">{{- article_tag -}}</strong>
                 {%- endif -%}
 
                 {%- if heading != blank -%}
-                  <h3 class="mosaic__heading h5">{{- heading -}}</h3>
+                  <h3 class="articles__heading h5">{{- heading -}}</h3>
                 {%- endif -%}
 
                 {%- if text != blank -%}
-                  <div class="mosaic__text bq-content rx-content">{{- text | truncate: 200, " ..."  -}}</div>
+                  <div class="articles__text bq-content rx-content">{{- text | truncate: 200, " ..."  -}}</div>
                 {%- endif -%}
 
                 {%- if article_btn != blank and article_btn_url != blank -%}
-                  <div class="mosaic__buttons">
-                    <a href="{{  article_btn_url }}" class="mosaic__button button button--primary button--large">
+                  <div class="articles__buttons">
+                    <a href="{{ article_btn_url }}" class="articles__button button button--primary button--large">
                       {{- article_btn -}}
                     </a>
                   </div>
@@ -132,8 +132,8 @@
       </div>
 
       {%- if button_label != blank and button_url != blank -%}
-        <div class="mosaic__show-wrapper mosaic__bottom">
-          <a href="{{ button_url }}" class="mosaic__show-button button button--outlined button--large">
+        <div class="articles__show-wrapper articles__bottom">
+          <a href="{{ button_url }}" class="articles__show-button button button--outlined button--large">
             {{- button_label -}}
           </a>
         </div>
@@ -144,10 +144,10 @@
 
 {% schema %}
   {
-    "name": "Mosaic",
+    "name": "Articles",
     "description": "Add text with images in various layouts",
     "tag": "section",
-    "class": "mosaic",
+    "class": "articles",
     "settings": [
       {
         "type": "header",
