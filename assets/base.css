@@ -13,10 +13,10 @@
   --button-margin-bottom: 16px;
 
   /* Carousel */
-  --slide-width: 318px;
-  --slide-width-mobile: 250px;
+  --slide-width: 332px;
+  --slide-width-mobile: 264px;
   --thumbnail-size: 92px;
-  --title-max-width: 302px;
+  --title-max-width: 352px;
 
   /* Colors */
   --color-azureish-white: #D7E2FF;

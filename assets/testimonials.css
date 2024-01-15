@@ -271,29 +271,9 @@
     height: auto;
   }
 
-  .testimonials .carousel::before,
-  .testimonials .carousel::after {
-    content: "";
-    position: absolute;
-    right: calc(100% - 10px);
-    top: 0;
-    bottom: 0;
-    width: 62px;
-    z-index: 1;
-  }
-
-  .testimonials .carousel::after {
-    right: auto;
-    left: calc(100% - 10px);
-  }
-
   .testimonials .carousel__item {
     max-width: var(--slide-width);
     transition: none;
-  }
-
-  .testimonials .carousel__item:last-child .carousel__inner {
-    padding-right: 32px;
   }
 
   .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel {
@@ -312,7 +292,7 @@
     left: auto;
   }
 
-  .testimonials__wrapper .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel.carousel--controls .carousel__wrapper {
+  .testimonials__wrapper .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel.controls .carousel__wrapper {
     padding: 0;
   }
 
@@ -320,60 +300,20 @@
     left: calc(-1 * var(--title-max-width) - 32px);
   }
 
-  .palette-one.testimonials__wrapper .carousel::before {
-    background: linear-gradient(90deg, var(--background-primary-1) 42.92%, var(--background-primary-1-00) 95%);
-  }
-
-  .palette-one.testimonials__wrapper .carousel::after {
-    background: linear-gradient(-90deg, var(--background-primary-1) 42.92%, var(--background-primary-1-00) 95%);
-  }
-
   .palette-one .testimonials__side {
     border-color: var(--background-accent-1);
-  }
-
-  .palette-two.testimonials__wrapper .carousel::before {
-    background: linear-gradient(90deg, var(--background-primary-2) 42.92%, var(--background-primary-2-00) 95%);
-  }
-
-  .palette-two.testimonials__wrapper .carousel::after {
-    background: linear-gradient(-90deg, var(--background-primary-2) 42.92%, var(--background-primary-2-00) 95%);
   }
 
   .palette-two .testimonials__side {
     border-color: var(--background-accent-2);
   }
 
-  .palette-three.testimonials__wrapper .carousel::before {
-    background: linear-gradient(90deg, var(--background-primary-3) 42.92%, var(--background-primary-3-00) 95%);
-  }
-
-  .palette-three.testimonials__wrapper .carousel::after {
-    background: linear-gradient(-90deg, var(--background-primary-3) 42.92%, var(--background-primary-3-00) 95%);
-  }
-
   .palette-three .testimonials__side {
     border-color: var(--background-accent-3);
   }
 
-  .palette-four.testimonials__wrapper .carousel::before {
-    background: linear-gradient(90deg, var(--background-primary-4) 42.92%, var(--background-primary-4-00) 95%);
-  }
-
-  .palette-four.testimonials__wrapper .carousel::after {
-    background: linear-gradient(-90deg, var(--background-primary-4) 42.92%, var(--background-primary-4-00) 95%);
-  }
-
   .palette-four .testimonials__side {
     border-color: var(--background-accent-4);
-  }
-
-  .palette-five.testimonials__wrapper .carousel::before {
-    background: linear-gradient(90deg, var(--background-primary-5) 42.92%, var(--background-primary-5-00) 95%);
-  }
-
-  .palette-five.testimonials__wrapper .carousel::after {
-    background: linear-gradient(-90deg, var(--background-primary-5) 42.92%, var(--background-primary-5-00) 95%);
   }
 
   .palette-five .testimonials__side {
@@ -382,7 +322,6 @@
 }
 
 @media (min-width: 1200px) {
-  .testimonials__wrapper .carousel,
   .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel {
     width: calc(100% - var(--title-max-width) + var(--horizontal-padding) + 8px);
   }
@@ -413,7 +352,7 @@
 }
 
 @media (max-width: 991px) {
-  .testimonials .carousel--controls .carousel__wrapper {
+  .testimonials .carousel.controls .carousel__wrapper {
     padding-bottom: 0;
   }
 

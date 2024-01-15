@@ -1,13 +1,60 @@
+.products__wrapper {
+  position: relative;
+}
+
 .products__wrapper--padding-top {
-  padding-top: var(--padding-top-mobile);
+  padding-top: var(--padding-top-mobile, 0);
+}
+
+.header-transparent ~ main .products:first-child .products__wrapper--padding-top {
+  padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
 }
 
 .products__wrapper--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile);
+  padding-bottom: var(--padding-bottom-mobile, 0);
+}
+
+.products__container {
+  position: relative;
+  z-index: 1;
+}
+
+.products__top {
+  text-align: center;
+}
+
+.products__tag-image {
+  margin: 0 auto 8px;
 }
 
 .products__list {
   display: flex;
+  padding-top: 18px;
+}
+
+.products__buttons {
+  text-align: center;
+  padding-top: 38px;
+  margin-bottom: calc(-1 * var(--button-margin-bottom));
+}
+
+.products__background-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.products__background {
+  max-width: none;
+  object-fit: cover;
+  height: 100%;
+}
+
+.products__wrapper--with-background .carousel:before,
+.products__wrapper--with-background .carousel:after {
+  display: none;
 }
 
 .palette-one.products__wrapper {
@@ -18,12 +65,38 @@
   background: var(--background-primary-2);
 }
 
+.palette-three.products__wrapper {
+  background: var(--background-primary-3);
+}
+
+.palette-four.products__wrapper {
+  background: var(--background-primary-4);
+}
+
+.palette-five.products__wrapper {
+  background: var(--background-primary-5);
+}
+
+@media (min-width: 992px) {
+  .products__title {
+    font-size: var(--font-size-h2);
+  }
+
+  .products__list {
+    padding-top: 25px;
+  }
+}
+
 @media (min-width: 1200px) {
   .products__wrapper--padding-top {
-    padding-top: var(--padding-top);
+    padding-top: var(--padding-top, 0);
+  }
+
+  .header-transparent ~ main .products:first-child .products__wrapper--padding-top {
+    padding-top: calc(var(--padding-top, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
   }
 
   .products__wrapper--padding-bottom {
-    padding-bottom: var(--padding-bottom);
+    padding-bottom: var(--padding-bottom, 0);
   }
 }

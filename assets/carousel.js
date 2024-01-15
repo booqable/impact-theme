@@ -25,6 +25,7 @@ class Carousel {
 
     this.modifiers = {
       active: "active",
+      controls: "controls",
       hidden: "hidden"
     }
 
@@ -264,15 +265,19 @@ class Carousel {
     if (!this.navi && !this.pagi) return false;
 
     const clientX = this.wrap.clientWidth,
-          scrollX = this.wrap.scrollWidth,
-          clientY = this.wrap.clientHeight,
-          scrollY = this.wrap.scrollHeight;
+          scrollX = this.wrap.scrollWidth;
 
-    clientX === scrollX && clientY === scrollY
-      ? (this.navi?.classList.add(this.modifiers.hidden),
-         this.pagi?.classList.add(this.modifiers.hidden))
-      : (this.navi?.classList.remove(this.modifiers.hidden),
-         this.pagi?.classList.remove(this.modifiers.hidden))
+    if (clientX === scrollX) {
+      this.navi?.classList.add(this.modifiers.hidden)
+      this.pagi?.classList.add(this.modifiers.hidden)
+      this.navi?.parentElement.classList.remove(this.modifiers.controls)
+      this.pagi?.parentElement.classList.remove(this.modifiers.controls)
+    } else {
+      this.navi?.classList.remove(this.modifiers.hidden)
+      this.pagi?.classList.remove(this.modifiers.hidden)
+      this.navi?.parentElement.classList.add(this.modifiers.controls)
+      this.pagi?.parentElement.classList.add(this.modifiers.controls)
+    }
   }
 
   // touchpoints detection on touch screens
