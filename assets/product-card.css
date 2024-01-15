@@ -230,10 +230,6 @@ bq-product-availability[visible="true"] {
 }
 
 @media (min-width: 992px) {
-  /* .product-card {
-    min-width: 285px;
-  } */
-
   .product-card__vision:after {
     aspect-ratio: 1 / 1.56;
   }
