@@ -339,6 +339,25 @@
       },
       "disabled": null
     },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "Shop our products",
+        "button_url": "booqable://root/",
+        "color_palette": "three",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "show_overlay": false,
+        "tag": "HIGHLIGHT",
+        "title": "Explore the ride <br> of your life"
+      },
+      "disabled": null
+    },
     "title_987655": {
       "type": "title",
       "blocks": {},
@@ -436,32 +455,13 @@
         "padding_top_mobile": "small"
       },
       "disabled": null
-    },
-    "call-to-action": {
-      "type": "call-to-action",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "button_1": "Button",
-        "button_url_1": "booqable://root/",
-        "button_2": "Button",
-        "button_url_2": "booqable://root/",
-        "color_palette": "three",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-        "padding_bottom": "large",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "large",
-        "padding_top_mobile": "medium",
-        "title": "Medium length heading goes here"
-      },
-      "disabled": null
     }
   },
   "order": [
     "hero",
-    "call-to-action",
     "collections",
     "products",
+    "call-to-action",
     "testimonials",
     "logos",
     "articles",
