@@ -401,7 +401,7 @@
           "type": "item",
           "settings": {
             "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Ut sagittis massa diam bibendum netus in morbi. Imperdiet quis tempor nunc cum convallis massa. Risus egestas amet nam aliquet vulputate in non morbi blandit. Libero ultrices hendrerit purus id. Ultrices sed facilisi habitasse lobortis. Risus arcu donec duis id enim quam. Nisl pulvinar tortor amet posuere magna tincidunt."
+            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
           },
           "disabled": null
         },
@@ -409,7 +409,7 @@
           "type": "item",
           "settings": {
             "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Ut sagittis massa diam bibendum netus in morbi. Imperdiet quis tempor nunc cum convallis massa. Risus egestas amet nam aliquet vulputate in non morbi blandit. Libero ultrices hendrerit purus id. Ultrices sed facilisi habitasse lobortis. Risus arcu donec duis id enim quam. Nisl pulvinar tortor amet posuere magna tincidunt."
+            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
           },
           "disabled": null
         },
@@ -417,7 +417,7 @@
           "type": "item",
           "settings": {
             "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Ut sagittis massa diam bibendum netus in morbi. Imperdiet quis tempor nunc cum convallis massa. Risus egestas amet nam aliquet vulputate in non morbi blandit. Libero ultrices hendrerit purus id. Ultrices sed facilisi habitasse lobortis. Risus arcu donec duis id enim quam. Nisl pulvinar tortor amet posuere magna tincidunt."
+            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
           },
           "disabled": null
         }
@@ -429,11 +429,16 @@
       ],
       "settings": {
         "behavior": "multiple",
-        "color_palette": "two",
-        "padding_bottom": "large",
+        "color_palette": "five",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "image": "booqable://assets/image-accordion-background.png",
+        "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
-        "padding_top": "small",
-        "padding_top_mobile": "small"
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_borders": true,
+        "title": "FAQ"
       },
       "disabled": null
     },
