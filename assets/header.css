@@ -286,18 +286,22 @@
   display: flex !important;
 }
 
-.header-transparent .header__logo-inner {
+.header-transparent:has(.header__logo-inner--transparent) .header__logo-inner {
   display: none;
 }
 
-.header-transparent .header__logo-inner--transparent {
+.header-transparent:has(.header__logo-inner--transparent) .header__logo-inner--transparent {
   display: inline;
 }
 
+body:has(#search-opener:checked) .header-transparent .header__logo-inner--transparent,
+body:has(#mobile-menu-opener:checked) .header-transparent .header__logo-inner--transparent,
 .page-scrolled .header-transparent .header__logo-inner--transparent {
   display: none;
 }
 
+body:has(#search-opener:checked)  .header-transparent .header__logo-inner:not(.header__logo-inner--transparent),
+body:has(#mobile-menu-opener:checked) .header-transparent .header__logo-inner:not(.header__logo-inner--transparent),
 .page-scrolled .header-transparent .header__logo-inner:not(.header__logo-inner--transparent) {
   display: inline;
 }
