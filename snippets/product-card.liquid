@@ -4,7 +4,7 @@
 
   product - { product } *required,
   placeholder - image optional,
-  show_borders - boolean optional,
+  border - string optional,
   focal - boolean optional,
   img_size - string optional,
   show_excerpt - boolean *required
@@ -14,7 +14,7 @@
   {%- render 'product-card',
       product: your_id,
       placeholder: your_id,
-      show_borders: your_id,
+      border: your_id,
       focal: your_id,
       img_size: your_string,
       show_excerpt: true
@@ -68,7 +68,7 @@
   {%- assign period  = "1 day" -%}
 {%- endif -%}
 
-<div class="product-card{% if show_borders %} product-card--border{%- endif -%}" {% if id != blank %}id="{{- id -}}"{%- endif -%}>
+<div class="product-card product-card--{{- border -}}-border" {% if id != blank %}id="{{- id -}}"{%- endif -%}>
   <div class="product-card__vision{% unless image != blank %} no-image{%- endunless -%}">
     {%- if image.url != blank -%}
       {%- render 'image',

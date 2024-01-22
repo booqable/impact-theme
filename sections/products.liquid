@@ -15,7 +15,7 @@
   {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
   {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
   {%- assign rounded_corners       = section.settings.rounded_corners -%}
-  {%- assign show_borders          = section.settings.show_borders -%}
+  {%- assign borders               = section.settings.borders -%}
   {%- assign show_excerpt          = section.settings.show_excerpt -%}
   {%- assign show_navigation       = section.settings.show_navigation -%}
   {%- assign show_pagination       = section.settings.show_pagination -%}
@@ -41,6 +41,15 @@
 
     {%- assign carousel = true -%}
   {%- endif -%}
+
+  {%- assign border = false -%}
+
+  {%- case borders -%}
+    {%- when 'image' -%}
+      {%- assign border = "image" -%}
+    {%- when 'full' -%}
+      {%- assign border = "full" -%}
+  {%- endcase -%}
 
   {% comment %} CSS variables start {% endcomment %}
   {%- capture variables -%}
@@ -143,7 +152,7 @@
                     {%- render 'product-card',
                         product: product,
                         placeholder: image_placeholder,
-                        show_borders: show_borders,
+                        border: border,
                         focal: is_focal,
                         show_excerpt: show_excerpt
                     -%}
@@ -270,10 +279,24 @@
         "default": "booqable://assets/image-hero.jpg"
       },
       {
-        "type": "checkbox",
-        "id": "show_borders",
-        "default": true,
-        "label": "Show borders"
+        "type": "select",
+        "id": "borders",
+        "label": "Border style",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "image",
+            "label": "Around image"
+          },
+          {
+            "value": "full",
+            "label": "Around whole product"
+          }
+        ],
+        "default": "full"
       },
       {
         "type": "select",

@@ -148,6 +148,7 @@
         "product_123449"
       ],
       "settings": {
+        "borders": "full",
         "button_label": "See all products",
         "button_url": "booqable://root",
         "color_palette": "one",
@@ -157,7 +158,6 @@
         "padding_top": "medium",
         "padding_top_mobile": "medium",
         "rounded_corners": "none",
-        "show_borders": true,
         "show_excerpt": false,
         "show_navigation": true,
         "show_pagination": true,
