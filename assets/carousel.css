@@ -18,8 +18,8 @@
 }
 
 .carousel__wrapper {
-  margin: 0 -16px;
-  width: calc(100% + 32px);
+  margin: 0 calc(-1 * var(--horizontal-padding-mobile));
+  width: calc(100% + var(--horizontal-padding-mobile) * 2);
   height: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -51,12 +51,20 @@
   scroll-snap-stop: always;
 }
 
+.carousel__item:first-child {
+  min-width: calc(var(--slide-width-mobile) + var(--horizontal-padding-mobile) - 16px);
+}
+
+.carousel__item:first-child .carousel__inner {
+  padding-left: var(--horizontal-padding-mobile);
+}
+
 .carousel__item:last-child {
-  min-width: calc(var(--slide-width-mobile) + 16px);
+  min-width: calc(var(--slide-width-mobile) + var(--horizontal-padding-mobile));
 }
 
 .carousel__item:last-child .carousel__inner {
-  padding-right: 16px;
+  padding-right: var(--horizontal-padding-mobile);
 }
 
 .carousel__pagination {
@@ -142,14 +150,6 @@
 
 .carousel .product-card {
   height: 100%;
-}
-
-.carousel__full-width .carousel__item:last-child {
-  min-width: var(--slide-width-mobile);
-}
-
-.carousel__full-width .carousel__inner {
-  padding-right: 16px;
 }
 
 .palette-one .carousel__dot:after {
@@ -240,7 +240,7 @@
     right: calc(100% - 10px);
     top: 0;
     bottom: 0;
-    width: 62px;
+    width: calc(46px + var(--horizontal-padding-mobile));
     z-index: 1;
   }
 
@@ -250,29 +250,28 @@
   }
 
   .carousel__wrapper {
-    margin: 0 -16px;
-    width: calc(100% + 32px);
-    scroll-padding: 0 16px 0 0;
-  }
-
-  .carousel__inner {
-    padding: 0 0 0 16px;
+    margin: 0 calc(-1 * var(--horizontal-padding));
+    width: calc(100% + var(--horizontal-padding) * 2);
   }
 
   .carousel__item {
     min-width: var(--slide-width);
   }
 
+  .carousel__item:first-child {
+    min-width: calc(var(--slide-width) + var(--horizontal-padding) - 16px);
+  }
+
+  .carousel__item:first-child .carousel__inner {
+    padding-left: var(--horizontal-padding);
+  }
+
   .carousel__item:last-child {
-    min-width: calc(var(--slide-width) + 16px);
+    min-width: calc(var(--slide-width) + var(--horizontal-padding));
   }
 
   .carousel__item:last-child .carousel__inner {
-    padding-right: 16px;
-  }
-
-  .carousel__full-width .carousel__inner {
-    padding-right: 16px;
+    padding-right: var(--horizontal-padding);
   }
 
   .palette-one .carousel:before {
@@ -317,6 +316,17 @@
 }
 
 @media (min-width: 1200px) {
+  .carousel:before,
+  .carousel::after {
+    right: calc(100% - 17px);
+    width: calc(46px + var(--horizontal-padding))
+  }
+
+  .carousel::after {
+    right: auto;
+    left: calc(100% - 17px);
+  }
+
   .palette-one .carousel:before {
     background: linear-gradient(90deg, var(--background-primary-1) 58%, var(--background-primary-1-00) 95%);
   }
@@ -355,27 +365,6 @@
 
   .palette-five .carousel:after {
     background: linear-gradient(-90deg, var(--background-primary-5) 58%, var(--background-primary-5-00) 95%);
-  }
-}
-
-@media (min-width: 1273px) {
-  .carousel__wrapper {
-    margin: 0 -16px;
-    width: calc(100% + 32px);
-    scroll-padding: 0 16px 0 0;
-  }
-
-  .carousel__inner {
-    padding: 0 0 0 16px;
-  }
-
-  .carousel__item:last-child {
-    min-width: calc(var(--slide-width) + 16px);
-  }
-
-  .carousel__full-width .carousel__item:last-child .carousel__inner,
-  .carousel__full-width .carousel__inner {
-    padding: 0;
   }
 }
 

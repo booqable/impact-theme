@@ -15,7 +15,6 @@ class Carousel {
     }
 
     this.classes = {
-      full: "carousel__full-width",
       pause: "carousel__pause",
       dot: "carousel__dot",
       prev: "prev",
@@ -132,8 +131,7 @@ class Carousel {
 
     if (!isPrev && !isNext && !isDot && !time) return false;
 
-    const isFull = this.block.classList.contains(this.classes.full),
-          width = this.item.getBoundingClientRect().width,
+    const width = this.item.getBoundingClientRect().width,
           index = parseInt(target?.getAttribute(this.data.index)),
           prev = this.event.prev,
           next = this.event.next;
@@ -148,8 +146,6 @@ class Carousel {
     scrollX = element.scrollWidth;
     clientX = element.clientWidth;
     children = [...element.children];
-
-    if (isFull) scrollX = width * children.length;
 
     if (isPrev) {
       const options = {

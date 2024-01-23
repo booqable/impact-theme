@@ -32,6 +32,10 @@
   padding-top: 18px;
 }
 
+.products__list > .product-card {
+  max-width: var(--slide-width-mobile);
+}
+
 .products__buttons {
   text-align: center;
   padding-top: 38px;
@@ -84,6 +88,10 @@
 
   .products__list {
     padding-top: 25px;
+  }
+
+  .products__list > .product-card {
+    max-width: var(--slide-width);
   }
 }
 
