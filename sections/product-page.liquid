@@ -2,8 +2,14 @@
 
 {%- assign title                 = product.name -%}
 {%- assign description           = product.description -%}
-{%- assign price                 = product | product_price -%}
 {%- assign images                = product.images -%}
+{%- assign variants              = product.variants -%}
+{%- assign variant_selector      = product | product_variations_select -%}
+{%- assign bundle_items          = product | bundle_items -%}
+{%- assign availability          = product | product_availability -%}
+{%- assign availability_calendar = product | availability_calendar -%}
+{%- assign quantity              = product | product_button -%}
+{%- assign price                 = product | product_price -%}
 {%- assign color_palette         = section.settings.color_palette -%}
 {%- assign show_breadcrumbs      = section.settings.show_breadcrumbs -%}
 {%- assign breadcrumbs_label     = section.settings.breadcrumbs_label -%}
@@ -13,7 +19,7 @@
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
 {%- assign message_label         = section.settings.message_label -%}
-{%- assign variation_label       = section.settings.variation_label -%}
+{%- assign variant_label         = section.settings.variant_label -%}
 
 {%- assign label = "" -%}
 
@@ -45,30 +51,24 @@
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
   {%- case padding_top -%}
-    {%- when 'none' -%}
-      --padding-top: 0;
     {%- when 'small' -%}
       --padding-top: 24px;
     {%- when 'medium' -%}
-      --padding-top: 36px;
+      --padding-top: 40px;
     {%- when 'large' -%}
-      --padding-top: 48px;
+      --padding-top: 60px;
   {%- endcase -%}
 
   {%- case padding_bottom -%}
-    {%- when 'none' -%}
-      --padding-bottom: 0;
     {%- when 'small' -%}
       --padding-bottom: 24px;
     {%- when 'medium' -%}
-      --padding-bottom: 36px;
+      --padding-bottom: 40px;
     {%- when 'large' -%}
-      --padding-bottom: 48px;
+      --padding-bottom: 60px;
   {%- endcase -%}
 
   {%- case padding_top_mobile -%}
-    {%- when 'none' -%}
-      --padding-top-mobile: 0;
     {%- when 'small' -%}
       --padding-top-mobile: 24px;
     {%- when 'medium' -%}
@@ -78,8 +78,6 @@
   {%- endcase -%}
 
   {%- case padding_bottom_mobile -%}
-    {%- when 'none' -%}
-      --padding-bottom-mobile: 0;
     {%- when 'small' -%}
       --padding-bottom-mobile: 24px;
     {%- when 'medium' -%}
@@ -89,20 +87,21 @@
   {%- endcase -%}
 {%- endcapture -%}
 
-{%- include 'variables-product-variations' -%}
-{%- include 'variables-product-quantity' -%}
+{%- render 'variables-product-availability' -%}
+{%- render 'variables-product-variations', color_palette: color_palette, settings: settings -%}
+{%- render 'variables-product-quantity', color_palette: color_palette, settings: settings -%}
 {% comment %} CSS variables end {% endcomment %}
 
-<div class="product-main__holder palette-{{ color_palette }}" style="{{- variables | escape -}}">
-  <div class="product-main__container container {% if padding_top != blank or padding_top_mobile != blank %} product-main__container--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} product-main__container--padding-bottom{%- endif -%}">
+<div class="product-main__wrapper palette-{{ color_palette }}" style="{{- variables | escape -}}">
+  <div class="product-main__container container{% if padding_top != blank or padding_top_mobile != blank %} product-main__container--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} product-main__container--padding-bottom{%- endif -%}">
     {%- render 'breadcrumbs',
-      product: product,
-      show: show_breadcrumbs,
-      label: label,
-      url: url
+        product: product,
+        show: show_breadcrumbs,
+        label: label,
+        url: url
     -%}
 
-    <div class="product-main__wrapper">
+    <div class="product-main__grid{% if images.size > 3 %} product-main__grid--overlay{%- endif -%}">
       <ul class="product-main__gallery">
         {%- for image in images -%}
           <li class="product-main__gallery-item">
@@ -117,44 +116,35 @@
       </ul>
 
       <div class="product-main__info">
-          <h1 class="product-main__title">{{- title -}}</h1>
+        <h1 class="product-main__title">{{- title -}}</h1>
+        <div class="product-main__price">{{- price -}}</div>
 
-          <div class="product-main__price">{{- price -}}</div>
+        {%- if description != blank -%}
+          <div class="product-main__description bq-content rx-content">{{- description -}}</div>
+        {%- endif -%}
 
-          {%- if description != blank -%}
-            <div class="product-main__description bq-content rx-content">
-              {{- description -}}
-            </div>
+        <div class="product-main__variant">
+          {%- if variants.size > 1 -%}
+            <div class="product-main__variant-label">{{- variant_label -}}</div>
+
+            <div class="product-main__variant-selector">{{- variant_selector -}}</div>
           {%- endif -%}
 
-          <div class="product-main__variation">
-            {%- if product.variants.size > 1 -%}
-              <div class="product-main__variation-label">
-                {{- variation_label -}}
-              </div>
+          {{- bundle_items -}}
+        </div>
 
-              <div class="product-main__variation-select">
-                {{- product | product_variations_select -}}
-              </div>
-            {%- endif -%}
+        <div class="product-main__availability">
+          {{- availability -}}
+          {{- availability_calendar -}}
+        </div>
 
-            {{- product | bundle_items -}}
+        <div class="product-main__quantity">{{- quantity -}}</div>
+
+        {%- if message_label != blank -%}
+          <div class="product-main__message">
+            <span class="product-main__message-label">{{- message_label -}}</span>
           </div>
-
-          <div class="product-info__availability">
-            {{- product | product_availability -}}
-            {{- product | availability_calendar -}}
-          </div>
-
-          <div class="product-info__quantity">
-            {{- product | product_button -}}
-          </div>
-
-          {%- if message_label != blank -%}
-            <div class="product-main__shipping-info">
-              <span class="product-main__shipping-label">{{- message_label -}}</span>
-            </div>
-          {%- endif -%}
+        {%- endif -%}
       </div>
     </div>
   </div>
@@ -173,7 +163,7 @@
       },
       {
         "type": "text",
-        "id": "variation_label",
+        "id": "variant_label",
         "label": "Variations label",
         "default": "Variation"
       },
