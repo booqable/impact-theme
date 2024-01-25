@@ -23,11 +23,189 @@
         "padding_top": "large",
         "padding_top_mobile": "large",
         "show_overlay": true,
-        "tag": "",
         "text_position": "left",
         "text_position_mobile": "left",
         "title": "Explore like <br> a daredevil",
         "video_url": ""
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "Shop our products",
+        "button_url": "booqable://root/",
+        "color_palette": "three",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "show_overlay": false,
+        "tag": "HIGHLIGHT",
+        "title": "Explore the ride <br> of your life"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection": {
+          "type": "collection",
+          "settings": {},
+          "disabled": null
+        },
+        "collection_242972": {
+          "type": "collection",
+          "settings": {},
+          "disabled": null
+        },
+        "collection_535502": {
+          "type": "collection",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection",
+        "collection_242972",
+        "collection_535502"
+      ],
+      "settings": {
+        "color_palette": "four",
+        "counter_singular": "Item",
+        "counter_plural": "Items",
+        "grid": "three",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "none",
+        "spacing_mobile": "none"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123455": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123454": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123453": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123452": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123451": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123450": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123449": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product",
+        "product_123455",
+        "product_123454",
+        "product_123453",
+        "product_123452",
+        "product_123451",
+        "product_123450",
+        "product_123449"
+      ],
+      "settings": {
+        "borders": "full",
+        "button_label": "See all products",
+        "button_url": "booqable://root",
+        "color_palette": "one",
+        "image": "",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "This week",
+        "tag_image": "",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial": {
+          "type": "testimonial",
+          "settings": {
+            "button": "Check review online",
+            "button_url": "booqable://root/",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234567": {
+          "type": "testimonial",
+          "settings": {
+            "button": "Check review online",
+            "button_url": "booqable://root/",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial",
+        "testimonial_234567"
+      ],
+      "settings": {
+        "color_palette": "three",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_navigation": true,
+        "title": "What people <br>say about us"
       },
       "disabled": null
     },
@@ -87,133 +265,6 @@
       },
       "disabled": false
     },
-    "title": {
-      "type": "title",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "bg_text": "Category",
-        "button_label": "",
-        "button_url": "",
-        "color_palette": "one",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "medium",
-        "padding_top_mobile": "medium",
-        "tag": "OUR COLLECTIONS",
-        "title": "We can service you in each category"
-      },
-      "disabled": null
-    },
-    "collections": {
-      "type": "collections",
-      "blocks": {
-        "collection": {
-          "type": "collection",
-          "settings": {},
-          "disabled": null
-        },
-        "collection_242972": {
-          "type": "collection",
-          "settings": {},
-          "disabled": null
-        },
-        "collection_535502": {
-          "type": "collection",
-          "settings": {},
-          "disabled": null
-        }
-      },
-      "block_order": [
-        "collection",
-        "collection_242972",
-        "collection_535502"
-      ],
-      "settings": {
-        "color_palette": "four",
-        "counter_singular": "Item",
-        "counter_plural": "Items",
-        "grid": "three",
-        "overlay_opacity": 100,
-        "padding_bottom": "none",
-        "padding_bottom_mobile": "none",
-        "padding_top": "none",
-        "padding_top_mobile": "none",
-        "rounded_corners": "none",
-        "show_amount": true,
-        "show_arrow": true,
-        "show_overlay": true,
-        "spacing": "none",
-        "spacing_mobile": "none"
-      },
-      "disabled": null
-    },
-    "text-with-image": {
-      "type": "text-with-image",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "button_1": "Button",
-        "button_url_1": "booqable://root/",
-        "button_2": "Button",
-        "button_url_2": "booqable://root/",
-        "color_palette": "two",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.,",
-        "image": "booqable://assets/image-tough-building.jpg",
-        "image_position": "right",
-        "padding_bottom": "large",
-        "padding_bottom_mobile": "large",
-        "padding_top": "large",
-        "padding_top_mobile": "large",
-        "space_height": "none",
-        "tag": "TAGLINE",
-        "title": "Medium length section heading goes here"
-      },
-      "disabled": null
-    },
-    "testimonials": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial": {
-          "type": "testimonial",
-          "settings": {
-            "button": "Check review online",
-            "button_url": "booqable://root/",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Rick Gebhardt",
-            "position": "04-05-2023"
-          },
-          "disabled": null
-        },
-        "testimonial_234567": {
-          "type": "testimonial",
-          "settings": {
-            "button": "Check review online",
-            "button_url": "booqable://root/",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Rick Gebhardt",
-            "position": "04-05-2023"
-          },
-          "disabled": null
-        }
-      },
-      "block_order": [
-        "testimonial",
-        "testimonial_234567"
-      ],
-      "settings": {
-        "color_palette": "three",
-        "padding_bottom": "medium",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "medium",
-        "padding_top_mobile": "medium",
-        "rounded_corners": "none",
-        "show_navigation": true,
-        "title": "What people <br>say about us"
-      },
-      "disabled": null
-    },
     "articles": {
       "type": "articles",
       "blocks": {
@@ -271,83 +322,86 @@
       },
       "disabled": null
     },
-    "products": {
-      "type": "products",
+    "accordion": {
+      "type": "accordion",
       "blocks": {
-        "product": {
-          "type": "product",
-          "settings": {},
+        "item": {
+          "type": "item",
+          "settings": {
+            "heading": "How do I rent a product from your shop?",
+            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+          },
           "disabled": null
         },
-        "product_123455": {
-          "type": "product",
-          "settings": {},
+        "item_478139": {
+          "type": "item",
+          "settings": {
+            "heading": "How do I rent a product from your shop?",
+            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+          },
           "disabled": null
         },
-        "product_123454": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_123453": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_123452": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_123451": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_123450": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_123449": {
-          "type": "product",
-          "settings": {},
+        "item_478145": {
+          "type": "item",
+          "settings": {
+            "heading": "How do I rent a product from your shop?",
+            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+          },
           "disabled": null
         }
       },
       "block_order": [
-        "product",
-        "product_123455",
-        "product_123454",
-        "product_123453",
-        "product_123452",
-        "product_123451",
-        "product_123450",
-        "product_123449"
+        "item",
+        "item_478139",
+        "item_478145"
       ],
       "settings": {
-        "color_palette": "one",
-        "padding_bottom": "large",
+        "behavior": "multiple",
+        "color_palette": "five",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "image": "booqable://assets/image-accordion-background.png",
+        "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
-        "padding_top": "small",
-        "padding_top_mobile": "small",
-        "show_carousel": true,
-        "show_excerpt": true,
-        "show_navigation": true,
-        "show_pagination": true,
-        "timer": 5
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_borders": true,
+        "title": "FAQ"
       },
       "disabled": null
     },
-    "call-to-action": {
-      "type": "call-to-action",
+    "title": {
+      "type": "title",
       "blocks": {},
       "block_order": [],
       "settings": {
-        "button_label": "Shop our products",
-        "button_url": "booqable://root/",
-        "color_palette": "three",
-        "image": "booqable://assets/image-cta-2.jpeg",
+        "bg_text": "Category",
+        "button_label": "",
+        "button_url": "",
+        "color_palette": "one",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "tag": "OUR COLLECTIONS",
+        "title": "We can service you in each category"
+      },
+      "disabled": null
+    },
+    "text-with-image": {
+      "type": "text-with-image",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_1": "Button",
+        "button_url_1": "booqable://root/",
+        "button_2": "Button",
+        "button_url_2": "booqable://root/",
+        "color_palette": "two",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.,",
+        "image": "booqable://assets/image-tough-building.jpg",
+        "image_position": "right",
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
         "padding_top": "large",
@@ -412,66 +466,18 @@
         "title": "Frequently asked questions"
       },
       "disabled": null
-    },
-    "accordion": {
-      "type": "accordion",
-      "blocks": {
-        "item": {
-          "type": "item",
-          "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
-          },
-          "disabled": null
-        },
-        "item_478139": {
-          "type": "item",
-          "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
-          },
-          "disabled": null
-        },
-        "item_478145": {
-          "type": "item",
-          "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
-          },
-          "disabled": null
-        }
-      },
-      "block_order": [
-        "item",
-        "item_478139",
-        "item_478145"
-      ],
-      "settings": {
-        "behavior": "multiple",
-        "color_palette": "five",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-        "image": "booqable://assets/image-accordion-background.png",
-        "padding_bottom": "medium",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "medium",
-        "padding_top_mobile": "medium",
-        "rounded_corners": "none",
-        "show_borders": true,
-        "title": "FAQ"
-      },
-      "disabled": null
     }
   },
   "order": [
     "hero",
+    "call-to-action",
     "collections",
     "products",
-    "call-to-action",
     "testimonials",
     "logos",
     "articles",
-    "title_987650",
     "accordion",
+    "title_987650",
     "text-with-image",
     "title",
     "title_987655",
