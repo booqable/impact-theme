@@ -13,10 +13,10 @@
   --button-margin-bottom: 16px;
 
   /* Carousel */
-  --slide-width: 318px;
-  --slide-width-mobile: 250px;
+  --slide-width: 332px;
+  --slide-width-mobile: 264px;
   --thumbnail-size: 92px;
-  --title-max-width: 302px;
+  --title-max-width: 352px;
 
   /* Colors */
   --color-azureish-white: #D7E2FF;
@@ -137,20 +137,17 @@ body .stretch > section:first-child{
   flex-grow: 1;
 }
 
-.header-sticky:not(.header-transparent) ~ #main {
-  padding-top: calc(var(--header-height) - 1px);
+.header-sticky:not(.header-transparent) ~ #main,
+.preview-bar__container ~ .header-sticky:not(.header-transparent) ~ #main {
+  padding-top: var(--header-height);
 }
 
 .header-sticky.header-transparent ~ #main {
-  padding-top: calc(var(--top-bar-height) - 1px);
-}
-
-.preview-bar__container ~ .header-sticky:not(.header-transparent) ~ #main {
-  padding-top: calc(var(--header-height) - 2px);
+  padding-top: var(--top-bar-height);
 }
 
 .preview-bar__container ~ .header-sticky.header-transparent ~ #main {
-  padding-top: calc(var(--top-bar-height) + var(--preview-height) - 2px);
+  padding-top: calc(var(--top-bar-height) + var(--preview-height));
 }
 
 .header-menu-opened ~ #main {

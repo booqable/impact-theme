@@ -15,7 +15,6 @@ class Carousel {
     }
 
     this.classes = {
-      full: "carousel__full-width",
       pause: "carousel__pause",
       dot: "carousel__dot",
       prev: "prev",
@@ -25,6 +24,7 @@ class Carousel {
 
     this.modifiers = {
       active: "active",
+      controls: "controls",
       hidden: "hidden"
     }
 
@@ -131,8 +131,7 @@ class Carousel {
 
     if (!isPrev && !isNext && !isDot && !time) return false;
 
-    const isFull = this.block.classList.contains(this.classes.full),
-          width = this.item.getBoundingClientRect().width,
+    const width = this.item.getBoundingClientRect().width,
           index = parseInt(target?.getAttribute(this.data.index)),
           prev = this.event.prev,
           next = this.event.next;
@@ -147,8 +146,6 @@ class Carousel {
     scrollX = element.scrollWidth;
     clientX = element.clientWidth;
     children = [...element.children];
-
-    if (isFull) scrollX = width * children.length;
 
     if (isPrev) {
       const options = {
@@ -264,15 +261,19 @@ class Carousel {
     if (!this.navi && !this.pagi) return false;
 
     const clientX = this.wrap.clientWidth,
-          scrollX = this.wrap.scrollWidth,
-          clientY = this.wrap.clientHeight,
-          scrollY = this.wrap.scrollHeight;
+          scrollX = this.wrap.scrollWidth;
 
-    clientX === scrollX && clientY === scrollY
-      ? (this.navi?.classList.add(this.modifiers.hidden),
-         this.pagi?.classList.add(this.modifiers.hidden))
-      : (this.navi?.classList.remove(this.modifiers.hidden),
-         this.pagi?.classList.remove(this.modifiers.hidden))
+    if (clientX === scrollX) {
+      this.navi?.classList.add(this.modifiers.hidden)
+      this.pagi?.classList.add(this.modifiers.hidden)
+      this.navi?.parentElement.classList.remove(this.modifiers.controls)
+      this.pagi?.parentElement.classList.remove(this.modifiers.controls)
+    } else {
+      this.navi?.classList.remove(this.modifiers.hidden)
+      this.pagi?.classList.remove(this.modifiers.hidden)
+      this.navi?.parentElement.classList.add(this.modifiers.controls)
+      this.pagi?.parentElement.classList.add(this.modifiers.controls)
+    }
   }
 
   // touchpoints detection on touch screens

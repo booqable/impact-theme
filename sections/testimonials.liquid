@@ -76,7 +76,7 @@
   {% comment %} CSS variables end {% endcomment %}
 
   <div
-    class="testimonials__wrapper{% if blocks.size > 3 %} testimonials__wrapper--wide{% endif %} palette-{{ color_palette }}{% if padding_top != blank or padding_top_mobile != blank %} testimonials__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} testimonials__wrapper--padding-bottom{%- endif -%}"
+    class="testimonials__wrapper palette-{{ color_palette }}{% if padding_top != blank or padding_top_mobile != blank %} testimonials__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} testimonials__wrapper--padding-bottom{%- endif -%}"
     style="{{- variables | escape -}}"
   >
     <div class="testimonials__container container">
@@ -98,7 +98,7 @@
       {%- endif -%}
 
       {%- if carousel -%}
-        <div class="carousel{% if show_navigation %} carousel--controls{%- endif -%}" aria-role="Gallery">
+        <div class="carousel" aria-role="Gallery">
           <div class="carousel__wrapper">
       {%- endif -%}
 
