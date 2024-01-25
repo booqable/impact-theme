@@ -17,10 +17,14 @@
 .title__container {
   position: relative;
   z-index: 1;
-  text-align: center;
+}
+
+.title__container .title__wrapper {
+  border-radius: var(--border-radius-rounded-blocks);
 }
 
 .title__content {
+  text-align: center;
   padding: 0 36px;
 }
 
@@ -36,7 +40,7 @@
 .title__background-wrapper {
   position: absolute;
   overflow: hidden;
-  width: calc(100% - var(--horizontal-padding-mobile) * 2);
+  width: 100%;
   height: 100%;
 }
 
