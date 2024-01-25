@@ -6,7 +6,6 @@
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-{%- assign tag                   = section.settings.tag -%}
 {%- assign title                 = section.settings.title -%}
 {%- assign description           = section.settings.description -%}
 {%- assign image                 = section.settings.image -%}
@@ -149,10 +148,6 @@
   <div class="hero__container container{% if padding_top != blank or padding_top_mobile != blank %} hero__container--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} hero__container--padding-bottom{%- endif -%}">
     <div class="hero__text-area{% if show_overlay %} hero__text-area--color{%- endif -%}">
       <div class="hero__content">
-        {%- if tag != blank -%}
-          <strong class="hero__tag tagline">{{- tag -}}</strong>
-        {%- endif -%}
-
         {%- if title != blank -%}
           {%- if carousel -%}
             <h2 class="hero__title bq-content rx-content">{{- title -}}</h2>
@@ -285,12 +280,6 @@
           }
         ],
         "default": "four"
-      },
-      {
-        "type": "text",
-        "id": "tag",
-        "label": "Tagline",
-        "info": "Leave blank to hide tagline"
       },
       {
         "type": "contentEditor",
