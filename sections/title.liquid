@@ -63,46 +63,39 @@
 {% comment %} CSS variables end {% endcomment %}
 
 {%- unless full_width -%}
-<div class="title__container container">
-{%- endunless -%}
-<div
-  class="title__wrapper palette-{{ color_palette }}{% if padding_top != blank or padding_top_mobile != blank %} title__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} title__wrapper--padding-bottom{%- endif -%}"
-  style="{{- variables | escape -}}"
->
-{%- if full_width -%}
   <div class="title__container container">
-{%- endif -%}
-    <div class="title__content">
-      <h2 class="title__heading">
-        {{- custom_title | default: collection.title | default: page_title -}}
-      </h2>
+{%- endunless -%}
+    <div
+      class="title__wrapper palette-{{ color_palette }}{% if padding_top != blank or padding_top_mobile != blank %} title__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} title__wrapper--padding-bottom{%- endif -%}"
+      style="{{- variables | escape -}}"
+    >
+  {%- if full_width -%}
+      <div class="title__container container">
+  {%- endif -%}
+        <div class="title__content">
+          <h2 class="title__heading">
+            {{- custom_title | default: collection.title | default: page_title -}}
+          </h2>
 
-      <div class="title__description text-medium bq-content rx-content">
-        {{- custom_description | default: collection.description | default: page_description -}}
+          <div class="title__description text-medium bq-content rx-content">
+            {{- custom_description | default: collection.description | default: page_description -}}
+          </div>
+        </div>
+  {%- if full_width -%}
       </div>
-    </div>
-{%- if full_width -%}
-  </div>
-{%- endif -%}
-
+  {%- endif -%}
 
   {%- if image != blank -%}
-    <div class="title__background{% if full_width %} title__background--full-width{%- endif -%}">
-      {%- if full_width -%}
-      <div class="title__background-wrapper">
-      {%- endif -%}
+      <div class="title__background">
         {%- render 'image',
             image: image,
             loading: 'lazy',
             class: 'title__background-image',
             size: 'xxl'
         -%}
-      {%- if full_width -%}
       </div>
-    {%- endif -%}
-    </div>
   {%- endif -%}
-</div>
+    </div>
 {% unless full_width %}
   </div>
 {%- endunless -%}
