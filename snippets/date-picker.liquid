@@ -3,17 +3,13 @@
   This snippet is used for rendering the Date picker
 
   key: section id *required,
-  color_palette: "string" *required,
-  background: "string" *required,
-  settings: settings *required (global store settings)
+  background: "string" *required
 
   Usage:
 
   {%- render 'date-picker',
       key: section.key,
-      color_palette: color_palette,
-      background: background_accent,
-      settings: settings
+      background: background_accent
   -%}
 
 {% endcomment %}
@@ -28,53 +24,14 @@
     --date-picker-title-line-height: var(--line-height-lg, 1.5);
     --date-picker-title-size: 16px;
     --date-picker-wrapper-padding: 10px;
-
-    {% if color_palette == "one" %}
-      --date-picker-background-color: var(--background-primary-1);
-      --date-picker-box-shadow: 0 0 0 1px var(--background-accent-1);
-      --date-picker-cleanstate-background-color: var(--background-accent-1);
-      --date-picker-cleanstate-text-color: var(--color-accent-1);
-      --date-picker-icon-color: var(--color-accent-1);
-      --date-picker-placeholder-color: var(--color-placeholder-1);
-      --date-picker-section-border: 1px solid var(--color-border-1);
-      --date-picker-text-color: var(--color-primary-1);
-    {% elsif color_palette == "two" %}
-      --date-picker-background-color: var(--background-primary-2);
-      --date-picker-box-shadow: 0 0 0 1px var(--background-accent-2);
-      --date-picker-cleanstate-background-color: var(--background-accent-2);
-      --date-picker-cleanstate-text-color: var(--color-accent-2);
-      --date-picker-icon-color: var(--color-accent-2);
-      --date-picker-placeholder-color: var(--color-placeholder-2);
-      --date-picker-section-border: 1px solid var(--color-border-2);
-      --date-picker-text-color: var(--color-primary-2);
-    {% elsif color_palette == "three" %}
-      --date-picker-background-color: var(--background-primary-3);
-      --date-picker-box-shadow: 0 0 0 1px var(--background-accent-3);
-      --date-picker-cleanstate-background-color: var(--background-accent-3);
-      --date-picker-cleanstate-text-color: var(--color-accent-3);
-      --date-picker-icon-color: var(--color-accent-3);
-      --date-picker-placeholder-color: var(--color-placeholder-3);
-      --date-picker-section-border: 1px solid var(--color-border-3);
-      --date-picker-text-color: var(--color-primary-3);
-    {% elsif color_palette == "four" %}
-      --date-picker-background-color: var(--background-primary-4);
-      --date-picker-box-shadow: 0 0 0 1px var(--background-accent-4);
-      --date-picker-cleanstate-background-color: var(--background-accent-4);
-      --date-picker-cleanstate-text-color: var(--color-accent-4);
-      --date-picker-icon-color: var(--color-accent-4);
-      --date-picker-placeholder-color: var(--color-placeholder-4);
-      --date-picker-section-border: 1px solid var(--color-border-4);
-      --date-picker-text-color: var(--color-primary-4);
-    {% elsif color_palette == "five" %}
-      --date-picker-background-color: var(--background-primary-5);
-      --date-picker-box-shadow: 0 0 0 1px var(--background-accent-5);
-      --date-picker-cleanstate-background-color: var(--background-accent-5);
-      --date-picker-cleanstate-text-color: var(--color-accent-5);
-      --date-picker-icon-color: var(--color-accent-5);
-      --date-picker-placeholder-color: var(--color-placeholder-5);
-      --date-picker-section-border: 1px solid var(--color-border-5);
-      --date-picker-text-color: var(--color-primary-5);
-    {%- endif -%}
+    --date-picker-background-color: var(--background-primary);
+    --date-picker-box-shadow: 0 0 0 1px var(--background-accent);
+    --date-picker-cleanstate-background-color: var(--background-accent);
+    --date-picker-cleanstate-text-color: var(--color-accent);
+    --date-picker-icon-color: var(--color-accent);
+    --date-picker-placeholder-color: var(--color-placeholder);
+    --date-picker-section-border: 1px solid var(--color-border);
+    --date-picker-text-color: var(--color-primary);
   }
 {%- endstyle -%}
 

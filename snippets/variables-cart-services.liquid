@@ -10,40 +10,9 @@
     --service-price-font-size: 16px;
     --service-checkbox-border-radius: var(--border-radius-none);
     --service-checkbox-size: 20px;
-
-    {%- if color_palette == "one" -%}
-      {%- if settings.primary_color_1 != blank -%}
-        --service-checkbox-border: 1px solid var(--color-border-1);
-      {%- endif -%}
-
-      {%- if settings.background_1 != blank -%}
-        --service-checkbox-color: var(--background-primary-1);
-      {%- endif -%}
-
-      {%- if settings.accent_background_1 != blank -%}
-        --service-checkbox-color-checked: var(--background-accent-1);
-      {%- endif -%}
-
-      {%- if settings.accent_color_1 != blank -%}
-        --service-checkbox-icon-color: var(--color-accent-1);
-      {%- endif -%}
-
-    {% elsif color_palette == "two" %}
-      {%- if settings.primary_color_2 != blank -%}
-        --service-checkbox-border: 1px solid var(--color-border-2);
-      {%- endif -%}
-
-      {%- if settings.background_2 != blank -%}
-        --service-checkbox-color: var(--background-primary-2);
-      {%- endif -%}
-
-      {%- if settings.accent_background_2 != blank -%}
-        --service-checkbox-color-checked: var(--background-accent-2);
-      {%- endif -%}
-
-      {%- if settings.accent_color_2 != blank -%}
-        --service-checkbox-icon-color: var(--color-accent-2);
-      {%- endif -%}
-    {%- endif -%}
+    --service-checkbox-border: 1px solid var(--color-border);
+    --service-checkbox-color: var(--background-primary);
+    --service-checkbox-color-checked: var(--background-accent);
+    --service-checkbox-icon-color: var(--color-accent);
   }
 {% endstyle %}

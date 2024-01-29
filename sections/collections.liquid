@@ -2,7 +2,7 @@
 
   {{ "collections.css" | asset_url | stylesheet_tag }}
 
-  {%- assign color_palette          = section.settings.color_palette -%}
+  {%- assign color_scheme           = section.settings.color_scheme -%}
   {%- assign counter_singular       = section.settings.counter_singular -%}
   {%- assign counter_plural         = section.settings.counter_plural -%}
   {%- assign grid                   = section.settings.grid -%}
@@ -106,7 +106,7 @@
   {% comment %} CSS variables end {% endcomment %}
 
   <div
-    class="collections__wrapper collections__wrapper-{{ grid }} palette-{{ color_palette }}{% if show_overlay != blank %} collection__wrapper--with-overlay{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} collections__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} collections__wrapper--padding-bottom{%- endif -%}"
+    class="collections__wrapper collections__wrapper-{{ grid }} color-{{ color_scheme.id }}{% if show_overlay != blank %} collection__wrapper--with-overlay{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} collections__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} collections__wrapper--padding-bottom{%- endif -%}"
     style="{{- variables | escape -}}"
   >
     <div class="collections__container container">
@@ -135,32 +135,10 @@
         "content": "General settings"
       },
       {
-        "type": "select",
-        "id": "color_palette",
-        "label": "Color palette",
-        "options": [
-          {
-            "value": "one",
-            "label": "Color set 1"
-          },
-          {
-            "value": "two",
-            "label": "Color set 2"
-          },
-          {
-            "value": "three",
-            "label": "Color set 3"
-          },
-          {
-            "value": "four",
-            "label": "Color set 4"
-          },
-          {
-            "value": "five",
-            "label": "Color set 5"
-          }
-        ],
-        "default": "one"
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
       },
       {
         "type": "select",

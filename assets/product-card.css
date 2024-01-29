@@ -4,11 +4,14 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  color: var(--color-secondary);
+  background: var(--background-primary);
 }
 
 .product-card--full-border,
 .product-card--image-border .product-card__vision {
   border-radius: var(--border-radius-rounded-blocks);
+  border: 1px solid var(--color-border);
 }
 
 .product-card__vision {
@@ -30,6 +33,10 @@
   content: "";
   display: block;
   aspect-ratio: 1 / 1.62;
+}
+
+.product-card__vision.no-image {
+  background: var(--color-image-placeholder);
 }
 
 .product-card__image {
@@ -76,6 +83,7 @@
   flex-grow: 1;
   display: flex;
   align-items: flex-end;
+  color: var(--color-primary);
 }
 
 .product-card__price-wrapper {
@@ -86,6 +94,7 @@
 .product-card__price,
 bq-product-price {
   font-size: 16px;
+  color: var(--color-outline);
 }
 
 .product-card__price-separator {
@@ -101,136 +110,6 @@ bq-product-availability {
 bq-product-availability[visible="true"] {
   display: inline-block;
   margin: 9px 0 16px;
-}
-
-.palette-one .product-card {
-  color: var(--color-secondary-1);
-  background: var(--background-primary-1);
-}
-
-.palette-one .product-card--full-border {
-  border: 1px solid var(--color-border-1);
-}
-
-.palette-one .product-card--image-border .product-card__vision {
-  border: 1px solid var(--color-border-1);
-}
-
-.palette-one .product-card__vision.no-image {
-  background: var(--color-image-placeholder-1);
-}
-
-.palette-one .product-card__price-info {
-  color: var(--color-primary-1);
-}
-
-.palette-one .product-card__price,
-.palette-one bq-product-price {
-  color: var(--color-outline-1);
-}
-
-.palette-two .product-card {
-  color: var(--color-secondary-2);
-  background: var(--background-primary-2);
-}
-
-.palette-two .product-card--full-border {
-  border: 1px solid var(--color-border-2);
-}
-
-.palette-two .product-card--image-border .product-card__vision {
-  border: 1px solid var(--color-border-2);
-}
-
-.palette-two .product-card__vision.no-image {
-  background: var(--color-image-placeholder-2);
-}
-
-.palette-two .product-card__price-info {
-  color: var(--color-primary-2);
-}
-
-.palette-two .product-card__price,
-.palette-two bq-product-price {
-  color: var(--color-outline-2);
-}
-
-.palette-three .product-card {
-  color: var(--color-secondary-3);
-  background: var(--background-primary-3);
-}
-
-.palette-three .product-card--full-border {
-  border: 1px solid var(--color-border-3);
-}
-
-.palette-three .product-card--image-border .product-card__vision {
-  border: 1px solid var(--color-border-3);
-}
-
-.palette-three .product-card__vision.no-image {
-  background: var(--color-image-placeholder-3);
-}
-
-.palette-three .product-card__price-info {
-  color: var(--color-primary-3);
-}
-
-.palette-three .product-card__price,
-.palette-three bq-product-price {
-  color: var(--color-outline-3);
-}
-
-.palette-four .product-card {
-  color: var(--color-secondary-4);
-  background: var(--background-primary-4);
-}
-
-.palette-four .product-card--full-border {
-  border: 1px solid var(--color-border-4);
-}
-
-.palette-four .product-card--image-border .product-card__vision {
-  border: 1px solid var(--color-border-4);
-}
-
-.palette-four .product-card__vision.no-image {
-  background: var(--color-image-placeholder-4);
-}
-
-.palette-four .product-card__price-info {
-  color: var(--color-primary-4);
-}
-
-.palette-four .product-card__price,
-.palette-four bq-product-price {
-  color: var(--color-outline-4);
-}
-
-.palette-five .product-card {
-  color: var(--color-secondary-5);
-  background: var(--background-primary-5);
-}
-
-.palette-five .product-card--full-border {
-  border: 1px solid var(--color-border-5);
-}
-
-.palette-five .product-card--image-border .product-card__vision {
-  border: 1px solid var(--color-border-5);
-}
-
-.palette-five .product-card__vision.no-image {
-  background: var(--color-image-placeholder-5);
-}
-
-.palette-five .product-card__price-info {
-  color: var(--color-primary-5);
-}
-
-.palette-five .product-card__price,
-.palette-five bq-product-price {
-  color: var(--color-outline-5);
 }
 
 @media (min-width: 992px) {

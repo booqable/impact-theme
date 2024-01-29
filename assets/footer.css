@@ -2,6 +2,12 @@
   font-size: 14px;
 }
 
+.footer__wrapper {
+  color: var(--color-primary);
+  background: var(--background-primary);
+  border-top: 1px solid var(--color-border);
+}
+
 .footer__wrapper--padding-top {
   padding-top: var(--padding-top-mobile);
 }
@@ -29,6 +35,7 @@
   font-weight: var(--font-weight-semibold);
   margin: 0;
   word-break: break-word;
+  color: var(--color-primary);
 }
 
 .footer__menu-heading {
@@ -37,11 +44,13 @@
   padding: 0 0 18px;
   font-weight: var(--font-weight-semibold);
   text-align: var(--footer-menu-align);
+  color: var(--color-primary);
 }
 
 .footer__menu-list {
   padding: 0 0 27px;
   text-align: var(--footer-menu-align);
+  color: var(--color-secondary);
 }
 
 .footer__menu-link {
@@ -49,8 +58,12 @@
   color: currentColor;
 }
 
+.footer__menu-link:hover {
+  color: var(--color-outline-hover);
+}
+
 .footer__bottom {
-  border-top: 1px solid transparent;
+  border-top: 1px solid var(--color-border);
   display: flex;
   flex-direction: column-reverse;
 }
@@ -62,6 +75,7 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 10px 0 30px;
+  color: var(--color-primary);
 }
 
 .footer__bottom-menu-list {
@@ -84,60 +98,8 @@
   text-decoration: none;
 }
 
-.palette-one.footer__wrapper {
-  color: var(--color-primary-1);
-  background: var(--background-primary-1);
-  border-top: 1px solid var(--color-border-1);
-}
-
-.palette-one .footer__logo-text,
-.palette-one .footer__menu-heading,
-.palette-one .footer__icons {
-  color: var(--color-primary-1);
-}
-
-.palette-one .footer__menu-list {
-  color: var(--color-secondary-1);
-}
-
-.palette-one .footer__copy {
-  color: var(--color-third-1);
-}
-
-.palette-one .footer__menu-link:hover {
-  color: var(--color-outline-1-hover);
-}
-
-.palette-one .footer__bottom {
-  border-top-color: var(--color-border-1);
-}
-
-.palette-two.footer__wrapper {
-  color: var(--color-primary-2);
-  background: var(--background-primary-2);
-  border-top: 1px solid var(--color-border-2);
-}
-
-.palette-two .footer__logo-text,
-.palette-two .footer__menu-heading,
-.palette-two .footer__icons {
-  color: var(--color-primary-2);
-}
-
-.palette-two .footer__menu-list {
-  color: var(--color-secondary-2);
-}
-
-.palette-two .footer__copy {
-  color: var(--color-third-2);
-}
-
-.palette-two .footer__menu-link:hover {
-  color: var(--color-outline-2-hover);
-}
-
-.palette-two .footer__bottom {
-  border-top-color: var(--color-border-2);
+.footer__copy {
+  color: var(--color-third);
 }
 
 @media (min-width: 992px) {

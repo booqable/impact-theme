@@ -16,56 +16,17 @@
     --line-availability-border-color-unavailable: var(--color-red);
     --line-availability-background-color-unavailable: var(--color-red);
     --line-availability-color-unavailable: var(--color-white);
-
-    {%- if color_palette == "one" -%}
-      {%- if settings.primary_color_1 != blank -%}
-        --line-title-color: var(--color-primary-1);
-        --line-price-color: var(--color-primary-1);
-        --line-input-color: var(--color-primary-1);
-        --line-bundle-item-quantity-color: var(--color-primary-1);
-        --line-bundle-item-name-color: var(--color-primary-1);
-        --line-border: 1px solid var(--color-border-1);
-        --line-image-border: 1px solid var(--color-border-1);
-        --line-control-border: 1px solid var(--color-border-1);
-        --line-variations-color: var(--color-third-1);
-      {%- endif -%}
-
-      {%- if settings.background_1 != blank -%}
-        --line-bundle-item-quantity-background: var(--background-primary-1);
-      {%- endif -%}
-
-      {%- if settings.accent_background_1 != blank -%}
-        --line-toggle-color: var(--background-accent-1);
-      {%- endif -%}
-
-      {%- if settings.accent_outline_1 != blank -%}
-        --line-icon-color: var(--color-outline-1);
-      {%- endif -%}
-
-    {% elsif color_palette == "two" %}
-      {%- if settings.primary_color_2 != blank -%}
-        --line-title-color: var(--color-primary-2);
-        --line-price-color: var(--color-primary-2);
-        --line-input-color: var(--color-primary-2);
-        --line-bundle-item-quantity-color: var(--color-primary-2);
-        --line-bundle-item-name-color: var(--color-primary-2);
-        --line-border: 1px solid var(--color-border-2);
-        --line-image-border: 1px solid var(--color-border-2);
-        --line-control-border: 1px solid var(--color-border-2);
-        --line-variations-color: var(--color-third-2);
-      {%- endif -%}
-
-      {%- if settings.background_2 != blank -%}
-        --line-bundle-item-quantity-background: var(--background-primary-2);
-      {%- endif -%}
-
-      {%- if settings.accent_background_2 != blank -%}
-        --line-toggle-color: var(--background-accent-2);
-      {%- endif -%}
-
-      {%- if settings.accent_outline_2 != blank -%}
-        --line-icon-color: var(--color-outline-2);
-      {%- endif -%}
-    {%- endif -%}
+    --line-title-color: var(--color-primary);
+    --line-price-color: var(--color-primary);
+    --line-input-color: var(--color-primary);
+    --line-bundle-item-quantity-color: var(--color-primary);
+    --line-bundle-item-name-color: var(--color-primary);
+    --line-border: 1px solid var(--color-border);
+    --line-image-border: 1px solid var(--color-border);
+    --line-control-border: 1px solid var(--color-border);
+    --line-variations-color: var(--color-third);
+    --line-bundle-item-quantity-background: var(--background-primary);
+    --line-toggle-color: var(--background-accent);
+    --line-icon-color: var(--color-outline);
   }
 {% endstyle %}

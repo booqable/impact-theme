@@ -1,3 +1,7 @@
+.testimonials__wrapper {
+  background: var(--background-primary);
+}
+
 .testimonials__wrapper--padding-top {
   padding-top: var(--padding-top-mobile, 0);
 }
@@ -36,6 +40,8 @@
   align-items: flex-start;
   border-radius: var(--border-radius-rounded-blocks);
   overflow: hidden;
+  color: var(--color-accent);
+  background: var(--background-accent);
 }
 
 .testimonials__blockquote {
@@ -75,7 +81,7 @@
 }
 
 .testimonials__image {
-  border: 1px solid transparent;
+  border: 1px solid var(--color-accent);
   border-radius: var(--border-radius-circle);
   width: 48px;
   height: 48px;
@@ -91,118 +97,18 @@
   opacity: 0.5;
 }
 
-.testimonials__button {
+.testimonials__button.button {
   margin: 23px 0 0;
   flex: 0 0 50px;
+  border-color: var(--color-accent);
+}
+
+.testimonials__button.button:hover {
+  background: var(--background-primary-hover);
 }
 
 .testimonials .carousel__item {
   max-width: var(--slide-width-mobile);
-}
-
-.palette-one.testimonials__wrapper {
-  background: var(--background-primary-1);
-}
-
-.palette-one .testimonials__content {
-  color: var(--color-accent-1);
-  background: var(--background-accent-1);
-}
-
-.palette-one .button.testimonials__button {
-  border-color: var(--color-accent-1);
-}
-
-.palette-one .button.testimonials__button:hover {
-  background: var(--background-primary-1-hover);
-}
-
-.palette-one .testimonials__image {
-  border-color: var(--color-accent-1);
-}
-
-.palette-two.testimonials__wrapper {
-  background: var(--background-primary-2);
-}
-
-.palette-two .testimonials__content {
-  color: var(--color-accent-2);
-  background: var(--background-accent-2);
-}
-
-.palette-two .button.testimonials__button {
-  border-color: var(--color-accent-2);
-}
-
-.palette-two .button.testimonials__button:hover {
-  background: var(--background-primary-2-hover);
-}
-
-.palette-two .testimonials__image {
-  border-color: var(--color-accent-2);
-}
-
-.palette-three.testimonials__wrapper {
-  background: var(--background-primary-3);
-}
-
-.palette-three .testimonials__content {
-  color: var(--color-accent-3);
-  background: var(--background-accent-3);
-}
-
-.palette-three .button.testimonials__button {
-  border-color: var(--color-accent-3);
-}
-
-.palette-three .button.testimonials__button:hover {
-  background: var(--background-primary-3-hover);
-}
-
-.palette-three .testimonials__image {
-  border-color: var(--color-accent-3);
-}
-
-.palette-four.testimonials__wrapper {
-  background: var(--background-primary-4);
-}
-
-.palette-four .testimonials__content {
-  color: var(--color-accent-4);
-  background: var(--background-accent-4);
-}
-
-.palette-four .button.testimonials__button {
-  border-color: var(--color-accent-4);
-}
-
-.palette-four .button.testimonials__button:hover {
-  background: var(--background-primary-4-hover);
-}
-
-.palette-four .testimonials__image {
-  border-color: var(--color-accent-4);
-}
-
-.palette-five.testimonials__wrapper {
-  background: var(--background-primary-5);
-}
-
-.palette-five .testimonials__content {
-  color: var(--color-accent-5);
-  background: var(--background-accent-5);
-}
-
-.palette-five .button.testimonials__button {
-  border-color: var(--color-accent-5);
-}
-
-.palette-five .button.testimonials__button:hover {
-  background: var(--background-primary-5-hover);
-}
-
-.palette-five .testimonials__image {
-  border-color: var(--color-accent-5);
 }
 
 @media (min-width: 992px) {
@@ -228,7 +134,7 @@
     max-width: calc(var(--title-max-width) + 32px);
     padding: 0 32px 0 0;
     margin: 0;
-    border-right: 1px solid transparent;
+    border-right: 1px solid var(--background-accent);
     position: relative;
     z-index: 1;
   }
@@ -322,26 +228,6 @@
 
   .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel .carousel__navigation {
     left: calc(-1 * var(--title-max-width) - 32px);
-  }
-
-  .palette-one .testimonials__side {
-    border-color: var(--background-accent-1);
-  }
-
-  .palette-two .testimonials__side {
-    border-color: var(--background-accent-2);
-  }
-
-  .palette-three .testimonials__side {
-    border-color: var(--background-accent-3);
-  }
-
-  .palette-four .testimonials__side {
-    border-color: var(--background-accent-4);
-  }
-
-  .palette-five .testimonials__side {
-    border-color: var(--background-accent-5);
   }
 }
 

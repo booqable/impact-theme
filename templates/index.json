@@ -10,7 +10,7 @@
         "button_url_1": "booqable://products/",
         "button_2": "More info",
         "button_url_2": "booqable://root/",
-        "color_palette": "four",
+        "color_scheme": "set-4",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <br> varius enim in eros elementum tristique.",
         "height": "medium",
         "image": "booqable://assets/image-hero.jpeg",
@@ -37,7 +37,7 @@
       "settings": {
         "button_label": "Shop our products",
         "button_url": "booqable://root/",
-        "color_palette": "three",
+        "color_scheme": "set-3",
         "image": "booqable://assets/image-cta-2.jpeg",
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
@@ -74,7 +74,7 @@
         "collection_535502"
       ],
       "settings": {
-        "color_palette": "four",
+        "color_scheme": "set-4",
         "counter_singular": "Item",
         "counter_plural": "Items",
         "grid": "three",
@@ -150,7 +150,7 @@
         "borders": "full",
         "button_label": "See all products",
         "button_url": "booqable://root",
-        "color_palette": "one",
+        "color_scheme": "set-1",
         "image": "",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
@@ -198,7 +198,7 @@
         "testimonial_234567"
       ],
       "settings": {
-        "color_palette": "three",
+        "color_scheme": "set-3",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
@@ -256,7 +256,7 @@
         "logo_478118"
       ],
       "settings": {
-        "color_palette": "three",
+        "color_scheme": "set-3",
         "title": "TRUSTED BY:",
         "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
@@ -313,7 +313,7 @@
       "settings": {
         "button_label": "See all Articles",
         "button_url": "booqable://root/",
-        "color_palette": "four",
+        "color_scheme": "set-4",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
@@ -357,7 +357,7 @@
       ],
       "settings": {
         "behavior": "multiple",
-        "color_palette": "five",
+        "color_scheme": "set-5",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
         "image": "booqable://assets/image-accordion-background.png",
         "padding_bottom": "medium",

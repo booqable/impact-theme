@@ -12,36 +12,10 @@
     --product-gallery-thumbnail-direction: row;
     --product-gallery-thumbnail-border-radius: var(--border-radius);
     --product-gallery-thumbnail-size: var(--thumbnail-size);
-
-    {%- if color_palette == "one" -%}
-      {%- if settings.primary_color_1 != blank -%}
-        --product-gallery-preview-border: 1px solid var(--color-border-1);
-        --product-gallery-thumbnail-border: 1px solid var(--color-border-1);
-      {%- endif -%}
-
-      {%- if settings.accent_background_1 != blank -%}
-        --product-gallery-control-background-color: var(--background-accent-1);
-        --product-gallery-active-thumbnail-border: 1px solid var(--background-accent-1);
-      {%- endif -%}
-
-      {%- if settings.accent_color_1 != blank -%}
-        --product-gallery-control-icon-color: var(--color-accent-1);
-      {%- endif -%}
-
-    {%- elsif color_palette == "two" -%}
-      {%- if settings.primary_color_2 != blank -%}
-        --product-gallery-preview-border: 1px solid var(--color-border-2);
-        --product-gallery-thumbnail-border: 1px solid var(--color-border-2);
-      {%- endif -%}
-
-      {%- if settings.accent_background_2 != blank -%}
-        --product-gallery-control-background-color: var(--background-accent-2);
-        --product-gallery-active-thumbnail-border: 1px solid var(--background-accent-2);
-      {%- endif -%}
-
-      {%- if settings.accent_color_2 != blank -%}
-        --product-gallery-control-icon-color: var(--color-accent-2);
-      {%- endif -%}
-    {%- endif -%}
+    --product-gallery-preview-border: 1px solid var(--color-border);
+    --product-gallery-thumbnail-border: 1px solid var(--color-border);
+    --product-gallery-control-background-color: var(--background-accent);
+    --product-gallery-active-thumbnail-border: 1px solid var(--background-accent);
+    --product-gallery-control-icon-color: var(--color-accent);
   }
 {% endstyle %}
