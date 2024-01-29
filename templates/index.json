@@ -370,25 +370,6 @@
       },
       "disabled": null
     },
-    "title": {
-      "type": "title",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "bg_text": "Category",
-        "button_label": "",
-        "button_url": "",
-        "color_palette": "one",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "medium",
-        "padding_top_mobile": "medium",
-        "tag": "OUR COLLECTIONS",
-        "title": "We can service you in each category"
-      },
-      "disabled": null
-    },
     "text-with-image": {
       "type": "text-with-image",
       "blocks": {},
@@ -411,61 +392,6 @@
         "title": "Explore the ride <br> of your life"
       },
       "disabled": null
-    },
-    "title_987655": {
-      "type": "title",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "bg_text": "How does it work",
-        "button_label": "",
-        "button_url": "",
-        "color_palette": "one",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "medium",
-        "padding_top_mobile": "large",
-        "tag": "RENT A PRODUCT",
-        "title": "How does it work"
-      },
-      "disabled": null
-    },
-    "title_987656": {
-      "type": "title",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "bg_text": "News & articles",
-        "button_label": "",
-        "button_url": "",
-        "color_palette": "one",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "large",
-        "padding_top_mobile": "medium",
-        "tag": "MOSAIC CONTENT SECTION",
-        "title": "News & articles"
-      },
-      "disabled": null
-    },
-    "title_987650": {
-      "type": "title",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "bg_text": "FAQ",
-        "color_palette": "two",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "large",
-        "padding_top_mobile": "medium",
-        "tag": "",
-        "title": "Frequently asked questions"
-      },
-      "disabled": null
     }
   },
   "order": [
@@ -477,10 +403,6 @@
     "logos",
     "articles",
     "accordion",
-    "title_987650",
-    "text-with-image",
-    "title",
-    "title_987655",
-    "title_987656"
+    "text-with-image"
   ]
 }
