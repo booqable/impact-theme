@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="{%- if settings.accent_background != blank -%}{{- settings.accent_background -}}{%- else -%}{{- branding_color -}}{%- endif -%}">
+    <meta name="theme-color" content="{%- if settings.color_schemes.first.settings.background_accent != blank -%}{{- settings.color_schemes.first.settings.background_accent -}}{%- else -%}{{- branding_color -}}{%- endif -%}">
     {% comment %} Base stylesheets {% endcomment %}
     {{ "base.css" | asset_url | stylesheet_tag }}
     {{ "rx.css" | asset_url | stylesheet_tag }}
@@ -12,10 +12,15 @@
     <script src="https://kit.fontawesome.com/ff3b3de2b5.js" crossorigin="anonymous"></script>
     {{ content_for_header }}
 
-    {% include 'fonts' %}
-    {% include 'root-styles' %}
+    {% render 'fonts', settings: settings %}
+    {% render 'root-styles', settings: settings %}
 
-    {% include 'page-metadata' %}
+    {% render 'page-metadata',
+      page_title: page_title,
+      page_description: page_description,
+      product: product,
+      shop: shop
+    %}
   </head>
   <body>
 
@@ -38,8 +43,8 @@
     <script src="{{ "carousel.js" | asset_url }}" defer></script>
     <script src="{{ "search.js" | asset_url }}" defer></script>
 
-    {%- if settings.accent_background != blank -%}
-      {%- assign background_accent = settings.accent_background -%}
+    {%- if settings.color_schemes.first.settings.background_accent != blank -%}
+      {%- assign background_accent = settings.color_schemes.first.settings.background_accent -%}
     {%- else -%}
       {%- assign background_accent = branding_color -%}
     {%- endif -%}

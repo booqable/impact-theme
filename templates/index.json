@@ -10,7 +10,7 @@
         "button_url_1": "booqable://products/",
         "button_2": "More info",
         "button_url_2": "booqable://root/",
-        "color_palette": "four",
+        "color_scheme": "set-4",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <br> varius enim in eros elementum tristique.",
         "height": "medium",
         "image": "booqable://assets/image-hero.jpeg",
@@ -37,7 +37,7 @@
       "settings": {
         "button_label": "Shop our products",
         "button_url": "booqable://root/",
-        "color_palette": "three",
+        "color_scheme": "set-3",
         "image": "booqable://assets/image-cta-2.jpeg",
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
@@ -74,7 +74,7 @@
         "collection_535502"
       ],
       "settings": {
-        "color_palette": "four",
+        "color_scheme": "set-4",
         "counter_singular": "Item",
         "counter_plural": "Items",
         "grid": "three",
@@ -150,7 +150,7 @@
         "borders": "full",
         "button_label": "See all products",
         "button_url": "booqable://root",
-        "color_palette": "one",
+        "color_scheme": "set-1",
         "image": "",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
@@ -198,7 +198,7 @@
         "testimonial_234567"
       ],
       "settings": {
-        "color_palette": "three",
+        "color_scheme": "set-3",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
@@ -256,7 +256,7 @@
         "logo_478118"
       ],
       "settings": {
-        "color_palette": "three",
+        "color_scheme": "set-3",
         "title": "TRUSTED BY:",
         "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
@@ -313,7 +313,7 @@
       "settings": {
         "button_label": "See all Articles",
         "button_url": "booqable://root/",
-        "color_palette": "four",
+        "color_scheme": "set-4",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
@@ -357,7 +357,7 @@
       ],
       "settings": {
         "behavior": "multiple",
-        "color_palette": "five",
+        "color_scheme": "set-5",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
         "image": "booqable://assets/image-accordion-background.png",
         "padding_bottom": "medium",
@@ -367,25 +367,6 @@
         "rounded_corners": "none",
         "show_borders": true,
         "title": "FAQ"
-      },
-      "disabled": null
-    },
-    "title": {
-      "type": "title",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "bg_text": "Category",
-        "button_label": "",
-        "button_url": "",
-        "color_palette": "one",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "medium",
-        "padding_top_mobile": "medium",
-        "tag": "OUR COLLECTIONS",
-        "title": "We can service you in each category"
       },
       "disabled": null
     },
@@ -411,61 +392,6 @@
         "title": "Explore the ride <br> of your life"
       },
       "disabled": null
-    },
-    "title_987655": {
-      "type": "title",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "bg_text": "How does it work",
-        "button_label": "",
-        "button_url": "",
-        "color_palette": "one",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "medium",
-        "padding_top_mobile": "large",
-        "tag": "RENT A PRODUCT",
-        "title": "How does it work"
-      },
-      "disabled": null
-    },
-    "title_987656": {
-      "type": "title",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "bg_text": "News & articles",
-        "button_label": "",
-        "button_url": "",
-        "color_palette": "one",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "large",
-        "padding_top_mobile": "medium",
-        "tag": "MOSAIC CONTENT SECTION",
-        "title": "News & articles"
-      },
-      "disabled": null
-    },
-    "title_987650": {
-      "type": "title",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "bg_text": "FAQ",
-        "color_palette": "two",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "large",
-        "padding_top_mobile": "medium",
-        "tag": "",
-        "title": "Frequently asked questions"
-      },
-      "disabled": null
     }
   },
   "order": [
@@ -477,10 +403,6 @@
     "logos",
     "articles",
     "accordion",
-    "title_987650",
-    "text-with-image",
-    "title",
-    "title_987655",
-    "title_987656"
+    "text-with-image"
   ]
 }

@@ -18,46 +18,12 @@
     --totals-error-gap: 10px;
     --totals-error-font-size: 16px;
     --totals-error-font-weight: 400;
-
-    {%- if color_palette == "one" -%}
-      {%- if settings.primary_color_1 != blank -%}
-        --secondary-button-button-label-color: var(--color-primary-1);
-        --totals-text-color: var(--color-primary-1);
-        --totals-border: 1px solid var(--color-border-1);
-      {%- endif -%}
-
-      {%- if settings.background_1 != blank -%}
-        --secondary-button-button-color: var(--background-primary-1);
-      {%- endif -%}
-
-      {%- if settings.accent_background_1 != blank -%}
-        --book-button-button-color: var(--background-accent-1);
-        --secondary-button-button-border: 1px solid var(--background-accent-1);
-      {%- endif -%}
-
-      {%- if settings.accent_color_1 != blank -%}
-        --book-button-button-label-color: var(--color-accent-1);
-      {%- endif -%}
-
-    {%- elsif color_palette == "two" -%}
-      {%- if settings.primary_color_2 != blank -%}
-        --secondary-button-button-label-color: var(--color-primary-2);
-        --totals-text-color: var(--color-primary-2);
-        --totals-border: 1px solid var(--color-border-2);
-      {%- endif -%}
-
-      {%- if settings.background_2 != blank -%}
-        --secondary-button-button-color: var(--background-primary-2);
-      {%- endif -%}
-
-      {%- if settings.accent_background_2 != blank -%}
-        --book-button-button-color: var(--background-accent-2);
-        --secondary-button-button-border: 1px solid var(--background-accent-2);
-      {%- endif -%}
-
-      {%- if settings.accent_color_2 != blank -%}
-        --book-button-button-label-color: var(--color-accent-2);
-      {%- endif -%}
-    {%- endif -%}
+    --secondary-button-button-label-color: var(--color-primary);
+    --totals-text-color: var(--color-primary);
+    --totals-border: 1px solid var(--color-border);
+    --secondary-button-button-color: var(--background-primary);
+    --book-button-button-color: var(--background-accent);
+    --secondary-button-button-border: 1px solid var(--background-accent);
+    --book-button-button-label-color: var(--color-accent);
   }
 {% endstyle %}

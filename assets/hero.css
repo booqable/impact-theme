@@ -25,6 +25,10 @@
   padding-bottom: var(--padding-bottom-mobile, 0);
 }
 
+.hero__content {
+  color: var(--color-primary);
+}
+
 .hero__text-area {
   height: 100%;
   display: flex;
@@ -61,6 +65,7 @@
 }
 
 .hero__vision {
+  background: var(--background-primary);
   position: absolute;
   top: 0;
   left: 0;
@@ -110,61 +115,9 @@
   height: 100%;
 }
 
-.palette-one .hero__content {
-  color: var(--color-primary-1);
-}
-
-.palette-one .hero__vision {
-  background: var(--background-primary-1);
-}
-
-.palette-two .hero__content {
-  color: var(--color-primary-2);
-}
-
-.palette-two .hero__vision {
-  background: var(--background-primary-2);
-}
-
-.palette-three .hero__content {
-  color: var(--color-primary-3);
-}
-
-.palette-three .hero__vision {
-  background: var(--background-primary-3);
-}
-
-.palette-four .hero__content {
-  color: var(--color-primary-4);
-}
-
-.palette-four .hero__vision {
-  background: var(--background-primary-4);
-}
-
-.palette-five .hero__content {
-  color: var(--color-primary-5);
-}
-
-.palette-five .hero__vision {
-  background: var(--background-primary-5);
-}
-
-.palette-one .hero__text-area--color .hero__content,
-.palette-one .hero__text-area--color .hero__title,
-.palette-one .hero__text-area--color .hero__buttons .button--outlined,
-.palette-two .hero__text-area--color .hero__content,
-.palette-two .hero__text-area--color .hero__title,
-.palette-two .hero__text-area--color .hero__buttons .button--outlined,
-.palette-three .hero__text-area--color .hero__content,
-.palette-three .hero__text-area--color .hero__title,
-.palette-three .hero__text-area--color .hero__buttons .button--outlined,
-.palette-four .hero__text-area--color .hero__content,
-.palette-four .hero__text-area--color .hero__title,
-.palette-four .hero__text-area--color .hero__buttons .button--outlined,
-.palette-five .hero__text-area--color .hero__content,
-.palette-five .hero__text-area--color .hero__title,
-.palette-five .hero__text-area--color .hero__buttons .button--outlined {
+.hero__text-area--color .hero__content,
+.hero__text-area--color .hero__title,
+.hero__text-area--color .hero__buttons .button--outlined {
   color: var(--color-overlay);
 }
 

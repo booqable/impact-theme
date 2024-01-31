@@ -1,6 +1,8 @@
 .accordion__wrapper {
   position: relative;
   overflow: hidden;
+  background: var(--background-primary);
+  color: var(--color-primary);
 }
 
 .accordion__wrapper--padding-top {
@@ -40,10 +42,11 @@
   margin: 0 0 8px;
   padding: 0;
   position: relative;
+  background: var(--background-primary);
 }
 
 .accordion__item--with-border {
-  border: 1px solid transparent;
+  border: 1px solid var(--color-primary);
 }
 
 .accordion__item--rounded {
@@ -85,6 +88,7 @@
   transition: max-height .5s var(--transition-function-ease);
   position: relative;
   z-index: 1;
+  color: var(--color-secondary);
 }
 
 .accordion__content p {
@@ -119,86 +123,6 @@
 .accordion__trigger:checked ~ .accordion__content {
   transition: max-height 1s var(--transition-function-ease-in-out);
   max-height: 1000px;
-}
-
-.palette-one.accordion__wrapper {
-  background: var(--background-primary-1);
-}
-
-.palette-one .accordion__item {
-  background: var(--background-primary-1);
-}
-
-.palette-one .accordion__item--with-border {
-  border-color: var(--color-primary-1);
-}
-
-.palette-one .accordion__content {
-  color: var(--color-secondary-1);
-}
-
-.palette-two.accordion__wrapper {
-  background: var(--background-primary-2);
-}
-
-.palette-two .accordion__item {
-  background: var(--background-primary-2);
-}
-
-.palette-two .accordion__item--with-border {
-  border-color: var(--color-primary-2);
-}
-
-.palette-two .accordion__content {
-  color: var(--color-secondary-2);
-}
-
-.palette-three.accordion__wrapper {
-  background: var(--background-primary-3);
-}
-
-.palette-three .accordion__item {
-  background: var(--background-primary-3);
-}
-
-.palette-three .accordion__item--with-border {
-  border-color: var(--color-primary-3);
-}
-
-.palette-three .accordion__content {
-  color: var(--color-secondary-3);
-}
-
-.palette-four.accordion__wrapper {
-  background: var(--background-primary-4);
-}
-
-.palette-four .accordion__item {
-  background: var(--background-primary-4);
-}
-
-.palette-four .accordion__item--with-border {
-  border-color: var(--color-primary-4);
-}
-
-.palette-four .accordion__content {
-  color: var(--color-secondary-4);
-}
-
-.palette-five.accordion__wrapper {
-  background: var(--background-primary-5);
-}
-
-.palette-five .accordion__item {
-  background: var(--background-primary-5);
-}
-
-.palette-five .accordion__item--with-border {
-  border-color: var(--color-primary-5);
-}
-
-.palette-five .accordion__content {
-  color: var(--color-secondary-5);
 }
 
 @media (min-width: 992px) {

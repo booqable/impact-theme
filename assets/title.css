@@ -1,6 +1,8 @@
 .title__wrapper {
   position: relative;
   overflow: hidden;
+  background: var(--background-primary);
+  color: var(--color-secondary);
 }
 
 .title__wrapper--padding-top {
@@ -37,6 +39,7 @@
 .title__heading {
   font-weight: var(--font-weight-extrabold);
   margin-bottom: 0;
+  color: var(--color-primary);
 }
 
 .title__heading + .title__description:not(:empty) {
@@ -56,51 +59,6 @@
   left: 50%;
   width: 100%;
   transform: translate(-50%, 0);
-}
-
-.palette-one.title__wrapper {
-  background: var(--background-primary-1);
-  color: var(--color-secondary-1);
-}
-
-.palette-one .title__heading {
-  color: var(--color-primary-1);
-}
-
-.palette-two.title__wrapper {
-  background: var(--background-primary-2);
-  color: var(--color-secondary-2);
-}
-
-.palette-two .title__heading {
-  color: var(--color-primary-2);
-}
-
-.palette-three.title__wrapper {
-  background: var(--background-primary-3);
-  color: var(--color-secondary-3);
-}
-
-.palette-three .title__heading {
-  color: var(--color-primary-3);
-}
-
-.palette-four.title__wrapper {
-  background: var(--background-primary-4);
-  color: var(--color-secondary-4);
-}
-
-.palette-four .title__heading {
-  color: var(--color-primary-4);
-}
-
-.palette-five.title__wrapper {
-  background: var(--background-primary-5);
-  color: var(--color-secondary-5);
-}
-
-.palette-five .title__heading {
-  color: var(--color-primary-5);
 }
 
 @media (min-width: 992px) {

@@ -4,7 +4,7 @@
 {%- assign custom_description    = section.settings.custom_description -%}
 {%- assign image                 = section.settings.image -%}
 {%- assign full_width            = section.settings.full_width -%}
-{%- assign color_palette         = section.settings.color_palette -%}
+{%- assign color_scheme          = section.settings.color_scheme -%}
 {%- assign rounded_corners       = section.settings.rounded_corners -%}
 {%- assign padding_top           = section.settings.padding_top -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
@@ -66,7 +66,7 @@
   <div class="title__container container">
 {%- endunless -%}
     <div
-      class="title__wrapper palette-{{ color_palette }}{% if padding_top != blank or padding_top_mobile != blank %} title__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} title__wrapper--padding-bottom{%- endif -%}"
+      class="title__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} title__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} title__wrapper--padding-bottom{%- endif -%}"
       style="{{- variables | escape -}}"
     >
   {%- if full_width -%}
@@ -124,32 +124,10 @@
         "default": "Lorem ipsum dolor sit amet."
       },
       {
-        "type": "select",
-        "id": "color_palette",
-        "label": "Color palette",
-        "options": [
-          {
-            "value": "one",
-            "label": "Color set 1"
-          },
-          {
-            "value": "two",
-            "label": "Color set 2"
-          },
-          {
-            "value": "three",
-            "label": "Color set 3"
-          },
-          {
-            "value": "four",
-            "label": "Color set 4"
-          },
-          {
-            "value": "five",
-            "label": "Color set 5"
-          }
-        ],
-        "default": "one"
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
       },
       {
         "type": "header",

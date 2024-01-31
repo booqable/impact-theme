@@ -101,6 +101,11 @@
   transition: all var(--animation-duration) var(--transition-function-ease-out);
   border-radius: 50%;
   pointer-events: none;
+  background: var(--color-primary-30);
+}
+
+.carousel__dot.active:after {
+  background: var(--color-primary);
 }
 
 .carousel__dot.hidden {
@@ -132,6 +137,7 @@
   cursor: pointer;
   text-indent: -9999px;
   transition: all var(--animation-duration) var(--transition-function-ease-out);
+  border-color: var(--background-accent);
 }
 
 .carousel__btn svg {
@@ -146,90 +152,11 @@
 
 .carousel__btn path {
   transition: all var(--animation-duration) var(--transition-function-ease-out);
+  fill: var(--background-accent);
 }
 
 .carousel .product-card {
   height: 100%;
-}
-
-.palette-one .carousel__dot:after {
-  background: var(--color-primary-1-30);
-}
-
-.palette-one .carousel__dot.active:after {
-  background: var(--color-primary-1);
-}
-
-.palette-one .carousel__btn {
-  border-color: var(--background-accent-1);
-}
-
-.palette-one .carousel__btn path {
-  fill: var(--background-accent-1);
-}
-
-.palette-two .carousel__dot:after {
-  background: var(--color-primary-2-30);
-}
-
-.palette-two .carousel__dot.active:after {
-  background: var(--color-primary-2);
-}
-
-.palette-two .carousel__btn {
-  border-color: var(--background-accent-2);
-}
-
-.palette-two .carousel__btn path {
-  fill: var(--background-accent-2);
-}
-
-.palette-three .carousel__dot:after {
-  background: var(--color-primary-3-30);
-}
-
-.palette-three .carousel__dot.active:after {
-  background: var(--color-primary-3);
-}
-
-.palette-three .carousel__btn {
-  border-color: var(--background-accent-3);
-}
-
-.palette-three .carousel__btn path {
-  fill: var(--background-accent-3);
-}
-
-.palette-four .carousel__dot:after {
-  background: var(--color-primary-4-30);
-}
-
-.palette-four .carousel__dot.active:after {
-  background: var(--color-primary-4);
-}
-
-.palette-four .carousel__btn {
-  border-color: var(--background-accent-4);
-}
-
-.palette-four .carousel__btn path {
-  fill: var(--background-accent-4);
-}
-
-.palette-five .carousel__dot:after {
-  background: var(--color-primary-5-30);
-}
-
-.palette-five .carousel__dot.active:after {
-  background: var(--color-primary-5);
-}
-
-.palette-five .carousel__btn {
-  border-color: var(--background-accent-5);
-}
-
-.palette-five .carousel__btn path {
-  fill: var(--color-primary-5);
 }
 
 @media (min-width: 992px) {
@@ -242,6 +169,11 @@
     bottom: 0;
     width: calc(46px + var(--horizontal-padding-mobile));
     z-index: 1;
+    background: linear-gradient(90deg, var(--background-primary) 42.92%, var(--background-primary-00) 95%);
+  }
+
+  .carousel:after {
+    background: linear-gradient(-90deg, var(--background-primary) 42.92%, var(--background-primary-00) 95%);
   }
 
   .carousel::after {
@@ -273,175 +205,33 @@
   .carousel__item:last-child .carousel__inner {
     padding-right: var(--horizontal-padding);
   }
-
-  .palette-one .carousel:before {
-    background: linear-gradient(90deg, var(--background-primary-1) 42.92%, var(--background-primary-1-00) 95%);
-  }
-
-  .palette-one .carousel:after {
-    background: linear-gradient(-90deg, var(--background-primary-1) 42.92%, var(--background-primary-1-00) 95%);
-  }
-
-  .palette-two .carousel:before {
-    background: linear-gradient(90deg, var(--background-primary-2) 42.92%, var(--background-primary-2-00) 95%);
-  }
-
-  .palette-two .carousel:after {
-    background: linear-gradient(-90deg, var(--background-primary-2) 42.92%, var(--background-primary-2-00) 95%);
-  }
-
-  .palette-three .carousel:before {
-    background: linear-gradient(90deg, var(--background-primary-3) 42.92%, var(--background-primary-3-00) 95%);
-  }
-
-  .palette-three .carousel:after {
-    background: linear-gradient(-90deg, var(--background-primary-3) 42.92%, var(--background-primary-3-00) 95%);
-  }
-
-  .palette-four .carousel:before {
-    background: linear-gradient(90deg, var(--background-primary-4) 42.92%, var(--background-primary-4-00) 95%);
-  }
-
-  .palette-four .carousel:after {
-    background: linear-gradient(-90deg, var(--background-primary-4) 42.92%, var(--background-primary-4-00) 95%);
-  }
-
-  .palette-five .carousel:before {
-    background: linear-gradient(90deg, var(--background-primary-5) 42.92%, var(--background-primary-5-00) 95%);
-  }
-
-  .palette-five .carousel:after {
-    background: linear-gradient(-90deg, var(--background-primary-5) 42.92%, var(--background-primary-5-00) 95%);
-  }
 }
 
 @media (min-width: 1200px) {
   .carousel:before,
   .carousel::after {
     right: calc(100% - 17px);
-    width: calc(46px + var(--horizontal-padding))
+    width: calc(46px + var(--horizontal-padding));
+    background: linear-gradient(90deg, var(--background-primary) 58%, var(--background-primary-00) 95%);
   }
 
   .carousel::after {
     right: auto;
     left: calc(100% - 17px);
-  }
-
-  .palette-one .carousel:before {
-    background: linear-gradient(90deg, var(--background-primary-1) 58%, var(--background-primary-1-00) 95%);
-  }
-
-  .palette-one .carousel:after {
-    background: linear-gradient(-90deg, var(--background-primary-1) 58%, var(--background-primary-1-00) 95%);
-  }
-
-  .palette-two .carousel:before {
-    background: linear-gradient(90deg, var(--background-primary-2) 58%, var(--background-primary-2-00) 95%);
-  }
-
-  .palette-two .carousel:after {
-    background: linear-gradient(-90deg, var(--background-primary-2) 58%, var(--background-primary-2-00) 95%);
-  }
-
-  .palette-three .carousel:before {
-    background: linear-gradient(90deg, var(--background-primary-3) 58%, var(--background-primary-3-00) 95%);
-  }
-
-  .palette-three .carousel:after {
-    background: linear-gradient(-90deg, var(--background-primary-3) 58%, var(--background-primary-3-00) 95%);
-  }
-
-  .palette-four .carousel:before {
-    background: linear-gradient(90deg, var(--background-primary-4) 58%, var(--background-primary-4-00) 95%);
-  }
-
-  .palette-four .carousel:after {
-    background: linear-gradient(-90deg, var(--background-primary-4) 58%, var(--background-primary-4-00) 95%);
-  }
-
-  .palette-five .carousel:before {
-    background: linear-gradient(90deg, var(--background-primary-5) 58%, var(--background-primary-5-00) 95%);
-  }
-
-  .palette-five .carousel:after {
-    background: linear-gradient(-90deg, var(--background-primary-5) 58%, var(--background-primary-5-00) 95%);
+    background: linear-gradient(-90deg, var(--background-primary) 58%, var(--background-primary-00) 95%);
   }
 }
 
 @media (hover: hover) {
-  .palette-one .carousel__btn:hover {
-    background: var(--background-accent-1);
+  .carousel__btn:hover {
+    background: var(--background-accent);
   }
 
-  .palette-one .carousel__btn:hover path {
-    fill: var(--color-accent-1);
+  .carousel__btn:hover path {
+    fill: var(--color-accent);
   }
 
-  .palette-one .carousel__dot:hover:after {
-    background: var(--color-primary-1);
-  }
-
-  .palette-two .carousel__btn:hover {
-    background: var(--background-accent-2);
-  }
-
-  .palette-two .carousel__btn:hover path {
-    fill: var(--color-accent-2);
-  }
-
-  .palette-two .carousel__dot:hover:after {
-    background: var(--color-primary-2);
-  }
-
-  .palette-three .carousel__btn:hover {
-    background: var(--background-accent-3);
-  }
-
-  .palette-three .carousel__btn:hover path {
-    fill: var(--color-accent-3);
-  }
-
-  .palette-three .carousel__dot:hover:after {
-    background: var(--color-primary-3);
-  }
-
-  .palette-four .carousel__btn:hover {
-    background: var(--background-accent-4);
-  }
-
-  .palette-four .carousel__btn:hover path {
-    fill: var(--color-accent-4);
-  }
-
-  .palette-four .carousel__dot:hover:after {
-    background: var(--color-primary-4);
-  }
-
-  .palette-five .carousel__btn:hover {
-    background: var(--background-accent-5);
-  }
-
-  .palette-five .carousel__btn:hover path {
-    fill: var(--color-accent-5);
-  }
-
-  .palette-five .carousel__dot:hover:after {
-    background: var(--color-primary-5);
-  }
-
-  .palette-one .carousel__edges .carousel__btn:hover,
-  .palette-two .carousel__edges .carousel__btn:hover,
-  .palette-three .carousel__edges .carousel__btn:hover,
-  .palette-four .carousel__edges .carousel__btn:hover,
-  .palette-five .carousel__edges .carousel__btn:hover {
-    border-color: var(--overlay-color);
-  }
-
-  .palette-one .carousel__edges .carousel__dot:hover:after,
-  .palette-two .carousel__edges .carousel__dot:hover:after,
-  .palette-three .carousel__edges .carousel__dot:hover:after,
-  .palette-four .carousel__edges .carousel__dot:hover:after,
-  .palette-five .carousel__edges .carousel__dot:hover:after {
-    background: var(--overlay-color);
+  .carousel__dot:hover:after {
+    background: var(--color-primary);
   }
 }
