@@ -115,7 +115,7 @@
                   <div class="carousel__inner">
               {%- endif -%}
                     {%- if description != blank -%}
-                      <div class="testimonials__content">
+                      <div class="testimonials__content" id="{{- section.key -}}-{{- block.id -}}">
                         <blockquote class="testimonials__blockquote text-medium">
                           <q class="testimonials__quote bq-content rx-content">
                             {{- description -}}

@@ -96,7 +96,7 @@
         {%- assign country         = location.country -%}
         {%- assign label           = block.settings.label -%}
 
-        <li data-trigger="tab-{{- index -}}" class="tabs__trigger{% if first %} active{%- endif -%}" id="{{- block.id -}}">
+        <li data-trigger="tab-{{- index -}}" class="tabs__trigger{% if first %} active{%- endif -%}" id="{{- section.key -}}-{{- block.id -}}">
           <span class="tabs__heading">
             {%- if city != blank -%}
               {{- city -}}
@@ -160,7 +160,7 @@
         <div data-content="tab-{{- index -}}" class="tabs__content{% if first %} active{%- endif -%}">
           <div class="tabs__image-wrapper{% unless location != blank %} no-image{%- endunless -%}">
             {%- if address != blank or city != blank or zipcode != blank -%}
-              <div id="map-{{- block.id -}}" class="map" data-address="{{- address -}}, {{ city }}, {{ zipcode }}"></div>
+              <div id="map-{{- section.key -}}-{{- block.id -}}" class="map" data-address="{{- address -}}, {{ city }}, {{ zipcode }}"></div>
 
               {%- if icon != blank -%}
                 <div class="map-icon" style="transform: translate(0, -100%); position: relative; z-index: -1;">

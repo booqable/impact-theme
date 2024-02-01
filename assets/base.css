@@ -96,7 +96,7 @@ body::-webkit-scrollbar {
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
   height: 100%;
   padding: env(safe-area-inset);
 }
@@ -111,7 +111,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body > * {
@@ -161,6 +161,7 @@ body .stretch > section:first-child{
 
 .preview-bar__container {
   z-index: 1002 !important;
+  position: fixed !important;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {

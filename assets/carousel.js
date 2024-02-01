@@ -70,8 +70,10 @@ class Carousel {
 
   events() {
     this.carouselInit();
-    this.startTimer();
-    this.pauseAutoRotate();
+    if (window.previewOptions?.mode !== 'theme_editor') {
+      this.startTimer();
+      this.pauseAutoRotate();
+    }
     this.hideControls();
     this.hidePaginationDots();
 
@@ -428,4 +430,8 @@ const initCarousel = (el = ".carousel") => {
 
 document.addEventListener("readystatechange", (e) => {
   if (e.target.readyState === "complete") initCarousel();
+})
+
+document.addEventListener("preview:ready", () => {
+  initCarousel();
 })

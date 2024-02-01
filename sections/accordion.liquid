@@ -89,16 +89,16 @@
           {%- assign heading = block.settings.heading -%}
           {%- assign content = block.settings.content -%}
 
-          <li class="accordion__item{% if show_borders %} accordion__item--with-border{% endif %}{% if rounded_corners %} accordion__item--rounded{%- endif -%}" id="{{- block.id -}}">
+          <li class="accordion__item{% if show_borders %} accordion__item--with-border{% endif %}{% if rounded_corners %} accordion__item--rounded{%- endif -%}" id="{{- section.key -}}-{{- block.id -}}">
             {%- if heading != blank -%}
               <input
                 {% if behavior == "single" %}type="radio"{% else %}type="checkbox"{% endif %}
                 class="accordion__trigger"
-                id="accordion-item-{{- block.id -}}"
+                id="accordion-item-{{- section.key -}}-{{- block.id -}}"
                 name="accordion trigger"
               />
 
-              <label class="accordion__label" for="accordion-item-{{- block.id -}}">
+              <label class="accordion__label" for="accordion-item-{{- section.key -}}-{{- block.id -}}">
                 <h3 class="accordion__heading">
                   {{- heading -}}
                   {%- render 'icon-arrow-right' -%}

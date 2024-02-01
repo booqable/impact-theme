@@ -163,3 +163,7 @@ const main = new Main(document.querySelector('body'));
 document.addEventListener("readystatechange", (event) => {
   if (event.target.readyState === "complete") main.init();
 })
+
+document.addEventListener("preview:ready", () => {
+  main.init();
+})

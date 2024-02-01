@@ -117,3 +117,7 @@ const initMenu = new MegaMenu(document.querySelector('.menu'));
 document.addEventListener("readystatechange", (e) => {
   if (e.target.readyState === "complete") initMenu.init();
 })
+
+document.addEventListener("preview:ready", () => {
+  initMenu.init();
+})

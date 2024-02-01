@@ -145,6 +145,8 @@
                   {% assign product = item %}
               {% endcase %}
 
+              {%- assign item_id = section.key | append: "-" | append: item.id -%}
+
               {%- if carousel -%}
                 <div class="carousel__item">
                   <div class="carousel__inner">
@@ -154,7 +156,8 @@
                         placeholder: image_placeholder,
                         border: border,
                         focal: is_focal,
-                        show_excerpt: show_excerpt
+                        show_excerpt: show_excerpt,
+                        block_id: item_id
                     -%}
               {%- if carousel -%}
                   </div>

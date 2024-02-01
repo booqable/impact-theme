@@ -92,7 +92,7 @@
             {%- assign image = blank -%}
           {%- endif -%}
 
-          <div class="articles__item" id="{{- block.id -}}">
+          <div class="articles__item" id="{{- section.key -}}-{{- block.id -}}">
             <div class="articles__image-wrapper{% if image == blank %} no-image{%- endif -%}">
               {%- if image != blank -%}
                 {%- render 'image',

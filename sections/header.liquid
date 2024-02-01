@@ -314,6 +314,8 @@
 <div
   class="header__inner{% unless transparent_bg %} header__inner-background{% endunless %} color-{{- color_scheme.id -}}"
   style="{{- variables | escape -}}"
+  data-sticky="{{- sticky_header -}}"
+  data-transparency="{{- transparent_bg -}}"
 >
   <div class="header__content{% if padding_top != blank or padding_top_mobile != blank %} header__content--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} header__content--padding-bottom{%- endif -%}">
     <div class="header__container container">
@@ -343,18 +345,6 @@
     </div>
   </div>
 </div>
-
-<script>
-  const header = document.querySelector('.header');
-
-  {% if transparent_bg %}
-    header.classList.add('header-transparent')
-  {% endif %}
-
-  {% if sticky_header %}
-    header.classList.add('header-sticky')
-  {% endif %}
-</script>
 
 {% schema %}
   {

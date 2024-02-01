@@ -77,7 +77,7 @@
           {%- assign button_url   = block.settings.button_url -%}
           {%- assign button_style = block.settings.button_style -%}
 
-          <div class="columns__item" id="{{- block.id -}}">
+          <div class="columns__item" id="{{- section.key -}}-{{- block.id -}}">
             {%- if image.url != blank -%}
               <div class="columns__image-wrapper">
                 {%- render 'image',

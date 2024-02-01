@@ -7,7 +7,8 @@
   border - string optional,
   focal - boolean optional,
   img_size - string optional,
-  show_excerpt - boolean *required
+  show_excerpt - boolean *required,
+  block_id: string optional
 
   Usage:
 
@@ -17,12 +18,12 @@
       border: your_id,
       focal: your_id,
       img_size: your_string,
-      show_excerpt: true
+      show_excerpt: true,
+      block_id: section.key-block.id
   -%}
 
 {% endcomment %}
 
-{%- assign id      = "" -%}
 {%- assign url     = "" -%}
 {%- assign image   = "" -%}
 {%- assign name    = "" -%}
@@ -48,7 +49,6 @@
     {%- assign points = image.coordinates -%}
   {% endif %}
 
-  {%- assign id      = product.id -%}
   {%- assign url     = product.url -%}
   {%- assign name    = product.name -%}
   {%- assign excerpt = product.description | truncatewords: 20, " ..."  -%}
@@ -68,7 +68,7 @@
   {%- assign period  = "1 day" -%}
 {%- endif -%}
 
-<div class="product-card product-card--{{- border -}}-border" {% if id != blank %}id="{{- id -}}"{%- endif -%}>
+<div class="product-card product-card--{{- border -}}-border"{% if block_id != blank %} id="{{- block_id -}}"{%- endif -%}>
   <div class="product-card__vision{% unless image != blank %} no-image{%- endunless -%}">
     {%- if image.url != blank -%}
       {%- render 'image',

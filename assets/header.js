@@ -28,7 +28,9 @@ class Header {
     }
 
     this.attr = {
-      href: "href"
+      href: "href",
+      sticky: "data-sticky",
+      transparency: "data-transparency"
     }
 
     this.minHeight = 120;
@@ -55,9 +57,22 @@ class Header {
   events() {
     this.headerHeight();
     this.setEmailPhone();
+    this.stickyHeader();
 
     window.addEventListener("scroll", this.scrollProps.bind(this));
     window.addEventListener("resize", this.headerHeight.bind(this));
+  }
+
+  stickyHeader() {
+    const sticky = this.inner.getAttribute(this.attr.sticky);
+    const transparency = this.inner.getAttribute(this.attr.transparency);
+
+    console.log(`sticky: ${sticky}`)
+    console.log(`transparency: ${transparency}`)
+
+    if (transparency) this.header.classList.add('header-transparent')
+
+    if (sticky) this.header.classList.add('header-sticky')
   }
 
   // getting height of header and set css variables
@@ -158,4 +173,8 @@ const initHeader = new Header(document.querySelector('.header'));
 
 document.addEventListener("readystatechange", (e) => {
   if (e.target.readyState === "complete") initHeader.init();
+})
+
+document.addEventListener("preview:ready", () => {
+  initHeader.init();
 })

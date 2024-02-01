@@ -71,7 +71,7 @@
             {%- assign image = blank -%}
           {%- endif -%}
 
-          <div class="logos__image-wrapper{% if image == blank %} no-image{% endif %}" id="{{- block.id -}}">
+          <div class="logos__image-wrapper{% if image == blank %} no-image{% endif %}" id="{{- section.key -}}-{{- block.id -}}">
             {%- if image.url != blank -%}
               {%- render 'image',
                 image: image,

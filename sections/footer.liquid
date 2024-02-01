@@ -101,7 +101,7 @@
       {% case block.type %}
         {% when "menu" %}
           {%- if menu != blank -%}
-            <div class="footer__menu-wrapper" id="{{- block.id -}}" style="{{- menu_variables | escape -}}">
+            <div class="footer__menu-wrapper" id="{{- section.key -}}-{{- block.id -}}" style="{{- menu_variables | escape -}}">
               <strong class="footer__menu-heading">
                 {{- heading -}}
               </strong>

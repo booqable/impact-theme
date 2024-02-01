@@ -152,3 +152,7 @@ const initMap = (el = ".locations__wrapper") => {
 document.addEventListener("readystatechange", (e) => {
   if (e.target.readyState === "complete") initMap();
 })
+
+document.addEventListener("preview:ready", () => {
+  initMap();
+})

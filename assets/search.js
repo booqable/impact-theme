@@ -81,3 +81,7 @@ const initSearch = new Search(document.querySelector('.header__search'));
 document.addEventListener("readystatechange", (e) => {
   if (e.target.readyState === "complete") initSearch.init();
 })
+
+document.addEventListener("preview:ready", () => {
+  initSearch.init();
+})

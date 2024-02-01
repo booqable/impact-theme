@@ -110,3 +110,7 @@ const initTabs = (el = ".tabs") => {
 document.addEventListener("readystatechange", (e) => {
   if (e.target.readyState === "complete") initTabs();
 })
+
+document.addEventListener("preview:ready", () => {
+  initTabs();
+})
