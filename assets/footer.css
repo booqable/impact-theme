@@ -1,11 +1,10 @@
 .footer {
-  font-size: 14px;
+  font-size: calc(var(--font-size-regular) - 2px);
 }
 
 .footer__wrapper {
   color: var(--color-primary);
   background: var(--background-primary);
-  border-top: 1px solid var(--color-border);
 }
 
 .footer__wrapper--padding-top {
@@ -16,8 +15,14 @@
   padding-bottom: var(--padding-bottom-mobile);
 }
 
+.footer__container .footer__wrapper {
+  border-radius: var(--border-radius-rounded-blocks);
+  padding-right: var(--horizontal-padding-mobile);
+  padding-left: var(--horizontal-padding-mobile);
+}
+
 .footer__top {
-  padding: 0 0 13px;
+  padding: 0 0 22px;
 }
 
 .footer__logo-wrapper {
@@ -39,22 +44,22 @@
 }
 
 .footer__menu-heading {
-  font-size: 16px;
+  font-size: var(--font-size-regular);
   display: block;
-  padding: 0 0 18px;
+  padding: 0 0 15px;
   font-weight: var(--font-weight-semibold);
   text-align: var(--footer-menu-align);
-  color: var(--color-primary);
+  color: var(--color-outline);
 }
 
 .footer__menu-list {
-  padding: 0 0 27px;
+  padding: 0 0 25px;
   text-align: var(--footer-menu-align);
   color: var(--color-secondary);
 }
 
 .footer__menu-link {
-  padding: 10px 0;
+  padding: 8px 0;
   color: currentColor;
 }
 
@@ -114,7 +119,7 @@
   .footer__top {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 0 0 52px;
+    padding: 0 0 57px;
   }
 
   .footer__top--with-logo {
@@ -146,7 +151,7 @@
     align-items: center;
   }
 
-  .footer__bottom--copyright-hidden:before{
+  .footer__bottom--copyright-hidden:before {
     content: "";
     display: inline;
   }
@@ -161,7 +166,7 @@
   }
 
   .footer__icons {
-    padding: 27px 0 21px;
+    padding: 34px 0 28px;
   }
 
   .footer__social {
@@ -174,5 +179,19 @@
 
   .footer__bottom-menu {
     margin: 0 25px 0 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer__container .footer__wrapper {
+    padding-right: var(--horizontal-padding);
+    padding-left: var(--horizontal-padding);
+  }
+}
+
+@media (max-width: 991px) {
+  .footer > .footer__container {
+    padding-right: 0;
+    padding-left: 0;
   }
 }

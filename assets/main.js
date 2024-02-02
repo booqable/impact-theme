@@ -3,7 +3,7 @@ class Main {
     this.body = body;
 
     this.selector = {
-      footer: "footer",
+      footer: ".footer",
       image: ".focal-image",
       focus: "[data-focus]"
     }
