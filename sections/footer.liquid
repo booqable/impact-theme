@@ -1,30 +1,32 @@
 {{ "footer.css" | asset_url | stylesheet_tag }}
 
-{%- assign logo	                  = section.settings.logo -%}
-{%- assign custom_title	          = section.settings.custom_title -%}
-{%- assign bottom_text            = section.settings.bottom_text -%}
-{%- assign bottom_menu            = section.settings.bottom_menu -%}
-{%- assign color_scheme           = section.settings.color_scheme -%}
-{%- assign padding_top            = section.settings.padding_top -%}
-{%- assign padding_bottom         = section.settings.padding_bottom -%}
-{%- assign padding_top_mobile     = section.settings.padding_top_mobile -%}
-{%- assign padding_bottom_mobile  = section.settings.padding_bottom_mobile -%}
-{%- assign facebook               = settings.social_facebook_link -%}
-{%- assign instagram              = settings.social_instagram_link -%}
-{%- assign twitter                = settings.social_twitter_link -%}
-{%- assign linkedin               = settings.social_linkedin_link -%}
-{%- assign pinterest              = settings.social_pinterest_link -%}
-{%- assign tiktok                 = settings.social_tiktok_link -%}
-{%- assign tumblr                 = settings.social_tumblr_link -%}
-{%- assign snapchat               = settings.social_snapchat_link -%}
-{%- assign youtube                = settings.social_youtube_link -%}
-{%- assign vimeo                  = settings.social_vimeo_link -%}
+{%- assign full_width            = section.settings.full_width -%}
+{%- assign logo	                 = section.settings.logo -%}
+{%- assign custom_title	         = section.settings.custom_title -%}
+{%- assign bottom_text           = section.settings.bottom_text -%}
+{%- assign bottom_menu           = section.settings.bottom_menu -%}
+{%- assign color_scheme          = section.settings.color_scheme -%}
+{%- assign padding_top           = section.settings.padding_top -%}
+{%- assign padding_bottom        = section.settings.padding_bottom -%}
+{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+{%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign rounded_corners       = section.settings.rounded_corners -%}
+{%- assign facebook              = settings.social_facebook_link -%}
+{%- assign instagram             = settings.social_instagram_link -%}
+{%- assign twitter               = settings.social_twitter_link -%}
+{%- assign linkedin              = settings.social_linkedin_link -%}
+{%- assign pinterest             = settings.social_pinterest_link -%}
+{%- assign tiktok                = settings.social_tiktok_link -%}
+{%- assign tumblr                = settings.social_tumblr_link -%}
+{%- assign snapchat              = settings.social_snapchat_link -%}
+{%- assign youtube               = settings.social_youtube_link -%}
+{%- assign vimeo                 = settings.social_vimeo_link -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
   {%- case padding_top -%}
     {%- when 'small' -%}
-      --padding-top: 50px;
+      --padding-top: 40px;
     {%- when 'medium' -%}
       --padding-top: 80px;
     {%- when 'large' -%}
@@ -33,7 +35,7 @@
 
   {%- case padding_bottom -%}
     {%- when 'small' -%}
-      --padding-bottom: 50px;
+      --padding-bottom: 40px;
     {%- when 'medium' -%}
       --padding-bottom: 80px;
     {%- when 'large' -%}
@@ -56,6 +58,17 @@
       --padding-bottom-mobile: 40px;
     {%- when 'large' -%}
       --padding-bottom-mobile: 60px;
+  {%- endcase -%}
+
+  {%- case rounded_corners -%}
+    {%- when 'none' -%}
+      --border-radius-rounded-blocks: 0px;
+    {%- when 'small' -%}
+      --border-radius-rounded-blocks: 8px;
+    {%- when 'medium' -%}
+      --border-radius-rounded-blocks: 16px;
+    {%- when 'large' -%}
+      --border-radius-rounded-blocks: 32px;
   {%- endcase -%}
 {%- endcapture -%}
 {% comment %} CSS variables end {% endcomment %}
@@ -162,51 +175,61 @@
   {%- endif -%}
 {%- endcapture -%}
 
-<div
-     class="footer__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} footer__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} footer__wrapper--padding-bottom{%- endif -%}"
-     style="{{- variables | escape -}}"
->
+{%- unless full_width -%}
   <div class="footer__container container">
-    <div class="footer__top{% if footer_logo != blank %} footer__top--with-logo{%- endif -%}">
-      <div class="footer__logo-wrapper">
-        <a href="{{ routes.root_url }}" class="footer__logo">
-          {{- footer_logo -}}
-        </a>
-      </div>
+{%- endunless -%}
+    <div
+      class="footer__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} footer__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} footer__wrapper--padding-bottom{%- endif -%}"
+      style="{{- variables | escape -}}"
+    >
+  {%- if full_width -%}
+      <div class="footer__container container">
+  {%- endif -%}
+        <div class="footer__top{% if footer_logo != blank %} footer__top--with-logo{%- endif -%}">
+          <div class="footer__logo-wrapper">
+            <a href="{{ routes.root_url }}" class="footer__logo">
+              {{- footer_logo -}}
+            </a>
+          </div>
 
-      {{- footer_menu -}}
+          {{- footer_menu -}}
 
-    </div>
-    <div class="footer__bottom{% if bottom_text == blank and footer_bottom_menu == blank and show_powered_by == false %} footer__bottom--copyright-hidden{%- endif -%}">
-      {%- if bottom_text != blank or footer_bottom_menu != blank or show_powered_by -%}
-        <div class="footer__copy">
-          {%- if bottom_text != blank or show_powered_by -%}
-            <p>
-              {%- if bottom_text != blank -%}
-                {{ bottom_text }}
-              {%- endif -%}
-
-              {%- if bottom_text != blank and show_powered_by -%}
-                &nbsp;|&nbsp;
-              {%- endif -%}
-
-              {%- if show_powered_by -%}
-                <a href="https://booqable.com/?source=Shop&campaign=Cart" target="_blank" title="Powered by Booqable Rental Software">Powered by Booqable</a>
-              {%- endif -%}
-            </p>
-          {%- endif -%}
-
-          {%- if footer_bottom_menu != blank -%}
-            {{- footer_bottom_menu -}}
-          {%- endif -%}
         </div>
-      {%- endif -%}
+        <div class="footer__bottom{% if bottom_text == blank and footer_bottom_menu == blank and show_powered_by == false %} footer__bottom--copyright-hidden{%- endif -%}">
+          {%- if bottom_text != blank or footer_bottom_menu != blank or show_powered_by -%}
+            <div class="footer__copy">
+              {%- if bottom_text != blank or show_powered_by -%}
+                <p>
+                  {%- if bottom_text != blank -%}
+                    {{ bottom_text }}
+                  {%- endif -%}
 
-      {{- footer_icons -}}
+                  {%- if bottom_text != blank and show_powered_by -%}
+                    &nbsp;|&nbsp;
+                  {%- endif -%}
 
+                  {%- if show_powered_by -%}
+                    <a href="https://booqable.com/?source=Shop&campaign=Cart" target="_blank" title="Powered by Booqable Rental Software">Powered by Booqable</a>
+                  {%- endif -%}
+                </p>
+              {%- endif -%}
+
+              {%- if footer_bottom_menu != blank -%}
+                {{- footer_bottom_menu -}}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+          {{- footer_icons -}}
+
+        </div>
+  {%- if full_width -%}
+      </div>
+  {%- endif -%}
     </div>
+{% unless full_width %}
   </div>
-</div>
+{%- endunless -%}
 
 {% schema %}
   {
@@ -234,7 +257,7 @@
         "type": "color_scheme",
         "id": "color_scheme",
         "label": "Color scheme",
-        "default": "set-1"
+        "default": "set-4"
       },
       {
         "type": "text",
@@ -248,6 +271,36 @@
         "id": "bottom_menu",
         "label": "Bottom menu",
         "info": "This menu located at the bottom of footer"
+      },
+      {
+        "type": "select",
+        "id": "rounded_corners",
+        "label": "Rounded corners of background",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full-width background",
+        "default": true
       },
       {
         "type": "header",

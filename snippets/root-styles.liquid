@@ -26,49 +26,51 @@
       --color-image-placeholder:   {{ scheme.settings.color_primary | append: "26" }};
       --color-placeholder:         {{ scheme.settings.color_primary | append: "4D" }};
       --color-border:              {{ scheme.settings.color_primary | append: "26" }};
-
-      --font-body:          "{{ settings.body_font.family | default: Open Sans }}", {{ settings.body_font.fallback_families | default: sans-serif }};
-      --font-tagline:       "{{ settings.tagline_font.family | default: Open Sans }}", {{ settings.tagline_font.fallback_families | default: sans-serif }};
-      --font-heading:       "{{ settings.heading_font.family | default: Darker Grotesque }}", {{ settings.heading_font.fallback_families | default: sans-serif }};
-      --font-size-h1:       {{ settings.h1_size | append: "px" | default: "80px" }};
-      --font-size-h2:       {{ settings.h2_size | append: "px" | default: "64px" }};
-      --font-size-h3:       {{ settings.h3_size | append: "px" | default: "56px" }};
-      --font-size-tagline:  {{ settings.tagline_size | append: "px" | default: "20px" }};
-      --font-size-large:    {{ settings.large_text_size | append: "px" | default: "18px" }};
-      --font-size-regular:  {{ settings.regular_text_size | append: "px" | default: "16px" }};
-      --animation-duration: {{ settings.animation_duration | append: "s" | default: "0.2s" }};
-
-      {% if settings.corner_radius == 'square' %}
-        --border-radius: 0;
-        --border-radius-circle-dynamic: 50%;
-        --border-radius-rounded: 0px;
-      {% elsif settings.corner_radius == 'rounded' %}
-        --border-radius: 4px;
-        --border-radius-circle-dynamic: 16px;
-        --border-radius-rounded: 4px;
-      {% elsif settings.corner_radius == 'fully_round' %}
-        --border-radius: 50px;
-        --border-radius-circle-dynamic: 50%;
-        --border-radius-rounded: 8px;
-      {% endif %}
-
-      {% case settings.social_size %}
-        {%- when 'sm' -%}
-          --social-size: 18px;
-        {%- when 'md' -%}
-          --social-size: 21px;
-        {%- when 'lg' -%}
-          --social-size: 24px;
-      {% endcase %}
-
-      {% case settings.social_spacing %}
-        {%- when 'sm' -%}
-          --social-spacing: 5px;
-        {%- when 'md' -%}
-          --social-spacing: 7px;
-        {%- when 'lg' -%}
-          --social-spacing: 9px;
-      {%- endcase -%}
     }
   {% endfor %}
+
+  :root {
+    --font-body:          "{{ settings.body_font.family | default: Open Sans }}", {{ settings.body_font.fallback_families | default: sans-serif }};
+    --font-tagline:       "{{ settings.tagline_font.family | default: Open Sans }}", {{ settings.tagline_font.fallback_families | default: sans-serif }};
+    --font-heading:       "{{ settings.heading_font.family | default: Darker Grotesque }}", {{ settings.heading_font.fallback_families | default: sans-serif }};
+    --font-size-h1:       {{ settings.h1_size | append: "px" | default: "80px" }};
+    --font-size-h2:       {{ settings.h2_size | append: "px" | default: "64px" }};
+    --font-size-h3:       {{ settings.h3_size | append: "px" | default: "56px" }};
+    --font-size-tagline:  {{ settings.tagline_size | append: "px" | default: "20px" }};
+    --font-size-large:    {{ settings.large_text_size | append: "px" | default: "18px" }};
+    --font-size-regular:  {{ settings.regular_text_size | append: "px" | default: "16px" }};
+    --animation-duration: {{ settings.animation_duration | append: "s" | default: "0.2s" }};
+
+    {% if settings.corner_radius == 'square' %}
+      --border-radius: 0;
+      --border-radius-circle-dynamic: 50%;
+      --border-radius-rounded: 0px;
+    {% elsif settings.corner_radius == 'rounded' %}
+      --border-radius: 4px;
+      --border-radius-circle-dynamic: 16px;
+      --border-radius-rounded: 4px;
+    {% elsif settings.corner_radius == 'fully_round' %}
+      --border-radius: 50px;
+      --border-radius-circle-dynamic: 50%;
+      --border-radius-rounded: 8px;
+    {% endif %}
+
+    {% case settings.social_size %}
+      {%- when 'sm' -%}
+        --social-size: 18px;
+      {%- when 'md' -%}
+        --social-size: 21px;
+      {%- when 'lg' -%}
+        --social-size: 24px;
+    {% endcase %}
+
+    {% case settings.social_spacing %}
+      {%- when 'sm' -%}
+        --social-spacing: 5px;
+      {%- when 'md' -%}
+        --social-spacing: 7px;
+      {%- when 'lg' -%}
+        --social-spacing: 9px;
+    {%- endcase -%}
+  }
 </style>

@@ -167,10 +167,12 @@
         "settings": {
           "bottom_menu": "bottom-menu",
           "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
-          "color_scheme": "set-1",
+          "color_scheme": "set-4",
           "custom_title": "{{ shop.name }}",
-          "logo": "booqable://assets/image-tough-store-logo-black.png",
-          "padding_bottom": "medium",
+          "full_width": true,
+          "rounded_corners": "none",
+          "logo": "booqable://assets/image-store-logo-white.png",
+          "padding_bottom": "small",
           "padding_bottom_mobile": "small",
           "padding_top": "medium",
           "padding_top_mobile": "small"
