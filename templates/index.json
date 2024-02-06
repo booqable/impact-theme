@@ -370,28 +370,59 @@
       },
       "disabled": null
     },
-    "text-with-image": {
-      "type": "text-with-image",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "button_1": "Button",
-        "button_url_1": "booqable://root/",
-        "button_2": "Button",
-        "button_url_2": "booqable://root/",
-        "color_palette": "two",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.,",
-        "image": "booqable://assets/image-tough-building.jpg",
-        "image_position": "right",
-        "padding_bottom": "large",
-        "padding_bottom_mobile": "large",
-        "padding_top": "large",
-        "padding_top_mobile": "large",
-        "show_overlay": false,
-        "tag": "HIGHLIGHT",
-        "title": "Explore the ride <br> of your life"
+    "socials": {
+      "type": "socials",
+      "blocks": {
+        "item": {
+          "type": "item",
+          "settings": {
+            "image": "booqable://assets/image-socials-1.jpg",
+            "url": "booqable://root/"
+          },
+          "disabled": null
+        },
+        "item_478118": {
+          "type": "item",
+          "settings": {
+            "image": "booqable://assets/image-socials-2.jpg",
+            "url": "booqable://collections/"
+          },
+          "disabled": null
+        },
+        "item_478117": {
+          "type": "item",
+          "settings": {
+            "image": "booqable://assets/image-socials-3.jpg",
+            "url": "booqable://products/"
+          },
+          "disabled": null
+        },
+        "item_478116": {
+          "type": "item",
+          "settings": {
+            "image": "booqable://assets/image-socials-4.jpg",
+            "url": "booqable://pages/contact/"
+          },
+          "disabled": null
+        }
       },
-      "disabled": null
+      "block_order": [
+        "item",
+        "item_478118",
+        "item_478117",
+        "item_478116"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "full_width": false,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "title": "Express yourself with <br>#explorable on Instagram"
+      },
+      "disabled": false
     }
   },
   "order": [
@@ -403,6 +434,6 @@
     "logos",
     "articles",
     "accordion",
-    "text-with-image"
+    "socials"
   ]
 }
