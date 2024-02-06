@@ -77,6 +77,7 @@
         "color_scheme": "set-4",
         "counter_singular": "Item",
         "counter_plural": "Items",
+        "full_width": false,
         "grid": "three",
         "overlay_opacity": 100,
         "padding_bottom": "none",
