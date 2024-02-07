@@ -1,6 +1,7 @@
 .account {
   flex-grow: 1;
   height: 100%;
+  background: var(--background-primary);
 }
 
 .account--padding-top {
@@ -26,12 +27,18 @@
   font-size: 32px;
   margin: 0 auto 16px;
   text-align: center;
+  color: var(--color-primary);
+}
+
+.account__title + .account__divider {
+  color: var(--color-third);
 }
 
 .account__description {
   font-size: 16px;
   line-height: var(--line-height-lg);
   margin-bottom: 24px;
+  color: var(--color-third);
 }
 
 .account__button {
@@ -46,6 +53,11 @@
   font-weight: var(--font-weight-regular);
   text-decoration: none;
   transition: all var(--animation-duration) var(--transition-function-ease-out);
+  color: var(--color-primary);
+}
+
+.account__button--minimal:hover {
+  text-shadow: 0.5px 0 var(--color-primary);
 }
 
 .account-fieldset__block {
@@ -66,12 +78,16 @@
   padding: 0 4px;
   transition-duration: var(--animation-duration);
   transition-property: top, color, background-color;
+  background: var(--background-primary);
+  color: var(--color-secondary);
 }
 
 .account-fieldset__label:not(:has(+ input:focus)):has(+ input:placeholder-shown) {
   font-size: 16px;
   top: 50%;
   cursor: initial;
+  background-color: transparent;
+  color: var(--color-secondary);
 }
 
 .account-fieldset__static-label,
@@ -79,18 +95,22 @@
   font-size: 16px;
   line-height: var(--line-height-lg);
   margin: 0 2px;
+  color: var(--color-secondary);
 }
 
 .account-fieldset__input {
   border-radius: var(--border-radius);
-  border: 1px solid transparent;
+  border: 1px solid var(--color-border);
   font-size: 16px;
   line-height: var(--line-height-xl);
   padding: 8px 16px;
   width: 100%;
+  background: var(--background-primary);
+  color: var(--color-primary);
 }
 
 .account-fieldset__input:focus {
+  border-color: var(--background-accent-hover);
   border-width: 2px;
   padding: 7px 15px;
   outline: none;
@@ -114,10 +134,11 @@
   left: 0;
   transform: translate(0, -50%);
   appearance: none;
-  border: 1px solid transparent;
+  border: 1px solid var(--color-border);
   padding: 8px;
   cursor: pointer;
   border-radius: 50%;
+  background: var(--background-primary);
 }
 
 [id^='user_legal_type']:checked + .account-fieldset__radio-label:after {
@@ -129,9 +150,14 @@
   transform: translate(0, -50%);
   width: 14px;
   height: 14px;
-  border: 2px solid transparent;
+  border: 2px solid var(--background-primary);
   border-radius: 50%;
   z-index: 1;
+}
+
+[id^='user_legal_type']:checked + .account-fieldset__radio-label:before {
+  border-color: var(--background-accent);
+  background: var(--background-accent);
 }
 
 .account__type-options--first-option .account-fieldset__radio-label {
@@ -140,6 +166,11 @@
 
 .account__link {
   text-decoration: none;
+  color: var(--color-outline);
+}
+
+.account__link:hover {
+  color: var(--color-outline-hover);
 }
 
 .account-checkbox__label {
@@ -148,6 +179,7 @@
   align-items: center;
   line-height: var(--line-height-xs);
   margin-bottom: 10px;
+  color: var(--color-primary);
 }
 
 .account-checkbox__label .account__link {
@@ -169,11 +201,12 @@
   left: 0;
   transform: translate(0, -50%);
   appearance: none;
-  border: 1px solid transparent;
+  border: 1px solid var(--color-border);
   padding: 8px;
   cursor: pointer;
   display: inline-block;
   vertical-align: bottom;
+  background: var(--background-primary);
 }
 
 [id^='user_agreement_accepted']:checked + .account-checkbox__label:after {
@@ -184,9 +217,14 @@
   left: 6px;
   width: 6px;
   height: 12px;
-  border: solid transparent;
+  border: solid var(--background-primary);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg) translate(-100%, -45%);
+}
+
+[id^='user_agreement_accepted']:checked + .account-checkbox__label:before {
+  border-color: var(--background-accent);
+  background: var(--background-accent);
 }
 
 .account__error-message {
@@ -224,6 +262,7 @@
 .account__alert--info {
   background: var(--color-azureish-white);
   color: var(--color-black);
+  border: 1px solid var(--color-border);
 }
 
 .account__alert--danger {
@@ -290,6 +329,7 @@ div.account-fieldset--error .account-fieldset__input:focus {
   margin-bottom: 16px;
   text-decoration: none;
   line-height: var(--line-height-xs);
+  color: var(--color-primary);
 }
 
 .account__breadcrumbs:hover {
@@ -299,155 +339,6 @@ div.account-fieldset--error .account-fieldset__input:focus {
 .account__breadcrumbs-chevron {
   margin-right: 8px;
   font-size: 14px;
-}
-
-.palette-one.account {
-  background: var(--background-primary-1);
-}
-
-.palette-one .account-checkbox__label,
-.palette-one .account__button--minimal,
-.palette-one .account__title-icon,
-.palette-one .account__breadcrumbs {
-  color: var(--color-primary-1);
-}
-
-.palette-one .account__title + .account__divider,
-.palette-one .account__description {
-  color: var(--color-third-1);
-}
-
-.palette-one .account__button--minimal:hover {
-  text-shadow: 0.5px 0 var(--color-primary-1);
-}
-
-.palette-one .account-fieldset__label {
-  background: var(--background-primary-1);
-  color: var(--color-secondary-1);
-}
-
-.palette-one .account-fieldset__label:not(:has(+ input:focus)):has(+ input:placeholder-shown) {
-  background-color: transparent;
-  color: var(--color-secondary-1);
-}
-
-.palette-one .account-fieldset__static-label,
-.palette-one .account-fieldset__radio-label {
-  color: var(--color-secondary-1);
-}
-
-.palette-one .account-fieldset__input {
-  background: var(--background-primary-1);
-  border-color: var(--color-border-1);
-  color: var(--color-primary-1);
-}
-
-.palette-one .account-fieldset__input:focus {
-  border-color: var(--background-accent-1-hover);
-}
-
-.palette-one .account__link {
-  color: var(--color-outline-1);
-}
-
-.palette-one .account__link:hover {
-  color: var(--color-outline-1-hover);
-}
-
-.palette-one .account__alert--info {
-  border: 1px solid var(--color-border-1);
-}
-
-.palette-one .account-fieldset__radio-label:before,
-.palette-one .account-checkbox__label:before {
-  border-color: var(--color-border-1);
-  background: var(--background-primary-1);
-}
-
-.palette-one [id^='user_legal_type']:checked + .account-fieldset__radio-label:before,
-.palette-one [id^='user_agreement_accepted']:checked + .account-checkbox__label:before {
-  border-color: var(--background-accent-1);
-  background: var(--background-accent-1);
-}
-
-.palette-one [id^='user_legal_type']:checked + .account-fieldset__radio-label:after,
-.palette-one [id^='user_agreement_accepted']:checked + .account-checkbox__label:after {
-  border-color: var(--background-primary-1);
-}
-
-.palette-two.account {
-  background: var(--background-primary-2);
-}
-
-.palette-two .account-checkbox__label,
-.palette-two .account__button--minimal,
-.palette-two .account__title-icon,
-.palette-two .account-fieldset__label:has(+ input:focus),
-.palette-two .account__breadcrumbs {
-  color: var(--color-primary-2);
-}
-
-.palette-two .account__title + .account__divider,
-.palette-two .account__description {
-  color: var(--color-third-2);
-}
-
-.palette-two .account__button--minimal:hover {
-  text-shadow: 0.5px 0 var(--color-primary-2);
-}
-
-.palette-two .account-fieldset__label {
-  background: var(--background-primary-2);
-  color: var(--color-secondary-2);
-}
-
-.palette-two .account-fieldset__label:not(:has(+ input:focus)):has(+ input:placeholder-shown) {
-  background-color: transparent;
-  color: var(--color-secondary-2);
-}
-
-.palette-two .account-fieldset__static-label,
-.palette-two .account-fieldset__radio-label {
-  color: var(--color-secondary-2);
-}
-
-.palette-two .account-fieldset__input {
-  background: var(--background-primary-2);
-  border-color: var(--color-border-2);
-  color: var(--color-primary-2);
-}
-
-.palette-two .account-fieldset__input:focus {
-  border-color: var(--background-accent-2-hover);
-}
-
-.palette-two .account__link {
-  color: var(--color-outline-2);
-}
-
-.palette-two .account__link:hover {
-  color: var(--color-outline-2-hover);
-}
-
-.palette-two .account__alert--info {
-  border: 1px solid var(--color-border-2);
-}
-
-.palette-two .account-fieldset__radio-label:before,
-.palette-two .account-checkbox__label:before {
-  border-color: var(--color-border-2);
-  background: var(--background-primary-2);
-}
-
-.palette-two [id^='user_legal_type']:checked + .account-fieldset__radio-label:before,
-.palette-two [id^='user_agreement_accepted']:checked + .account-checkbox__label:before {
-  border-color: var(--background-accent-2);
-  background: var(--background-accent-2);
-}
-
-.palette-two [id^='user_legal_type']:checked + .account-fieldset__radio-label:after,
-.palette-two [id^='user_agreement_accepted']:checked + .account-checkbox__label:after {
-  border-color: var(--background-primary-2);
 }
 
 @media screen and (min-width: 375px) {

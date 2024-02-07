@@ -7,12 +7,8 @@
   padding-bottom: var(--padding-bottom-mobile);
 }
 
-.palette-one.locations__wrapper {
-  background: var(--background-primary-1);
-}
-
-.palette-two.locations__wrapper {
-  background: var(--background-primary-2);
+.locations__wrapper {
+  background: var(--background-primary);
 }
 
 @media (min-width: 992px) {

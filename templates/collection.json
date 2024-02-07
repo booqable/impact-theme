@@ -35,7 +35,7 @@
         "item"
       ],
       "settings": {
-        "color_palette": "one",
+        "color_scheme": "set-1",
         "grid": "three",
         "limit": 6,
         "message": "Sorry, there are no products in this collection yet",

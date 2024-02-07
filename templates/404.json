@@ -6,7 +6,7 @@
       "blocks": {},
       "block_order": [],
       "settings": {
-        "color_palette": "two",
+        "color_scheme": "set-2",
         "description": "Sorry, there's <b>nothing here</b>",
         "button_label": "Go Home",
         "padding_top": "small",

@@ -24,7 +24,7 @@
       "settings": {
         "limit": 8,
         "color_overlay": "dark",
-        "color_palette": "one",
+        "color_scheme": "set-1",
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
         "padding_top": "small",
