@@ -7,7 +7,7 @@
 
 .pagination span {
   text-align: center;
-  border: 1px solid transparent;
+  border: 1px solid var(--color-border);
   cursor: pointer;
   min-width: 40px;
 }
@@ -27,18 +27,28 @@
   font-weight: var(--font-weight-semibold);
   text-decoration: none;
   height: 100%;
+  color: var(--color-secondary);
 }
 
 .pagination .deco,
 .pagination .current {
   position: relative;
   z-index: 1;
+  background: var(--background-accent);
+  color: var(--color-accent);
 }
 
 .pagination .page:not(.current),
 .pagination .prev:not([data-enabled="false"]),
 .pagination .next:not([data-enabled="false"]) {
   transition: all var(--animation-duration) var(--transition-function-ease);
+}
+
+.pagination .page:not(.current):hover,
+.pagination .prev:not([data-enabled="false"]):hover,
+.pagination .next:not([data-enabled="false"]):hover {
+  background: var(--background-accent-hover);
+  color: var(--color-accent);
 }
 
 .pagination span[data-enabled="false"],
@@ -52,66 +62,11 @@
   transform: rotate(180deg);
 }
 
-.palette-one .pagination span {
-  border-color: var(--color-border-1);
+.pagination path {
+  fill: var(--color-secondary);
 }
 
-.palette-one .pagination .deco,
-.palette-one .pagination .current,
-.palette-one .pagination span a {
-  color: var(--color-secondary-1);
-}
-
-.palette-one .pagination .deco,
-.palette-one .pagination .current {
-  background: var(--background-accent-1);
-  color: var(--color-accent-1);
-}
-
-.palette-one .pagination .page:not(.current):hover,
-.palette-one .pagination .prev:not([data-enabled="false"]):hover,
-.palette-one .pagination .next:not([data-enabled="false"]):hover {
-  background: var(--background-accent-1-hover);
-  color: var(--color-accent-1);
-}
-
-.palette-one .pagination path {
-  fill: var(--color-secondary-1);
-}
-
-.palette-one .pagination .prev[data-enabled="true"] a:hover path,
-.palette-one .pagination .next[data-enabled="true"] a:hover path {
-  fill: var(--color-accent-1);
-}
-
-.palette-two .pagination span {
-  border-color: var(--color-border-2);
-}
-
-.palette-two .pagination .deco,
-.palette-two .pagination .current,
-.palette-two .pagination span a {
-  color: var(--color-secondary-2);
-}
-
-.palette-two .pagination .deco,
-.palette-two .pagination .current {
-  background: var(--background-accent-2);
-  color: var(--color-accent-2);
-}
-
-.palette-two .pagination .page:not(.current):hover,
-.palette-two .pagination .prev:not([data-enabled="false"]):hover,
-.palette-two .pagination .next:not([data-enabled="false"]):hover {
-  background: var(--background-accent-2-hover);
-  color: var(--color-accent-2);
-}
-
-.palette-two .pagination path {
-  fill: var(--color-secondary-2);
-}
-
-.palette-two .pagination .prev[data-enabled="true"] a:hover path,
-.palette-two .pagination .next[data-enabled="true"] a:hover path {
-  fill: var(--color-accent-2);
+.pagination .prev[data-enabled="true"] a:hover path,
+.pagination .next[data-enabled="true"] a:hover path {
+  fill: var(--color-accent);
 }

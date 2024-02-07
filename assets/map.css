@@ -59,12 +59,5 @@
 
 .map .ol-control button:hover {
   background-color: var(--color-white-90);
-}
-
-.palette-one .map .ol-control button:hover {
-  border-color: var(--background-accent-1-hover);
-}
-
-.palette-two .map .ol-control button:hover {
-  border-color: var(--background-accent-2-hover);
+  border-color: var(--background-accent-hover);
 }

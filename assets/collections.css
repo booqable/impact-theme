@@ -22,10 +22,13 @@
 .collections__list {
   list-style: none;
   padding: 0;
-  margin: 0 calc(-1 * var(--horizontal-padding-mobile));
   display: grid;
   gap: var(--grid-gap-mobile);
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.collections__container .collections__list {
+  margin: 0 calc(-1 * var(--horizontal-padding-mobile));
 }
 
 .collections__item {
@@ -163,11 +166,17 @@
     padding-bottom: var(--padding-bottom, 0);
   }
 
-  .collections__list {
+  .collections__container .collections__list {
     margin: 0 calc(-1 * var(--horizontal-padding));
   }
 
   .collections__bottom {
     bottom: 30px;
+  }
+}
+
+@media (min-width: 1921px) {
+  .collections__wrapper > .collections__list .collections__image-item:after {
+    aspect-ratio: 1 /1.25;
   }
 }
