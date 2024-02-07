@@ -1,5 +1,6 @@
 .columns__wrapper {
   line-height: var(--line-height-lg);
+  background: var(--color-fourth);
 }
 
 .columns__wrapper--padding-top {
@@ -21,8 +22,10 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
-  border: 1px solid transparent;
+  border: 1px solid var(--color-fourth);
   position: relative;
+  color: var(--color-primary);
+  background: var(--background-primary);
 }
 
 .columns__image-wrapper {
@@ -45,6 +48,7 @@
 .columns__icon-wrapper i {
   font-size: 34px;
   line-height: 1;
+  color: var(--color-outline);
 }
 
 .columns__text {
@@ -67,6 +71,7 @@
 
 .columns__description {
   padding: 0 0 25px;
+  color: var(--color-secondary);
 }
 
 .columns__label,
@@ -77,42 +82,6 @@
   text-transform: uppercase;
   transition: all var(--animation-duration) var(--transition-function-ease-out);
   line-height: var(--line-height-sm);
-}
-
-.palette-one.columns__wrapper {
-  background: var(--color-fourth-1);
-}
-
-.palette-one .columns__item {
-  color: var(--color-primary-1);
-  background: var(--background-primary-1);
-  border-color: var(--color-fourth-1);
-}
-
-.palette-one .columns__icon-wrapper i {
-  color: var(--color-outline-1);
-}
-
-.palette-one .columns__description {
-  color: var(--color-secondary-1);
-}
-
-.palette-two.columns__wrapper {
-  background: var(--background-primary-2-60);
-}
-
-.palette-two .columns__item {
-  color: var(--color-primary-2);
-  background: var(--background-primary-2);
-  border-color: var(--color-fourth-2);
-}
-
-.palette-two .columns__icon-wrapper i {
-  color: var(--color-outline-2);
-}
-
-.palette-two .columns__description {
-  color: var(--color-secondary-2);
 }
 
 @media (min-width: 992px) {

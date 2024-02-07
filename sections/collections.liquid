@@ -6,6 +6,7 @@
   {%- assign counter_singular       = section.settings.counter_singular -%}
   {%- assign counter_plural         = section.settings.counter_plural -%}
   {%- assign grid                   = section.settings.grid -%}
+  {%- assign full_width             = section.settings.full_width -%}
   {%- assign overlay_opacity        = section.settings.overlay_opacity -%}
   {%- assign padding_top            = section.settings.padding_top -%}
   {%- assign padding_bottom         = section.settings.padding_bottom -%}
@@ -109,17 +110,21 @@
     class="collections__wrapper collections__wrapper-{{ grid }} color-{{ color_scheme.id }}{% if show_overlay != blank %} collection__wrapper--with-overlay{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} collections__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} collections__wrapper--padding-bottom{%- endif -%}"
     style="{{- variables | escape -}}"
   >
-    <div class="collections__container container">
-      {%- render 'collections-grid',
-          items: section.blocks,
-          items_type: "blocks",
-          show_amount: show_amount,
-          show_arrow: show_arrow,
-          placeholder: image_placeholder,
-          counter_singular: counter_singular,
-          counter_plural: counter_plural
-      -%}
-    </div>
+    {%- unless full_width -%}
+      <div class="collections__container container">
+    {%- endunless -%}
+        {%- render 'collections-grid',
+            items: section.blocks,
+            items_type: "blocks",
+            show_amount: show_amount,
+            show_arrow: show_arrow,
+            placeholder: image_placeholder,
+            counter_singular: counter_singular,
+            counter_plural: counter_plural
+        -%}
+    {%- unless full_width -%}
+      </div>
+    {%- endunless -%}
   </div>
 {%- endif -%}
 
@@ -139,6 +144,12 @@
         "id": "color_scheme",
         "label": "Color scheme",
         "default": "set-1"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Stretch collections to screen edges",
+        "default": false
       },
       {
         "type": "select",
