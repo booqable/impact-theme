@@ -370,6 +370,60 @@
         "title": "FAQ"
       },
       "disabled": null
+    },
+    "socials": {
+      "type": "socials",
+      "blocks": {
+        "item": {
+          "type": "item",
+          "settings": {
+            "image": "booqable://assets/image-socials-1.jpg",
+            "url": "booqable://root/"
+          },
+          "disabled": null
+        },
+        "item_478118": {
+          "type": "item",
+          "settings": {
+            "image": "booqable://assets/image-socials-2.jpg",
+            "url": "booqable://collections/"
+          },
+          "disabled": null
+        },
+        "item_478117": {
+          "type": "item",
+          "settings": {
+            "image": "booqable://assets/image-socials-3.jpg",
+            "url": "booqable://products/"
+          },
+          "disabled": null
+        },
+        "item_478116": {
+          "type": "item",
+          "settings": {
+            "image": "booqable://assets/image-socials-4.jpg",
+            "url": "booqable://pages/contact/"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item",
+        "item_478118",
+        "item_478117",
+        "item_478116"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "full_width": false,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "title": "Express yourself with <br>#explorable on Instagram"
+      },
+      "disabled": false
     }
   },
   "order": [
@@ -380,6 +434,7 @@
     "testimonials",
     "logos",
     "articles",
-    "accordion"
+    "accordion",
+    "socials"
   ]
 }
