@@ -6,12 +6,16 @@
   align-items: center;
   padding: 16px;
   font-weight: var(--font-weight-semibold);
-  border: 1px solid transparent;
+  border: 1px solid var(--color-border);
 }
 
 .sidebar__nav-opener svg {
   transform: rotate(90deg);
   transition: all var(--animation-duration) var(--transition-function-ease-out);
+}
+
+.sidebar__nav-opener path {
+  fill: var(--color-outline);
 }
 
 .sidebar__heading {
@@ -21,11 +25,15 @@
 .sidebar__menu {
   padding: 0 0 16px;
   margin: 0 0 24px;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .sidebar__menu:last-child{
   margin: 0;
+}
+
+.sidebar__menu a:hover {
+  color: var(--color-outline-hover);
 }
 
 .sidebar__menu-item {
@@ -51,11 +59,17 @@
   width: 100%;
   height: 2px;
   transition: all var(--animation-duration) var(--transition-function-ease-out);
+  background: var(--color-outline);
 }
 
 .sidebar__menu-opener:after {
   height: 100%;
   width: 2px;
+}
+
+.sidebar__menu-opener:hover:before,
+.sidebar__menu-opener:hover:after {
+  background: var(--color-outline-hover);
 }
 
 .sidebar__menu-item {
@@ -141,58 +155,6 @@
 
 [id^="side-menu-opener-"]:checked ~ .sidebar__menu-wrapper > .sidebar__menu-list {
   transform: translate(0, 0);
-}
-
-.palette-one .sidebar__nav-opener {
-  border-color: var(--color-border-1);
-}
-
-.palette-one .sidebar__nav-opener path {
-  fill: var(--color-outline-1);
-}
-
-.palette-one .sidebar__menu a:hover {
-  color: var(--color-outline-1-hover);
-}
-
-.palette-one .sidebar__menu {
-  border-color: var(--color-border-1);
-}
-
-.palette-one .sidebar__menu-opener:before,
-.palette-one .sidebar__menu-opener:after {
-  background: var(--color-outline-1);
-}
-
-.palette-one .sidebar__menu-opener:hover:before,
-.palette-one .sidebar__menu-opener:hover:after {
-  background: var(--color-outline-1-hover);
-}
-
-.palette-two .sidebar__nav-opener {
-  border-color: var(--color-border-2);
-}
-
-.palette-two .sidebar__nav-opener path {
-  fill: var(--color-outline-2);
-}
-
-.palette-two .sidebar__menu a:hover {
-  color: var(--color-outline-2-hover);
-}
-
-.palette-two .sidebar__menu {
-  border-color: var(--color-border-2);
-}
-
-.palette-two .sidebar__menu-opener:before,
-.palette-two .sidebar__menu-opener:after {
-  background: var(--color-outline-2);
-}
-
-.palette-two .sidebar__menu-opener:hover:before,
-.palette-two .sidebar__menu-opener:hover:after {
-  background: var(--color-outline-2-hover);
 }
 
 .loaded .sidebar__menu-wrapper {
