@@ -47,7 +47,8 @@
         "padding_top": "large",
         "padding_top_mobile": "large",
         "rounded_corners": "none",
-        "show_overlay": false,
+        "show_transition": false,
+        "transition_color": "#FFFFFF",
         "tag": "HIGHLIGHT",
         "title": "Explore the ride <br> of your life"
       },
