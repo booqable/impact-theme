@@ -11,13 +11,13 @@
 {%- assign button_label          = section.settings.button_label -%}
 {%- assign button_url            = section.settings.button_url -%}
 {%- assign show_transition       = section.settings.show_transition -%}
-{%- assign transtion_color       = section.settings.transtion_color -%}
+{%- assign transition_color      = section.settings.transition_color -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
   {%- if show_transition -%}
-    --color-transition: {{- transtion_color -}};
-    --color-transition-00: {{- transtion_color | append: "00" -}};
+    --color-transition: {{- transition_color -}};
+    --color-transition-00: {{- transition_color | append: "00" -}};
   {%- endif -%}
 
   {%- case padding_top -%}
@@ -138,7 +138,7 @@
       },
       {
         "type": "color",
-        "id": "transtion_color",
+        "id": "transition_color",
         "label": "Transition color",
         "default": "#1A3333"
       },
