@@ -44,14 +44,14 @@
   background: var(--background-primary);
 }
 
-.cta__vision--overlay:after {
+.cta__vision--transition:after {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, var(--background-primary) 11.17%, var(--background-primary-00) 41.57%),
+  background: linear-gradient(180deg, var(--color-transition) 11.17%, var(--color-transition-00) 41.57%),
               linear-gradient(349deg, var(--color-primary-30) 43.3%, var(--color-primary-00) 80.3%);
 }
 

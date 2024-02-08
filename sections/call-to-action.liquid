@@ -10,10 +10,16 @@
 {%- assign image                 = section.settings.image -%}
 {%- assign button_label          = section.settings.button_label -%}
 {%- assign button_url            = section.settings.button_url -%}
-{%- assign show_overlay          = section.settings.show_overlay -%}
+{%- assign show_transition       = section.settings.show_transition -%}
+{%- assign transition_color      = section.settings.transition_color -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
+  {%- if show_transition -%}
+    --color-transition: {{- transition_color -}};
+    --color-transition-00: {{- transition_color | append: "00" -}};
+  {%- endif -%}
+
   {%- case padding_top -%}
     {%- when 'small' -%}
       --padding-top: 60px;
@@ -76,7 +82,7 @@
     </div>
 
     {%- if image != blank -%}
-      <div class="cta__vision{% if show_overlay %} cta__vision--overlay{%- endif -%}">
+      <div class="cta__vision{% if show_transition %} cta__vision--transition{%- endif -%}">
         {%- render 'image',
           image: image,
           loading: 'lazy',
@@ -126,9 +132,15 @@
       },
       {
         "type": "checkbox",
-        "id": "show_overlay",
-        "label": "Show overlay",
+        "id": "show_transition",
+        "label": "Show transition",
         "default": true
+      },
+      {
+        "type": "color",
+        "id": "transition_color",
+        "label": "Transition color",
+        "default": "#1A3333"
       },
       {
         "type": "header",
