@@ -27,10 +27,6 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-.collections__container .collections__list {
-  margin: 0 calc(-1 * var(--horizontal-padding-mobile));
-}
-
 .collections__item {
   height: 100%;
   position: relative;
@@ -164,10 +160,6 @@
 
   .collections__wrapper--padding-bottom {
     padding-bottom: var(--padding-bottom, 0);
-  }
-
-  .collections__container .collections__list {
-    margin: 0 calc(-1 * var(--horizontal-padding));
   }
 
   .collections__bottom {

@@ -6,12 +6,14 @@
 
   {%- assign button_label          = section.settings.button_label -%}
   {%- assign button_url            = section.settings.button_url -%}
+  {%- assign full_width            = section.settings.full_width -%}
   {%- assign title                 = section.settings.title -%}
   {%- assign color_scheme          = section.settings.color_scheme -%}
   {%- assign padding_top           = section.settings.padding_top -%}
   {%- assign padding_bottom        = section.settings.padding_bottom -%}
   {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
   {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+  {%- assign rounded_corners       = section.settings.rounded_corners -%}
   {%- assign image_placeholder     = settings.image_placeholder -%}
 
   {% comment %} CSS variables start {% endcomment %}
@@ -51,95 +53,118 @@
       {%- when 'large' -%}
         --padding-bottom-mobile: 60px;
     {%- endcase -%}
+
+    {%- case rounded_corners -%}
+      {%- when 'none' -%}
+        --border-radius-rounded-blocks: 0px;
+      {%- when 'small' -%}
+        --border-radius-rounded-blocks: 8px;
+      {%- when 'medium' -%}
+        --border-radius-rounded-blocks: 16px;
+      {%- when 'large' -%}
+        --border-radius-rounded-blocks: 32px;
+    {%- endcase -%}
   {%- endcapture -%}
   {% comment %} CSS variables end {% endcomment %}
 
-  <div
-    class="articles__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} articles__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} articles__wrapper--padding-bottom{%- endif -%}"
-    style="{{- variables | escape -}}"
-  >
+  {%- unless full_width -%}
     <div class="articles__container container">
-      {%- if title != blank or button_label != blank and button_url != blank -%}
-        <div class="articles__top">
-          {%- if title != blank -%}
-            <h2 class="articles__title h4">{{- title -}}</h2>
+  {%- endunless -%}
+      <div
+        class="articles__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} articles__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} articles__wrapper--padding-bottom{%- endif -%}"
+        style="{{- variables | escape -}}"
+      >
+        {%- if full_width -%}
+          <div class="articles__container container">
+        {%- endif -%}
+
+          {%- if title != blank or button_label != blank and button_url != blank -%}
+            <div class="articles__top">
+              {%- if title != blank -%}
+                <h2 class="articles__title h4">{{- title -}}</h2>
+              {%- endif -%}
+
+              {%- if button_label != blank and button_url != blank -%}
+                <div class="articles__show-wrapper">
+                  <a href="{{ button_url }}" class="articles__show-button button button--outlined button--large">
+                    {{- button_label -}}
+                  </a>
+                </div>
+              {%- endif -%}
+            </div>
           {%- endif -%}
 
+          <div class="articles__list articles__list--{{- blocks.size -}}">
+            {%- for block in blocks -%}
+              {%- assign article_tag     = block.settings.article_tag -%}
+              {%- assign heading         = block.settings.heading -%}
+              {%- assign text            = block.settings.text -%}
+              {%- assign article_btn     = block.settings.article_btn -%}
+              {%- assign article_btn_url = block.settings.article_btn_url -%}
+              {%- assign image           = block.settings.image -%}
+
+              {%- if image != blank -%}
+                {%- assign image = image -%}
+              {%- elsif image_placeholder != blank -%}
+                {%- assign image = image_placeholder -%}
+              {%- else -%}
+                {%- assign image = blank -%}
+              {%- endif -%}
+
+              <div class="articles__item" id="{{- block.id -}}">
+                <div class="articles__image-wrapper{% if image == blank %} no-image{%- endif -%}">
+                  {%- if image != blank -%}
+                    {%- render 'image',
+                      image: image,
+                      loading: 'lazy',
+                      class: 'articles__image',
+                      size: 'm'
+                    -%}
+                  {%- endif -%}
+                </div>
+
+                {%- if article_tag != blank or heading != blank or text != blank or article_btn != blank and article_btn_url != blank -%}
+                  <div class="articles__text-area">
+                    {%- if article_tag != blank -%}
+                      <strong class="articles__tag tagline">{{- article_tag -}}</strong>
+                    {%- endif -%}
+
+                    {%- if heading != blank -%}
+                      <h3 class="articles__heading h5">{{- heading -}}</h3>
+                    {%- endif -%}
+
+                    {%- if text != blank -%}
+                      <div class="articles__text bq-content rx-content">{{- text | truncate: 200, " ..."  -}}</div>
+                    {%- endif -%}
+
+                    {%- if article_btn != blank and article_btn_url != blank -%}
+                      <div class="articles__buttons">
+                        <a href="{{ article_btn_url }}" class="articles__button button button--primary button--large">
+                          {{- article_btn -}}
+                        </a>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          </div>
+
           {%- if button_label != blank and button_url != blank -%}
-            <div class="articles__show-wrapper">
+            <div class="articles__show-wrapper articles__bottom">
               <a href="{{ button_url }}" class="articles__show-button button button--outlined button--large">
                 {{- button_label -}}
               </a>
             </div>
           {%- endif -%}
-        </div>
-      {%- endif -%}
+        {%- if full_width -%}
+           </div>
+        {%- endif -%}
 
-      <div class="articles__list articles__list--{{- blocks.size -}}">
-        {%- for block in blocks -%}
-          {%- assign article_tag     = block.settings.article_tag -%}
-          {%- assign heading         = block.settings.heading -%}
-          {%- assign text            = block.settings.text -%}
-          {%- assign article_btn     = block.settings.article_btn -%}
-          {%- assign article_btn_url = block.settings.article_btn_url -%}
-          {%- assign image           = block.settings.image -%}
-
-          {%- if image != blank -%}
-            {%- assign image = image -%}
-          {%- elsif image_placeholder != blank -%}
-            {%- assign image = image_placeholder -%}
-          {%- else -%}
-            {%- assign image = blank -%}
-          {%- endif -%}
-
-          <div class="articles__item" id="{{- block.id -}}">
-            <div class="articles__image-wrapper{% if image == blank %} no-image{%- endif -%}">
-              {%- if image != blank -%}
-                {%- render 'image',
-                  image: image,
-                  loading: 'lazy',
-                  class: 'articles__image',
-                  size: 'm'
-                -%}
-              {%- endif -%}
-            </div>
-
-            {%- if article_tag != blank or heading != blank or text != blank or article_btn != blank and article_btn_url != blank -%}
-              <div class="articles__text-area">
-                {%- if article_tag != blank -%}
-                  <strong class="articles__tag tagline">{{- article_tag -}}</strong>
-                {%- endif -%}
-
-                {%- if heading != blank -%}
-                  <h3 class="articles__heading h5">{{- heading -}}</h3>
-                {%- endif -%}
-
-                {%- if text != blank -%}
-                  <div class="articles__text bq-content rx-content">{{- text | truncate: 200, " ..."  -}}</div>
-                {%- endif -%}
-
-                {%- if article_btn != blank and article_btn_url != blank -%}
-                  <div class="articles__buttons">
-                    <a href="{{ article_btn_url }}" class="articles__button button button--primary button--large">
-                      {{- article_btn -}}
-                    </a>
-                  </div>
-                {%- endif -%}
-              </div>
-            {%- endif -%}
-          </div>
-        {%- endfor -%}
       </div>
-
-      {%- if button_label != blank and button_url != blank -%}
-        <div class="articles__show-wrapper articles__bottom">
-          <a href="{{ button_url }}" class="articles__show-button button button--outlined button--large">
-            {{- button_label -}}
-          </a>
-        </div>
-      {%- endif -%}
+  {% unless full_width %}
     </div>
-  </div>
+  {%- endunless -%}
 {%- endif -%}
 
 {% schema %}
@@ -164,6 +189,36 @@
         "id": "title",
         "label": "Title",
         "default": "What's in the news"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full-width background",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "rounded_corners",
+        "label": "Rounded corners of background",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
       },
       {
         "type": "header",

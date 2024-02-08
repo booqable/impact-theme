@@ -1,11 +1,13 @@
 {{ "hero.css" | asset_url | stylesheet_tag }}
 
 {%- assign color_scheme          = section.settings.color_scheme -%}
+{%- assign full_width            = section.settings.full_width -%}
 {%- assign height                = section.settings.height -%}
 {%- assign padding_top           = section.settings.padding_top -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign rounded_corners       = section.settings.rounded_corners -%}
 {%- assign title                 = section.settings.title -%}
 {%- assign description           = section.settings.description -%}
 {%- assign image                 = section.settings.image -%}
@@ -69,24 +71,32 @@
       --padding-bottom-mobile: 80px;
   {%- endcase -%}
 
+  {%- case rounded_corners -%}
+    {%- when 'none' -%}
+      --border-radius-rounded-blocks: 0px;
+    {%- when 'small' -%}
+      --border-radius-rounded-blocks: 8px;
+    {%- when 'medium' -%}
+      --border-radius-rounded-blocks: 16px;
+    {%- when 'large' -%}
+      --border-radius-rounded-blocks: 32px;
+  {%- endcase -%}
+
   {%- case text_position -%}
     {%- when 'left' -%}
       --text-justify-content: flex-start;
-      --text-align-items: center;
       --text-align: left;
       --margin-bottom: 70px;
       --margin-left: 0;
       --margin-right: auto;
     {%- when 'center' -%}
       --text-justify-content: center;
-      --text-align-items: center;
       --text-align: center;
       --margin-bottom: 70px;
       --margin-left: auto;
       --margin-right: auto;
     {%- when 'right' -%}
       --text-justify-content: flex-end;
-      --text-align-items: center;
       --text-align: right;
       --margin-bottom: 70px;
       --margin-left: auto;
@@ -96,21 +106,18 @@
   {%- case text_position_mobile -%}
     {%- when 'left' -%}
       --text-justify-content-mobile: flex-start;
-      --text-align-items-mobile: center;
       --text-align-mobile: left;
       --margin-bottom-mobile: 60px;
       --margin-left-mobile: 0;
       --margin-right-mobile: auto;
     {%- when 'center' -%}
       --text-justify-content-mobile: center;
-      --text-align-items-mobile: center;
       --text-align-mobile: center;
       --margin-bottom-mobile: 60px;
       --margin-left-mobile: auto;
       --margin-right-mobile: auto;
     {%- when 'right' -%}
       --text-justify-content-mobile: flex-end;
-      --text-align-items-mobile: center;
       --text-align-mobile: right;
       --margin-bottom-mobile: 60px;
       --margin-left-mobile: auto;
@@ -144,99 +151,109 @@
 {%- endcapture -%}
 {% comment %} CSS variables end {% endcomment %}
 
-<div class="hero__wrapper hero__wrapper-{{- height -}}-height color-{{- color_scheme.id -}}" style="{{- variables | escape -}}">
-  <div class="hero__container container{% if padding_top != blank or padding_top_mobile != blank %} hero__container--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} hero__container--padding-bottom{%- endif -%}">
-    <div class="hero__text-area{% if show_overlay %} hero__text-area--color{%- endif -%}">
-      <div class="hero__content">
-        {%- if title != blank -%}
-          <h1 class="hero__title bq-content rx-content">{{- title -}}</h1>
-        {%- endif -%}
+{%- unless full_width -%}
+  <div class="hero__container container">
+{%- endunless -%}
+    <div class="hero__wrapper hero__wrapper-{{- height -}}-height{% if padding_top != blank or padding_top_mobile != blank %} hero__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} hero__wrapper--padding-bottom{% endif %} color-{{- color_scheme.id -}}" style="{{- variables | escape -}}">
+      {%- if full_width -%}
+        <div class="hero__container container">
+      {%- endif -%}
+          <div class="hero__text-area{% if show_overlay %} hero__text-area--color{%- endif -%}">
+            <div class="hero__content">
+              {%- if title != blank -%}
+                <h1 class="hero__title bq-content rx-content">{{- title -}}</h1>
+              {%- endif -%}
 
-        {%- if description != blank -%}
-          <div class="hero__description text-medium bq-content rx-content">{{- description | truncatewords: 20, " ..." -}}</div>
-        {%- endif -%}
+              {%- if description != blank -%}
+                <div class="hero__description text-medium bq-content rx-content">{{- description | truncatewords: 20, " ..." -}}</div>
+              {%- endif -%}
 
-        {%- if button_1 != blank or button_2 != blank -%}
-          <div class="hero__buttons">
-            {%- if button_1 != blank and button_url_1 != blank -%}
-              <a href="{{ button_url_1 }}" class="hero__button button button--primary button--large">{{- button_1 -}}</a>
-            {%- endif -%}
+              {%- if button_1 != blank or button_2 != blank -%}
+                <div class="hero__buttons">
+                  {%- if button_1 != blank and button_url_1 != blank -%}
+                    <a href="{{ button_url_1 }}" class="hero__button button button--primary button--large">{{- button_1 -}}</a>
+                  {%- endif -%}
 
-            {%- if button_2 != blank and button_url_2 != blank -%}
-              <a href="{{ button_url_2 }}" class="hero__button button button--outlined button--large">{{- button_2 -}}</a>
-            {%- endif -%}
+                  {%- if button_2 != blank and button_url_2 != blank -%}
+                    <a href="{{ button_url_2 }}" class="hero__button button button--outlined button--large">{{- button_2 -}}</a>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+
+            </div>
           </div>
-        {%- endif -%}
+      {%- if full_width -%}
+        </div>
+      {%- endif -%}
 
+      <div class="hero__vision">
+        {%- if video_url contains "youtube.com" -%}
+          {%- assign video_drop = video_url | split: "?v=" -%}
+          {%- assign video_id   = video_drop | last | strip -%}
+
+          <div class="hero__vision-wrapper{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
+            <iframe
+              class="hero__video"
+              width="1920"
+              height="1080"
+              src="https://www.youtube.com/embed/{{- video_id -}}?playlist={{- video_id -}}&autoplay=1&mute=1&loop=1&controls=0&disablekb=1&fs=0&playsinline=1&enablejsapi=1&iv_load_policy=3&modestbranding=1"
+              frameborder="0"
+              allow="autoplay; muted; encrypted-media; fullscreen"
+              allowfullscreen
+              autoplay
+              loop
+              mute
+              playsinline
+            ></iframe>
+          </div>
+
+        {%- elsif video_url contains "vimeo.com" -%}
+          {%- assign video_drop = video_url | split: "/" -%}
+          {%- assign video_id   = video_drop | last | strip -%}
+
+          <div class="hero__vision-wrapper{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
+            <iframe
+              class="hero__video"
+              src="https://player.vimeo.com/video/{{- video_id -}}?autoplay=1&muted=1&loop=1&autopause=0&controls=0&background=1"
+              width="1920"
+              height="1080"
+              frameborder="0"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+              autoplay
+              muted
+              loop
+            ></iframe>
+          </div>
+
+        {%- elsif image != blank or image_mobile != blank -%}
+          {%- if image != blank -%}
+            <div class="hero__vision-wrapper{% if image_mobile != blank %} hero__vision-wrapper--desktop{% endif %}{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
+              {%- render 'image',
+                image: image,
+                loading: 'lazy',
+                class: 'hero__image',
+                size: 'xxl'
+              -%}
+            </div>
+          {%- endif -%}
+
+          {%- if image_mobile != blank -%}
+            <div class="hero__vision-wrapper hero__vision-wrapper--mobile{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
+              {%- render 'image',
+                image: image_mobile,
+                loading: 'lazy',
+                class: 'hero__image',
+                size: 'l'
+              -%}
+            </div>
+          {%- endif -%}
+        {%- endif -%}
       </div>
     </div>
+{% unless full_width %}
   </div>
-
-  <div class="hero__vision">
-    {%- if video_url contains "youtube.com" -%}
-      {%- assign video_drop = video_url | split: "?v=" -%}
-      {%- assign video_id   = video_drop | last | strip -%}
-
-      <div class="hero__vision-wrapper{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
-        <iframe
-          class="hero__video"
-          width="1920"
-          height="1080"
-          src="https://www.youtube.com/embed/{{- video_id -}}?playlist={{- video_id -}}&autoplay=1&mute=1&loop=1&controls=0&disablekb=1&fs=0&playsinline=1&enablejsapi=1&iv_load_policy=3&modestbranding=1"
-          frameborder="0"
-          allow="autoplay; muted; encrypted-media; fullscreen"
-          allowfullscreen
-          autoplay
-          loop
-          mute
-          playsinline
-        ></iframe>
-      </div>
-
-    {%- elsif video_url contains "vimeo.com" -%}
-      {%- assign video_drop = video_url | split: "/" -%}
-      {%- assign video_id   = video_drop | last | strip -%}
-
-      <div class="hero__vision-wrapper{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
-        <iframe
-          class="hero__video"
-          src="https://player.vimeo.com/video/{{- video_id -}}?autoplay=1&muted=1&loop=1&autopause=0&controls=0&background=1"
-          width="1920"
-          height="1080"
-          frameborder="0"
-          allow="autoplay; fullscreen"
-          allowfullscreen
-          autoplay
-          muted
-          loop
-        ></iframe>
-      </div>
-
-    {%- elsif image != blank or image_mobile != blank -%}
-      {%- if image != blank -%}
-        <div class="hero__vision-wrapper{% if image_mobile != blank %} hero__vision-wrapper--desktop{% endif %}{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
-          {%- render 'image',
-            image: image,
-            loading: 'lazy',
-            class: 'hero__image',
-            size: 'xxl'
-          -%}
-        </div>
-      {%- endif -%}
-
-      {%- if image_mobile != blank -%}
-        <div class="hero__vision-wrapper hero__vision-wrapper--mobile{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
-          {%- render 'image',
-            image: image_mobile,
-            loading: 'lazy',
-            class: 'hero__image',
-            size: 'l'
-          -%}
-        </div>
-      {%- endif -%}
-    {%- endif -%}
-  </div>
-</div>
+{%- endunless -%}
 
 {% schema %}
   {
@@ -283,6 +300,36 @@
         "id": "video_url",
         "label": "Video URL (optional)",
         "info": "Youtube, Vimeo. If you paste video link here, any images will be ignored"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full-width background",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "rounded_corners",
+        "label": "Rounded corners of background",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
       },
       {
         "type": "header",
