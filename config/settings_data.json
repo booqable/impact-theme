@@ -104,7 +104,7 @@
           "padding_bottom_mobile": "medium",
           "search_placeholder": "Where are you looking for?",
           "signup_placeholder": "",
-          "show_datepicker": false,
+          "show_datepicker": true,
           "show_payments": false,
           "show_payments_mobile": true,
           "show_search": true,
