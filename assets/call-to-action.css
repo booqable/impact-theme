@@ -4,15 +4,22 @@
   position: relative;
 }
 
-.cta__container--padding-top {
+.cta__container .cta__wrapper {
+  padding-right: var(--horizontal-padding-mobile);
+  padding-left: var(--horizontal-padding-mobile);
+  overflow: hidden;
+  border-radius: var(--border-radius-rounded-blocks);
+}
+
+.cta__wrapper--padding-top {
   padding-top: var(--padding-top-mobile, 0);
 }
 
-.header-transparent ~ main .cta:first-child .cta__container--padding-top {
+.header-transparent ~ main .cta:first-child .cta__wrapper--padding-top {
   padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
 }
 
-.cta__container--padding-bottom {
+.cta__wrapper--padding-bottom {
   padding-bottom: var(--padding-bottom-mobile, 0);
 }
 
@@ -63,15 +70,15 @@
 }
 
 @media (min-width: 992px) {
-  .cta__container--padding-top {
+  .cta__wrapper--padding-top {
     padding-top: var(--padding-top, 0);
   }
 
-  .header-transparent ~ main .cta:first-child .cta__container--padding-top {
+  .header-transparent ~ main .cta:first-child .cta__wrapper--padding-top {
     padding-top: calc(var(--padding-top, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
   }
 
-  .cta__container--padding-bottom {
+  .cta__wrapper--padding-bottom {
     padding-bottom: var(--padding-bottom, 0);
   }
 
@@ -82,5 +89,12 @@
 
   .cta__buttons {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cta__container .cta__wrapper {
+    padding-right: var(--horizontal-padding);
+    padding-left: var(--horizontal-padding);
   }
 }

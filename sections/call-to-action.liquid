@@ -1,10 +1,12 @@
 {{ "call-to-action.css" | asset_url | stylesheet_tag }}
 
 {%- assign color_scheme          = section.settings.color_scheme -%}
+{%- assign full_width            = section.settings.full_width -%}
 {%- assign padding_top           = section.settings.padding_top -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign rounded_corners       = section.settings.rounded_corners -%}
 {%- assign tag                   = section.settings.tag -%}
 {%- assign title                 = section.settings.title -%}
 {%- assign image                 = section.settings.image -%}
@@ -55,44 +57,62 @@
     {%- when 'large' -%}
       --padding-bottom-mobile: 200px;
   {%- endcase -%}
+
+  {%- case rounded_corners -%}
+    {%- when 'none' -%}
+      --border-radius-rounded-blocks: 0px;
+    {%- when 'small' -%}
+      --border-radius-rounded-blocks: 8px;
+    {%- when 'medium' -%}
+      --border-radius-rounded-blocks: 16px;
+    {%- when 'large' -%}
+      --border-radius-rounded-blocks: 32px;
+  {%- endcase -%}
 {%- endcapture -%}
 {% comment %} CSS variables end {% endcomment %}
 
-<div class="cta__wrapper color-{{- color_scheme.id -}}">
-  {%- if tag != blank or title != blank or button_label != blank and button_url != blank -%}
-    <div
-      class="cta__container container{% if padding_top != blank or padding_top_mobile != blank %} cta__container--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} cta__container--padding-bottom{%- endif -%}"
-      style="{{- variables | escape -}}"
-    >
-      <div class="cta__text-area">
-        {%- if tag != blank -%}
-          <strong class="cta__tag tagline">{{- tag -}}</strong>
+{%- unless full_width -%}
+  <div class="cta__container container">
+{%- endunless -%}
+    <div class="cta__wrapper{% if padding_top != blank or padding_top_mobile != blank %} cta__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} cta__wrapper--padding-bottom{% endif %} color-{{- color_scheme.id -}}" style="{{- variables | escape -}}">
+      {%- if tag != blank or title != blank or button_label != blank and button_url != blank -%}
+        {%- if full_width -%}
+          <div class="cta__container container">
         {%- endif -%}
+          <div class="cta__text-area">
+            {%- if tag != blank -%}
+              <strong class="cta__tag tagline">{{- tag -}}</strong>
+            {%- endif -%}
 
-        {%- if title != blank -%}
-          <h2 class="cta__title h4">{{- title -}}</h2>
-        {%- endif -%}
+            {%- if title != blank -%}
+              <h2 class="cta__title h4">{{- title -}}</h2>
+            {%- endif -%}
 
-        {%- if button_label != blank and button_url != blank -%}
-          <div class="cta__buttons">
-            <a href="{{ button_url }}" class="cta__button button button--primary button--large">{{- button_label -}}</a>
+            {%- if button_label != blank and button_url != blank -%}
+              <div class="cta__buttons">
+                <a href="{{ button_url }}" class="cta__button button button--primary button--large">{{- button_label -}}</a>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- if full_width -%}
           </div>
         {%- endif -%}
-      </div>
-    </div>
 
-    {%- if image != blank -%}
-      <div class="cta__vision{% if show_transition %} cta__vision--transition{%- endif -%}">
-        {%- render 'image',
-          image: image,
-          loading: 'lazy',
-          class: 'cta__image',
-          size: 'xxl'
-        -%}
-      </div>
-    {%- endif -%}
-  {%- endif -%}
-</div>
+        {%- if image != blank -%}
+          <div class="cta__vision{% if show_transition %} cta__vision--transition{%- endif -%}">
+            {%- render 'image',
+              image: image,
+              loading: 'lazy',
+              class: 'cta__image',
+              size: 'xxl'
+            -%}
+          </div>
+        {%- endif -%}
+      {%- endif -%}
+    </div>
+{% unless full_width %}
+  </div>
+{%- endunless -%}
 
 {% schema %}
   {
@@ -141,6 +161,36 @@
         "id": "transition_color",
         "label": "Transition color",
         "default": "#1A3333"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full-width background",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "rounded_corners",
+        "label": "Rounded corners of background",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
       },
       {
         "type": "header",
