@@ -85,12 +85,6 @@
 
 .header__date-picker-wrapper {
   grid-area: column-2;
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 50%;
-  width: calc(100vw - var(--horizontal-padding-mobile, 16px) * 2);
-  transform: translate(-50%, 0);
-  z-index: -1;
 }
 
 .header__nav-wrapper {
