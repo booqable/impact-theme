@@ -1,20 +1,25 @@
 .columns__wrapper {
   line-height: var(--line-height-lg);
-  background: var(--color-fourth);
+  background: var(--background-primary);
+  color: var(--color-primary);
 }
 
 .columns__wrapper--padding-top {
-  padding-top: var(--padding-top-mobile);
+  padding-top: var(--padding-top-mobile, 0);
+}
+
+.header-transparent ~ main .columns:first-child > .columns__wrapper--padding-top {
+  padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
 }
 
 .columns__wrapper--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile);
+  padding-bottom: var(--padding-bottom-mobile, 0);
 }
 
 .columns__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
+  gap: 8px;
 }
 
 .columns__item {
@@ -22,21 +27,24 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--color-fourth);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-rounded-blocks);
   position: relative;
-  color: var(--color-primary);
-  background: var(--background-primary);
 }
 
 .columns__image-wrapper {
   aspect-ratio: 16 / 9;
+  position: relative;
 }
 
-.columns__image-wrapper img {
+.columns__image {
   max-width: none;
   height: 100%;
   width: 100%;
   object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .columns__icon-wrapper {
@@ -64,6 +72,7 @@
 }
 
 .columns__title {
+  font-size: calc(var(--font-size-large) + 2px);
   display: block;
   color: inherit;
   margin-bottom: 15px;
@@ -71,7 +80,7 @@
 
 .columns__description {
   padding: 0 0 25px;
-  color: var(--color-secondary);
+  color: var(--color-third);
 }
 
 .columns__label,
@@ -82,11 +91,21 @@
   text-transform: uppercase;
   transition: all var(--animation-duration) var(--transition-function-ease-out);
   line-height: var(--line-height-sm);
+  margin: 0;
+}
+
+.columns__buttons {
+  display: flex;
+  align-items: center;
 }
 
 @media (min-width: 992px) {
   .columns__wrapper--padding-top {
     padding-top: var(--padding-top);
+  }
+
+  .header-transparent ~ main .columns:first-child > .columns__wrapper--padding-top {
+    padding-top: calc(var(--padding-top, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
   }
 
   .columns__wrapper--padding-bottom {
@@ -95,11 +114,5 @@
 
   .columns__grid {
     grid-template-columns: repeat(var(--grid-element), minmax(280px, 1fr));
-  }
-}
-
-@media (min-width: 1200px) {
-  .columns__grid {
-    gap: 48px;
   }
 }

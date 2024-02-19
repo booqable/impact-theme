@@ -15,13 +15,13 @@
 
 {% endcomment %}
 
-{% style %}
-  .fa, .far {
-    color: var(--color-primary);
-  }
-{% endstyle %}
-
 {% unless icon == "empty" %}
+  {% style %}
+    .fa, .far {
+      color: var(--color-primary);
+    }
+  {% endstyle %}
+
   <span class="icon">
     <i class="{% if style == "outline" %}far{% else %}fa{% endif %} fa-{{- icon -}}" aria-hidden="true"></i>
   </span>

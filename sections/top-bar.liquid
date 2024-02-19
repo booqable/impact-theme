@@ -4,6 +4,7 @@
   {{ "top-bar.css" | asset_url | stylesheet_tag }}
 
   {%- assign icon                  = section.settings.icon -%}
+  {%- assign icon_style            = section.settings.icon_style -%}
   {%- assign bar_text              = section.settings.bar_text -%}
   {%- assign bar_message           = section.settings.bar_message -%}
   {%- assign bar_menu              = section.settings.bar_menu -%}
@@ -59,7 +60,7 @@
   >
     <div class="top-bar__container container">
       <div class="top-bar__info">
-        {%- render 'icon', icon: icon -%}
+        {%- render 'icon', icon: icon, style: icon_style -%}
 
         {%- if bar_text != blank -%}
           <span class="top-bar__text top-bar__message bq-content rx-content">
@@ -185,6 +186,22 @@
           }
         ],
         "default": "phone"
+      },
+      {
+        "type": "select",
+        "id": "icon_style",
+        "label": "Icon style",
+        "options": [
+          {
+            "value": "filled",
+            "label": "Filled"
+          },
+          {
+            "value": "outline",
+            "label": "Outlined"
+          }
+        ],
+        "default": "outline"
       },
       {
         "type": "header",
