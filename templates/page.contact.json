@@ -17,7 +17,7 @@
         "image"
       ],
       "settings": {
-        "color_palette": "two",
+        "color_scheme": "set-2",
         "description": "Tell something about your company, describe what you do and what makes you unique.",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
@@ -72,7 +72,7 @@
         "column_789654"
       ],
       "settings": {
-        "color_palette": "one",
+        "color_scheme": "set-1",
         "grid": "three",
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
@@ -89,7 +89,7 @@
         "bg_text": "",
         "button_label": "",
         "button_url": "",
-        "color_palette": "one",
+        "color_scheme": "set-1",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "padding_bottom": "small",
         "padding_bottom_mobile": "small",
@@ -125,7 +125,7 @@
         "tab_257388"
       ],
       "settings": {
-        "color_palette": "one",
+        "color_scheme": "set-1",
         "icon": "booqable://assets/image-tough-marker.png",
         "opener": "List of locations",
         "placement": "right",

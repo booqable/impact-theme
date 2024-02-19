@@ -1,5 +1,6 @@
 .products__wrapper {
   position: relative;
+  background: var(--background-primary);
 }
 
 .products__wrapper--padding-top {
@@ -59,26 +60,6 @@
 .products__wrapper--with-background .carousel:before,
 .products__wrapper--with-background .carousel:after {
   display: none;
-}
-
-.palette-one.products__wrapper {
-  background: var(--background-primary-1);
-}
-
-.palette-two.products__wrapper {
-  background: var(--background-primary-2);
-}
-
-.palette-three.products__wrapper {
-  background: var(--background-primary-3);
-}
-
-.palette-four.products__wrapper {
-  background: var(--background-primary-4);
-}
-
-.palette-five.products__wrapper {
-  background: var(--background-primary-5);
 }
 
 @media (min-width: 992px) {

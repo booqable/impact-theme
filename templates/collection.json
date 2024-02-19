@@ -1,6 +1,24 @@
 {
   "name": "Collection",
   "sections": {
+    "title": {
+      "type": "title",
+      "blocks": [],
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-4",
+        "custom_description": "",
+        "custom_title": "",
+        "full_width": true,
+        "image": "",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none"
+      },
+      "disabled": null
+    },
     "collection-page": {
       "type": "collection-page",
       "blocks": {
@@ -17,7 +35,7 @@
         "item"
       ],
       "settings": {
-        "color_palette": "one",
+        "color_scheme": "set-1",
         "grid": "three",
         "limit": 6,
         "message": "Sorry, there are no products in this collection yet",
@@ -33,6 +51,7 @@
     }
   },
   "order": [
+    "title",
     "collection-page"
   ]
 }

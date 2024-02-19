@@ -6,6 +6,10 @@
   padding-bottom: var(--padding-bottom-mobile);
 }
 
+.search__wrapper {
+  background: var(--background-primary);
+}
+
 .search-results {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
@@ -21,14 +25,6 @@
 
 .search-results .product-card {
   min-width: auto;
-}
-
-.palette-one.search__wrapper {
-  background: var(--background-primary-1);
-}
-
-.palette-two.search__wrapper {
-  background: var(--background-primary-2);
 }
 
 @media (min-width: 768px) {

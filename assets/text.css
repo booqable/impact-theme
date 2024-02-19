@@ -8,24 +8,12 @@
 
 .text__wrapper {
   text-align: var(--text-align);
+  background: var(--background-primary);
+  color: var(--color-third);
 }
 
-.palette-one.text__wrapper {
-  background: var(--background-primary-1);
-  color: var(--color-third-1);
-}
-
-.palette-one .text__title {
-  color: var(--color-primary-1);
-}
-
-.palette-two.text__wrapper {
-  background: var(--background-primary-2);
-  color: var(--color-third-2);
-}
-
-.palette-two .text__title {
-  color: var(--color-primary-2);
+.text__title {
+  color: var(--color-primary);
 }
 
 @media (min-width: 992px) {

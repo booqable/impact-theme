@@ -5,7 +5,7 @@
   {%- assign image_bg              = section.settings.image_bg -%}
   {%- assign rounded_corners       = section.settings.rounded_corners -%}
   {%- assign show_navigation       = section.settings.show_navigation -%}
-  {%- assign color_palette         = section.settings.color_palette -%}
+  {%- assign color_scheme          = section.settings.color_scheme -%}
   {%- assign padding_top           = section.settings.padding_top -%}
   {%- assign padding_bottom        = section.settings.padding_bottom -%}
   {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
@@ -76,7 +76,7 @@
   {% comment %} CSS variables end {% endcomment %}
 
   <div
-    class="testimonials__wrapper palette-{{ color_palette }}{% if padding_top != blank or padding_top_mobile != blank %} testimonials__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} testimonials__wrapper--padding-bottom{%- endif -%}"
+    class="testimonials__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} testimonials__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} testimonials__wrapper--padding-bottom{%- endif -%}"
     style="{{- variables | escape -}}"
   >
     <div class="testimonials__container container">
@@ -190,32 +190,10 @@
         "content": "General settings"
       },
       {
-        "type": "select",
-        "id": "color_palette",
-        "label": "Color palette",
-        "options": [
-          {
-            "value": "one",
-            "label": "Color set 1"
-          },
-          {
-            "value": "two",
-            "label": "Color set 2"
-          },
-          {
-            "value": "three",
-            "label": "Color set 3"
-          },
-          {
-            "value": "four",
-            "label": "Color set 4"
-          },
-          {
-            "value": "five",
-            "label": "Color set 5"
-          }
-        ],
-        "default": "three"
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-3"
       },
       {
         "type": "text",

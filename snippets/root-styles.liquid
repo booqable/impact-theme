@@ -1,410 +1,72 @@
 <style>
+  {% for scheme in settings.color_schemes -%}
+    {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
+
+    {% if forloop.first -%}
+      :root,
+    {%- endif %}
+    .color-{{ scheme.id }} {
+      --background-accent:         {{ scheme.settings.background_accent }};
+      --background-accent-hover:   {{ scheme.settings.background_accent | append: "CC" }};
+      --background-accent-hover-2: {{ scheme.settings.background_accent | append: "1A" }};
+      --background-primary:        {{ scheme.settings.background }};
+      --background-primary-00:     {{ scheme.settings.background | append: "00" }};
+      --background-primary-10:     {{ scheme.settings.background | append: "1A" }};
+      --background-primary-45:     {{ scheme.settings.background | append: "73" }};
+      --background-primary-hover:  {{ scheme.settings.background | append: "1A" }};
+      --color-accent:              {{ scheme.settings.color_accent }};
+      --color-primary:             {{ scheme.settings.color_primary }};
+      --color-primary-00:          {{ scheme.settings.color_primary | append: "00" }};
+      --color-primary-30:          {{ scheme.settings.color_primary | append: "4D" }};
+      --color-primary-67:          {{ scheme.settings.color_primary | append: "AB" }};
+      --color-secondary:           {{ scheme.settings.color_secondary }};
+      --color-secondary-hover:     {{ scheme.settings.color_secondary | append: "CC" }};
+      --color-third:               {{ scheme.settings.color_primary | append: "66" }};
+      --color-fourth:              {{ scheme.settings.color_primary | append: "26" }};
+      --color-outline:             {{ scheme.settings.color_accent_outline }};
+      --color-outline-hover:       {{ scheme.settings.color_accent_outline | append: 'CC' }};
+      --color-image-placeholder:   {{ scheme.settings.color_primary | append: "26" }};
+      --color-placeholder:         {{ scheme.settings.color_primary | append: "4D" }};
+      --color-border:              {{ scheme.settings.color_primary | append: "26" }};
+    }
+  {% endfor %}
+
   :root {
-    {%- if settings.background_1 != blank -%}
-      --background-primary-1: {{- settings.background_1 -}};
-      --background-primary-1-00: {{- settings.background_1 | append: "00" -}};
-      --background-primary-1-hover: {{- settings.background_1 | append: "1A" -}};
-    {%- else -%}
-      --background-primary-1: #FFFFFF;
-      --background-primary-1-00: #FFFFFF00;
-      --background-primary-1-hover: #FFFFFF1A;
-    {%- endif -%}
+    --font-body:          "{{ settings.body_font.family | default: Open Sans }}", {{ settings.body_font.fallback_families | default: sans-serif }};
+    --font-tagline:       "{{ settings.tagline_font.family | default: Open Sans }}", {{ settings.tagline_font.fallback_families | default: sans-serif }};
+    --font-heading:       "{{ settings.heading_font.family | default: Darker Grotesque }}", {{ settings.heading_font.fallback_families | default: sans-serif }};
+    --font-size-h1:       {{ settings.h1_size | append: "px" | default: "80px" }};
+    --font-size-h2:       {{ settings.h2_size | append: "px" | default: "64px" }};
+    --font-size-h3:       {{ settings.h3_size | append: "px" | default: "56px" }};
+    --font-size-tagline:  {{ settings.tagline_size | append: "px" | default: "20px" }};
+    --font-size-large:    {{ settings.large_text_size | append: "px" | default: "18px" }};
+    --font-size-regular:  {{ settings.regular_text_size | append: "px" | default: "16px" }};
+    --animation-duration: {{ settings.animation_duration | append: "s" | default: "0.2s" }};
 
-    {%- if settings.primary_color_1 != blank -%}
-      --color-primary-1: {{- settings.primary_color_1 -}};
-      --color-primary-1-00: {{- settings.primary_color_1 | append: "00" -}};
-      --color-primary-1-30: {{- settings.primary_color_1 | append: "4D" -}};
-      --color-primary-1-67: {{- settings.primary_color_1 | append: "AB" -}};
-      --color-third-1: {{- settings.primary_color_1 | append: "66" -}};
-      --color-fourth-1: {{- settings.primary_color_1 | append: "26" -}};
-      --color-image-placeholder-1: {{- settings.primary_color_1 | append: "26" -}};
-      --color-placeholder-1: {{- settings.primary_color_1 | append: "4D" -}};
-      --color-border-1: {{- settings.primary_color_1 | append: "26" -}};
-    {%- else -%}
-      --color-primary-1: #1A3333;
-      --color-primary-1-00: #1A333300;
-      --color-primary-1-30: #1A33334D;
-      --color-primary-1-67: #1A3333AB;
-      --color-third-1: #1A333366;
-      --color-fourth-1: #1A333326;
-      --color-image-placeholder-1: #1A333326;
-      --color-placeholder-1: #1A33334D;
-      --color-border-1: #1A333326;
-    {%- endif -%}
-
-    {%- if settings.secondary_color_1 != blank -%}
-      --color-secondary-1: {{- settings.secondary_color_1 -}};
-      --color-secondary-1-hover: {{- settings.secondary_color_1 | append: "CC" -}};
-    {%- else -%}
-      --color-secondary-1: #768585;
-      --color-secondary-1-hover: #768585CC;
-    {%- endif -%}
-
-    {%- if settings.accent_background_1 != blank -%}
-      --background-accent-1: {{- settings.accent_background_1 -}};
-      --background-accent-1-hover: {{- settings.accent_background_1 | append: "CC" -}};
-      --background-accent-1-hover-2: {{- settings.accent_background_1 | append: "1A" -}};
-    {%- else -%}
-      --background-accent-1: {{- branding_color -}};
-      --background-accent-1-hover: {{- branding_color | append: "CC" -}};
-      --background-accent-1-hover-2: {{- branding_color | append: "1A" -}};
-    {%- endif -%}
-
-    {%- if settings.accent_color_1 != blank -%}
-      --color-accent-1: {{- settings.accent_color_1 -}};
-    {%- else -%}
-      --color-accent-1: {%- if settings.primary_color_1 != blank -%}{{- settings.primary_color_1 -}}{%- else -%}#1A3333{%- endif -%};
-    {%- endif -%}
-
-    {%- if settings.accent_outline_1 != blank -%}
-      --color-outline-1: {{- settings.accent_outline_1 -}};
-      --color-outline-1-hover: {{- settings.accent_outline_1 | append: 'CC' -}};
-    {%- else -%}
-      --color-outline-1: #53C787;
-      --color-outline-1-hover: #53C787CC;
-    {%- endif -%}
-
-    {%- if settings.background_2 != blank -%}
-      --background-primary-2: {{- settings.background_2 -}};
-      --background-primary-2-00: {{- settings.background_2 | append: "00" -}};
-      --background-primary-2-hover: {{- settings.background_2 | append: "1A" -}};
-    {%- else -%}
-      --background-primary-2: #53C787;
-      --background-primary-2-00: #53C78700;
-      --background-primary-2-hover: #53C7871A;
-    {%- endif -%}
-
-    {%- if settings.primary_color_2 != blank -%}
-      --color-primary-2: {{- settings.primary_color_2 -}};
-      --color-primary-2-00: {{- settings.primary_color_2 | append: "00" -}};
-      --color-primary-2-30: {{- settings.primary_color_2 | append: "4D" -}};
-      --color-primary-2-67: {{- settings.primary_color_2 | append: "AB" -}};
-      --color-third-2: {{- settings.primary_color_2 | append: "66" -}};
-      --color-fourth-2: {{- settings.primary_color_2 | append: "26" -}};
-      --color-image-placeholder-2: {{- settings.primary_color_2 | append: "26" -}};
-      --color-placeholder-2: {{- settings.primary_color_2 | append: "4D" -}};
-      --color-border-2: {{- settings.primary_color_2 | append: "26" -}};
-    {%- else -%}
-      --color-primary-2: #1A3333;
-      --color-primary-2-00: #1A333300;
-      --color-primary-2-30: #1A33334D;
-      --color-primary-2-67: #1A3333AB;
-      --color-third-2: #1A333366;
-      --color-fourth-2: #1A333326;
-      --color-image-placeholder-2: #1A333326;
-      --color-placeholder-2: #1A33334D;
-      --color-border-2: #1A333326;
-    {%- endif -%}
-
-    {%- if settings.secondary_color_2 != blank -%}
-      --color-secondary-2: {{- settings.secondary_color_2 -}};
-      --color-secondary-2-hover: {{- settings.secondary_color_2 | append: "CC" -}};
-    {%- else -%}
-      --color-secondary-2: #2A5044;
-      --color-secondary-2-hover: #2A5044CC;
-    {%- endif -%}
-
-    {%- if settings.accent_background_2 != blank -%}
-      --background-accent-2: {{- settings.accent_background_2 -}};
-      --background-accent-2-hover: {{- settings.accent_background_2 | append: "CC" -}};
-      --background-accent-2-hover-2: {{- settings.accent_background_2 | append: "1A" -}};
-    {%- else -%}
-      --background-accent-2: {{- branding_color -}};
-      --background-accent-2-hover: {{- branding_color | append: "CC" -}};
-      --background-accent-2-hover-2: {{- branding_color | append: "1A" -}};
-    {%- endif -%}
-
-    {%- if settings.accent_color_2 != blank -%}
-      --color-accent-2: {{- settings.accent_color_2 -}};
-    {%- else -%}
-      --color-accent-2: {%- if settings.primary_color_2 != blank -%}{{- settings.primary_color_2 -}}{%- else -%}#1A3333{%- endif -%};
-    {%- endif -%}
-
-    {%- if settings.accent_outline_2 != blank -%}
-      --color-outline-2: {{- settings.accent_outline_2 -}};
-      --color-outline-2-hover: {{- settings.accent_outline_2 | append: 'CC' -}};
-    {%- else -%}
-      --color-outline-2: #FFFFFF;
-      --color-outline-2-hover: #FFFFFFCC;
-    {%- endif -%}
-
-    {%- if settings.background_3 != blank -%}
-      --background-primary-3: {{- settings.background_3 -}};
-      --background-primary-3-00: {{- settings.background_3 | append: "00" -}};
-      --background-primary-3-hover: {{- settings.background_3 | append: "1A" -}};
-    {%- else -%}
-      --background-primary-3: #E06B48;
-      --background-primary-3-00: #E06B4800;
-      --background-primary-3-hover: #E06B481A;
-    {%- endif -%}
-
-    {%- if settings.primary_color_3 != blank -%}
-      --color-primary-3: {{- settings.primary_color_3 -}};
-      --color-primary-3-00: {{- settings.primary_color_3 | append: "00" -}};
-      --color-primary-3-30: {{- settings.primary_color_3 | append: "4D" -}};
-      --color-primary-3-67: {{- settings.primary_color_3 | append: "AB" -}};
-      --color-third-3: {{- settings.primary_color_3 | append: "66" -}};
-      --color-fourth-3: {{- settings.primary_color_3 | append: "26" -}};
-      --color-image-placeholder-3: {{- settings.primary_color_3 | append: "26" -}};
-      --color-placeholder-3: {{- settings.primary_color_3 | append: "4D" -}};
-      --color-border-3: {{- settings.primary_color_3 | append: "26" -}};
-    {%- else -%}
-      --color-primary-3: #F6F4F2;
-      --color-primary-3-00: #F6F4F200;
-      --color-primary-3-30: #F6F4F24D;
-      --color-primary-3-67: #F6F4F2AB;
-      --color-third-3: #F6F4F266;
-      --color-fourth-3: #F6F4F226;
-      --color-image-placeholder-3: #F6F4F226;
-      --color-placeholder-3: #F6F4F24D;
-      --color-border-3: #F6F4F226;
-    {%- endif -%}
-
-    {%- if settings.secondary_color_3 != blank -%}
-      --color-secondary-3: {{- settings.secondary_color_3 -}};
-      --color-secondary-3-hover: {{- settings.secondary_color_3 | append: "CC" -}};
-    {%- else -%}
-      --color-secondary-3: #E0D4CE;
-      --color-secondary-3-hover: #E0D4CECC;
-    {%- endif -%}
-
-    {%- if settings.accent_background_3 != blank -%}
-      --background-accent-3: {{- settings.accent_background_3 -}};
-      --background-accent-3-hover: {{- settings.accent_background_3 | append: "CC" -}};
-      --background-accent-3-hover-2: {{- settings.accent_background_3 | append: "1A" -}};
-    {%- else -%}
-      --background-accent-3: {{- branding_color -}};
-      --background-accent-3-hover: {{- branding_color | append: "CC" -}};
-      --background-accent-3-hover-2: {{- branding_color | append: "1A" -}};
-    {%- endif -%}
-
-    {%- if settings.accent_color_3 != blank -%}
-      --color-accent-3: {{- settings.accent_color_3 -}};
-    {%- else -%}
-      --color-accent-3: {%- if settings.primary_color_3 != blank -%}{{- settings.primary_color_3 -}}{%- else -%}#F6F4F2{%- endif -%};
-    {%- endif -%}
-
-    {%- if settings.accent_outline_3 != blank -%}
-      --color-outline-3: {{- settings.accent_outline_3 -}};
-      --color-outline-3-hover: {{- settings.accent_outline_3 | append: 'CC' -}};
-    {%- else -%}
-      --color-outline-3: #1A3333;
-      --color-outline-3-hover: #1A3333CC;
-    {%- endif -%}
-
-    {%- if settings.background_4 != blank -%}
-      --background-primary-4: {{- settings.background_4 -}};
-      --background-primary-4-00: {{- settings.background_4 | append: "00" -}};
-      --background-primary-4-hover: {{- settings.background_4 | append: "1A" -}};
-    {%- else -%}
-      --background-primary-4: #1A3333;
-      --background-primary-4-00: #1A333300;
-      --background-primary-4-hover: #1A33331A;
-    {%- endif -%}
-
-    {%- if settings.primary_color_4 != blank -%}
-      --color-primary-4: {{- settings.primary_color_4 -}};
-      --color-primary-4-00: {{- settings.primary_color_4 | append: "00" -}};
-      --color-primary-4-30: {{- settings.primary_color_4 | append: "4D" -}};
-      --color-primary-4-67: {{- settings.primary_color_4 | append: "AB" -}};
-      --color-third-4: {{- settings.primary_color_4 | append: "66" -}};
-      --color-fourth-4: {{- settings.primary_color_4 | append: "26" -}};
-      --color-image-placeholder-4: {{- settings.primary_color_4 | append: "26" -}};
-      --color-placeholder-4: {{- settings.primary_color_4 | append: "4D" -}};
-      --color-border-4: {{- settings.primary_color_4 | append: "26" -}};
-    {%- else -%}
-      --color-primary-4: #F6F4F2;
-      --color-primary-4-00: #F6F4F200;
-      --color-primary-4-30: #F6F4F24D;
-      --color-primary-4-67: #F6F4F2AB;
-      --color-third-4: #F6F4F266;
-      --color-fourth-4: #F6F4F226;
-      --color-image-placeholder-4: #F6F4F226;
-      --color-placeholder-4: #F6F4F24D;
-      --color-border-4: #F6F4F226;
-    {%- endif -%}
-
-    {%- if settings.secondary_color_4 != blank -%}
-      --color-secondary-4: {{- settings.secondary_color_4 -}};
-      --color-secondary-4-hover: {{- settings.secondary_color_4 | append: "CC" -}};
-    {%- else -%}
-      --color-secondary-4: #A0A6A6;
-      --color-secondary-4-hover: #A0A6A6CC;
-    {%- endif -%}
-
-    {%- if settings.accent_background_4 != blank -%}
-      --background-accent-4: {{- settings.accent_background_4 -}};
-      --background-accent-4-hover: {{- settings.accent_background_4 | append: "CC" -}};
-      --background-accent-4-hover-2: {{- settings.accent_background_4 | append: "1A" -}};
-    {%- else -%}
-      --background-accent-4: {{- branding_color -}};
-      --background-accent-4-hover: {{- branding_color | append: "CC" -}};
-      --background-accent-4-hover-2: {{- branding_color | append: "1A" -}};
-    {%- endif -%}
-
-    {%- if settings.accent_color_4 != blank -%}
-      --color-accent-4: {{- settings.accent_color_4 -}};
-    {%- else -%}
-      --color-accent-4: {%- if settings.primary_color_4 != blank -%}{{- settings.primary_color_4 -}}{%- else -%}#F6F4F2{%- endif -%};
-    {%- endif -%}
-
-    {%- if settings.accent_outline_4 != blank -%}
-      --color-outline-4: {{- settings.accent_outline_4 -}};
-      --color-outline-4-hover: {{- settings.accent_outline_4 | append: 'CC' -}};
-    {%- else -%}
-      --color-outline-4: #53C787;
-      --color-outline-4-hover: #53C787CC;
-    {%- endif -%}
-
-    {%- if settings.background_5 != blank -%}
-      --background-primary-5: {{- settings.background_5 -}};
-      --background-primary-5-00: {{- settings.background_5 | append: "00" -}};
-      --background-primary-5-hover: {{- settings.background_5 | append: "1A" -}};
-    {%- else -%}
-      --background-primary-5: #F6F4F2;
-      --background-primary-5-00: #F6F4F200;
-      --background-primary-5-hover: #F6F4F21A;
-    {%- endif -%}
-
-    {%- if settings.primary_color_5 != blank -%}
-      --color-primary-5: {{- settings.primary_color_5 -}};
-      --color-primary-5-00: {{- settings.primary_color_5 | append: "00" -}};
-      --color-primary-5-30: {{- settings.primary_color_5 | append: "4D" -}};
-      --color-primary-5-67: {{- settings.primary_color_5 | append: "AB" -}};
-      --color-third-5: {{- settings.primary_color_5 | append: "66" -}};
-      --color-fourth-5: {{- settings.primary_color_5 | append: "26" -}};
-      --color-image-placeholder-5: {{- settings.primary_color_5 | append: "26" -}};
-      --color-placeholder-5: {{- settings.primary_color_5 | append: "4D" -}};
-      --color-border-5: {{- settings.primary_color_5 | append: "26" -}};
-    {%- else -%}
-      --color-primary-5: #1A3333;
-      --color-primary-5-00: #1A333300;
-      --color-primary-5-30: #1A33334D;
-      --color-primary-5-67: #1A3333AB;
-      --color-third-5: #1A333366;
-      --color-fourth-5: #1A333326;
-      --color-image-placeholder-5: #1A333326;
-      --color-placeholder-5: #1A33334D;
-      --color-border-5: #1A333326;
-    {%- endif -%}
-
-    {%- if settings.secondary_color_5 != blank -%}
-      --color-secondary-5: {{- settings.secondary_color_5 -}};
-      --color-secondary-5-hover: {{- settings.secondary_color_5 | append: "CC" -}};
-    {%- else -%}
-      --color-secondary-5: #768585;
-      --color-secondary-5-hover: #768585CC;
-    {%- endif -%}
-
-    {%- if settings.accent_background_5 != blank -%}
-      --background-accent-5: {{- settings.accent_background_5 -}};
-      --background-accent-5-hover: {{- settings.accent_background_5 | append: "CC" -}};
-      --background-accent-5-hover-2: {{- settings.accent_background_5 | append: "1A" -}};
-    {%- else -%}
-      --background-accent-5: {{- branding_color -}};
-      --background-accent-5-hover: {{- branding_color | append: "CC" -}};
-      --background-accent-5-hover-2: {{- branding_color | append: "1A" -}};
-    {%- endif -%}
-
-    {%- if settings.accent_color_5 != blank -%}
-      --color-accent-5: {{- settings.accent_color_5 -}};
-    {%- else -%}
-      --color-accent-5: {%- if settings.primary_color_5 != blank -%}{{- settings.primary_color_5 -}}{%- else -%}#1A3333{%- endif -%};
-    {%- endif -%}
-
-    {%- if settings.accent_outline_5 != blank -%}
-      --color-outline-5: {{- settings.accent_outline_5 -}};
-      --color-outline-5-hover: {{- settings.accent_outline_5 | append: 'CC' -}};
-    {%- else -%}
-      --color-outline-5: #53C787;
-      --color-outline-5-hover: #53C787CC;
-    {%- endif -%}
-
-
-    {%- if settings.heading_font != blank -%}
-      --font-heading: "{{ settings.heading_font.family }}", {{ settings.heading_font.fallback_families }};
-    {%- else -%}
-      --font-heading: "Darker Grotesque", sans-serif;
-    {%- endif -%}
-
-    {%- if settings.body_font != blank -%}
-      --font-body: "{{ settings.body_font.family }}", {{ settings.body_font.fallback_families }};
-    {%- else -%}
-      --font-body: "Open Sans", sans-serif;
-    {%- endif -%}
-
-    {%- if settings.tagline_font != blank -%}
-      --font-tagline: "{{ settings.tagline_font.family }}", {{ settings.tagline_font.fallback_families }};
-    {%- else -%}
-      --font-tagline: "Open Sans", sans-serif;
-    {%- endif -%}
-
-    {%- if settings.h1_size != blank -%}
-      --font-size-h1: {{- settings.h1_size | append: "px" -}};
-    {%- else -%}
-      --font-size-h1: 80px;
-    {%- endif -%}
-
-    {%- if settings.h2_size != blank -%}
-      --font-size-h2: {{- settings.h2_size | append: "px" -}};
-    {%- else -%}
-      --font-size-h2: 64px;
-    {%- endif -%}
-
-    {%- if settings.h3_size != blank -%}
-      --font-size-h3: {{- settings.h3_size | append: "px" -}};
-    {%- else -%}
-      --font-size-h3: 56px;
-    {%- endif -%}
-
-    {%- if settings.tagline_size != blank -%}
-      --font-size-tagline: {{- settings.tagline_size | append: "px" -}};
-    {%- else -%}
-      --font-size-tagline: 20px;
-    {%- endif -%}
-
-    {%- if settings.large_text_size != blank -%}
-      --font-size-large: {{- settings.large_text_size | append: "px" -}};
-    {%- else -%}
-      --font-size-large: 18px;
-    {%- endif -%}
-
-    {%- if settings.regular_text_size != blank -%}
-      --font-size-regular: {{- settings.regular_text_size | append: "px" -}};
-    {%- else -%}
-      --font-size-regular: 16px;
-    {%- endif -%}
-
-    {%- if settings.animation_duration != blank -%}
-      --animation-duration: {{- settings.animation_duration | append: "s"-}};
-    {%- else -%}
-      --animation-duration: 0.2s;
-    {%- endif -%}
-
-    {%- if settings.corner_radius == 'square' -%}
+    {% if settings.corner_radius == 'square' %}
       --border-radius: 0;
       --border-radius-circle-dynamic: 50%;
       --border-radius-rounded: 0px;
-    {%- elsif settings.corner_radius == 'rounded' -%}
+    {% elsif settings.corner_radius == 'rounded' %}
       --border-radius: 4px;
       --border-radius-circle-dynamic: 16px;
       --border-radius-rounded: 4px;
-    {%- elsif settings.corner_radius == 'fully_round' -%}
+    {% elsif settings.corner_radius == 'fully_round' %}
       --border-radius: 50px;
       --border-radius-circle-dynamic: 50%;
       --border-radius-rounded: 8px;
-    {%- endif -%}
+    {% endif %}
 
-    {%- case settings.social_size -%}
+    {% case settings.social_size %}
       {%- when 'sm' -%}
         --social-size: 18px;
       {%- when 'md' -%}
         --social-size: 21px;
       {%- when 'lg' -%}
         --social-size: 24px;
-    {%- endcase -%}
+    {% endcase %}
 
-    {%- case settings.social_spacing -%}
+    {% case settings.social_spacing %}
       {%- when 'sm' -%}
         --social-spacing: 5px;
       {%- when 'md' -%}

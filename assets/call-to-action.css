@@ -4,16 +4,27 @@
   position: relative;
 }
 
-.cta__container--padding-top {
+.cta__container .cta__wrapper {
+  padding-right: var(--horizontal-padding-mobile);
+  padding-left: var(--horizontal-padding-mobile);
+  overflow: hidden;
+  border-radius: var(--border-radius-rounded-blocks);
+}
+
+.cta__wrapper--padding-top {
   padding-top: var(--padding-top-mobile, 0);
 }
 
-.header-transparent ~ main .cta:first-child .cta__container--padding-top {
+.header-transparent ~ main .cta:first-child .cta__wrapper--padding-top {
   padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
 }
 
-.cta__container--padding-bottom {
+.cta__wrapper--padding-bottom {
   padding-bottom: var(--padding-bottom-mobile, 0);
+}
+
+.cta__content {
+  color: var(--color-primary);
 }
 
 .cta__text-area {
@@ -37,15 +48,18 @@
   bottom: 0;
   overflow: hidden;
   z-index: -1;
+  background: var(--background-primary);
 }
 
-.cta__vision--overlay:after {
+.cta__vision--transition:after {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
+  background: linear-gradient(180deg, var(--color-transition) 11.17%, var(--color-transition-00) 41.57%),
+              linear-gradient(349deg, var(--color-primary-30) 43.3%, var(--color-primary-00) 80.3%);
 }
 
 .cta__image {
@@ -55,81 +69,16 @@
   object-fit: cover;
 }
 
-.palette-one .cta__content {
-  color: var(--color-primary-1);
-}
-
-.palette-one .cta__vision {
-  background: var(--background-primary-1);
-}
-
-.palette-one .cta__vision--overlay:after {
-  background: linear-gradient(180deg, var(--background-primary-1) 11.17%, var(--background-primary-1-00) 41.57%),
-              linear-gradient(349deg, var(--color-primary-1-30) 43.3%, var(--color-primary-1-00) 80.3%);
-}
-
-.palette-two .cta__content {
-  color: var(--color-primary-2);
-}
-
-.palette-two .cta__vision {
-  background: var(--background-primary-2);
-}
-
-.palette-two .cta__vision--overlay:after {
-  background: linear-gradient(180deg, var(--background-primary-2) 11.17%, var(--background-primary-2-00) 41.57%),
-              linear-gradient(349deg, var(--color-primary-2-30) 43.3%, var(--color-primary-2-00) 80.3%);
-}
-
-.palette-three .cta__content {
-  color: var(--color-primary-3);
-}
-
-.palette-three .cta__vision {
-  background: var(--background-primary-3);
-}
-
-.palette-three .cta__vision--overlay:after {
-  background: linear-gradient(180deg, var(--background-primary-3) 11.17%, var(--background-primary-3-00) 41.57%),
-              linear-gradient(349deg, var(--color-primary-3-30) 43.3%, var(--color-primary-3-00) 80.3%);
-}
-
-.palette-four .cta__content {
-  color: var(--color-primary-4);
-}
-
-.palette-four .cta__vision {
-  background: var(--background-primary-4);
-}
-
-.palette-four .cta__vision--overlay:after {
-  background: linear-gradient(180deg, var(--background-primary-4) 11.17%, var(--background-primary-4-00) 41.57%),
-              linear-gradient(349deg, var(--color-primary-4-30) 43.3%, var(--color-primary-4-00) 80.3%);
-}
-
-.palette-five .cta__content {
-  color: var(--color-primary-5);
-}
-
-.palette-five .cta__vision {
-  background: var(--background-primary-5);
-}
-
-.palette-five .cta__vision--overlay:after {
-  background: linear-gradient(180deg, var(--background-primary-5) 11.17%, var(--background-primary-5-00) 41.57%),
-              linear-gradient(349deg, var(--color-primary-5-30) 43.3%, var(--color-primary-5-00) 80.3%);
-}
-
 @media (min-width: 992px) {
-  .cta__container--padding-top {
+  .cta__wrapper--padding-top {
     padding-top: var(--padding-top, 0);
   }
 
-  .header-transparent ~ main .cta:first-child .cta__container--padding-top {
+  .header-transparent ~ main .cta:first-child .cta__wrapper--padding-top {
     padding-top: calc(var(--padding-top, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
   }
 
-  .cta__container--padding-bottom {
+  .cta__wrapper--padding-bottom {
     padding-bottom: var(--padding-bottom, 0);
   }
 
@@ -140,5 +89,12 @@
 
   .cta__buttons {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cta__container .cta__wrapper {
+    padding-right: var(--horizontal-padding);
+    padding-left: var(--horizontal-padding);
   }
 }

@@ -9,38 +9,11 @@
     --bundle-items-image-border-radius: var(--border-radius-rounded);
     --bundle-items-cell-padding: 5px;
     --bundle-items-font-size: 15px;
-
-    {%- if color_palette == "one" -%}
-      {%- if settings.background_1 != blank -%}
-        --variation-select-background-color: var(--background-primary-1);
-        --bundle-items-background-color: var(--background-primary-1);
-      {%- endif -%}
-
-      {%- if settings.primary_color_1 != blank -%}
-        --variation-select-color: var(--color-primary-1);
-        --bundle-items-color: var(--color-primary-1);
-      {%- endif -%}
-
-      {%- if settings.border_color_1 != blank -%}
-        --variation-select-border: 1px solid var(--color-border-1);
-        --bundle-items-image-border: 1px solid var(--color-border-1);
-      {%- endif -%}
-
-    {%- elsif color_palette == "two" -%}
-      {%- if settings.background_2 != blank -%}
-        --variation-select-background-color: var(--background-primary-2);
-        --bundle-items-background-color: var(--background-primary-2);
-      {%- endif -%}
-
-      {%- if settings.primary_color_2 != blank -%}
-        --variation-select-color: var(--color-primary-2);
-        --bundle-items-color: var(--color-primary-2);
-      {%- endif -%}
-
-      {%- if settings.border_color_2 != blank -%}
-        --variation-select-border: 1px solid var(--color-border-2);
-        --bundle-items-image-border: 1px solid var(--color-border-2);
-      {%- endif -%}
-    {%- endif -%}
+    --variation-select-background-color: var(--background-primary);
+    --bundle-items-background-color: var(--background-primary);
+    --variation-select-color: var(--color-primary);
+    --bundle-items-color: var(--color-primary);
+    --variation-select-border: 1px solid var(--color-border);
+    --bundle-items-image-border: 1px solid var(--color-border);
   }
 {%- endstyle -%}

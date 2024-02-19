@@ -17,7 +17,7 @@
         "item"
       ],
       "settings": {
-        "color_palette": "one",
+        "color_scheme": "set-1",
         "limit": 6,
         "grid": "three",
         "mobile_toggler": "Menu",

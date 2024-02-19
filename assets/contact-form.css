@@ -1,6 +1,8 @@
 .contact-form__wrapper {
   position: relative;
   line-height: var(--line-height-lg);
+  background: var(--background-primary);
+  color: var(--color-third);
 }
 
 .contact-form__wrapper--padding-top {
@@ -34,6 +36,7 @@
   line-height: var(--line-height-sm);
   margin-bottom: 22px;
   text-align: var(--text-align);
+  color: var(--color-primary);
 }
 
 .contact-form__heading--sm {
@@ -56,9 +59,14 @@
   margin-top: 30px;
 }
 
+.contact-form__button.button--outlined {
+  color: var(--color-primary);
+}
+
 .contact-form__holder.no-image {
   position: relative;
   aspect-ratio: 16 / 9;
+  background: var(--color-image-placeholder);
 }
 
 .contact-form__image {
@@ -84,6 +92,11 @@
   opacity: 0.1;
 }
 
+.contact-form__background g,
+.contact-form__background path {
+  fill: var(--color-primary);
+}
+
 .contact-form__background:after {
   content: "";
   position: absolute;
@@ -92,6 +105,7 @@
   right: 0;
   bottom: 0;
   transform: var(--overlay-rotate);
+  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary) 0%, var(--background-primary-00) 100%);
 }
 
 .contact-form__background:before {
@@ -103,6 +117,7 @@
   left: var(--overlay-left);
   right: var(--overlay-right);
   z-index: 1;
+  background: linear-gradient(to var(--overlay-direction), var(--background-primary-00) 0%, var(--background-primary-10) 20%, var(--background-primary-45) 40%, var(--background-primary) 100%);
 }
 
 .contact-form__background-floral svg {
@@ -112,66 +127,6 @@
   bottom: 0;
   opacity: 0.2;
   max-height: 100%;
-}
-
-.palette-one.contact-form__wrapper {
-  background: var(--background-primary-1);
-  color: var(--color-third-1);
-}
-
-.palette-one .contact-form__heading {
-  color: var(--color-primary-1);
-}
-
-.palette-one .contact-form__holder.no-image {
-  background: var(--color-image-placeholder-1);
-}
-
-.palette-one .contact-form__button.button--outlined {
-  color: var(--color-primary-1);
-}
-
-.palette-one .contact-form__background g,
-.palette-one .contact-form__background path {
-  fill: var(--color-primary-1);
-}
-
-.palette-one .contact-form__background:after {
-  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary-1) 0%, var(--background-primary-1-00) 100%);
-}
-
-.palette-one .contact-form__background:before {
-  background: linear-gradient(to var(--overlay-direction), var(--background-primary-1-00) 0%, var(--background-primary-1-10) 20%, var(--background-primary-1-45) 40%, var(--background-primary-1) 100%);
-}
-
-.palette-two.contact-form__wrapper {
-  background: var(--background-primary-2);
-  color: var(--color-third-2);
-}
-
-.palette-two .contact-form__heading {
-  color: var(--color-primary-2);
-}
-
-.palette-two .contact-form__holder.no-image {
-  background: var(--color-image-placeholder-2);
-}
-
-.palette-two .contact-form__button.button--outlined {
-  color: var(--color-primary-2);
-}
-
-.palette-two .contact-form__background g,
-.palette-two .contact-form__background path {
-  fill: var(--color-primary-2);
-}
-
-.palette-two .contact-form__background:after {
-  background: radial-gradient(63.68% 231.83% at 28.65% 40.5%, var(--background-primary-2) 0%, var(--background-primary-2-00) 100%);
-}
-
-.palette-two .contact-form__background:before {
-  background: linear-gradient(to var(--overlay-direction), var(--background-primary-2-00) 0%, var(--background-primary-2-10) 20%, var(--background-primary-2-45) 40%, var(--background-primary-2) 100%);
 }
 
 @media (min-width: 810px) {
@@ -221,23 +176,13 @@
     right: var(--right);
     width: 100%;
     height: 100%;
-    border: 2px solid transparent;
+    border: 2px solid var(--background-accent);
     z-index: -1;
   }
 
   .contact-form__wrapper--bg-reverse .contact-form__background-floral svg {
     left: var(--bg-right);
     right: var(--bg-left);
-  }
-
-  .palette-one .contact-form__holder.no-image:after,
-  .palette-one .contact-form__image-wrapper:after {
-    border-color: var(--background-accent-1);
-  }
-
-  .palette-two .contact-form__holder.no-image:after,
-  .palette-two .contact-form__image-wrapper:after {
-    border-color: var(--background-accent-2);
   }
 }
 

@@ -1,31 +1,32 @@
 {%- unless section.blocks.size == 0 -%}
 
-  {{ "logos.css" | asset_url | stylesheet_tag }}
+  {{ "socials.css" | asset_url | stylesheet_tag }}
 
   {%- assign title                 = section.settings.title -%}
   {%- assign color_scheme          = section.settings.color_scheme -%}
+  {%- assign full_width            = section.settings.full_width -%}
   {%- assign padding_top           = section.settings.padding_top -%}
   {%- assign padding_bottom        = section.settings.padding_bottom -%}
   {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
   {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-  {%- assign image_placeholder     = settings.image_placeholder -%}
+  {%- assign rounded_corners       = section.settings.rounded_corners -%}
 
   {% comment %} CSS variables start {% endcomment %}
   {%- capture variables -%}
     {%- case padding_top -%}
       {%- when 'small' -%}
-        --padding-top: 40px;
+        --padding-top: 24px;
       {%- when 'medium' -%}
-        --padding-top: 84px;
+        --padding-top: 60px;
       {%- when 'large' -%}
         --padding-top: 128px;
     {%- endcase -%}
 
     {%- case padding_bottom -%}
       {%- when 'small' -%}
-        --padding-bottom: 40px;
+        --padding-bottom: 24px;
       {%- when 'medium' -%}
-        --padding-bottom: 84px;
+        --padding-bottom: 60px;
       {%- when 'large' -%}
         --padding-bottom: 128px;
     {%- endcase -%}
@@ -34,7 +35,7 @@
       {%- when 'small' -%}
         --padding-top-mobile: 40px;
       {%- when 'medium' -%}
-        --padding-top-mobile: 70px;
+        --padding-top-mobile: 75px;
       {%- when 'large' -%}
         --padding-top-mobile: 100px;
     {%- endcase -%}
@@ -43,58 +44,73 @@
       {%- when 'small' -%}
         --padding-bottom-mobile: 40px;
       {%- when 'medium' -%}
-        --padding-bottom-mobile: 70px;
+        --padding-bottom-mobile: 75px;
       {%- when 'large' -%}
         --padding-bottom-mobile: 100px;
+    {%- endcase -%}
+
+    {%- case rounded_corners -%}
+      {%- when 'none' -%}
+        --border-radius-rounded-blocks: 0px;
+      {%- when 'small' -%}
+        --border-radius-rounded-blocks: 8px;
+      {%- when 'medium' -%}
+        --border-radius-rounded-blocks: 16px;
+      {%- when 'large' -%}
+        --border-radius-rounded-blocks: 32px;
     {%- endcase -%}
   {%- endcapture -%}
   {% comment %} CSS variables end {% endcomment %}
 
   <div
-    class="logos__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} logos__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} logos__wrapper--padding-bottom{%- endif -%}"
+    class="socials__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} socials__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} socials__wrapper--padding-bottom{%- endif -%}"
     style="{{- variables | escape -}}"
   >
-    <div class="logos__container container">
-      {%- if title != blank -%}
-        <h2 class="logos__title h6">{{- title -}}</h2>
-      {%- endif -%}
-
-      <div class="logos__images">
-        {%- for block in section.blocks -%}
-          {%- assign image = block.settings.image -%}
-
-          {%- if image != blank -%}
-            {%- assign image = image -%}
-          {%- elsif image_placeholder != blank -%}
-            {%- assign image = image_placeholder -%}
-          {%- else -%}
-            {%- assign image = blank -%}
+    {%- unless full_width -%}
+      <div class="socials__container container">
+    {%- endunless -%}
+        {%- if title != blank -%}
+          {%- if full_width -%}
+            <div class="socials__container container">
           {%- endif -%}
+              <h2 class="socials__title">{{- title -}}</h2>
+          {%- if full_width -%}
+            </div>
+          {%- endif -%}
+        {%- endif -%}
 
-          <div class="logos__image-wrapper{% if image == blank %} no-image{% endif %}" id="{{- block.id -}}">
-            {%- if image.url != blank -%}
-              {%- render 'image',
-                image: image,
-                loading: 'lazy',
-                class: 'logos__image',
-                custom_width: '256',
-                custom_size: '256px'
-              -%}
-            {%- endif -%}
-          </div>
-        {%- endfor -%}
+        <div class="socials__images">
+          {%- for block in section.blocks -%}
+            {%- assign image = block.settings.image -%}
+            {%- assign url   = block.settings.url -%}
+
+            <div class="socials__image-wrapper" id="{{- section.key -}}-{{- block.id -}}">
+              {%- if image.url != blank -%}
+                {%- render 'image',
+                  image: image,
+                  loading: 'lazy',
+                  class: 'socials__image',
+                  size: 'l'
+                -%}
+
+                <a class="socials__link" href="{{ url }}" target="_blank">Social media link</a>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+    {%- unless full_width -%}
       </div>
-    </div>
+    {%- endunless -%}
   </div>
 {%- endunless -%}
 
 
 {% schema %}
   {
-    "name": "Logos",
-    "description": "Show logos of your partners or brands you cary",
+    "name": "Socials",
+    "description": "Showcase social media accounts",
     "tag": "section",
-    "class": "logos",
+    "class": "socials",
     "settings": [
       {
         "type": "header",
@@ -104,13 +120,43 @@
         "type": "text",
         "id": "title",
         "label": "Title",
-        "default": "Used by the world's most average companies"
+        "default": "Express yourself with <br>#explorable on Instagram"
       },
       {
         "type": "color_scheme",
         "id": "color_scheme",
         "label": "Color scheme",
-        "default": "set-3"
+        "default": "set-1"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Stretch items to screen edges",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "rounded_corners",
+        "label": "Rounded corners",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
       },
       {
         "type": "header",
@@ -138,7 +184,7 @@
             "label": "Large"
           }
         ],
-        "default": "large"
+        "default": "small"
       },
       {
         "type": "select",
@@ -162,7 +208,7 @@
             "label": "Large"
           }
         ],
-        "default": "medium"
+        "default": "none"
       },
       {
         "type": "header",
@@ -190,7 +236,7 @@
             "label": "Large"
           }
         ],
-        "default": "large"
+        "default": "small"
       },
       {
         "type": "select",
@@ -214,19 +260,24 @@
             "label": "Large"
           }
         ],
-        "default": "small"
+        "default": "none"
       }
     ],
-    "max_blocks": 16,
+    "max_blocks": 4,
     "blocks": [
       {
-        "type": "logo",
-        "name": "Logo",
+        "type": "item",
+        "name": "Item",
         "settings":[
           {
             "type": "image_picker",
             "id": "image",
             "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Link"
           }
         ]
       }

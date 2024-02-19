@@ -10,44 +10,11 @@
     --add-button-input-padding: 8px 12px;
     --add-button-input-width: 110px;
     --add-button-label-weight: 700;
-
-    {%- if color_palette == "one" -%}
-      {%- if settings.background_1 != blank -%}
-        --add-button-input-background-color: var(--background-primary-1);
-      {%- endif -%}
-
-      {%- if settings.primary_color_1 != blank -%}
-        --add-button-input-color: var(--color-primary-1);
-        --add-button-control-button-color: var(--color-primary-1);
-        --add-button-input-border: 1px solid var(--color-border-1);
-      {%- endif -%}
-
-      {%- if settings.accent_background_1 != blank -%}
-        --add-button-button-color: var(--background-accent-1);
-      {%- endif -%}
-
-      {%- if settings.accent_color_1 != blank -%}
-        --add-button-button-label-color: var(--color-accent-1);
-      {%- endif -%}
-
-    {%- elsif color_palette == "two" -%}
-      {%- if settings.background_2 != blank -%}
-        --add-button-input-background-color: var(--background-primary-2);
-      {%- endif -%}
-
-      {%- if settings.primary_color_2 != blank -%}
-        --add-button-input-color: var(--color-primary-2);
-        --add-button-control-button-color: var(--color-primary-2);
-        --add-button-input-border: 1px solid var(--color-border-2);
-      {%- endif -%}
-
-      {%- if settings.accent_background_2 != blank -%}
-        --add-button-button-color: var(--background-accent-2);
-      {%- endif -%}
-
-      {%- if settings.accent_color_2 != blank -%}
-        --add-button-button-label-color: var(--color-accent-2);
-      {%- endif -%}
-    {%- endif -%}
+    --add-button-input-background-color: var(--background-primary);
+    --add-button-input-color: var(--color-primary);
+    --add-button-control-button-color: var(--color-primary);
+    --add-button-input-border: 1px solid var(--color-border);
+    --add-button-button-color: var(--background-accent);
+    --add-button-button-label-color: var(--color-accent);
   }
 {%- endstyle -%}

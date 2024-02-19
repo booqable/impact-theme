@@ -1,12 +1,30 @@
 {
   "name": "Cart",
   "sections": {
+    "title": {
+      "type": "title",
+      "blocks": [],
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-4",
+        "custom_description": "",
+        "custom_title": "",
+        "full_width": true,
+        "image": "",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none"
+      },
+      "disabled": null
+    },
     "cart": {
       "type": "cart",
       "blocks": [],
       "block_order": [],
       "settings": {
-        "color_palette": "one",
+        "color-scheme": "set-1",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
@@ -15,6 +33,7 @@
     }
   },
   "order": [
+    "title",
     "cart"
   ]
 }
