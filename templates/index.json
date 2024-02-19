@@ -153,9 +153,9 @@
         "product_123449"
       ],
       "settings": {
-        "borders": "full",
+        "borders": "image",
         "button_label": "See all products",
-        "button_url": "booqable://root",
+        "button_url": "booqable://products/",
         "color_scheme": "set-1",
         "image": "",
         "padding_bottom": "medium",

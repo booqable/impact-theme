@@ -1,25 +1,27 @@
 {{ "product-page.css" | asset_url | stylesheet_tag }}
 
-{%- assign title                 = product.name -%}
-{%- assign description           = product.description -%}
-{%- assign images                = product.images -%}
-{%- assign variants              = product.variants -%}
-{%- assign variant_selector      = product | product_variations_select -%}
-{%- assign bundle_items          = product | bundle_items -%}
-{%- assign availability          = product | product_availability -%}
-{%- assign availability_calendar = product | availability_calendar -%}
-{%- assign quantity              = product | product_button -%}
-{%- assign price                 = product | product_price -%}
-{%- assign color_palette         = section.settings.color_palette -%}
-{%- assign show_breadcrumbs      = section.settings.show_breadcrumbs -%}
 {%- assign breadcrumbs_label     = section.settings.breadcrumbs_label -%}
 {%- assign breadcrumbs_url       = section.settings.breadcrumbs_url -%}
+{%- assign color_scheme          = section.settings.color_scheme -%}
+{%- assign description           = product.description -%}
+{%- assign images                = product.images -%}
+{%- assign message_label         = section.settings.message_label -%}
 {%- assign padding_top           = section.settings.padding_top -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-{%- assign message_label         = section.settings.message_label -%}
+{%- assign rounded_corners       = section.settings.rounded_corners -%}
+{%- assign show_breadcrumbs      = section.settings.show_breadcrumbs -%}
+{%- assign show_border           = section.settings.show_border -%}
+{%- assign title                 = product.name -%}
 {%- assign variant_label         = section.settings.variant_label -%}
+{%- assign variants              = product.variants -%}
+{%- assign variant_selector      = product | product_variations_select -%}
+{%- assign availability          = product | product_availability -%}
+{%- assign availability_calendar = product | availability_calendar -%}
+{%- assign bundle_items          = product | bundle_items -%}
+{%- assign quantity              = product | product_button -%}
+{%- assign price                 = product | product_price -%}
 
 {%- assign label = "" -%}
 
@@ -85,14 +87,25 @@
     {%- when 'large' -%}
       --padding-bottom-mobile: 48px;
   {%- endcase -%}
+
+  {%- case rounded_corners -%}
+    {%- when 'none' -%}
+      --border-radius-rounded-blocks: 0px;
+    {%- when 'small' -%}
+      --border-radius-rounded-blocks: 8px;
+    {%- when 'medium' -%}
+      --border-radius-rounded-blocks: 16px;
+    {%- when 'large' -%}
+      --border-radius-rounded-blocks: 32px;
+  {%- endcase -%}
 {%- endcapture -%}
 
 {%- render 'variables-product-availability' -%}
-{%- render 'variables-product-variations', color_palette: color_palette, settings: settings -%}
-{%- render 'variables-product-quantity', color_palette: color_palette, settings: settings -%}
+{%- render 'variables-product-variations' -%}
+{%- render 'variables-product-quantity' -%}
 {% comment %} CSS variables end {% endcomment %}
 
-<div class="product-main__wrapper palette-{{ color_palette }}" style="{{- variables | escape -}}">
+<div class="product-main__wrapper color-{{ color_scheme.id }}" style="{{- variables | escape -}}">
   <div class="product-main__container container{% if padding_top != blank or padding_top_mobile != blank %} product-main__container--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} product-main__container--padding-bottom{%- endif -%}">
     {%- render 'breadcrumbs',
         product: product,
@@ -104,7 +117,7 @@
     <div class="product-main__grid{% if images.size > 3 %} product-main__grid--overlay{%- endif -%}">
       <ul class="product-main__gallery">
         {%- for image in images -%}
-          <li class="product-main__gallery-item">
+          <li class="product-main__gallery-item{% if show_border %} product-main__gallery-item--borders{%- endif -%}">
             {%- render 'image',
                 image: image,
                 loading: 'lazy',
@@ -174,20 +187,40 @@
         "default": "Free shipping over $50"
       },
       {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_border",
+        "label": "Image border",
+        "default": false
+      },
+      {
         "type": "select",
-        "id": "color_palette",
-        "label": "Color palette",
+        "id": "rounded_corners",
+        "label": "Rounded corners of images",
         "options": [
           {
-            "value": "one",
-            "label": "Color set 1"
+            "value": "none",
+            "label": "None"
           },
           {
-            "value": "two",
-            "label": "Color set 2"
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
           }
         ],
-        "default": "one"
+        "default": "none"
       },
       {
         "type": "header",
@@ -224,10 +257,6 @@
           }
         ],
         "default": "collections"
-      },
-      {
-        "type": "header",
-        "content": "Carousel settings"
       },
       {
         "type": "header",
