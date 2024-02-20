@@ -1,30 +1,21 @@
 {
   "name": "Contact",
   "sections": {
-    "contact-form": {
-      "type": "contact-form",
-      "blocks": {
-        "image": {
-          "type": "image",
-          "settings": {
-            "image": "booqable://assets/image-tough-building-2.jpg",
-            "image_align": "top"
-          },
-          "disabled": null
-        }
-      },
-      "block_order": [
-        "image"
-      ],
+    "title": {
+      "type": "title",
+      "blocks": {},
+      "block_order": [],
       "settings": {
-        "color_scheme": "set-2",
-        "description": "Tell something about your company, describe what you do and what makes you unique.",
-        "padding_bottom": "medium",
+        "color_scheme": "set-4",
+        "custom_description": "",
+        "custom_title": "",
+        "full_width": true,
+        "image": "",
+        "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
         "padding_top_mobile": "medium",
-        "placement": "left",
-        "title": "Contact us"
+        "rounded_corners": "none"
       },
       "disabled": null
     },
@@ -74,73 +65,33 @@
       "settings": {
         "color_scheme": "set-1",
         "grid": "three",
-        "padding_bottom": "large",
-        "padding_bottom_mobile": "large",
-        "padding_top": "large",
-        "padding_top_mobile": "large"
+        "icon_style": "outline",
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none"
       },
       "disabled": false
     },
-    "title": {
-      "type": "title",
-      "blocks": {},
-      "block_order": [],
+    "contact-form": {
+      "type": "contact-form",
       "settings": {
-        "bg_text": "",
-        "button_label": "",
-        "button_url": "",
         "color_scheme": "set-1",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "large",
-        "padding_top_mobile": "large",
-        "tag": "OUR OFFICES",
-        "title": "Visit our stores"
+        "description": "Tell something about your company, describe what you do and what makes you unique.",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "title": "Get in touch"
       },
       "disabled": null
-    },
-    "locations": {
-      "type": "locations",
-      "blocks": {
-        "tab": {
-          "type": "tab",
-          "settings": {},
-          "disabled": null
-        },
-        "tab_257387": {
-          "type": "tab",
-          "settings": {},
-          "disabled": null
-        },
-        "tab_257388": {
-          "type": "tab",
-          "settings": {},
-          "disabled": null
-        }
-      },
-      "block_order": [
-        "tab",
-        "tab_257387",
-        "tab_257388"
-      ],
-      "settings": {
-        "color_scheme": "set-1",
-        "icon": "booqable://assets/image-tough-marker.png",
-        "opener": "List of locations",
-        "placement": "right",
-        "padding_bottom": "large",
-        "padding_bottom_mobile": "large",
-        "padding_top": "medium",
-        "padding_top_mobile": "medium"
-      },
-      "disabled": false
     }
   },
   "order": [
-    "contact-form",
-    "columns",
     "title",
-    "locations"
+    "columns",
+    "contact-form"
   ]
 }

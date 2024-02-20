@@ -3,12 +3,10 @@
 }
 
 .form__inner form {
-  max-width: 582px;
-  margin: 30px auto 0;
+  margin: 30px 0 0;
 }
 
 .form__title {
-  font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-sm);
   margin-bottom: 22px;
@@ -175,11 +173,11 @@ div.form__block--error .form__textarea:focus {
 }
 
 @media (min-width: 992px) {
-  .form__inner form {
-    margin: 30px 0 0;
-  }
-
   .form__submit button {
     width: auto;
+  }
+
+  .form__title {
+    font-size: var(--font-size-h2);
   }
 }

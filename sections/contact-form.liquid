@@ -1,49 +1,41 @@
 {{ "contact-form.css" | asset_url | stylesheet_tag }}
 
-{%- assign name                  = section.settings.name -%}
-{%- assign email                 = section.settings.email -%}
-{%- assign message               = section.settings.message -%}
 {%- assign button_label          = section.settings.button_label -%}
-{%- assign success_message       = section.settings.success_message -%}
-{%- assign error_message         = section.settings.error_message -%}
-{%- assign title                 = section.settings.title -%}
-{%- assign description           = section.settings.description -%}
-{%- assign placement             = section.settings.placement -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
+{%- assign description           = section.settings.description -%}
+{%- assign email                 = section.settings.email -%}
+{%- assign error_message         = section.settings.error_message -%}
+{%- assign message               = section.settings.message -%}
+{%- assign name                  = section.settings.name -%}
+{%- assign rounded_corners       = section.settings.rounded_corners -%}
 {%- assign padding_top           = section.settings.padding_top -%}
-{%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+{%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-{%- assign image_placeholder     = settings.image_placeholder -%}
-{%- assign background_style      = settings.background_style -%}
+{%- assign success_message       = section.settings.success_message -%}
+{%- assign title                 = section.settings.title -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
   {%- case padding_top -%}
-    {%- when 'none' -%}
-      --padding-top: 0;
     {%- when 'small' -%}
-      --padding-top: 24px;
+      --padding-top: 32px;
     {%- when 'medium' -%}
-      --padding-top: 68px;
+      --padding-top: 50px;
     {%- when 'large' -%}
-      --padding-top: 112px;
+      --padding-top: 100px;
   {%- endcase -%}
 
   {%- case padding_bottom -%}
-    {%- when 'none' -%}
-      --padding-bottom: 0;
     {%- when 'small' -%}
-      --padding-bottom: 24px;
+      --padding-bottom: 32px;
     {%- when 'medium' -%}
-      --padding-bottom: 68px;
+      --padding-bottom: 50px;
     {%- when 'large' -%}
-      --padding-bottom: 112px;
+      --padding-bottom: 100px;
   {%- endcase -%}
 
   {%- case padding_top_mobile -%}
-    {%- when 'none' -%}
-      --padding-top-mobile: 0;
     {%- when 'small' -%}
       --padding-top-mobile: 24px;
     {%- when 'medium' -%}
@@ -53,8 +45,6 @@
   {%- endcase -%}
 
   {%- case padding_bottom_mobile -%}
-    {%- when 'none' -%}
-      --padding-bottom-mobile: 0;
     {%- when 'small' -%}
       --padding-bottom-mobile: 24px;
     {%- when 'medium' -%}
@@ -63,174 +53,35 @@
       --padding-bottom-mobile: 60px;
   {%- endcase -%}
 
-  {%- case placement -%}
-    {%- when 'left' -%}
-      --order: 1;
-      --left: 48px;
-      --right: auto;
-      --overlay-rotate: rotate(0deg);
-      --overlay-left: auto;
-      --overlay-right: calc(100% - 100px);
-      --overlay-direction: right;
-      --bg-left: 30px;
-      --bg-right: auto;
-    {%- when 'right' -%}
-      --order: -1;
-      --left: auto;
-      --right: 48px;
-      --overlay-rotate: rotate(180deg);
-      --overlay-left: calc(100% - 100px);
-      --overlay-right: auto;
-      --overlay-direction: left;
-      --bg-left: auto;
-      --bg-right: 30px;
+  {%- case rounded_corners -%}
+    {%- when 'none' -%}
+      --border-radius-rounded-blocks: 0px;
+    {%- when 'small' -%}
+      --border-radius-rounded-blocks: 8px;
+    {%- when 'medium' -%}
+      --border-radius-rounded-blocks: 16px;
+    {%- when 'large' -%}
+      --border-radius-rounded-blocks: 32px;
   {%- endcase -%}
 {%- endcapture -%}
 {% comment %} CSS variables end {% endcomment %}
 
-{% if section.blocks.size > 0 %}
-  {%- assign text_block = false -%}
-
-  {% capture children %}
-    {% for block in section.blocks %}
-      {%- assign image           = block.settings.image -%}
-      {%- assign image_align     = block.settings.image_align -%}
-      {%- assign heading         = block.settings.heading -%}
-      {%- assign heading_size    = block.settings.heading_size -%}
-      {%- assign text            = block.settings.text -%}
-      {%- assign text_size       = block.settings.text_size -%}
-      {%- assign label           = block.settings.label -%}
-      {%- assign url             = block.settings.url -%}
-      {%- assign button_style    = block.settings.button_style -%}
-      {%- assign content_justify = block.settings.content_justify -%}
-      {%- assign content_align   = block.settings.content_align -%}
-
-      {%- if image != blank -%}
-        {%- assign image = block.settings.image -%}
-      {%- elsif image_placeholder != blank -%}
-        {%- assign image = image_placeholder -%}
-      {%- else -%}
-          {%- assign image = blank -%}
-      {%- endif -%}
-
-      {% comment %} CSS variables start {% endcomment %}
-      {%- capture text_variables -%}
-        {%- case content_justify -%}
-          {%- when 'left' -%}
-            --justify-content: flex-start;
-            --text-align: left;
-          {%- when 'center' -%}
-            --justify-content: center;
-            --text-align: center;
-          {%- when 'right' -%}
-            --justify-content: flex-end;
-            --text-align: right;
-        {%- endcase -%}
-
-        {%- case content_align -%}
-          {%- when 'top' -%}
-            --align-items: flex-start;
-            --padding-bottom: 0;
-          {%- when 'middle' -%}
-            --align-items: center;
-            --padding-bottom: 30px;
-          {%- when 'bottom' -%}
-            --align-items: flex-end;
-            --padding-bottom: 0;
-        {%- endcase -%}
-      {%- endcapture -%}
-
-      {%- capture image_variables -%}
-        {%- case image_align -%}
-          {%- when 'top' -%}
-            --image-align: flex-start;
-          {%- when 'middle' -%}
-            --image-align: center;
-          {%- when 'bottom' -%}
-            --image-align: flex-end;
-        {%- endcase -%}
-      {%- endcapture -%}
-      {% comment %} CSS variables end {% endcomment %}
-
-      {% case block.type %}
-        {% when "image" %}
-          <div
-            class="contact-form__holder{% if image == blank %} no-image{% endif %}"
-            style="{{- image_variables | escape -}}"
-            id="{{- block.id -}}"
-          >
-            {%- if image.url != blank -%}
-              <div class="contact-form__image-wrapper">
-                {%- render 'image',
-                  image: image,
-                  loading: 'lazy',
-                  class: 'contact-form__image',
-                  size: 'm'
-                -%}
-              </div>
-            {%- endif -%}
-          </div>
-
-        {% when "text" %}
-          {%- assign text_block = true -%}
-
-          {%- if heading != blank or text != blank or label != blank and url != blank -%}
-            <div
-              class="contact-form__content"
-              style="{{- text_variables | escape -}}"
-              id="{{- block.id -}}"
-            >
-              {%- if heading != blank -%}
-                <h2 class="contact-form__heading contact-form__heading--{{- heading_size -}}">{{- heading -}}</h2>
-              {%- endif -%}
-
-              {%- if text != blank -%}
-                <div class="contact-form__text{% if text_size == "lg" %} text-large{% endif %}{% if text_size == "md" %} text-medium{% endif %} bq-content rx-content">{{- text -}}</div>
-              {%- endif -%}
-
-              {%- if label != blank and url != blank -%}
-                <a href="{{ url }}" class="contact-form__button button button--{{ button_style }} button--large">{{- label -}}</a>
-              {%- endif -%}
-            </div>
-          {%- endif -%}
-      {% endcase %}
-    {% endfor %}
-  {% endcapture %}
-{%- endif -%}
-
-<div class="contact-form__wrapper form-{{- section.key -}}{% if text_block %} contact-form__wrapper--bg-reverse{% endif %} color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} contact-form__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} contact-form__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
+<div class="contact-form__wrapper form-{{ section.key }} color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} contact-form__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} contact-form__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
   <div class="contact-form__container container">
-    <div class="contact-form__inner{% if section.blocks.size > 0 %} contact-form__inner--grid{%- endif -%}">
-      <div class="contact-form__form">
-        {%- render "form",
-            id: section.key,
-            title: title,
-            description: description,
-            name: name,
-            email: email,
-            message: message,
-            success_message: success_message,
-            error_message: error_message,
-            button_label: button_label
-        -%}
-      </div>
-      {%- if section.blocks.size > 0 -%}
-        {{- children -}}
-      {%- endif -%}
+    <div class="contact-form__form">
+      {%- render "form",
+          id: section.key,
+          title: title,
+          description: description,
+          name: name,
+          email: email,
+          message: message,
+          success_message: success_message,
+          error_message: error_message,
+          button_label: button_label
+      -%}
     </div>
   </div>
-
-  {%- unless background_style == 'none' -%}
-    {%- if background_style == 'cubes' -%}
-      <div class="contact-form__background">
-        {%- render 'image-background-cubes' -%}
-      </div>
-    {%- elsif background_style == 'floral' -%}
-      <div class="contact-form__background-floral">
-        {%- render 'image-background-flover-2' -%}
-      </div>
-    {%- endif -%}
-  {%- endunless -%}
 </div>
 
 {% schema %}
@@ -248,7 +99,7 @@
         "type": "text",
         "id": "title",
         "label": "Title",
-        "default": "Contact us"
+        "default": "Get in touch"
       },
       {
         "type": "contentEditor",
@@ -260,7 +111,31 @@
         "type": "color_scheme",
         "id": "color_scheme",
         "label": "Color scheme",
-        "default": "set-2"
+        "default": "set-1"
+      },
+      {
+        "type": "select",
+        "id": "rounded_corners",
+        "label": "Rounded corners",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
       },
       {
         "type": "header",
@@ -299,22 +174,6 @@
       {
         "type": "header",
         "content": "Desktop settings"
-      },
-      {
-        "type": "select",
-        "id": "placement",
-        "label": "Form placement",
-        "options": [
-          {
-            "value": "left",
-            "label": "Left"
-          },
-          {
-            "value": "right",
-            "label": "Right"
-          }
-        ],
-        "default": "left"
       },
       {
         "type": "select",
@@ -415,171 +274,6 @@
           }
         ],
         "default": "medium"
-      }
-    ],
-    "max_blocks": 1,
-    "blocks": [
-      {
-        "type": "image",
-        "name": "Image",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image",
-            "default": "booqable://assets/image-tough-building-2.jpg"
-          },
-          {
-            "type": "select",
-            "id": "image_align",
-            "label": "Vertical alignment",
-            "options": [
-              {
-                "value": "top",
-                "label": "Top"
-              },
-              {
-                "value": "middle",
-                "label": "Middle"
-              },
-              {
-                "value": "bottom",
-                "label": "Bottom"
-              }
-            ],
-            "default": "top"
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "name": "Text",
-        "settings": [
-          {
-            "type": "text",
-            "id": "heading",
-            "default": "Hire from us",
-            "label": "Heading"
-          },
-          {
-            "type": "select",
-            "id": "heading_size",
-            "label": "Heading size",
-            "options": [
-              {
-                "value": "sm",
-                "label": "Small"
-              },
-              {
-                "value": "md",
-                "label": "Middle"
-              },
-              {
-                "value": "lg",
-                "label": "Large"
-              }
-            ],
-            "default": "lg"
-          },
-          {
-            "type": "contentEditor",
-            "id": "text",
-            "default": "Tell something about your company, describe what you do and what makes you unique.",
-            "label": "Text"
-          },
-          {
-            "type": "select",
-            "id": "text_size",
-            "label": "Text size",
-            "options": [
-              {
-                "value": "sm",
-                "label": "Small"
-              },
-              {
-                "value": "md",
-                "label": "Middle"
-              },
-              {
-                "value": "lg",
-                "label": "Large"
-              }
-            ],
-            "default": "md"
-          },
-          {
-            "type": "select",
-            "id": "content_justify",
-            "label": "Horizontal alignment",
-            "options": [
-              {
-                "value": "left",
-                "label": "Left"
-              },
-              {
-                "value": "center",
-                "label": "Center"
-              },
-              {
-                "value": "right",
-                "label": "Right"
-              }
-            ],
-            "default": "left"
-          },
-          {
-            "type": "select",
-            "id": "content_align",
-            "label": "Vertical alignment",
-            "options": [
-              {
-                "value": "top",
-                "label": "Top"
-              },
-              {
-                "value": "middle",
-                "label": "Middle"
-              },
-              {
-                "value": "bottom",
-                "label": "Bottom"
-              }
-            ],
-            "default": "top"
-          },
-          {
-            "type": "header",
-            "content": "Buttons"
-          },
-          {
-            "type": "text",
-            "id": "label",
-            "default": "Shop collection",
-            "info": "Leave blank to hide the button",
-            "label": "Button label"
-          },
-          {
-            "type": "url",
-            "id": "url",
-            "label": "Button link"
-          },
-          {
-            "type": "select",
-            "id": "button_style",
-            "label": "Button style",
-            "options": [
-              {
-                "value": "primary",
-                "label": "Filled"
-              },
-              {
-                "value": "outlined",
-                "label": "Outlined"
-              }
-            ],
-            "default": "primary"
-          }
-        ]
       }
     ]
   }

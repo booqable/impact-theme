@@ -5,16 +5,16 @@
 
   {%- assign color_scheme          = section.settings.color_scheme -%}
   {%- assign grid                  = section.settings.grid -%}
+  {%- assign icon_style            = section.settings.icon_style -%}
   {%- assign padding_top           = section.settings.padding_top -%}
   {%- assign padding_bottom        = section.settings.padding_bottom -%}
   {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
   {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+  {%- assign rounded_corners       = section.settings.rounded_corners -%}
 
   {% comment %} CSS variables start {% endcomment %}
   {%- capture variables -%}
     {%- case padding_top -%}
-      {%- when 'none' -%}
-        --padding-top: 0;
       {%- when 'small' -%}
         --padding-top: 24px;
       {%- when 'medium' -%}
@@ -24,8 +24,6 @@
     {%- endcase -%}
 
     {%- case padding_bottom -%}
-      {%- when 'none' -%}
-        --padding-bottom: 0;
       {%- when 'small' -%}
         --padding-bottom: 24px;
       {%- when 'medium' -%}
@@ -35,8 +33,6 @@
     {%- endcase -%}
 
     {%- case padding_top_mobile -%}
-      {%- when 'none' -%}
-        --padding-top-mobile: 0;
       {%- when 'small' -%}
         --padding-top-mobile: 18px;
       {%- when 'medium' -%}
@@ -46,8 +42,6 @@
     {%- endcase -%}
 
     {%- case padding_bottom_mobile -%}
-      {%- when 'none' -%}
-        --padding-bottom-mobile: 0;
       {%- when 'small' -%}
         --padding-bottom-mobile: 18px;
       {%- when 'medium' -%}
@@ -61,6 +55,17 @@
         --grid-element: 2;
       {%- when 'three' -%}
         --grid-element: 3;
+    {%- endcase -%}
+
+    {%- case rounded_corners -%}
+      {%- when 'none' -%}
+        --border-radius-rounded-blocks: 0px;
+      {%- when 'small' -%}
+        --border-radius-rounded-blocks: 8px;
+      {%- when 'medium' -%}
+        --border-radius-rounded-blocks: 16px;
+      {%- when 'large' -%}
+        --border-radius-rounded-blocks: 32px;
     {%- endcase -%}
   {%- endcapture -%}
   {% comment %} CSS variables end {% endcomment %}
@@ -89,14 +94,14 @@
               </div>
             {%- elsif icon != "empty" -%}
               <div class="columns__icon-wrapper">
-                {%- render 'icon', icon: icon -%}
+                {%- render 'icon', icon: icon, style: icon_style -%}
               </div>
             {%- endif -%}
 
             {%- if title != blank or text != blank or button_label != blank -%}
               <div class="columns__text">
                 {%- if title != blank -%}
-                  <strong class="columns__title h4">{{- title -}}</strong>
+                  <strong class="columns__title">{{- title -}}</strong>
                 {%- endif -%}
 
                 {%- if text != blank -%}
@@ -240,6 +245,46 @@
         "default": "set-1"
       },
       {
+        "type": "select",
+        "id": "rounded_corners",
+        "label": "Rounded corners",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "select",
+        "id": "icon_style",
+        "label": "Icons style",
+        "options": [
+          {
+            "value": "filled",
+            "label": "Filled"
+          },
+          {
+            "value": "outline",
+            "label": "Outlined"
+          }
+        ],
+        "default": "outline"
+      },
+      {
         "type": "header",
         "content": "Desktop settings"
       },
@@ -281,7 +326,7 @@
             "label": "Large"
           }
         ],
-        "default": "large"
+        "default": "medium"
       },
       {
         "type": "select",
@@ -305,7 +350,7 @@
             "label": "Large"
           }
         ],
-        "default": "large"
+        "default": "medium"
       },
       {
         "type": "header",
@@ -333,7 +378,7 @@
             "label": "Large"
           }
         ],
-        "default": "large"
+        "default": "medium"
       },
       {
         "type": "select",
@@ -357,9 +402,8 @@
             "label": "Large"
           }
         ],
-        "default": "large"
+        "default": "medium"
       }
     ]
   }
 {% endschema %}
-
