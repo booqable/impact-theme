@@ -8,35 +8,16 @@
       "settings": {
         "breadcrumbs_label": "",
         "breadcrumbs_url": "collections",
-        "infinity_scroll": true,
-        "color_palette": "one",
+        "color_scheme": "set-1",
         "message_label": "Free shipping over $50",
         "padding_bottom": "small",
         "padding_bottom_mobile": "small",
         "padding_top": "small",
         "padding_top_mobile": "small",
+        "rounded_corners": "none",
         "show_breadcrumbs": true,
-        "show_controls": true,
-        "show_thumbnails": true,
+        "show_border": false,
         "variation_label": "Variant"
-      },
-      "disabled": null
-    },
-    "title": {
-      "type": "title",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "button_label": "View all",
-        "button_url": "/collections/all",
-        "color_palette": "one",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "large",
-        "padding_top_mobile": "medium",
-        "tag": "RECOMMENDED PRODUCTS",
-        "title": "Rented together with"
       },
       "disabled": null
     },
@@ -77,23 +58,29 @@
         "product_123452"
       ],
       "settings": {
-        "color_palette": "one",
-        "padding_bottom": "small",
+        "borders": "image",
+        "button_label": "See all products",
+        "button_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "image": "",
+        "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
-        "padding_top": "small",
-        "padding_top_mobile": "small",
-        "show_carousel": true,
-        "show_excerpt": true,
+        "padding_top": "large",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_excerpt": false,
         "show_navigation": true,
         "show_pagination": true,
-        "timer": 5
+        "tag": "",
+        "tag_image": "",
+        "timer": 5,
+        "title": "Rent together with"
       },
       "disabled": null
     }
   },
   "order": [
     "product-page",
-    "title",
     "products"
   ]
 }
