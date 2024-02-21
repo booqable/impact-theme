@@ -118,20 +118,20 @@ body > * {
   flex: 0 0 auto;
 }
 
-body #main {
+#main {
   flex: 1 1 auto;
 }
 
-body .stretch {
+#main:has(section:only-child) {
   display: flex;
   flex-direction: column;
 }
 
-body .stretch > * {
+#main:has(section:only-child) > * {
   width: 100%;
 }
 
-body .stretch > section:first-child{
+#main > section:only-child {
   display: flex;
   flex-direction: column;
   flex-grow: 1;

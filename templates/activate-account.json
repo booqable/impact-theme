@@ -7,10 +7,14 @@
       "blocks": {},
       "settings": {
         "color_scheme": "set-1",
+        "image": "booqable://assets/image-curvilinear-lines.png",
+        "image_opacity": 10,
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
         "padding_top": "large",
-        "padding_top_mobile": "large"
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_border": true
       }
     }
   },
