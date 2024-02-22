@@ -1,26 +1,34 @@
 {{ "collections.css" | asset_url | stylesheet_tag }}
 
 {%- assign color_scheme          = section.settings.color_scheme -%}
-{%- assign counter_singular       = section.settings.counter_singular -%}
-{%- assign counter_plural         = section.settings.counter_plural -%}
-{%- assign full_width             = section.settings.full_width -%}
-{%- assign grid                   = section.settings.grid -%}
+{%- assign counter_singular      = section.settings.counter_singular -%}
+{%- assign counter_plural        = section.settings.counter_plural -%}
+{%- assign full_width            = section.settings.full_width -%}
+{%- assign grid                  = section.settings.grid -%}
 {%- assign limit                 = section.settings.limit -%}
-{%- assign overlay_opacity        = section.settings.overlay_opacity -%}
+{%- assign overlay_background    = section.settings.overlay_background -%}
+{%- assign overlay_color         = section.settings.overlay_color -%}
+{%- assign overlay_opacity       = section.settings.overlay_opacity -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
 {%- assign padding_top           = section.settings.padding_top -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
-{%- assign rounded_corners        = section.settings.rounded_corners -%}
-{%- assign show_amount            = section.settings.show_amount -%}
-{%- assign show_arrow             = section.settings.show_arrow -%}
-{%- assign show_overlay           = section.settings.show_overlay -%}
-{%- assign spacing                = section.settings.spacing -%}
-{%- assign spacing_mobile         = section.settings.spacing_mobile -%}
+{%- assign rounded_corners       = section.settings.rounded_corners -%}
+{%- assign show_amount           = section.settings.show_amount -%}
+{%- assign show_arrow            = section.settings.show_arrow -%}
+{%- assign show_overlay          = section.settings.show_overlay -%}
+{%- assign spacing               = section.settings.spacing -%}
+{%- assign spacing_mobile        = section.settings.spacing_mobile -%}
 {%- assign image_placeholder     = settings.image_placeholder -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
+  {%- if show_overlay -%}
+    --color-overlay: {{- overlay_color -}};
+    --background-overlay: {{- overlay_background -}};
+    --background-overlay-00: {{- overlay_background | append: "00" -}};
+  {%- endif -%}
+
   {%- case padding_top -%}
     {%- when 'small' -%}
       --padding-top: 24px;
@@ -232,9 +240,21 @@
         "default": true
       },
       {
+        "type": "color",
+        "id": "overlay_color",
+        "label": "Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "overlay_background",
+        "label": "Background color",
+        "default": "#1A3333"
+      },
+      {
         "type": "number",
         "id": "overlay_opacity",
-        "label": "Overlay percentage",
+        "label": "Background percentage",
         "min": 0,
         "max": 100,
         "default": 100
@@ -246,7 +266,7 @@
       {
         "type": "select",
         "id": "grid",
-        "label": "Columns",
+        "label": "Layout",
         "options": [
           {
             "value": "two",

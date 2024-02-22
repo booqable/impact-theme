@@ -28,6 +28,8 @@
         "full_width": true,
         "grid": "three",
         "limit": 8,
+        "overlay_background": "#1A3333",
+        "overlay_color": "#FFFFFF",
         "overlay_opacity": 100,
         "padding_bottom": "none",
         "padding_bottom_mobile": "none",

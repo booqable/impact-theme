@@ -131,7 +131,12 @@
 }
 
 .collection__wrapper--with-overlay .collections__image-item:after {
-  background: linear-gradient(1deg, var(--background-primary) 0%, var(--background-primary-00) 80%);
+  background: linear-gradient(1deg, var(--background-overlay) 0%, var(--background-overlay-00) 80%);
+}
+
+.collection__wrapper--with-overlay .collections__heading,
+.collection__wrapper--with-overlay .collections__amount {
+  color: var(--color-overlay);
 }
 
 @media (min-width: 992px) {
