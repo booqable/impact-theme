@@ -63,8 +63,6 @@
         --template-columns: 2;
       {%- when 'three' -%}
         --template-columns: 3;
-      {%- when 'four' -%}
-        --template-columns: 4;
     {%- endcase -%}
 
     {%- case spacing -%}
@@ -107,7 +105,7 @@
   {% comment %} CSS variables end {% endcomment %}
 
   <div
-    class="collections__wrapper collections__wrapper-{{ grid }} color-{{ color_scheme.id }}{% if show_overlay != blank %} collection__wrapper--with-overlay{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} collections__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} collections__wrapper--padding-bottom{%- endif -%}"
+    class="collections__wrapper collections__wrapper-{{ grid }} color-{{ color_scheme.id }}{% if show_overlay %} collection__wrapper--with-overlay{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} collections__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} collections__wrapper--padding-bottom{%- endif -%}"
     style="{{- variables | escape -}}"
   >
     {%- unless full_width -%}
@@ -143,7 +141,7 @@
         "type": "color_scheme",
         "id": "color_scheme",
         "label": "Color scheme",
-        "default": "set-1"
+        "default": "set-4"
       },
       {
         "type": "checkbox",
@@ -233,10 +231,6 @@
           {
             "value": "three",
             "label": "3 columns"
-          },
-          {
-            "value": "four",
-            "label": "4 columns"
           }
         ],
         "default": "three"

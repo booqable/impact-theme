@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
-  margin: 64px auto 20px;
+  margin: 0 auto;
+  padding: 64px 0 20px;
 }
 
 .pagination span {
@@ -39,15 +40,24 @@
 }
 
 .pagination .page:not(.current),
+.pagination .page:not(.current) a,
 .pagination .prev:not([data-enabled="false"]),
-.pagination .next:not([data-enabled="false"]) {
+.pagination .prev:not([data-enabled="false"]) a,
+.pagination .next:not([data-enabled="false"]),
+.pagination .next:not([data-enabled="false"]) a {
   transition: all var(--animation-duration) var(--transition-function-ease);
 }
 
 .pagination .page:not(.current):hover,
 .pagination .prev:not([data-enabled="false"]):hover,
 .pagination .next:not([data-enabled="false"]):hover {
-  background: var(--background-accent-hover);
+  border-color: var(--background-accent);
+}
+
+.pagination .page:not(.current):hover a,
+.pagination .prev:not([data-enabled="false"]):hover a,
+.pagination .next:not([data-enabled="false"]):hover a {
+  background: var(--background-accent);
   color: var(--color-accent);
 }
 
@@ -56,6 +66,18 @@
 .pagination .current {
   cursor: initial;
   pointer-events: none;
+}
+
+.pagination .prev {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.pagination .next {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  overflow: hidden;
 }
 
 .pagination .prev svg {

@@ -140,12 +140,20 @@
     gap: var(--grid-gap);
   }
 
-  .collections__image-item:after{
-    aspect-ratio: 1 / 1.665;
+  .collections__image-item:after {
+    aspect-ratio: 1 / 1;
   }
 
-  .collections__wrapper-two .collections__image-item:after{
+  .collections__container .collections__image-item:after {
     aspect-ratio: 1 / 1.1115;
+  }
+
+  .collections__wrapper-three .collections__image-item:after {
+    aspect-ratio: 1 / 1.5;
+  }
+
+  .collections__wrapper-three .collections__container .collections__image-item:after {
+    aspect-ratio: 1 / 1.665;
   }
 }
 
@@ -167,8 +175,37 @@
   }
 }
 
+@media (min-width: 1366px) {
+  .collections__image-item:after {
+    aspect-ratio: 1 / 1.1115;
+  }
+  .collections__container .collections__image-item:after {
+    aspect-ratio: 1 / 1.22;
+  }
+
+  .collections__wrapper-three .collections__image-item:after {
+    aspect-ratio: 1 / 1.667;
+  }
+
+  .collections__wrapper-three .collections__container .collections__image-item:after {
+    aspect-ratio: 1 / 1.83;
+  }
+}
+
 @media (min-width: 1921px) {
-  .collections__wrapper > .collections__list .collections__image-item:after {
-    aspect-ratio: 1 /1.25;
+  .collections__image-item:after {
+    aspect-ratio: 1 / 1;
+  }
+
+  .collections__container .collections__image-item:after {
+    aspect-ratio: 1 / 1.225;
+  }
+
+  .collections__wrapper-three .collections__image-item:after {
+    aspect-ratio: 1 / 1.5;
+  }
+
+  .collections__wrapper-three .collections__container .collections__image-item:after {
+    aspect-ratio: 1 / 1.84;
   }
 }
