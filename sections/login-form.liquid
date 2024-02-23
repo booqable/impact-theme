@@ -99,14 +99,12 @@
         </div>
       {%- endif -%}
 
-      {%- form 'login' -%}
-        <div class="account-fieldset__block">
-          <label for="user_email" class="account-fieldset__label">
-            {{- email_label | default: "Email" -}}
+      <hr class="account__separator">
 
-            <span class="account-fieldset__label-backlight">
-              {{- email_label | default: "Email" -}}
-            </span>
+      {%- form 'login' -%}
+        <div class="account-fieldset__block account__divider--small">
+          <label for="user_email" class="account-fieldset__label">
+            {{- email_label | default: "Email" | append: "*" -}}
           </label>
 
           <input
@@ -122,11 +120,7 @@
 
         <div class="account-fieldset__block">
           <label for="user_password" class="account-fieldset__label">
-            {{- password_label | default: "Password" -}}
-
-            <span class="account-fieldset__label-backlight">
-              {{- password_label | default: "Password" -}}
-            </span>
+            {{- password_label | default: "Password" | append: "*" -}}
           </label>
 
           <input
@@ -151,7 +145,7 @@
           </div>
         {%- endif -%}
 
-        <div class="account__divider">
+        <div class="account__divider text-center">
           <button
             type="submit"
             class="account__button button button--primary button--large"

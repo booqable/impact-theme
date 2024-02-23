@@ -38,13 +38,9 @@
   </div>
 
   {%- form 'contact' -%}
-    <div class="form__block{% if form.errors.author %} form__block--error{%- endif -%}">
+    <div class="form__block form__block--divider-small{% if form.errors.author %} form__block--error{%- endif -%}">
       <label class="form__label" for="author">
-        {{- name | default: "Name" -}}
-
-        <span class="form__label-backlight">
-            {{- name | default: "Name" -}}
-        </span>
+        {{- name | default: "Name" | append: "*" -}}
       </label>
 
       <input
@@ -63,13 +59,9 @@
       </div>
     </div>
 
-    <div class="form__block{% if form.errors.email %} form__block--error{%- endif -%}">
+    <div class="form__block form__block--divider-small{% if form.errors.email %} form__block--error{%- endif -%}">
       <label class="form__label" for="email">
-        {{- email | default: "Email" -}}
-
-        <span class="form__label-backlight">
-          {{- email | default: "Email" -}}
-        </span>
+        {{- email | default: "Email" | append: "*" -}}
       </label>
 
       <input
@@ -90,11 +82,7 @@
 
     <div class="form__block form__message{% if form.errors.body %} form__block--error{%- endif -%}">
       <label class="form__label" for="body">
-        {{- message | default: "Message" -}}
-
-        <span class="form__label-backlight">
-         {{- message | default: "Message" -}}
-        </span>
+        {{- message | default: "Message" | append: "*" -}}
       </label>
 
       <textarea

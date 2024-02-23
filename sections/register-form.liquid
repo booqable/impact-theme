@@ -101,14 +101,12 @@
         {{- description | default: "Lorem ipsum dolor sit amet adipiscing elit." -}}
       </div>
 
-      {%- form 'register' -%}
-        <div class="account-fieldset__block{% if form.errors.name %} account-fieldset--error{%- endif -%}">
-          <label for="user_name" class="account-fieldset__label">
-              {{- name_label | default: "Full name" -}}
+      <hr class="account__separator">
 
-            <span class="account-fieldset__label-backlight">
-              {{- name_label | default: "Full name" -}}
-            </span>
+      {%- form 'register' -%}
+        <div class="account-fieldset__block account__divider--small{% if form.errors.name %} account-fieldset--error{%- endif -%}">
+          <label for="user_name" class="account-fieldset__label">
+              {{- name_label | default: "Full name" | append: "*" -}}
           </label>
 
           <input
@@ -126,13 +124,9 @@
           </div>
         </div>
 
-        <div class="account-fieldset__block{% if form.errors.email %} account-fieldset--error{%- endif -%}">
+        <div class="account-fieldset__block account__divider--small{% if form.errors.email %} account-fieldset--error{%- endif -%}">
           <label for="user_email" class="account-fieldset__label">
-            {{- email_label | default: "Email" -}}
-
-            <span class="account-fieldset__label-backlight">
-              {{- email_label | default: "Email" -}}
-            </span>
+            {{- email_label | default: "Email" | append: "*" -}}
           </label>
 
           <input
@@ -150,13 +144,9 @@
           </div>
         </div>
 
-        <div class="account-fieldset__block{% if form.errors.password %} account-fieldset--error{%- endif -%}">
+        <div class="account-fieldset__block account__divider--small{% if form.errors.password %} account-fieldset--error{%- endif -%}">
           <label for="user_password" class="account-fieldset__label">
-            {{- password_label | default: "Password" -}}
-
-            <span class="account-fieldset__label-backlight">
-              {{- password_label | default: "Password" -}}
-            </span>
+            {{- password_label | default: "Password" | append: "*" -}}
           </label>
 
           <input
@@ -174,11 +164,7 @@
 
         <div class="account-fieldset__block{% if form.errors.password_confirmation %} account-fieldset--error{%- endif -%}">
           <label for="user_password_confirmation" class="account-fieldset__label">
-            {{- password_confirmation | default: "Password confirmation" -}}
-
-            <span class="account-fieldset__label-backlight">
-              {{- password_confirmation | default: "Password confirmation" -}}
-            </span>
+            {{- password_confirmation | default: "Password confirmation" | append: "*" -}}
           </label>
 
           <input
@@ -243,7 +229,7 @@
             {% if form.agreement_accepted %}checked{% endif %}
             style="display: none">
 
-          <label class="account-checkbox__label" for="user_agreement_accepted">
+          <label class="account-checkbox__label{% unless form.agreement_accepted %} account-checkbox__label--error{% endunless %}" for="user_agreement_accepted">
             <span>
               {{- agree_label | default: "I agree to the" -}}
 
