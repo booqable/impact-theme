@@ -28,6 +28,7 @@
       --color-overlay: {{- overlay_color -}};
       --background-overlay: {{- overlay_background -}};
       --background-overlay-00: {{- overlay_background | append: "00" -}};
+      --opacity-overlay: {{ overlay_opacity | append: "%"}};
     {%- endif -%}
 
     {%- case padding_top -%}
@@ -105,10 +106,6 @@
       {%- when 'large' -%}
         --border-radius-rounded-blocks: 32px;
     {%- endcase -%}
-
-    {%- if show_overlay -%}
-      --opacity-overlay: {{ overlay_opacity | append: "%"}};
-    {%- endif -%}
   {%- endcapture -%}
   {% comment %} CSS variables end {% endcomment %}
 
