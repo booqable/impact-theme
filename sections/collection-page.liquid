@@ -1,47 +1,56 @@
 {{ "collection-page.css" | asset_url | stylesheet_tag }}
 {{ "product-card.css" | asset_url | stylesheet_tag }}
 
-{%- assign grid                  = section.settings.grid -%}
-{%- assign message               = section.settings.message -%}
-{%- assign show_excerpt          = section.settings.show_excerpt -%}
-{%- assign limit                 = section.settings.limit -%}
+{%- assign borders               = section.settings.borders -%}
+{%- assign border                = false -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
+{%- assign counter               = collection.items_count -%}
+{%- assign counter_singular      = section.settings.counter_singular -%}
+{%- assign counter_plural        = section.settings.counter_plural -%}
+{%- assign full_width            = section.settings.full_width -%}
+{%- assign grid                  = section.settings.grid -%}
+{%- assign image_placeholder 	   = settings.image_placeholder -%}
+{%- assign is_focal              = settings.use_focal_images -%}
+{%- assign limit                 = section.settings.limit -%}
+{%- assign message               = section.settings.message -%}
 {%- assign mobile_toggler        = section.settings.mobile_toggler -%}
-{%- assign sticky_sidebar        = section.settings.sticky_sidebar -%}
 {%- assign padding_top           = section.settings.padding_top -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-{%- assign image_placeholder 	   = settings.image_placeholder -%}
-{%- assign is_focal              = settings.use_focal_images -%}
+{%- assign rounded_corners       = section.settings.rounded_corners -%}
+{%- assign show_amount           = section.settings.show_amount -%}
+{%- assign show_excerpt          = section.settings.show_excerpt -%}
+{%- assign sticky_sidebar        = section.settings.sticky_sidebar -%}
+
+{%- case borders -%}
+  {%- when 'image' -%}
+    {%- assign border = "image" -%}
+  {%- when 'full' -%}
+    {%- assign border = "full" -%}
+{%- endcase -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
   {%- case padding_top -%}
-    {%- when 'none' -%}
-      --padding-top: 0;
     {%- when 'small' -%}
       --padding-top: 24px;
     {%- when 'medium' -%}
-      --padding-top: 68px;
+      --padding-top: 60px;
     {%- when 'large' -%}
-      --padding-top: 112px;
+      --padding-top: 100px;
   {%- endcase -%}
 
   {%- case padding_bottom -%}
-    {%- when 'none' -%}
-      --padding-bottom: 0;
     {%- when 'small' -%}
       --padding-bottom: 24px;
     {%- when 'medium' -%}
-      --padding-bottom: 68px;
+      --padding-bottom: 60px;
     {%- when 'large' -%}
-      --padding-bottom: 112px;
+      --padding-bottom: 100px;
   {%- endcase -%}
 
   {%- case padding_top_mobile -%}
-    {%- when 'none' -%}
-      --padding-top-mobile: 0;
     {%- when 'small' -%}
       --padding-top-mobile: 24px;
     {%- when 'medium' -%}
@@ -51,8 +60,6 @@
   {%- endcase -%}
 
   {%- case padding_bottom_mobile -%}
-    {%- when 'none' -%}
-      --padding-bottom-mobile: 0;
     {%- when 'small' -%}
       --padding-bottom-mobile: 24px;
     {%- when 'medium' -%}
@@ -66,52 +73,82 @@
       --grid-element: 2;
     {%- when 'three' -%}
       --grid-element: 3;
+    {%- when 'four' -%}
+      --grid-element: 4;
+  {%- endcase -%}
+
+  {%- case rounded_corners -%}
+    {%- when 'none' -%}
+      --border-radius-rounded-blocks: 0px;
+    {%- when 'small' -%}
+      --border-radius-rounded-blocks: 8px;
+    {%- when 'medium' -%}
+      --border-radius-rounded-blocks: 16px;
+    {%- when 'large' -%}
+      --border-radius-rounded-blocks: 32px;
   {%- endcase -%}
 {%- endcapture -%}
 {% comment %} CSS variables end {% endcomment %}
 
-<div class="collection-page__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} collection-page__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} collection-page__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
-  <div class="collection-page__container container">
+<div class="collection-page__wrapper collection-page__wrapper-{{ grid }} color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} collection-page__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} collection-page__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
+  {%- unless full_width -%}
+    <div class="collection-page__container container">
+  {%- endunless -%}
+    {%- if show_amount -%}
+      <div class="collection-page__top{% if full_width %} container{%- endif -%}">
+        {{ counter }}
+        {% if counter > 1 %}
+          {{ counter_plural }}
+        {% else %}
+          {{ counter_singular }}
+        {% endif %}
+      </div>
+    {%- endif -%}
+
     {%- if section.blocks.size > 0 -%}
       <div class="collection-page__grid">
         <div class="collection-page__sidebar">
           {%- render 'sidebar',
               items: section.blocks,
               toggler: mobile_toggler,
-              sticky: sticky_sidebar -%}
+              sticky: sticky_sidebar
+          -%}
         </div>
     {%- endif -%}
 
-        {% if collection.products_count > 0 %}
-          {% assign products = collection.products %}
+        {%- if collection.products_count > 0 -%}
+          {%- assign products = collection.products -%}
 
-          {% paginate products by limit %}
+          {%- paginate products by limit -%}
             <div class="collection-page__products">
-              {% for product in products %}
+              {%- for product in products -%}
                 {%- render 'product-card',
                     product: product,
                     placeholder: image_placeholder,
+                    border: border,
                     focal: is_focal,
                     show_excerpt: show_excerpt
                 -%}
-              {% endfor %}
+              {%- endfor -%}
             </div>
 
-            {% if paginate.pages > 1 %}
-              <div class="collection-page__pagination">
-                {%- include "pagination" -%}
+            {%- if paginate.pages > 1 -%}
+              <div class="collection-page__pagination{% if full_width %} container{%- endif -%}">
+                {%- render "pagination", paginate: paginate -%}
               </div>
-            {% endif %}
-          {% endpaginate %}
+            {%- endif -%}
+          {%- endpaginate -%}
 
-        {% else %}
+        {%- else -%}
           <p>{{- message -}}</p>
-        {% endif %}
+        {%- endif -%}
 
     {%- if section.blocks.size > 0 -%}
       </div>
     {%- endif -%}
-  </div>
+  {%- unless full_width -%}
+    </div>
+  {%- endunless -%}
 </div>
 
 {% schema %}
@@ -133,9 +170,77 @@
       },
       {
         "type": "checkbox",
+        "id": "full_width",
+        "label": "Stretch products to screen edges",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "rounded_corners",
+        "label": "Rounded corners",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_amount",
+        "label": "Show product amount",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "counter_singular",
+        "label": "Product amount label singular",
+        "default": "Item shown"
+      },
+      {
+        "type": "text",
+        "id": "counter_plural",
+        "label": "Product amount label plural",
+        "default": "Items shown"
+      },
+      {
+        "type": "checkbox",
         "id": "show_excerpt",
         "default": true,
         "label": "Show product description excerpt"
+      },
+      {
+        "type": "select",
+        "id": "borders",
+        "label": "Border style",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "image",
+            "label": "Around image"
+          },
+          {
+            "value": "full",
+            "label": "Around whole product"
+          }
+        ],
+        "default": "image"
       },
       {
         "type": "number",
@@ -184,6 +289,10 @@
           {
             "value": "three",
             "label": "3 products"
+          },
+          {
+            "value": "four",
+            "label": "4 products"
           }
         ],
         "default": "three"
@@ -210,7 +319,7 @@
             "label": "Large"
           }
         ],
-        "default": "small"
+        "default": "medium"
       },
       {
         "type": "select",

@@ -76,6 +76,10 @@
   flex-grow: 0;
 }
 
+.product-card__description:last-child {
+  padding-bottom: 0;
+}
+
 .product-card__price-info {
   font-size: 16px;
   font-weight: var(--font-weight-regular);
