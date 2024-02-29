@@ -31,14 +31,14 @@
 }
 
 .account__title + .account__divider {
-  color: var(--color-third);
+  color: var(--color-secondary);
 }
 
 .account__description {
   font-size: 16px;
   line-height: var(--line-height-lg);
   margin-bottom: 24px;
-  color: var(--color-third);
+  color: var(--color-secondary);
 }
 
 .account__button {

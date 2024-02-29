@@ -9,7 +9,7 @@
 .text__wrapper {
   text-align: var(--text-align);
   background: var(--background-primary);
-  color: var(--color-third);
+  color: var(--color-secondary);
 }
 
 .text__title {

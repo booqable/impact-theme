@@ -104,7 +104,7 @@
 }
 
 .footer__copy {
-  color: var(--color-third);
+  color: var(--color-secondary);
 }
 
 @media (min-width: 992px) {

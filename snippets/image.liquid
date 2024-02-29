@@ -9,7 +9,8 @@
   size - "string" optional,
   custom_width: "string" optional,
   custom_size: "string" optional,
-  custom_alt: "string" optional
+  custom_alt: "string" optional,
+  keep_type: boolean optional
 
   Usage:
 
@@ -21,7 +22,8 @@
       size: 'm',              - use only this one property
       custom_width: '170',    - or these two
       custom_size: '170px',     instead of 'size' property
-      custom_alt: your_id
+      custom_alt: your_id,
+      keep_type: your_id
   -%}
 
 {% endcomment %}
@@ -81,5 +83,6 @@
   widths: image_width,
   sizes: image_sizes,
   focal: focal,
-  alt: alt
+  alt: alt,
+  keep_type: keep_type
 -}}

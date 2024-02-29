@@ -1,0 +1,98 @@
+{{ "spacer.css" | asset_url | stylesheet_tag }}
+
+{%- assign color_scheme = section.settings.color_scheme -%}
+{%- assign size         = section.settings.size -%}
+{%- assign size_mobile  = section.settings.size_mobile -%}
+
+{% comment %} CSS variables start {% endcomment %}
+{%- capture variables -%}
+  {%- case size -%}
+    {%- when 'small' -%}
+      --height: 32px;
+    {%- when 'medium' -%}
+      --height: 64px;
+    {%- when 'large' -%}
+      --height: 128px;
+  {%- endcase -%}
+
+  {%- case size_mobile -%}
+    {%- when 'small' -%}
+      --height-mobile: 32px;
+    {%- when 'medium' -%}
+      --height-mobile: 64px;
+    {%- when 'large' -%}
+      --height-mobile: 128px;
+  {%- endcase -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
+
+<div class="spacer__wrapper color-{{ color_scheme.id }}" style="{{- variables | escape -}}"></div>
+
+{% schema %}
+  {
+    "name": "Spacer",
+    "description": "Insert blank space between sections on your page",
+    "tag": "section",
+    "class": "spacer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "select",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "select",
+        "id": "size",
+        "label": "Size",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "size_mobile",
+        "label": "Size",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      }
+    ]
+  }
+{% endschema %}

@@ -21,16 +21,16 @@
   line-height: var(--line-height-sm);
 }
 
-:is(.bq-content.rx-content):is(h1, .h1, h2, .h2) * {
-  line-height: inherit;
-}
-
 :is(.bq-content.rx-content):is(h4, .h4) {
   line-height: var(--line-height-md);
 }
 
 :is(.bq-content.rx-content):is(h5, .h5, h6, .h6) {
   line-height: 1.4;
+}
+
+:is(.bq-content.rx-content):is(h1, .h1, h2, .h2, h3, .h3) * {
+  line-height: inherit;
 }
 
 .bq-content.rx-content h1 + *,
@@ -113,22 +113,22 @@
 }
 
 .bq-content.rx-content.text-medium {
-  font-size: 18px;
+  font-size: var(--font-size-large);
   line-height: var(--line-height-lg);
 }
 
 .bq-content.rx-content.text-regular {
-  font-size: 16px;
+  font-size: var(--font-size-regular);
   line-height: var(--line-height-lg);
 }
 
 .bq-content.rx-content.text-small {
-  font-size: 14px;
+  font-size: calc(var(--font-size-regular) - 2px);
   line-height: var(--line-height-lg);
 }
 
 .bq-content.rx-content.text-tiny {
-  font-size: 12px;
+  font-size: calc(var(--font-size-regular) - 4px);
   line-height: var(--line-height-lg);
 }
 
@@ -143,7 +143,7 @@
 .bq-content.rx-content h5,
 .bq-content.rx-content h6 {
   font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: var(--font-size-regular);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-lg);
   text-rendering: optimizeLegibility;
@@ -202,12 +202,12 @@
 .bq-content.rx-content li,
 .bq-content.rx-content dt,
 .bq-content.rx-content dd {
-  font-size: 16px;
+  font-size: var(--font-size-regular);
   line-height: var(--line-height-lg);
 }
 
 .bq-content.rx-content li li {
-  font-size: 1em;
+  font-size: var(--font-size-regular);
 }
 
 .bq-content.rx-content dt {
@@ -289,7 +289,7 @@
 }
 
 .bq-content.rx-content cite {
-  font-size: 20px;
+  font-size: calc(var(--font-size-regular) + 4px);
 }
 
 .bq-content.rx-content dfn,
@@ -300,7 +300,7 @@
 .bq-content.rx-content samp,
 .bq-content.rx-content kbd,
 .bq-content.rx-content code {
-  font-size: 16px;
+  font-size: var(--font-size-regular);
 }
 
 .bq-content.rx-content sup,

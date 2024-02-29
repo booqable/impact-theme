@@ -53,9 +53,9 @@
   {%- endcase -%}
 {%- endcapture -%}
 
-{%- include 'variables-cart-lines' -%}
-{%- include 'variables-cart-services' -%}
-{%- include 'variables-cart-totals' -%}
+{%- render 'variables-cart-lines' -%}
+{%- render 'variables-cart-services' -%}
+{%- render 'variables-cart-totals' -%}
 {% comment %} CSS variables end {% endcomment %}
 
 <div class="cart__wrapper color-{{ color_scheme.id }}" style="{{- variables | escape -}}">

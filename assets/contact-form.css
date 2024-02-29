@@ -1,7 +1,7 @@
 .contact-form__wrapper {
   line-height: var(--line-height-lg);
   background: var(--background-primary);
-  color: var(--color-third);
+  color: var(--color-secondary);
 }
 
 .contact-form__wrapper--padding-top {

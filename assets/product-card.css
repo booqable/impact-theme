@@ -64,20 +64,20 @@
 
 .product-card__title {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: var(--font-size-large);
   line-height: var(--line-height-lg);
   margin: 0;
   flex-grow: 0;
 }
 
 .product-card__description {
-  font-size: 14px;
+  font-size: calc(var(--font-size-regular) - 2px);
   padding: 4px 0 8px;
   flex-grow: 0;
 }
 
 .product-card__price-info {
-  font-size: 16px;
+  font-size: var(--font-size-regular);
   font-weight: var(--font-weight-regular);
   padding-top: 6px;
   flex-grow: 1;
@@ -93,7 +93,7 @@
 
 .product-card__price,
 bq-product-price {
-  font-size: 16px;
+  font-size: var(--font-size-regular);
   color: var(--color-outline);
 }
 
@@ -102,7 +102,7 @@ bq-product-price {
 }
 
 bq-product-availability {
-  font-size: 14px;
+  font-size: calc(var(--font-size-regular) - 2px);
   line-height: var(--line-height-xs);
   font-weight: var(--font-weight-medium);
 }

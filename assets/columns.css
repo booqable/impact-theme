@@ -80,12 +80,12 @@
 
 .columns__description {
   padding: 0 0 25px;
-  color: var(--color-third);
+  color: var(--color-secondary);
 }
 
 .columns__label,
 .columns__button {
-  font-size: 14px;
+  font-size: calc(var(--font-size-regular) - 2px);
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.03em;
   text-transform: uppercase;
