@@ -24,7 +24,7 @@
   color: var(--color-outline);
   font-weight: var(--font-weight-medium);
   font-size: calc(var(--font-size-regular) - 2px);
-  padding: 0 0 42px;
+  padding-bottom: 42px;
 }
 
 .collection-page__products {
@@ -80,10 +80,6 @@
 
   .collection-page__grid .collection-page__sidebar {
     grid-area: sidebar;
-  }
-
-  .collection-page__grid .collection-page__products {
-    grid-area: grid;
   }
 
   .collection-page__grid .collection-page__pagination {

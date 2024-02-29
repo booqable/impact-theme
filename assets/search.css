@@ -25,7 +25,7 @@
   color: var(--color-outline);
   font-weight: var(--font-weight-medium);
   font-size: calc(var(--font-size-regular) - 2px);
-  padding: 0 0 42px;
+  padding-bottom: 42px;
 }
 
 .search-results {
@@ -81,11 +81,6 @@
 
   .search__grid .search__sidebar {
     grid-area: sidebar;
-  }
-
-  .search__grid .search-results {
-    grid-area: grid;
-    grid-auto-rows: fit-content(100%);
   }
 
   .search__grid .search__pagination {
