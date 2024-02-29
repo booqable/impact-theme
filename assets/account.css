@@ -459,7 +459,7 @@
 
 .account__breadcrumbs-chevron {
   margin-right: 8px;
-  font-size: 14px;
+  font-size: calc(var(--font-size-regular) - 2px);
 }
 
 .account__background-wrapper {
