@@ -101,6 +101,18 @@
 
       <hr class="account__separator">
 
+      {%- if alert -%}
+        <div class="account__alert account__alert--danger">
+          {{- alert -}}
+        </div>
+      {%- endif -%}
+
+      {%- if notice -%}
+        <div class="account__alert account__alert--info">
+          {{- notice -}}
+        </div>
+      {%- endif -%}
+
       {%- form 'login' -%}
         <div class="account-fieldset__block account__divider--small">
           <label for="user_email" class="account-fieldset__label">
@@ -109,7 +121,6 @@
 
           <input
             value="{{- form.email -}}"
-            placeholder=" "
             class="account-fieldset__input"
             autofocus="autofocus"
             autocomplete="email"
@@ -125,25 +136,12 @@
 
           <input
             value="{{- form.password -}}"
-            placeholder=" "
             class="account-fieldset__input"
             autocomplete="current-password"
             type="password"
             name="user[password]"
             id="user_password">
         </div>
-
-        {%- if alert -%}
-          <div class="account__alert account__alert--danger">
-            {{- alert -}}
-          </div>
-        {%- endif -%}
-
-        {%- if notice -%}
-          <div class="account__alert account__alert--info">
-            {{- notice -}}
-          </div>
-        {%- endif -%}
 
         <div class="account__divider text-center">
           <button

@@ -103,6 +103,10 @@
 
       <hr class="account__separator">
 
+      {%- if alert -%}
+        <div class="account__alert">{{- alert -}}</div>
+      {%- endif -%}
+
       {%- form 'register' -%}
         <div class="account-fieldset__block account__divider--small{% if form.errors.name %} account-fieldset--error{%- endif -%}">
           <label for="user_name" class="account-fieldset__label">
@@ -111,7 +115,6 @@
 
           <input
             value="{{- form.name -}}"
-            placeholder=" "
             class="account-fieldset__input"
             autofocus="autofocus"
             autocomplete="name"
@@ -131,7 +134,6 @@
 
           <input
             value="{{- form.email -}}"
-            placeholder=" "
             class="account-fieldset__input"
             autofocus="autofocus"
             autocomplete="email"
@@ -150,7 +152,6 @@
           </label>
 
           <input
-            placeholder=" "
             class="account-fieldset__input"
             autocomplete="new-password"
             type="password"
@@ -168,7 +169,6 @@
           </label>
 
           <input
-            placeholder=" "
             class="account-fieldset__input"
             autocomplete="new-password"
             type="password"
@@ -264,10 +264,6 @@
             {{- form.errors.agreement_accepted -}}
           </div>
         </div>
-
-        {%- if alert -%}
-          <div class="account__alert">{{- alert -}}</div>
-        {%- endif -%}
 
         <button
           type="submit"

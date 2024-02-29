@@ -18,12 +18,12 @@
 }
 
 .form__block--divider-small {
-  margin: 0 0 16px;
+  margin-bottom: 16px;
 }
 
 .form__label {
   display: block;
-  padding: 0 0 8px;
+  padding-bottom: 8px;
   color: var(--color-secondary);
 }
 
