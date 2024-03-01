@@ -11,10 +11,6 @@
   padding-top: var(--padding-top-mobile, 0);
 }
 
-.header-transparent ~ main .search:first-child .search__wrapper--padding-top {
-  padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
-}
-
 .search__wrapper--padding-bottom {
   padding-bottom: var(--padding-bottom-mobile, 0);
 }
@@ -60,10 +56,6 @@
 @media (min-width: 992px) {
   .search__wrapper--padding-top {
     padding-top: var(--padding-top, 0);
-  }
-
-  .header-transparent ~ main .search:first-child .search__wrapper--padding-top {
-    padding-top: calc(var(--padding-top, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
   }
 
   .search__wrapper--padding-bottom {
