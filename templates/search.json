@@ -1,6 +1,24 @@
 {
   "name": "Search",
   "sections": {
+    "title": {
+      "type": "title",
+      "blocks": [],
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-4",
+        "custom_description": "",
+        "custom_title": "",
+        "full_width": true,
+        "image": "",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none"
+      },
+      "disabled": null
+    },
     "search": {
       "type": "search",
       "blocks": {
@@ -17,21 +35,28 @@
         "item"
       ],
       "settings": {
+        "borders": "image",
         "color_scheme": "set-1",
-        "limit": 6,
+        "counter_plural": "results",
+        "counter_singular": "result",
+        "full_width": false,
         "grid": "three",
+        "limit": 6,
         "mobile_toggler": "Menu",
         "padding_bottom": "small",
         "padding_bottom_mobile": "small",
-        "padding_top": "small",
+        "padding_top": "medium",
         "padding_top_mobile": "small",
+        "rounded_corners": "none",
         "show_excerpt": true,
+        "show_amount": true,
         "sticky_sidebar": true
       },
       "disabled": null
     }
   },
   "order": [
+    "title",
     "search"
   ]
 }
