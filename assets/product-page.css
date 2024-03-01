@@ -13,7 +13,7 @@
 
 .product-main__grid {
   position: relative;
-  font-size: 16px;
+  font-size: var(--font-size-regular);
   line-height: var(--line-height-lg);
 }
 
@@ -82,7 +82,7 @@
 
 .product-main__availability bq-product-availability {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: calc(var(--font-size-regular) - 2px);
 }
 
 .product-main__availability bq-product-availability[visible="true"] {
@@ -90,7 +90,7 @@
 }
 
 .product-main__availability bq-product-availability-calendar {
-  font-size: 14px;
+  font-size: calc(var(--font-size-regular) - 2px);
   font-family: var(--font-body);
   line-height: var(--line-height-lg);
   cursor: pointer;
@@ -104,7 +104,7 @@
 
 .product-main__message {
   text-align: center;
-  font-size: 12px;
+  font-size: calc(var(--font-size-regular) - 4px);
   padding: 23px 0 32px;
   color: var(--color-secondary);
 }

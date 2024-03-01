@@ -1,0 +1,10 @@
+.spacer__wrapper {
+  height: var(--height-mobile);
+  background: var(--background-primary);
+}
+
+@media (min-width: 992px) {
+  .spacer__wrapper {
+    height: var(--height);
+  }
+}

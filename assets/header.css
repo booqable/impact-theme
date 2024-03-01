@@ -250,7 +250,7 @@
   min-width: 230px;
   width: 100%;
   padding: 18px 18px 18px 67px;
-  font-size: 16px;
+  font-size: var(--font-size-regular);
   line-height: var(--line-height-sm);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);

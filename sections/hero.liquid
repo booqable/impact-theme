@@ -17,10 +17,10 @@
 {%- assign overlay_background    = section.settings.overlay_background -%}
 {%- assign overlay_color         = section.settings.overlay_color -%}
 {%- assign overlay_opacity       = section.settings.overlay_opacity -%}
-{%- assign button_1              = section.settings.button_1 -%}
-{%- assign button_url_1          = section.settings.button_url_1 -%}
-{%- assign button_2              = section.settings.button_2 -%}
-{%- assign button_url_2          = section.settings.button_url_2 -%}
+{%- assign button_primary_label  = section.settings.button_primary_label -%}
+{%- assign button_primary_url    = section.settings.button_primary_url -%}
+{%- assign button_outline_label  = section.settings.button_outline_label -%}
+{%- assign button_outline_url    = section.settings.button_outline_url -%}
 {%- assign text_position         = section.settings.text_position -%}
 {%- assign text_position_mobile  = section.settings.text_position_mobile -%}
 
@@ -168,14 +168,14 @@
                 <div class="hero__description text-medium bq-content rx-content">{{- description | truncatewords: 20, " ..." -}}</div>
               {%- endif -%}
 
-              {%- if button_1 != blank or button_2 != blank -%}
+              {%- if button_primary_label != blank or button_outline_label != blank -%}
                 <div class="hero__buttons">
-                  {%- if button_1 != blank and button_url_1 != blank -%}
-                    <a href="{{ button_url_1 }}" class="hero__button button button--primary button--large">{{- button_1 -}}</a>
+                  {%- if button_primary_label != blank and button_primary_url != blank -%}
+                    <a href="{{ button_primary_url }}" class="hero__button button button--primary button--large">{{- button_primary_label -}}</a>
                   {%- endif -%}
 
-                  {%- if button_2 != blank and button_url_2 != blank -%}
-                    <a href="{{ button_url_2 }}" class="hero__button button button--outlined button--large">{{- button_2 -}}</a>
+                  {%- if button_outline_label != blank and button_outline_url != blank -%}
+                    <a href="{{ button_outline_url }}" class="hero__button button button--outlined button--large">{{- button_outline_label -}}</a>
                   {%- endif -%}
                 </div>
               {%- endif -%}
@@ -244,7 +244,7 @@
                 image: image_mobile,
                 loading: 'lazy',
                 class: 'hero__image',
-                size: 'l'
+                size: 'xxl'
               -%}
             </div>
           {%- endif -%}
@@ -367,26 +367,26 @@
       },
       {
         "type": "text",
-        "id": "button_1",
+        "id": "button_primary_label",
         "label": "Button 1 label",
         "default": "Check out products",
         "info": "Leave blank to hide the button"
       },
       {
         "type": "url",
-        "id": "button_url_1",
+        "id": "button_primary_url",
         "label": "Button 1 link"
       },
       {
         "type": "text",
-        "id": "button_2",
+        "id": "button_outline_label",
         "label": "Button 2 label",
         "default": "More info",
         "info": "Leave blank to hide the button"
       },
       {
         "type": "url",
-        "id": "button_url_2",
+        "id": "button_outline_url",
         "label": "Button 2 link"
       },
       {
