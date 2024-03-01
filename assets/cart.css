@@ -4,11 +4,11 @@
 }
 
 .cart__container--padding-top {
-  padding-top: var(--padding-top-mobile);
+  padding-top: var(--padding-top-mobile, 0);
 }
 
 .cart__container--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile);
+  padding-bottom: var(--padding-bottom-mobile, 0);
 }
 
 .cart .cart__lines {
@@ -30,10 +30,10 @@
 
 @media (min-width: 992px) {
   .cart__container--padding-top {
-    padding-top: var(--padding-top);
+    padding-top: var(--padding-top, 0);
   }
 
   .cart__container--padding-bottom {
-    padding-bottom: var(--padding-bottom);
+    padding-bottom: var(--padding-bottom, 0);
   }
 }

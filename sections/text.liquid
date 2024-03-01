@@ -12,8 +12,6 @@
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
   {%- case padding_top -%}
-    {%- when 'none' -%}
-      --padding-top: 0;
     {%- when 'small' -%}
       --padding-top: 24px;
     {%- when 'medium' -%}
@@ -23,8 +21,6 @@
   {%- endcase -%}
 
   {%- case padding_bottom -%}
-    {%- when 'none' -%}
-      --padding-bottom: 0;
     {%- when 'small' -%}
       --padding-bottom: 24px;
     {%- when 'medium' -%}
@@ -34,8 +30,6 @@
   {%- endcase -%}
 
   {%- case padding_top_mobile -%}
-    {%- when 'none' -%}
-      --padding-top-mobile: 0;
     {%- when 'small' -%}
       --padding-top-mobile: 18px;
     {%- when 'medium' -%}
@@ -45,8 +39,6 @@
   {%- endcase -%}
 
   {%- case padding_bottom_mobile -%}
-    {%- when 'none' -%}
-      --padding-bottom-mobile: 0;
     {%- when 'small' -%}
       --padding-bottom-mobile: 18px;
     {%- when 'medium' -%}

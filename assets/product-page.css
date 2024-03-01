@@ -7,10 +7,6 @@
   padding-top: var(--padding-top-mobile, 0);
 }
 
-.header-transparent ~ main .product-main:first-child .product-main__container--padding-top {
-  padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
-}
-
 .product-main__container--padding-bottom {
   padding-bottom: var(--padding-bottom-mobile, 0);
 }
@@ -123,10 +119,6 @@
 @media (min-width: 992px) {
   .product-main__container--padding-top {
     padding-top: var(--padding-top, 0);
-  }
-
-  .header-transparent ~ main .product-main:first-child .product-main__container--padding-top {
-    padding-top: calc(var(--padding-top, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
   }
 
   .product-main__container--padding-bottom {

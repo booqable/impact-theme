@@ -1,13 +1,27 @@
-.search__container--padding-top {
-  padding-top: var(--padding-top-mobile);
-}
-
-.search__container--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile);
+.search {
+  width: 100%;
 }
 
 .search__wrapper {
   background: var(--background-primary);
+  color: var(--color-primary);
+}
+
+.search__wrapper--padding-top {
+  padding-top: var(--padding-top-mobile, 0);
+}
+
+.search__wrapper--padding-bottom {
+  padding-bottom: var(--padding-bottom-mobile, 0);
+}
+
+.search__top,
+.search__message {
+  text-align: center;
+  color: var(--color-outline);
+  font-weight: var(--font-weight-medium);
+  font-size: calc(var(--font-size-regular) - 2px);
+  padding-bottom: 42px;
 }
 
 .search-results {
@@ -18,9 +32,14 @@
 }
 
 .search__grid {
-  font-size: 16px;
+  font-size: var(--font-size-regular);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-lg);
+}
+
+.search__wrapper > .search-results,
+.search__wrapper > .search__grid {
+  padding: 0 16px;
 }
 
 .search-results .product-card {
@@ -35,16 +54,12 @@
 }
 
 @media (min-width: 992px) {
-  .search__container--padding-top {
-    padding-top: var(--padding-top);
+  .search__wrapper--padding-top {
+    padding-top: var(--padding-top, 0);
   }
 
-  .search__container--padding-bottom {
-    padding-bottom: var(--padding-bottom);
-  }
-
-  .search-results {
-    gap: 24px;
+  .search__wrapper--padding-bottom {
+    padding-bottom: var(--padding-bottom, 0);
   }
 
   .search__grid {
@@ -60,13 +75,41 @@
     grid-area: sidebar;
   }
 
-  .search__grid .search-results {
-    grid-area: grid;
-    grid-auto-rows: fit-content(100%);
-  }
-
   .search__grid .search__pagination {
     grid-area: pagination;
+  }
+
+  .search__wrapper > .search-results,
+  .search__wrapper > .search__grid {
+    padding: 0 24px;
+  }
+
+  .search__wrapper .product-card__vision:after {
+    aspect-ratio: 1 / 0.975;
+  }
+
+  .search__container .product-card__vision:after {
+    aspect-ratio: 1 / 1.036;
+  }
+
+  .search__wrapper-three .product-card__vision:after {
+    aspect-ratio: 1 / 1.407;
+  }
+
+  .search__wrapper-three .search__container .product-card__vision:after {
+    aspect-ratio: 1 / 1.2825;
+  }
+
+  .search__wrapper-four .product-card__vision:after {
+    aspect-ratio: 1 / 1.275;
+  }
+
+  .search__wrapper-four .search__container .product-card__vision:after {
+    aspect-ratio: 1 / 1.32155;
+  }
+
+  .search__wrapper-four .search__container .search__top ~ .search__grid .product-card__vision:after {
+    aspect-ratio: 1 / 1.55;
   }
 }
 
