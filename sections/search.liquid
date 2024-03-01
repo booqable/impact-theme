@@ -143,9 +143,9 @@
 
       {%- else -%}
 
-        {%- if message != blank -%}
-          <div class="search__message{% if full_width %} container{%- endif -%}">{{- message -}}</div>
-        {%- endif -%}
+        <div class="search__message{% if full_width %} container{%- endif -%}">
+          {{- message | default: "No results found" -}}
+        </div>
       {%- endif -%}
   {%- unless full_width -%}
     </div>
