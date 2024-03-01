@@ -1,13 +1,13 @@
 {{ "account.css" | asset_url | stylesheet_tag }}
 
+{%- assign button_login_label    = section.settings.button_login_label -%}
+{%- assign button_minimal_label  = section.settings.button_minimal_label -%}
+{%- assign button_signup_label   = section.settings.button_signup_label -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
-{%- assign create_account_label  = section.settings.create_account_label -%}
 {%- assign description           = section.settings.description -%}
 {%- assign email_label           = section.settings.email_label -%}
-{%- assign guest_label           = section.settings.guest_label -%}
 {%- assign image                 = section.settings.image -%}
 {%- assign image_opacity         = section.settings.image_opacity -%}
-{%- assign login_label           = section.settings.login_label -%}
 {%- assign password_label        = section.settings.password_label -%}
 {%- assign padding_top           = section.settings.padding_top -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
@@ -80,11 +80,11 @@
       {%- if shop.allow_signup -%}
         <div class="account__top">
           <a href="{{ routes.register_url }}" class="account__button button button--primary button--large">
-            {{- create_account_label | default: "Sign up" -}}
+            {{- button_signup_label | default: "Sign up" -}}
           </a>
 
           <span class="account__button button button--outlined button--large" style="pointer-events: none;">
-            {{- login_label | default: "Log in" -}}
+            {{- button_login_label | default: "Log in" -}}
             </span>
         </div>
       {%- endif -%}
@@ -150,7 +150,7 @@
             name="commit"
             data-disable-with="Log in"
           >
-            {{- login_label | default: "Log in" -}}
+            {{- button_login_label | default: "Log in" -}}
           </button>
         </div>
 
@@ -163,7 +163,7 @@
         {%- if shop.allow_guest_checkout and guest_checkout_url -%}
           <div class="account__divider text-center">
             <a href="{{ guest_checkout_url }}" class="account__button account__button--minimal">
-              {{- guest_label | default: "Continue as guest" -}}
+              {{- button_minimal_label | default: "Continue as guest" -}}
             </a>
           </div>
         {%- endif -%}
@@ -270,13 +270,13 @@
       },
       {
         "type": "text",
-        "id": "login_label",
+        "id": "button_login_label",
         "label": "Log in button label"
       },
       {
         "type": "text",
-        "id": "create_account_label",
-        "label": "Create account button label"
+        "id": "button_signup_label",
+        "label": "Sign up button label"
       },
       {
         "type": "text",
@@ -285,7 +285,7 @@
       },
       {
         "type": "text",
-        "id": "guest_label",
+        "id": "button_minimal_label",
         "label": "Continue as guest button label"
       },
       {

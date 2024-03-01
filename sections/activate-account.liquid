@@ -1,6 +1,6 @@
 {{ "account.css" | asset_url | stylesheet_tag }}
 
-{%- assign button_label          = section.settings.button_label -%}
+{%- assign button_primary_label  = section.settings.button_primary_label -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
 {%- assign description           = section.settings.description -%}
 {%- assign image                 = section.settings.image -%}
@@ -82,8 +82,8 @@
 
       <hr class="account__separator">
 
-      <a href="{{ routes.root_url }}" class="account__button button button--primary button--large">
-        {{- button_label | default: "Back to home" -}}
+      <a href="{{ routes.login_url }}" class="account__button button button--primary button--large">
+        {{- button_primary_label | default: "Log in" -}}
       </a>
     </div>
   </div>
@@ -176,7 +176,7 @@
       },
       {
         "type": "text",
-        "id": "button_label",
+        "id": "button_primary_label",
         "label": "Button label"
       },
       {

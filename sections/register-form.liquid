@@ -1,16 +1,17 @@
 {{ "account.css" | asset_url | stylesheet_tag }}
 
-{%- assign accept_button_label   = section.settings.accept_button_label -%}
 {%- assign account_type_label    = section.settings.account_type_label -%}
 {%- assign agree_label           = section.settings.agree_label -%}
-{%- assign agreement_label       = section.settings.agreement_label -%}
+{%- assign button_accept_label   = section.settings.button_accept_label -%}
+{%- assign button_agrement_label = section.settings.button_agrement_label -%}
+{%- assign button_login_label    = section.settings.button_login_label -%}
+{%- assign button_signup_label   = section.settings.button_signup_label -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
 {%- assign company_label         = section.settings.company_label -%}
 {%- assign description           = section.settings.description -%}
 {%- assign email_label           = section.settings.email_label -%}
 {%- assign image                 = section.settings.image -%}
 {%- assign image_opacity         = section.settings.image_opacity -%}
-{%- assign login_label           = section.settings.login_label -%}
 {%- assign name_label            = section.settings.name_label -%}
 {%- assign password_label        = section.settings.password_label -%}
 {%- assign password_confirmation = section.settings.password_confirmation -%}
@@ -21,7 +22,6 @@
 {%- assign private_label         = section.settings.private_label -%}
 {%- assign rounded_corners       = section.settings.rounded_corners -%}
 {%- assign show_border           = section.settings.show_border -%}
-{%- assign signup_label          = section.settings.signup_label -%}
 {%- assign title                 = section.settings.title -%}
 
 {% comment %} CSS variables start {% endcomment %}
@@ -85,11 +85,11 @@
     <div class="account__inner{% if show_border %} account__inner--border{%- endif -%}">
       <div class="account__top">
         <span class="account__button button button--outlined button--large" style="pointer-events: none;">
-          {{- signup_label | default: "Sign up" -}}
+          {{- button_signup_label | default: "Sign up" -}}
         </span>
 
         <a href="{{ routes.login_url }}" class="account__button button button--primary button--large">
-          {{- login_label | default: "Log in" -}}
+          {{- button_login_label | default: "Log in" -}}
         </a>
       </div>
 
@@ -236,7 +236,7 @@
               <span class="account__agreement">
               <input type="checkbox" id="user_agreement_opener" style="display: none">
               <label for="user_agreement_opener" class="account__agreement-opener">
-                {{- agreement_label | default: "Terms and agreements" -}}
+                {{- button_agrement_label | default: "Terms and agreements" -}}
               </label>
 
               <span class="account__agreement-modal bq-content rx-content" style="display: none">
@@ -249,7 +249,7 @@
 
                       <span class="account__agreement-buttons">
                         <label class="account-checkbox__button button button--primary button--large" for="user_agreement_opener">
-                          {{ accept_button_label | default: "Agree" }}
+                          {{ button_accept_label | default: "Agree" }}
                         </label>
                       </span>
                     </span>
@@ -271,7 +271,7 @@
           name="commit"
           data-disable-with="Sign up"
         >
-          {{- signup_label | default: "Sign up" -}}
+          {{- button_signup_label | default: "Sign up" -}}
         </button>
       {%- endform -%}
     </div>
@@ -357,7 +357,7 @@
       },
       {
         "type": "text",
-        "id": "agreement_label",
+        "id": "button_agrement_label",
         "label": "Terms and agreements label"
       },
       {
@@ -410,17 +410,17 @@
       },
       {
         "type": "text",
-        "id": "login_label",
+        "id": "button_login_label",
         "label": "Log in button label"
       },
       {
         "type": "text",
-        "id": "signup_label",
+        "id": "button_signup_label",
         "label": "Sign up button label"
       },
       {
         "type": "text",
-        "id": "accept_button_label",
+        "id": "button_accept_label",
         "label": "Accept agreement button label (in modal window)"
       },
       {
