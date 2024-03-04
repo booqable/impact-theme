@@ -8,10 +8,6 @@
   padding-top: var(--padding-top-mobile, 0);
 }
 
-.header-transparent ~ main .columns:first-child > .columns__wrapper--padding-top {
-  padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
-}
-
 .columns__wrapper--padding-bottom {
   padding-bottom: var(--padding-bottom-mobile, 0);
 }
@@ -80,12 +76,12 @@
 
 .columns__description {
   padding: 0 0 25px;
-  color: var(--color-third);
+  color: var(--color-secondary);
 }
 
 .columns__label,
 .columns__button {
-  font-size: 14px;
+  font-size: calc(var(--font-size-regular) - 2px);
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -101,15 +97,11 @@
 
 @media (min-width: 992px) {
   .columns__wrapper--padding-top {
-    padding-top: var(--padding-top);
-  }
-
-  .header-transparent ~ main .columns:first-child > .columns__wrapper--padding-top {
-    padding-top: calc(var(--padding-top, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
+    padding-top: var(--padding-top, 0);
   }
 
   .columns__wrapper--padding-bottom {
-    padding-bottom: var(--padding-bottom);
+    padding-bottom: var(--padding-bottom, 0);
   }
 
   .columns__grid {

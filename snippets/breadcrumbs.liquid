@@ -22,9 +22,9 @@
   {% style %}
     .breadcrumbs {
       padding: 8px 0 24px;
-      font-size: 14px;
+      font-size: calc(var(--font-size-regular) - 2px);
       line-height: var(--line-height-xs);
-      color: var(--color-third);
+      color: var(--color-secondary);
     }
 
     .breadcrumbs path {
@@ -64,7 +64,7 @@
     aria-label="breadcrumbs">
     <div class="breadcrumbs__container">
       {%- if label != blank and url != blank-%}
-        <a href="{{ url }}" class="breadcrumbs__link" title="{{- label -}}">
+        <a href="{{ url }}" class="breadcrumbs__link" aria-label="{{- label -}}">
           {{- label -}}
         </a>
 
@@ -72,14 +72,14 @@
       {%- endif -%}
 
       {%- if first.url -%}
-        <a href="{{ first.url }}" class="breadcrumbs__link" title="{{- first.name -}}">
+        <a href="{{ first.url }}" class="breadcrumbs__link" aria-label="{{- first.name -}}">
           {{- first.name -}}
         </a>
 
         {{- separator -}}
       {%- endif -%}
 
-      <span class="breadcrumbs__name" title="{{- product.name -}}">
+      <span class="breadcrumbs__name" aria-label="{{- product.name -}}">
         {{- product.name -}}
       </span>
     </div>

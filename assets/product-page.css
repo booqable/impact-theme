@@ -7,17 +7,13 @@
   padding-top: var(--padding-top-mobile, 0);
 }
 
-.header-transparent ~ main .product-main:first-child .product-main__container--padding-top {
-  padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
-}
-
 .product-main__container--padding-bottom {
   padding-bottom: var(--padding-bottom-mobile, 0);
 }
 
 .product-main__grid {
   position: relative;
-  font-size: 16px;
+  font-size: var(--font-size-regular);
   line-height: var(--line-height-lg);
 }
 
@@ -86,7 +82,7 @@
 
 .product-main__availability bq-product-availability {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: calc(var(--font-size-regular) - 2px);
 }
 
 .product-main__availability bq-product-availability[visible="true"] {
@@ -94,7 +90,7 @@
 }
 
 .product-main__availability bq-product-availability-calendar {
-  font-size: 14px;
+  font-size: calc(var(--font-size-regular) - 2px);
   font-family: var(--font-body);
   line-height: var(--line-height-lg);
   cursor: pointer;
@@ -108,7 +104,7 @@
 
 .product-main__message {
   text-align: center;
-  font-size: 12px;
+  font-size: calc(var(--font-size-regular) - 4px);
   padding: 23px 0 32px;
   color: var(--color-secondary);
 }
@@ -123,10 +119,6 @@
 @media (min-width: 992px) {
   .product-main__container--padding-top {
     padding-top: var(--padding-top, 0);
-  }
-
-  .header-transparent ~ main .product-main:first-child .product-main__container--padding-top {
-    padding-top: calc(var(--padding-top, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
   }
 
   .product-main__container--padding-bottom {

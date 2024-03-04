@@ -1,15 +1,15 @@
 .text__wrapper--padding-top {
-  padding-top: var(--padding-top-mobile);
+  padding-top: var(--padding-top-mobile, 0);
 }
 
 .text__wrapper--padding-bottom {
-  padding-bottom: var(--padding-bottom-mobile);
+  padding-bottom: var(--padding-bottom-mobile, 0);
 }
 
 .text__wrapper {
   text-align: var(--text-align);
   background: var(--background-primary);
-  color: var(--color-third);
+  color: var(--color-secondary);
 }
 
 .text__title {
@@ -18,10 +18,10 @@
 
 @media (min-width: 992px) {
   .text__wrapper--padding-top {
-    padding-top: var(--padding-top);
+    padding-top: var(--padding-top, 0);
   }
 
   .text__wrapper--padding-bottom {
-    padding-bottom: var(--padding-bottom);
+    padding-bottom: var(--padding-bottom, 0);
   }
 }

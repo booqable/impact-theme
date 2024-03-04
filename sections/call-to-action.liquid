@@ -10,8 +10,8 @@
 {%- assign tag                   = section.settings.tag -%}
 {%- assign title                 = section.settings.title -%}
 {%- assign image                 = section.settings.image -%}
-{%- assign button_label          = section.settings.button_label -%}
-{%- assign button_url            = section.settings.button_url -%}
+{%- assign button_primary_label  = section.settings.button_primary_label -%}
+{%- assign button_primary_url    = section.settings.button_primary_url -%}
 {%- assign show_transition       = section.settings.show_transition -%}
 {%- assign transition_color      = section.settings.transition_color -%}
 
@@ -75,7 +75,7 @@
   <div class="cta__container container">
 {%- endunless -%}
     <div class="cta__wrapper{% if padding_top != blank or padding_top_mobile != blank %} cta__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} cta__wrapper--padding-bottom{% endif %} color-{{- color_scheme.id -}}" style="{{- variables | escape -}}">
-      {%- if tag != blank or title != blank or button_label != blank and button_url != blank -%}
+      {%- if tag != blank or title != blank or button_primary_label != blank and button_primary_url != blank -%}
         {%- if full_width -%}
           <div class="cta__container container">
         {%- endif -%}
@@ -88,9 +88,9 @@
               <h2 class="cta__title h4">{{- title -}}</h2>
             {%- endif -%}
 
-            {%- if button_label != blank and button_url != blank -%}
+            {%- if button_primary_label != blank and button_primary_url != blank -%}
               <div class="cta__buttons">
-                <a href="{{ button_url }}" class="cta__button button button--primary button--large">{{- button_label -}}</a>
+                <a href="{{ button_primary_url }}" class="cta__button button button--primary button--large">{{- button_primary_label -}}</a>
               </div>
             {%- endif -%}
           </div>
@@ -198,14 +198,14 @@
       },
       {
         "type": "text",
-        "id": "button_label",
+        "id": "button_primary_label",
         "label": "Button label",
         "default": "Shop out products",
         "info": "Leave blank to hide the button"
       },
       {
         "type": "url",
-        "id": "button_url",
+        "id": "button_primary_url",
         "label": "Button link"
       },
       {

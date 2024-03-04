@@ -81,7 +81,8 @@
         class: 'footer__logo-image',
         custom_width: '170',
         custom_size: '170px',
-        custom_alt: shop.name
+        custom_alt: shop.name,
+        keep_type: true
     -%}
   {%- elsif custom_title != blank -%}
     <h2 class="footer__logo-text">{{- custom_title -}}</h2>
@@ -209,7 +210,7 @@
                   {%- endif -%}
 
                   {%- if show_powered_by -%}
-                    <a href="https://booqable.com/?source=Shop&campaign=Cart" target="_blank" title="Powered by Booqable Rental Software">Powered by Booqable</a>
+                    <a href="https://booqable.com/?source=Shop&campaign=Cart" target="_blank" aria-label="Powered by Booqable Rental Software">Powered by Booqable</a>
                   {%- endif -%}
                 </p>
               {%- endif -%}
@@ -391,6 +392,7 @@
         "default": "small"
       }
     ],
+    "max_blocks": 5,
     "blocks":[
       {
         "type": "menu",

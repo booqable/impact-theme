@@ -2,7 +2,7 @@
 
 {%- if blocks.size > 0 -%}
   {%- assign title                 = section.settings.title -%}
-  {%- assign image_bg              = section.settings.image_bg -%}
+  {%- assign image_background      = section.settings.image_background -%}
   {%- assign rounded_corners       = section.settings.rounded_corners -%}
   {%- assign show_navigation       = section.settings.show_navigation -%}
   {%- assign color_scheme          = section.settings.color_scheme -%}
@@ -80,14 +80,14 @@
     style="{{- variables | escape -}}"
   >
     <div class="testimonials__container container">
-      {%- if title != blank or image_bg != blank -%}
-        <div class="testimonials__side{% if title == blank and image_bg != blank %} testimonials__side--desktop-hidden{%- endif -%}">
+      {%- if title != blank or image_background != blank -%}
+        <div class="testimonials__side{% if title == blank and image_background != blank %} testimonials__side--desktop-hidden{%- endif -%}">
           <h2 class="testimonials__title">{{- title -}}</h2>
 
-          {%- if image_bg != blank -%}
+          {%- if image_background != blank -%}
             <div class="testimonials__bg-image-wrapper">
               {%- render 'image',
-                  image: image_bg,
+                  image: image_background,
                   loading: 'lazy',
                   class: 'testimonials__bg-image',
                   size: 'm'
@@ -237,7 +237,7 @@
       },
       {
         "type": "image_picker",
-        "id": "image_bg",
+        "id": "image_background",
         "label": "Image (optional)"
       },
       {

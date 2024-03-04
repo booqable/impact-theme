@@ -1,19 +1,36 @@
 {{ "collections.css" | asset_url | stylesheet_tag }}
 
-{%- assign limit                 = section.settings.limit -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
-{%- assign color_overlay         = section.settings.color_overlay -%}
-{%- assign padding_top           = section.settings.padding_top -%}
+{%- assign counter_singular      = section.settings.counter_singular -%}
+{%- assign counter_plural        = section.settings.counter_plural -%}
+{%- assign full_width            = section.settings.full_width -%}
+{%- assign grid                  = section.settings.grid -%}
+{%- assign limit                 = section.settings.limit -%}
+{%- assign overlay_background    = section.settings.overlay_background -%}
+{%- assign overlay_color         = section.settings.overlay_color -%}
+{%- assign overlay_opacity       = section.settings.overlay_opacity -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
-{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign padding_top           = section.settings.padding_top -%}
+{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+{%- assign rounded_corners       = section.settings.rounded_corners -%}
+{%- assign show_amount           = section.settings.show_amount -%}
+{%- assign show_arrow            = section.settings.show_arrow -%}
+{%- assign show_overlay          = section.settings.show_overlay -%}
+{%- assign spacing               = section.settings.spacing -%}
+{%- assign spacing_mobile        = section.settings.spacing_mobile -%}
 {%- assign image_placeholder     = settings.image_placeholder -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
+  {%- if show_overlay -%}
+    --color-overlay: {{- overlay_color -}};
+    --background-overlay: {{- overlay_background -}};
+    --background-overlay-00: {{- overlay_background | append: "00" -}};
+    --opacity-overlay: {{ overlay_opacity | append: "%"}};
+  {%- endif -%}
+
   {%- case padding_top -%}
-    {%- when 'none' -%}
-      --padding-top: 0;
     {%- when 'small' -%}
       --padding-top: 24px;
     {%- when 'medium' -%}
@@ -23,8 +40,6 @@
   {%- endcase -%}
 
   {%- case padding_bottom -%}
-    {%- when 'none' -%}
-      --padding-bottom: 0;
     {%- when 'small' -%}
       --padding-bottom: 24px;
     {%- when 'medium' -%}
@@ -34,8 +49,6 @@
   {%- endcase -%}
 
   {%- case padding_top_mobile -%}
-    {%- when 'none' -%}
-      --padding-top-mobile: 0;
     {%- when 'small' -%}
       --padding-top-mobile: 18px;
     {%- when 'medium' -%}
@@ -45,8 +58,6 @@
   {%- endcase -%}
 
   {%- case padding_bottom_mobile -%}
-    {%- when 'none' -%}
-      --padding-bottom-mobile: 0;
     {%- when 'small' -%}
       --padding-bottom-mobile: 18px;
     {%- when 'medium' -%}
@@ -54,30 +65,87 @@
     {%- when 'large' -%}
       --padding-bottom-mobile: 60px;
   {%- endcase -%}
+
+  {%- case grid -%}
+    {%- when 'two' -%}
+      --template-columns: 2;
+    {%- when 'three' -%}
+      --template-columns: 3;
+  {%- endcase -%}
+
+  {%- case spacing -%}
+    {%- when 'none' -%}
+      --grid-gap: 0;
+    {%- when 'small' -%}
+      --grid-gap: 4px;
+    {%- when 'medium' -%}
+      --grid-gap: 16px;
+    {%- when 'large' -%}
+      --grid-gap: 32px;
+  {%- endcase -%}
+
+  {%- case spacing_mobile -%}
+    {%- when 'none' -%}
+      --grid-gap-mobile: 0;
+    {%- when 'small' -%}
+      --grid-gap-mobile: 4px;
+    {%- when 'medium' -%}
+      --grid-gap-mobile: 16px;
+    {%- when 'large' -%}
+      --grid-gap-mobile: 32px;
+  {%- endcase -%}
+
+  {%- case rounded_corners -%}
+    {%- when 'none' -%}
+      --border-radius-rounded-blocks: 0px;
+    {%- when 'small' -%}
+      --border-radius-rounded-blocks: 8px;
+    {%- when 'medium' -%}
+      --border-radius-rounded-blocks: 16px;
+    {%- when 'large' -%}
+      --border-radius-rounded-blocks: 32px;
+  {%- endcase -%}
 {%- endcapture -%}
 {% comment %} CSS variables end {% endcomment %}
 
 <div
-  class="collections__wrapper color-{{ color_scheme.id }}{% if color_overlay != blank %} overlay-{{ color_overlay }}{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} collections__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} collections__wrapper--padding-bottom{%- endif -%}"
+  class="collections__wrapper collections__wrapper-{{ grid }} color-{{ color_scheme.id }}{% if show_overlay %} collection__wrapper--with-overlay{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} collections__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} collections__wrapper--padding-bottom{%- endif -%}"
   style="{{- variables | escape -}}"
 >
-  <div class="collections__container container">
-    {%- paginate collections by limit -%}
-      {%- if collections.size > 0 -%}
+  {%- unless full_width -%}
+    <div class="collections__container container">
+  {%- endunless -%}
 
-        {%- render 'collections-grid',
-            items: collections,
-            items_type: "collections",
-            placeholder: image_placeholder
-        -%}
+      {%- paginate collections by limit -%}
+        {%- if collections.size > 0 -%}
 
-        {%- if paginate.pages > 1 -%}
-          {%- include "pagination" -%}
+          {%- render 'collections-grid',
+              items: collections,
+              items_type: "collections",
+              show_amount: show_amount,
+              show_arrow: show_arrow,
+              placeholder: image_placeholder,
+              counter_singular: counter_singular,
+              counter_plural: counter_plural
+          -%}
+
+          {%- if full_width -%}
+            <div class="collections__container container">
+          {%- endif -%}
+            {%- if paginate.pages > 1 -%}
+              {%- render "pagination", paginate: paginate -%}
+            {%- endif -%}
+          {%- if full_width -%}
+            </div>
+          {%- endif -%}
+
         {%- endif -%}
+      {%- endpaginate -%}
 
-      {%- endif -%}
-    {%- endpaginate -%}
-  </div>
+  {%- unless full_width -%}
+    </div>
+  {%- endunless -%}
+
 </div>
 
 {% schema %}
@@ -94,24 +162,61 @@
         "type": "color_scheme",
         "id": "color_scheme",
         "label": "Color scheme",
-        "default": "set-1"
+        "default": "set-4"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Stretch collections to screen edges",
+        "default": false
       },
       {
         "type": "select",
-        "id": "color_overlay",
-        "label": "Image overlay color",
+        "id": "rounded_corners",
+        "label": "Rounded corners",
         "options": [
           {
-            "value": "dark",
-            "label": "Dark"
+            "value": "none",
+            "label": "None"
           },
           {
-            "value": "light",
-            "label": "Light"
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
           }
         ],
-        "info": "Works only if the Classic option is chosen in 'Element design'",
-        "default": "dark"
+        "default": "none"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_arrow",
+        "label": "Show arrow on hover",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_amount",
+        "label": "Show product amount",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "counter_singular",
+        "label": "Product amount label singular",
+        "default": "Item"
+      },
+      {
+        "type": "text",
+        "id": "counter_plural",
+        "label": "Product amount label plural",
+        "default": "Items"
       },
       {
         "type": "number",
@@ -123,7 +228,77 @@
       },
       {
         "type": "header",
+        "content": "Overlay"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_overlay",
+        "label": "Show overlay",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "overlay_color",
+        "label": "Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "overlay_background",
+        "label": "Background color",
+        "default": "#1A3333"
+      },
+      {
+        "type": "number",
+        "id": "overlay_opacity",
+        "label": "Background percentage",
+        "min": 0,
+        "max": 100,
+        "default": 100
+      },
+      {
+        "type": "header",
         "content": "Desktop settings"
+      },
+      {
+        "type": "select",
+        "id": "grid",
+        "label": "Layout",
+        "options": [
+          {
+            "value": "two",
+            "label": "2 columns"
+          },
+          {
+            "value": "three",
+            "label": "3 columns"
+          }
+        ],
+        "default": "three"
+      },
+      {
+        "type": "select",
+        "id": "spacing",
+        "label": "Spacing between columns",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
       },
       {
         "type": "select",
@@ -176,6 +351,30 @@
       {
         "type": "header",
         "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "spacing_mobile",
+        "label": "Spacing between columns",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
       },
       {
         "type": "select",
