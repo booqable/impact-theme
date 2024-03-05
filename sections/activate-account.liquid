@@ -1,16 +1,22 @@
 {{ "account.css" | asset_url | stylesheet_tag }}
 
-{%- assign title                 = section.settings.title -%}
-{%- assign description           = section.settings.description -%}
+{%- assign button_primary_label  = section.settings.button_primary_label -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
-{%- assign view_cart             = section.settings.view_cart -%}
+{%- assign description           = section.settings.description -%}
+{%- assign image                 = section.settings.image -%}
+{%- assign image_opacity         = section.settings.image_opacity -%}
 {%- assign padding_top           = section.settings.padding_top -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign rounded_corners       = section.settings.rounded_corners -%}
+{%- assign show_border           = section.settings.show_border -%}
+{%- assign title                 = section.settings.title -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
+  --image-opacity: {{- image_opacity | append: "%" -}};
+
   {%- case padding_top -%}
     {%- when 'small' -%}
       --padding-top: 40px;
@@ -46,6 +52,17 @@
     {%- when 'large' -%}
       --padding-bottom-mobile: 60px;
   {%- endcase -%}
+
+  {%- case rounded_corners -%}
+    {%- when 'none' -%}
+      --border-radius-rounded-blocks: 0px;
+    {%- when 'small' -%}
+      --border-radius-rounded-blocks: 8px;
+    {%- when 'medium' -%}
+      --border-radius-rounded-blocks: 16px;
+    {%- when 'large' -%}
+      --border-radius-rounded-blocks: 32px;
+  {%- endcase -%}
 {%- endcapture -%}
 {% comment %} CSS variables end {% endcomment %}
 
@@ -54,37 +71,32 @@
   style="{{- variables | escape -}}"
 >
   <div class="account__container container">
-    <div class="account__title-icon">
-      <i class="fa-solid fa-badge-check breadcrumbs__chevron"></i>
+    <div class="account__inner{% if show_border %} account__inner--border{%- endif -%}">
+      <h3 class="account__title text-center">
+        {{- title | default: "Account confirmed" -}}
+      </h3>
+
+      <div class="account__description text-center">
+        {{- description | default: "You can now close this page" -}}
+      </div>
+
+      <hr class="account__separator">
+
+      <a href="{{ routes.login_url }}" class="account__button button button--primary button--large">
+        {{- button_primary_label | default: "Log in" -}}
+      </a>
     </div>
-
-    <h3 class="account__title text-center">
-      {%- if title != blank -%}
-        {{- title -}}
-      {%- else -%}
-        Account confirmed
-      {%- endif -%}
-    </h3>
-
-    <div class="account__description text-center">
-      {%- if description != blank -%}
-        {{- description -}}
-      {%- else -%}
-        Your account has been confirmed. You can now log in and continue using the website
-      {%- endif -%}
-    </div>
-
-    <a href="{{ routes.cart_url }}" class="account__button button button--primary button--large">
-      {%- if view_cart != blank -%}
-        {{- view_cart -}}
-      {%- else -%}
-        View cart
-      {%- endif -%}
-    </a>
   </div>
+  {%- if image.url != blank -%}
+    <div class="account__background-wrapper">
+      {%- render 'image',
+          image: image,
+          class: 'account__background-image',
+          size: 'xxl'
+      -%}
+    </div>
+  {%- endif -%}
 </div>
-
-{% include 'script-full-height' %}
 
 {% schema %}
   {
@@ -115,13 +127,57 @@
         "label": "Description"
       },
       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Background image",
+        "default": "booqable://assets/image-curvilinear-lines.png"
+      },
+      {
+        "type": "number",
+        "id": "image_opacity",
+        "label": "Background overlay percentage",
+        "min": 0,
+        "max": 100,
+        "default": 10
+      },
+      {
+        "type": "select",
+        "id": "rounded_corners",
+        "label": "Rounded corners",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_border",
+        "label": "Show border",
+        "default": true
+      },
+      {
         "type": "header",
         "content": "Buttons settings"
       },
       {
         "type": "text",
-        "id": "view_cart",
-        "label": "Cart button label"
+        "id": "button_primary_label",
+        "label": "Button label"
       },
       {
         "type": "header",

@@ -1,26 +1,33 @@
 {{ "account.css" | asset_url | stylesheet_tag }}
 
-{%- assign title                 = section.settings.title -%}
-{%- assign description           = section.settings.description -%}
+{%- assign account_type_label    = section.settings.account_type_label -%}
+{%- assign agree_label           = section.settings.agree_label -%}
+{%- assign button_accept_label   = section.settings.button_accept_label -%}
+{%- assign button_agrement_label = section.settings.button_agrement_label -%}
+{%- assign button_login_label    = section.settings.button_login_label -%}
+{%- assign button_signup_label   = section.settings.button_signup_label -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
-{%- assign login_label           = section.settings.login_label -%}
-{%- assign signup_label          = section.settings.signup_label -%}
-{%- assign name_label            = section.settings.name_label -%}
+{%- assign company_label         = section.settings.company_label -%}
+{%- assign description           = section.settings.description -%}
 {%- assign email_label           = section.settings.email_label -%}
+{%- assign image                 = section.settings.image -%}
+{%- assign image_opacity         = section.settings.image_opacity -%}
+{%- assign name_label            = section.settings.name_label -%}
 {%- assign password_label        = section.settings.password_label -%}
 {%- assign password_confirmation = section.settings.password_confirmation -%}
-{%- assign account_type_label    = section.settings.account_type_label -%}
-{%- assign private_label         = section.settings.private_label -%}
-{%- assign company_label         = section.settings.company_label -%}
-{%- assign agree_label           = section.settings.agree_label -%}
-{%- assign agreements_label      = section.settings.agreements_label -%}
 {%- assign padding_top           = section.settings.padding_top -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign private_label         = section.settings.private_label -%}
+{%- assign rounded_corners       = section.settings.rounded_corners -%}
+{%- assign show_border           = section.settings.show_border -%}
+{%- assign title                 = section.settings.title -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
+  --image-opacity: {{- image_opacity | append: "%" -}};
+
   {%- case padding_top -%}
     {%- when 'small' -%}
       --padding-top: 40px;
@@ -56,6 +63,17 @@
     {%- when 'large' -%}
       --padding-bottom-mobile: 60px;
   {%- endcase -%}
+
+  {%- case rounded_corners -%}
+    {%- when 'none' -%}
+      --border-radius-rounded-blocks: 0px;
+    {%- when 'small' -%}
+      --border-radius-rounded-blocks: 8px;
+    {%- when 'medium' -%}
+      --border-radius-rounded-blocks: 16px;
+    {%- when 'large' -%}
+      --border-radius-rounded-blocks: 32px;
+  {%- endcase -%}
 {%- endcapture -%}
 {% comment %} CSS variables end {% endcomment %}
 
@@ -64,266 +82,210 @@
   style="{{- variables | escape -}}"
 >
   <div class="account__container container">
-    <h3 class="account__title text-center">
-      {%- if title != blank -%}
-        {{- title -}}
-      {%- else -%}
-        Create an account
-      {%- endif -%}
-    </h3>
-
-    <div class="account__divider text-center">
-      <span>
-        {%- if description != blank -%}
-          {{- description -}}
-        {%- else -%}
-          Already have an account?
-        {%- endif -%}
-      </span>
-
-      <a class="account__link" href="{{ routes.login_url }}">
-        {%- if login_label != blank -%}
-          {{- login_label -}}
-        {%- else -%}
-          Log in
-        {%- endif -%}
-      </a>
-    </div>
-
-    {%- form 'register' -%}
-      <div class="account-fieldset__block{% if form.errors.name %} account-fieldset--error{%- endif -%}">
-        <label for="user_name" class="account-fieldset__label">
-          {%- if name_label != blank -%}
-            {{- name_label -}}
-          {%- else -%}
-            Full name
-          {%- endif -%}
-
-          <span class="account-fieldset__label-backlight">
-            {%- if name_label != blank -%}
-              {{- name_label -}}
-            {%- else -%}
-              Full name
-            {%- endif -%}
-          </span>
-        </label>
-
-        <input
-          value="{{- form.name -}}"
-          placeholder=" "
-          class="account-fieldset__input"
-          autofocus="autofocus"
-          autocomplete="name"
-          type="name"
-          name="user[name]"
-          id="user_name">
-
-        <div class="account__error-message">
-          {{- form.errors.name -}}
-        </div>
-      </div>
-
-      <div class="account-fieldset__block{% if form.errors.email %} account-fieldset--error{%- endif -%}">
-        <label for="user_email" class="account-fieldset__label">
-          {%- if email_label != blank -%}
-            {{- email_label -}}
-          {%- else -%}
-            Email
-          {%- endif -%}
-
-          <span class="account-fieldset__label-backlight">
-            {%- if email_label != blank -%}
-              {{- email_label -}}
-            {%- else -%}
-              Email
-            {%- endif -%}
-          </span>
-        </label>
-
-        <input
-          value="{{- form.email -}}"
-          placeholder=" "
-          class="account-fieldset__input"
-          autofocus="autofocus"
-          autocomplete="email"
-          type="email"
-          name="user[email]"
-          id="user_email">
-
-        <div class="account__error-message">
-          {{- form.errors.email -}}
-        </div>
-      </div>
-
-      <div class="account-fieldset__block{% if form.errors.password %} account-fieldset--error{%- endif -%}">
-        <label for="user_password" class="account-fieldset__label">
-          {%- if password_label != blank -%}
-            {{- password_label -}}
-          {%- else -%}
-            Password
-          {%- endif -%}
-
-          <span class="account-fieldset__label-backlight">
-            {%- if password_label != blank -%}
-              {{- password_label -}}
-            {%- else -%}
-              Password
-            {%- endif -%}
-          </span>
-        </label>
-
-        <input
-          placeholder=" "
-          class="account-fieldset__input"
-          autocomplete="new-password"
-          type="password"
-          name="user[password]"
-          id="user_password">
-
-        <div class="account__error-message">
-          {{- form.errors.password -}}
-        </div>
-      </div>
-
-      <div class="account-fieldset__block{% if form.errors.password_confirmation %} account-fieldset--error{%- endif -%}">
-        <label for="user_password_confirmation" class="account-fieldset__label">
-          {%- if password_confirmation != blank -%}
-            {{- password_confirmation -}}
-          {%- else -%}
-            Password confirmation
-          {%- endif -%}
-
-          <span class="account-fieldset__label-backlight">
-            {%- if password_confirmation != blank -%}
-              {{- password_confirmation -}}
-            {%- else -%}
-              Password confirmation
-            {%- endif -%}
-          </span>
-        </label>
-
-        <input
-          placeholder=" "
-          class="account-fieldset__input"
-          autocomplete="new-password"
-          type="password"
-          name="user[password_confirmation]"
-          id="user_password_confirmation">
-
-        <div class="account__error-message">
-          {{- form.errors.password_confirmation -}}
-        </div>
-      </div>
-
-      <div class="account__type account__divider{% if form.errors.customer %} account-fieldset--error{%- endif -%}">
-        <span class="account-fieldset__static-label">
-          {%- if account_type_label != blank -%}
-            {{- account_type_label -}}
-          {%- else -%}
-            Account type
-          {%- endif -%}
+    <div class="account__inner{% if show_border %} account__inner--border{%- endif -%}">
+      <div class="account__top">
+        <span class="account__button button button--outlined button--large" style="pointer-events: none;">
+          {{- button_signup_label | default: "Sign up" -}}
         </span>
 
-        <div class="account__type-options">
-          <div class="account__type-options--first-option">
-            <input
-              type="radio"
-              name="user[legal_type]"
-              id="user_legal_type_person"
-              value="person"
-              {% if form.legal_type == 'person' %}checked{% endif %}
-              style="display: none">
-
-            <label class="account-fieldset__radio-label" for="user_legal_type_person">
-              {%- if private_label != blank -%}
-                <span>{{- private_label -}}</span>
-              {%- else -%}
-                <span>Private</span>
-              {%- endif -%}
-            </label>
-          </div>
-
-          <div>
-            <input
-              type="radio"
-              name="user[legal_type]"
-              id="user_legal_type_commercial"
-              value="commercial"
-              {% if form.legal_type == 'commercial' %}checked{% endif %}
-              style="display: none">
-
-            <label class="account-fieldset__radio-label" for="user_legal_type_commercial">
-              {%- if company_label != blank -%}
-                <span>{{- company_label -}}</span>
-              {%- else -%}
-                <span>Company</span>
-              {%- endif -%}
-            </label>
-          </div>
-        </div>
-
-        <div class="account__error-message">
-          {{- form.errors.customer -}}
-        </div>
+        <a href="{{ routes.login_url }}" class="account__button button button--primary button--large">
+          {{- button_login_label | default: "Log in" -}}
+        </a>
       </div>
 
-      <div class="account__type account__divider--small">
-        <input
-          value="true"
-          type="checkbox"
-          name="user[agreement_accepted]"
-          id="user_agreement_accepted"
-          {% if form.agreement_accepted %}checked{% endif %}
-          style="display: none">
+      <h3 class="account__title text-center">
+        {{- title | default: "Sign up" -}}
+      </h3>
 
-        <label class="account-checkbox__label" for="user_agreement_accepted">
-          <span>
-            {%- if agree_label != blank -%}
-              {{- agree_label -}}
-            {%- else -%}
-              I agree to the
-            {%- endif -%}
-
-            <a
-              class="account__link"
-              href="https://booqable.com/agreement"
-              target="_blank"
-            >
-              {%- if agreements_label != blank -%}
-                {{- agreements_label -}}
-              {%- else -%}
-                Terms and agreements
-              {%- endif -%}
-            </a>
-          </span>
-        </label>
-
-        <div class="account__error-message">
-          {{- form.errors.agreement_accepted -}}
-        </div>
+      <div class="account__divider text-center">
+        {{- description | default: "Lorem ipsum dolor sit amet adipiscing elit." -}}
       </div>
+
+      <hr class="account__separator">
 
       {%- if alert -%}
         <div class="account__alert">{{- alert -}}</div>
       {%- endif -%}
 
-      <button
-        type="submit"
-        class="account__button button button--primary button--large"
-        name="commit"
-        data-disable-with="Sign up"
-      >
-        {%- if signup_label != blank -%}
-          {{- signup_label -}}
-        {%- else -%}
-          Sign up
-        {%- endif -%}
-      </button>
-    {%- endform -%}
-  </div>
-</div>
+      {%- form 'register' -%}
+        <div class="account-fieldset__block account__divider--small{% if form.errors.name %} account-fieldset--error{%- endif -%}">
+          <label for="user_name" class="account-fieldset__label">
+              {{- name_label | default: "Full name" | append: "*" -}}
+          </label>
 
-{% include 'script-full-height' %}
+          <input
+            value="{{- form.name -}}"
+            class="account-fieldset__input"
+            autofocus="autofocus"
+            autocomplete="name"
+            type="name"
+            name="user[name]"
+            id="user_name">
+
+          <div class="account__error-message">
+            {{- form.errors.name -}}
+          </div>
+        </div>
+
+        <div class="account-fieldset__block account__divider--small{% if form.errors.email %} account-fieldset--error{%- endif -%}">
+          <label for="user_email" class="account-fieldset__label">
+            {{- email_label | default: "Email" | append: "*" -}}
+          </label>
+
+          <input
+            value="{{- form.email -}}"
+            class="account-fieldset__input"
+            autofocus="autofocus"
+            autocomplete="email"
+            type="email"
+            name="user[email]"
+            id="user_email">
+
+          <div class="account__error-message">
+            {{- form.errors.email -}}
+          </div>
+        </div>
+
+        <div class="account-fieldset__block account__divider--small{% if form.errors.password %} account-fieldset--error{%- endif -%}">
+          <label for="user_password" class="account-fieldset__label">
+            {{- password_label | default: "Password" | append: "*" -}}
+          </label>
+
+          <input
+            class="account-fieldset__input"
+            autocomplete="new-password"
+            type="password"
+            name="user[password]"
+            id="user_password">
+
+          <div class="account__error-message">
+            {{- form.errors.password -}}
+          </div>
+        </div>
+
+        <div class="account-fieldset__block{% if form.errors.password_confirmation %} account-fieldset--error{%- endif -%}">
+          <label for="user_password_confirmation" class="account-fieldset__label">
+            {{- password_confirmation | default: "Password confirmation" | append: "*" -}}
+          </label>
+
+          <input
+            class="account-fieldset__input"
+            autocomplete="new-password"
+            type="password"
+            name="user[password_confirmation]"
+            id="user_password_confirmation">
+
+          <div class="account__error-message">
+            {{- form.errors.password_confirmation -}}
+          </div>
+        </div>
+
+        <div class="account__type account__divider{% if form.errors.customer %} account-fieldset--error{%- endif -%}">
+          <span class="account-fieldset__static-label">
+            {{- account_type_label | default: "Account type" -}}
+          </span>
+
+          <div class="account__type-options">
+            <div class="account__type-options--first-option">
+              <input
+                type="radio"
+                name="user[legal_type]"
+                id="user_legal_type_person"
+                value="person"
+                {% if form.legal_type == 'person' %}checked{% endif %}
+                style="display: none">
+
+              <label class="account-fieldset__radio-label" for="user_legal_type_person">
+                <span>{{- private_label | default: "Private" -}}</span>
+              </label>
+            </div>
+
+            <div>
+              <input
+                type="radio"
+                name="user[legal_type]"
+                id="user_legal_type_commercial"
+                value="commercial"
+                {% if form.legal_type == 'commercial' %}checked{% endif %}
+                style="display: none">
+
+              <label class="account-fieldset__radio-label" for="user_legal_type_commercial">
+                <span>{{- company_label | default: "Company" -}}</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="account__error-message">
+            {{- form.errors.customer -}}
+          </div>
+        </div>
+
+        <div class="account__type account__divider--small">
+          <input
+            value="true"
+            type="checkbox"
+            name="user[agreement_accepted]"
+            id="user_agreement_accepted"
+            {% if form.agreement_accepted %}checked{% endif %}
+            style="display: none">
+
+          <label class="account-checkbox__label{% unless form.agreement_accepted %} account-checkbox__label--error{% endunless %}" for="user_agreement_accepted">
+            <span>
+              {{- agree_label | default: "I agree to the" -}}
+
+              <span class="account__agreement">
+              <input type="checkbox" id="user_agreement_opener" style="display: none">
+              <label for="user_agreement_opener" class="account__agreement-opener">
+                {{- button_agrement_label | default: "Terms and agreements" -}}
+              </label>
+
+              <span class="account__agreement-modal bq-content rx-content" style="display: none">
+                <span class="account__agreement-content">
+                  <span class="account__agreement-inner">
+                    <label for="user_agreement_opener" class="account__agreement-closer button button--primary button--small">X</label>
+
+                    <span class="account__agreement-text">
+                      {{- form.agreement_content -}}
+
+                      <span class="account__agreement-buttons">
+                        <label class="account-checkbox__button button button--primary button--large" for="user_agreement_opener">
+                          {{ button_accept_label | default: "Agree" }}
+                        </label>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </span>
+            </span>
+          </label>
+
+          <div class="account__error-message">
+            {{- form.errors.agreement_accepted -}}
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="account__button button button--primary button--large"
+          name="commit"
+          data-disable-with="Sign up"
+        >
+          {{- button_signup_label | default: "Sign up" -}}
+        </button>
+      {%- endform -%}
+    </div>
+  </div>
+  {%- if image.url != blank -%}
+    <div class="account__background-wrapper">
+      {%- render 'image',
+          image: image,
+          class: 'account__background-image',
+          size: 'xxl'
+      -%}
+    </div>
+  {%- endif -%}
+</div>
 
 {% schema %}
   {
@@ -395,8 +357,52 @@
       },
       {
         "type": "text",
-        "id": "agreements_label",
+        "id": "button_agrement_label",
         "label": "Terms and agreements label"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Background image",
+        "default": "booqable://assets/image-curvilinear-lines.png"
+      },
+      {
+        "type": "number",
+        "id": "image_opacity",
+        "label": "Background overlay percentage",
+        "min": 0,
+        "max": 100,
+        "default": 10
+      },
+      {
+        "type": "select",
+        "id": "rounded_corners",
+        "label": "Rounded corners",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_border",
+        "label": "Show border",
+        "default": true
       },
       {
         "type": "header",
@@ -404,13 +410,18 @@
       },
       {
         "type": "text",
-        "id": "login_label",
+        "id": "button_login_label",
         "label": "Log in button label"
       },
       {
         "type": "text",
-        "id": "signup_label",
+        "id": "button_signup_label",
         "label": "Sign up button label"
+      },
+      {
+        "type": "text",
+        "id": "button_accept_label",
+        "label": "Accept agreement button label (in modal window)"
       },
       {
         "type": "header",

@@ -1,7 +1,7 @@
 .contact-form__wrapper {
   line-height: var(--line-height-lg);
   background: var(--background-primary);
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .contact-form__wrapper--padding-top {
@@ -19,7 +19,7 @@
 
 .contact-form__form {
   border: 1px solid var(--color-border);
-  padding: 16px;
+  padding: 24px;
   border-radius: var(--border-radius-rounded-blocks);
   overflow: hidden;
 }

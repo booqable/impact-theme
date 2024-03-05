@@ -102,7 +102,7 @@
   right: 0;
   bottom: 0;
   overflow: hidden;
-  opacity: 0.1;
+  opacity: var(--image-opacity);
 }
 
 .accordion__image {

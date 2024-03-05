@@ -1,21 +1,27 @@
 {{ "account.css" | asset_url | stylesheet_tag }}
 
-{%- assign title                 = section.settings.title -%}
-{%- assign description           = section.settings.description -%}
+{%- assign button_login_label    = section.settings.button_login_label -%}
+{%- assign button_minimal_label  = section.settings.button_minimal_label -%}
+{%- assign button_signup_label   = section.settings.button_signup_label -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
+{%- assign description           = section.settings.description -%}
 {%- assign email_label           = section.settings.email_label -%}
+{%- assign image                 = section.settings.image -%}
+{%- assign image_opacity         = section.settings.image_opacity -%}
 {%- assign password_label        = section.settings.password_label -%}
-{%- assign login_label           = section.settings.login_label -%}
-{%- assign create_account_label  = section.settings.create_account_label -%}
-{%- assign reset_password_label  = section.settings.reset_password_label -%}
-{%- assign guest_label           = section.settings.guest_label -%}
 {%- assign padding_top           = section.settings.padding_top -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign reset_password_label  = section.settings.reset_password_label -%}
+{%- assign rounded_corners       = section.settings.rounded_corners -%}
+{%- assign show_border           = section.settings.show_border -%}
+{%- assign title                 = section.settings.title -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
+  --image-opacity: {{- image_opacity | append: "%" -}};
+
   {%- case padding_top -%}
     {%- when 'small' -%}
       --padding-top: 40px;
@@ -51,6 +57,17 @@
     {%- when 'large' -%}
       --padding-bottom-mobile: 60px;
   {%- endcase -%}
+
+  {%- case rounded_corners -%}
+    {%- when 'none' -%}
+      --border-radius-rounded-blocks: 0px;
+    {%- when 'small' -%}
+      --border-radius-rounded-blocks: 8px;
+    {%- when 'medium' -%}
+      --border-radius-rounded-blocks: 16px;
+    {%- when 'large' -%}
+      --border-radius-rounded-blocks: 32px;
+  {%- endcase -%}
 {%- endcapture -%}
 {% comment %} CSS variables end {% endcomment %}
 
@@ -59,85 +76,30 @@
   style="{{- variables | escape -}}"
 >
   <div class="account__container container">
-    <h3 class="account__title text-center">
-      {%- if title != blank -%}
-        {{- title -}}
-      {%- else -%}
-        Log in
+    <div class="account__inner{% if show_border %} account__inner--border{%- endif -%}">
+      {%- if shop.allow_signup -%}
+        <div class="account__top">
+          <a href="{{ routes.register_url }}" class="account__button button button--primary button--large">
+            {{- button_signup_label | default: "Sign up" -}}
+          </a>
+
+          <span class="account__button button button--outlined button--large" style="pointer-events: none;">
+            {{- button_login_label | default: "Log in" -}}
+            </span>
+        </div>
       {%- endif -%}
-    </h3>
 
-    {%- if description != blank -%}
-      <div class="account__divider">
-        {{- description -}}
-      </div>
-    {%- endif -%}
+      <h3 class="account__title text-center">
+        {{- title | default: "Log in" -}}
+      </h3>
 
-    {%- form 'login' -%}
-      <div class="account-fieldset__block">
-        <label for="user_email" class="account-fieldset__label">
-          {%- if email_label != blank -%}
-            {{- email_label -}}
-          {%- else -%}
-            Email
-          {%- endif -%}
+      {%- if description != blank -%}
+        <div class="account__divider text-center">
+          {{- description -}}
+        </div>
+      {%- endif -%}
 
-          <span class="account-fieldset__label-backlight">
-            {%- if email_label != blank -%}
-              {{- email_label -}}
-            {%- else -%}
-              Email
-            {%- endif -%}
-          </span>
-        </label>
-
-        <input
-          value="{{- form.email -}}"
-          placeholder=" "
-          class="account-fieldset__input"
-          autofocus="autofocus"
-          autocomplete="email"
-          type="email"
-          name="user[email]"
-          id="user_email">
-      </div>
-
-      <div class="account-fieldset__block account__divider--small">
-        <label for="user_password" class="account-fieldset__label">
-          {%- if password_label != blank -%}
-            {{- password_label -}}
-          {%- else -%}
-            Password
-          {%- endif -%}
-
-          <span class="account-fieldset__label-backlight">
-            {%- if password_label != blank -%}
-              {{- password_label -}}
-            {%- else -%}
-              Password
-            {%- endif -%}
-          </span>
-        </label>
-
-        <input
-          value="{{- form.password -}}"
-          placeholder=" "
-          class="account-fieldset__input"
-          autocomplete="current-password"
-          type="password"
-          name="user[password]"
-          id="user_password">
-      </div>
-
-      <div class="account__divider">
-        <a href="{{ routes.new_reset_password_url }}" class="account__link">
-          {%- if reset_password_label != blank -%}
-            {{- reset_password_label -}}
-          {%- else -%}
-            Forgot your password?
-          {%- endif -%}
-        </a>
-      </div>
+      <hr class="account__separator">
 
       {%- if alert -%}
         <div class="account__alert account__alert--danger">
@@ -151,47 +113,73 @@
         </div>
       {%- endif -%}
 
-      <div class="account__divider">
-        <button
-          type="submit"
-          class="account__button button button--primary button--large"
-          name="commit"
-          data-disable-with="Log in"
-        >
-          {%- if login_label != blank -%}
-            {{- login_label -}}
-          {%- else -%}
-            Log in
-          {%- endif -%}
-        </button>
-      </div>
+      {%- form 'login' -%}
+        <div class="account-fieldset__block account__divider--small">
+          <label for="user_email" class="account-fieldset__label">
+            {{- email_label | default: "Email" | append: "*" -}}
+          </label>
 
-      <hr class="account__separator" />
+          <input
+            value="{{- form.email -}}"
+            class="account-fieldset__input"
+            autofocus="autofocus"
+            autocomplete="email"
+            type="email"
+            name="user[email]"
+            id="user_email">
+        </div>
 
-      {%- if shop.allow_signup -%}
-        <a href="{{ routes.register_url }}" class="account__button button button--outlined button--large">
-          {%- if create_account_label != blank -%}
-            {{- create_account_label -}}
-          {%- else -%}
-            Create an account
-          {%- endif -%}
-        </a>
-      {%- endif -%}
+        <div class="account-fieldset__block">
+          <label for="user_password" class="account-fieldset__label">
+            {{- password_label | default: "Password" | append: "*" -}}
+          </label>
 
-      {%- if shop.allow_guest_checkout and guest_checkout_url -%}
-        <a href="{{ guest_checkout_url }}" class="account__button account__button--minimal">
-          {%- if guest_label != blank -%}
-            {{- guest_label -}}
-          {%- else -%}
-            Continue as guest
-          {%- endif -%}
-        </a>
-      {%- endif -%}
-    {%- endform -%}
+          <input
+            value="{{- form.password -}}"
+            class="account-fieldset__input"
+            autocomplete="current-password"
+            type="password"
+            name="user[password]"
+            id="user_password">
+        </div>
+
+        <div class="account__divider text-center">
+          <button
+            type="submit"
+            class="account__button button button--primary button--large"
+            name="commit"
+            data-disable-with="Log in"
+          >
+            {{- button_login_label | default: "Log in" -}}
+          </button>
+        </div>
+
+        <div class="account__divider text-center">
+          <a href="{{ routes.new_reset_password_url }}" class="account__link">
+            {{- reset_password_label | default: "Forgot your password?" -}}
+          </a>
+        </div>
+
+        {%- if shop.allow_guest_checkout and guest_checkout_url -%}
+          <div class="account__divider text-center">
+            <a href="{{ guest_checkout_url }}" class="account__button account__button--minimal">
+              {{- button_minimal_label | default: "Continue as guest" -}}
+            </a>
+          </div>
+        {%- endif -%}
+      {%- endform -%}
+    </div>
   </div>
+  {%- if image.url != blank -%}
+    <div class="account__background-wrapper">
+      {%- render 'image',
+          image: image,
+          class: 'account__background-image',
+          size: 'xxl'
+      -%}
+    </div>
+  {%- endif -%}
 </div>
-
-{% include 'script-full-height' %}
 
 {% schema %}
   {
@@ -233,18 +221,62 @@
         "label": "Password label"
       },
       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Background image",
+        "default": "booqable://assets/image-curvilinear-lines.png"
+      },
+      {
+        "type": "number",
+        "id": "image_opacity",
+        "label": "Background overlay percentage",
+        "min": 0,
+        "max": 100,
+        "default": 10
+      },
+      {
+        "type": "select",
+        "id": "rounded_corners",
+        "label": "Rounded corners",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_border",
+        "label": "Show border",
+        "default": true
+      },
+      {
         "type": "header",
         "content": "Buttons settings"
       },
       {
         "type": "text",
-        "id": "login_label",
+        "id": "button_login_label",
         "label": "Log in button label"
       },
       {
         "type": "text",
-        "id": "create_account_label",
-        "label": "Create account button label"
+        "id": "button_signup_label",
+        "label": "Sign up button label"
       },
       {
         "type": "text",
@@ -253,7 +285,7 @@
       },
       {
         "type": "text",
-        "id": "guest_label",
+        "id": "button_minimal_label",
         "label": "Continue as guest button label"
       },
       {
