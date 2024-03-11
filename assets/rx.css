@@ -108,7 +108,7 @@
 }
 
 .bq-content.rx-content.text-large {
-  font-size: 20px;
+  font-size: calc(var(--font-size-large) + 2px);
   line-height: var(--line-height-lg);
 }
 

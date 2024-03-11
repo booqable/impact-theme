@@ -1,6 +1,6 @@
 {{ "contact-form.css" | asset_url | stylesheet_tag }}
 
-{%- assign button_label          = section.settings.button_label -%}
+{%- assign button_primary_label  = section.settings.button_primary_label -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
 {%- assign description           = section.settings.description -%}
 {%- assign email                 = section.settings.email -%}
@@ -78,7 +78,7 @@
           message: message,
           success_message: success_message,
           error_message: error_message,
-          button_label: button_label
+          button_label: button_primary_label
       -%}
     </div>
   </div>
@@ -158,7 +158,7 @@
       },
       {
         "type": "text",
-        "id": "button_label",
+        "id": "button_primary_label",
         "label": "Submit button label"
       },
       {
