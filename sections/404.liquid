@@ -7,7 +7,6 @@
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-{%- assign background_style      = settings.background_style -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -70,25 +69,6 @@
       </div>
     {%- endif -%}
   </div>
-
-  {%- unless background_style == 'none' -%}
-    <div class="error-404__background">
-      {%- if background_style == 'cubes' -%}
-        <div class="error-404__background-wrapper">
-          {%- render 'image-background-cubes' -%}
-        </div>
-      {%- elsif background_style == 'floral' -%}
-        <div class="error-404__background-floral-wrapper">
-          <div class="error-404__background-floral-col">
-            {%- render 'image-background-flover-3' -%}
-          </div>
-          <div class="error-404__background-floral-col">
-            {%- render 'image-background-flover-1' -%}
-          </div>
-        </div>
-      {%- endif -%}
-    </div>
-  {%- endunless -%}
 </div>
 
 {% schema %}

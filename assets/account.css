@@ -470,7 +470,6 @@
   bottom: 0;
   right: 0;
   overflow: hidden;
-  opacity: var(--image-opacity);
 }
 
 .account__background-image {

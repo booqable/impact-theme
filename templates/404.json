@@ -6,13 +6,13 @@
       "blocks": {},
       "block_order": [],
       "settings": {
-        "color_scheme": "set-2",
-        "description": "Sorry, there's <b>nothing here</b>",
-        "button_label": "Back to home",
-        "padding_top": "small",
-        "padding_top_mobile": "small",
-        "padding_bottom": "medium",
-        "padding_bottom_mobile": "medium"
+        "button_primary_label": "Go back to the homepage",
+        "color_scheme": "set-4",
+        "description": "Sorry, there's nothing here",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large"
       },
       "disabled": null
     }

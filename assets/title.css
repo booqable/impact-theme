@@ -2,7 +2,6 @@
   position: relative;
   overflow: hidden;
   background: var(--background-primary);
-  color: var(--color-secondary);
 }
 
 .title__wrapper--padding-top {
@@ -35,13 +34,13 @@
 .title__heading {
   font-weight: var(--font-weight-extrabold);
   margin-bottom: 0;
-  color: var(--color-primary);
 }
 
 .title__description {
   display: flex;
   align-items: center;
   flex-direction: column;
+  color: var(--color-outline);
 }
 
 .title__description ol,
@@ -73,6 +72,7 @@
   left: 50%;
   width: 100%;
   transform: translate(-50%, 0);
+  opacity: calc(100% - var(--image-opacity));
 }
 
 @media (min-width: 992px) {
@@ -82,5 +82,9 @@
 
   .title__wrapper--padding-bottom {
     padding-bottom: var(--padding-bottom);
+  }
+
+  .title__heading {
+    font-size: var(--font-size-h2);
   }
 }

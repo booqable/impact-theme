@@ -33,6 +33,22 @@
 {%- assign snapchat              = settings.social_snapchat_link -%}
 {%- assign youtube               = settings.social_youtube_link -%}
 {%- assign vimeo                 = settings.social_vimeo_link -%}
+{%- assign supported_template    = true -%}
+
+{%- case template -%}
+  {%- when 'activate-account' -%}
+    {%- assign supported_template = false -%}
+  {%- when 'edit-password' -%}
+    {%- assign supported_template = false -%}
+  {%- when 'login' -%}
+    {%- assign supported_template = false -%}
+  {%- when 'product' -%}
+    {%- assign supported_template = false -%}
+  {%- when 'register' -%}
+    {%- assign supported_template = false -%}
+  {%- when 'reset-password' -%}
+    {%- assign supported_template = false -%}
+{%- endcase -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -73,7 +89,7 @@
   {%- endcase -%}
 {%- endcapture -%}
 
-{%- render 'variables-mini-cart' -%}
+{%- render 'variables-mini-cart-button' -%}
 {% comment %} CSS variables end {% endcomment %}
 
 {%- if show_datepicker -%}
@@ -84,7 +100,7 @@
 
 {% comment %} Logo component {% endcomment %}
 {%- capture header_logo -%}
-  {%- if logo.url != blank or logo_transparent.url != blank and transparent_bg -%}
+  {%- if logo.url != blank or logo_transparent.url != blank and transparent_bg and supported_template -%}
     {%- if logo.url != blank -%}
       <span class="header__logo-inner">
         {%- render 'image',
@@ -97,7 +113,7 @@
         -%}
       </span>
     {%- endif -%}
-    {%- if logo_transparent.url != blank and transparent_bg -%}
+    {%- if logo_transparent.url != blank and transparent_bg and supported_template -%}
       <span class="header__logo-inner header__logo-inner--transparent">
         {%- render 'image',
             image: logo_transparent,
@@ -313,7 +329,7 @@
 {%- endcapture -%}
 
 <div
-  class="header__inner{% unless transparent_bg %} header__inner-background{% endunless %} color-{{- color_scheme.id -}}"
+  class="header__inner{% unless transparent_bg and supported_template %} header__inner-background{% endunless %} color-{{- color_scheme.id -}}"
   style="{{- variables | escape -}}"
 >
   <div class="header__content{% if padding_top != blank or padding_top_mobile != blank %} header__content--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} header__content--padding-bottom{%- endif -%}">
@@ -348,7 +364,7 @@
 <script>
   const header = document.querySelector('.header');
 
-  {% if transparent_bg %}
+  {% if transparent_bg and supported_template %}
     header.classList.add('header-transparent')
   {% endif %}
 

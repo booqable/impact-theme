@@ -51,6 +51,10 @@
 
     <bq-date-picker-modal branding-color="{{- background_accent -}}"></bq-date-picker-modal>
 
+    {%- if show_mini_cart -%}
+      {%- render 'variables-mini-cart' -%}
+    {%- endif -%}
+
     {{ content_for_body }}
 
   </body>

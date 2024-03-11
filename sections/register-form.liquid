@@ -11,7 +11,6 @@
 {%- assign description           = section.settings.description -%}
 {%- assign email_label           = section.settings.email_label -%}
 {%- assign image                 = section.settings.image -%}
-{%- assign image_opacity         = section.settings.image_opacity -%}
 {%- assign name_label            = section.settings.name_label -%}
 {%- assign password_label        = section.settings.password_label -%}
 {%- assign password_confirmation = section.settings.password_confirmation -%}
@@ -26,8 +25,6 @@
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
-  --image-opacity: {{- image_opacity | append: "%" -}};
-
   {%- case padding_top -%}
     {%- when 'small' -%}
       --padding-top: 40px;
@@ -363,16 +360,7 @@
       {
         "type": "image_picker",
         "id": "image",
-        "label": "Background image",
-        "default": "booqable://assets/image-curvilinear-lines.png"
-      },
-      {
-        "type": "number",
-        "id": "image_opacity",
-        "label": "Background overlay percentage",
-        "min": 0,
-        "max": 100,
-        "default": 10
+        "label": "Background image"
       },
       {
         "type": "select",

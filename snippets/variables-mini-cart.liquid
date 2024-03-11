@@ -1,23 +1,19 @@
 {% style %}
-  bq-minicart-button {
-    --minicart-button-accent-color: var(--background-accent);
-    --minicart-button-badge-color: var(--color-accent);
-    --minicart-button-badge-size: 12px;
-    --minicart-button-border-radius: var(--border-radius-circle);
-    --minicart-button-color: var(--background-primary);
-    --minicart-button-font: var(--font-body, --minicart-font, sans-serif);
-    --minicart-button-font-size: calc(var(--font-size-regular) - 2px);
-    --minicart-button-hover-color: var(--color-outline-hover);
-    --minicart-button-hover-opacity: 1;
-    --minicart-button-padding: 4px;
-    --minicart-button-size: 22px;
-    --minicart-button-transition-duration: var(--animation-duration);
-  }
-
-  .page-scrolled .header-transparent bq-minicart-button,
-  .header__inner-background bq-minicart-button,
-  .header__inner:has(#search-opener:checked) bq-minicart-button,
-  .header__inner:has(#mobile-menu-opener:checked) bq-minicart-button  {
-    --minicart-button-color: var(--color-primary);
+  [data-tid="Mini cart"] {
+    --minicart-accent-color: var(--background-accent);
+    --minicart-background-color: var(--background-primary);
+    --minicart-typo-color: var(--color-primary);
+    --minicart-header-color: var(--color-accent);
+    --minicart-warning-color: #f75454;
+    --minicart-warning-background-color: #f7545422;
+    --minicart-border-radius: var(--border-radius-rounded);
+    --minicart-border-color: var(--color-border);
+    --minicart-padding: 16px;
+    --minicart-image-width: 56px;
+    --minicart-z-index: 9999;
+    --minicart-font: var(--font-body, Source Sans Pro, sans-serif);
+    --minicart-font-size: 14px;
+    --minicart-font-weight-normal: 400;
+    --minicart-font-weight-bold: 600;
   }
 {% endstyle %}

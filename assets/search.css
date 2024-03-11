@@ -31,6 +31,10 @@
   justify-content: center;
 }
 
+.search__carousel {
+  margin-bottom: 40px;
+}
+
 .search__grid {
   font-size: var(--font-size-regular);
   font-weight: var(--font-weight-regular);
