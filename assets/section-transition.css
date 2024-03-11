@@ -5,7 +5,7 @@
 }
 
 .transition__sketch--top {
-  top: -2px;
+  top: -8px;
 }
 
 .transition__sketch--bottom {
@@ -45,4 +45,28 @@
 
 .transition__fade:after {
   background: linear-gradient(0deg, var(--color-transition-bottom) 11.17%, var(--color-transition-bottom-00) 41.57%);
+}
+
+@media (min-width: 375px) {
+  .transition__sketch--top {
+    top: -6px;
+  }
+}
+
+@media (min-width: 480px) {
+  .transition__sketch--top {
+    top: -4px;
+  }
+}
+
+@media (min-width: 576px) {
+  .transition__sketch--top {
+    top: -2px;
+  }
+}
+
+@media (min-width: 768px) {
+  .transition__sketch--top {
+    top: -1px;
+  }
 }
