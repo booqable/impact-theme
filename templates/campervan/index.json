@@ -1,0 +1,450 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_1": "Check out products",
+        "button_url_1": "booqable://products/",
+        "button_2": "More info",
+        "button_url_2": "booqable://root/",
+        "color_scheme": "set-4",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <br> varius enim in eros elementum tristique.",
+        "full_width": true,
+        "height": "medium",
+        "image": "booqable://assets/image-hero.jpeg",
+        "image_mobile": "",
+        "overlay_background": "#1A3333",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 72,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "text_position": "left",
+        "text_position_mobile": "left",
+        "title": "Explore like <br> a daredevil",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "Shop our products",
+        "button_url": "booqable://root/",
+        "color_scheme": "set-3",
+        "full_width": true,
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_transition": false,
+        "transition_color": "#FFFFFF",
+        "tag": "HIGHLIGHT",
+        "title": "Explore the ride <br> of your life"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection": {
+          "type": "collection",
+          "settings": {},
+          "disabled": null
+        },
+        "collection_242972": {
+          "type": "collection",
+          "settings": {},
+          "disabled": null
+        },
+        "collection_535502": {
+          "type": "collection",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection",
+        "collection_242972",
+        "collection_535502"
+      ],
+      "settings": {
+        "color_scheme": "set-4",
+        "counter_singular": "Item",
+        "counter_plural": "Items",
+        "full_width": true,
+        "grid": "three",
+        "overlay_background": "#1A3333",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "none",
+        "spacing_mobile": "none"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123455": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123454": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123453": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123452": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123451": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123450": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123449": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product",
+        "product_123455",
+        "product_123454",
+        "product_123453",
+        "product_123452",
+        "product_123451",
+        "product_123450",
+        "product_123449"
+      ],
+      "settings": {
+        "borders": "image",
+        "button_label": "See all products",
+        "button_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "image": "",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "This week",
+        "tag_image": "",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial": {
+          "type": "testimonial",
+          "settings": {
+            "button": "Check review online",
+            "button_url": "booqable://root/",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234567": {
+          "type": "testimonial",
+          "settings": {
+            "button": "Check review online",
+            "button_url": "booqable://root/",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial",
+        "testimonial_234567"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_navigation": true,
+        "title": "What people <br>say about us"
+      },
+      "disabled": null
+    },
+    "logos": {
+      "type": "logos",
+      "blocks": {
+        "logo": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-1-black.png"
+          },
+          "disabled": null
+        },
+        "logo_478138": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-2-black.png"
+          },
+          "disabled": null
+        },
+        "logo_478148": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-3-black.png"
+          },
+          "disabled": null
+        },
+        "logo_478178": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-1-black.png"
+          },
+          "disabled": null
+        },
+        "logo_478118": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-3-black.png"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "logo",
+        "logo_478138",
+        "logo_478148",
+        "logo_478178",
+        "logo_478118"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "title": "TRUSTED BY:",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "small"
+      },
+      "disabled": false
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Tagline",
+            "heading": "Medium length section heading goes here",
+            "image": "booqable://assets/image-articles-1.jpg",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+          },
+          "disabled": null
+        },
+        "article_456231": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Tagline",
+            "heading": "Medium length section heading goes here",
+            "image": "booqable://assets/image-articles-2.jpg",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+          },
+          "disabled": null
+        },
+        "article_456232": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Tagline",
+            "heading": "Medium length section heading goes here",
+            "image": "booqable://assets/image-articles-3.jpg",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article",
+        "article_456231",
+        "article_456232"
+      ],
+      "settings": {
+        "button_label": "See all Articles",
+        "button_url": "booqable://root/",
+        "color_scheme": "set-4",
+        "full_width": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "title": "What's in the news"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item": {
+          "type": "item",
+          "settings": {
+            "heading": "How do I rent a product from your shop?",
+            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+          },
+          "disabled": null
+        },
+        "item_478139": {
+          "type": "item",
+          "settings": {
+            "heading": "How do I rent a product from your shop?",
+            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+          },
+          "disabled": null
+        },
+        "item_478145": {
+          "type": "item",
+          "settings": {
+            "heading": "How do I rent a product from your shop?",
+            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item",
+        "item_478139",
+        "item_478145"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "color_scheme": "set-5",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "image": "booqable://assets/image-curvilinear-lines.png",
+        "image_opacity": 10,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_borders": true,
+        "title": "FAQ"
+      },
+      "disabled": null
+    },
+    "socials": {
+      "type": "socials",
+      "blocks": {
+        "item": {
+          "type": "item",
+          "settings": {
+            "image": "booqable://assets/image-socials-1.jpg",
+            "url": "booqable://root/"
+          },
+          "disabled": null
+        },
+        "item_478118": {
+          "type": "item",
+          "settings": {
+            "image": "booqable://assets/image-socials-2.jpg",
+            "url": "booqable://collections/"
+          },
+          "disabled": null
+        },
+        "item_478117": {
+          "type": "item",
+          "settings": {
+            "image": "booqable://assets/image-socials-3.jpg",
+            "url": "booqable://products/"
+          },
+          "disabled": null
+        },
+        "item_478116": {
+          "type": "item",
+          "settings": {
+            "image": "booqable://assets/image-socials-4.jpg",
+            "url": "booqable://pages/contact/"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item",
+        "item_478118",
+        "item_478117",
+        "item_478116"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "full_width": true,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "title": "Express yourself with <br>#explorable on Instagram"
+      },
+      "disabled": false
+    }
+  },
+  "order": [
+    "hero",
+    "call-to-action",
+    "collections",
+    "products",
+    "testimonials",
+    "logos",
+    "articles",
+    "accordion",
+    "socials"
+  ]
+}

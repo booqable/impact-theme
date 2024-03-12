@@ -261,7 +261,7 @@
         "type": "image_picker",
         "id": "image_placeholder",
         "label": "Image placeholder",
-        "default": "booqable://assets/image-placeholder.png",
+        "default": "booqable://assets/image-placeholder.jpg",
         "info": "This image displays on products and collections if they don't have any images"
       }
     ]
