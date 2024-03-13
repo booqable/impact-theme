@@ -1,0 +1,72 @@
+.transition__sketch {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.transition__sketch--top {
+  top: -8px;
+}
+
+.transition__sketch--bottom {
+  bottom: -7px;
+}
+
+.transition__sketch svg {
+  width: 100%;
+}
+
+.transition__sketch--top path {
+  fill: var(--color-transition-top);
+}
+
+.transition__sketch--bottom path {
+  fill: var(--color-transition-bottom);
+}
+
+.transition__fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.transition__fade:after,
+.transition__fade:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, var(--color-transition-top) 11.17%, var(--color-transition-top-00) 41.57%);
+}
+
+.transition__fade:after {
+  background: linear-gradient(0deg, var(--color-transition-bottom) 11.17%, var(--color-transition-bottom-00) 41.57%);
+}
+
+@media (min-width: 375px) {
+  .transition__sketch--top {
+    top: -6px;
+  }
+}
+
+@media (min-width: 480px) {
+  .transition__sketch--top {
+    top: -4px;
+  }
+}
+
+@media (min-width: 576px) {
+  .transition__sketch--top {
+    top: -2px;
+  }
+}
+
+@media (min-width: 768px) {
+  .transition__sketch--top {
+    top: -1px;
+  }
+}

@@ -86,10 +86,10 @@
             {%- if image.url != blank -%}
               <div class="columns__image-wrapper">
                 {%- render 'image',
-                  image: image,
-                  loading: 'lazy',
-                  class: 'columns__image',
-                  size: 'm'
+                    image: image,
+                    loading: 'lazy',
+                    class: 'columns__image',
+                    size: 'm'
                 -%}
               </div>
             {%- elsif icon != "empty" -%}
@@ -101,7 +101,7 @@
             {%- if title != blank or text != blank or button_label != blank -%}
               <div class="columns__text">
                 {%- if title != blank -%}
-                  <strong class="columns__title">{{- title -}}</strong>
+                  <strong class="columns__title h6">{{- title -}}</strong>
                 {%- endif -%}
 
                 {%- if text != blank -%}

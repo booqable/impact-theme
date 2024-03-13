@@ -1,0 +1,68 @@
+{% comment %}
+
+  This snippet is used for rendering the transitions between 2 sections
+
+  style - string *required,
+  color_bottom - color *required,
+  color_top: color *required,
+  image_bottom: image *required,
+  image_top: image *required,
+  show_top: boolean *required,
+  show_bottom: boolean *required
+
+  product - { product } *required,
+  placeholder - image optional,
+  border - string optional,
+  focal - boolean optional,
+  img_size - string optional,
+  show_excerpt - boolean *required
+
+  Usage:
+
+  {%- render 'section-transition',
+      style: transition_style,
+      color_bottom: transition_color_bottom,
+      color_top: transition_color_top,
+      image_bottom: image_bottom,
+      image_top: image_top,
+      show_top: show_transition_top,
+      show_bottom: show_transition_bottom
+  -%}
+
+{% endcomment %}
+
+{%- unless style == "none" -%}
+  {{ "section-transition.css" | asset_url | stylesheet_tag }}
+
+  {%- if show_top -%}
+    {%- capture variables_top -%}
+      --color-transition-top: {{- color_top -}};
+      --color-transition-top-00: {{- color_top | append: "00" -}};
+    {%- endcapture -%}
+  {%- endif -%}
+
+  {%- if show_bottom -%}
+    {%- capture variables_bottom -%}
+      --color-transition-bottom: {{- color_bottom -}};
+      --color-transition-bottom-00: {{- color_bottom | append: "00" -}};
+    {%- endcapture -%}
+  {%- endif -%}
+{%- endunless -%}
+
+{%- if style == "fade" and show_top or style == "fade" and show_bottom -%}
+  <div class="transition__fade{% if show_top %} transition__fade--top{% endif %}{% if show_bottom %} transition__fade--bottom{%- endif -%}" style="{{- variables_top | escape }} {{ variables_bottom | escape -}}"></div>
+{%- endif -%}
+
+{%- if style == "sketch" -%}
+  {%- if show_top -%}
+    <div class="transition__sketch transition__sketch--top" style="{{- variables_top | escape -}}">
+      {{- image_top -}}
+    </div>
+  {%- endif -%}
+
+  {%- if show_bottom -%}
+    <div class="transition__sketch transition__sketch--bottom" style="{{- variables_bottom | escape -}}">
+      {{- image_bottom -}}
+    </div>
+  {%- endif -%}
+{%- endif -%}

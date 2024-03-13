@@ -68,7 +68,6 @@
 }
 
 .columns__title {
-  font-size: calc(var(--font-size-large) + 2px);
   display: block;
   color: inherit;
   margin-bottom: 15px;

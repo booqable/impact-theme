@@ -25,8 +25,13 @@
         "padding_top_mobile": "large",
         "rounded_corners": "none",
         "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": false,
         "text_position": "left",
         "text_position_mobile": "left",
+        "transition_color_bottom": "#53C787",
+        "transition_color_top": "#53C787",
+        "transition_style": "sketch",
         "title": "Explore like <br> a daredevil",
         "video_url": ""
       },
@@ -37,20 +42,27 @@
       "blocks": {},
       "block_order": [],
       "settings": {
-        "button_label": "Shop our products",
-        "button_url": "booqable://root/",
-        "color_scheme": "set-3",
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-2",
         "full_width": true,
-        "image": "booqable://assets/image-cta-2.jpeg",
-        "padding_bottom": "large",
-        "padding_bottom_mobile": "large",
-        "padding_top": "large",
-        "padding_top_mobile": "large",
+        "height": "auto",
+        "image": "",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
         "rounded_corners": "none",
-        "show_transition": false,
-        "transition_color": "#FFFFFF",
-        "tag": "HIGHLIGHT",
-        "title": "Explore the ride <br> of your life"
+        "show_overlay": false,
+        "show_transition_top": false,
+        "show_transition_bottom": false,
+        "tag": "",
+        "title": "Let’s find the <br>perfect bike for your trip",
+        "transition_color_bottom": "#1A3333",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "fade"
       },
       "disabled": null
     },
@@ -59,17 +71,23 @@
       "blocks": {
         "collection": {
           "type": "collection",
-          "settings": {},
+          "settings": {
+            "collection": "all-iphones"
+          },
           "disabled": null
         },
         "collection_242972": {
           "type": "collection",
-          "settings": {},
+          "settings": {
+            "collection": "laptops"
+          },
           "disabled": null
         },
         "collection_535502": {
           "type": "collection",
-          "settings": {},
+          "settings": {
+            "collection": "keyboards"
+          },
           "disabled": null
         }
       },
@@ -175,14 +193,44 @@
       },
       "disabled": null
     },
+    "call-to-action_147852": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Shop our products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-3",
+        "full_width": true,
+        "height": "auto",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_top": true,
+        "show_transition_bottom": false,
+        "tag": "HIGHLIGHT",
+        "title": "Explore the ride <br> of your life",
+        "transition_color_bottom": "#000000",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "fade"
+      },
+      "disabled": null
+    },
     "testimonials": {
       "type": "testimonials",
       "blocks": {
         "testimonial": {
           "type": "testimonial",
           "settings": {
-            "button": "Check review online",
-            "button_url": "booqable://root/",
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "image": "booqable://assets/image-avatar-1.png",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
@@ -192,10 +240,23 @@
         "testimonial_234567": {
           "type": "testimonial",
           "settings": {
-            "button": "Check review online",
-            "button_url": "booqable://root/",
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "image": "booqable://assets/image-avatar-2.png",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Rick Gebhardt",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234568": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "image": "booqable://assets/image-avatar-3.png",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Adrian Vajas",
             "position": "04-05-2023"
           },
           "disabled": null
@@ -203,7 +264,8 @@
       },
       "block_order": [
         "testimonial",
-        "testimonial_234567"
+        "testimonial_234567",
+        "testimonial_234568"
       ],
       "settings": {
         "color_scheme": "set-3",
@@ -319,8 +381,8 @@
         "article_456232"
       ],
       "settings": {
-        "button_label": "See all Articles",
-        "button_url": "booqable://root/",
+        "button_outline_label": "See all Articles",
+        "button_outline_url": "booqable://root/",
         "color_scheme": "set-4",
         "full_width": true,
         "padding_bottom": "medium",
@@ -328,7 +390,41 @@
         "padding_top": "medium",
         "padding_top_mobile": "medium",
         "rounded_corners": "none",
+        "show_transition_bottom": false,
+        "show_transition_top": true,
+        "transition_color_bottom": "#E06B48",
+        "transition_color_top": "#E06B48",
+        "transition_style": "sketch",
         "title": "What's in the news"
+      },
+      "disabled": null
+    },
+    "call-to-action_123098": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-3",
+        "full_width": true,
+        "height": "large",
+        "image": "booqable://assets/image-cta-1.jpg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_top": true,
+        "show_transition_bottom": false,
+        "tag": "",
+        "title": "Are you ready?",
+        "transition_color_bottom": "#000000",
+        "transition_color_top": "#1A3333",
+        "transition_style": "sketch"
       },
       "disabled": null
     },
@@ -370,7 +466,6 @@
         "color_scheme": "set-5",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
         "image": "booqable://assets/image-curvilinear-lines.png",
-        "image_opacity": 10,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
@@ -441,9 +536,11 @@
     "call-to-action",
     "collections",
     "products",
+    "call-to-action_147852",
     "testimonials",
     "logos",
     "articles",
+    "call-to-action_123098",
     "accordion",
     "socials"
   ]

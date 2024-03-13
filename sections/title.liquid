@@ -1,15 +1,29 @@
 {{ "title.css" | asset_url | stylesheet_tag }}
 
-{%- assign custom_title          = section.settings.custom_title -%}
-{%- assign custom_description    = section.settings.custom_description -%}
-{%- assign image                 = section.settings.image -%}
-{%- assign full_width            = section.settings.full_width -%}
-{%- assign color_scheme          = section.settings.color_scheme -%}
-{%- assign rounded_corners       = section.settings.rounded_corners -%}
-{%- assign padding_top           = section.settings.padding_top -%}
-{%- assign padding_bottom        = section.settings.padding_bottom -%}
-{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
-{%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign custom_title            = section.settings.custom_title -%}
+{%- assign custom_description      = section.settings.custom_description -%}
+{%- assign image                   = section.settings.image -%}
+{%- assign full_width              = section.settings.full_width -%}
+{%- assign color_scheme            = section.settings.color_scheme -%}
+{%- assign rounded_corners         = section.settings.rounded_corners -%}
+{%- assign padding_top             = section.settings.padding_top -%}
+{%- assign padding_bottom          = section.settings.padding_bottom -%}
+{%- assign padding_top_mobile      = section.settings.padding_top_mobile -%}
+{%- assign padding_bottom_mobile   = section.settings.padding_bottom_mobile -%}
+{%- assign page_title              = page_title | split: " | " | first | remove: ":"-%}
+{%- assign show_transition_bottom  = section.settings.show_transition_bottom -%}
+{%- assign show_transition_top     = section.settings.show_transition_top -%}
+{%- assign transition_color_bottom = section.settings.transition_color_bottom -%}
+{%- assign transition_color_top    = section.settings.transition_color_top -%}
+{%- assign transition_style        = section.settings.transition_style -%}
+
+{%- capture image_top -%}
+  {%- render 'image-transition-3' -%}
+{%- endcapture -%}
+
+{%- capture image_bottom -%}
+  {%- render 'image-transition-1' -%}
+{%- endcapture -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -73,7 +87,7 @@
       <div class="title__container container">
   {%- endif -%}
         <div class="title__content">
-          <h2 class="title__heading">
+          <h2 class="title__heading h4">
             {{- custom_title | default: collection.title | default: page_title -}}
           </h2>
 
@@ -85,7 +99,7 @@
       </div>
   {%- endif -%}
 
-  {%- if image != blank -%}
+  {%- if image.url != blank -%}
       <div class="title__background">
         {%- render 'image',
             image: image,
@@ -95,6 +109,15 @@
         -%}
       </div>
   {%- endif -%}
+      {%- render 'section-transition',
+          style: transition_style,
+          color_bottom: transition_color_bottom,
+          color_top: transition_color_top,
+          image_bottom: image_bottom,
+          image_top: image_top,
+          show_top: show_transition_top,
+          show_bottom: show_transition_bottom
+      -%}
     </div>
 {% unless full_width %}
   </div>
@@ -131,7 +154,7 @@
       },
       {
         "type": "header",
-        "content": "Background image settings"
+        "content": "Background settings"
       },
       {
         "type": "image_picker",
@@ -167,6 +190,54 @@
         "id": "full_width",
         "label": "Full-width background",
         "default": true
+      },
+      {
+        "type": "header",
+        "content": "Section transitions"
+      },
+      {
+        "type": "select",
+        "id": "transition_style",
+        "label": "Transition style",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "fade",
+            "label": "Fade"
+          },
+          {
+            "value": "sketch",
+            "label": "Sketch"
+          }
+        ],
+        "default": "fade"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_transition_top",
+        "label": "Show top transition",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "transition_color_top",
+        "label": "Top transition color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_transition_bottom",
+        "label": "Show bottom transition",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "transition_color_bottom",
+        "label": "Bottom transition color",
+        "default": "#000000"
       },
       {
         "type": "header",

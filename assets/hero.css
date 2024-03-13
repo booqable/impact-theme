@@ -135,6 +135,10 @@
   color: var(--color-overlay);
 }
 
+.hero .transition__sketch--top {
+  transform: scale(-1, 1);
+}
+
 @media (min-width: 428px) {
   .hero__container {
     min-height: 560px;

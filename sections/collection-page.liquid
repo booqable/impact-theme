@@ -12,6 +12,7 @@
 {%- assign image_placeholder 	   = settings.image_placeholder -%}
 {%- assign is_focal              = settings.use_focal_images -%}
 {%- assign limit                 = section.settings.limit -%}
+{%- assign menu                  = false -%}
 {%- assign message               = section.settings.message -%}
 {%- assign mobile_toggler        = section.settings.mobile_toggler -%}
 {%- assign padding_top           = section.settings.padding_top -%}
@@ -22,6 +23,14 @@
 {%- assign show_amount           = section.settings.show_amount -%}
 {%- assign show_excerpt          = section.settings.show_excerpt -%}
 {%- assign sticky_sidebar        = section.settings.sticky_sidebar -%}
+
+{%- for block in section.blocks -%}
+  {%- assign menu = block.settings.menu -%}
+
+  {%- if menu != blank -%}
+    {%- assign menu = true -%}
+  {%- endif -%}
+{%- endfor -%}
 
 {%- case borders -%}
   {%- when 'image' -%}
@@ -105,7 +114,7 @@
       </div>
     {%- endif -%}
 
-    {%- if section.blocks.size > 0 -%}
+    {%- if menu -%}
       <div class="collection-page__grid">
         <div class="collection-page__sidebar">
           {%- render 'sidebar',
@@ -134,7 +143,7 @@
 
             {%- if paginate.pages > 1 -%}
               <div class="collection-page__pagination{% if full_width %} container{%- endif -%}">
-                {%- render "pagination", paginate: paginate -%}
+                {%- render 'pagination', paginate: paginate -%}
               </div>
             {%- endif -%}
           {%- endpaginate -%}
@@ -143,7 +152,7 @@
           <p>{{- message -}}</p>
         {%- endif -%}
 
-    {%- if section.blocks.size > 0 -%}
+    {%- if menu -%}
       </div>
     {%- endif -%}
   {%- unless full_width -%}
