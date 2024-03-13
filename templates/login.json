@@ -8,7 +8,6 @@
       "settings": {
         "color_scheme": "set-1",
         "image": "booqable://assets/image-curvilinear-lines.png",
-        "image_opacity": 10,
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
         "padding_top": "large",

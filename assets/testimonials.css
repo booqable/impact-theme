@@ -14,10 +14,6 @@
   margin: 0 0 50px;
 }
 
-.testimonials__title {
-  font-size: 40px;
-}
-
 .testimonials__bg-image-wrapper {
   display: none;
 }
@@ -192,26 +188,16 @@
     left: auto;
   }
 
-  .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel .carousel__wrapper {
-    margin: 0 -16px;
-    width: calc(100% + 32px);
-  }
-
   .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel .carousel__inner {
     padding-right: 16px;
   }
 
-  .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel .carousel__item:first-child,
   .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel .carousel__item:last-child {
-    min-width: var(--slide-width);
-  }
-
-  .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel .carousel__item:first-child .carousel__inner {
-    padding-left: 16px;
+    min-width: calc(var(--slide-width) - 16px);
   }
 
   .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel .carousel__item:last-child .carousel__inner {
-    padding-right: 16px;
+    padding-right: 0;
   }
 
   .testimonials__wrapper .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel.controls .carousel__wrapper {

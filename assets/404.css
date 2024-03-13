@@ -27,108 +27,25 @@
 }
 
 .error-404__title {
-  font-size: clamp(72px, 10.3vw, 148px);
-  font-weight: var(--font-weight-light);
+  font-size: clamp(72px, 12.5vw, 180px);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-sm);
   text-align: center;
   color: currentColor;
 }
 
-div.error-404__container .error-404__description {
-  font-size: clamp(24px, 2.7vw, 40px);
-  font-weight: var(--font-weight-medium);
+.error-404__container .error-404__description {
+  font-size: calc(var(--font-size-large) + 2px);
   line-height: var(--line-height-sm);
   text-align: center;
-  color: currentColor;
+  color: var(--color-secondary);
   padding: 0 0 20px;
-}
-
-.error-404__description b {
-  font-weight: inherit;
-  color: var(--color-outline);
 }
 
 .error-404__buttons {
   padding: 18px 0 0;
   margin-bottom: calc(-1 * var(--button-margin-bottom));
   text-align: center;
-}
-
-.error-404__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.error-404__background g,
-.error-404__background path {
-  fill: var(--color-primary);
-}
-
-.error-404__background-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(173.19deg, var(--background-primary) 33.02%, var(--background-primary-00) 93.23%);
-}
-
-.error-404__background-wrapper svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 100%;
-  min-width: 100%;
-  opacity: 0.1;
-}
-
-.error-404__background-floral-wrapper {
-  display: flex;
-  height: 100%;
-}
-
-.error-404__background-floral-wrapper svg {
-  position: absolute;
-  bottom: 0;
-  right: 30px;
-  opacity: 0.2;
-  max-height: 100%;
-}
-
-.error-404__background-floral-col {
-  position: relative;
-  width: 100%;
-}
-
-.error-404__background-floral-col:first-child {
-  display: none;
-}
-
-.error-404__background-floral-col:first-child svg {
-  transform:rotate(180deg);
-  top: 0;
-  right: auto;
-  bottom: auto;
-  left: 0;
-  max-height: none;
-}
-
-@media (min-width: 768px) {
-  .error-404__background-floral-col:first-child {
-    display: block;
-  }
-}
-
-@media (min-width: 810px) {
-  .error-404__background-wrapper svg {
-    min-height: 100%;
-    height: auto;
-  }
 }
 
 @media (min-width: 992px) {

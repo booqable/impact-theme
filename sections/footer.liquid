@@ -144,13 +144,13 @@
     <div class="footer__icons">
       {%- if facebook != blank or instagram != blank or twitter != blank or linkedin != blank or pinterest != blank or tiktok != blank or tumblr != blank or snapchat != blank or youtube != blank or vimeo != blank -%}
         <div class="footer__social">
-          {%- render "socials", settings: settings -%}
+          {%- render 'socials', settings: settings -%}
         </div>
       {%- endif -%}
 
       {%- if payment_methods.size > 0 -%}
         <div class="footer__payments payments">
-          {%- render "payments", payments: payment_methods -%}
+          {%- render 'payments', payments: payment_methods -%}
         </div>
       {%- endif -%}
     </div>

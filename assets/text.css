@@ -24,4 +24,8 @@
   .text__wrapper--padding-bottom {
     padding-bottom: var(--padding-bottom, 0);
   }
+
+  .text__title {
+    font-size: var(--font-size-h2);
+  }
 }

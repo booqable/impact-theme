@@ -1,6 +1,12 @@
 .articles__wrapper {
   color: var(--color-accent);
   background: var(--background-accent);
+  position: relative;
+}
+
+.articles__wrapper .articles__container {
+  position: relative;
+  z-index: 1;
 }
 
 .articles > .articles__container {
@@ -131,6 +137,10 @@
 
 .articles__top + .articles__list {
   padding: 8px 0 0;
+}
+
+.articles .transition__sketch--top svg {
+  transform:rotate(180deg);
 }
 
 @media (min-width: 992px) {

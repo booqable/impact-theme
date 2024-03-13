@@ -12,10 +12,6 @@
   padding-top: var(--padding-top-mobile, 0);
 }
 
-.header-transparent ~ main > section:first-child:has(.account) .account--padding-top {
-  padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
-}
-
 .account--padding-bottom {
   padding-bottom: var(--padding-bottom-mobile, 0);
 }
@@ -470,7 +466,6 @@
   bottom: 0;
   right: 0;
   overflow: hidden;
-  opacity: var(--image-opacity);
 }
 
 .account__background-image {
@@ -489,10 +484,6 @@
 @media (min-width: 992px) {
   .account--padding-top {
     padding-top: var(--padding-top, 0);
-  }
-
-  .header-transparent ~ main > section:first-child:has(.account) .account--padding-top {
-    padding-top: calc(var(--padding-top, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
   }
 
   .account--padding-bottom {

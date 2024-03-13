@@ -1,28 +1,41 @@
 {{ "hero.css" | asset_url | stylesheet_tag }}
 
-{%- assign color_scheme          = section.settings.color_scheme -%}
-{%- assign full_width            = section.settings.full_width -%}
-{%- assign height                = section.settings.height -%}
-{%- assign padding_top           = section.settings.padding_top -%}
-{%- assign padding_bottom        = section.settings.padding_bottom -%}
-{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
-{%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-{%- assign rounded_corners       = section.settings.rounded_corners -%}
-{%- assign title                 = section.settings.title -%}
-{%- assign description           = section.settings.description -%}
-{%- assign image                 = section.settings.image -%}
-{%- assign image_mobile          = section.settings.image_mobile -%}
-{%- assign video_url             = section.settings.video_url | strip -%}
-{%- assign show_overlay          = section.settings.show_overlay -%}
-{%- assign overlay_background    = section.settings.overlay_background -%}
-{%- assign overlay_color         = section.settings.overlay_color -%}
-{%- assign overlay_opacity       = section.settings.overlay_opacity -%}
-{%- assign button_primary_label  = section.settings.button_primary_label -%}
-{%- assign button_primary_url    = section.settings.button_primary_url -%}
-{%- assign button_outline_label  = section.settings.button_outline_label -%}
-{%- assign button_outline_url    = section.settings.button_outline_url -%}
-{%- assign text_position         = section.settings.text_position -%}
-{%- assign text_position_mobile  = section.settings.text_position_mobile -%}
+{%- assign button_primary_label    = section.settings.button_primary_label -%}
+{%- assign button_primary_url      = section.settings.button_primary_url -%}
+{%- assign button_outline_label    = section.settings.button_outline_label -%}
+{%- assign button_outline_url      = section.settings.button_outline_url -%}
+{%- assign color_scheme            = section.settings.color_scheme -%}
+{%- assign description             = section.settings.description -%}
+{%- assign full_width              = section.settings.full_width -%}
+{%- assign height                  = section.settings.height -%}
+{%- assign image                   = section.settings.image -%}
+{%- assign image_mobile            = section.settings.image_mobile -%}
+{%- assign overlay_background      = section.settings.overlay_background -%}
+{%- assign overlay_color           = section.settings.overlay_color -%}
+{%- assign overlay_opacity         = section.settings.overlay_opacity -%}
+{%- assign padding_bottom          = section.settings.padding_bottom -%}
+{%- assign padding_bottom_mobile   = section.settings.padding_bottom_mobile -%}
+{%- assign padding_top             = section.settings.padding_top -%}
+{%- assign padding_top_mobile      = section.settings.padding_top_mobile -%}
+{%- assign rounded_corners         = section.settings.rounded_corners -%}
+{%- assign show_overlay            = section.settings.show_overlay -%}
+{%- assign show_transition_bottom  = section.settings.show_transition_bottom -%}
+{%- assign show_transition_top     = section.settings.show_transition_top -%}
+{%- assign text_position           = section.settings.text_position -%}
+{%- assign text_position_mobile    = section.settings.text_position_mobile -%}
+{%- assign title                   = section.settings.title -%}
+{%- assign transition_color_bottom = section.settings.transition_color_bottom -%}
+{%- assign transition_color_top    = section.settings.transition_color_top -%}
+{%- assign transition_style        = section.settings.transition_style -%}
+{%- assign video_url               = section.settings.video_url | strip -%}
+
+{%- capture image_top -%}
+  {%- render 'image-transition-3' -%}
+{%- endcapture -%}
+
+{%- capture image_bottom -%}
+  {%- render 'image-transition-1' -%}
+{%- endcapture -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -227,7 +240,7 @@
           </div>
 
         {%- elsif image != blank or image_mobile != blank -%}
-          {%- if image != blank -%}
+          {%- if image.url != blank -%}
             <div class="hero__vision-wrapper{% if image_mobile != blank %} hero__vision-wrapper--desktop{% endif %}{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
               {%- render 'image',
                 image: image,
@@ -238,7 +251,7 @@
             </div>
           {%- endif -%}
 
-          {%- if image_mobile != blank -%}
+          {%- if image_mobile.url != blank -%}
             <div class="hero__vision-wrapper hero__vision-wrapper--mobile{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
               {%- render 'image',
                 image: image_mobile,
@@ -250,6 +263,16 @@
           {%- endif -%}
         {%- endif -%}
       </div>
+
+      {%- render 'section-transition',
+          style: transition_style,
+          color_bottom: transition_color_bottom,
+          color_top: transition_color_top,
+          image_bottom: image_bottom,
+          image_top: image_top,
+          show_top: show_transition_top,
+          show_bottom: show_transition_bottom
+      -%}
     </div>
 {% unless full_width %}
   </div>
@@ -287,8 +310,7 @@
       {
         "type": "image_picker",
         "id": "image",
-        "label": "Image",
-        "default": "booqable://assets/image-hero.jpeg"
+        "label": "Image"
       },
       {
         "type": "image_picker",
@@ -360,6 +382,54 @@
         "min": 0,
         "max": 100,
         "default": 72
+      },
+      {
+        "type": "header",
+        "content": "Section transitions"
+      },
+      {
+        "type": "select",
+        "id": "transition_style",
+        "label": "Transition style",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "fade",
+            "label": "Fade"
+          },
+          {
+            "value": "sketch",
+            "label": "Sketch"
+          }
+        ],
+        "default": "fade"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_transition_top",
+        "label": "Show top transition",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "transition_color_top",
+        "label": "Top transition color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_transition_bottom",
+        "label": "Show bottom transition",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "transition_color_bottom",
+        "label": "Bottom transition color",
+        "default": "#000000"
       },
       {
         "type": "header",

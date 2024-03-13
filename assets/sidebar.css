@@ -18,10 +18,6 @@
   fill: var(--color-outline);
 }
 
-.sidebar__heading {
-  font-size: 24px;
-}
-
 .sidebar__menu {
   padding: 0 0 16px;
   margin: 0 0 24px;
