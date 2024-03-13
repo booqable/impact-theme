@@ -84,7 +84,7 @@
         <div class="testimonials__side{% if title == blank and image_background != blank %} testimonials__side--desktop-hidden{%- endif -%}">
           <h2 class="testimonials__title h4">{{- title -}}</h2>
 
-          {%- if image_background != blank -%}
+          {%- if image_background.url != blank -%}
             <div class="testimonials__bg-image-wrapper">
               {%- render 'image',
                   image: image_background,
@@ -123,7 +123,7 @@
 
                           {%- if name != blank or position != blank -%}
                             <footer>
-                              {%- if image != blank -%}
+                              {%- if image.url != blank -%}
                                 <span class="testimonials__image-wrapper">
                                   {%- render 'image',
                                       image: image,

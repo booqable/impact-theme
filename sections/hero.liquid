@@ -30,11 +30,11 @@
 {%- assign video_url               = section.settings.video_url | strip -%}
 
 {%- capture image_top -%}
-  {%- render "image-transition-3" -%}
+  {%- render 'image-transition-3' -%}
 {%- endcapture -%}
 
 {%- capture image_bottom -%}
-  {%- render "image-transition-1" -%}
+  {%- render 'image-transition-1' -%}
 {%- endcapture -%}
 
 {% comment %} CSS variables start {% endcomment %}
@@ -240,7 +240,7 @@
           </div>
 
         {%- elsif image != blank or image_mobile != blank -%}
-          {%- if image != blank -%}
+          {%- if image.url != blank -%}
             <div class="hero__vision-wrapper{% if image_mobile != blank %} hero__vision-wrapper--desktop{% endif %}{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
               {%- render 'image',
                 image: image,
@@ -251,7 +251,7 @@
             </div>
           {%- endif -%}
 
-          {%- if image_mobile != blank -%}
+          {%- if image_mobile.url != blank -%}
             <div class="hero__vision-wrapper hero__vision-wrapper--mobile{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
               {%- render 'image',
                 image: image_mobile,

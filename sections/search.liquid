@@ -151,7 +151,7 @@
 
                 {%- if paginate.pages > 1 -%}
                   <div class="search__pagination{% if full_width %} container{%- endif -%}">
-                    {%- render "pagination", paginate: paginate -%}
+                    {%- render 'pagination', paginate: paginate -%}
                   </div>
                 {%- endif -%}
               {%- endpaginate -%}

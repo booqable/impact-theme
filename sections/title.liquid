@@ -18,11 +18,11 @@
 {%- assign transition_style        = section.settings.transition_style -%}
 
 {%- capture image_top -%}
-  {%- render "image-transition-3" -%}
+  {%- render 'image-transition-3' -%}
 {%- endcapture -%}
 
 {%- capture image_bottom -%}
-  {%- render "image-transition-1" -%}
+  {%- render 'image-transition-1' -%}
 {%- endcapture -%}
 
 {% comment %} CSS variables start {% endcomment %}
@@ -99,7 +99,7 @@
       </div>
   {%- endif -%}
 
-  {%- if image != blank -%}
+  {%- if image.url != blank -%}
       <div class="title__background">
         {%- render 'image',
             image: image,
@@ -109,14 +109,14 @@
         -%}
       </div>
   {%- endif -%}
-    {%- render 'section-transition',
-        style: transition_style,
-        color_bottom: transition_color_bottom,
-        color_top: transition_color_top,
-        image_bottom: image_bottom,
-        image_top: image_top,
-        show_top: show_transition_top,
-        show_bottom: show_transition_bottom
+      {%- render 'section-transition',
+          style: transition_style,
+          color_bottom: transition_color_bottom,
+          color_top: transition_color_top,
+          image_bottom: image_bottom,
+          image_top: image_top,
+          show_top: show_transition_top,
+          show_bottom: show_transition_bottom
       -%}
     </div>
 {% unless full_width %}

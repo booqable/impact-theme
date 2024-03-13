@@ -22,11 +22,11 @@
   {%- assign transition_style        = section.settings.transition_style -%}
 
   {%- capture image_top -%}
-    {%- render "image-transition-2" -%}
+    {%- render 'image-transition-2' -%}
   {%- endcapture -%}
 
   {%- capture image_bottom -%}
-    {%- render "image-transition-2" -%}
+    {%- render 'image-transition-2' -%}
   {%- endcapture -%}
 
   {% comment %} CSS variables start {% endcomment %}
@@ -126,7 +126,7 @@
 
               <div class="articles__item" id="{{- block.id -}}">
                 <div class="articles__image-wrapper{% if image == blank %} no-image{%- endif -%}">
-                  {%- if image != blank -%}
+                  {%- if image.url != blank -%}
                     {%- render 'image',
                       image: image,
                       loading: 'lazy',
@@ -175,14 +175,14 @@
         {%- endif -%}
 
         {%- render 'section-transition',
-          style: transition_style,
-          color_bottom: transition_color_bottom,
-          color_top: transition_color_top,
-          image_bottom: image_bottom,
-          image_top: image_top,
-          show_top: show_transition_top,
-          show_bottom: show_transition_bottom
-      -%}
+            style: transition_style,
+            color_bottom: transition_color_bottom,
+            color_top: transition_color_top,
+            image_bottom: image_bottom,
+            image_top: image_top,
+            show_top: show_transition_top,
+            show_bottom: show_transition_bottom
+        -%}
       </div>
   {% unless full_width %}
     </div>

@@ -408,11 +408,27 @@ img {
   }
 }
 
-[data-focus="true"] {
-  box-shadow: 0 0 0 3px var(--background-accent);
-}
-
 .tippy-box *:not(label),
 .bq-modal *:not(label) {
   border-radius: var(--border-radius-rounded) !important;
+}
+
+@media (min-width: 576px) {
+  div[data-tippy-root]:has([data-tid="Mini cart"]) {
+    position: fixed !important;
+    top: var(--header-height) !important;
+    right: var(--horizontal-padding) !important;
+    transform: translate(0, 0) !important;
+    transition: all var(--animation-duration, 200ms) var(--transition-function-ease-in-out);
+  }
+
+  .scrolled-down div[data-tippy-root]:has([data-tid="Mini cart"]) {
+    top: calc(var(--header-height) + var(--header-transform, 0)) !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  div[data-tippy-root]:has([data-tid="Mini cart"]) {
+    right: calc(50% - var(--max-width) / 2 + var(--horizontal-padding)) !important;
+  }
 }

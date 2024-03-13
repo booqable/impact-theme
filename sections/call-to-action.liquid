@@ -23,11 +23,11 @@
 {%- assign transition_style        = section.settings.transition_style -%}
 
 {%- capture image_top -%}
-  {%- render "image-transition-3" -%}
+  {%- render 'image-transition-3' -%}
 {%- endcapture -%}
 
 {%- capture image_bottom -%}
-  {%- render "image-transition-2" -%}
+  {%- render 'image-transition-2' -%}
 {%- endcapture -%}
 
 {% comment %} CSS variables start {% endcomment %}
@@ -124,7 +124,7 @@
           </div>
         {%- endif -%}
 
-        {%- if image != blank -%}
+        {%- if image.url != blank -%}
           <div class="cta__vision{% if show_overlay %} cta__vision--overlay{%- endif -%}">
             {%- render 'image',
               image: image,

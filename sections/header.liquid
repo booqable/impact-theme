@@ -161,13 +161,13 @@
             <span class="menu__social-label">{{- follow_us -}}</span>
           {%- endif -%}
 
-          {%- render "socials", settings: settings -%}
+          {%- render 'socials', settings: settings -%}
         </div>
       {%- endif -%}
 
       {%- if payment_methods.size > 0 and show_payments_mobile or payment_methods.size > 0 and show_payments-%}
         <div class="menu__payments payments{% if show_payments_mobile %} menu__payments--mobile{% endif %}{% if show_payments %} menu__payments--desktop{%- endif -%}" style="{{- payment_variables | escape -}}">
-          {%- render "payments", payments: payment_methods -%}
+          {%- render 'payments', payments: payment_methods -%}
         </div>
       {%- endif -%}
     </div>
