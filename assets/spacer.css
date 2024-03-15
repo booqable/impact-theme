@@ -3,6 +3,10 @@
   background: var(--background-primary);
 }
 
+.spacer__image {
+  width: 100%;
+}
+
 @media (min-width: 992px) {
   .spacer__wrapper {
     height: var(--height);

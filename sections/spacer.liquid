@@ -1,6 +1,7 @@
 {{ "spacer.css" | asset_url | stylesheet_tag }}
 
 {%- assign color_scheme = section.settings.color_scheme -%}
+{%- assign image        = section.settings.image -%}
 {%- assign size         = section.settings.size -%}
 {%- assign size_mobile  = section.settings.size_mobile -%}
 
@@ -26,12 +27,23 @@
 {%- endcapture -%}
 {% comment %} CSS variables end {% endcomment %}
 
-<div class="spacer__wrapper color-{{ color_scheme.id }}" style="{{- variables | escape -}}"></div>
+<div class="spacer__wrapper color-{{ color_scheme.id }}"{% unless image.url != blank %} style="{{- variables | escape -}}"{% endunless %}>
+  {%- if image.url != blank -%}
+    <div class="spacer__image-wrapper">
+      {%- render 'image',
+          image: image,
+          loading: 'lazy',
+          class: 'spacer__image',
+          size: 'xxl'
+      -%}
+    </div>
+  {%- endif -%}
+</div>
 
 {% schema %}
   {
     "name": "Spacer",
-    "description": "Insert blank space between sections on your page",
+    "description": "Insert blank space or an image as a transition between sections on your page",
     "tag": "section",
     "class": "spacer",
     "settings": [
@@ -44,6 +56,11 @@
         "id": "color_scheme",
         "label": "Color scheme",
         "default": "set-1"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
       },
       {
         "type": "header",

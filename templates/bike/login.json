@@ -1,0 +1,21 @@
+{
+  "name": "Login",
+  "layout": "session",
+  "sections": {
+    "login-form": {
+      "type": "login-form",
+      "blocks": {},
+      "settings": {
+        "color_scheme": "set-5",
+        "image": "booqable://assets/image-curvilinear-lines.png",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_border": true
+      }
+    }
+  },
+  "order": ["login-form"]
+}
