@@ -11,6 +11,7 @@
   --horizontal-padding: 64px;
   --horizontal-padding-mobile: 16px;
   --button-margin-bottom: 16px;
+  --date-picker-height-mobile: 68px;
 
   /* Carousel */
   --slide-width: 332px;
@@ -139,15 +140,15 @@ body > * {
 
 .header-sticky:not(.header-transparent) ~ #main,
 .preview-bar__container ~ .header-sticky:not(.header-transparent) ~ #main {
-  padding-top: var(--header-height);
+  padding-top: var(--header-height, 114px);
 }
 
 .header-sticky.header-transparent ~ #main {
-  padding-top: var(--top-bar-height);
+  padding-top: var(--top-bar-height, 39px);
 }
 
 .preview-bar__container ~ .header-sticky.header-transparent ~ #main {
-  padding-top: calc(var(--top-bar-height) + var(--preview-height));
+  padding-top: calc(var(--top-bar-height, 39px) + var(--preview-height, 72px));
 }
 
 .header-menu-opened ~ #main {
@@ -163,19 +164,36 @@ body > * {
   z-index: 1002 !important;
 }
 
+.header-with-date-picker ~ #main > section:first-child [class^="padding-top"],
+.header-with-date-picker ~ #main > section:first-child [class*="padding-top"] {
+  padding-top: calc(var(--padding-top-mobile, 0px) + var(--date-picker-height-mobile));
+}
+
 .header-transparent ~ #main:has(section:first-child > .container) {
-  padding-top: var(--header-height);
+  padding-top: var(--header-height, 114px);
 }
 
 .header-transparent ~ #main > section:first-child [class^="padding-top"],
 .header-transparent ~ #main > section:first-child [class*="padding-top"] {
-  padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
+  padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 75px) - var(--top-bar-height, 0px));
+}
+
+.header-with-date-picker.header-transparent ~ #main > section:first-child [class^="padding-top"],
+.header-with-date-picker.header-transparent ~ #main > section:first-child [class*="padding-top"] {
+  padding-top: calc(var(--padding-top-mobile, 0px) + var(--header-height, 75px) - var(--top-bar-height, 0px) + var(--date-picker-height-mobile));
 }
 
 @media (min-width: 992px) {
+  .header-with-date-picker ~ #main > section:first-child [class^="padding-top"],
+  .header-with-date-picker ~ #main > section:first-child [class*="padding-top"] {
+    padding-top: var(--padding-top, 0px);
+  }
+
   .header-transparent ~ #main > section:first-child [class^="padding-top"],
-  .header-transparent ~ #main > section:first-child [class*="padding-top"] {
-    padding-top: calc(var(--padding-top, 0px) + var(--header-height, 110px) - var(--top-bar-height, 0px));
+  .header-transparent ~ #main > section:first-child [class*="padding-top"],
+  .header-with-date-picker.header-transparent ~ #main > section:first-child [class^="padding-top"],
+  .header-with-date-picker.header-transparent ~ #main > section:first-child [class*="padding-top"] {
+    padding-top: calc(var(--padding-top, 0px) + var(--header-height, 75px) - var(--top-bar-height, 0px));
   }
 }
 

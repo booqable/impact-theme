@@ -92,12 +92,6 @@
 {%- render 'variables-mini-cart-button' -%}
 {% comment %} CSS variables end {% endcomment %}
 
-{%- if show_datepicker -%}
-  {% for scheme in settings.color_schemes -%}
-    {%- assign background_accent = scheme.settings.background_accent -%}
-  {%- endfor -%}
-{%- endif -%}
-
 {% comment %} Logo component {% endcomment %}
 {%- capture header_logo -%}
   {%- if logo.url != blank or logo_transparent.url != blank and transparent_bg and supported_template -%}
@@ -343,10 +337,7 @@
 
         <div class="header__date-picker-wrapper">
           {%- if show_datepicker -%}
-            {%- render 'date-picker',
-                key: section.key,
-                background: background_accent
-            -%}
+            {%- render 'date-picker', key: section.key -%}
           {%- endif -%}
         </div>
 
@@ -370,6 +361,10 @@
 
   {% if sticky_header %}
     header.classList.add('header-sticky')
+  {% endif %}
+
+  {% if show_datepicker %}
+    header.classList.add('header-with-date-picker')
   {% endif %}
 </script>
 

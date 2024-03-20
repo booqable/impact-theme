@@ -22,7 +22,7 @@
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
         "padding_top": "large",
-        "padding_top_mobile": "large",
+        "padding_top_mobile": "small",
         "rounded_corners": "none",
         "show_overlay": true,
         "show_transition_bottom": true,
