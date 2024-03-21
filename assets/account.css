@@ -1,7 +1,6 @@
 .account {
   flex-grow: 1;
   height: 100%;
-  position: relative;
   color: var(--color-primary);
   background: var(--background-primary);
   display: flex;
@@ -465,7 +464,6 @@
   top: 0;
   bottom: 0;
   right: 0;
-  overflow: hidden;
 }
 
 .account__background-image {
@@ -473,6 +471,14 @@
   width: 100%;
   max-width: none;
   object-fit: cover;
+}
+
+:is(body):has(.footer > .footer__wrapper) .account {
+  position: relative;
+}
+
+:is(body):has(.footer > .footer__wrapper) .account__background-wrapper {
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {

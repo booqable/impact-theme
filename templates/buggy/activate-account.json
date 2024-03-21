@@ -1,0 +1,21 @@
+{
+  "name": "Activate account",
+  "layout": "session",
+  "sections": {
+    "activate-account": {
+      "type": "activate-account",
+      "blocks": {},
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "booqable://assets/image-curvilinear-lines.png",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_border": true
+      }
+    }
+  },
+  "order": ["activate-account"]
+}

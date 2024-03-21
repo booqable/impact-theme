@@ -118,6 +118,10 @@ body > * {
   flex: 0 0 auto;
 }
 
+:is(body):has(.footer > .container) {
+  position: relative;
+}
+
 #main {
   flex: 1 1 auto;
 }
