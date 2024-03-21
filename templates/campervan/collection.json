@@ -1,0 +1,70 @@
+{
+  "name": "Collection",
+  "sections": {
+    "title": {
+      "type": "title",
+      "blocks": [],
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-4",
+        "custom_description": "",
+        "custom_title": "",
+        "fill_background": true,
+        "full_width": true,
+        "image": "",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "transition_color_bottom": "#FFFFFF",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "collection-page": {
+      "type": "collection-page",
+      "blocks": {
+        "item_298765": {
+          "type": "item",
+          "settings": {
+            "heading": "Collections",
+            "menu": "main-menu"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_298765"
+      ],
+      "settings": {
+        "borders": "image",
+        "color_scheme": "set-1",
+        "counter_plural": "items shown",
+        "counter_singular": "item shown",
+        "full_width": false,
+        "grid": "three",
+        "limit": 16,
+        "message": "Sorry, there are no products in this collection yet",
+        "mobile_toggler": "Menu",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "show_excerpt": true,
+        "show_amount": true,
+        "sticky_sidebar": true
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "title",
+    "collection-page"
+  ]
+}

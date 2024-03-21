@@ -1,0 +1,61 @@
+{
+  "name": "Collections",
+  "sections": {
+    "title": {
+      "type": "title",
+      "blocks": [],
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-4",
+        "custom_description": "",
+        "custom_title": "",
+        "fill_background": true,
+        "full_width": true,
+        "image": "",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "transition_color_bottom": "#FFFFFF",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "list-collections": {
+      "type": "list-collections",
+      "settings": {
+        "color_scheme": "set-1",
+        "counter_singular": "Item",
+        "counter_plural": "Items",
+        "full_width": false,
+        "grid": "three",
+        "limit": 8,
+        "overlay_background": "#0B0E15",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 80,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "medium",
+        "spacing_mobile": "medium"
+      },
+      "blocks": {},
+      "block_order": [],
+      "disabled": null
+    }
+  },
+  "order": [
+    "title",
+    "list-collections"
+  ]
+}

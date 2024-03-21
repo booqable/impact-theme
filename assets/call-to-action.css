@@ -1,8 +1,9 @@
 .cta__wrapper {
   height: 100%;
   position: relative;
+  min-height: var(--min-height-mobile);
   display: flex;
-  align-items: center;
+  align-items: var(--align-items);
   justify-content: center;
   background: var(--background-primary);
 }

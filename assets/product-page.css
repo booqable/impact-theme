@@ -17,7 +17,7 @@
   line-height: var(--line-height-lg);
 }
 
-.product-main__grid--overlay:after {
+.product-main__grid--overlay:has(ul.product-main__gallery):after {
   content: "";
   position: absolute;
   bottom: -8px;
@@ -27,7 +27,7 @@
   background: linear-gradient(0deg, var(--background-primary) 38%, var(--background-primary-00) 95%);
 }
 
-.product-main__gallery {
+ul.product-main__gallery {
   position: relative;
   max-height: 1524px;
   overflow: auto;

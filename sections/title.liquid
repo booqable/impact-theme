@@ -3,6 +3,7 @@
 {%- assign custom_title            = section.settings.custom_title -%}
 {%- assign custom_description      = section.settings.custom_description -%}
 {%- assign image                   = section.settings.image -%}
+{%- assign fill_background         = section.settings.fill_background -%}
 {%- assign full_width              = section.settings.full_width -%}
 {%- assign color_scheme            = section.settings.color_scheme -%}
 {%- assign rounded_corners         = section.settings.rounded_corners -%}
@@ -13,6 +14,7 @@
 {%- assign page_title              = page_title | split: " | " | first | remove: ":"-%}
 {%- assign show_transition_bottom  = section.settings.show_transition_bottom -%}
 {%- assign show_transition_top     = section.settings.show_transition_top -%}
+{%- assign tag                     = section.settings.tag -%}
 {%- assign transition_color_bottom = section.settings.transition_color_bottom -%}
 {%- assign transition_color_top    = section.settings.transition_color_top -%}
 {%- assign transition_style        = section.settings.transition_style -%}
@@ -87,6 +89,10 @@
       <div class="title__container container">
   {%- endif -%}
         <div class="title__content">
+          {%- if tag != blank -%}
+            <strong class="title__tag tagline">{{- tag -}}</strong>
+          {%- endif -%}
+
           <h2 class="title__heading h4">
             {{- custom_title | default: collection.title | default: page_title -}}
           </h2>
@@ -100,7 +106,7 @@
   {%- endif -%}
 
   {%- if image.url != blank -%}
-      <div class="title__background">
+      <div class="title__background{% if fill_background %} title__background--fill-section{%- endif -%}">
         {%- render 'image',
             image: image,
             loading: 'lazy',
@@ -136,6 +142,12 @@
       },
       {
         "type": "text",
+        "id": "tag",
+        "label": "Tagline",
+        "default": "This week"
+      },
+      {
+        "type": "text",
         "id": "custom_title",
         "label": "Custom title",
         "default": "Products"
@@ -160,6 +172,11 @@
         "type": "image_picker",
         "id": "image",
         "label": "Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "fill_background",
+        "label": "Fill background into section"
       },
       {
         "type": "select",

@@ -5,6 +5,7 @@
 {%- assign color_scheme            = section.settings.color_scheme -%}
 {%- assign full_width              = section.settings.full_width -%}
 {%- assign height                  = section.settings.height -%}
+{%- assign height_mobile           = section.settings.height_mobile -%}
 {%- assign image                   = section.settings.image -%}
 {%- assign overlay_background      = section.settings.overlay_background -%}
 {%- assign overlay_opacity         = section.settings.overlay_opacity -%}
@@ -17,6 +18,7 @@
 {%- assign show_transition_bottom  = section.settings.show_transition_bottom -%}
 {%- assign show_transition_top     = section.settings.show_transition_top -%}
 {%- assign tag                     = section.settings.tag -%}
+{%- assign text_position           = section.settings.text_position -%}
 {%- assign title                   = section.settings.title -%}
 {%- assign transition_color_bottom = section.settings.transition_color_bottom -%}
 {%- assign transition_color_top    = section.settings.transition_color_top -%}
@@ -37,6 +39,15 @@
     --opacity-overlay: {{ overlay_opacity | append: "%"}};
   {%- endif -%}
 
+  {%- case text_position -%}
+    {%- when 'top' -%}
+      --align-items: flex-start;
+    {%- when 'middle' -%}
+      --align-items: center;
+    {%- when 'bottom' -%}
+      --align-items: flex-end;
+  {%- endcase -%}
+
   {%- case height -%}
     {%- when 'auto' -%}
       --min-height: auto;
@@ -46,6 +57,19 @@
       --min-height: 650px;
     {%- when 'large' -%}
       --min-height: 800px;
+    {%- when 'large_xl' -%}
+      --min-height: 1100px;
+  {%- endcase -%}
+
+  {%- case height_mobile -%}
+    {%- when 'auto' -%}
+      --min-height-mobile: auto;
+    {%- when 'small' -%}
+      --min-height-mobile: 400px;
+    {%- when 'medium' -%}
+      --min-height-mobile: 550px;
+    {%- when 'large' -%}
+      --min-height-mobile: 700px;
   {%- endcase -%}
 
   {%- case padding_top -%}
@@ -179,6 +203,25 @@
         "id": "title",
         "label": "Title",
         "default": "Explore the ride <br> of your life"
+      },
+      {
+        "type": "select",
+        "id": "text_position",
+        "label": "Vertical text positioning",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "middle",
+            "label": "Middle"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          }
+        ]
       },
       {
         "type": "header",
@@ -327,6 +370,10 @@
           {
             "value": "large",
             "label": "Large"
+          },
+          {
+            "value": "large_xl",
+            "label": "Extra large"
           }
         ],
         "default": "auto"
@@ -382,6 +429,30 @@
       {
         "type": "header",
         "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "height_mobile",
+        "label": "Height",
+        "options": [
+          {
+            "value": "auto",
+            "label": "Auto"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "auto"
       },
       {
         "type": "select",
