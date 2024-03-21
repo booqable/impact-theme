@@ -6,68 +6,69 @@
       "blocks": {},
       "block_order": [],
       "settings": {
-        "color_scheme": "set-4",
+        "color_scheme": "set-5",
         "custom_description": "",
         "custom_title": "",
         "fill_background": true,
-        "full_width": true,
-        "image": "booqable://assets/image-curvilinear-lines.png",
+        "full_width": false,
+        "image": "",
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
         "padding_top": "medium",
-        "padding_top_mobile": "large",
-        "rounded_corners": "none",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
         "show_transition_bottom": true,
         "show_transition_top": false,
         "tag": "",
         "transition_color_bottom": "#FFFFFF",
         "transition_color_top": "#FFFFFF",
-        "transition_style": "sketch"
+        "transition_style": "none"
       },
       "disabled": null
     },
     "columns": {
       "type": "columns",
       "blocks": {
-        "column": {
+        "column_774146": {
           "type": "column",
           "settings": {
-            "button_label": "hello@info.com",
+            "button_label": "HELLO@INFO.COM",
             "button_style": "secondary",
             "button_url": "{{ \"mailto:hello@info.com\" }}",
             "icon": "envelope",
-            "title": "Email",
+            "title": "EMAIL",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero."
           },
           "disabled": null
         },
-        "column_785236": {
+        "column_774136": {
           "type": "column",
           "settings": {
             "button_label": "+1 (555) 000-0000",
             "button_style": "secondary",
             "button_url": "{{ \"tel:+1 (555) 000-0000\" }}",
             "icon": "phone",
-            "title": "Phone",
+            "title": "PHONE",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero."
           },
           "disabled": null
         },
-        "column_789654": {
+        "column_774154": {
           "type": "column",
           "settings": {
             "button_label": "123 Sample St, London Eng 2000 UK",
+            "button_style": "secondary",
             "icon": "map-marker",
-            "title": "Office",
+            "title": "OFFICE",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero."
           },
           "disabled": null
         }
       },
       "block_order": [
-        "column",
-        "column_785236",
-        "column_789654"
+        "column_774146",
+        "column_774136",
+        "column_774154"
       ],
       "settings": {
         "color_scheme": "set-1",
@@ -77,21 +78,22 @@
         "padding_bottom_mobile": "none",
         "padding_top": "medium",
         "padding_top_mobile": "medium",
-        "rounded_corners": "none"
+        "rounded_corners": "large"
       },
       "disabled": false
     },
     "contact-form": {
       "type": "contact-form",
       "settings": {
+        "button_primary_label": "SEND",
         "color_scheme": "set-1",
         "description": "Tell something about your company, describe what you do and what makes you unique.",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
-        "padding_top": "small",
-        "padding_top_mobile": "small",
-        "rounded_corners": "none",
-        "title": "Get in touch"
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
+        "title": "GET IN TOUCH"
       },
       "disabled": null
     }

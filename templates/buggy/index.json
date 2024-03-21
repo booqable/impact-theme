@@ -10,7 +10,7 @@
         "button_primary_url": "booqable://products/",
         "button_outline_label": "GET IN TOUCH",
         "button_outline_url": "booqable://pages/contact/",
-        "color_scheme": "set-2",
+        "color_scheme": "set-4",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <br> varius enim in eros elementum tristique.",
         "full_width": false,
         "height": "medium",
@@ -20,9 +20,9 @@
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,
         "padding_bottom": "large",
-        "padding_bottom_mobile": "large",
+        "padding_bottom_mobile": "medium",
         "padding_top": "large",
-        "padding_top_mobile": "large",
+        "padding_top_mobile": "medium",
         "rounded_corners": "large",
         "show_overlay": true,
         "show_transition_bottom": true,
@@ -87,7 +87,7 @@
         "collection_533422"
       ],
       "settings": {
-        "color_scheme": "set-4",
+        "color_scheme": "set-3",
         "counter_singular": "Item",
         "counter_plural": "Items",
         "full_width": false,
@@ -190,7 +190,7 @@
       "settings": {
         "button_primary_label": "",
         "button_primary_url": "",
-        "color_scheme": "set-2",
+        "color_scheme": "set-4",
         "full_width": false,
         "height": "auto",
         "height_mobile": "auto",
@@ -260,7 +260,7 @@
         "testimonial_218968"
       ],
       "settings": {
-        "color_scheme": "set-4",
+        "color_scheme": "set-3",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "large",
@@ -375,7 +375,7 @@
       "settings": {
         "button_outline_label": "SEE ALL",
         "button_outline_url": "booqable://root/",
-        "color_scheme": "set-4",
+        "color_scheme": "set-3",
         "full_width": false,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
@@ -410,7 +410,7 @@
       "settings": {
         "button_primary_label": "",
         "button_primary_url": "",
-        "color_scheme": "set-3",
+        "color_scheme": "set-2",
         "full_width": false,
         "height": "small",
         "height_mobile": "small",
@@ -469,7 +469,7 @@
       ],
       "settings": {
         "behavior": "multiple",
-        "color_scheme": "set-4",
+        "color_scheme": "set-3",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
         "image": "",
         "padding_bottom": "medium",
@@ -504,7 +504,7 @@
         "item_498517": {
           "type": "item",
           "settings": {
-            "image": "booqable://assets/image-socials-3.jpg",
+            "image": "booqable://assets/image-socials-3.jpeg",
             "url": "booqable://products/"
           },
           "disabled": null
@@ -512,7 +512,7 @@
         "item_498516": {
           "type": "item",
           "settings": {
-            "image": "booqable://assets/image-socials-4.jpg",
+            "image": "booqable://assets/image-socials-4.jpeg",
             "url": "booqable://pages/contact/"
           },
           "disabled": null

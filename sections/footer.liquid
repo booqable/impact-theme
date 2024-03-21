@@ -22,6 +22,11 @@
 {%- assign youtube               = settings.social_youtube_link -%}
 {%- assign vimeo                 = settings.social_vimeo_link -%}
 
+{%- case template -%}
+  {%- when '404' -%}
+    {%- assign full_width = true -%}
+{%- endcase -%}
+
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
   {%- case padding_top -%}
@@ -228,7 +233,7 @@
       </div>
   {%- endif -%}
     </div>
-{% unless full_width %}
+{%- unless full_width -%}
   </div>
 {%- endunless -%}
 

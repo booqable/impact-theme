@@ -380,6 +380,10 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
   border-color: var(--color-border);
 }
 
+.header:has(~ #main section:first-child > .container) .header__date-picker-wrapper {
+  width: calc(100vw - var(--horizontal-padding-mobile, 16px) * 2 - 16px);
+}
+
 @media (min-width: 768px) {
   .header__links {
     display: flex;
@@ -407,6 +411,10 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
     padding: 0 10px;
     margin: calc(-1 * var(--padding-top)) 0 calc(-1 * var(--padding-bottom));
     z-index: 0;
+  }
+
+  .header:has(~ #main section:first-child > .container) .header__date-picker-wrapper {
+    width: auto;
   }
 }
 

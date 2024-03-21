@@ -48,6 +48,8 @@
     {%- assign supported_template = false -%}
   {%- when 'reset-password' -%}
     {%- assign supported_template = false -%}
+  {%- when '404' -%}
+    {%- assign transparent_bg = true -%}
 {%- endcase -%}
 
 {% comment %} CSS variables start {% endcomment %}

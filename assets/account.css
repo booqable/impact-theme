@@ -295,6 +295,15 @@
   display: block;
 }
 
+.header-with-date-picker ~ #main .account__agreement-modal {
+  display: flex !important;
+  align-items: flex-end;
+}
+
+.header-with-date-picker ~ #main .account__agreement-content {
+  height: calc(100% - var(--date-picker-height-mobile) - 8px);
+}
+
 .account__agreement-inner {
   border: 1px solid var(--color-border);
   width: 100%;
@@ -502,6 +511,14 @@
 
   .account__agreement-closer {
     right: 1px;
+  }
+
+  .header-with-date-picker ~ #main .account__agreement-modal {
+    display: block !important;
+  }
+
+  .header-with-date-picker ~ #main .account__agreement-content {
+    height: 100%;
   }
 }
 

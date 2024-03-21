@@ -207,17 +207,6 @@
         "set-2": {
           "type": "color_scheme",
           "settings": {
-            "background_accent": "#DF7144",
-            "background": "#2A292E",
-            "color_accent": "#FFFFFF",
-            "color_accent_outline": "#DF7144",
-            "color_primary": "#FFFFFF",
-            "color_secondary": "#85888c"
-          }
-        },
-        "set-3": {
-          "type": "color_scheme",
-          "settings": {
             "background_accent": "#FFFFFF",
             "background": "#DF7144",
             "color_accent": "#2A292E",
@@ -226,7 +215,7 @@
             "color_secondary": "#E0D4CE"
           }
         },
-        "set-4": {
+        "set-3": {
           "type": "color_scheme",
           "settings": {
             "background_accent": "#2A292E",
@@ -235,6 +224,17 @@
             "color_accent_outline": "#2A292E",
             "color_primary": "#2A292E",
             "color_secondary": "#858585"
+          }
+        },
+        "set-4": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#DF7144",
+            "background": "#2A292E",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#DF7144",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#85888c"
           }
         },
         "set-5": {
@@ -265,7 +265,7 @@
           "settings": {
             "bar_message": "Free shipping from €50",
             "bar_text": "Call Us 24/7 <a href=\"+1 555 302 8549\">+1 555 302 8549</a>",
-            "color_scheme": "set-3",
+            "color_scheme": "set-4",
             "icon": "phone",
             "icon_style": "outline",
             "padding_top": "medium",
@@ -280,7 +280,7 @@
           "blocks": {},
           "block_order": [],
           "settings": {
-            "color_scheme": "set-4",
+            "color_scheme": "set-1",
             "custom_title": "{{ shop.name }}",
             "follow_us": "Follow us on",
             "login_placeholder": "",
@@ -294,7 +294,7 @@
             "padding_top_mobile": "medium",
             "padding_bottom": "medium",
             "padding_bottom_mobile": "medium",
-            "search_placeholder": "Where are you looking for?",
+            "search_placeholder": "What are you looking for?",
             "signup_placeholder": "",
             "show_datepicker": true,
             "show_payments": false,
@@ -311,7 +311,7 @@
             "menu_712555": {
               "type": "menu",
               "settings": {
-                "heading": "Column One",
+                "heading": "COLUMN ONE",
                 "menu": "column-1",
                 "menu_align": "left"
               }
@@ -319,7 +319,7 @@
             "menu_712556": {
               "type": "menu",
               "settings": {
-                "heading": "Column Two",
+                "heading": "COLUMN TWO",
                 "menu": "column-1",
                 "menu_align": "left"
               }
@@ -327,7 +327,7 @@
             "menu_712557": {
               "type": "menu",
               "settings": {
-                "heading": "Column Three",
+                "heading": "COLUMN THREE",
                 "menu": "column-1",
                 "menu_align": "left"
               }
@@ -335,7 +335,7 @@
             "menu_712558": {
               "type": "menu",
               "settings": {
-                "heading": "Column Four",
+                "heading": "COLUMN FOUR",
                 "menu": "column-1",
                 "menu_align": "left"
               }
@@ -350,7 +350,7 @@
           "settings": {
             "bottom_menu": "bottom-menu",
             "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
-            "color_scheme": "set-2",
+            "color_scheme": "set-4",
             "custom_title": "{{ shop.name }}",
             "full_width": false,
             "rounded_corners": "large",

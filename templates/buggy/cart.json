@@ -6,23 +6,23 @@
       "blocks": [],
       "block_order": [],
       "settings": {
-        "color_scheme": "set-4",
+        "color_scheme": "set-5",
         "custom_description": "",
         "custom_title": "",
         "fill_background": true,
-        "full_width": true,
-        "image": "booqable://assets/image-curvilinear-lines.png",
+        "full_width": false,
+        "image": "",
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
         "padding_top": "medium",
-        "padding_top_mobile": "large",
-        "rounded_corners": "none",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
         "show_transition_bottom": true,
         "show_transition_top": false,
         "tag": "",
         "transition_color_bottom": "#FFFFFF",
         "transition_color_top": "#FFFFFF",
-        "transition_style": "sketch"
+        "transition_style": "none"
       },
       "disabled": null
     },
@@ -31,7 +31,7 @@
       "blocks": [],
       "block_order": [],
       "settings": {
-        "color-scheme": "set-5",
+        "color-scheme": "set-3",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
