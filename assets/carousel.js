@@ -37,6 +37,7 @@ class Carousel {
       prev: "prev",
       next: "next",
       start: "touchstart",
+      move: "touchmove",
       end: "touchend",
       enter: "mouseenter",
       leave: "mouseleave"
@@ -45,7 +46,9 @@ class Carousel {
     this.interval;
     this.touchstart = null;
     this.touchend = null;
-    this.wheelTimeout;
+    this.wheelTimeout = null;
+    this.wheelDeltaCounter = null;
+    this.wheelDebounce = 400;
     this.isWheeling = false;
     this.infinite = true;
   }
@@ -80,7 +83,7 @@ class Carousel {
     this.listener(this.btns, 'click', this.navigation);
     document.addEventListener('wheel', this.touchpadPoints.bind(this));
     document.addEventListener('touchstart', this.touchscreenPoints.bind(this));
-    document.addEventListener('touchend', this.touchscreenPoints.bind(this));
+    document.addEventListener('touchmove', this.touchscreenPoints.bind(this));
     window.addEventListener('resize', this.hideControls.bind(this));
     window.addEventListener('resize', this.hidePaginationDots.bind(this));
   }
@@ -283,31 +286,30 @@ class Carousel {
 
     if (!dots.length && !wrap) return false;
 
-    if (event.type === this.event.start) this.touchstart = event.changedTouches[0].screenX;
+    switch (event.type) {
+      case this.event.start:
+        this.touchstart = event.touches[0].screenX;
+        break;
+      case this.event.move:
+        this.touchend = event.touches[0].screenX;
+        const moveDistance = this.touchend - this.touchstart;
+        let direction;
 
-    if (event.type === this.event.end) {
-      this.touchend = event.changedTouches[0].screenX;
-      this.touchscreenDirection(wrap);
+        direction = moveDistance > 0
+          ? this.trigger(this.touchscreenDirection({ direction: this.classes.prev, element: wrap }), this.event.click) // right
+          : this.trigger(this.touchscreenDirection({ direction: this.classes.next, element: wrap }), this.event.click) // left
+
+        this.touchstart = this.touchend;
+        break;
     }
   }
 
-  touchscreenDirection(wrap) {
-    const left = wrap?.scrollLeft,
-          scroll = wrap?.scrollWidth,
-          client = wrap?.clientWidth,
-          next = wrap?.parentElement.querySelector(this.selector.next),
-          prev = wrap?.parentElement.querySelector(this.selector.prev),
-          leftSwipe = this.touchstart > this.touchend,
-          rightSwipe = this.touchend > this.touchstart;
+  touchscreenDirection(options) {
+    const { direction, element } = options;
 
-    if (left >= 0 && left <= scroll - client) {
-      this.infinite = false;
-
-      if (leftSwipe) this.trigger(next, this.event.click);
-      if (rightSwipe) this.trigger(prev, this.event.click);
-
-      this.infinite = true;
-    }
+    return direction === this.classes.prev
+      ? element?.parentElement.querySelector(this.selector.prev)
+      : element?.parentElement.querySelector(this.selector.next)
   }
 
   // touchpad touchpoints detection
@@ -315,23 +317,33 @@ class Carousel {
     const wrap = event?.target.closest(this.selector.wrapper),
           dots = this.getCurrentDot().dots;
 
-    if (!dots.length && !wrap) return false;
+    if (!wrap || !this.block.contains(wrap)) return false;
+    if (!dots.length) return false;
 
     let index = this.getCurrentDot().index;
     const delta = event.deltaX; // Get the scroll direction (+1 for scroll right, -1 for scroll left)
 
-    if (!this.isWheeling) {
+    // init or reset the delta counter based on the scrolling state
+    if (!this.isWheeling) this.wheelDeltaCounter = 0;
+
+    this.wheelDeltaCounter += delta;
+
+    // define a threshold for when to trigger the pagination
+    const deltaThreshold = 7;
+
+    if (!this.isWheeling && Math.abs(this.wheelDeltaCounter) > deltaThreshold) {
       this.isWheeling = true;
 
-      if (delta === -1 && index > 1) index = index - 1;
-      if (delta === 1 && index < dots.length) index = index + 1;
+      // execute the scroll
+      if (this.wheelDeltaCounter < 0 && index > 1) index--;
+      if (this.wheelDeltaCounter > 0 && index < dots.length) index++;
 
       this.pagination(undefined, index);
+
+      clearTimeout(this.wheelTimeout);
+
+      this.wheelTimeout = setTimeout(() => this.isWheeling = false, this.wheelDebounce); // delay before considering the wheeling finished
     }
-
-    clearTimeout(this.wheelTimeout);
-
-    this.wheelTimeout = setTimeout(() => this.isWheeling = false, 100);
   }
 
   // get the active dot index
