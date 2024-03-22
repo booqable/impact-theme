@@ -1,0 +1,116 @@
+{
+  "name": "Product",
+  "sections": {
+    "product-page": {
+      "type": "product-page",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "breadcrumbs_label": "",
+        "breadcrumbs_url": "collections",
+        "color_scheme": "set-1",
+        "infinity_scroll": true,
+        "message_label": "Free shipping over $50",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "show_breadcrumbs": true,
+        "show_border": false,
+        "show_carousel": false,
+        "show_controls": true,
+        "show_thumbnails": true,
+        "variation_label": "Variant"
+      },
+      "disabled": null
+    },
+    "title": {
+      "type": "title",
+      "blocks": [],
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "custom_description": " ",
+        "custom_title": "Rent together with",
+        "fill_background": false,
+        "full_width": true,
+        "image": "booqable://assets/image-dotted-stripe-line.png",
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "none",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "transition_color_bottom": "#FFFFFF",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123455": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123456": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123457": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123452": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product",
+        "product_123455",
+        "product_123456",
+        "product_123457",
+        "product_123452"
+      ],
+      "settings": {
+        "borders": "image",
+        "button_outline_label": "See all products",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "image": "",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "",
+        "tag_image": "",
+        "timer": 5,
+        "title": ""
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "product-page",
+    "title",
+    "products"
+  ]
+}
