@@ -58,7 +58,7 @@
          "padding_top_mobile": "small",
          "rounded_corners": "none",
          "show_amount": true,
-         "show_excerpt": true,
+         "show_excerpt": false,
          "show_navigation": true,
          "show_pagination": true,
          "sticky_sidebar": true,

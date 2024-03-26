@@ -11,7 +11,7 @@
         "custom_title": "",
         "fill_background": true,
         "full_width": true,
-        "image": "booqable://assets/image-curvilinear-lines.png",
+        "image": "",
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
         "padding_top": "medium",
@@ -22,7 +22,7 @@
         "tag": "",
         "transition_color_bottom": "#FFFFFF",
         "transition_color_top": "#FFFFFF",
-        "transition_style": "sketch"
+        "transition_style": "none"
       },
       "disabled": null
     },

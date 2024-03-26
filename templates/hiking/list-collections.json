@@ -11,7 +11,7 @@
         "custom_title": "",
         "fill_background": true,
         "full_width": true,
-        "image": "booqable://assets/image-curvilinear-lines.png",
+        "image": "",
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
         "padding_top": "medium",
@@ -29,7 +29,7 @@
     "list-collections": {
       "type": "list-collections",
       "settings": {
-        "color_scheme": "set-4",
+        "color_scheme": "set-1",
         "counter_singular": "Item",
         "counter_plural": "Items",
         "full_width": true,
@@ -46,8 +46,8 @@
         "show_amount": true,
         "show_arrow": true,
         "show_overlay": true,
-        "spacing": "none",
-        "spacing_mobile": "none"
+        "spacing": "small",
+        "spacing_mobile": "small"
       },
       "blocks": {},
       "block_order": [],

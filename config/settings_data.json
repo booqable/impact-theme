@@ -560,16 +560,16 @@
     },
     "hiking": {
       "animation_duration": 0.2,
-      "body_font": "open-sans",
+      "body_font": "poppins",
       "color_schemes": {
         "set-1": {
           "type": "color_scheme",
           "settings": {
-            "background_accent": "#53C787",
+            "background_accent": "#B2E85A",
             "background": "#FFFFFF",
-            "color_accent": "#1A3333",
-            "color_accent_outline": "#53C787",
-            "color_primary": "#1A3333",
+            "color_accent": "#1B1B1B",
+            "color_accent_outline": "#B2E85A",
+            "color_primary": "#1B1B1B",
             "color_secondary": "#768585"
           }
         },
@@ -577,43 +577,43 @@
           "type": "color_scheme",
           "settings": {
             "background_accent": "#FFFFFF",
-            "background": "#53C787",
-            "color_accent": "#1A3333",
+            "background": "#B2B1F9",
+            "color_accent": "#1B1B1B",
             "color_accent_outline": "#FFFFFF",
-            "color_primary": "#1A3333",
-            "color_secondary": "#2A5044"
+            "color_primary": "#1B1B1B",
+            "color_secondary": "#755B8F"
           }
         },
         "set-3": {
           "type": "color_scheme",
           "settings": {
-            "background_accent": "#F6F4F2",
-            "background": "#E06B48",
-            "color_accent": "#1A3333",
-            "color_accent_outline": "#1A3333",
-            "color_primary": "#F6F4F2",
-            "color_secondary": "#E0D4CE"
+            "background_accent": "#FFFFFF",
+            "background": "#B2E85A",
+            "color_accent": "#1B1B1B",
+            "color_accent_outline": "#1B1B1B",
+            "color_primary": "#1B1B1B",
+            "color_secondary": "#2C6E1E"
           }
         },
         "set-4": {
           "type": "color_scheme",
           "settings": {
-            "background_accent": "#53C787",
-            "background": "#1A3333",
-            "color_accent": "#1A3333",
-            "color_accent_outline": "#53C787",
-            "color_primary": "#F6F4F2",
+            "background_accent": "#B2E85A",
+            "background": "#1B1B1B",
+            "color_accent": "#1B1B1B",
+            "color_accent_outline": "#B2E85A",
+            "color_primary": "#FFFFFF",
             "color_secondary": "#A0A6A6"
           }
         },
         "set-5": {
           "type": "color_scheme",
           "settings": {
-            "background_accent": "#53C787",
-            "background": "#F6F4F2",
-            "color_accent": "#1A3333",
-            "color_accent_outline": "#53C787",
-            "color_primary": "#1A3333",
+            "background_accent": "#1B1B1B",
+            "background": "#F8F8F8",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#1B1B1B",
+            "color_primary": "#1B1B1B",
             "color_secondary": "#768585"
           }
         }
@@ -622,8 +622,8 @@
       "h1_size": 80,
       "h2_size": 64,
       "h3_size": 56,
-      "heading_font": "darker-grotesque",
-      "image_placeholder": "booqable://assets/image-placeholder.jpg",
+      "heading_font": "poppins",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -743,7 +743,7 @@
       },
       "social_size": "lg",
       "social_spacing": "md",
-      "tagline_font": "open-sans",
+      "tagline_font": "darker-grotesque",
       "tagline_size": 20,
       "use_focal_images": true
     }

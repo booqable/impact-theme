@@ -11,7 +11,7 @@
         "custom_title": "",
         "fill_background": true,
         "full_width": true,
-        "image": "booqable://assets/image-curvilinear-lines.png",
+        "image": "",
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
         "padding_top": "medium",
@@ -22,14 +22,14 @@
         "tag": "",
         "transition_color_bottom": "#FFFFFF",
         "transition_color_top": "#FFFFFF",
-        "transition_style": "sketch"
+        "transition_style": "none"
       },
       "disabled": null
     },
     "columns": {
       "type": "columns",
       "blocks": {
-        "column": {
+        "column_785000": {
           "type": "column",
           "settings": {
             "button_label": "hello@info.com",
@@ -41,7 +41,7 @@
           },
           "disabled": null
         },
-        "column_785236": {
+        "column_785001": {
           "type": "column",
           "settings": {
             "button_label": "+1 (555) 000-0000",
@@ -53,7 +53,7 @@
           },
           "disabled": null
         },
-        "column_789654": {
+        "column_789002": {
           "type": "column",
           "settings": {
             "button_label": "123 Sample St, London Eng 2000 UK",
@@ -65,9 +65,9 @@
         }
       },
       "block_order": [
-        "column",
-        "column_785236",
-        "column_789654"
+        "column_785000",
+        "column_785001",
+        "column_789002"
       ],
       "settings": {
         "color_scheme": "set-1",
