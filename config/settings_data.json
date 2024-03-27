@@ -60,6 +60,7 @@
           }
         }
       },
+      "corner_radius": "fully_round",
       "h1_size": 80,
       "h2_size": 64,
       "h3_size": 56,
@@ -188,6 +189,186 @@
       "tagline_size": 20,
       "use_focal_images": true
     },
+    "buggy": {
+      "animation_duration": 0.2,
+      "body_font": "inter",
+      "color_schemes": {
+        "set-1": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#DF7144",
+            "background": "#FFFFFF",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#DF7144",
+            "color_primary": "#2A292E",
+            "color_secondary": "#858585"
+          }
+        },
+        "set-2": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#FFFFFF",
+            "background": "#DF7144",
+            "color_accent": "#2A292E",
+            "color_accent_outline": "#FFFFFF",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#E0D4CE"
+          }
+        },
+        "set-3": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#2A292E",
+            "background": "#FFFFFF",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#2A292E",
+            "color_primary": "#2A292E",
+            "color_secondary": "#858585"
+          }
+        },
+        "set-4": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#DF7144",
+            "background": "#2A292E",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#DF7144",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#85888c"
+          }
+        },
+        "set-5": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#000000",
+            "background": "#F6F4F2",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#000000",
+            "color_primary": "#2A292E",
+            "color_secondary": "#858585"
+          }
+        }
+      },
+      "corner_radius": "fully_round",
+      "h1_size": 101,
+      "h2_size": 64,
+      "h3_size": 40,
+      "heading_font": "anton",
+      "image_placeholder": "booqable://assets/image-placeholder.jpg",
+      "large_text_size": 18,
+      "regular_text_size": 16,
+      "sections": {
+        "top-bar": {
+          "type": "top-bar",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "bar_message": "Free shipping from €50",
+            "bar_text": "Call Us 24/7 <a href=\"+1 555 302 8549\">+1 555 302 8549</a>",
+            "color_scheme": "set-4",
+            "icon": "phone",
+            "icon_style": "outline",
+            "padding_top": "medium",
+            "padding_top_mobile": "medium",
+            "padding_bottom": "medium",
+            "padding_bottom_mobile": "medium",
+            "show_bar": true
+          }
+        },
+        "header": {
+          "type": "header",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "color_scheme": "set-1",
+            "custom_title": "{{ shop.name }}",
+            "follow_us": "Follow us on",
+            "login_placeholder": "",
+            "logout_placeholder": "",
+            "logo": "booqable://assets/image-store-logo.png",
+            "logo_transparent": "",
+            "menu": "main-menu",
+            "menu_opener_label": "MENU",
+            "menu_opener_mobile": "right",
+            "padding_top": "medium",
+            "padding_top_mobile": "medium",
+            "padding_bottom": "medium",
+            "padding_bottom_mobile": "medium",
+            "search_placeholder": "What are you looking for?",
+            "signup_placeholder": "",
+            "show_datepicker": true,
+            "show_payments": false,
+            "show_payments_mobile": true,
+            "show_search": true,
+            "sticky_header": true,
+            "transparent_bg": false
+          },
+          "disabled": null
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu_712555": {
+              "type": "menu",
+              "settings": {
+                "heading": "COLUMN ONE",
+                "menu": "column-1",
+                "menu_align": "left"
+              }
+            },
+            "menu_712556": {
+              "type": "menu",
+              "settings": {
+                "heading": "COLUMN TWO",
+                "menu": "column-1",
+                "menu_align": "left"
+              }
+            },
+            "menu_712557": {
+              "type": "menu",
+              "settings": {
+                "heading": "COLUMN THREE",
+                "menu": "column-1",
+                "menu_align": "left"
+              }
+            },
+            "menu_712558": {
+              "type": "menu",
+              "settings": {
+                "heading": "COLUMN FOUR",
+                "menu": "column-1",
+                "menu_align": "left"
+              }
+            }
+          },
+          "block_order": [
+            "menu_712555",
+            "menu_712556",
+            "menu_712557",
+            "menu_712558"
+          ],
+          "settings": {
+            "bottom_menu": "bottom-menu",
+            "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
+            "color_scheme": "set-4",
+            "custom_title": "{{ shop.name }}",
+            "full_width": false,
+            "rounded_corners": "large",
+            "logo": "booqable://assets/image-store-logo-white.png",
+            "padding_bottom": "small",
+            "padding_bottom_mobile": "small",
+            "padding_top": "medium",
+            "padding_top_mobile": "small"
+          },
+          "disabled": null
+        }
+      },
+      "social_size": "lg",
+      "social_spacing": "md",
+      "tagline_font": "open-sans",
+      "tagline_size": 20,
+      "use_focal_images": true
+    },
     "campervan": {
       "animation_duration": 0.2,
       "body_font": "poppins",
@@ -248,6 +429,7 @@
           }
         }
       },
+      "corner_radius": "fully_round",
       "h1_size": 56,
       "h2_size": 48,
       "h3_size": 40,

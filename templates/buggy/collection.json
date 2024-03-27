@@ -6,56 +6,56 @@
       "blocks": [],
       "block_order": [],
       "settings": {
-        "color_scheme": "set-4",
+        "color_scheme": "set-5",
         "custom_description": "",
         "custom_title": "",
         "fill_background": true,
-        "full_width": true,
-        "image": "booqable://assets/image-curvilinear-lines.png",
+        "full_width": false,
+        "image": "",
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
         "padding_top": "medium",
         "padding_top_mobile": "medium",
-        "rounded_corners": "none",
+        "rounded_corners": "large",
         "show_transition_bottom": true,
         "show_transition_top": false,
         "tag": "",
         "transition_color_bottom": "#FFFFFF",
         "transition_color_top": "#FFFFFF",
-        "transition_style": "sketch"
+        "transition_style": "none"
       },
       "disabled": null
     },
     "collection-page": {
       "type": "collection-page",
       "blocks": {
-        "item": {
+        "item_364579": {
           "type": "item",
           "settings": {
-            "heading": "Collections",
+            "heading": "COLLECTIONS",
             "menu": "main-menu"
           },
           "disabled": null
         }
       },
       "block_order": [
-        "item"
+        "item_364579"
       ],
       "settings": {
         "borders": "image",
         "color_scheme": "set-1",
-        "counter_plural": "items shown",
-        "counter_singular": "item shown",
+        "counter_plural": "ITEMS SHOWN",
+        "counter_singular": "ITEM SHOWN",
         "full_width": false,
         "grid": "three",
         "limit": 16,
-        "message": "Sorry, there are no products in this collection yet",
-        "mobile_toggler": "Menu",
+        "message": "SORRY, THERE ARE NO PRODUCTS IN THIS COLLECTION YET",
+        "mobile_toggler": "MENU",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "small",
         "padding_top": "medium",
         "padding_top_mobile": "small",
-        "rounded_corners": "none",
+        "rounded_corners": "large",
         "show_amount": true,
         "show_excerpt": false,
         "sticky_sidebar": true

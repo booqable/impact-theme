@@ -1,0 +1,21 @@
+{
+  "name": "Register",
+  "layout": "session",
+  "sections": {
+    "register-form": {
+      "type": "register-form",
+      "blocks": {},
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "booqable://assets/image-curvilinear-lines.png",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
+        "show_border": true
+      }
+    }
+  },
+  "order": ["register-form"]
+}
