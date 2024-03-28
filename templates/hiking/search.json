@@ -13,12 +13,12 @@
         "full_width": true,
         "image": "",
         "padding_bottom": "large",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "medium",
         "padding_top_mobile": "medium",
         "rounded_corners": "none",
         "show_transition_bottom": true,
-        "show_transition_top": true,
+        "show_transition_top": false,
         "tag": "",
         "transition_color_bottom": "#FFFFFF",
         "transition_color_top": "#FFFFFF",
@@ -29,7 +29,7 @@
     "search": {
       "type": "search",
       "blocks": {
-        "item_874326": {
+        "item_674098": {
           "type": "item",
           "settings": {
             "heading": "Collections",
@@ -39,10 +39,10 @@
         }
       },
       "block_order": [
-        "item_874326"
+        "item_674098"
       ],
       "settings": {
-         "borders": "image",
+         "borders": "full",
          "collection": "all-products",
          "color_scheme": "set-1",
          "counter_plural": "results",
@@ -51,12 +51,12 @@
          "grid": "three",
          "limit": 16,
          "message": "",
-         "mobile_toggler": "Menu",
+         "mobile_toggler": "MENU",
          "padding_bottom": "medium",
          "padding_bottom_mobile": "small",
          "padding_top": "medium",
          "padding_top_mobile": "small",
-         "rounded_corners": "none",
+         "rounded_corners": "small",
          "show_amount": true,
          "show_excerpt": false,
          "show_navigation": true,
