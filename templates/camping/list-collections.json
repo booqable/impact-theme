@@ -1,0 +1,61 @@
+{
+  "name": "Collections",
+  "sections": {
+    "title": {
+      "type": "title",
+      "blocks": [],
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-4",
+        "custom_description": "",
+        "custom_title": "",
+        "fill_background": true,
+        "full_width": true,
+        "image": "booqable://assets/image-background-mountains.png",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "transition_color_bottom": "#FFFFFF",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "list-collections": {
+      "type": "list-collections",
+      "settings": {
+        "color_scheme": "set-4",
+        "counter_singular": "Item",
+        "counter_plural": "Items",
+        "full_width": true,
+        "grid": "three",
+        "limit": 8,
+        "overlay_background": "#375647",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity":100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "none",
+        "spacing_mobile": "none"
+      },
+      "blocks": {},
+      "block_order": [],
+      "disabled": null
+    }
+  },
+  "order": [
+    "title",
+    "list-collections"
+  ]
+}

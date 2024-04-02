@@ -1,0 +1,90 @@
+{
+  "name": "Product",
+  "sections": {
+    "product-page": {
+      "type": "product-page",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "breadcrumbs_label": "",
+        "breadcrumbs_url": "products",
+        "color_scheme": "set-5",
+        "infinity_scroll": true,
+        "message_label": "Free shipping over $50",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "rounded_corners": "small",
+        "show_breadcrumbs": true,
+        "show_border": false,
+        "show_carousel": false,
+        "show_controls": true,
+        "show_thumbnails": true,
+        "variation_label": "Variant"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_175154": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_175155": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_175156": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_175157": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_175158": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_175154",
+        "product_175155",
+        "product_175156",
+        "product_175157",
+        "product_175158"
+      ],
+      "settings": {
+        "borders": "image",
+        "button_outline_label": "See all products",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-5",
+        "image": "",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "small",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "",
+        "tag_image": "booqable://assets/image-mountains-dark.png",
+        "timer": 5,
+        "title": "Rent together <br>with"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "product-page",
+    "products"
+  ]
+}

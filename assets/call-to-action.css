@@ -73,6 +73,10 @@
   object-fit: cover;
 }
 
+.cta__tag-image {
+  margin: 0 auto 40px;
+}
+
 @media (min-width: 992px) {
   .cta__wrapper {
     min-height: var(--min-height);

@@ -139,6 +139,12 @@
   transform: scale(-1, 1);
 }
 
+.hero__wrapper > .hero__container,
+.hero__wrapper > .hero__text-area {
+  position: relative;
+  z-index: 1;
+}
+
 @media (min-width: 428px) {
   .hero__container {
     min-height: 560px;

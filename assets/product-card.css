@@ -5,7 +5,6 @@
   width: 100%;
   overflow: hidden;
   color: var(--color-secondary);
-  background: var(--background-primary);
 }
 
 .product-card--full-border,
@@ -18,6 +17,7 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+  background: var(--background-primary);
 }
 
 .product-card__vision .product-card__link {
