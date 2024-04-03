@@ -1,0 +1,74 @@
+{
+  "name": "Search",
+  "sections": {
+    "title": {
+      "type": "title",
+      "blocks": [],
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-4",
+        "custom_description": "",
+        "custom_title": "",
+        "fill_background": true,
+        "full_width": true,
+        "image": "booqable://assets/image-background-mountains.png",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_transition_bottom": true,
+        "show_transition_top": false,
+        "tag": "",
+        "transition_color_bottom": "#FFFFFF",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "search": {
+      "type": "search",
+      "blocks": {
+        "item_674376": {
+          "type": "item",
+          "settings": {
+            "heading": "Collections",
+            "menu": "main-menu"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_674376"
+      ],
+      "settings": {
+         "borders": "image",
+         "collection": "all-products",
+         "color_scheme": "set-5",
+         "counter_plural": "RESULTS",
+         "counter_singular": "RESULT",
+         "full_width": false,
+         "grid": "three",
+         "limit": 16,
+         "message": "",
+         "mobile_toggler": "MENU",
+         "padding_bottom": "medium",
+         "padding_bottom_mobile": "small",
+         "padding_top": "medium",
+         "padding_top_mobile": "small",
+         "rounded_corners": "small",
+         "show_amount": true,
+         "show_excerpt": false,
+         "show_navigation": true,
+         "show_pagination": true,
+         "sticky_sidebar": true,
+         "timer": 5
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "title",
+    "search"
+  ]
+}
