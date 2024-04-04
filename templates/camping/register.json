@@ -17,5 +17,8 @@
       }
     }
   },
-  "order": ["register-form"]
+  "order": ["register-form"],
+  "editor_settings": {
+    "visible_only_when": ["user_authentication_enabled"]
+  }
 }
