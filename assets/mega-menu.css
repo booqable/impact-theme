@@ -302,25 +302,6 @@
   display: block;
 }
 
-.menu__login {
-  padding: 0 24px;
-  color: currentColor;
-}
-
-.menu__login-button {
-  width: 100%;
-  min-height: 58px;
-}
-
-.menu__login-button svg {
-  margin: 0 12px 0 0;
-}
-
-.menu__login-button.button path {
-  fill: none;
-  stroke: currentColor;
-}
-
 .menu__social-label {
   display: none;
 }
@@ -569,40 +550,6 @@
 
   .menu__bottom:empty {
     padding: 0;
-  }
-
-  .menu__login {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu__login-button.button {
-    font-weight: var(--font-weight-medium);
-    font-size: calc(var(--font-size-regular) + 2px);
-    min-height: auto;
-    width: auto;
-    padding: 0;
-    border: none;
-    background: none;
-  }
-
-  .menu__login-button.button:hover {
-    color: var(--color-outline-hover);
-    background: none;
-  }
-
-  .menu__login-button svg {
-    display: none;
-  }
-
-  .menu__login-button {
-    margin-bottom: 23px;
-  }
-
-  .menu__login-button:last-child {
-    margin-bottom: 0;
   }
 
   .menu__icons {

@@ -19,9 +19,6 @@
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
 {%- assign show_payments         = section.settings.show_payments -%}
 {%- assign show_payments_mobile  = section.settings.show_payments_mobile -%}
-{%- assign login_placeholder     = section.settings.login_placeholder -%}
-{%- assign logout_placeholder    = section.settings.logout_placeholder -%}
-{%- assign signup_placeholder    = section.settings.signup_placeholder -%}
 {%- assign follow_us             = section.settings.follow_us -%}
 {%- assign facebook              = settings.social_facebook_link -%}
 {%- assign instagram             = settings.social_instagram_link -%}
@@ -130,27 +127,9 @@
   {%- endif -%}
 {%- endcapture -%}
 
-{% comment %} Login buttons component {% endcomment %}
-{%- capture header_login -%}
-  <div class="menu__login">
-    <a href="" class="menu__login-button button button--outlined button--large">
-      {%- render 'icon-user' -%}
-      {{- login_placeholder | default: 'Log in' -}}
-    </a>
-    <a href="" class="menu__login-button button button--outlined button--large">
-      {{- signup_placeholder | default: 'Create account' -}}
-    </a>
-    <a href="" class="menu__login-button button button--outlined button--large">
-      {{- logout_placeholder | default: 'Log out' -}}
-    </a>
-  </div>
-{%- endcapture -%}
-
 {% comment %} Menu socials and payments icons component {% endcomment %}
 {%- capture menu_bottom -%}
   <div class="menu__bottom">
-    {{- header_login -}}
-
     <div class="menu__icons">
       {%- if facebook != blank or instagram != blank or twitter != blank or linkedin != blank or pinterest != blank or tiktok != blank or tumblr != blank or snapchat != blank or youtube != blank or vimeo != blank -%}
         <div class="menu__social">
@@ -443,24 +422,6 @@
         "type": "menu",
         "id": "menu",
         "label": "Menu"
-      },
-      {
-        "type": "text",
-        "id": "login_placeholder",
-        "label": "'Log in' button label",
-        "default": "Log in"
-      },
-      {
-        "type": "text",
-        "id": "logout_placeholder",
-        "label": "'Log out' button label",
-        "default": "Log out"
-      },
-      {
-        "type": "text",
-        "id": "signup_placeholder",
-        "label": "'Register' button label",
-        "default": "Create account"
       },
       {
         "type": "text",
