@@ -438,20 +438,43 @@ img {
 
 @media (min-width: 576px) {
   div[data-tippy-root]:has([data-tid="Mini cart"]) {
-    position: fixed !important;
-    top: var(--header-height) !important;
-    right: var(--horizontal-padding) !important;
+    margin: var(--header-height) var(--horizontal-padding-mobile) !important;
     transform: translate(0, 0) !important;
+    right: 0 !important;
     transition: all var(--animation-duration, 200ms) var(--transition-function-ease-in-out);
   }
 
-  .scrolled-down div[data-tippy-root]:has([data-tid="Mini cart"]) {
+  body:has(.header-sticky) div[data-tippy-root]:has([data-tid="Mini cart"]) {
+    position: fixed !important;
+    top: var(--header-height) !important;
+    right: var(--horizontal-padding-mobile) !important;
+    margin: 0 !important;
+    transform: translate(0, 0) !important;
+  }
+
+  .scrolled-down:has(.header-sticky) div[data-tippy-root]:has([data-tid="Mini cart"]) {
     top: calc(var(--header-height) + var(--header-transform, 0)) !important;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   div[data-tippy-root]:has([data-tid="Mini cart"]) {
+    margin: var(--header-height) var(--horizontal-padding) !important;
+  }
+
+  body:has(.header-sticky) div[data-tippy-root]:has([data-tid="Mini cart"]) {
+    right: var(--horizontal-padding) !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  div[data-tippy-root]:has([data-tid="Mini cart"]) {
+    margin: var(--header-height) 0 !important;
+    transform: translate(-19%, 0) !important;
+    right: calc(50% - var(--max-width) / 2) !important;
+  }
+
+  body:has(.header-sticky) div[data-tippy-root]:has([data-tid="Mini cart"]) {
     right: calc(50% - var(--max-width) / 2 + var(--horizontal-padding)) !important;
   }
 }

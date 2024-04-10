@@ -99,8 +99,7 @@
         {%- render 'image',
             image: logo,
             class: 'header__logo-image',
-            custom_width: '170',
-            custom_size: '170px',
+            size: 'logo',
             custom_alt: shop.name,
             keep_type: true
         -%}
@@ -257,6 +256,8 @@
           </ul>
 
           {{- menu_bottom -}}
+
+          <label for="mobile-menu-opener" class="menu__closer" aria-hidden="true"></label>
         </div>
       </nav>
 
@@ -284,6 +285,8 @@
           <span class="header__search-reset"></span>
         </form>
       </div>
+
+      <label for="search-opener" class="header__search-closer" aria-hidden="true"></label>
     </div>
   </div>
 {%- endcapture -%}
@@ -323,12 +326,13 @@
           {%- endif -%}
         </div>
 
-        {{- header_menu -}}
+        <div class="header__buttons">
+          {{- header_menu -}}
 
-        {%- if show_search or show_mini_cart -%}
-          {{- header_links -}}
-        {%- endif -%}
-
+          {%- if show_search or show_mini_cart -%}
+            {{- header_links -}}
+          {%- endif -%}
+        </div>
       </div>
     </div>
   </div>

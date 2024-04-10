@@ -56,6 +56,20 @@
   top: 63%;
 }
 
+.menu__closer {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: calc(100vw - 596px);
+  height: 100%;
+  cursor: default;
+}
+
+.menu__opener ~ .menu__closer {
+  right: 0;
+  width: 100%;
+}
+
 #mobile-menu-opener:checked ~ .menu__opener span {
   opacity: 0;
 }
@@ -92,7 +106,6 @@
 }
 
 .menu__wrapper {
-  overflow: hidden;
   position: absolute;
   top: 0;
   right: 0;
