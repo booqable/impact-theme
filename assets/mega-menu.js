@@ -5,6 +5,7 @@ class MegaMenu {
     this.selector = {
       header: ".header",
       menuOpener: "#mobile-menu-opener",
+      menuCloser: ".menu__closer",
       searchOpener: ".header__search-opener",
       cartOpener: "bq-minicart-button",
       checkbox: "input[type=checkbox]"
@@ -102,10 +103,16 @@ class MegaMenu {
     const target = event.target,
           menuOpened = this.menuOpener.checked,
           cartOpener = this.header.querySelector(this.selector.cartOpener),
+          menuCloser = this.menu.querySelector(this.selector.menuCloser),
           searchOpener = this.header.parentElement.querySelector(this.selector.searchOpener);
 
     if (target === searchOpener && menuOpened || target === cartOpener && menuOpened) {
       this.menuOpener.checked = false
+      this.removeOverflow()
+      this.closeMenuDrops()
+    }
+
+    if (target === menuCloser && menuOpened) {
       this.removeOverflow()
       this.closeMenuDrops()
     }

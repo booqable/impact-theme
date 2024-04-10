@@ -50,6 +50,7 @@
     l - Image is wide as half of the viewport
     xl - Image is wide as 3/4 of the viewport
     xxl - Image is as wide as the whole viewport
+    logo - Image has the same size and quality on all resolutions
   {% endcomment %}
 
   {%- case size -%}
@@ -71,6 +72,9 @@
     {%- when 'xxl' -%}
       {%- assign image_width = '320, 480, 768, 1200, 1680, 2560' -%}
       {%- assign image_sizes = '(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 1200px) 1200px, (max-width: 1680px) 1680px, 2560px' -%}
+    {%- when 'logo' -%}
+      {%- assign image_width = '420, 640' -%}
+      {%- assign image_sizes = '(max-width: 360px) 420px, 640px' -%}
   {%- endcase -%}
 
   {%- if custom_width != blank and custom_size != blank -%}
