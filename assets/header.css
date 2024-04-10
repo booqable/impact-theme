@@ -167,7 +167,7 @@
 .header__search-inner {
   display: flex;
   justify-content: center;
-	padding: calc(18px + var(--header-height, 39px)) 75px 18px 18px;
+	padding: calc(18px + var(--header-height, 39px)) 18px 18px;
   transform: translate(0, -100%);
   transition: transform var(--animation-duration) var(--transition-function-ease-out);
   background: var(--background-primary);
@@ -184,7 +184,7 @@
 }
 
 .touch[data-orientation='landscape'] .header__search-inner {
-  padding-right: 119px;
+  padding-right: 62px;
   padding-left: 62px;
 }
 
@@ -194,7 +194,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  max-width: 720px;
+  max-width: 780px;
 }
 
 .header-transparent .header__search-wrapper form {
@@ -204,17 +204,14 @@
 .header__search-reset {
   position: absolute;
   top: 50%;
-  left: 100%;
+  right: 20px;
   transform: translate(0, -50%);
   height: 42px;
   width: 42px;
   display: flex;
   align-items: center;
   background: none;
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-circle);
   cursor: pointer;
-  margin: 0 0 0 16px;
 }
 
 .header__search-reset:after,
@@ -244,18 +241,34 @@
   flex: 1 1 auto;
 }
 
-.header__search-input-wrapper .header__search-icon {
+.header__search-input-wrapper .header__search-submit {
   position: absolute;
   top: 50%;
-  left: 28px;
-  transform: translateY(-65%);
+  left: 20px;
+  width: 42px;
+  height: 42px;
+  transform: translateY(-50%);
   z-index: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+}
+
+.header__search-input-wrapper .header__search-submit g {
+  transition: all var(--animation-duration) var(--transition-function-ease-out);
+}
+
+.header__search-input-wrapper .header__search-submit:hover g {
+  stroke: var(--color-outline-hover);
 }
 
 .header__search-input {
   min-width: 230px;
   width: 100%;
-  padding: 18px 18px 18px 67px;
+  padding: 18px 67px;
   font-size: var(--font-size-regular);
   line-height: var(--line-height-sm);
   border: 1px solid var(--color-border);
@@ -289,6 +302,7 @@
   font-size: 20px;
   width: 20px;
   height: 20px;
+  transform: translate(-15%, -15%);
 }
 
 .header__search-icon g {
