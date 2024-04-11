@@ -85,9 +85,14 @@
   z-index: -1;
 }
 
+.header__nav-wrapper {
+  margin-left: 10px;
+}
+
 .header__buttons {
   grid-area: column-3;
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: flex-end;
 }
@@ -408,6 +413,14 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
 
   .header:has(~ #main section:first-child > .container) .header__date-picker-wrapper {
     width: auto;
+  }
+
+  .header__nav-wrapper {
+    margin: 0;
+  }
+
+  .header__buttons {
+    flex-direction: row;
   }
 }
 
