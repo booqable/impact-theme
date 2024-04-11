@@ -441,7 +441,7 @@ img {
     margin: var(--header-height) var(--horizontal-padding-mobile) !important;
     transform: translate(0, 0) !important;
     right: 0 !important;
-    transition: all var(--animation-duration, 200ms) var(--transition-function-ease-in-out);
+    transition: all var(--animation-duration) var(--transition-function-ease-in-out);
   }
 
   body:has(.header-sticky) div[data-tippy-root]:has([data-tid="Mini cart"]) {

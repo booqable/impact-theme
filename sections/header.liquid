@@ -277,12 +277,14 @@
       <div class="header__search-inner">
         <form id="search" action="{{ routes.search_url }}" role="search">
           <div class="header__search-input-wrapper">
-            <i class="header__search-icon">
-              {%- render 'icon-search' -%}
-            </i>
+            <button class="header__search-submit" type="submit">
+              <i class="header__search-icon">
+                {%- render 'icon-search' -%}
+              </i>
+            </button>
             <input type="search" name="q" class="header__search-input" placeholder="{{- search_placeholder -}}">
+            <span class="header__search-reset"></span>
           </div>
-          <span class="header__search-reset"></span>
         </form>
       </div>
 
