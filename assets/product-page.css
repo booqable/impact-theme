@@ -114,6 +114,10 @@ ul.product-main__gallery {
     display: grid;
     grid-template-columns: 2fr 1fr;
   }
+
+  .product-main__info {
+    padding-left: 16px;
+  }
 }
 
 @media (min-width: 992px) {
