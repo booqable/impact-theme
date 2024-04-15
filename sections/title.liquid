@@ -19,13 +19,25 @@
 {%- assign transition_color_top    = section.settings.transition_color_top -%}
 {%- assign transition_style        = section.settings.transition_style -%}
 
-{%- capture image_top -%}
-  {%- render 'image-transition-3' -%}
-{%- endcapture -%}
+{%- case transition_style -%}
+  {%- when "sketch" -%}
+    {%- capture image_top -%}
+      {%- render 'image-transition-sketch-3' -%}
+    {%- endcapture -%}
 
-{%- capture image_bottom -%}
-  {%- render 'image-transition-1' -%}
-{%- endcapture -%}
+    {%- capture image_bottom -%}
+      {%- render 'image-transition-sketch-1' -%}
+    {%- endcapture -%}
+
+  {%- when "wave" -%}
+    {%- capture image_top -%}
+      {%- render 'image-transition-wave-1' -%}
+    {%- endcapture -%}
+
+    {%- capture image_bottom -%}
+      {%- render 'image-transition-wave-1' -%}
+    {%- endcapture -%}
+{%- endcase -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -228,6 +240,10 @@
           {
             "value": "sketch",
             "label": "Sketch"
+          },
+          {
+            "value": "wave",
+            "label": "Wave"
           }
         ],
         "default": "fade"
