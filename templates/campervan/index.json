@@ -288,21 +288,13 @@
             "image": "booqable://assets/image-partner-logo-1-black.png"
           },
           "disabled": null
-        },
-        "logo_578118": {
-          "type": "logo",
-          "settings": {
-            "image": "booqable://assets/image-partner-logo-3-black.png"
-          },
-          "disabled": null
         }
       },
       "block_order": [
         "logo",
         "logo_578138",
         "logo_578148",
-        "logo_578178",
-        "logo_578118"
+        "logo_578178"
       ],
       "settings": {
         "color_scheme": "set-5",

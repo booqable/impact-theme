@@ -1,6 +1,6 @@
 {%- unless section.blocks.size == 0 -%}
 
-  {{ "socials.css" | asset_url | stylesheet_tag }}
+  {{ "image-gallery.css" | asset_url | stylesheet_tag }}
 
   {%- assign title                 = section.settings.title -%}
   {%- assign color_scheme          = section.settings.color_scheme -%}
@@ -63,39 +63,41 @@
   {% comment %} CSS variables end {% endcomment %}
 
   <div
-    class="socials__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} socials__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} socials__wrapper--padding-bottom{%- endif -%}"
+    class="image-gallery__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} image-gallery__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} image-gallery__wrapper--padding-bottom{%- endif -%}"
     style="{{- variables | escape -}}"
   >
     {%- unless full_width -%}
-      <div class="socials__container container">
+      <div class="image-gallery__container container">
     {%- endunless -%}
         {%- if title != blank -%}
           {%- if full_width -%}
-            <div class="socials__container container">
+            <div class="image-gallery__container container">
           {%- endif -%}
-              <h2 class="socials__title h4">{{- title -}}</h2>
+              <h2 class="image-gallery__title h4">{{- title -}}</h2>
           {%- if full_width -%}
             </div>
           {%- endif -%}
         {%- endif -%}
 
-        <div class="socials__images">
+        <div class="image-gallery__images">
           {%- for block in section.blocks -%}
             {%- assign image = block.settings.image -%}
             {%- assign url   = block.settings.url -%}
 
-            <div class="socials__image-wrapper" id="{{- section.key -}}-{{- block.id -}}">
-              {%- if image.url != blank -%}
+            {%- if image.url != blank -%}
+              <div class="image-gallery__image-wrapper" id="{{- section.key -}}-{{- block.id -}}">
                 {%- render 'image',
                   image: image,
                   loading: 'lazy',
-                  class: 'socials__image',
+                  class: 'image-gallery__image',
                   size: 'l'
                 -%}
 
-                <a class="socials__link" href="{{ url }}" target="_blank">Social media link</a>
-              {%- endif -%}
-            </div>
+                {%- if url != blank -%}
+                  <a class="image-gallery__link" href="{{ url }}" target="_blank">Link</a>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
           {%- endfor -%}
         </div>
     {%- unless full_width -%}
@@ -107,10 +109,10 @@
 
 {% schema %}
   {
-    "name": "Socials",
-    "description": "Showcase social media accounts",
+    "name": "Image gallery",
+    "description": "Showcase image gallery",
     "tag": "section",
-    "class": "socials",
+    "class": "image-gallery",
     "settings": [
       {
         "type": "header",
@@ -120,7 +122,7 @@
         "type": "text",
         "id": "title",
         "label": "Title",
-        "default": "Express yourself with <br>#explorable on Instagram"
+        "default": "Express yourself with <br>these images"
       },
       {
         "type": "color_scheme",
@@ -263,11 +265,11 @@
         "default": "none"
       }
     ],
-    "max_blocks": 4,
+    "max_blocks": 16,
     "blocks": [
       {
-        "type": "item",
-        "name": "Item",
+        "type": "image",
+        "name": "Image",
         "settings":[
           {
             "type": "image_picker",
