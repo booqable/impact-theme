@@ -154,7 +154,7 @@
   <div class="header__nav-wrapper">
     {%- if menu != blank -%}
       <input type="checkbox" id="mobile-menu-opener" style="display: none;">
-      <label for="mobile-menu-opener" class="menu__opener button button--primary button--small">
+      <label for="mobile-menu-opener" class="menu__opener button button--primary{% if menu_opener_label != blank %} button--small{%- endif -%}">
         {%- if menu_opener_label != blank -%}
           <b>{{- menu_opener_label -}}</b>
         {%- endif -%}
