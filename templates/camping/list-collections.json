@@ -33,7 +33,7 @@
         "counter_plural": "Items",
         "full_width": true,
         "grid": "three",
-        "limit": 8,
+        "limit": 9,
         "overlay_background": "#375647",
         "overlay_color": "#FFFFFF",
         "overlay_opacity":100,

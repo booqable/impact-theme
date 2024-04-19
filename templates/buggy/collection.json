@@ -47,7 +47,7 @@
         "counter_singular": "ITEM SHOWN",
         "full_width": false,
         "grid": "three",
-        "limit": 16,
+        "limit": 18,
         "message": "SORRY, THERE ARE NO PRODUCTS IN THIS COLLECTION YET",
         "mobile_toggler": "MENU",
         "padding_bottom": "medium",

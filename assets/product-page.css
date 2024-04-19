@@ -112,7 +112,7 @@ ul.product-main__gallery {
 @media (min-width: 768px) {
   .product-main__grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 60% 40%;
   }
 
   .product-main__info {
