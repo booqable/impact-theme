@@ -195,6 +195,7 @@
 
   .articles__show-wrapper {
     padding: 0;
+    text-align: right;
   }
 
   .articles__bottom {

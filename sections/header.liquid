@@ -6,7 +6,6 @@
 {%- assign logo_transparent      = section.settings.logo_transparent -%}
 {%- assign custom_title          = section.settings.custom_title -%}
 {%- assign menu                  = section.settings.menu -%}
-{%- assign menu_opener_mobile    = section.settings.menu_opener_mobile -%}
 {%- assign menu_opener_label     = section.settings.menu_opener_label -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
 {%- assign show_search           = section.settings.show_search -%}
@@ -315,7 +314,7 @@
 >
   <div class="header__content{% if padding_top != blank or padding_top_mobile != blank %} header__content--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} header__content--padding-bottom{%- endif -%}">
     <div class="header__container container">
-      <div class="header__content-inner{% if menu != blank %} header__mobile-menu-opener-{{- menu_opener_mobile -}}{% endif %}{% if show_search %} header__content-inner--with-search{% endif %}{% if show_mini_cart %} header__content-inner--with-cart{%- endif -%}">
+      <div class="header__content-inner{% if show_search %} header__content-inner--with-search{% endif %}{% if show_mini_cart %} header__content-inner--with-cart{%- endif -%}">
         <div class="header__logo-wrapper">
           <a href="{{ routes.root_url }}" class="header__logo">
             {{- header_logo -}}
@@ -495,22 +494,6 @@
       {
         "type": "header",
         "content": "Mobile settings"
-      },
-      {
-        "type": "select",
-        "id": "menu_opener_mobile",
-        "label": "Menu icon position",
-        "options": [
-          {
-            "value": "left",
-            "label": "Left"
-          },
-          {
-            "value": "right",
-            "label": "Right"
-          }
-        ],
-        "default": "left"
       },
       {
         "type": "select",

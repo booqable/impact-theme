@@ -66,3 +66,17 @@
     </div>
   {%- endif -%}
 {%- endif -%}
+
+{%- if style == "wave" -%}
+  {%- if show_top -%}
+    <div class="transition__wave transition__wave--top" style="{{- variables_top | escape -}}">
+      {{- image_top -}}
+    </div>
+  {%- endif -%}
+
+  {%- if show_bottom -%}
+    <div class="transition__wave transition__wave--bottom" style="{{- variables_bottom | escape -}}">
+      {{- image_bottom -}}
+    </div>
+  {%- endif -%}
+{%- endif -%}

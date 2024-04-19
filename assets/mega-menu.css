@@ -598,7 +598,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--border-radius-circle-dynamic);
+    border-radius: var(--border-radius);
     color: var(--color-outline);
     background: var(--background-primary);
   }
@@ -631,7 +631,7 @@
   .menu__payments .payment i {
     width: 40px;
     height: 40px;
-    border-radius: var(--border-radius-circle-dynamic);
+    border-radius: var(--border-radius);
     color: var(--color-outline);
     background: var(--background-primary);
   }

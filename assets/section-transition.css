@@ -24,6 +24,30 @@
   fill: var(--color-transition-bottom);
 }
 
+.transition__wave {
+  position: absolute;
+  left: -5px;
+  right: -5px;
+}
+
+.transition__wave--top {
+  top: 0;
+  transform: translateY(-50%);
+}
+
+.transition__wave--bottom {
+  bottom: 0;
+  transform: translateY(50%);
+}
+
+.transition__wave--top g {
+  stroke: var(--color-transition-top);
+}
+
+.transition__wave--bottom g {
+  stroke: var(--color-transition-bottom);
+}
+
 .transition__fade {
   position: absolute;
   left: 0;
