@@ -75,6 +75,10 @@
   opacity: calc(100% - var(--image-opacity));
 }
 
+.title:first-child .transition__wave--bottom {
+  transform: translateY(76%);
+}
+
 @media (min-width: 820px) {
   .title:has(+ .products) .title__background-image {
     height: auto;
