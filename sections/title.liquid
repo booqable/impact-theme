@@ -3,7 +3,6 @@
 {%- assign custom_title            = section.settings.custom_title -%}
 {%- assign custom_description      = section.settings.custom_description -%}
 {%- assign image                   = section.settings.image -%}
-{%- assign fill_background         = section.settings.fill_background -%}
 {%- assign full_width              = section.settings.full_width -%}
 {%- assign color_scheme            = section.settings.color_scheme -%}
 {%- assign rounded_corners         = section.settings.rounded_corners -%}
@@ -118,7 +117,7 @@
   {%- endif -%}
 
   {%- if image.url != blank -%}
-      <div class="title__background{% if fill_background %} title__background--fill-section{%- endif -%}">
+      <div class="title__background">
         {%- render 'image',
             image: image,
             loading: 'lazy',
@@ -184,11 +183,6 @@
         "type": "image_picker",
         "id": "image",
         "label": "Image"
-      },
-      {
-        "type": "checkbox",
-        "id": "fill_background",
-        "label": "Fill background into section"
       },
       {
         "type": "select",
