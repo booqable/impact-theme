@@ -122,7 +122,6 @@
         "color_scheme": "set-1",
         "custom_description": "",
         "custom_title": "Popular products",
-        "fill_background": false,
         "full_width": true,
         "image": "booqable://assets/image-dotted-stripe-line.png",
         "padding_bottom": "small",
@@ -332,21 +331,13 @@
             "image": "booqable://assets/image-partner-logo-1-black.png"
           },
           "disabled": null
-        },
-        "logo_478118": {
-          "type": "logo",
-          "settings": {
-            "image": "booqable://assets/image-partner-logo-3-black.png"
-          },
-          "disabled": null
         }
       },
       "block_order": [
         "logo",
         "logo_478138",
         "logo_478148",
-        "logo_478178",
-        "logo_478118"
+        "logo_478178"
       ],
       "settings": {
         "color_scheme": "set-3",
@@ -501,47 +492,47 @@
       },
       "disabled": null
     },
-    "socials": {
-      "type": "socials",
+    "image-gallery": {
+      "type": "image-gallery",
       "blocks": {
-        "item": {
-          "type": "item",
+        "image": {
+          "type": "image",
           "settings": {
-            "image": "booqable://assets/image-socials-1.jpg",
+            "image": "booqable://assets/image-gallery-1.jpg",
             "url": "booqable://root/"
           },
           "disabled": null
         },
-        "item_478118": {
-          "type": "item",
+        "image_478118": {
+          "type": "image",
           "settings": {
-            "image": "booqable://assets/image-socials-2.jpg",
+            "image": "booqable://assets/image-gallery-2.jpg",
             "url": "booqable://collections/"
           },
           "disabled": null
         },
-        "item_478117": {
-          "type": "item",
+        "image_478117": {
+          "type": "image",
           "settings": {
-            "image": "booqable://assets/image-socials-3.jpg",
+            "image": "booqable://assets/image-gallery-3.jpg",
             "url": "booqable://products/"
           },
           "disabled": null
         },
-        "item_478116": {
-          "type": "item",
+        "image_478116": {
+          "type": "image",
           "settings": {
-            "image": "booqable://assets/image-socials-4.jpg",
+            "image": "booqable://assets/image-gallery-4.jpg",
             "url": "booqable://pages/contact/"
           },
           "disabled": null
         }
       },
       "block_order": [
-        "item",
-        "item_478118",
-        "item_478117",
-        "item_478116"
+        "image",
+        "image_478118",
+        "image_478117",
+        "image_478116"
       ],
       "settings": {
         "color_scheme": "set-1",
@@ -551,7 +542,7 @@
         "padding_top": "small",
         "padding_top_mobile": "medium",
         "rounded_corners": "none",
-        "title": "Express yourself with <br>#explorable on Instagram"
+        "title": "Express yourself with <br>these images"
       },
       "disabled": false
     }
@@ -568,6 +559,6 @@
     "articles",
     "call-to-action_123098",
     "accordion",
-    "socials"
+    "image-gallery"
   ]
 }

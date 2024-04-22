@@ -24,6 +24,7 @@
   {%- for part in parts -%}
     {%- assign title_to_page = part.title | times: 1 -%}
     {%- assign current_to_page = paginate.current_page | times: 1 -%}
+    {% assign last = forloop.last %}
 
     {%- if part.is_link -%}
       <span class="page">
@@ -34,9 +35,11 @@
         {{- part.title -}}
       </span>
     {%- else -%}
-      <span class="deco">
-        {{- part.title -}}
-      </span>
+      {%- unless last -%}
+        <span class="deco">
+          {{- part.title -}}
+        </span>
+      {%- endunless -%}
     {%- endif -%}
   {%- endfor -%}
 

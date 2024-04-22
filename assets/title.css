@@ -79,18 +79,6 @@
   transform: translateY(76%);
 }
 
-@media (min-width: 820px) {
-  .title:has(+ .products) .title__background-image {
-    height: auto;
-    object-fit: inherit;
-  }
-
-  .title .title__background--fill-section .title__background-image {
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
 @media (min-width: 992px) {
   .title__wrapper--padding-top {
     padding-top: var(--padding-top);

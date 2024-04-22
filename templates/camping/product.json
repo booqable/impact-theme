@@ -10,7 +10,7 @@
         "breadcrumbs_url": "products",
         "color_scheme": "set-5",
         "infinity_scroll": true,
-        "message_label": "Free shipping over $50",
+        "message_label": "",
         "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
         "padding_top": "small",

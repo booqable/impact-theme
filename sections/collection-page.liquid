@@ -106,10 +106,10 @@
     {%- if show_amount -%}
       <div class="collection-page__top{% if full_width %} container{%- endif -%}">
         {{ counter }}
-        {% if counter > 1 %}
-          {{ counter_plural }}
-        {% else %}
+        {% if counter == 1 %}
           {{ counter_singular }}
+        {% else %}
+          {{ counter_plural }}
         {% endif %}
       </div>
     {%- endif -%}
