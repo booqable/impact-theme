@@ -43,8 +43,6 @@
       "settings": {
         "borders": "image",
         "color_scheme": "set-1",
-        "counter_plural": "items shown",
-        "counter_singular": "item shown",
         "full_width": false,
         "grid": "three",
         "limit": 18,
@@ -52,10 +50,9 @@
         "mobile_toggler": "Menu",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "small",
-        "padding_top": "medium",
+        "padding_top": "small",
         "padding_top_mobile": "small",
         "rounded_corners": "none",
-        "show_amount": true,
         "show_excerpt": false,
         "sticky_sidebar": true
       },

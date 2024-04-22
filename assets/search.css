@@ -15,7 +15,6 @@
   padding-bottom: var(--padding-bottom-mobile, 0);
 }
 
-.search__top,
 .search__message {
   text-align: center;
   color: var(--color-outline);
@@ -110,10 +109,6 @@
 
   .search__wrapper-four .search__container .product-card__vision:after {
     aspect-ratio: 1 / 1.32155;
-  }
-
-  .search__wrapper-four .search__container .search__top ~ .search__grid .product-card__vision:after {
-    aspect-ratio: 1 / 1.55;
   }
 }
 

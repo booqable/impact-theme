@@ -43,8 +43,6 @@
       "settings": {
         "borders": "full",
         "color_scheme": "set-1",
-        "counter_plural": "ITEMS SHOWN",
-        "counter_singular": "ITEM SHOW",
         "full_width": false,
         "grid": "three",
         "limit": 18,
@@ -55,7 +53,6 @@
         "padding_top": "medium",
         "padding_top_mobile": "small",
         "rounded_corners": "small",
-        "show_amount": true,
         "show_excerpt": false,
         "sticky_sidebar": true
       },

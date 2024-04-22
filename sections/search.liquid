@@ -5,9 +5,6 @@
 {%- assign border                = false -%}
 {%- assign collection            = section.settings.collection -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
-{%- assign counter               = results_count -%}
-{%- assign counter_singular      = section.settings.counter_singular -%}
-{%- assign counter_plural        = section.settings.counter_plural -%}
 {%- assign full_width            = section.settings.full_width -%}
 {%- assign grid                  = section.settings.grid -%}
 {%- assign image_placeholder 	   = settings.image_placeholder -%}
@@ -21,7 +18,6 @@
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
 {%- assign rounded_corners       = section.settings.rounded_corners -%}
-{%- assign show_amount           = section.settings.show_amount -%}
 {%- assign show_excerpt          = section.settings.show_excerpt -%}
 {%- assign show_navigation       = section.settings.show_navigation -%}
 {%- assign show_pagination       = section.settings.show_pagination -%}
@@ -114,18 +110,6 @@
     <div class="search__container container">
   {%- endunless -%}
       {%- if results_count > 0 -%}
-
-        {%- if show_amount -%}
-          <div class="search__top{% if full_width %} container{%- endif -%}">
-            {{ counter }}
-            {% if counter > 1 %}
-              {{ counter_plural }}
-            {% else %}
-              {{ counter_singular }}
-            {% endif %}
-          </div>
-        {%- endif -%}
-
         {%- if menu -%}
           <div class="search__grid">
             <div class="search__sidebar">
@@ -309,24 +293,6 @@
       {
         "type": "paragraph",
         "content": "The settings below are applicable when search results have at least 1 product"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_amount",
-        "label": "Show product amount",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "counter_singular",
-        "label": "Product amount label singular",
-        "default": "Item shown"
-      },
-      {
-        "type": "text",
-        "id": "counter_plural",
-        "label": "Product amount label plural",
-        "default": "Items shown"
       },
       {
         "type": "number",
