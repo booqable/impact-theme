@@ -31,7 +31,6 @@
   color: var(--color-secondary);
 }
 
-.pagination .deco,
 .pagination .current {
   position: relative;
   z-index: 1;
