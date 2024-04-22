@@ -70,10 +70,10 @@
           {%- if show_amount and collection != blank -%}
             <span class="collections__amount">
               {{ counter }}
-              {% if counter > 1 %}
-                {{ counter_plural }}
-              {% else %}
+              {% if counter == 1 %}
                 {{ counter_singular }}
+              {% else %}
+                {{ counter_plural }}
               {% endif %}
             </span>
           {%- endif -%}
