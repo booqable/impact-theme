@@ -5,10 +5,8 @@ class Header {
     this.selector = {
       body: "body",
       bar: ".top-bar",
-      barBlock: ".top-bar__text",
       view: ".preview-bar__container",
-      inner: ".header__inner",
-      link: "a"
+      inner: ".header__inner"
     }
 
     this.classes = {
@@ -27,10 +25,6 @@ class Header {
       transform: '--header-transform'
     }
 
-    this.attr = {
-      href: "href"
-    }
-
     this.minHeight = 120;
     this.last = 0;
   }
@@ -47,14 +41,12 @@ class Header {
     this.body = document.querySelector(this.selector.body);
     this.preview = document.querySelector(this.selector.view);
     this.bar = this.header.querySelector(this.selector.bar);
-    this.barBlocks = this.header.querySelectorAll(this.selector.barBlock);
     this.inner = this.header.querySelector(this.selector.inner);
     this.isSticky = this.header.classList.contains(this.classes.sticky);
   }
 
   events() {
     this.headerHeight();
-    this.setEmailPhone();
 
     window.addEventListener("scroll", this.scrollProps.bind(this));
     window.addEventListener("resize", this.headerHeight.bind(this));
@@ -114,36 +106,6 @@ class Header {
     }
 
     this.last = current;
-  }
-
-  // convert links to allow users to send emails and call phone numbers
-  setEmailPhone() {
-    if (!this.barBlocks.length) return false;
-
-    const keepOnly = /[^a-zA-Z0-9,\-.?!@+]/g,
-          specChars = /[\()\-\s]/g,
-          phoneRegex = /(?:[-+() ]*\d){10,13}/gm,
-          emailRegex = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
-
-    this.barBlocks.forEach(block => {
-      const links = block.querySelectorAll(this.selector.link);
-
-      if (!links.length) return false;
-
-      links.forEach(link => {
-        let href = link.getAttribute(this.attr.href);
-        const match = href.match(phoneRegex) || href.match(emailRegex);
-
-        if (match?.length) {
-          href = match[0].replace(keepOnly, '');
-
-          if (href.match(phoneRegex)) href = `tel:${href.replaceAll(specChars, '')}`;
-          if (href.match(emailRegex)) href = `mailto:${href}`;
-
-          link.setAttribute(this.attr.href, href);
-        }
-      })
-    })
   }
 
   setCssVar(key, val) {
