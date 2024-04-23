@@ -6,8 +6,8 @@
       "blocks": {},
       "block_order": [],
       "settings": {
-        "breadcrumbs_label": "",
-        "breadcrumbs_url": "collections",
+        "breadcrumbs_root_label": "",
+        "breadcrumbs_root_url": "collections",
         "color_scheme": "set-1",
         "infinity_scroll": false,
         "message_label": "",

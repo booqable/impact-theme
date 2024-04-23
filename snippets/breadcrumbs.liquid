@@ -4,16 +4,20 @@
 
   product - { product } *required,
   show - boolean *required,
-  label - "string" *required,
-  url - url *required
+  routes - "string" *required,
+  root_label - "string" *required,
+  root_url - url *required
+  collections_label - "string" optional
 
   Usage:
 
   {%- render 'breadcrumbs',
     product: your_id,
     show: your_id,
-    label: your_id,
-    url: your_id
+    routes - routes,
+    root_label: your_id,
+    root_url: your_id,
+    collections_label: your_id
   -%}
 
 {% endcomment %}
@@ -49,39 +53,117 @@
     }
   {% endstyle %}
 
-  {%- assign collections = product.collections -%}
-  {%- assign first = collections | first -%}
+  {%- assign collections         = product.collections -%}
+  {%- assign collection_title    = "" -%}
+  {%- assign collection_url      = "" -%}
+  {%- assign handle_all_products = "All products" -%}
+  {%- assign handle_collections  = "Collections" -%}
+  {%- assign handle_home         = "Home" -%}
+  {%- assign handle_shop_all     = "Shop all" -%}
 
-  {%- capture separator --%}
+  {%- for collection in collections -%}
+    {%- unless collection.title == handle_all_products -%}
+      {%- assign collection_title = collection.title -%}
+      {%- assign collection_url   = collection.url -%}
+
+      {%- break -%}
+    {%- endunless -%}
+  {%- endfor -%}
+
+  {%- case root_url -%}
+    {%- when 'home' -%}
+      {%- if root_label == blank -%}
+        {%- assign root_label = handle_home -%}
+      {%- else -%}
+        {%- assign root_label_customized = true -%}
+      {%- endif -%}
+
+      {%- if collections_label == blank -%}
+        {%- assign collections_label = handle_collections -%}
+      {%- endif -%}
+
+      {%- assign root_url = routes.root_url -%}
+
+    {%- when 'collections' -%}
+      {%- if root_label == blank -%}
+        {%- assign root_label = handle_collections -%}
+      {%- else -%}
+        {%- assign root_label_customized = true -%}
+      {%- endif -%}
+
+      {%- assign collections_label = "" -%}
+      {%- assign root_url = routes.collections_url -%}
+
+    {%- when 'products' -%}
+      {%- if root_label == blank -%}
+        {%- assign root_label = handle_shop_all -%}
+      {%- else -%}
+        {%- assign root_label_customized = true -%}
+      {%- endif -%}
+
+      {%- assign collections_label = "" -%}
+      {%- assign collection_title = "" -%}
+      {%- assign collection_url = "" -%}
+      {%- assign root_url = routes.all_products_collection_url -%}
+  {%- endcase -%}
+
+  {%- capture separator -%}
     <span class="breadcrumbs__separator" aria-hidden="true">
       {%- render 'icon-arrow-right' -%}
     </span>
-  {%- endcapture --%}
+  {%- endcapture -%}
+
+  {%- capture breadcrumb_root_link -%}
+    <a href="{{ root_url }}" class="breadcrumbs__link" aria-label="{{- root_label -}}">
+      {{- root_label -}}
+    </a>
+  {%- endcapture -%}
+
+  {%- capture breadcrumb_all_collections -%}
+    <a href="{{ routes.collections_url }}" class="breadcrumbs__link" aria-label="{{- collections_label -}}">
+      {{- collections_label -}}
+    </a>
+  {%- endcapture -%}
+
+  {%- capture breadcrumb_collection -%}
+    <a href="{{ collection_url }}" class="breadcrumbs__link" aria-label="{{- collection_title -}}">
+      {{- collection_title -}}
+    </a>
+  {%- endcapture -%}
+
+  {%- capture breadcrumb_product -%}
+    <span class="breadcrumbs__name" aria-label="{{- product.name -}}">
+      {{- product.name -}}
+    </span>
+  {%- endcapture -%}
 
   <nav
     class="breadcrumbs"
     role="navigation"
-    aria-label="breadcrumbs">
+    aria-role="breadcrumbs">
     <div class="breadcrumbs__container">
-      {%- if label != blank and url != blank-%}
-        <a href="{{ url }}" class="breadcrumbs__link" aria-label="{{- label -}}">
-          {{- label -}}
-        </a>
+      {%- if root_label == handle_home or root_label_customized -%}
+        {{- breadcrumb_root_link -}}
+        {{- separator -}}
 
+        {%- if collections_label != blank -%}
+          {{- breadcrumb_all_collections -}}
+          {{- separator -}}
+        {%- endif -%}
+      {%- elsif root_label == handle_collections or root_label_customized -%}
+        {{- breadcrumb_root_link -}}
+        {{- separator -}}
+      {%- elsif root_label == handle_shop_all or root_label_customized -%}
+        {{- breadcrumb_root_link -}}
         {{- separator -}}
       {%- endif -%}
 
-      {%- if first.url -%}
-        <a href="{{ first.url }}" class="breadcrumbs__link" aria-label="{{- first.name -}}">
-          {{- first.name -}}
-        </a>
-
+      {%- if collection_url != blank and collection_title != blank -%}
+        {{- breadcrumb_collection -}}
         {{- separator -}}
       {%- endif -%}
 
-      <span class="breadcrumbs__name" aria-label="{{- product.name -}}">
-        {{- product.name -}}
-      </span>
+      {{- breadcrumb_product -}}
     </div>
   </nav>
 {%- endif -%}
