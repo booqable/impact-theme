@@ -1,5 +1,6 @@
 {{ "footer.css" | asset_url | stylesheet_tag }}
 
+{%- assign app                   = section.blocks | where: "type", "app" | first -%}
 {%- assign full_width            = section.settings.full_width -%}
 {%- assign logo	                 = section.settings.logo -%}
 {%- assign custom_title	         = section.settings.custom_title -%}
@@ -144,8 +145,14 @@
 
 {% comment %} Payments and social component {% endcomment %}
 {%- capture footer_icons -%}
-  {%- if facebook != blank or instagram != blank or twitter != blank or linkedin != blank or pinterest != blank or tiktok != blank or tumblr != blank or snapchat != blank or youtube != blank or vimeo != blank or payment_methods.size > 0-%}
+  {%- if facebook != blank or instagram != blank or twitter != blank or linkedin != blank or pinterest != blank or tiktok != blank or tumblr != blank or snapchat != blank or youtube != blank or vimeo != blank or payment_methods.size > 0 or app != blank -%}
     <div class="footer__icons">
+      {%- if app %}
+        <div class="footer__app">
+          {%- render 'app', block: app, section: section -%}
+        </div>
+      {%- endif -%}
+
       {%- if facebook != blank or instagram != blank or twitter != blank or linkedin != blank or pinterest != blank or tiktok != blank or tumblr != blank or snapchat != blank or youtube != blank or vimeo != blank -%}
         <div class="footer__social">
           {%- render 'socials', settings: settings -%}
@@ -444,6 +451,9 @@
             "default": "left"
           }
         ]
+      },
+      {
+        "type": "@app"
       }
     ]
   }

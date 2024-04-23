@@ -299,6 +299,10 @@
   color: currentColor;
 }
 
+.menu__icons:has(.header__app) .menu__social {
+  padding-right: 20px;
+}
+
 .menu__social {
   padding: 10px 0;
 }
@@ -638,6 +642,15 @@
 
   .menu__payments .payment svg {
     width: 28px;
+  }
+
+  .menu__icons:has(.header__app) .header__app {
+    margin-top: 60px;
+  }
+
+  .menu__icons:has(.header__app) .menu__social {
+    margin-top: 24px;
+    padding-right: 23px;
   }
 
   [id^="dropdown-childmenu-trigger-"]:checked ~ .menu__dropdown,

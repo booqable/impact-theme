@@ -1,6 +1,7 @@
 {{ "header.css" | asset_url | stylesheet_tag }}
 {{ "mega-menu.css" | asset_url | stylesheet_tag }}
 
+{%- assign app                   = section.blocks | where: "type", "app" | first -%}
 {%- assign sticky_header         = section.settings.sticky_header -%}
 {%- assign logo                  = section.settings.logo -%}
 {%- assign logo_transparent      = section.settings.logo_transparent -%}
@@ -129,6 +130,12 @@
 {%- capture menu_bottom -%}
   <div class="menu__bottom">
     <div class="menu__icons">
+      {%- if app -%}
+        <div class="header__app">
+          {%- render 'app', block: app, section: section, size: "mobile" -%}
+        </div>
+      {%- endif -%}
+
       {%- if facebook != blank or instagram != blank or twitter != blank or linkedin != blank or pinterest != blank or tiktok != blank or tumblr != blank or snapchat != blank or youtube != blank or vimeo != blank -%}
         <div class="menu__social">
           {%- if follow_us != blank -%}
@@ -337,6 +344,12 @@
       </div>
     </div>
   </div>
+
+  {%- if app -%}
+    <div class="header__app">
+      {%- render 'app', block: app, section: section, size: "desktop" -%}
+    </div>
+  {%- endif -%}
 </div>
 
 <script>
@@ -540,6 +553,11 @@
         "id": "show_payments_mobile",
         "default": true,
         "label": "Show payments"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "@app"
       }
     ]
   }

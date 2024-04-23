@@ -107,6 +107,73 @@
   color: var(--color-secondary);
 }
 
+.footer__icons:has(.footer__app) .footer__social {
+  padding-right: 20px;
+}
+
+#section-footer .footer__app .weglot-widget__wrapper {
+  border-radius: var(--border-radius);
+  transition: all var(--animation-duration) var(--transition-function-ease-in-out);
+}
+
+#section-footer .footer__app .weglot-widget__wrapper .weglot-widget__label {
+  transition: all var(--animation-duration) var(--transition-function-ease-in-out);
+}
+
+#section-footer .footer__app .weglot-widget__wrapper:hover {
+  border-color: var(--color-outline-hover);
+}
+
+#section-footer .footer__app .weglot-widget__wrapper:hover .weglot-widget__label {
+  color: var(--color-outline-hover);
+}
+
+#section-footer .footer__app .weglot-widget__dropdown--down {
+  top: auto;
+  bottom: calc(100% + 11px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-rounded);
+  transition: all var(--animation-duration) var(--transition-function-ease-in-out);
+}
+
+#section-footer .footer__app .weglot-widget__dropdown--down:before,
+#section-footer .footer__app .weglot-widget__dropdown--down:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: var(--background-primary) transparent transparent transparent;
+  transition: all var(--animation-duration) var(--transition-function-ease-in-out);
+}
+
+#section-footer .footer__app .weglot-widget__dropdown--down:before {
+  top: calc(100% + 1px);
+  border-color: var(--color-border) transparent transparent transparent;
+}
+
+#section-footer .footer__app .weglot-widget__dropdown--down:hover {
+  border-color: var(--color-outline-hover);
+}
+
+#section-footer .footer__app .weglot-widget__dropdown--down:hover:before {
+  border-color: var(--color-outline-hover) transparent transparent transparent;
+}
+
+#section-footer .footer__app .weglot-widget__item {
+  transition: all var(--animation-duration) var(--transition-function-ease-in-out);
+}
+
+#section-footer .footer__app .weglot-widget__item:hover {
+  color: var(--color-outline-hover);
+}
+
 @media (min-width: 992px) {
   .footer__wrapper--padding-top {
     padding-top: var(--padding-top);
