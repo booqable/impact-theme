@@ -343,13 +343,13 @@
         </div>
       </div>
     </div>
-  </div>
 
-  {%- if app -%}
-    <div class="header__app">
-      {%- render 'app', block: app, section: section, size: "desktop" -%}
-    </div>
-  {%- endif -%}
+    {%- if app -%}
+      <div class="header__app">
+        {%- render 'app', block: app, section: section, size: "desktop" -%}
+      </div>
+    {%- endif -%}
+  </div>
 </div>
 
 <script>
