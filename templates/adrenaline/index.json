@@ -11,7 +11,7 @@
         "button_outline_label": "GET IN TOUCH",
         "button_outline_url": "booqable://pages/contact/",
         "color_scheme": "set-4",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <br> varius enim in eros elementum tristique.",
+        "description": "Kick up some dirt with our high-performance ATVs and buggies, <br/> ready to elevate your outdoor adventures to adrenaline-pumping heights.",
         "full_width": false,
         "height": "medium",
         "image": "booqable://assets/image-hero.jpg",
@@ -32,7 +32,7 @@
         "transition_color_bottom": "#FFFFFF",
         "transition_color_top": "#FFFFFF",
         "transition_style": "none",
-        "title": "it’s time for <br>adventure",
+        "title": "It’s time for <br>adventure",
         "video_url": ""
       },
       "disabled": null
@@ -207,7 +207,7 @@
         "show_transition_bottom": true,
         "tag": "HIGHLIGHT",
         "text_position": "middle",
-        "title": "EXPLORE THE RIDE <br> OF YOUR LIFE",
+        "title": "EXPLORE THE DRIVE <br> OF YOUR LIFE",
         "transition_color_bottom": "#000000",
         "transition_color_top": "#FFFFFF",
         "transition_style": "none"
@@ -223,7 +223,7 @@
             "button_outline_label": "CHECK REVIEW ONLINE",
             "button_outline_url": "booqable://root/",
             "image": "booqable://assets/image-avatar-1.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "description": "Upon arrival, the equipment was in pristine condition, and the staff gave a thorough briefing on safety and vehicle handling.",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
           },
@@ -235,7 +235,7 @@
             "button_outline_label": "CHECK REVIEW ONLINE",
             "button_outline_url": "booqable://root/",
             "image": "booqable://assets/image-avatar-2.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "description": "When we arrived, the buggies were ready and waiting, and the staff went above and beyond to ensure we were comfortable with the controls and safety features.",
             "name": "Ashley de Lotz",
             "position": "08-06-2023"
           },
@@ -247,7 +247,7 @@
             "button_outline_label": "CHECK REVIEW ONLINE",
             "button_outline_url": "booqable://root/",
             "image": "booqable://assets/image-avatar-3.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "description": "The staff were professional and extremely knowledgeable, providing us with invaluable advice on navigating different terrains.",
             "name": "Adrian Vajas",
             "position": "04-05-2023"
           },
@@ -327,10 +327,10 @@
           "settings": {
             "article_btn": "READ MORE",
             "article_btn_url": "booqable://root/",
-            "article_tag": "Tagline",
-            "heading": "MEDIUM LENGTH SECTION HEADING GOES HERE",
+            "article_tag": "Guide",
+            "heading": "CHOOSING THE BEST ATV OR BUGGY FOR YOUR ADVENTURE",
             "image": "booqable://assets/image-articles-1.jpeg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+            "text": "Dive into the exhilarating world of ATV and buggy rides with this comprehensive guide on choosing the right vehicle for your terrain and skill level."
           },
           "disabled": null
         },
@@ -339,10 +339,10 @@
           "settings": {
             "article_btn": "READ MORE",
             "article_btn_url": "booqable://root/",
-            "article_tag": "Tagline",
-            "heading": "MEDIUM LENGTH SECTION HEADING GOES HERE",
+            "article_tag": "Guide",
+            "heading": "ESSENTIAL TIPS FOR ATV AND BUGGY RENTALS",
             "image": "booqable://assets/image-articles-2.jpeg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "Renting an ATV or buggy offers a unique opportunity to explore the outdoors with speed and excitement, but safety should always be a top priority."
           },
           "disabled": null
         },
@@ -351,10 +351,10 @@
           "settings": {
             "article_btn": "READ MORE",
             "article_btn_url": "booqable://root/",
-            "article_tag": "Tagline",
-            "heading": "MEDIUM LENGTH SECTION HEADING GOES HERE",
+            "article_tag": "Guide",
+            "heading": "ATV AND BUGGY ADVENTURES FOR ALL AGES",
             "image": "booqable://assets/image-articles-3.jpeg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "Off-roading isn't just for thrill-seekers; it can be a family affair. This article explores how to make ATV and buggy adventures."
           },
           "disabled": null
         }
@@ -432,24 +432,24 @@
         "item_472356": {
           "type": "item",
           "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+            "heading": "What types of ATVs and buggies are available for rent?",
+            "content": "Our rental fleet includes a variety of ATVs and buggies to accommodate different terrains and driver experiences. We offer single-rider ATVs, two-seater and four-seater buggies, and even larger models for group adventures. Whether you're looking for a vehicle for a leisurely ride through scenic trails or a high-performance model for more challenging terrains, we have options to suit your needs. Each vehicle is regularly serviced and maintained to ensure top performance and safety."
           },
           "disabled": null
         },
         "item_472359": {
           "type": "item",
           "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+            "heading": "What do I need to know before renting an ATV or buggy?",
+            "content": "To rent an ATV or buggy, you must be at least 18 years old and possess a valid driver's license. A safety briefing and handling instructions are provided before you take the vehicle out, which all renters are required to attend. We also require a signed waiver and a refundable security deposit at the time of rental. For your safety, we provide helmets and recommend wearing long sleeves, pants, and closed-toe shoes. It’s also a good idea to bring sunscreen, sunglasses, and a dust mask or bandana."
           },
           "disabled": null
         },
         "item_472355": {
           "type": "item",
           "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+            "heading": "Can I book a guided tour, or do I have to navigate on my own?",
+            "content": "We offer both options! For those who prefer a guided experience, we have expert guides who can lead you on designated trails, ensuring you see the best sights while keeping safety a priority. Guided tours are great for beginners or those unfamiliar with the area. If you prefer to explore independently, we provide maps and GPS units with marked trails that are suitable for varying skill levels. Whether you choose a self-guided adventure or a guided tour, our team is here to make sure you have an exciting and memorable experience."
           },
           "disabled": null
         }
@@ -462,7 +462,7 @@
       "settings": {
         "behavior": "multiple",
         "color_scheme": "set-3",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "description": "Essential FAQs for ATV and buggy rentals for thrilling off-road adventures",
         "image": "",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",

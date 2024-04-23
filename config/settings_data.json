@@ -74,7 +74,7 @@
           "blocks": {},
           "block_order": [],
           "settings": {
-            "bar_message": "Get 15% off with code ADRENALINE at checkout",
+            "bar_message": "Get 15% off with code <b>ADRENALINE</b> at checkout",
             "bar_text": "Call Us 24/7 <a href=\"+1 555 302 8549\">+1 555 302 8549</a>",
             "color_scheme": "set-4",
             "icon": "phone",
