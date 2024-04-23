@@ -516,9 +516,13 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
     display: block;
     position: absolute;
     right: calc(var(--horizontal-padding) - 10px);
-    top: calc(50% + var(--top-bar-height, 0) / 2 - 1px);
-    transform: translate(100%, -50%);
+    top: calc(var(--top-bar-height, 0) + var(--padding-top) + 1px);
+    transform: translate(100%, 0);
     z-index: 1;
+  }
+
+  .header-transparent .header__app {
+    top: calc(var(--padding-top) + 1px);
   }
 
   .header__buttons .header__app {
