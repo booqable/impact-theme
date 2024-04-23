@@ -11,7 +11,7 @@
         "button_outline_label": "More info",
         "button_outline_url": "booqable://root/",
         "color_scheme": "set-4",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <br> varius enim in eros elementum tristique.",
+        "description": "From tents to cooking equipment, we have everything <br/> you need for a perfect escape.",
         "full_width": true,
         "height": "medium",
         "image": "booqable://assets/image-hero.jpeg",
@@ -215,7 +215,7 @@
         "tag": "HIGHLIGHT",
         "tag_image": "booqable://assets/image-mountains-light.png",
         "text_position": "middle",
-        "title": "Explore the ride <br> of your life",
+        "title": "Take the journey <br/> of your life",
         "transition_color_bottom": "#E06B48",
         "transition_color_top": "#F9F3E3",
         "transition_style": "fade"
@@ -231,7 +231,7 @@
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
             "image": "booqable://assets/image-avatar-1.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "description": "Their wide selection of high-quality gear meant that we could find everything we needed in one place, from tents and sleeping bags to cookware and portable stoves. The gear was in excellent condition and clearly well-maintained.",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
           },
@@ -243,7 +243,7 @@
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
             "image": "booqable://assets/image-avatar-2.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "description": "Their website was not only easy to navigate but also packed with helpful information and guides on choosing the right gear. The rental process was straightforward, and the prices were very reasonable.",
             "name": "Ashley de Lotz",
             "position": "08-06-2023"
           },
@@ -255,7 +255,7 @@
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
             "image": "booqable://assets/image-avatar-3.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "description": "The quality of the equipment was outstanding, from the robust tents to the ultra-comfy sleeping pads and high-performance cook systems. Everything was ready for pickup at the agreed time.",
             "name": "Adrian Vajas",
             "position": "04-05-2023"
           },
@@ -320,7 +320,7 @@
       ],
       "settings": {
         "color_scheme": "set-4",
-        "title": "TRUSTED BY:",
+        "title": "RENT GEAR FROM:",
         "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
         "padding_top": "small",
@@ -336,10 +336,10 @@
           "settings": {
             "article_btn": "Read more",
             "article_btn_url": "booqable://root/",
-            "article_tag": "Tagline",
-            "heading": "Medium length section heading goes here",
+            "article_tag": "Gear",
+            "heading": "Essential Gear for Your Outdoor Getaway",
             "image": "booqable://assets/image-articles-1.jpg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+            "text": "Heading into the great outdoors requires more than just a tent. This comprehensive guide details all the essential camping gear you might need, from sleeping bags to portable stoves."
           },
           "disabled": null
         },
@@ -348,10 +348,10 @@
           "settings": {
             "article_btn": "Read more",
             "article_btn_url": "booqable://root/",
-            "article_tag": "Tagline",
-            "heading": "Medium length section heading goes here",
+            "article_tag": "Essentials",
+            "heading": "Sustainable Gear Rentals for the Conscious Camper",
             "image": "booqable://assets/image-articles-2.jpeg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "As more campers seek to minimize their environmental footprint, this post highlights sustainable practices and eco-friendly gear."
           },
           "disabled": null
         },
@@ -360,10 +360,10 @@
           "settings": {
             "article_btn": "Read more",
             "article_btn_url": "booqable://root/",
-            "article_tag": "Tagline",
-            "heading": "Medium length section heading goes here",
+            "article_tag": "Checklist",
+            "heading": "What to Rent for Every Trip",
             "image": "booqable://assets/image-hero.jpeg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "Preparing for a camping trip can be overwhelming, especially when deciding what gear to bring along."
           },
           "disabled": null
         }
@@ -430,24 +430,24 @@
         "item_478740": {
           "type": "item",
           "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+            "heading": "What types of camping gear do you offer for rental?",
+            "content": "Our inventory covers a wide range of camping essentials designed to suit various outdoor experiences, from lightweight backpacking setups to family-sized camp setups. We offer tents of all sizes, sleeping bags suitable for different temperature ranges, backpacks, camping stoves, cookware, and portable furniture such as chairs and tables. We also provide specialized gear like GPS units, solar chargers, and water filtration systems. Detailed information on each item is available on our website to help you choose the right gear for your trip."
           },
           "disabled": null
         },
         "item_478741": {
           "type": "item",
           "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+            "heading": "How can I rent camping gear, and what do I need to provide?",
+            "content": "Renting camping gear is easy and can be done directly through our website or at our store location. To book your gear, you'll need to select your rental dates, choose the gear you need, and fill out a rental agreement. Required at booking are a valid government-issued ID and a credit card for the security deposit. We recommend booking in advance, especially during peak camping seasons, to ensure the availability of all the gear you need."
           },
           "disabled": null
         },
         "item_478742": {
           "type": "item",
           "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+            "heading": "Do you offer any guidance on how to use the rented camping equipment?",
+            "content": "Yes, we pride ourselves on making sure all our customers feel confident using their rented gear. When you pick up your gear, our staff will provide a demonstration of how to set up and use each item effectively. For online orders, we include user manuals and quick setup guides with every rental. Additionally, our website features instructional videos and tips for using and maintaining gear in the field, ensuring you can enjoy your camping experience to the fullest. If you have any questions during your rental period, our support team is just a phone call away, ready to assist with any inquiries or issues you might encounter."
           },
           "disabled": null
         }
@@ -460,7 +460,7 @@
       "settings": {
         "behavior": "multiple",
         "color_scheme": "set-5",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "description": "Everything you need to know about renting camping gear for your outdoor adventures.",
         "image": "",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
@@ -522,7 +522,7 @@
         "padding_top": "small",
         "padding_top_mobile": "medium",
         "rounded_corners": "none",
-        "title": "Express yourself with <br>these images"
+        "title": "Express yourself with <br> #adventure on Instagram"
       },
       "disabled": false
     }

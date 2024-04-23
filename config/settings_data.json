@@ -74,7 +74,7 @@
           "blocks": {},
           "block_order": [],
           "settings": {
-            "bar_message": "Get 15% off with code ADRENALINE at checkout",
+            "bar_message": "Get 15% off with code <b>ADRENALINE</b> at checkout",
             "bar_text": "Call Us 24/7 <a href=\"+1 555 302 8549\">+1 555 302 8549</a>",
             "color_scheme": "set-4",
             "icon": "phone",
@@ -250,9 +250,9 @@
           "blocks": {},
           "block_order": [],
           "settings": {
-            "bar_message": "Get 15% off with code ADVENTURE at checkout",
+            "bar_message": "Get 15% off with code <b>ADVENTURE</b> at checkout",
             "bar_text": "Call Us 24/7 <a href=\"+1 555 302 8549\">+1 555 302 8549</a>",
-            "color_scheme": "set-3",
+            "color_scheme": "set-4",
             "icon": "phone",
             "icon_style": "outline",
             "padding_top": "medium",
@@ -435,7 +435,7 @@
           "blocks": {},
           "block_order": [],
           "settings": {
-            "bar_message": "Get 15% off with code DAREDEVIL at checkout",
+            "bar_message": "Get 15% off with code <b>DAREDEVIL</b> at checkout",
             "bar_text": "Call Us 24/7 <a href=\"+1 555 302 8549\">+1 555 302 8549</a>",
             "color_scheme": "set-3",
             "icon": "phone",
@@ -620,7 +620,7 @@
           "blocks": {},
           "block_order": [],
           "settings": {
-            "bar_message": "Get 15% off with code EXPLORE at checkout",
+            "bar_message": "Get 15% off with code <b>EXPLORE</b> at checkout",
             "bar_text": "Call Us 24/7 <a href=\"+1 555 302 8549\">+1 555 302 8549</a>",
             "color_scheme": "set-3",
             "icon": "phone",
@@ -805,7 +805,7 @@
           "blocks": {},
           "block_order": [],
           "settings": {
-            "bar_message": "Get 15% off with code FLOW at checkout",
+            "bar_message": "Get 15% off with code <b>FLOW</b> at checkout",
             "bar_text": "Call Us 24/7 <a href=\"+1 555 302 8549\">+1 555 302 8549</a>",
             "color_scheme": "set-5",
             "icon": "phone",
@@ -990,7 +990,7 @@
           "blocks": {},
           "block_order": [],
           "settings": {
-            "bar_message": "Get 15% off with code PURE at checkout",
+            "bar_message": "Get 15% off with code <b>PURE</b> at checkout",
             "bar_text": "Call Us 24/7 <a href=\"+1 555 302 8549\">+1 555 302 8549</a>",
             "color_scheme": "set-3",
             "icon": "phone",

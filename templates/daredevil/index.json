@@ -11,7 +11,7 @@
         "button_outline_label": "More info",
         "button_outline_url": "booqable://root/",
         "color_scheme": "set-4",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <br> varius enim in eros elementum tristique.",
+        "description": "Gear up with our top-of-the-line mountain bikes to <br/> conquer any terrain. Start your journey with us today.",
         "full_width": true,
         "height": "medium",
         "image": "booqable://assets/image-hero.jpeg",
@@ -253,7 +253,7 @@
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
             "image": "booqable://assets/image-avatar-1.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "description": "When we picked up the bikes, the staff were not only friendly but also exceptionally knowledgeable, offering valuable tips on local trails that matched our interests.",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
           },
@@ -265,7 +265,7 @@
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
             "image": "booqable://assets/image-avatar-2.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "description": "What really set them apart was their exceptional customer service; the staff took the time to ensure the bike fit me well and that I was comfortable with all its features before I headed out.",
             "name": "Ashley de Lotz",
             "position": "08-06-2023"
           },
@@ -277,7 +277,7 @@
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
             "image": "booqable://assets/image-avatar-3.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "description": "The range of bikes meant that we all found the perfect fit, and the additional gear available for rent ensured we were well-prepared for our adventure.",
             "name": "Adrian Vajas",
             "position": "04-05-2023"
           },
@@ -357,10 +357,10 @@
           "settings": {
             "article_btn": "Read more",
             "article_btn_url": "booqable://root/",
-            "article_tag": "Tagline",
-            "heading": "Medium length section heading goes here",
+            "article_tag": "Guide",
+            "heading": "Trailblazers: Finding the Perfect Mountain Bike Rental for Your Adventure",
             "image": "booqable://assets/image-articles-1.jpg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+            "text": "This guide offers a comprehensive overview of how to choose the perfect mountain bike rental, tailored to your experience level, riding style, and the terrain you plan to conquer."
           },
           "disabled": null
         },
@@ -369,10 +369,10 @@
           "settings": {
             "article_btn": "Read more",
             "article_btn_url": "booqable://root/",
-            "article_tag": "Tagline",
-            "heading": "Medium length section heading goes here",
+            "article_tag": "Guide",
+            "heading": "Family Mountain Biking: A Guide to Kid-Friendly Bike Rentals and Trails",
             "image": "booqable://assets/image-articles-2.jpg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "This article simplifies the process, offering insights into selecting kid-friendly mountain bike rentals and highlighting the best family-oriented trails."
           },
           "disabled": null
         },
@@ -381,10 +381,10 @@
           "settings": {
             "article_btn": "Read more",
             "article_btn_url": "booqable://root/",
-            "article_tag": "Tagline",
-            "heading": "Medium length section heading goes here",
+            "article_tag": "Guide",
+            "heading": "Eco-Friendly Exploration: The Rise of Electric Mountain Bikes",
             "image": "booqable://assets/image-articles-3.jpg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "This post delves into the benefits of renting e-MTBs for your next outdoor adventure, including how they can enhance your ride, allow you to cover more ground with less effort."
           },
           "disabled": null
         }
@@ -450,24 +450,24 @@
         "item": {
           "type": "item",
           "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+            "heading": "What types of mountain bikes are available for rent?",
+            "content": "Our fleet includes a wide range of mountain bikes to cater to different riding preferences and skill levels. Options include cross-country bikes, trail bikes, all-mountain bikes, and downhill bikes. Each type is designed to offer the best experience for its intended use, from long-distance rides to aggressive downhill trails. We also offer electric mountain bikes for those who want an extra boost. Sizes are available for adults and children, ensuring everyone can find their perfect ride."
           },
           "disabled": null
         },
         "item_478139": {
           "type": "item",
           "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+            "heading": "How does the rental process work, and what do I need to provide?",
+            "content": "Renting a mountain bike with us is straightforward. You can reserve a bike through our online booking system or by calling us directly. You'll need to specify the rental duration, bike type, and your size to ensure the right fit. A valid government-issued ID and a credit card for the security deposit are required at the time of pickup. For your safety, we also offer helmets, gloves, and protective gear for rent. Don’t forget to bring your own water bottle and sunscreen!"
           },
           "disabled": null
         },
         "item_478145": {
           "type": "item",
           "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+            "heading": "Can I book a guided mountain biking tour through your service?",
+            "content": "Yes, we offer guided mountain biking tours that cater to various skill levels, from beginners to advanced riders. Our tours are led by experienced guides who know the trails inside and out. They can show you the best spots, share riding techniques, and ensure a safe and memorable adventure. Tours vary in length and difficulty, so there’s something for everyone. You can book a tour separately or as a package deal with your bike rental. For more details on tour options and to reserve your spot, please visit our website or contact us directly."
           },
           "disabled": null
         }
@@ -480,7 +480,7 @@
       "settings": {
         "behavior": "multiple",
         "color_scheme": "set-5",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "description": "Ultimate guide to mountain bike rentals for adventure seekers",
         "image": "booqable://assets/image-curvilinear-lines.png",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
@@ -542,7 +542,7 @@
         "padding_top": "small",
         "padding_top_mobile": "medium",
         "rounded_corners": "none",
-        "title": "Express yourself with <br>these images"
+        "title": "Express yourself with <br> #daredevil on Instagram"
       },
       "disabled": false
     }

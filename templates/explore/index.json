@@ -11,7 +11,7 @@
         "button_outline_label": "More info",
         "button_outline_url": "booqable://root/",
         "color_scheme": "set-4",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "description": "Embark on unforgettable journeys with our campervans, your home <br> away from home. Discover the perfect blend of comfort and adventure.",
         "full_width": true,
         "height": "medium",
         "image": "booqable://assets/image-hero.jpeg",
@@ -32,7 +32,7 @@
         "transition_color_bottom": "#0B0E15",
         "transition_color_top": "#0B0E15",
         "transition_style": "sketch",
-        "title": "Your adventure <br>starts here",
+        "title": "Your adventure <br> starts here",
         "video_url": ""
       },
       "disabled": null
@@ -210,7 +210,7 @@
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
             "image": "booqable://assets/image-avatar-1.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "description": "The booking process was smooth, and the customer service team went above and beyond to help us plan our journey, offering tips on must-see destinations and campsite recommendations.",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
           },
@@ -222,7 +222,7 @@
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
             "image": "booqable://assets/image-avatar-2.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "description": "What impressed us most was the attention to detail - the comprehensive orientation on how to use the campervan’s features ensured we felt confident and prepared for our adventure.",
             "name": "Ashley de Lotz",
             "position": "08-06-2023"
           },
@@ -234,7 +234,7 @@
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
             "image": "booqable://assets/image-avatar-3.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "description": "The ease of booking through their website, the friendly and knowledgeable staff, and the quality of the campervan itself made our trip seamless and enjoyable.",
             "name": "Adrian Vajas",
             "position": "04-05-2023"
           },
@@ -314,10 +314,10 @@
           "settings": {
             "article_btn": "Read more",
             "article_btn_url": "booqable://root/",
-            "article_tag": "Tagline",
-            "heading": "Medium length section heading goes here",
+            "article_tag": "Guide",
+            "heading": "Hit the Road with Confidence: Your Ultimate Guide to Campervan Rentals",
             "image": "booqable://assets/image-articles-1.jpg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+            "text": "This essential guide covers everything you need to know about renting a campervan, from selecting the right vehicle for your adventure needs to understanding rental agreements and insurance."
           },
           "disabled": null
         },
@@ -326,10 +326,10 @@
           "settings": {
             "article_btn": "Read more",
             "article_btn_url": "booqable://root/",
-            "article_tag": "Tagline",
-            "heading": "Medium length section heading goes here",
+            "article_tag": "Guide",
+            "heading": "Eco-Friendly Van Life: Sustainable Campervan Rentals for Conscious Travelers",
             "image": "booqable://assets/image-articles-2.jpg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "This article highlights the benefits of choosing a green travel option, including lower emissions vehicles, solar-powered accessories, and biodegradable products."
           },
           "disabled": null
         },
@@ -338,10 +338,10 @@
           "settings": {
             "article_btn": "Read more",
             "article_btn_url": "booqable://root/",
-            "article_tag": "Tagline",
-            "heading": "Medium length section heading goes here",
+            "article_tag": "Guide",
+            "heading": "Family Adventures on Wheels: Navigating Campervan Rentals with Kids",
             "image": "booqable://assets/image-articles-3.jpg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "This post offers invaluable advice for families looking to embark on a van life adventure."
           },
           "disabled": null
         }
@@ -376,24 +376,24 @@
         "item": {
           "type": "item",
           "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+            "heading": "What types of campervans are available for rental?",
+            "content": "Our diverse fleet is designed to meet the needs of various travelers, from solo adventurers to family vacationers. We offer everything from compact vans for two, ideal for a cozy getaway, to larger, fully equipped campervans that can comfortably accommodate families or groups of friends. Features range from basic models with sleeping arrangements and storage to luxury campervans with kitchens, showers, and entertainment systems. Explore our website for detailed descriptions and specifications to find the perfect campervan for your journey."
           },
           "disabled": null
         },
         "item_477139": {
           "type": "item",
           "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+            "heading": "How do I book a campervan, and what documents are required?",
+            "content": "Booking is simple and can be done online or over the phone. You'll need to select your pick-up and drop-off dates and locations, choose your campervan model, and decide on any additional equipment or services, like kitchen kits or bedding packs. Required documents for booking include a valid driver's license from your country of residence, a credit card for the security deposit, and, for international travelers, a passport and, if applicable, an international driving permit. We recommend booking well in advance, especially for peak travel seasons, to ensure the availability of your preferred campervan."
           },
           "disabled": null
         },
         "item_477145": {
           "type": "item",
           "settings": {
-            "heading": "How do I rent a product from your shop?",
-            "content": "Lorem ipsum dolor sit amet consectetur. Consequat sed a porttitor donec viverra ornare. Facilisi at interdum tellus tortor sed dictumst."
+            "heading": "Are there any tips for first-time campervan renters?",
+            "content": "Familiarize yourself with the campervan's features and how to use them before you hit the road. Plan your route in advance, including campgrounds or parking spots where overnight stays are allowed. Pack light but don’t forget essentials like food, clothing, and personal items. Storage space is limited, so be strategic about what you bring. Always have a road map or GPS device handy, even if you plan to wander without a strict itinerary. Lastly, respect nature and the communities you visit by following Leave No Trace principles and local regulations."
           },
           "disabled": null
         }
