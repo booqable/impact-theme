@@ -435,7 +435,7 @@
           "blocks": {},
           "block_order": [],
           "settings": {
-            "bar_message": "Get 15% off with code DAREDEVIL at checkout",
+            "bar_message": "Get 15% off with code <b>DAREDEVIL</b> at checkout",
             "bar_text": "Call Us 24/7 <a href=\"+1 555 302 8549\">+1 555 302 8549</a>",
             "color_scheme": "set-3",
             "icon": "phone",
