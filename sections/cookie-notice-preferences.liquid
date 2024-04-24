@@ -1,7 +1,7 @@
 {%- assign cookies_activated     = settings.cookie_notice_activated -%}
 {%- assign cookies_color_palette = settings.cookie_notice_color_palette -%}
 
-{%- if cookies_activated %}
+{%- if cookies_activated -%}
   {%- assign paragraph_text      = section.settings.paragraph_text -%}
   {%- assign button_text         = section.settings.button_text -%}
   {%- assign background          = section.settings.background_color -%}
@@ -41,7 +41,7 @@
       {{- button_text -}}
     </button>
   </div>
-{%- endif %}
+{%- endif -%}
 
 {% schema %}
 {
