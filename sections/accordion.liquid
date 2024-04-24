@@ -94,11 +94,11 @@
               <input
                 {% if behavior == "single" %}type="radio"{% else %}type="checkbox"{% endif %}
                 class="accordion__trigger"
-                id="accordion-item-{{- block.id -}}"
+                id="{{- section.key -}}-{{- block.id -}}"
                 name="accordion trigger"
               />
 
-              <label class="accordion__label" for="accordion-item-{{- block.id -}}">
+              <label class="accordion__label" for="{{- section.key -}}-{{- block.id -}}">
                 <h3 class="accordion__heading">
                   {{- heading -}}
                   {%- render 'icon-arrow-right' -%}
