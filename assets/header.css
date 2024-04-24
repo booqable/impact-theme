@@ -73,6 +73,7 @@
 
 .header__logo-image {
   max-height: 64px;
+  width: 100%;
 }
 
 .header__date-picker-wrapper {
@@ -465,6 +466,30 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
   color: var(--color-outline-hover);
 }
 
+@media (min-width: 320px) {
+  .header__logo-image {
+    max-width: 162px;
+  }
+}
+
+@media (min-width: 428px) {
+  .header__logo-image {
+    max-width: 210px;
+  }
+}
+
+@media (min-width: 480px) {
+  .header__logo-image {
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 576px) {
+  .header__logo-image {
+    max-width: 300px;
+  }
+}
+
 @media (min-width: 992px) {
   .header__content-inner {
     grid-template-columns: 230px 1fr 230px;
@@ -500,10 +525,6 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
 
   .header__content--padding-bottom {
     padding-bottom: var(--padding-bottom);
-  }
-
-  .header__logo-wrapper:not(:empty) {
-    margin-right: 20px;
   }
 
   .header__date-picker-wrapper {
