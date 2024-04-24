@@ -14,6 +14,17 @@
 
     {% render 'fonts', settings: settings %}
     {% render 'root-styles', settings: settings %}
+    <style>
+      #cc-main {
+        --cc-bg: var(--background-primary);
+        --cc-font-family: var(--font-body);
+        --cc-primary-color: var(--color-primary);
+        --cc-secondary-color: var(--color-primary);
+        --cc-btn-primary-bg: var(--background-accent);
+        --cc-btn-primary-color: var(--color-accent);
+        --cc-btn-primary-border-color: transparent;
+      }
+    </style>
 
     {% render 'page-metadata',
       page_title: page_title,
@@ -42,6 +53,11 @@
     <script src="{{ "mega-menu.js" | asset_url }}" defer></script>
     <script src="{{ "carousel.js" | asset_url }}" defer></script>
     <script src="{{ "search.js" | asset_url }}" defer></script>
+    <script>
+      window.addEventListener('cc:onModalShow', function() {
+        document.getElementById('cc-main').classList.add('color-{{ settings.cookie_notice_color_palette }}')
+      })
+    </script>
 
     {%- if settings.color_schemes.first.settings.background_accent != blank -%}
       {%- assign background_accent = settings.color_schemes.first.settings.background_accent -%}
