@@ -1,0 +1,36 @@
+{
+  "name": "Privacy policy",
+  "sections": {
+    "text_1": {
+      "type": "text",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "title": "Privacy policy",
+        "text": "<p>Cookie policy by Booqable, 2024</p><p>Booqable collects cookies to deliver you the best possible user experience.</p>",
+        "align": "left"
+      },
+      "disabled": null
+    },
+    "cookie-notice-preferences": {
+      "type": "cookie-notice-preferences",
+      "settings": {}
+    },
+    "text_2": {
+      "type": "text",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "title": "How and why we use cookies",
+        "text": "<p>Use this page to explain what data you collect, with which techniques and why you collect this data.</p>",
+        "align": "left"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "text_1",
+    "cookie-notice-preferences",
+    "text_2"
+  ]
+}
