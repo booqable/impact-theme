@@ -334,7 +334,7 @@
         "label": "Show cookie notice"
       },
       {
-        "type": "select",
+        "type": "color_scheme",
         "id": "cookie_notice_color_palette",
         "label": "Color palette",
         "options": [
