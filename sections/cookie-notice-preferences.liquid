@@ -8,7 +8,7 @@
 
   <style>
     .cookie-notice-preferences {
-      max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
+      max-width: var(--max-width);
       width: 100%;
 
       margin: 0 auto;
@@ -26,17 +26,7 @@
     }
 
     .cookie-notice-preferences__inner button {
-      {%- case cookies_color_palette -%}
-        {%- when 'one' -%}
-          background-color: var(--background-accent);
-          color: var(--color-accent);
-        {%- when 'two' -%}
-          background-color: var(--background-accent-2);
-          color: var(--color-accent-2);
-        {%- when 'three' -%}
-          background-color: var(--background-accent-3);
-          color: var(--color-accent-3);
-      {%- endcase -%}
+      margin: 0px;
     }
   </style>
 
