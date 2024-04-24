@@ -1,58 +1,32 @@
 {{ "product-page.css" | asset_url | stylesheet_tag }}
 
-{%- assign breadcrumbs_label     = section.settings.breadcrumbs_label -%}
-{%- assign breadcrumbs_url       = section.settings.breadcrumbs_url -%}
-{%- assign color_scheme          = section.settings.color_scheme -%}
-{%- assign description           = product.description -%}
-{%- assign images                = product.images -%}
-{%- assign infinity_scroll       = section.settings.infinity_scroll -%}
-{%- assign message_label         = section.settings.message_label -%}
-{%- assign padding_top           = section.settings.padding_top -%}
-{%- assign padding_bottom        = section.settings.padding_bottom -%}
-{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
-{%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-{%- assign rounded_corners       = section.settings.rounded_corners -%}
-{%- assign show_breadcrumbs      = section.settings.show_breadcrumbs -%}
-{%- assign show_border           = section.settings.show_border -%}
-{%- assign show_carousel         = section.settings.show_carousel -%}
-{%- assign show_controls         = section.settings.show_controls -%}
-{%- assign show_thumbnails       = section.settings.show_thumbnails -%}
-{%- assign title                 = product.name -%}
-{%- assign variant_label         = section.settings.variant_label -%}
-{%- assign variants              = product.variants -%}
-{%- assign variant_selector      = product | product_variations_select -%}
-{%- assign availability          = product | product_availability -%}
-{%- assign availability_calendar = product | availability_calendar -%}
-{%- assign bundle_items          = product | bundle_items -%}
-{%- assign quantity              = product | product_button -%}
-{%- assign price                 = product | product_price -%}
-
-{%- assign label = "" -%}
-
-{%- if breadcrumbs_label != blank -%}
-  {%- assign label = breadcrumbs_label -%}
-{%- endif -%}
-
-{%- case breadcrumbs_url -%}
-  {%- when 'home' -%}
-    {%- if breadcrumbs_label == blank -%}
-      {%- assign label = "Home" -%}
-    {%- endif -%}
-
-    {%- assign url = routes.root_url -%}
-  {%- when 'collections' -%}
-    {%- if breadcrumbs_label == blank -%}
-      {%- assign label = "Collections" -%}
-    {%- endif -%}
-
-    {%- assign url = routes.collections_url -%}
-  {%- when 'products' -%}
-    {%- if breadcrumbs_label == blank -%}
-      {%- assign label = "Shop all" -%}
-    {%- endif -%}
-
-    {%- assign url = routes.all_products_collection_url -%}
-{%- endcase -%}
+{%- assign breadcrumbs_collections_label = section.settings.breadcrumbs_collections_label -%}
+{%- assign breadcrumbs_root_label        = section.settings.breadcrumbs_root_label -%}
+{%- assign breadcrumbs_root_url          = section.settings.breadcrumbs_root_url -%}
+{%- assign color_scheme                  = section.settings.color_scheme -%}
+{%- assign description                   = product.description -%}
+{%- assign images                        = product.images -%}
+{%- assign infinity_scroll               = section.settings.infinity_scroll -%}
+{%- assign message_label                 = section.settings.message_label -%}
+{%- assign padding_top                   = section.settings.padding_top -%}
+{%- assign padding_bottom                = section.settings.padding_bottom -%}
+{%- assign padding_top_mobile            = section.settings.padding_top_mobile -%}
+{%- assign padding_bottom_mobile         = section.settings.padding_bottom_mobile -%}
+{%- assign rounded_corners               = section.settings.rounded_corners -%}
+{%- assign show_breadcrumbs              = section.settings.show_breadcrumbs -%}
+{%- assign show_border                   = section.settings.show_border -%}
+{%- assign show_carousel                 = section.settings.show_carousel -%}
+{%- assign show_controls                 = section.settings.show_controls -%}
+{%- assign show_thumbnails               = section.settings.show_thumbnails -%}
+{%- assign title                         = product.name -%}
+{%- assign variant_label                 = section.settings.variant_label -%}
+{%- assign variants                      = product.variants -%}
+{%- assign variant_selector              = product | product_variations_select -%}
+{%- assign availability                  = product | product_availability -%}
+{%- assign availability_calendar         = product | availability_calendar -%}
+{%- assign bundle_items                  = product | bundle_items -%}
+{%- assign quantity                      = product | product_button -%}
+{%- assign price                         = product | product_price -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -122,8 +96,10 @@
     {%- render 'breadcrumbs',
         product: product,
         show: show_breadcrumbs,
-        label: label,
-        url: url
+        routes: routes,
+        root_label: breadcrumbs_root_label,
+        root_url: breadcrumbs_root_url,
+        collections_label: breadcrumbs_collections_label
     -%}
 
     <div class="product-main__grid{% if images.size > 3 %} product-main__grid--overlay{%- endif -%}">
@@ -256,13 +232,13 @@
       },
       {
         "type": "text",
-        "id": "breadcrumbs_label",
+        "id": "breadcrumbs_root_label",
         "label": "Breadcrumbs root label",
         "info": "Leave blank to use the default label"
       },
       {
         "type": "select",
-        "id": "breadcrumbs_url",
+        "id": "breadcrumbs_root_url",
         "label": "Breadcrumbs root link",
         "options": [
           {
@@ -279,6 +255,12 @@
           }
         ],
         "default": "collections"
+      },
+      {
+        "type": "text",
+        "id": "breadcrumbs_collections_label",
+        "label": "Breadcrumbs 'Collections' label",
+        "info": "Visible only if 'Home' option of the root link is chosen. Leave blank to use the default label"
       },
       {
         "type": "header",
