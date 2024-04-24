@@ -359,7 +359,7 @@
             "label": "Color set 5"
           }
         ],
-        "default": "one"
+        "default": "set-1"
       },
       {
         "type": "header",
