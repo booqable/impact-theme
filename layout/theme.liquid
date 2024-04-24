@@ -44,7 +44,7 @@
     <script src="{{ "search.js" | asset_url }}" defer></script>
     <script>
       window.addEventListener('cc:onModalShow', function() {
-        document.getElementById('cc-main').classList.add('color-{{ settings.cookie_notice_color_palette }}')
+        document.getElementById('cc-main').classList.add('color-{{ settings.cookie_notice_color_palette.id }}')
       })
     </script>
 
