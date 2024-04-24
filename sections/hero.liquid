@@ -186,7 +186,7 @@
           <div class="hero__text-area{% if show_overlay %} hero__text-area--color{%- endif -%}">
             <div class="hero__content">
               {%- if title != blank -%}
-                <h1 class="hero__title bq-content rx-content">{{- title -}}</h1>
+                <h1 class="hero__title">{{- title -}}</h1>
               {%- endif -%}
 
               {%- if description != blank -%}
@@ -308,10 +308,11 @@
         "default": "set-4"
       },
       {
-        "type": "contentEditor",
+        "type": "text",
         "id": "title",
         "label": "Title",
-        "default": "Explore like <br> a daredevil"
+        "default": "Explore like <br> a daredevil",
+        "info": "For breaking lines use <br> tag"
       },
       {
         "type": "contentEditor",
