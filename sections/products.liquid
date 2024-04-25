@@ -11,6 +11,7 @@
   {%- assign button_outline_url    = section.settings.button_outline_url -%}
   {%- assign color_scheme          = section.settings.color_scheme -%}
   {%- assign image                 = section.settings.image -%}
+  {%- assign image_style           = section.settings.image_style -%}
   {%- assign image_placeholder     = settings.image_placeholder -%}
   {%- assign is_focal              = settings.use_focal_images -%}
   {%- assign padding_top           = section.settings.padding_top -%}
@@ -87,6 +88,13 @@
         --padding-bottom-mobile: 40px;
       {%- when 'large' -%}
         --padding-bottom-mobile: 60px;
+    {%- endcase -%}
+
+    {%- case image_style -%}
+      {%- when 'cover' -%}
+        --object-fit: cover;
+      {%- when 'contain' -%}
+        --object-fit: contain;
     {%- endcase -%}
 
     {%- case rounded_corners -%}
@@ -254,6 +262,22 @@
         "type": "image_picker",
         "id": "image",
         "label": "Background image"
+      },
+      {
+        "type": "select",
+        "id": "image_style",
+        "label": "Image style",
+        "options": [
+          {
+            "value": "cover",
+            "label": "Cover"
+          },
+          {
+            "value": "contain",
+            "label": "Contain"
+          }
+        ],
+        "default": "cover"
       },
       {
         "type": "select",
