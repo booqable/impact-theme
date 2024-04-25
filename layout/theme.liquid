@@ -42,6 +42,11 @@
     <script src="{{ "mega-menu.js" | asset_url }}" defer></script>
     <script src="{{ "carousel.js" | asset_url }}" defer></script>
     <script src="{{ "search.js" | asset_url }}" defer></script>
+    <script>
+      window.addEventListener('cc:onModalShow', function() {
+        document.getElementById('cc-main').classList.add('color-{{ settings.cookie_notice_color_palette.id }}')
+      })
+    </script>
 
     {%- if settings.color_schemes.first.settings.background_accent != blank -%}
       {%- assign background_accent = settings.color_schemes.first.settings.background_accent -%}
