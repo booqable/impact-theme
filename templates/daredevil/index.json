@@ -198,7 +198,7 @@
         "button_outline_url": "booqable://products/",
         "color_scheme": "set-1",
         "image": "",
-        "image_style": "cover",
+        "image_fit": "cover",
         "padding_bottom": "none",
         "padding_bottom_mobile": "none",
         "padding_top": "none",

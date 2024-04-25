@@ -45,7 +45,7 @@
         "color_scheme": "set-1",
         "full_width": false,
         "grid": "three",
-        "image_style": "cover",
+        "image_fit": "cover",
         "limit": 18,
         "message": "Sorry, there are no products in this collection yet",
         "mobile_toggler": "MENU",

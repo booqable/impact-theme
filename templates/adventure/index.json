@@ -175,7 +175,7 @@
         "button_outline_url": "booqable://products/",
         "color_scheme": "set-1",
         "image": "booqable://assets/image-background-beige-dots.jpg",
-        "image_style": "cover",
+        "image_fit": "cover",
         "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
         "padding_top": "large",

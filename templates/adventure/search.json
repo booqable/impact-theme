@@ -46,7 +46,7 @@
         "color_scheme": "set-5",
         "full_width": false,
         "grid": "three",
-        "image_style": "cover",
+        "image_fit": "cover",
         "limit": 18,
         "message": "",
         "mobile_toggler": "MENU",
