@@ -7,8 +7,8 @@
 {%- assign color_scheme          = section.settings.color_scheme -%}
 {%- assign full_width            = section.settings.full_width -%}
 {%- assign grid                  = section.settings.grid -%}
-{%- assign image_placeholder 	   = settings.image_placeholder -%}
-{%- assign is_focal              = settings.use_focal_images -%}
+{%- assign image_fit             = section.settings.image_fit -%}
+{%- assign image_placeholder     = settings.image_placeholder -%}
 {%- assign limit                 = section.settings.limit -%}
 {%- assign menu                  = false -%}
 {%- assign message               = section.settings.message -%}
@@ -23,6 +23,10 @@
 {%- assign show_pagination       = section.settings.show_pagination -%}
 {%- assign timer                 = section.settings.timer -%}
 {%- assign sticky_sidebar        = section.settings.sticky_sidebar -%}
+{% assign is_focal = false %}
+{% if settings.use_focal_images and image_fit == 'cover' %}
+  {% assign is_focal = true %}
+{% endif %}
 
 {%- for block in section.blocks -%}
   {%- assign menu = block.settings.menu -%}
@@ -81,6 +85,13 @@
       --padding-bottom-mobile: 40px;
     {%- when 'large' -%}
       --padding-bottom-mobile: 60px;
+  {%- endcase -%}
+
+  {%- case image_fit -%}
+    {%- when 'cover' -%}
+      --object-fit: cover;
+    {%- when 'contain' -%}
+      --object-fit: contain;
   {%- endcase -%}
 
   {%- case grid -%}
@@ -269,6 +280,22 @@
         "id": "show_excerpt",
         "default": true,
         "label": "Show product description excerpt"
+      },
+      {
+        "type": "select",
+        "id": "image_fit",
+        "label": "Image fit",
+        "options": [
+          {
+            "value": "cover",
+            "label": "Cover"
+          },
+          {
+            "value": "contain",
+            "label": "Contain"
+          }
+        ],
+        "default": "cover"
       },
       {
         "type": "select",
