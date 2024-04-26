@@ -537,13 +537,14 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
     display: block;
     position: absolute;
     right: calc(var(--horizontal-padding) - 10px);
-    top: calc(var(--top-bar-height, 0) + var(--padding-top) + 1px);
-    transform: translate(100%, 0);
+    bottom: calc(50%);
+    transform: translate(100%, 50%);
     z-index: 1;
   }
 
-  .header-transparent .header__app {
-    top: calc(var(--padding-top) + 1px);
+  .header:not(.header-transparent):has(.top-bar__wrapper) .header__app {
+    bottom: calc(50% - var(--top-bar-height));
+    transform: translate(100%, 0);
   }
 
   .header__buttons .header__app {
