@@ -537,7 +537,7 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
     display: block;
     position: absolute;
     right: calc(var(--horizontal-padding) - 10px);
-    bottom: calc(50%);
+    bottom: 50%;
     transform: translate(100%, 50%);
     z-index: 1;
   }
