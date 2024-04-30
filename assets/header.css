@@ -420,42 +420,71 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
   color: var(--color-outline-hover);
 }
 
-#section-header .app-mobile .weglot-widget__dropdown--down {
-  top: auto;
-  bottom: calc(100% + 11px);
+#section-header .app-mobile .weglot-widget__dropdown {
   left: 50%;
   transform: translate(-50%, 0);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-rounded);
+  box-shadow: 0 0 8px var(--color-border);
   transition: all var(--animation-duration) var(--transition-function-ease-in-out);
 }
 
-#section-header .app-mobile .weglot-widget__dropdown--down:before,
-#section-header .app-mobile .weglot-widget__dropdown--down:after {
+#section-header .app-mobile .weglot-widget__dropdown--up {
+  top: auto;
+  bottom: calc(100% + 11px);
+}
+
+#section-header .app-mobile .weglot-widget__dropdown--down {
+  bottom: auto;
+  top: calc(100% + 11px);
+}
+
+#section-header .app-mobile .weglot-widget__dropdown:hover {
+  border-color: var(--color-outline-hover);
+}
+
+#section-header .app-mobile .weglot-widget__dropdown:before,
+#section-header .app-mobile .weglot-widget__dropdown:after {
   content: "";
   position: absolute;
-  top: 100%;
   left: 50%;
   transform: translate(-50%, 0);
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 10px 10px 0 10px;
-  border-color: var(--background-primary) transparent transparent transparent;
   transition: all var(--animation-duration) var(--transition-function-ease-in-out);
 }
 
-#section-header .app-mobile .weglot-widget__dropdown--down:before {
+#section-header .app-mobile .weglot-widget__dropdown--up:before,
+#section-header .app-mobile .weglot-widget__dropdown--up:after {
+  top: 100%;
+  border-width: 10px 10px 0 10px;
+  border-color: var(--background-primary) transparent transparent transparent;
+}
+
+#section-header .app-mobile .weglot-widget__dropdown--up:before {
   top: calc(100% + 1px);
   border-color: var(--color-border) transparent transparent transparent;
 }
 
-#section-header .app-mobile .weglot-widget__dropdown--down:hover {
-  border-color: var(--color-outline-hover);
+#section-header .app-mobile .weglot-widget__dropdown--up:hover:before {
+  border-color: var(--color-outline-hover) transparent transparent transparent;
+}
+
+#section-header .app-mobile .weglot-widget__dropdown--down:before,
+#section-header .app-mobile .weglot-widget__dropdown--down:after {
+  bottom: 100%;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent var(--background-primary) transparent;
+}
+
+#section-header .app-mobile .weglot-widget__dropdown--down:before {
+  bottom: calc(100% + 1px);
+  border-color: transparent transparent var(--color-border) transparent;
 }
 
 #section-header .app-mobile .weglot-widget__dropdown--down:hover:before {
-  border-color: var(--color-outline-hover) transparent transparent transparent;
+  border-color: transparent transparent var(--color-outline-hover) transparent;
 }
 
 #section-header .app-mobile .weglot-widget__item {
@@ -537,13 +566,14 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
     display: block;
     position: absolute;
     right: calc(var(--horizontal-padding) - 10px);
-    top: calc(var(--top-bar-height, 0) + var(--padding-top) + 1px);
-    transform: translate(100%, 0);
+    bottom: 50%;
+    transform: translate(100%, 50%);
     z-index: 1;
   }
 
-  .header-transparent .header__app {
-    top: calc(var(--padding-top) + 1px);
+  .header:not(.header-transparent):has(.top-bar__wrapper) .header__app {
+    bottom: calc(50% - var(--top-bar-height));
+    transform: translate(100%, 0);
   }
 
   .header__buttons .header__app {
@@ -582,40 +612,54 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
     color: var(--color-outline-hover);
   }
 
-  #section-header .header__app .weglot-widget__dropdown--down {
-    top: calc(100% + 11px);
+  #section-header .header__app .weglot-widget__dropdown {
     left: 50%;
     transform: translate(-50%, 0);
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-rounded);
+    box-shadow: 0 0 8px var(--color-border);
     transition: all var(--animation-duration) var(--transition-function-ease-in-out);
     background-color: var(--background-primary) !important;
   }
 
-  #section-header .header__app .weglot-widget__dropdown--down:before,
-  #section-header .header__app .weglot-widget__dropdown--down:after {
+  #section-header .header__app .weglot-widget__dropdown:hover {
+    border-color: var(--color-outline-hover);
+  }
+
+  #section-header .header__app .weglot-widget__dropdown--up,
+  #section-header .header__app .weglot-widget__dropdown--down {
+    top: calc(100% + 11px);
+    bottom: auto;
+  }
+
+  #section-header .header__app .weglot-widget__dropdown:before,
+  #section-header .header__app .weglot-widget__dropdown:after {
     content: "";
     position: absolute;
-    bottom: 100%;
     left: 50%;
     transform: translate(-50%, 0);
     width: 0px;
     height: 0px;
     border-style: solid;
-    border-width: 0 10px 10px 10px;
-    border-color: transparent transparent var(--background-primary) transparent;
     transition: all var(--animation-duration) var(--transition-function-ease-in-out);
   }
 
+  #section-header .header__app .weglot-widget__dropdown--up:before,
+  #section-header .header__app .weglot-widget__dropdown--up:after,
+  #section-header .header__app .weglot-widget__dropdown--down:before,
+  #section-header .header__app .weglot-widget__dropdown--down:after {
+    bottom: 100%;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent var(--background-primary) transparent;
+  }
+
+  #section-header .header__app .weglot-widget__dropdown--up:before,
   #section-header .header__app .weglot-widget__dropdown--down:before {
     bottom: calc(100% + 1px);
     border-color: transparent transparent var(--color-border) transparent;
   }
 
-  #section-header .header__app .weglot-widget__dropdown--down:hover {
-    border-color: var(--color-outline-hover);
-  }
-
+  #section-header .header__app .weglot-widget__dropdown--up:hover:before,
   #section-header .header__app .weglot-widget__dropdown--down:hover:before {
     border-color: transparent transparent var(--color-outline-hover) transparent;
   }
