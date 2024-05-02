@@ -40,5 +40,40 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/explore_preview.png",
     "version": 1,
     "market": "Vehicle / Trailers"
+  },
+  "boost": {
+    "detail_url": "https://booqable.com/themes/boost/",
+    "preview_url": "https://boost.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/boost_preview.png",
+    "version": "beta",
+    "market": "AV / Camera"
+  },
+  "bounce": {
+    "detail_url": "https://booqable.com/themes/bounce/",
+    "preview_url": "https://bounce.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/bounce_preview.png",
+    "version": "beta",
+    "market": "Event / Party"
+  },
+  "elegant": {
+    "detail_url": "https://booqable.com/themes/elegant/",
+    "preview_url": "https://elegant.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/elegant_preview.png",
+    "version": "beta",
+    "market": "Clothing"
+  },
+  "joy": {
+    "detail_url": "https://booqable.com/themes/joy/",
+    "preview_url": "https://joy.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/joy_preview.png",
+    "version": "beta",
+    "market": "Event / Party"
+  },
+  "memories": {
+    "detail_url": "https://booqable.com/themes/memories/",
+    "preview_url": "https://memories.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/memories_preview.png",
+    "version": "beta",
+    "market": "Event / Party"
   }
 }
