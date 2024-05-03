@@ -1,7 +1,6 @@
 {
   "adrenaline": {
     "detail_url": "https://booqable.com/themes/adrenaline/",
-<<<<<<< HEAD
     "market": "Vehicle / Trailers",
     "preview_url": "https://adrenaline.booqable.shop/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/adrenaline_preview.png",
@@ -76,46 +75,5 @@
     "preview_url": "https://pure.booqable.shop/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/pure_preview.png",
     "version": 1
-=======
-    "preview_url": "https://adrenaline.booqable.shop/",
-    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/adrenaline_preview.png",
-    "version": 1,
-    "market": "Vehicle / Trailers"
-  },
-  "flow": {
-    "detail_url": "https://booqable.com/themes/flow/",
-    "preview_url": "https://flow.booqable.shop/",
-    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/flow_preview.png",
-    "version": 1,
-    "market": "Boats / Kayaks"
-  },
-  "pure": {
-    "detail_url": "https://booqable.com/themes/pure/",
-    "preview_url": "https://pure.booqable.shop/",
-    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/pure_preview.png",
-    "version": 1,
-    "market": "Sports / Activities"
-  },
-  "daredevil": {
-    "detail_url": "https://booqable.com/themes/daredevil/",
-    "preview_url": "https://daredevil.booqable.shop/",
-    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/daredevil_preview.png",
-    "version": 1,
-    "market": "Bikes / Scooters"
-  },
-  "adventure": {
-    "detail_url": "https://booqable.com/themes/adventure/",
-    "preview_url": "https://adventure.booqable.shop/",
-    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/adventure_preview.png",
-    "version": 1,
-    "market": "Sports / Activities"
-  },
-  "explore": {
-    "detail_url": "https://booqable.com/themes/explore/",
-    "preview_url": "https://explore.booqable.shop/",
-    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/explore_preview.png",
-    "version": 1,
-    "market": "Vehicle / Trailers"
->>>>>>> 4e84a1cc6ac6d1559ad57adb6e3175a90912e4ea
   }
 }
