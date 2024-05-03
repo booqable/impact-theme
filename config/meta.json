@@ -1,44 +1,79 @@
 {
   "adrenaline": {
     "detail_url": "https://booqable.com/themes/adrenaline/",
+    "market": "Vehicle / Trailers",
     "preview_url": "https://adrenaline.booqable.shop/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/adrenaline_preview.png",
-    "version": 1,
-    "market": "Vehicle / Trailers"
-  },
-  "flow": {
-    "detail_url": "https://booqable.com/themes/flow/",
-    "preview_url": "https://flow.booqable.shop/",
-    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/flow_preview.png",
-    "version": 1,
-    "market": "Boats / Kayaks"
-  },
-  "pure": {
-    "detail_url": "https://booqable.com/themes/pure/",
-    "preview_url": "https://pure.booqable.shop/",
-    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/pure_preview.png",
-    "version": 1,
-    "market": "Sports / Activities"
-  },
-  "daredevil": {
-    "detail_url": "https://booqable.com/themes/daredevil/",
-    "preview_url": "https://daredevil.booqable.shop/",
-    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/daredevil_preview.png",
-    "version": 1,
-    "market": "Bikes / Scooters"
+    "version": 1
   },
   "adventure": {
     "detail_url": "https://booqable.com/themes/adventure/",
+    "market": "Sports / Activities",
     "preview_url": "https://adventure.booqable.shop/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/adventure_preview.png",
-    "version": 1,
-    "market": "Sports / Activities"
+    "version": 1
+  },
+  "boost": {
+    "detail_url": "https://booqable.com/themes/boost/",
+    "market": "AV / Camera",
+    "preview_url": "https://boost.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/boost_preview.png",
+    "version": "beta"
+  },
+  "bounce": {
+    "detail_url": "https://booqable.com/themes/bounce/",
+    "market": "Event / Party",
+    "preview_url": "https://bounce.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/bounce_preview.png",
+    "version": "beta"
+  },
+  "daredevil": {
+    "detail_url": "https://booqable.com/themes/daredevil/",
+    "market": "Bikes / Scooters",
+    "preview_url": "https://daredevil.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/daredevil_preview.png",
+    "version": 1
+  },
+  "elegant": {
+    "detail_url": "https://booqable.com/themes/elegant/",
+    "market": "Clothing",
+    "preview_url": "https://elegant.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/elegant_preview.png",
+    "version": "beta"
   },
   "explore": {
     "detail_url": "https://booqable.com/themes/explore/",
+    "market": "Vehicle / Trailers",
     "preview_url": "https://explore.booqable.shop/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/explore_preview.png",
-    "version": 1,
-    "market": "Vehicle / Trailers"
+    "version": 1
+  },
+  "flow": {
+    "detail_url": "https://booqable.com/themes/flow/",
+    "market": "Boats / Kayaks",
+    "preview_url": "https://flow.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/flow_preview.png",
+    "version": 1
+  },
+  "joy": {
+    "detail_url": "https://booqable.com/themes/joy/",
+    "market": "Event / Party",
+    "preview_url": "https://joy.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/joy_preview.png",
+    "version": "beta"
+  },
+  "memories": {
+    "detail_url": "https://booqable.com/themes/memories/",
+    "market": "Event / Party",
+    "preview_url": "https://memories.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/memories_preview.png",
+    "version": "beta"
+  },
+  "pure": {
+    "detail_url": "https://booqable.com/themes/pure/",
+    "market": "Sports / Activities",
+    "preview_url": "https://pure.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/pure_preview.png",
+    "version": 1
   }
 }

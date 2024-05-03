@@ -1,0 +1,32 @@
+{
+  "name": "Page",
+  "sections": {
+    "title": {
+      "type": "title",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-4",
+        "custom_description": "",
+        "custom_title": "",
+        "full_width": true,
+        "image": "",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "transition_color_bottom": "#FFFFFF",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "title"
+  ]
+}

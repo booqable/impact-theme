@@ -1,0 +1,510 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "More info",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-2",
+        "description": "<p>Whether you’re spinning at a club or hosting a private party, we’ve got the gear to keep the beats going.</p>",
+        "full_width": true,
+        "height": "medium",
+        "image": "booqable://assets/image-hero.jpeg",
+        "image_mobile": "",
+        "overlay_background": "#092025",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 80,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "text_position": "center",
+        "text_position_mobile": "left",
+        "title": "<p>Rent your<br>next party</p>",
+        "transition_color_bottom": "#7FACBF",
+        "transition_color_top": "#7FACBF",
+        "transition_style": "none",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-2",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_overlay": false,
+        "show_transition_bottom": false,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "BEAT BY BEAT </br> GEAR BY GEAR",
+        "transition_color_bottom": "#7FACBF",
+        "transition_color_top": "#F4CC46",
+        "transition_style": "wave"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_295192": {
+          "type": "collection",
+          "settings": {
+            "collection": "cdfce6f1-dc7e-48c6-8fa3-383faf7731f3"
+          },
+          "disabled": null
+        },
+        "collection_295193": {
+          "type": "collection",
+          "settings": {
+            "collection": "82f6e1a2-4c1e-4b36-94d1-a1cd6b77fdd2"
+          },
+          "disabled": null
+        },
+        "collection_295194": {
+          "type": "collection",
+          "settings": {
+            "collection": "b1df209b-3689-4fae-b538-2a29a717b7ee"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_295192",
+        "collection_295193",
+        "collection_295194"
+      ],
+      "settings": {
+        "color_scheme": "set-4",
+        "counter_plural": "Items",
+        "counter_singular": "Item",
+        "full_width": true,
+        "grid": "three",
+        "overlay_background": "#0D0C0C",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "none",
+        "spacing_mobile": "none"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_107546": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_107545": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_107544": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_107543": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_107542": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_107541": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_107540": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_107549": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_107546",
+        "product_107545",
+        "product_107544",
+        "product_107543",
+        "product_107542",
+        "product_107541",
+        "product_107540",
+        "product_107549"
+      ],
+      "settings": {
+        "borders": "full",
+        "button_outline_label": "See all products",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "image": "",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "THIS WEEK",
+        "tag_image": "",
+        "timer": 5,
+        "title": "POPULAR PRODUCTS"
+      },
+      "disabled": null
+    },
+    "call-to-action_136952": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Shop our products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-2",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": false,
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "tag": "HIGHLIGHT",
+        "text_position": "middle",
+        "title": "Your Source for Decked- <br> Out Rentals",
+        "transition_color_bottom": "#E06B48",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "wave"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_985166": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>What stood out to me was the quality of the equipment—everything was in top condition and performed flawlessly throughout the night.</p>",
+            "image": "booqable://assets/image-avatar-1.png",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_985167": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The equipment  was modern, well-maintained, and ready to go upon pickup. I was particularly impressed by the extra effort they put into ensuring I was comfortable.</p>",
+            "image": "booqable://assets/image-avatar-2.png",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_985168": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>Their extensive inventory means I can always find exactly what I need, whether it's for a small private party or a large corporate event. </p>",
+            "image": "booqable://assets/image-avatar-3.png",
+            "name": "Adrian Vajas",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_985166",
+        "testimonial_985167",
+        "testimonial_985168"
+      ],
+      "settings": {
+        "color_scheme": "set-4",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_navigation": true,
+        "title": "WHAT PEOPLE<br>SAY ABOUT US"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_985210": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Selecting the Right DJ Equipment for Your Event",
+            "image": "booqable://assets/image-articles-1.jpeg",
+            "text": "<p>Whether you’re an experienced DJ or just starting, having the right equipment is key to a successful performance. This guide helps you navigate the world of DJ equipment rentals, covering everything from mixers and turntables to speakers and lighting systems.</p>"
+          },
+          "disabled": null
+        },
+        "article_985211": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "The Advantages of DJ Equipment Rental for Your Next Gig",
+            "image": "booqable://assets/image-articles-2.jpeg",
+            "text": "<p>Investing in high-quality DJ equipment can be expensive, especially for those who DJ occasionally or are just starting out. </p>"
+          },
+          "disabled": null
+        },
+        "article_985212": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Essential DJ Equipment Checklist",
+            "image": "booqable://assets/image-articles-3.jpeg",
+            "text": "<p>Preparing for a DJ gig involves more than just having great playlists; you also need the right equipment to bring your music to life. </p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_985210",
+        "article_985211",
+        "article_985212"
+      ],
+      "settings": {
+        "button_outline_label": "See all",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-3",
+        "full_width": true,
+        "padding_bottom_mobile": "none",
+        "padding_bottom": "none",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "transition_color_bottom": "#F6F4F2",
+        "transition_color_top": "#E06B48",
+        "transition_style": "none",
+        "title": "WHAT'S IN THE NEWS"
+      },
+      "disabled": null
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "medium",
+        "size_mobile": "medium"
+      },
+      "disabled": null
+    },
+    "call-to-action_175198": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-1",
+        "full_width": true,
+        "height": "small",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": false,
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Rent Your </br> Groove",
+        "transition_color_bottom": "#000000",
+        "transition_color_top": "#E3F0F5",
+        "transition_style": "fade"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item_102587": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Our extensive inventory caters to both amateur and professional DJs, offering everything from DJ controllers, mixers, and turntables to speakers, microphones, and lighting systems. We stock equipment from top brands like Pioneer, Numark, and Denon to ensure high-quality sound and reliability. Whether you’re hosting a small private party or a large public event, we have the gear to meet your audio and lighting needs.</p>",
+            "heading": "What types of DJ equipment are available for rent?"
+          },
+          "disabled": null
+        },
+        "item_102589": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Renting DJ equipment is straightforward:</p>\n<ol><li><strong>Browse our selection:</strong> Visit our website to see our full range of DJ equipment. Each listing includes detailed specifications and pricing.</li><li><strong>Choose your equipment:</strong> Select the items that fit your needs and the nature of your event. If you need assistance, our expert staff can help you make the right choices.</li><li><strong>Book your rental:</strong> Provide your rental dates, event details, and contact information. A valid credit card is required for the security deposit.</li><li><strong>Pick up or delivery:</strong> You can pick up the equipment from our location, or we can arrange delivery and setup at your event venue for an additional charge.</li><li><strong>Return:</strong> After your event, return the equipment in its original condition. We also offer the option for us to pick it up from your venue.</li></ol>",
+            "heading": "How does the rental process work?"
+          },
+          "disabled": null
+        },
+        "item_102585": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Yes, we offer comprehensive technical support to ensure your event goes smoothly. This can include on-site support from one of our technicians who can handle setup, operation, and breakdown of the equipment. We also provide remote assistance over the phone for quick troubleshooting. This service is available for an additional fee and must be arranged in advance when you book your rental. Whether you're a seasoned DJ or a first-timer, our support services are designed to give you peace of mind and keep your event running seamlessly.</p>",
+            "heading": "Can you provide technical support or assistance during the event?"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_102587",
+        "item_102589",
+        "item_102585"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "color_scheme": "set-1",
+        "description": "<p>Key tips for DJ equipment rentals: amplify your event with the right gear</p>",
+        "image": "",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_borders": true,
+        "title": "FAQ"
+      },
+      "disabled": null
+    },
+    "image-gallery": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_654899": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-1.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_654898": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-2.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_654897": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-3.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_654896": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-4.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "image_654899",
+        "image_654898",
+        "image_654897",
+        "image_654896"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "full_width": true,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "title": "Express yourself with <br>#djrental on Instagram"
+      },
+      "disabled": false
+    }
+  },
+  "order":[
+    "hero",
+    "call-to-action",
+    "collections",
+    "products",
+    "call-to-action_136952",
+    "testimonials",
+    "articles",
+    "spacer",
+    "call-to-action_175198",
+    "accordion",
+    "image-gallery"
+  ]
+}

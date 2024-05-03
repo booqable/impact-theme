@@ -3,7 +3,7 @@
   "sections": {
     "title": {
       "type": "title",
-      "blocks": [],
+      "blocks": {},
       "block_order": [],
       "settings": {
         "color_scheme": "set-4",
@@ -27,7 +27,7 @@
     },
     "cart": {
       "type": "cart",
-      "blocks": [],
+      "blocks": {},
       "block_order": [],
       "settings": {
         "color-scheme": "set-1",
