@@ -116,7 +116,7 @@
     },
     "spacer": {
       "type": "spacer",
-      "blocks": [],
+      "blocks": {},
       "block_order": [],
       "settings": {
         "color_scheme": "set-1",

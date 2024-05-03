@@ -1,0 +1,522 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "More info",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-4",
+        "description": "<p>Elevate your outdoor gatherings with our wide selection of fun </p><p>and engaging lawn games, perfect for family, friends, and events.</p>",
+        "full_width": true,
+        "height": "medium",
+        "image": "booqable://assets/image-hero.jpg",
+        "image_mobile": "",
+        "overlay_background": "#1A3333",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 72,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "text_position": "center",
+        "text_position_mobile": "left",
+        "transition_color_bottom": "#53C787",
+        "transition_color_top": "#53C787",
+        "transition_style": "sketch",
+        "title": "Discover outdoor fun<br>with our lawn games",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-2",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_overlay": false,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Bringing family and friends together for <br>unforgettable entertainment",
+        "transition_color_bottom": "#1A3333",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_274171": {
+          "type": "collection",
+          "settings": {
+            "collection": "4f4627bc-0d31-4455-adc4-5ddae699b8bf"
+          },
+          "disabled": null
+        },
+        "collection_274172": {
+          "type": "collection",
+          "settings": {
+            "collection": "1a332549-b764-4cdc-b731-7f932313d5bb"
+          },
+          "disabled": null
+        },
+        "collection_741502": {
+          "type": "collection",
+          "settings": {
+            "collection": "df8fd518-ebee-4382-beb4-f8bc2be545f5"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_274171",
+        "collection_274172",
+        "collection_741502"
+      ],
+      "settings": {
+        "color_scheme": "set-4",
+        "counter_singular": "Item",
+        "counter_plural": "Items",
+        "full_width": true,
+        "grid": "three",
+        "overlay_background": "#1A3333",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "none",
+        "spacing_mobile": "none"
+      },
+      "disabled": null
+    },
+    "title": {
+      "type": "title",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "custom_description": "",
+        "custom_title": "Popular products",
+        "full_width": true,
+        "image": "booqable://assets/image-dotted-stripe-line.png",
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "This week",
+        "transition_color_bottom": "#FFFFFF",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_654456": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_654455": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_654454": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_654453": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_654452": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_654451": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_654450": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_654449": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_654456",
+        "product_654455",
+        "product_654454",
+        "product_654453",
+        "product_654452",
+        "product_654451",
+        "product_654450",
+        "product_654449"
+      ],
+      "settings": {
+        "borders": "image",
+        "button_outline_label": "See all products",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "image": "",
+        "image_fit": "cover",
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "",
+        "tag_image": "",
+        "timer": 5,
+        "title": ""
+      },
+      "disabled": null
+    },
+    "call-to-action_147582": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Shop our products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-4",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": "32",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": true,
+        "tag": "HIGHLIGHT",
+        "text_position": "middle",
+        "title": "Bring the fun to <br>your backyard",
+        "transition_color_bottom": "#E06B48",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "fade"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_237566": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "image": "booqable://assets/image-avatar-1.png",
+            "description": "<p>Their selection of games brought everyone together, from the youngest cousins to the grandparents. The booking process was a breeze, and the staff were incredibly accommodating. </p>",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_237567": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "image": "booqable://assets/image-avatar-2.png",
+            "description": "<p>Their wide selection of lawn games offered something for every one of our employees. The quality of the equipment was top-notch, and their delivery and setup service was incredibly convenient. </p>",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_237568": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "image": "booqable://assets/image-avatar-3.png",
+            "description": "<p>Their selection added a playful touch that our guests absolutely loved. The lawn games provided a great way for guests to mingle and enjoy themselves during cocktail hour and beyond. </p>",
+            "name": "Adrian Vajas",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_237566",
+        "testimonial_237567",
+        "testimonial_237568"
+      ],
+      "settings": {
+        "color_scheme": "set-5",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_navigation": true,
+        "title": "What people <br>say about us"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_487230": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Top Lawn Games",
+            "heading": "Backyard Bash: Top Lawn Games to Rent for Your Next Outdoor Party",
+            "image": "booqable://assets/image-articles-1.png",
+            "text": "<p>From classic favorites like cornhole and bocce ball to newer sensations like giant Jenga and spikeball, discover the top games that will keep your guests entertained for hours. </p>"
+          },
+          "disabled": null
+        },
+        "article_487231": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Family Reunions to Remember: Lawn Game Rentals for Endless Fun",
+            "image": "booqable://assets/image-articles-2.png",
+            "text": "<p>Planning a family reunion can be a daunting task, especially when trying to cater to a wide range of ages and interests. </p>"
+          },
+          "disabled": null
+        },
+        "article_487232": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Weddings",
+            "heading": "Elevate Your Outdoor Wedding with Elegant Lawn Game Rentals",
+            "image": "booqable://assets/image-articles-3.png",
+            "text": "<p>Outdoor weddings offer a unique opportunity to blend romance with casual fun. Integrating lawn games into your wedding reception.</p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_487230",
+        "article_487231",
+        "article_487232"
+      ],
+      "settings": {
+        "button_outline_label": "See all Articles",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-3",
+        "full_width": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "transition_color_bottom": "#F6F4F2",
+        "transition_color_top": "#E06B48",
+        "transition_style": "sketch",
+        "title": "What's in the news"
+      },
+      "disabled": null
+    },
+    "call-to-action_123908": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-3",
+        "full_width": true,
+        "height": "medium",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-2.png",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Are you ready?",
+        "transition_color_bottom": "#000000",
+        "transition_color_top": "#53C787",
+        "transition_style": "sketch"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item_477778": {
+          "type": "item",
+          "settings": {
+            "heading": "What variety of lawn games do you offer for rental?",
+            "content": "<p>Our selection caters to all ages and preferences, featuring classic and contemporary lawn games. This includes bocce ball, croquet, lawn bowling, giant Jenga, cornhole, horseshoes, and more. Whether you're planning a family reunion, a corporate event, or just a weekend of fun, we have the perfect game to add excitement to your outdoor gathering. Detailed descriptions and recommended age groups for each game can be found on our website.</p>"
+          },
+          "disabled": null
+        },
+        "item_477779": {
+          "type": "item",
+          "settings": {
+            "heading": "How can I rent lawn games, and are there any requirements?",
+            "content": "<p>Renting is easy through our online booking system or by phone. You'll need to provide the date(s) of your event, select the games you'd like to rent, and give us your contact information. A valid ID and credit card are required for the rental deposit. We recommend booking in advance, especially for large events or during peak seasons, to ensure the availability of your preferred games.</p>"
+          },
+          "disabled": null
+        },
+        "item_477775": {
+          "type": "item",
+          "settings": {
+            "heading": "Do you offer any packages or discounts for multiple game rentals?",
+            "content": "<p>Absolutely! We encourage mixing and matching games to create a custom package that suits your event. We offer discounted rates for multiple game rentals, and our packages can be tailored to accommodate small gatherings to large corporate events. For more information on packages and discounts, please visit our promotions page on our website or contact our customer service team for personalized assistance in planning your perfect event lineup.</p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_477778",
+        "item_477779",
+        "item_477775"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "color_scheme": "set-2",
+        "description": "<p>Comprehensive guide to lawn game rentals for endless outdoor fun</p>",
+        "image": null,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_borders": true,
+        "title": "FAQ"
+      },
+      "disabled": null
+    },
+    "image-gallery": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_472885": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-1.png",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_472859": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-2.png",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_935278": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-3.png",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_208157": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-4.png",
+            "url": ""
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "image_472885",
+        "image_472859",
+        "image_935278",
+        "image_208157"
+      ],
+      "settings": {
+        "color_scheme": "set-2",
+        "full_width": false,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "title": "Express yourself with <br>#rentable on Instagram"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero",
+    "call-to-action",
+    "collections",
+    "title",
+    "products",
+    "call-to-action_147582",
+    "testimonials",
+    "articles",
+    "call-to-action_123908",
+    "accordion",
+    "image-gallery"
+  ]
+}

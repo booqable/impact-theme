@@ -1,0 +1,442 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "More info",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-3",
+        "description": "<p>Bring extra joy and unforgettable memories to your </p><p>event with our photo booth rentals. </p>",
+        "full_width": true,
+        "height": "medium",
+        "image": "booqable://assets/image-hero.jpeg",
+        "image_mobile": "",
+        "overlay_background": "#1B1B1B",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": "40",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": false,
+        "text_position": "left",
+        "text_position_mobile": "left",
+        "transition_color_bottom": "#B2B1F9",
+        "transition_color_top": "#B2B1F9",
+        "transition_style": "none",
+        "title": "Memories&nbsp;<br> in a Flash",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-2",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_overlay": false,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Unforgettable Moments, Captured <br>Book Your Photobooth!",
+        "transition_color_bottom": "#1A3333",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_256572": {
+          "type": "collection",
+          "settings": {
+            "collection": "b4adf8c4-c169-401e-8725-bbc8ea2c89f5"
+          },
+          "disabled": null
+        },
+        "collection_243072": {
+          "type": "collection",
+          "settings": {
+            "collection": "ee66edf9-08c3-44c2-b70e-86f2912baf67"
+          },
+          "disabled": null
+        },
+        "collection_230772": {
+          "type": "collection",
+          "settings": {
+            "collection": "f0af1030-4291-4ce2-b5aa-d1acd8fc35e3"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_256572",
+        "collection_243072",
+        "collection_230772"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "counter_singular": "Item",
+        "counter_plural": "Items",
+        "full_width": true,
+        "grid": "three",
+        "overlay_background": "#1B1B1B",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "small",
+        "spacing_mobile": "none"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_123744": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123745": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123746": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123747": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123748": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123749": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123750": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123751": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_123744",
+        "product_123745",
+        "product_123746",
+        "product_123747",
+        "product_123748",
+        "product_123749",
+        "product_123750",
+        "product_123751"
+      ],
+      "settings": {
+        "borders": "full",
+        "button_outline_label": "See all products",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "image": "",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "small",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "THIS WEEK",
+        "tag_image": "",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "call-to-action_185352": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Shop our products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-4",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "tag": "HIGHLIGHT",
+        "text_position": "middle",
+        "title": "Lights, Camera, <br> Action!",
+        "transition_color_bottom": "#E06B48",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "fade"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_234027": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "image": "booqable://assets/image-avatar-1.png",
+            "description": "<p>The variety of props and backgrounds meant that everyone could get creative and have fun. The quality of the photos was fantastic—crisp and vibrant. </p>",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234025": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "image": "booqable://assets/image-avatar-2.png",
+            "description": "<p>The booking process was seamless, and their team was very accommodating, tailoring the photo booth experience to fit the theme of our event. </p>",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234026": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "image": "booqable://assets/image-avatar-3.png",
+            "description": "<p>Their flexible packages allowed us to choose exactly what we needed to fit our budget and party size. The  quality of the instant prints was impressive. </p>",
+            "name": "Adrian Vajas",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_234027",
+        "testimonial_234025",
+        "testimonial_234026"
+      ],
+      "settings": {
+        "color_scheme": "set-2",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "small",
+        "show_navigation": true,
+        "title": "What people <br>say about us"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_456851": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "How to Choose the Perfect Photo Booth for Your Event",
+            "image": "booqable://assets/image-articles-1.png",
+            "text": "<p>Photo booths are a hit at any event, adding fun and creating memories. This guide explains how to select the perfect photo booth rental for your specific occasion, whether it’s a wedding, corporate event, or birthday party. </p>"
+          },
+          "disabled": null
+        },
+        "article_456852": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Features",
+            "heading": "Innovative Features to Wow Your Guests",
+            "image": "booqable://assets/image-articles-2.png",
+            "text": "<p>The world of photo booths is evolving, with new technologies enhancing the guest experience at events. </p>"
+          },
+          "disabled": null
+        },
+        "article_456853": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Tips",
+            "heading": "Tips for Using Your Rental Photo Booth Effectively",
+            "image": "booqable://assets/image-articles-3.png",
+            "text": "<p> Renting a photo booth is just the first step in spicing up your party or event. Learn how to make the most out of your photo booth rental.</p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_456851",
+        "article_456852",
+        "article_456853"
+      ],
+      "settings": {
+        "button_outline_label": "See all",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-5",
+        "full_width": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "small",
+        "show_transition_bottom": false,
+        "show_transition_top": true,
+        "transition_color_bottom": "#1B1B1B",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none",
+        "title": "What's in the news"
+      },
+      "disabled": null
+    },
+    "call-to-action_984098": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-4",
+        "full_width": true,
+        "height": "large",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Rent 2 Smile: Renting <br>Photo Booths Made Easy",
+        "transition_color_bottom": "#1B1B1B",
+        "transition_color_top": "#1B1B1B",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item_478546": {
+        "type": "item",
+          "settings": {
+            "heading": "What types of photo booths do you offer?",
+            "content": "<p>We have a variety of photo booth options to suit different event styles and preferences. Our selection includes classic enclosed booths that provide privacy, open-air booths that fit larger groups, and modern mirror photo booths which are interactive with touch screen technology. We also offer GIF booths, 360-degree video booths, and vintage-style booths for a unique twist. Each type of booth comes with a range of backdrops and props to choose from, ensuring a fun, personalized experience for your guests.</p>"
+          },
+          "disabled": null
+        },
+        "item_478549": {
+          "type": "item",
+          "settings": {
+            "heading": "How does the rental process work?",
+            "content": "<p>Renting a photo booth is easy! Simply visit our website to browse our photo booth options and select the one that best fits your event. You can book directly online or give us a call to discuss your needs. We will ask for details about your event, such as the date, location, and duration of rental. A deposit is required to secure your booking, with the balance due before the event. We handle the delivery, setup, and removal of the booth, so everything is ready to go when your event starts.</p>"
+          },
+          "disabled": null
+        },
+        "item_478545": {
+          "type": "item",
+          "settings": {
+            "heading": "Can I customize the photos?",
+            "content": "<p>Absolutely! We offer a variety of customization options to make your photo booth experience truly unique. You can choose from a selection of templates for your photos or work with our design team to create custom graphics that match your event’s theme. Customization can include text, logos, and colors. Additionally, our booths can be equipped with a selection of filters, and digital props, and some models offer green screen technology for virtually limitless backdrop possibilities. After the event, you’ll receive digital copies of all the photos, which you can download and share as you please.</p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_478546",
+        "item_478549",
+        "item_478545"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "color_scheme": "set-2",
+        "description": "<p>Everything you need to know about renting a photo booth for your event</p>",
+        "image": "",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "medium",
+        "show_borders": true,
+        "title": "FAQ"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero",
+    "call-to-action",
+    "collections",
+    "products",
+    "call-to-action_185352",
+    "testimonials",
+    "articles",
+    "call-to-action_984098",
+    "accordion"
+  ]
+}

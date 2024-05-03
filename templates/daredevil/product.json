@@ -27,7 +27,7 @@
     },
     "title": {
       "type": "title",
-      "blocks": [],
+      "blocks": {},
       "block_order": [],
       "settings": {
         "color_scheme": "set-1",

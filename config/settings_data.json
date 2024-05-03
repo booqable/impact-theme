@@ -361,6 +361,348 @@
       "tagline_size": 20,
       "use_focal_images": true
     },
+    "boost": {
+      "animation_duration": 0.2,
+      "body_font": "bai-jamjuree",
+      "color_schemes": {
+        "set-1": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#F4CC46",
+            "background": "#0D0C0C",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#F4CC46",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#FFFFFF"
+          }
+        },
+        "set-2": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#F4CC46",
+            "background": "#0D0C0C",
+            "color_accent": "#0D0C0C",
+            "color_accent_outline": "#F4CC46",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#FFFFFF"
+          }
+        },
+        "set-3": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#0D0C0C",
+            "background": "#1E1E1E",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#F4CC46",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#FFFFFF"
+          }
+        },
+        "set-4": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#1E1E1E",
+            "background": "#0D0C0C",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#F4CC46",
+            "color_primary": "#F6F4F2",
+            "color_secondary": "#F6F4F2"
+          }
+        },
+        "set-5": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#FFFFFF",
+            "background": "#F4CC46",
+            "color_accent": "#092025",
+            "color_accent_outline": "#F4CC46",
+            "color_primary": "#0D0C0C",
+            "color_secondary": "#0D0C0C"
+          }
+        }
+      },
+      "corner_radius": "square",
+      "h1_size": 80,
+      "h2_size": 64,
+      "h3_size": 56,
+      "heading_font": "bai-jamjuree",
+      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "large_text_size": 18,
+      "regular_text_size": 16,
+      "sections": {
+        "top-bar": {
+          "type": "top-bar",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "bar_message": "<p>Get 15% off with code <b>BOOST</b> at checkout</p>",
+            "bar_text": "<p>Call Us 24/7 <a href=\"tel:+15553028549\">+1 555 302 8549</a></p>",
+            "color_scheme": "set-5",
+            "icon": "phone",
+            "icon_style": "outline",
+            "padding_bottom": "medium",
+            "padding_bottom_mobile": "medium",
+            "padding_top": "medium",
+            "padding_top_mobile": "medium",
+            "show_bar": true
+          },
+          "disabled": null
+        },
+        "header": {
+          "type": "header",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "color_scheme": "set-2",
+            "custom_title": "{{ shop.name }}",
+            "follow_us": "Follow us on",
+            "logo": "booqable://assets/image-store-logo-white.png",
+            "logo_transparent": "",
+            "menu": "main-menu",
+            "menu_opener_label": "Menu",
+            "padding_bottom": "medium",
+            "padding_bottom_mobile": "medium",
+            "padding_top": "medium",
+            "padding_top_mobile": "medium",
+            "search_placeholder": "What are you looking for?",
+            "show_datepicker": true,
+            "show_payments": false,
+            "show_payments_mobile": true,
+            "show_search": true,
+            "sticky_header": true,
+            "transparent_bg": false
+          },
+          "disabled": null
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu_799457": {
+              "type": "menu",
+              "settings": {
+                "heading": "Quick links",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_799458": {
+              "type": "menu",
+              "settings": {
+                "heading": "Colections",
+                "menu": "collections",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_799459": {
+              "type": "menu",
+              "settings": {
+                "heading": "Products",
+                "menu": "products",
+                "menu_align": "left"
+              },
+              "disabled": null
+            }
+          },
+          "block_order": [
+            "menu_799457",
+            "menu_799458",
+            "menu_799459"
+          ],
+          "settings": {
+            "bottom_menu": "bottom-menu",
+            "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
+            "color_scheme": "set-2",
+            "custom_title": "{{ shop.name }}",
+            "full_width": true,
+            "logo": "booqable://assets/image-store-logo-white.png",
+            "padding_bottom": "small",
+            "padding_bottom_mobile": "small",
+            "padding_top": "medium",
+            "padding_top_mobile": "small",
+            "rounded_corners": "none"
+          },
+          "disabled": null
+        }
+      },
+      "social_size": "lg",
+      "social_spacing": "md",
+      "tagline_font": "darker-grotesque",
+      "tagline_size": 20,
+      "use_focal_images": true
+    },
+    "bounce": {
+      "animation_duration": 0.2,
+      "body_font": "rubik",
+      "color_schemes": {
+        "set-1": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#6B50E0",
+            "background": "#FFFFFF",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#6B50E0",
+            "color_primary": "#2A292E",
+            "color_secondary": "#858585"
+          }
+        },
+        "set-2": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#6B50E0",
+            "background": "#FFFFFF",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#FFFFFF",
+            "color_primary": "#2A292E",
+            "color_secondary": "#2A292E"
+          }
+        },
+        "set-3": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#FFFFFF",
+            "background": "#DFD0FB",
+            "color_accent": "#1A3333",
+            "color_accent_outline": "#2A292E",
+            "color_primary": "#2A292E",
+            "color_secondary": "#858585"
+          }
+        },
+        "set-4": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#6B50E0",
+            "background": "#6B50E0",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#6B50E0",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#FFFFFF"
+          }
+        },
+        "set-5": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#000000",
+            "background": "#0E052F",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#000000",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#858585"
+          }
+        }
+      },
+      "corner_radius": "fully_round",
+      "h1_size": 101,
+      "h2_size": 64,
+      "h3_size": 40,
+      "heading_font": "baloo-2",
+      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "large_text_size": 18,
+      "regular_text_size": 16,
+      "sections": {
+        "top-bar": {
+          "type": "top-bar",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "bar_message": "<p>Get 15% off with code <b>BOUNCE</b>&nbsp;at checkout</p>",
+            "bar_text": "<p>Call Us 24/7 <a href=\"tel:+15553028549\">+1 555 302 8549</a></p>",
+            "color_scheme": "set-4",
+            "icon": "phone",
+            "icon_style": "outline",
+            "padding_bottom": "medium",
+            "padding_bottom_mobile": "medium",
+            "padding_top": "medium",
+            "padding_top_mobile": "medium",
+            "show_bar": true
+          },
+          "disabled": null
+        },
+        "header": {
+          "type": "header",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "color_scheme": "set-1",
+            "custom_title": "{{ shop.name }}",
+            "follow_us": "Follow us on",
+            "logo": "booqable://assets/image-store-logo.png",
+            "logo_transparent": "",
+            "menu": "main-menu",
+            "menu_opener_label": "Menu",
+            "padding_bottom": "medium",
+            "padding_bottom_mobile": "medium",
+            "padding_top": "medium",
+            "padding_top_mobile": "medium",
+            "search_placeholder": "What are you looking for?",
+            "show_datepicker": true,
+            "show_payments": false,
+            "show_payments_mobile": true,
+            "show_search": true,
+            "sticky_header": true,
+            "transparent_bg": false
+          },
+          "disabled": null
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu_725895": {
+              "type": "menu",
+              "settings": {
+                "heading": "Quick links",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_725896": {
+              "type": "menu",
+              "settings": {
+                "heading": "Colections",
+                "menu": "collections",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_725897": {
+              "type": "menu",
+              "settings": {
+                "heading": "Products",
+                "menu": "products",
+                "menu_align": "left"
+              },
+              "disabled": null
+            }
+          },
+          "block_order": [
+            "menu_725895",
+            "menu_725896",
+            "menu_725897"
+          ],
+          "settings": {
+            "bottom_menu": "bottom-menu",
+            "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
+            "color_scheme": "set-5",
+            "custom_title": "{{ shop.name }}",
+            "full_width": false,
+            "logo": "booqable://assets/image-store-logo.png",
+            "padding_bottom": "small",
+            "padding_bottom_mobile": "small",
+            "padding_top": "medium",
+            "padding_top_mobile": "small",
+            "rounded_corners": "large"
+          },
+          "disabled": null
+        }
+      },
+      "social_size": "lg",
+      "social_spacing": "md",
+      "tagline_font": "open-sans",
+      "tagline_size": 20,
+      "use_focal_images": true
+    },
     "daredevil": {
       "animation_duration": 0.2,
       "body_font": "open-sans",
@@ -455,7 +797,7 @@
             "color_scheme": "set-1",
             "custom_title": "{{ shop.name }}",
             "follow_us": "Follow us on",
-            "logo": "booqable://assets/image-store-logo.png",
+            "logo": "booqable://assets/image-store-logo-white.png",
             "logo_transparent": "booqable://assets/image-store-logo-white.png",
             "menu": "main-menu",
             "menu_opener_label": "Menu",
@@ -543,6 +885,177 @@
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
+      "tagline_size": 20,
+      "use_focal_images": true
+    },
+    "elegant": {
+      "animation_duration": 0.2,
+      "body_font": "dm-sans",
+      "color_schemes": {
+        "set-1": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#A58A6E",
+            "background": "#FFFFFF",
+            "color_accent": "#1B1B1B",
+            "color_accent_outline": "#A58A6E",
+            "color_primary": "#1B1B1B",
+            "color_secondary": "#768585"
+          }
+        },
+        "set-2": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#A58A6E",
+            "background": "#E7E7E7",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#A58A6E",
+            "color_primary": "#1B1B1B",
+            "color_secondary": "#755B8F"
+          }
+        },
+        "set-3": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#FFFFFF",
+            "background": "#A58A6E",
+            "color_accent": "#1B1B1B",
+            "color_accent_outline": "#1B1B1B",
+            "color_primary": "#1B1B1B",
+            "color_secondary": "#FFFFFF"
+          }
+        },
+        "set-4": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#FFFFFF",
+            "background": "#1B1B1B",
+            "color_accent": "#1B1B1B",
+            "color_accent_outline": "#A58A6E",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#A0A6A6"
+          }
+        },
+        "set-5": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#E7E7E7",
+            "background": "#FFFFFF",
+            "color_accent": "#1A3333",
+            "color_accent_outline": "#1B1B1B",
+            "color_primary": "#1B1B1B",
+            "color_secondary": "#768585"
+          }
+        }
+      },
+      "corner_radius": "fully_round",
+      "h1_size": 80,
+      "h2_size": 64,
+      "h3_size": 56,
+      "heading_font": "dm-serif-display",
+      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "large_text_size": 18,
+      "regular_text_size": 16,
+      "sections": {
+        "top-bar": {
+          "type": "top-bar",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "bar_message": "<p>Get 15% off with code <b>ELEGANT</b> at checkout</p>",
+            "bar_text": "<p>Call Us 24/7 <a href=\"tel:+15553028549\">+1 555 302 8549</a></p>",
+            "color_scheme": "set-3",
+            "icon": "phone",
+            "icon_style": "outline",
+            "padding_bottom": "medium",
+            "padding_bottom_mobile": "medium",
+            "padding_top": "medium",
+            "padding_top_mobile": "medium",
+            "show_bar": true
+          },
+          "disabled": null
+        },
+        "header": {
+          "type": "header",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "color_scheme": "set-1",
+            "custom_title": "{{ shop.name }}",
+            "follow_us": "Follow us on",
+            "logo": "booqable://assets/image-store-logo.png",
+            "logo_transparent": "booqable://assets/image-store-logo-white.png",
+            "menu": "main-menu",
+            "menu_opener_label": "Menu",
+            "padding_bottom": "medium",
+            "padding_bottom_mobile": "medium",
+            "padding_top": "medium",
+            "padding_top_mobile": "medium",
+            "search_placeholder": "What are you looking for?",
+            "show_datepicker": true,
+            "show_payments": false,
+            "show_payments_mobile": true,
+            "show_search": true,
+            "sticky_header": true,
+            "transparent_bg": true
+          },
+          "disabled": null
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu_798455": {
+              "type": "menu",
+              "settings": {
+                "heading": "Quick links",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_798456": {
+              "type": "menu",
+              "settings": {
+                "heading": "Colections",
+                "menu": "collections",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_798457": {
+              "type": "menu",
+              "settings": {
+                "heading": "Products",
+                "menu": "products",
+                "menu_align": "left"
+              },
+              "disabled": null
+            }
+          },
+          "block_order": [
+            "menu_798455",
+            "menu_798456",
+            "menu_798457"
+          ],
+          "settings": {
+            "bottom_menu": "bottom-menu",
+            "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
+            "color_scheme": "set-4",
+            "custom_title": "{{ shop.name }}",
+            "full_width": true,
+            "logo": "booqable://assets/image-store-logo-white.png",
+            "padding_bottom": "small",
+            "padding_bottom_mobile": "small",
+            "padding_top": "medium",
+            "padding_top_mobile": "small",
+            "rounded_corners": "none"
+          },
+          "disabled": null
+        }
+      },
+      "social_size": "lg",
+      "social_spacing": "md",
+      "tagline_font": "dm-sans",
       "tagline_size": 20,
       "use_focal_images": true
     },
@@ -906,6 +1419,348 @@
             "padding_bottom_mobile": "small",
             "padding_top": "medium",
             "padding_top_mobile": "small"
+          },
+          "disabled": null
+        }
+      },
+      "social_size": "lg",
+      "social_spacing": "md",
+      "tagline_font": "darker-grotesque",
+      "tagline_size": 20,
+      "use_focal_images": true
+    },
+    "joy": {
+      "animation_duration": 0.2,
+      "body_font": "open-sans",
+      "color_schemes": {
+        "set-1": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#D7EA69",
+            "background": "#FFFFFF",
+            "color_accent": "#1A3333",
+            "color_accent_outline": "#D7EA69",
+            "color_primary": "#1A3333",
+            "color_secondary": "#D7EA69"
+          }
+        },
+        "set-2": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#D7EA69",
+            "background": "#F0F0E6",
+            "color_accent": "#1A3333",
+            "color_accent_outline": "#FFFFFF",
+            "color_primary": "#1A3333",
+            "color_secondary": "#2A5044"
+          }
+        },
+        "set-3": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#FFFFFF",
+            "background": "#131314",
+            "color_accent": "#1A3333",
+            "color_accent_outline": "#1A3333",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#D7EA69"
+          }
+        },
+        "set-4": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#D7EA69",
+            "background": "#1A3333",
+            "color_accent": "#1A3333",
+            "color_accent_outline": "#D7EA69",
+            "color_primary": "#F6F4F2",
+            "color_secondary": "#A0A6A6"
+          }
+        },
+        "set-5": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#131314",
+            "background": "#F6F4F2",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#53C787",
+            "color_primary": "#1A3333",
+            "color_secondary": "#FFFFFF"
+          }
+        }
+      },
+      "corner_radius": "fully_round",
+      "h1_size": 80,
+      "h2_size": 64,
+      "h3_size": 56,
+      "heading_font": "darker-grotesque",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
+      "large_text_size": 18,
+      "regular_text_size": 16,
+      "sections": {
+        "top-bar": {
+          "type": "top-bar",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "bar_message": "<p>Get 15% off with code <b>JOY</b> at checkout</p>",
+            "bar_text": "<p>Call Us 24/7 <a href=\"tel:+15553028549\">+1 555 302 8549</a></p>",
+            "color_scheme": "set-2",
+            "icon": "phone",
+            "icon_style": "outline",
+            "padding_bottom": "medium",
+            "padding_bottom_mobile": "medium",
+            "padding_top": "medium",
+            "padding_top_mobile": "medium",
+            "show_bar": true
+          },
+          "disabled": null
+        },
+        "header": {
+          "type": "header",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "color_scheme": "set-1",
+            "custom_title": "{{ shop.name }}",
+            "follow_us": "Follow us on",
+            "logo": "booqable://assets/image-store-logo.png",
+            "logo_transparent": "booqable://assets/image-store-logo-white.png",
+            "menu": "main-menu",
+            "menu_opener_label": "Menu",
+            "padding_bottom": "medium",
+            "padding_bottom_mobile": "medium",
+            "padding_top": "medium",
+            "padding_top_mobile": "medium",
+            "search_placeholder": "Where are you looking for?",
+            "show_datepicker": true,
+            "show_payments": false,
+            "show_payments_mobile": true,
+            "show_search": true,
+            "sticky_header": true,
+            "transparent_bg": true
+          },
+          "disabled": null
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu_798555": {
+              "type": "menu",
+              "settings": {
+                "heading": "Quick links",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_798556": {
+              "type": "menu",
+              "settings": {
+                "heading": "Colections",
+                "menu": "collections",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_798557": {
+              "type": "menu",
+              "settings": {
+                "heading": "Products",
+                "menu": "products",
+                "menu_align": "left"
+              },
+              "disabled": null
+            }
+          },
+          "block_order": [
+            "menu_798555",
+            "menu_798556",
+            "menu_798557"
+          ],
+          "settings": {
+            "bottom_menu": "bottom-menu",
+            "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
+            "color_scheme": "set-3",
+            "custom_title": "{{ shop.name }}",
+            "full_width": true,
+            "logo": "booqable://assets/image-store-logo-white.png",
+            "padding_bottom": "small",
+            "padding_bottom_mobile": "small",
+            "padding_top": "medium",
+            "padding_top_mobile": "small",
+            "rounded_corners": "none"
+          },
+          "disabled": null
+        }
+      },
+      "social_size": "lg",
+      "social_spacing": "md",
+      "tagline_font": "open-sans",
+      "tagline_size": 20,
+      "use_focal_images": true
+    },
+    "memories": {
+      "animation_duration": 0.2,
+      "body_font": "inter",
+      "color_schemes": {
+        "set-1": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#1B1B1B",
+            "background": "#FFFFFF",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#1B1B1B",
+            "color_primary": "#1B1B1B",
+            "color_secondary": "#768585"
+          }
+        },
+        "set-2": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#1B1B1B",
+            "background": "#DFD5C9",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#1B1B1B",
+            "color_primary": "#1B1B1B",
+            "color_secondary": "#1B1B1B"
+          }
+        },
+        "set-3": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#1B1B1B",
+            "background": "#1B1B1B",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#1B1B1B",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#768585"
+          }
+        },
+        "set-4": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#FFFFFF",
+            "background": "#1B1B1B",
+            "color_accent": "#1B1B1B",
+            "color_accent_outline": "#F2E5D0",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#A0A6A6"
+          }
+        },
+        "set-5": {
+          "type": "color_scheme",
+          "settings": {
+            "background_accent": "#1B1B1B",
+            "background": "#F8F8F8",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#1B1B1B",
+            "color_primary": "#1B1B1B",
+            "color_secondary": "#768585"
+          }
+        }
+      },
+      "corner_radius": "fully_round",
+      "h1_size": 80,
+      "h2_size": 64,
+      "h3_size": 56,
+      "heading_font": "inter",
+      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "large_text_size": 18,
+      "regular_text_size": 16,
+      "sections": {
+        "top-bar": {
+          "type": "top-bar",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "bar_message": "<p>Get 15% off with code <b>MEMORIES</b> at checkout</p>",
+            "bar_text": "<p>Call Us 24/7 <a href=\"tel:+15553028549\">+1 555 302 8549</a></p>",
+            "color_scheme": "set-3",
+            "icon": "phone",
+            "icon_style": "outline",
+            "padding_bottom": "medium",
+            "padding_bottom_mobile": "medium",
+            "padding_top": "medium",
+            "padding_top_mobile": "medium",
+            "show_bar": true
+          },
+          "disabled": null
+        },
+        "header": {
+          "type": "header",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "color_scheme": "set-1",
+            "custom_title": "{{ shop.name }}",
+            "follow_us": "Follow us on",
+            "logo": "booqable://assets/image-store-logo.png",
+            "logo_transparent": "booqable://assets/image-store-logo-white.png",
+            "menu": "main-menu",
+            "menu_opener_label": "Menu",
+            "padding_bottom": "medium",
+            "padding_bottom_mobile": "medium",
+            "padding_top": "medium",
+            "padding_top_mobile": "medium",
+            "search_placeholder": "What are you looking for?",
+            "show_datepicker": true,
+            "show_payments": false,
+            "show_payments_mobile": true,
+            "show_search": true,
+            "sticky_header": true,
+            "transparent_bg": true
+          },
+          "disabled": null
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu_789747": {
+              "type": "menu",
+              "settings": {
+                "heading": "Quick links",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_789748": {
+              "type": "menu",
+              "settings": {
+                "heading": "Products",
+                "menu": "products",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_789749": {
+              "type": "menu",
+              "settings": {
+                "heading": "Collections",
+                "menu": "collections",
+                "menu_align": "left"
+              },
+              "disabled": null
+            }
+          },
+          "block_order": [
+            "menu_789747",
+            "menu_789748",
+            "menu_789749"
+          ],
+          "settings": {
+            "bottom_menu": "bottom-menu",
+            "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
+            "color_scheme": "set-4",
+            "custom_title": "{{ shop.name }}",
+            "full_width": true,
+            "logo": "booqable://assets/image-store-logo-white.png",
+            "padding_bottom": "small",
+            "padding_bottom_mobile": "small",
+            "padding_top": "medium",
+            "padding_top_mobile": "small",
+            "rounded_corners": "none"
           },
           "disabled": null
         }
