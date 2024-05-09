@@ -1,0 +1,490 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "More info",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-3",
+        "description": "<p>Explore more with our convenient scooter rentals. </p><p>Perfect for quick trips or leisurely rides.</p>",
+        "full_width": true,
+        "height": "medium",
+        "image": "booqable://assets/image-hero.jpeg",
+        "image_mobile": "",
+        "overlay_background": "#1B1B1B",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 30,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": false,
+        "text_position": "left",
+        "text_position_mobile": "left",
+        "title": "<p>You explore </p>\n<p>more on </p>\n<p>two wheels</p>",
+        "transition_color_top": "#B2B1F9",
+        "transition_color_bottom": "#B2B1F9",
+        "transition_style": "none",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-1.png",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_overlay": false,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "tag_image": null,
+        "text_position": "middle",
+        "title": "Let’s find the <br>perfect scooter for you",
+        "transition_color_bottom": "#1A3333",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_256572": {
+          "type": "collection",
+          "settings": {
+            "collection": "db22659c-4de9-487b-8d8c-901baa99d349"
+          },
+          "disabled": null
+        },
+        "collection_243072": {
+          "type": "collection",
+          "settings": {
+            "collection": "3f85474f-f097-4e34-8070-378bb5e8ead5"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_256572",
+        "collection_243072"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "counter_plural": "Items",
+        "counter_singular": "Item",
+        "full_width": true,
+        "grid": "two",
+        "overlay_background": "#1B1B1B",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "small",
+        "spacing_mobile": "none"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_123744": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123745": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123746": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123747": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123748": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123749": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123750": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123751": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_123744",
+        "product_123745",
+        "product_123746",
+        "product_123747",
+        "product_123748",
+        "product_123749",
+        "product_123750",
+        "product_123751"
+      ],
+      "settings": {
+        "borders": "full",
+        "button_outline_label": "See all products",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "image": "",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "small",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "THIS WEEK",
+        "tag_image": "",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "call-to-action_135712": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Shop our products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-3",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": true,
+        "tag": "HIGHLIGHT",
+        "text_position": "middle",
+        "title": "Explore the ride <br> of your life",
+        "transition_color_bottom": "#E06B48",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "fade"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_234027": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>Booking online was a breeze, with clear options and transparent pricing. When I arrived to pick up my scooter, the staff were incredibly friendly.</p>",
+            "image": "booqable://assets/image-avatar-1.png",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234025": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The website was user-friendly, making it easy to select and reserve the perfect moped. Upon pickup, the staff were thorough in their briefing.</p>",
+            "image": "booqable://assets/image-avatar-2.png",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234026": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>I appreciated the flexibility in rental durations, which allowed me to extend my rental easily when I decided to explore further afield. </p>",
+            "image": "booqable://assets/image-avatar-3.png",
+            "name": "Adrian Vajas",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_234027",
+        "testimonial_234025",
+        "testimonial_234026"
+      ],
+      "settings": {
+        "color_scheme": "set-5",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "small",
+        "show_navigation": true,
+        "title": "What people <br>say about us"
+      },
+      "disabled": false
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_456851": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Choosing the Right Scooter or Moped for Urban Adventures",
+            "image": "booqable://assets/image-articles-1.png",
+            "text": "<p>Exploring the cityscape on a scooter or moped can be both thrilling and convenient, but selecting the right model is key to a good experience. This guide delves into the different types of scooters and mopeds available for rent, including electric options, and discusses their suitability for various urban environments.</p>"
+          },
+          "disabled": null
+        },
+        "article_456852": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Benefits",
+            "heading": "The Benefits of Renting Electric Scooters and Mopeds",
+            "image": "booqable://assets/image-articles-2.png",
+            "text": "<p>As cities become more congested and pollution concerns grow, electric scooters and mopeds present an eco-friendly alternative for navigating urban areas. </p>"
+          },
+          "disabled": null
+        },
+        "article_456853": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Tips",
+            "heading": "Essential Tips for First-Time Renters",
+            "image": "booqable://assets/image-articles-3.png",
+            "text": "<p>Renting a scooter or moped can be an exciting way to tour a city, but safety should always come first, especially for new riders. </p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_456851",
+        "article_456852",
+        "article_456853"
+      ],
+      "settings": {
+        "button_outline_label": "See all",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-5",
+        "full_width": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "small",
+        "show_transition_bottom": false,
+        "show_transition_top": true,
+        "transition_color_bottom": "#1B1B1B",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none",
+        "title": "What's in the news"
+      },
+      "disabled": null
+    },
+    "call-to-action_984098": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-4",
+        "full_width": true,
+        "height": "large",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-3.png",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Are you ready?",
+        "transition_color_bottom": "#1B1B1B",
+        "transition_color_top": "#E5E4E3",
+        "transition_style": "fade"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item_478546": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Our fleet includes a variety of scooters and mopeds to suit different preferences and riding experiences. We offer models ranging from 50cc scooters, ideal for navigating city streets and short distances, to more powerful 250cc mopeds for longer rides and higher speeds. Our vehicles come from reputable brands known for their reliability and performance, ensuring a smooth ride whether you're commuting or exploring.</p>",
+            "heading": "What types of scooters and mopeds are available for rent?"
+          },
+          "disabled": null
+        },
+        "item_478549": {
+          "type": "item",
+          "settings": {
+            "content": "<p>To rent a scooter or moped from us, you must be at least 18 years old and have a valid driver's license. No motorcycle license is required for scooters up to 50cc, but for anything above that, you’ll need a motorcycle endorsement. A security deposit is also required at the time of rental, which can be made via credit card. We provide a brief training session for all renters to cover basic operations and safety tips, ensuring you feel confident and secure on the road.</p>",
+            "heading": "What are the requirements to rent a scooter or moped?"
+          },
+          "disabled": null
+        },
+        "item_478545": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Yes, we strive to make your rental experience as convenient and enjoyable as possible. All scooter and moped rentals come with a complimentary helmet for safety. We also offer additional accessories for rent, such as locks, extra helmets, and storage boxes. For tourists or those new to the area, we provide maps and recommended routes to help you explore the city safely and efficiently. If needed, we can also arrange for delivery and pick-up of the scooters at your location for an additional fee, providing you with utmost flexibility during your rental period.</p>",
+            "heading": "Do you offer any additional services or accessories with rentals?"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_478546",
+        "item_478549",
+        "item_478545"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "color_scheme": "set-2",
+        "description": "<p>Key insights for renting scooters and mopeds: your guide to urban mobility</p>",
+        "image": "",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "medium",
+        "show_borders": true,
+        "title": "FAQ"
+      },
+      "disabled": null
+    },
+    "image-gallery": {
+      "type": "image-gallery",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-1.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_911302": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-2.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_971160": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-3.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_490373": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-4.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "image",
+        "image_911302",
+        "image_971160",
+        "image_490373"
+      ],
+      "settings": {
+        "color_scheme": "set-2",
+        "full_width": false,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "title": "Express yourself with <br>#rent2ride on Instagram"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero",
+    "call-to-action",
+    "collections",
+    "products",
+    "call-to-action_135712",
+    "testimonials",
+    "articles",
+    "call-to-action_984098",
+    "accordion",
+    "image-gallery"
+  ]
+}

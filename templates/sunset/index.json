@@ -1,0 +1,522 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "More info",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-1",
+        "description": "<p>Find everything you need to make your beach day </p><p>perfectly unforgettable with our easy rental service.</p>",
+        "full_width": true,
+        "height": "medium",
+        "image": "booqable://assets/image-hero.jpg",
+        "image_mobile": "",
+        "overlay_background": "#1A3333",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 72,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "text_position": "center",
+        "text_position_mobile": "left",
+        "title": "<p>Unwind on the beach<br> with our rentals</p>",
+        "transition_color_bottom": "#53C787",
+        "transition_color_top": "#53C787",
+        "transition_style": "sketch",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-2",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_overlay": false,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Bringing family and friends together <br>for unforgettable memories",
+        "transition_color_bottom": "#1A3333",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": "6d39c42c-4bf3-487d-9365-31eb86ae7977"
+          },
+          "disabled": null
+        },
+        "collection_242972": {
+          "type": "collection",
+          "settings": {
+            "collection": "ace43ca8-4835-400d-8722-1a55b43c18d5"
+          },
+          "disabled": null
+        },
+        "collection_535502": {
+          "type": "collection",
+          "settings": {
+            "collection": "ef90a64d-9d37-43fe-85f1-5607b7defbc6"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection",
+        "collection_242972",
+        "collection_535502"
+      ],
+      "settings": {
+        "color_scheme": "set-4",
+        "counter_plural": "Items",
+        "counter_singular": "Item",
+        "full_width": true,
+        "grid": "three",
+        "overlay_background": "#1A3333",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "none",
+        "spacing_mobile": "none"
+      },
+      "disabled": null
+    },
+    "title": {
+      "type": "title",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "custom_description": "",
+        "custom_title": "Popular products",
+        "full_width": true,
+        "image": "",
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "This week",
+        "transition_color_bottom": "#FFFFFF",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123455": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123454": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123453": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123452": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123451": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123450": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123449": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product",
+        "product_123455",
+        "product_123454",
+        "product_123453",
+        "product_123452",
+        "product_123451",
+        "product_123450",
+        "product_123449"
+      ],
+      "settings": {
+        "borders": "image",
+        "button_outline_label": "See all products",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "image": "",
+        "image_fit": "cover",
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "",
+        "tag_image": "",
+        "timer": 5,
+        "title": ""
+      },
+      "disabled": null
+    },
+    "call-to-action_147852": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Shop our products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-5",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Bring fun to <br> the beach",
+        "transition_color_bottom": "#E06B48",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "fade"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The website was user-friendly, offering a wide variety of equipment that catered to all our needs – from beach umbrellas and chairs to paddleboards and snorkeling gear. </p>",
+            "image": "booqable://assets/image-avatar-1.png",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234567": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The equipment I rented, including a kayak and a beach tent, was in excellent condition and clearly well-maintained. The booking process was straightforward, and the staff were incredibly helpful.</p>",
+            "image": "booqable://assets/image-avatar-2.png",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234568": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The variety of equipment available is unmatched – they had everything I could possibly want for a day by the sea. I was able to try stand-up paddleboarding for the first time with ease, thanks to their online guides and high-quality gear.</p>",
+            "image": "booqable://assets/image-avatar-3.png",
+            "name": "Adrian Vajas",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial",
+        "testimonial_234567",
+        "testimonial_234568"
+      ],
+      "settings": {
+        "color_scheme": "set-5",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_navigation": true,
+        "title": "What people <br>say about us"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Essentials",
+            "heading": "Beach Day Essentials: What to Rent for Ultimate Fun in the Sun",
+            "image": "booqable://assets/image-articles-1.png",
+            "text": "<p>Planning the perfect beach day involves more than just selecting a sunny spot on the sand. This guide covers all the must-have beach equipment rentals—from comfortable loungers and umbrellas to paddleboards and kayaks.</p>"
+          },
+          "disabled": null
+        },
+        "article_456231": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Eco-friendly",
+            "heading": "The Eco-Friendly Beachgoer: Sustainable Equipment Rental Options",
+            "image": "booqable://assets/image-articles-2.png",
+            "text": "<p>As awareness grows about the impact of tourism on coastal environments, many beachgoers are seeking sustainable ways to enjoy the sea and sand.</p>"
+          },
+          "disabled": null
+        },
+        "article_456232": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Tips",
+            "heading": "Navigating Beach Gear Rental: Tips for Families and Large Groups",
+            "image": "booqable://assets/image-articles-3.png",
+            "text": "<p> Organizing a beach day for a family or a large group poses unique challenges, from ensuring everyone's comfort to keeping the group entertained. </p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article",
+        "article_456231",
+        "article_456232"
+      ],
+      "settings": {
+        "button_outline_label": "See all Articles",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-4",
+        "full_width": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "title": "What's in the news",
+        "transition_color_bottom": "#F6F4F2",
+        "transition_color_top": "#E06B48",
+        "transition_style": "sketch"
+      },
+      "disabled": null
+    },
+    "call-to-action_123098": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-3",
+        "full_width": true,
+        "height": "medium",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Are you ready?",
+        "transition_color_bottom": "#000000",
+        "transition_color_top": "#53C787",
+        "transition_style": "sketch"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item": {
+          "type": "item",
+          "settings": {
+            "content": "<p>We offer a wide range of beach equipment rentals to enhance your beach day experience. Our inventory includes sun loungers, umbrellas, paddleboards, kayaks, beach toys for children, coolers, and even portable grills. Each item is designed to provide comfort, fun, and convenience for your time on the sand. Visit our website or contact us directly to see the full list of available equipment and package deals.</p>",
+            "heading": "What types of beach equipment can I rent from you?"
+          },
+          "disabled": null
+        },
+        "item_478139": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Reserving your beach equipment is simple! You can either book directly through our online reservation system or call our customer service line for personalized assistance. When booking, you'll need to specify your rental dates, the equipment you wish to rent, and provide a valid credit card for payment. As for cancellations, you can receive a full refund if you cancel at least 24 hours before your rental start date. Cancellations made less than 24 hours in advance may be subject to a fee.</p>",
+            "heading": "How do I reserve beach equipment and what is the cancellation policy?"
+          },
+          "disabled": null
+        },
+        "item_478145": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Yes, for your convenience, we offer delivery and setup services for all our rental equipment directly to your preferred beach location. When making your reservation, please provide the specific beach and a designated meeting spot. Our team will ensure your equipment is set up and ready to go before you arrive. Additionally, we’ll also pick up the equipment at the end of your rental period. Please check our website or contact us for delivery zones and any associated fees.</p>",
+            "heading": "Do you offer delivery and setup for rented beach equipment?"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item",
+        "item_478139",
+        "item_478145"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "color_scheme": "set-1",
+        "description": "<p>Everything you need to know for effortless beach equipment rentals</p>",
+        "image": "",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_borders": true,
+        "title": "FAQ"
+      },
+      "disabled": null
+    },
+    "image-gallery": {
+      "type": "image-gallery",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-1.png",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_118023": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-2.png",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_839391": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-3.png",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_343252": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-4.png",
+            "url": ""
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "image",
+        "image_118023",
+        "image_839391",
+        "image_343252"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "full_width": false,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "title": "Express yourself with <br>#summerent on instagram"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero",
+    "call-to-action",
+    "collections",
+    "title",
+    "products",
+    "call-to-action_147852",
+    "testimonials",
+    "articles",
+    "call-to-action_123098",
+    "accordion",
+    "image-gallery"
+  ]
+}

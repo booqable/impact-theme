@@ -27,6 +27,13 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/bounce_preview.png",
     "version": "beta"
   },
+  "cruise": {
+    "detail_url": "https://booqable.com/themes/cruise/",
+    "market": "Bikes / Scooters",
+    "preview_url": "https://cruise.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/cruise_preview.png",
+    "version": "beta"
+  },
   "daredevil": {
     "detail_url": "https://booqable.com/themes/daredevil/",
     "market": "Bikes / Scooters",
@@ -55,6 +62,13 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/flow_preview.png",
     "version": 1
   },
+  "giro": {
+    "detail_url": "https://booqable.com/themes/giro/",
+    "market": "Bikes / Scooters",
+    "preview_url": "https://giro.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/giro_preview.png",
+    "version": 1
+  },
   "joy": {
     "detail_url": "https://booqable.com/themes/joy/",
     "market": "Event / Party",
@@ -69,11 +83,39 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/memories_preview.png",
     "version": "beta"
   },
+  "peak": {
+    "detail_url": "https://booqable.com/themes/peak/",
+    "market": "Sports / Activities",
+    "preview_url": "https://peak.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/peak_preview.png",
+    "version": 1
+  },
   "pure": {
     "detail_url": "https://booqable.com/themes/pure/",
     "market": "Sports / Activities",
     "preview_url": "https://pure.booqable.shop/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/pure_preview.png",
+    "version": 1
+  },
+  "ride": {
+    "detail_url": "https://booqable.com/themes/ride/",
+    "market": "Bikes / Scooters",
+    "preview_url": "https://ride.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/ride_preview.png",
+    "version": 1
+  },
+  "rush": {
+    "detail_url": "https://booqable.com/themes/rush/",
+    "market": "Boats / Kayaks",
+    "preview_url": "https://rush.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/rush_preview.png",
+    "version": 1
+  },
+  "sunset": {
+    "detail_url": "https://booqable.com/themes/sunset/",
+    "market": "Sports / Activities",
+    "preview_url": "https://sunset.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/sunset_preview.png",
     "version": 1
   }
 }
