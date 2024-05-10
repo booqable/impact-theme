@@ -27,10 +27,12 @@
     },
     "list-collections": {
       "type": "list-collections",
+      "blocks": {},
+      "block_order": [],
       "settings": {
         "color_scheme": "set-4",
-        "counter_singular": "Item",
         "counter_plural": "Items",
+        "counter_singular": "Item",
         "full_width": true,
         "grid": "three",
         "limit": 9,
@@ -48,8 +50,6 @@
         "spacing": "none",
         "spacing_mobile": "none"
       },
-      "blocks": {},
-      "block_order": [],
       "disabled": null
     }
   },

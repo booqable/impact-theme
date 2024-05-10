@@ -29,10 +29,10 @@
         "show_transition_top": false,
         "text_position": "left",
         "text_position_mobile": "left",
+        "title": "Your Dream<br> Look&nbsp;Awaits",
         "transition_color_bottom": "#B2B1F9",
         "transition_color_top": "#B2B1F9",
         "transition_style": "none",
-        "title": "Your Dream<br> Look&nbsp;Awaits",
         "video_url": ""
       },
       "disabled": null
@@ -92,8 +92,8 @@
       ],
       "settings": {
         "color_scheme": "set-1",
-        "counter_singular": "Item",
         "counter_plural": "Items",
+        "counter_singular": "Item",
         "full_width": true,
         "grid": "two",
         "overlay_background": "#1B1B1B",
@@ -227,8 +227,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-1.png",
             "description": "<p>The sizing guide was accurate, which ensured my dress fit perfectly. What impressed me most was the quality of the gown and the pristine condition it arrived in.</p>",
+            "image": "booqable://assets/image-avatar-1.png",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
           },
@@ -239,8 +239,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-2.png",
             "description": "<p>Their selection of elegant dresses was vast and included the latest styles. The process was incredibly straightforward—I chose my dress, entered my measurements, and it arrived with time to spare!</p>",
+            "image": "booqable://assets/image-avatar-2.png",
             "name": "Ashley de Lotz",
             "position": "08-06-2023"
           },
@@ -251,8 +251,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-3.png",
             "description": "<p>The dress I chose was absolutely beautiful and arrived in perfect condition, looking exactly as it did online. Their try-on at home option was a game changer. </p>",
+            "image": "booqable://assets/image-avatar-3.png",
             "name": "Adrian Vajas",
             "position": "04-05-2023"
           },
@@ -333,10 +333,10 @@
         "rounded_corners": "small",
         "show_transition_bottom": false,
         "show_transition_top": true,
+        "title": "What's in the news",
         "transition_color_bottom": "#1B1B1B",
         "transition_color_top": "#FFFFFF",
-        "transition_style": "none",
-        "title": "What's in the news"
+        "transition_style": "none"
       },
       "disabled": null
     },
@@ -377,24 +377,24 @@
         "item_478546": {
           "type": "item",
           "settings": {
-            "heading": "What types of prom dresses are available for rental?",
-            "content": "<p>We offer a wide variety of prom dresses to suit every taste and trend. Our collection includes everything from elegant, floor-length gowns to chic, short dresses. You’ll find dresses in various styles such as A-line, mermaid, ball gown, and sheath, made from luxurious fabrics like silk, satin, and lace. We also offer a range of sizes and colors to ensure that every girl finds her dream dress. Our website features detailed photos and descriptions to help you choose.</p>"
+            "content": "<p>We offer a wide variety of prom dresses to suit every taste and trend. Our collection includes everything from elegant, floor-length gowns to chic, short dresses. You’ll find dresses in various styles such as A-line, mermaid, ball gown, and sheath, made from luxurious fabrics like silk, satin, and lace. We also offer a range of sizes and colors to ensure that every girl finds her dream dress. Our website features detailed photos and descriptions to help you choose.</p>",
+            "heading": "What types of prom dresses are available for rental?"
           },
           "disabled": null
         },
         "item_478549": {
           "type": "item",
           "settings": {
-            "heading": "How does the rental process work?",
-            "content": "<p>Renting your prom dress with us is simple and convenient. Start by browsing our online collection and select the dress you love. You can book your dress directly from our website. When booking, you'll need to provide your event date and size. We recommend booking at least two weeks in advance to ensure availability. Your dress will arrive via mail a few days before your prom, and it comes with a prepaid return envelope for easy return after your event.</p>"
+            "content": "<p>Renting your prom dress with us is simple and convenient. Start by browsing our online collection and select the dress you love. You can book your dress directly from our website. When booking, you'll need to provide your event date and size. We recommend booking at least two weeks in advance to ensure availability. Your dress will arrive via mail a few days before your prom, and it comes with a prepaid return envelope for easy return after your event.</p>",
+            "heading": "How does the rental process work?"
           },
           "disabled": null
         },
         "item_478545": {
           "type": "item",
           "settings": {
-            "heading": "What should I do if I need alterations?",
-            "content": "<p>We strive to offer dresses that fit beautifully, but if your dress needs minor adjustments for a perfect fit, we provide a tailored alterations credit. Simply take the dress to a local tailor and get it adjusted; we will reimburse you up to a certain amount specified at the time of rental. For major adjustments, it’s best to contact us directly to see if a different size or style might be a better fit. Always check the alteration policies before modifying any rental dress to ensure compliance with our terms of service.</p>"
+            "content": "<p>We strive to offer dresses that fit beautifully, but if your dress needs minor adjustments for a perfect fit, we provide a tailored alterations credit. Simply take the dress to a local tailor and get it adjusted; we will reimburse you up to a certain amount specified at the time of rental. For major adjustments, it’s best to contact us directly to see if a different size or style might be a better fit. Always check the alteration policies before modifying any rental dress to ensure compliance with our terms of service.</p>",
+            "heading": "What should I do if I need alterations?"
           },
           "disabled": null
         }

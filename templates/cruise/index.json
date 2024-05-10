@@ -1,0 +1,510 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "More info",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-2",
+        "description": "<p>Rent a bike for your vacation and discover scenic routes at your own pace. Perfect for casual rides or adventurous explorations.</p>",
+        "full_width": true,
+        "height": "medium",
+        "image": "booqable://assets/image-hero.jpeg",
+        "image_mobile": "",
+        "overlay_background": "#092025",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 60,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": false,
+        "text_position": "center",
+        "text_position_mobile": "left",
+        "title": "Adventures Await: <br>Rent Today",
+        "transition_color_bottom": "#7FACBF",
+        "transition_color_top": "#7FACBF",
+        "transition_style": "none",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-3",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_overlay": false,
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Let's find the <br>perfect bike for your trip",
+        "transition_color_bottom": "#7FACBF",
+        "transition_color_top": "#7FACBF",
+        "transition_style": "wave"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_241092": {
+          "type": "collection",
+          "settings": {
+            "collection": "d90676ab-b013-480f-97b7-52fe29e3653f"
+          },
+          "disabled": null
+        },
+        "collection_241093": {
+          "type": "collection",
+          "settings": {
+            "collection": "02d24a5a-581c-4513-a202-0d3f2197136a"
+          },
+          "disabled": null
+        },
+        "collection_241094": {
+          "type": "collection",
+          "settings": {
+            "collection": "f0af1030-4291-4ce2-b5aa-d1acd8fc35e3"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_241092",
+        "collection_241093",
+        "collection_241094"
+      ],
+      "settings": {
+        "color_scheme": "set-4",
+        "counter_plural": "Items",
+        "counter_singular": "Item",
+        "full_width": true,
+        "grid": "three",
+        "overlay_background": "#092025",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "none",
+        "spacing_mobile": "none"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_913456": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_913455": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_913454": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_913453": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_913452": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_913451": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_913450": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_913449": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_913456",
+        "product_913455",
+        "product_913454",
+        "product_913453",
+        "product_913452",
+        "product_913451",
+        "product_913450",
+        "product_913449"
+      ],
+      "settings": {
+        "borders": "full",
+        "button_outline_label": "See all products",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-2",
+        "image": "",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "THIS WEEK",
+        "tag_image": "",
+        "timer": 5,
+        "title": "POPULAR PRODUCTS"
+      },
+      "disabled": null
+    },
+    "call-to-action_174102": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Shop our products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-5",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": "20",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "tag": "HIGHLIGHT",
+        "text_position": "middle",
+        "title": "Explore the ride <br> of your life",
+        "transition_color_bottom": "#E06B48",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "wave"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_985166": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>We appreciated the detailed descriptions and recommendations which helped us choose the perfect bikes for beachside paths and city exploring.</p>",
+            "image": "booqable://assets/image-avatar-1.png",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_985167": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The selection of bikes was excellent, from road bikes to electric bikes, making it easy to find something suitable for our needs. </p>",
+            "image": "booqable://assets/image-avatar-2.png",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_985168": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The range of available bikes meant that both our kids and us could find bikes that were comfortable and safe. </p>",
+            "image": "booqable://assets/image-avatar-3.png",
+            "name": "Adrian Vajas",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_985166",
+        "testimonial_985167",
+        "testimonial_985168"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_navigation": true,
+        "title": "What people<br>say about us"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_985210": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "How to Choose the Perfect Bike Rental",
+            "image": "booqable://assets/image-article-1.png",
+            "text": "<p>Biking is an enjoyable way to explore a new destination, offering flexibility and a unique perspective on the local scenery. This guide helps you choose the right bike rental for your vacation, whether you're cycling through city streets, rural landscapes, or rugged trails.</p>"
+          },
+          "disabled": null
+        },
+        "article_985211": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Benefits of Renting a Bike",
+            "image": "booqable://assets/image-article-2.jpeg",
+            "text": "<p>Renting a bike on vacation offers numerous benefits, from eco-friendly transportation to enhanced exploration opportunities.</p>"
+          },
+          "disabled": null
+        },
+        "article_985212": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "What Every Traveler Needs to Know",
+            "image": "booqable://assets/image-article-3.jpeg",
+            "text": "<p>Renting a bike for your vacation can add an exciting element to your journey, but it's important to go in prepared. </p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_985210",
+        "article_985211",
+        "article_985212"
+      ],
+      "settings": {
+        "button_outline_label": "See all",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-4",
+        "full_width": true,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "title": "What's in the news",
+        "transition_color_bottom": "#F6F4F2",
+        "transition_color_top": "#E06B48",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "medium",
+        "size_mobile": "medium"
+      },
+      "disabled": null
+    },
+    "call-to-action_985278": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-5",
+        "full_width": true,
+        "height": "small",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": false,
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Get ready to rent",
+        "transition_color_bottom": "#000000",
+        "transition_color_top": "#E3F0F5",
+        "transition_style": "fade"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item_102587": {
+          "type": "item",
+          "settings": {
+            "content": "<p>We offer a diverse fleet of bikes to cater to all ages and preferences, including city bikes, mountain bikes, electric bikes, road bikes, and children’s bikes. Each type is designed for different terrains and riding experiences, so whether you’re looking to explore urban landscapes, tackle mountain trails, or enjoy a leisurely ride along the beach, we have the perfect bike for you. Our bikes are regularly maintained and come equipped with necessary accessories like locks, baskets, and helmets.</p>",
+            "heading": "What types of bikes are available for rent?"
+          },
+          "disabled": null
+        },
+        "item_102589": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Renting a bike for your vacation is easy:</p>\n<ol><li><strong>Choose your bike:</strong> Browse our selection online to find the bike that suits your needs and preferences.</li><li><strong>Book your rental:</strong> You can reserve your bike directly through our website. You'll need to provide your rental dates, select any additional accessories or equipment, and enter your contact information.</li><li><strong>Pick up or delivery:</strong> You can pick up your bike from our rental shop, or we can deliver it to your hotel or vacation residence. We also offer the option to have the bike fitted to your size at pick-up or delivery.</li><li><strong>Enjoy your ride:</strong> Explore your destination at your own pace. Our bikes come with a map and recommended routes to enhance your cycling experience.</li><li><strong>Return the bike:</strong> After your rental period is over, return the bike to our shop or arrange for us to pick it up from your location.</li></ol>",
+            "heading": "How does the rental process work?"
+          },
+          "disabled": null
+        },
+        "item_102585": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Yes, in addition to bike rentals, we provide guided bike tours that offer a fantastic way to explore the area with the knowledge of a local guide. These tours can be customized to different fitness levels and interests, ensuring a pleasant and engaging experience for everyone. We also offer long-term rental discounts, family packages, and group rates. If you need assistance or have any questions during your rental, our team is always ready to help, ensuring you have a safe and enjoyable biking experience on your vacation</p>",
+            "heading": "Do you offer any guided bike tours or additional services?"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_102587",
+        "item_102589",
+        "item_102585"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "color_scheme": "set-2",
+        "description": "<p>Everything you need to know about vacation bike rentals: explore your destination by bike</p>",
+        "image": "",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_borders": true,
+        "title": "FAQ"
+      },
+      "disabled": null
+    },
+    "image-gallery": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_654899": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-articles-3.jpg",
+            "url": "booqable://root/"
+          },
+          "disabled": null
+        },
+        "image_654898": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-articles-2.jpg",
+            "url": "booqable://collections/"
+          },
+          "disabled": null
+        },
+        "image_654897": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-3.jpeg",
+            "url": "booqable://products/"
+          },
+          "disabled": null
+        },
+        "image_654896": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-4.jpeg",
+            "url": "booqable://pages/contact/"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "image_654899",
+        "image_654898",
+        "image_654897",
+        "image_654896"
+      ],
+      "settings": {
+        "color_scheme": "set-2",
+        "full_width": true,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "title": "Express yourself with <br>#pedable on Instagram"
+      },
+      "disabled": false
+    }
+  },
+  "order": [
+    "hero",
+    "call-to-action",
+    "collections",
+    "products",
+    "call-to-action_174102",
+    "testimonials",
+    "articles",
+    "spacer",
+    "call-to-action_985278",
+    "accordion",
+    "image-gallery"
+  ]
+}

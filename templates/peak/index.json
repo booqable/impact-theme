@@ -1,0 +1,459 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "",
+        "button_outline_label": "More info",
+        "button_outline_url": "",
+        "color_scheme": "set-4",
+        "description": "<p>Discover the perfect blend of performance and comfort with our</p>\n<p>premium ski rental gear, tailored for every skill level and adventure.</p>",
+        "full_width": true,
+        "height": "full",
+        "image": "booqable://assets/image-hero.jpeg",
+        "image_mobile": "",
+        "overlay_background": "#0B0E15",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": "32",
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": false,
+        "text_position": "left",
+        "text_position_mobile": "center",
+        "title": "Elevate your<br>slope experience",
+        "transition_color_bottom": "#F6F6F6",
+        "transition_color_top": "#0B0E15",
+        "transition_style": "fade",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-5",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-1.png",
+        "overlay_background": "#0B0E15",
+        "overlay_opacity": 20,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_overlay": false,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Hit the slopes <br>today",
+        "transition_color_bottom": "#0B0E15",
+        "transition_color_top": "#0B0E15",
+        "transition_style": "none"
+        },
+          "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": "da4e30b6-e12d-43c4-b568-eed3f7a0ba79"
+          },
+          "disabled": null
+        },
+        "collection_242172": {
+          "type": "collection",
+          "settings": {
+            "collection": "fddd8088-053f-4ddf-b6b8-ca9338f33b19"
+          },
+          "disabled": null
+        },
+        "collection_535202": {
+          "type": "collection",
+          "settings": {
+            "collection": "f0af1030-4291-4ce2-b5aa-d1acd8fc35e3"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection",
+        "collection_242172",
+        "collection_535202"
+      ],
+      "settings": {
+        "color_scheme": "set-5",
+        "counter_plural": "Items",
+        "counter_singular": "Item",
+        "full_width": false,
+        "grid": "three",
+        "overlay_background": "#0B0E15",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "medium",
+        "spacing_mobile": "medium"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_223455": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_223454": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_223453": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_223452": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_223451": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_223450": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_223449": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product",
+        "product_223455",
+        "product_223454",
+        "product_223453",
+        "product_223452",
+        "product_223451",
+        "product_223450",
+        "product_223449"
+      ],
+      "settings": {
+        "borders": "image",
+        "button_outline_label": "See all products",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "image": "",
+        "image_fit": "cover",
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "This week",
+        "tag_image": "",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>From the moment we walked in, the staff made us feel welcome and ensured our kids were fitted with the perfect gear. Their patience and expertise made all the difference, especially for our little ones hitting the slopes for the first time.</p>",
+            "image": "booqable://assets/image-avatar-1.png",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_294567": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>Their high-performance gear is impeccably maintained and the staff's expertise helped me select the perfect skis for the conditions. Their tips and advice on the local terrain were invaluable, making my skiing experience even more enjoyable. </p>",
+            "image": "booqable://assets/image-avatar-2.png",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_294568": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>Their online booking system made it easy to arrange everything in advance, and the in-store pickup was seamless and efficient. The staff went above and beyond to ensure the equipment fit perfectly and I felt comfortable with my rental choices. </p>",
+            "image": "booqable://assets/image-avatar-3.png",
+            "name": "Adrian Vajas",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial",
+        "testimonial_294567",
+        "testimonial_294568"
+      ],
+      "settings": {
+        "color_scheme": "set-2",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_navigation": true,
+        "title": "What people <br>say about us"
+      },
+      "disabled": null
+    },
+    "logos": {
+      "type": "logos",
+      "blocks": {
+        "logo": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-1.png"
+          },
+          "disabled": null
+        },
+        "logo_578138": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-2.png"
+          },
+          "disabled": null
+        },
+        "logo_578148": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-3.png"
+          },
+          "disabled": null
+        },
+        "logo_578178": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-4.png"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "logo",
+        "logo_578138",
+        "logo_578148",
+        "logo_578178"
+      ],
+      "settings": {
+        "color_scheme": "set-5",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "title": "RENT SKI EQUIPMENT FROM:"
+      },
+      "disabled": false
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Choosing the Right Ski Gear: A Beginner's Guide",
+            "image": "booqable://assets/image-articles-1.webp",
+            "text": "<p>Embarking on your skiing journey can be exhilarating but daunting due to the array of equipment choices available. This comprehensive guide is designed to simplify the process.</p>"
+          },
+          "disabled": null
+        },
+        "article_456731": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Rentals",
+            "heading": "Maximizing Your Mountain Time: The Benefits of Ski Rentals",
+            "image": "booqable://assets/image-articles-2.jpeg",
+            "text": "<p>For many skiers, especially those traveling to distant mountains, the question of whether to rent skis or bring their own is a common dilemma. This post delves into the numerous advantages of ski rentals.</p>"
+          },
+          "disabled": null
+        },
+        "article_456732": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Ski Maintenance 101: Keeping Your Rental Gear in Top Shape",
+            "image": "booqable://assets/image-articles-3.jpeg",
+            "text": "<p>Whether you're renting ski equipment for a day or an entire season, understanding basic maintenance can significantly enhance your experience. This article provides essential tips on keeping your rental skis and snowboards in pristine condition.</p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article",
+      "article_456731",
+      "article_456732"
+      ],
+      "settings": {
+        "button_outline_label": "See all",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-2",
+        "full_width": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "title": "Ski rental essentials",
+        "transition_color_bottom": "#FFFFFF",
+        "transition_color_top": "#F4F6FC",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item": {
+          "type": "item",
+          "settings": {
+            "content": "<p> Choosing the right ski equipment depends on your skill level, which ranges from beginner to expert. Beginners should look for skis that are shorter and more flexible to facilitate easier turning and control. Intermediate skiers might opt for slightly longer skis for stability at higher speeds, while experts can choose stiff, longer skis for aggressive skiing on varied terrain. Our experienced staff can help you select the perfect equipment based on your skills and preferences.</p>",
+            "heading": "How do I choose the right ski equipment for my skill level?"
+          },
+          "disabled": null
+        },
+        "item_477139": {
+          "type": "item",
+          "settings": {
+            "content": "<p>When you come to rent ski equipment, it's essential to bring a government-issued ID and a credit card for the rental deposit. Additionally, knowing your weight, height, and shoe size will help us quickly find the right gear for you. If you have your own ski boots, bring them along to ensure the skis are compatible. For clothing rentals, it’s a good idea to wear thin, form-fitting layers to get the most accurate fit.</p>",
+            "heading": "What do I need to bring with me to rent ski equipment?"
+          },
+          "disabled": null
+        },
+        "item_477145": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Yes, we highly recommend reserving your ski equipment in advance, especially during peak seasons, to ensure availability. You can reserve equipment through our website or over the phone by providing details such as rental dates, skier information (height, weight, shoe size, and skill level), and payment information. We'll have your equipment ready for pick-up on your selected date. Early reservations also sometimes qualify for discounts or special offers, so be sure to ask or check our website for details.</p>",
+            "heading": "Can I reserve ski equipment in advance, and how does the process work?"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item",
+        "item_477139",
+        "item_477145"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "color_scheme": "set-1",
+        "description": "<p>Essential information for smooth and easy ski equipment rentals</p>",
+        "image": "",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top_mobile": "medium",
+        "padding_top": "medium",
+        "rounded_corners": "none",
+        "show_borders": true,
+        "title": "FAQ"
+      },
+      "disabled": null
+    },
+    "call-to-action_147852": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-5",
+        "full_width": true,
+        "height": "medium",
+        "height_mobile": "large",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "overlay_background": "#F4F6FC",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_overlay": false,
+        "show_transition_bottom": false,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Your exploration <br>starts here",
+        "transition_color_bottom": "#0B0E15",
+        "transition_color_top": "#F4F6FC",
+        "transition_style": "fade"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero",
+    "call-to-action",
+    "collections",
+    "products",
+    "testimonials",
+    "logos",
+    "articles",
+    "accordion",
+    "call-to-action_147852"
+  ]
+}

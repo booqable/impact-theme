@@ -29,10 +29,10 @@
         "show_transition_top": true,
         "text_position": "left",
         "text_position_mobile": "left",
+        "title": "It’s time<br>for fun",
         "transition_color_bottom": "#FFFFFF",
         "transition_color_top": "#FFFFFF",
         "transition_style": "none",
-        "title": "<p>It’s time<br>for fun</p>",
         "video_url": ""
       },
       "disabled": null
@@ -239,8 +239,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-1.png",
             "description": "<p>The variety of options they offered—from bounce houses to giant slides—meant there was something for every age group. </p>",
+            "image": "booqable://assets/image-avatar-1.png",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
           },
@@ -251,8 +251,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-2.png",
             "description": "<p> I wanted something special that would keep the kids entertained, and their selection of inflatables did not disappoint.</p>",
+            "image": "booqable://assets/image-avatar-2.png",
             "name": "Ashley de Lotz",
             "position": "08-06-2023"
           },
@@ -263,8 +263,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-3.png",
             "description": "<p>The entire experience was fantastic. Their website was easy to navigate, and the reservation process was clear and concise. </p>",
+            "image": "booqable://assets/image-avatar-3.png",
             "name": "Adrian Vajas",
             "position": "04-05-2023"
           },
@@ -357,10 +357,10 @@
         "rounded_corners": "large",
         "show_transition_bottom": true,
         "show_transition_top": true,
+        "title": "What's in the news",
         "transition_color_bottom": "#F6F4F2",
         "transition_color_top": "#E06B48",
-        "transition_style": "none",
-        "title": "What's in the news"
+        "transition_style": "none"
       },
       "disabled": null
     },
@@ -425,24 +425,24 @@
         "item_472356": {
           "type": "item",
           "settings": {
-            "heading": "What types of inflatables are available for rent?",
-            "content": "<p>We offer a wide range of inflatables that cater to all types of events, from children’s birthday parties to corporate gatherings. Our selection includes bouncy castles, inflatable obstacle courses, giant slides, and interactive games like inflatable basketball courts and jousting arenas. We also provide themed inflatables such as movie characters, animal kingdoms, and fantasy lands to add a special touch to any celebration. All our inflatables are made from high-quality, durable materials to ensure safety and fun.</p>"
+            "content": "<p>We offer a wide range of inflatables that cater to all types of events, from children’s birthday parties to corporate gatherings. Our selection includes bouncy castles, inflatable obstacle courses, giant slides, and interactive games like inflatable basketball courts and jousting arenas. We also provide themed inflatables such as movie characters, animal kingdoms, and fantasy lands to add a special touch to any celebration. All our inflatables are made from high-quality, durable materials to ensure safety and fun.</p>",
+            "heading": "What types of inflatables are available for rent?"
           },
           "disabled": null
         },
         "item_472359": {
           "type": "item",
           "settings": {
-            "heading": "How does the rental process work?",
-            "content": "<p>Renting an inflatable is straightforward. You can browse our selection online, choose your favorite inflatable, and book directly through our website or over the phone. We'll ask for the date of your event, the duration of the rental, and the location for setup. A deposit is typically required to secure your reservation. We handle the delivery, setup, and takedown of the inflatable to ensure it’s properly installed and safe for use. We recommend booking at least a few weeks in advance, especially during busy seasons, to ensure the availability of your chosen inflatable.</p>"
+            "content": "<p>Renting an inflatable is straightforward. You can browse our selection online, choose your favorite inflatable, and book directly through our website or over the phone. We'll ask for the date of your event, the duration of the rental, and the location for setup. A deposit is typically required to secure your reservation. We handle the delivery, setup, and takedown of the inflatable to ensure it’s properly installed and safe for use. We recommend booking at least a few weeks in advance, especially during busy seasons, to ensure the availability of your chosen inflatable.</p>",
+            "heading": "How does the rental process work?"
           },
           "disabled": null
         },
         "item_472355": {
           "type": "item",
           "settings": {
-            "heading": "Are there safety guidelines I need to follow when using the inflatables?",
-            "content": "<p>Safety is our top priority. We ensure that all our inflatables meet safety standards and are regularly inspected and cleaned. Upon delivery, our trained staff will set up the inflatable and provide you with detailed safety instructions. It is important to supervise all children using the inflatable at all times and adhere to the specific guidelines, such as weight limits and the number of users allowed at one time. We also recommend setting up the inflatable on a flat, open area away from any hazards like trees, fences, or power lines. In case of bad weather, particularly high winds or lightning, use of the inflatables should be discontinued immediately.</p>"
+            "content": "<p>Safety is our top priority. We ensure that all our inflatables meet safety standards and are regularly inspected and cleaned. Upon delivery, our trained staff will set up the inflatable and provide you with detailed safety instructions. It is important to supervise all children using the inflatable at all times and adhere to the specific guidelines, such as weight limits and the number of users allowed at one time. We also recommend setting up the inflatable on a flat, open area away from any hazards like trees, fences, or power lines. In case of bad weather, particularly high winds or lightning, use of the inflatables should be discontinued immediately.</p>",
+            "heading": "Are there safety guidelines I need to follow when using the inflatables?"
           },
           "disabled": null
         }

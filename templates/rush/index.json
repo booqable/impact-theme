@@ -1,0 +1,473 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "CHECK OUT PRODUCTS",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "GET IN TOUCH",
+        "button_outline_url": "booqable://pages/contact/",
+        "color_scheme": "set-4",
+        "description": "<p>Experience the thrill of speed and spray with our top-of-the-line </p><p>jet ski rentals. Perfect for adventure seekers.</p>",
+        "full_width": false,
+        "height": "medium",
+        "image": "booqable://assets/image-hero.png",
+        "image_mobile": "",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "text_position": "left",
+        "text_position_mobile": "left",
+        "title": "JETSKI&nbsp;RENTALS <br>FOR&nbsp;THRILL <br>SEEKERS",
+        "transition_color_bottom": "#FFFFFF",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "spacer_645473": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "medium",
+        "size_mobile": "medium"
+      },
+      "disabled": null
+    },
+    "call-to-action_147851": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "CHECK OUR PRODUCTS",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-4",
+        "full_width": false,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
+        "show_overlay": false,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "EASILY ORDER YOUR WATER <br>ADVENTURE ONLINE!",
+        "transition_color_bottom": "#2A292E",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "spacer_975709": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "medium",
+        "size_mobile": "medium"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_533421": {
+          "type": "collection",
+          "settings": {
+            "collection": "8d6441bf-5aa5-4951-98bf-ebdfa9339bb3"
+          },
+          "disabled": null
+        },
+        "collection_533422": {
+          "type": "collection",
+          "settings": {
+            "collection": "e029f198-8d37-49fa-a34d-13722ba92120"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_533421",
+        "collection_533422"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "counter_plural": "Items",
+        "counter_singular": "Item",
+        "full_width": false,
+        "grid": "two",
+        "overlay_background": "#2A292E",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "large",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "medium",
+        "spacing_mobile": "medium"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_109856": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109855": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109854": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109853": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109852": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109851": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109850": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109849": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_109856",
+        "product_109855",
+        "product_109854",
+        "product_109853",
+        "product_109852",
+        "product_109851",
+        "product_109850",
+        "product_109849"
+      ],
+      "settings": {
+        "borders": "image",
+        "button_outline_label": "SEE ALL PRODUCTS",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "image": "",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "large",
+        "padding_top": "medium",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "THIS WEEK",
+        "tag_image": "",
+        "timer": 5,
+        "title": "POPULAR PRODUCTS"
+      },
+      "disabled": null
+    },
+    "call-to-action_147854": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-2",
+        "full_width": false,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "HIGHLIGHT",
+        "text_position": "middle",
+        "title": "YOUR LOCAL <br> TRUSTED PARTNER",
+        "transition_color_bottom": "#000000",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_218966": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "CHECK REVIEW ONLINE",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The staff were very knowledgeable, making us feel confident and secure before hitting the water. The performance of the jet skis was incredible, allowing us to explore the coast and have tons of fun.</p>",
+            "image": "booqable://assets/image-avatar-1.png",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_218967": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "CHECK REVIEW ONLINE",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The jet skis were well-maintained and performed flawlessly. The rates were very competitive, and they even offered some great tips on how to make the most of our rental time. </p>",
+            "image": "booqable://assets/image-avatar-2.png",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_218968": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "CHECK REVIEW ONLINE",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>When we arrived, the jet skis were ready to go, looking brand new and with full tanks. The staff gave us a quick yet comprehensive safety and operation tutorial, which made us feel safe throughout our adventure.</p>",
+            "image": "booqable://assets/image-avatar-3.png",
+            "name": "Adrian Vajas",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_218966",
+        "testimonial_218967",
+        "testimonial_218968"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_navigation": true,
+        "title": "WHAT PEOPLE <br>SAY ABOUT US"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_465430": {
+          "type": "article",
+          "settings": {
+            "article_btn": "READ MORE",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Choosing the Right Jet Ski for Your Water Adventure",
+            "image": "booqable://assets/image-articles-1.png",
+            "text": "<p>Jet skiing is a thrilling way to explore waterways and experience high-speed fun. This guide offers comprehensive advice on selecting the best jet ski rental to match your experience level and adventure goals.</p>"
+          },
+          "disabled": null
+        },
+        "article_465431": {
+          "type": "article",
+          "settings": {
+            "article_btn": "READ MORE",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Tips",
+            "heading": "Essential Tips for a Fun and Safe Ride",
+            "image": "booqable://assets/image-articles-2.png",
+            "text": "<p>Before you hit the throttle and zoom off into the blue, understanding the basics of jet ski safety is crucial. </p>"
+          },
+          "disabled": null
+        },
+        "article_465432": {
+          "type": "article",
+          "settings": {
+            "article_btn": "READ MORE",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Your Gateway to Unforgettable Water Sports Adventures",
+            "image": "booqable://assets/image-articles-3.png",
+            "text": "<p>Renting a jet ski offers a unique opportunity to enhance any beach vacation or lakeside getaway. </p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_465430",
+        "article_465431",
+        "article_465432"
+      ],
+      "settings": {
+        "button_outline_label": "SEE ALL",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-5",
+        "full_width": false,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "title": "WHAT'S IN THE NEWS",
+        "transition_color_bottom": "#F6F4F2",
+        "transition_color_top": "#E06B48",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "medium",
+        "size_mobile": "small"
+      },
+      "disabled": null
+    },
+    "call-to-action_147853": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-2",
+        "full_width": false,
+        "height": "small",
+        "height_mobile": "small",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "large",
+        "padding_top": "small",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "RENT TODAY!",
+        "transition_color_bottom": "#000000",
+        "transition_color_top": "#53C787",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item_472356": {
+          "type": "item",
+          "settings": {
+            "content": "<p>We offer a diverse range of jet skis to suit different preferences and skill levels. Our fleet includes models suitable for single riders as well as two-seater and three-seater options, perfect for families or groups looking to share the experience. Our jet skis are sourced from leading brands known for their reliability and performance, such as Yamaha and Sea-Doo. Whether you're a beginner or an experienced rider, we have the right jet ski to make your water adventure unforgettable.</p>",
+            "heading": "What types of jet skis are available for rent?"
+          },
+          "disabled": null
+        },
+        "item_472359": {
+          "type": "item",
+          "settings": {
+            "content": "<p>To rent a jet ski, riders must be at least 18 years old and possess a valid government-issued ID. Additionally, we require all renters to complete a brief safety training session, which covers jet ski operation, local boating laws, and safe riding practices. This session is mandatory even for experienced riders, as it ensures everyone's safety on the water. A security deposit is also required, which can be made via credit card or cash.</p>",
+            "heading": "What are the requirements to rent a jet ski?"
+          },
+          "disabled": null
+        },
+        "item_472355": {
+          "type": "item",
+          "settings": {
+            "content": "<p>In addition to independent rentals, we offer guided jet ski tours that are perfect for those who prefer a structured experience with the safety and knowledge of a guide. Our tours are led by experienced guides who know the local waterways and the most scenic spots. They can cater to all skill levels, ensuring a safe and thrilling ride for everyone. Whether you want to explore local landmarks from the water, or just enjoy the thrill of riding, our guided tours offer a fantastic way to experience jet skiing. Please check our website or contact us for more details on tour options and scheduling.</p>",
+            "heading": "Do you offer guided tours or are rentals only for independent use?"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_472356",
+        "item_472359",
+        "item_472355"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "color_scheme": "set-3",
+        "description": "<p>Everything you need to know about renting jet skis for maximum water fun</p>",
+        "image": "",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "medium",
+        "show_borders": true,
+        "title": "FAQ"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero",
+    "spacer_645473",
+    "call-to-action_147851",
+    "spacer_975709",
+    "collections",
+    "products",
+    "call-to-action_147854",
+    "testimonials",
+    "articles",
+    "spacer",
+    "call-to-action_147853",
+    "accordion"
+  ]
+}

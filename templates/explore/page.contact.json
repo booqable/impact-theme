@@ -35,8 +35,8 @@
             "button_style": "secondary",
             "button_url": "{{ \"mailto:hello@info.com\" }}",
             "icon": "envelope",
-            "title": "Email",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero."
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.",
+            "title": "Email"
           },
           "disabled": null
         },
@@ -47,8 +47,8 @@
             "button_style": "secondary",
             "button_url": "{{ \"tel:+1 (555) 000-0000\" }}",
             "icon": "phone",
-            "title": "Phone",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero."
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.",
+            "title": "Phone"
           },
           "disabled": null
         },
@@ -57,8 +57,8 @@
           "settings": {
             "button_label": "123 Sample St, London Eng 2000 UK",
             "icon": "map-marker",
-            "title": "Office",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero."
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.",
+            "title": "Office"
           },
           "disabled": null
         }

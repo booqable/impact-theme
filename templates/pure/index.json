@@ -29,10 +29,10 @@
         "show_transition_top": false,
         "text_position": "left",
         "text_position_mobile": "left",
+        "title": "Step into your <br/> next adventure",
         "transition_color_bottom": "#B2B1F9",
         "transition_color_top": "#B2B1F9",
         "transition_style": "none",
-        "title": "Step into your <br/> next adventure",
         "video_url": ""
       },
       "disabled": null
@@ -57,8 +57,8 @@
         "padding_top_mobile": "medium",
         "rounded_corners": "none",
         "show_overlay": false,
-        "show_transition_top": true,
         "show_transition_bottom": true,
+        "show_transition_top": true,
         "tag": "",
         "text_position": "middle",
         "title": "Let’s find the <br>perfect hiking gear <br>for your trip",
@@ -94,8 +94,8 @@
       ],
       "settings": {
         "color_scheme": "set-1",
-        "counter_singular": "Item",
         "counter_plural": "Items",
+        "counter_singular": "Item",
         "full_width": true,
         "grid": "three",
         "overlay_background": "#1B1B1B",
@@ -210,8 +210,8 @@
         "padding_top_mobile": "large",
         "rounded_corners": "none",
         "show_overlay": true,
-        "show_transition_top": true,
         "show_transition_bottom": false,
+        "show_transition_top": true,
         "tag": "HIGHLIGHT",
         "text_position": "middle",
         "title": "Explore the hike <br> of your life",
@@ -229,8 +229,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-1.png",
             "description": "The quality of the equipment was top-notch, and everything was well-maintained and clean. What really made a difference was the expert advice provided by their staff.",
+            "image": "booqable://assets/image-avatar-1.png",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
           },
@@ -241,8 +241,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-2.png",
             "description": "I was impressed by the convenience of the home delivery service, which saved me a lot of time and hassle. The gear itself was in excellent condition—clean, durable, and up to the latest standards.",
+            "image": "booqable://assets/image-avatar-2.png",
             "name": "Ashley de Lotz",
             "position": "08-06-2023"
           },
@@ -253,8 +253,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-3.png",
             "description": "The range of equipment available covered all our needs, from lightweight tents to sturdy backpacks and everything in between. We were well-prepared for the varying terrains we encountered.",
+            "image": "booqable://assets/image-avatar-3.png",
             "name": "Adrian Vajas",
             "position": "04-05-2023"
           },
@@ -318,11 +318,11 @@
       ],
       "settings": {
         "color_scheme": "set-5",
-        "title": "TRUSTED BY:",
         "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
         "padding_top": "small",
-        "padding_top_mobile": "small"
+        "padding_top_mobile": "small",
+        "title": "TRUSTED BY:"
       },
       "disabled": false
     },
@@ -410,8 +410,8 @@
         "padding_top_mobile": "large",
         "rounded_corners": "none",
         "show_overlay": true,
-        "show_transition_top": true,
         "show_transition_bottom": false,
+        "show_transition_top": true,
         "tag": "",
         "text_position": "middle",
         "title": "Are you ready?",
@@ -427,24 +427,24 @@
         "item_478546": {
           "type": "item",
           "settings": {
-            "heading": "What types of hiking gear are available for rental?",
-            "content": "We provide a comprehensive range of high-quality hiking gear suited for all types of terrains and weather conditions. Our rental inventory includes lightweight backpacks, trekking poles, GPS devices, tents, sleeping bags, and portable cooking equipment. We also offer specialized gear for different seasons, such as insulated jackets, rain gear, and snowshoes. You can check out the full list of available equipment along with detailed descriptions on our website."
+            "content": "We provide a comprehensive range of high-quality hiking gear suited for all types of terrains and weather conditions. Our rental inventory includes lightweight backpacks, trekking poles, GPS devices, tents, sleeping bags, and portable cooking equipment. We also offer specialized gear for different seasons, such as insulated jackets, rain gear, and snowshoes. You can check out the full list of available equipment along with detailed descriptions on our website.",
+            "heading": "What types of hiking gear are available for rental?"
           },
           "disabled": null
         },
         "item_478549": {
           "type": "item",
           "settings": {
-            "heading": "How do I rent hiking gear and what are the rental requirements?",
-            "content": "Renting hiking gear from us is simple and straightforward. You can reserve your gear online through our website or visit us in-store. To complete your rental, you'll need to provide a valid ID and a credit card for the security deposit. We recommend reserving your equipment in advance, especially during peak hiking seasons, to ensure availability. When picking up your gear, our staff will provide a quick tutorial on how to use each item safely and effectively."
+            "content": "Renting hiking gear from us is simple and straightforward. You can reserve your gear online through our website or visit us in-store. To complete your rental, you'll need to provide a valid ID and a credit card for the security deposit. We recommend reserving your equipment in advance, especially during peak hiking seasons, to ensure availability. When picking up your gear, our staff will provide a quick tutorial on how to use each item safely and effectively.",
+            "heading": "How do I rent hiking gear and what are the rental requirements?"
           },
           "disabled": null
         },
         "item_478545": {
           "type": "item",
           "settings": {
-            "heading": "Can you offer advice on what gear I’ll need for my hiking trip?",
-            "content": "Absolutely! Our experienced team is ready to assist you in choosing the right gear based on the specific details of your trip, such as the duration, the difficulty of the trail, weather conditions, and your personal needs. We can help you assemble a customized gear package that ensures you are well-prepared without carrying unnecessary weight. Additionally, our website features a resource section with packing lists and tips for different types of hiking adventures. Feel free to contact us directly for personalized advice or to answer any specific questions you might have about gearing up for your next hike."
+            "content": "Absolutely! Our experienced team is ready to assist you in choosing the right gear based on the specific details of your trip, such as the duration, the difficulty of the trail, weather conditions, and your personal needs. We can help you assemble a customized gear package that ensures you are well-prepared without carrying unnecessary weight. Additionally, our website features a resource section with packing lists and tips for different types of hiking adventures. Feel free to contact us directly for personalized advice or to answer any specific questions you might have about gearing up for your next hike.",
+            "heading": "Can you offer advice on what gear I’ll need for my hiking trip?"
           },
           "disabled": null
         }

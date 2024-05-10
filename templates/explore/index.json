@@ -29,10 +29,10 @@
         "show_transition_top": false,
         "text_position": "center",
         "text_position_mobile": "center",
+        "title": "Your adventure <br> starts here",
         "transition_color_bottom": "#0B0E15",
         "transition_color_top": "#0B0E15",
         "transition_style": "sketch",
-        "title": "Your adventure <br> starts here",
         "video_url": ""
       },
       "disabled": null
@@ -57,8 +57,8 @@
         "padding_top_mobile": "medium",
         "rounded_corners": "none",
         "show_overlay": false,
-        "show_transition_top": true,
         "show_transition_bottom": true,
+        "show_transition_top": true,
         "tag": "",
         "text_position": "middle",
         "title": "Explore our amazing <br>products",
@@ -94,8 +94,8 @@
       ],
       "settings": {
         "color_scheme": "set-4",
-        "counter_singular": "Item",
         "counter_plural": "Items",
+        "counter_singular": "Item",
         "full_width": false,
         "grid": "three",
         "overlay_background": "#0B0E15",
@@ -210,8 +210,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-1.png",
             "description": "The booking process was smooth, and the customer service team went above and beyond to help us plan our journey, offering tips on must-see destinations and campsite recommendations.",
+            "image": "booqable://assets/image-avatar-1.png",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
           },
@@ -222,8 +222,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-2.png",
             "description": "What impressed us most was the attention to detail - the comprehensive orientation on how to use the campervan’s features ensured we felt confident and prepared for our adventure.",
+            "image": "booqable://assets/image-avatar-2.png",
             "name": "Ashley de Lotz",
             "position": "08-06-2023"
           },
@@ -234,8 +234,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-3.png",
             "description": "The ease of booking through their website, the friendly and knowledgeable staff, and the quality of the campervan itself made our trip seamless and enjoyable.",
+            "image": "booqable://assets/image-avatar-3.png",
             "name": "Adrian Vajas",
             "position": "04-05-2023"
           },
@@ -299,11 +299,11 @@
       ],
       "settings": {
         "color_scheme": "set-5",
-        "title": "TRUSTED BY:",
         "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
         "padding_top": "small",
-        "padding_top_mobile": "small"
+        "padding_top_mobile": "small",
+        "title": "TRUSTED BY:"
       },
       "disabled": false
     },
@@ -364,10 +364,10 @@
         "rounded_corners": "none",
         "show_transition_bottom": true,
         "show_transition_top": true,
+        "title": "What's in the news",
         "transition_color_bottom": "#FFFFFF",
         "transition_color_top": "#F4F6FC",
-        "transition_style": "none",
-        "title": "What's in the news"
+        "transition_style": "none"
       },
       "disabled": null
     },
@@ -377,24 +377,24 @@
         "item": {
           "type": "item",
           "settings": {
-            "heading": "What types of campervans are available for rental?",
-            "content": "Our diverse fleet is designed to meet the needs of various travelers, from solo adventurers to family vacationers. We offer everything from compact vans for two, ideal for a cozy getaway, to larger, fully equipped campervans that can comfortably accommodate families or groups of friends. Features range from basic models with sleeping arrangements and storage to luxury campervans with kitchens, showers, and entertainment systems. Explore our website for detailed descriptions and specifications to find the perfect campervan for your journey."
+            "content": "Our diverse fleet is designed to meet the needs of various travelers, from solo adventurers to family vacationers. We offer everything from compact vans for two, ideal for a cozy getaway, to larger, fully equipped campervans that can comfortably accommodate families or groups of friends. Features range from basic models with sleeping arrangements and storage to luxury campervans with kitchens, showers, and entertainment systems. Explore our website for detailed descriptions and specifications to find the perfect campervan for your journey.",
+            "heading": "What types of campervans are available for rental?"
           },
           "disabled": null
         },
         "item_477139": {
           "type": "item",
           "settings": {
-            "heading": "How do I book a campervan, and what documents are required?",
-            "content": "Booking is simple and can be done online or over the phone. You'll need to select your pick-up and drop-off dates and locations, choose your campervan model, and decide on any additional equipment or services, like kitchen kits or bedding packs. Required documents for booking include a valid driver's license from your country of residence, a credit card for the security deposit, and, for international travelers, a passport and, if applicable, an international driving permit. We recommend booking well in advance, especially for peak travel seasons, to ensure the availability of your preferred campervan."
+            "content": "Booking is simple and can be done online or over the phone. You'll need to select your pick-up and drop-off dates and locations, choose your campervan model, and decide on any additional equipment or services, like kitchen kits or bedding packs. Required documents for booking include a valid driver's license from your country of residence, a credit card for the security deposit, and, for international travelers, a passport and, if applicable, an international driving permit. We recommend booking well in advance, especially for peak travel seasons, to ensure the availability of your preferred campervan.",
+            "heading": "How do I book a campervan, and what documents are required?"
           },
           "disabled": null
         },
         "item_477145": {
           "type": "item",
           "settings": {
-            "heading": "Are there any tips for first-time campervan renters?",
-            "content": "Familiarize yourself with the campervan's features and how to use them before you hit the road. Plan your route in advance, including campgrounds or parking spots where overnight stays are allowed. Pack light but don’t forget essentials like food, clothing, and personal items. Storage space is limited, so be strategic about what you bring. Always have a road map or GPS device handy, even if you plan to wander without a strict itinerary. Lastly, respect nature and the communities you visit by following Leave No Trace principles and local regulations."
+            "content": "Familiarize yourself with the campervan's features and how to use them before you hit the road. Plan your route in advance, including campgrounds or parking spots where overnight stays are allowed. Pack light but don’t forget essentials like food, clothing, and personal items. Storage space is limited, so be strategic about what you bring. Always have a road map or GPS device handy, even if you plan to wander without a strict itinerary. Lastly, respect nature and the communities you visit by following Leave No Trace principles and local regulations.",
+            "heading": "Are there any tips for first-time campervan renters?"
           },
           "disabled": null
         }
@@ -439,8 +439,8 @@
         "padding_top_mobile": "medium",
         "rounded_corners": "none",
         "show_overlay": false,
-        "show_transition_top": true,
         "show_transition_bottom": false,
+        "show_transition_top": true,
         "tag": "",
         "text_position": "top",
         "title": "Your exploration <br>starts here",
