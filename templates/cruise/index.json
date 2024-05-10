@@ -445,7 +445,7 @@
         "image_654899": {
           "type": "image",
           "settings": {
-            "image": "booqable://assets/image-articles-3.jpeg",
+            "image": "booqable://assets/image-articles-3.jpg",
             "url": "booqable://root/"
           },
           "disabled": null
@@ -453,7 +453,7 @@
         "image_654898": {
           "type": "image",
           "settings": {
-            "image": "booqable://assets/image-articles-2.jpeg",
+            "image": "booqable://assets/image-articles-2.jpg",
             "url": "booqable://collections/"
           },
           "disabled": null
