@@ -29,7 +29,7 @@
         "show_transition_top": true,
         "text_position": "left",
         "text_position_mobile": "left",
-        "title": "<p>Explore with </p>\n<p>Top-Tier Bicycle </p>\n<p>Rentals</p>",
+        "title": "Explore with <br>Top-Tier Bicycle <br>Rentals",
         "transition_color_bottom": "#FFFFFF",
         "transition_color_top": "#FFFFFF",
         "transition_style": "none",

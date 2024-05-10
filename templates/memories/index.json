@@ -29,10 +29,10 @@
         "show_transition_top": false,
         "text_position": "left",
         "text_position_mobile": "left",
+        "title": "Memories <br> in a Flash",
         "transition_color_bottom": "#B2B1F9",
         "transition_color_top": "#B2B1F9",
         "transition_style": "none",
-        "title": "Memories&nbsp;<br> in a Flash",
         "video_url": ""
       },
       "disabled": null
@@ -100,8 +100,8 @@
       ],
       "settings": {
         "color_scheme": "set-1",
-        "counter_singular": "Item",
         "counter_plural": "Items",
+        "counter_singular": "Item",
         "full_width": true,
         "grid": "three",
         "overlay_background": "#1B1B1B",
@@ -235,8 +235,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-1.png",
             "description": "<p>The variety of props and backgrounds meant that everyone could get creative and have fun. The quality of the photos was fantastic—crisp and vibrant. </p>",
+            "image": "booqable://assets/image-avatar-1.png",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
           },
@@ -247,8 +247,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-2.png",
             "description": "<p>The booking process was seamless, and their team was very accommodating, tailoring the photo booth experience to fit the theme of our event. </p>",
+            "image": "booqable://assets/image-avatar-2.png",
             "name": "Ashley de Lotz",
             "position": "08-06-2023"
           },
@@ -259,8 +259,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-3.png",
             "description": "<p>Their flexible packages allowed us to choose exactly what we needed to fit our budget and party size. The  quality of the instant prints was impressive. </p>",
+            "image": "booqable://assets/image-avatar-3.png",
             "name": "Adrian Vajas",
             "position": "04-05-2023"
           },
@@ -341,10 +341,10 @@
         "rounded_corners": "small",
         "show_transition_bottom": false,
         "show_transition_top": true,
+        "title": "What's in the news",
         "transition_color_bottom": "#1B1B1B",
         "transition_color_top": "#FFFFFF",
-        "transition_style": "none",
-        "title": "What's in the news"
+        "transition_style": "none"
       },
       "disabled": null
     },
@@ -385,24 +385,24 @@
         "item_478546": {
         "type": "item",
           "settings": {
-            "heading": "What types of photo booths do you offer?",
-            "content": "<p>We have a variety of photo booth options to suit different event styles and preferences. Our selection includes classic enclosed booths that provide privacy, open-air booths that fit larger groups, and modern mirror photo booths which are interactive with touch screen technology. We also offer GIF booths, 360-degree video booths, and vintage-style booths for a unique twist. Each type of booth comes with a range of backdrops and props to choose from, ensuring a fun, personalized experience for your guests.</p>"
+            "content": "<p>We have a variety of photo booth options to suit different event styles and preferences. Our selection includes classic enclosed booths that provide privacy, open-air booths that fit larger groups, and modern mirror photo booths which are interactive with touch screen technology. We also offer GIF booths, 360-degree video booths, and vintage-style booths for a unique twist. Each type of booth comes with a range of backdrops and props to choose from, ensuring a fun, personalized experience for your guests.</p>",
+            "heading": "What types of photo booths do you offer?"
           },
           "disabled": null
         },
         "item_478549": {
           "type": "item",
           "settings": {
-            "heading": "How does the rental process work?",
-            "content": "<p>Renting a photo booth is easy! Simply visit our website to browse our photo booth options and select the one that best fits your event. You can book directly online or give us a call to discuss your needs. We will ask for details about your event, such as the date, location, and duration of rental. A deposit is required to secure your booking, with the balance due before the event. We handle the delivery, setup, and removal of the booth, so everything is ready to go when your event starts.</p>"
+            "content": "<p>Renting a photo booth is easy! Simply visit our website to browse our photo booth options and select the one that best fits your event. You can book directly online or give us a call to discuss your needs. We will ask for details about your event, such as the date, location, and duration of rental. A deposit is required to secure your booking, with the balance due before the event. We handle the delivery, setup, and removal of the booth, so everything is ready to go when your event starts.</p>",
+            "heading": "How does the rental process work?"
           },
           "disabled": null
         },
         "item_478545": {
           "type": "item",
           "settings": {
-            "heading": "Can I customize the photos?",
-            "content": "<p>Absolutely! We offer a variety of customization options to make your photo booth experience truly unique. You can choose from a selection of templates for your photos or work with our design team to create custom graphics that match your event’s theme. Customization can include text, logos, and colors. Additionally, our booths can be equipped with a selection of filters, and digital props, and some models offer green screen technology for virtually limitless backdrop possibilities. After the event, you’ll receive digital copies of all the photos, which you can download and share as you please.</p>"
+            "content": "<p>Absolutely! We offer a variety of customization options to make your photo booth experience truly unique. You can choose from a selection of templates for your photos or work with our design team to create custom graphics that match your event’s theme. Customization can include text, logos, and colors. Additionally, our booths can be equipped with a selection of filters, and digital props, and some models offer green screen technology for virtually limitless backdrop possibilities. After the event, you’ll receive digital copies of all the photos, which you can download and share as you please.</p>",
+            "heading": "Can I customize the photos?"
           },
           "disabled": null
         }

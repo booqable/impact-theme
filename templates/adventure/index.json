@@ -29,10 +29,10 @@
         "show_transition_top": false,
         "text_position": "center",
         "text_position_mobile": "left",
+        "title": "Rent your <br> Adventure on <br> Any Budget",
         "transition_color_bottom": "#375647",
         "transition_color_top": "#375647",
         "transition_style": "fade",
-        "title": "Rent your <br> Adventure on <br> Any Budget",
         "video_url": ""
       },
       "disabled": null
@@ -57,8 +57,8 @@
         "padding_top_mobile": "small",
         "rounded_corners": "none",
         "show_overlay": false,
-        "show_transition_top": true,
         "show_transition_bottom": true,
+        "show_transition_top": true,
         "tag": "",
         "tag_image": "booqable://assets/image-butterfly.png",
         "text_position": "middle",
@@ -95,8 +95,8 @@
       ],
       "settings": {
         "color_scheme": "set-4",
-        "counter_singular": "Item",
         "counter_plural": "Items",
+        "counter_singular": "Item",
         "full_width": true,
         "grid": "three",
         "overlay_background": "#375647",
@@ -211,8 +211,8 @@
         "padding_top_mobile": "large",
         "rounded_corners": "none",
         "show_overlay": true,
-        "show_transition_top": true,
         "show_transition_bottom": false,
+        "show_transition_top": true,
         "tag": "HIGHLIGHT",
         "tag_image": "booqable://assets/image-mountains-light.png",
         "text_position": "middle",
@@ -231,8 +231,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-1.png",
             "description": "Their wide selection of high-quality gear meant that we could find everything we needed in one place, from tents and sleeping bags to cookware and portable stoves. The gear was in excellent condition and clearly well-maintained.",
+            "image": "booqable://assets/image-avatar-1.png",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
           },
@@ -243,8 +243,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-2.png",
             "description": "Their website was not only easy to navigate but also packed with helpful information and guides on choosing the right gear. The rental process was straightforward, and the prices were very reasonable.",
+            "image": "booqable://assets/image-avatar-2.png",
             "name": "Ashley de Lotz",
             "position": "08-06-2023"
           },
@@ -255,8 +255,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-3.png",
             "description": "The quality of the equipment was outstanding, from the robust tents to the ultra-comfy sleeping pads and high-performance cook systems. Everything was ready for pickup at the agreed time.",
+            "image": "booqable://assets/image-avatar-3.png",
             "name": "Adrian Vajas",
             "position": "04-05-2023"
           },
@@ -386,10 +386,10 @@
         "rounded_corners": "small",
         "show_transition_bottom": false,
         "show_transition_top": true,
+        "title": "What's in the news",
         "transition_color_bottom": "#F6F4F2",
         "transition_color_top": "#E06B48",
-        "transition_style": "none",
-        "title": "What's in the news"
+        "transition_style": "none"
       },
       "disabled": null
     },
@@ -413,8 +413,8 @@
         "padding_top_mobile": "large",
         "rounded_corners": "none",
         "show_overlay": true,
-        "show_transition_top": true,
         "show_transition_bottom": false,
+        "show_transition_top": true,
         "tag": "",
         "tag_image": "booqable://assets/image-batterfly-2.png",
         "text_position": "middle",
@@ -431,24 +431,24 @@
         "item_478740": {
           "type": "item",
           "settings": {
-            "heading": "What types of camping gear do you offer for rental?",
-            "content": "Our inventory covers a wide range of camping essentials designed to suit various outdoor experiences, from lightweight backpacking setups to family-sized camp setups. We offer tents of all sizes, sleeping bags suitable for different temperature ranges, backpacks, camping stoves, cookware, and portable furniture such as chairs and tables. We also provide specialized gear like GPS units, solar chargers, and water filtration systems. Detailed information on each item is available on our website to help you choose the right gear for your trip."
+            "content": "Our inventory covers a wide range of camping essentials designed to suit various outdoor experiences, from lightweight backpacking setups to family-sized camp setups. We offer tents of all sizes, sleeping bags suitable for different temperature ranges, backpacks, camping stoves, cookware, and portable furniture such as chairs and tables. We also provide specialized gear like GPS units, solar chargers, and water filtration systems. Detailed information on each item is available on our website to help you choose the right gear for your trip.",
+            "heading": "What types of camping gear do you offer for rental?"
           },
           "disabled": null
         },
         "item_478741": {
           "type": "item",
           "settings": {
-            "heading": "How can I rent camping gear, and what do I need to provide?",
-            "content": "Renting camping gear is easy and can be done directly through our website or at our store location. To book your gear, you'll need to select your rental dates, choose the gear you need, and fill out a rental agreement. Required at booking are a valid government-issued ID and a credit card for the security deposit. We recommend booking in advance, especially during peak camping seasons, to ensure the availability of all the gear you need."
+            "content": "Renting camping gear is easy and can be done directly through our website or at our store location. To book your gear, you'll need to select your rental dates, choose the gear you need, and fill out a rental agreement. Required at booking are a valid government-issued ID and a credit card for the security deposit. We recommend booking in advance, especially during peak camping seasons, to ensure the availability of all the gear you need.",
+            "heading": "How can I rent camping gear, and what do I need to provide?"
           },
           "disabled": null
         },
         "item_478742": {
           "type": "item",
           "settings": {
-            "heading": "Do you offer any guidance on how to use the rented camping equipment?",
-            "content": "Yes, we pride ourselves on making sure all our customers feel confident using their rented gear. When you pick up your gear, our staff will provide a demonstration of how to set up and use each item effectively. For online orders, we include user manuals and quick setup guides with every rental. Additionally, our website features instructional videos and tips for using and maintaining gear in the field, ensuring you can enjoy your camping experience to the fullest. If you have any questions during your rental period, our support team is just a phone call away, ready to assist with any inquiries or issues you might encounter."
+            "content": "Yes, we pride ourselves on making sure all our customers feel confident using their rented gear. When you pick up your gear, our staff will provide a demonstration of how to set up and use each item effectively. For online orders, we include user manuals and quick setup guides with every rental. Additionally, our website features instructional videos and tips for using and maintaining gear in the field, ensuring you can enjoy your camping experience to the fullest. If you have any questions during your rental period, our support team is just a phone call away, ready to assist with any inquiries or issues you might encounter.",
+            "heading": "Do you offer any guidance on how to use the rented camping equipment?"
           },
           "disabled": null
         }

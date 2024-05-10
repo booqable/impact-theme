@@ -29,7 +29,7 @@
         "show_transition_top": true,
         "text_position": "left",
         "text_position_mobile": "left",
-        "title": "<p><span data-metadata=\"\"></span><span data-buffer=\"\">JETSKI&nbsp;RENTALS&nbsp;</span></p>\n<p><span data-buffer=\"\">FOR&nbsp;THRILL&nbsp;</span></p>\n<p><span data-buffer=\"\">SEEKERS</span></p>",
+        "title": "JETSKI&nbsp;RENTALS <br>FOR&nbsp;THRILL <br>SEEKERS",
         "transition_color_bottom": "#FFFFFF",
         "transition_color_top": "#FFFFFF",
         "transition_style": "none",
@@ -357,10 +357,10 @@
         "rounded_corners": "large",
         "show_transition_bottom": true,
         "show_transition_top": true,
+        "title": "WHAT'S IN THE NEWS",
         "transition_color_bottom": "#F6F4F2",
         "transition_color_top": "#E06B48",
-        "transition_style": "none",
-        "title": "WHAT'S IN THE NEWS"
+        "transition_style": "none"
       },
       "disabled": null
     },

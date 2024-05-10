@@ -29,8 +29,8 @@
       "type": "list-collections",
       "settings": {
         "color_scheme": "set-1",
-        "counter_singular": "Item",
         "counter_plural": "Items",
+        "counter_singular": "Item",
         "full_width": false,
         "grid": "three",
         "limit": 9,

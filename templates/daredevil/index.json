@@ -29,10 +29,10 @@
         "show_transition_top": false,
         "text_position": "left",
         "text_position_mobile": "left",
+        "title": "Explore like <br> a daredevil",
         "transition_color_bottom": "#53C787",
         "transition_color_top": "#53C787",
         "transition_style": "sketch",
-        "title": "Explore like <br> a daredevil",
         "video_url": ""
       },
       "disabled": null
@@ -94,8 +94,8 @@
       ],
       "settings": {
         "color_scheme": "set-4",
-        "counter_singular": "Item",
         "counter_plural": "Items",
+        "counter_singular": "Item",
         "full_width": true,
         "grid": "three",
         "overlay_background": "#1A3333",
@@ -234,8 +234,8 @@
         "padding_top_mobile": "large",
         "rounded_corners": "none",
         "show_overlay": true,
-        "show_transition_top": true,
         "show_transition_bottom": false,
+        "show_transition_top": true,
         "tag": "HIGHLIGHT",
         "text_position": "middle",
         "title": "Explore the ride <br> of your life",
@@ -253,8 +253,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-1.png",
             "description": "When we picked up the bikes, the staff were not only friendly but also exceptionally knowledgeable, offering valuable tips on local trails that matched our interests.",
+            "image": "booqable://assets/image-avatar-1.png",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
           },
@@ -265,8 +265,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-2.png",
             "description": "What really set them apart was their exceptional customer service; the staff took the time to ensure the bike fit me well and that I was comfortable with all its features before I headed out.",
+            "image": "booqable://assets/image-avatar-2.png",
             "name": "Ashley de Lotz",
             "position": "08-06-2023"
           },
@@ -277,8 +277,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-3.png",
             "description": "The range of bikes meant that we all found the perfect fit, and the additional gear available for rent ensured we were well-prepared for our adventure.",
+            "image": "booqable://assets/image-avatar-3.png",
             "name": "Adrian Vajas",
             "position": "04-05-2023"
           },
@@ -342,11 +342,11 @@
       ],
       "settings": {
         "color_scheme": "set-3",
-        "title": "TRUSTED BY:",
         "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
         "padding_top": "small",
-        "padding_top_mobile": "small"
+        "padding_top_mobile": "small",
+        "title": "TRUSTED BY:"
       },
       "disabled": false
     },
@@ -407,10 +407,10 @@
         "rounded_corners": "none",
         "show_transition_bottom": false,
         "show_transition_top": true,
+        "title": "What's in the news",
         "transition_color_bottom": "#F6F4F2",
         "transition_color_top": "#E06B48",
-        "transition_style": "sketch",
-        "title": "What's in the news"
+        "transition_style": "sketch"
       },
       "disabled": null
     },
@@ -434,8 +434,8 @@
         "padding_top_mobile": "large",
         "rounded_corners": "none",
         "show_overlay": true,
-        "show_transition_top": true,
         "show_transition_bottom": false,
+        "show_transition_top": true,
         "tag": "",
         "text_position": "middle",
         "title": "Are you ready?",
@@ -451,24 +451,24 @@
         "item": {
           "type": "item",
           "settings": {
-            "heading": "What types of mountain bikes are available for rent?",
-            "content": "Our fleet includes a wide range of mountain bikes to cater to different riding preferences and skill levels. Options include cross-country bikes, trail bikes, all-mountain bikes, and downhill bikes. Each type is designed to offer the best experience for its intended use, from long-distance rides to aggressive downhill trails. We also offer electric mountain bikes for those who want an extra boost. Sizes are available for adults and children, ensuring everyone can find their perfect ride."
+            "content": "Our fleet includes a wide range of mountain bikes to cater to different riding preferences and skill levels. Options include cross-country bikes, trail bikes, all-mountain bikes, and downhill bikes. Each type is designed to offer the best experience for its intended use, from long-distance rides to aggressive downhill trails. We also offer electric mountain bikes for those who want an extra boost. Sizes are available for adults and children, ensuring everyone can find their perfect ride.",
+            "heading": "What types of mountain bikes are available for rent?"
           },
           "disabled": null
         },
         "item_478139": {
           "type": "item",
           "settings": {
-            "heading": "How does the rental process work, and what do I need to provide?",
-            "content": "Renting a mountain bike with us is straightforward. You can reserve a bike through our online booking system or by calling us directly. You'll need to specify the rental duration, bike type, and your size to ensure the right fit. A valid government-issued ID and a credit card for the security deposit are required at the time of pickup. For your safety, we also offer helmets, gloves, and protective gear for rent. Don’t forget to bring your own water bottle and sunscreen!"
+            "content": "Renting a mountain bike with us is straightforward. You can reserve a bike through our online booking system or by calling us directly. You'll need to specify the rental duration, bike type, and your size to ensure the right fit. A valid government-issued ID and a credit card for the security deposit are required at the time of pickup. For your safety, we also offer helmets, gloves, and protective gear for rent. Don’t forget to bring your own water bottle and sunscreen!",
+            "heading": "How does the rental process work, and what do I need to provide?"
           },
           "disabled": null
         },
         "item_478145": {
           "type": "item",
           "settings": {
-            "heading": "Can I book a guided mountain biking tour through your service?",
-            "content": "Yes, we offer guided mountain biking tours that cater to various skill levels, from beginners to advanced riders. Our tours are led by experienced guides who know the trails inside and out. They can show you the best spots, share riding techniques, and ensure a safe and memorable adventure. Tours vary in length and difficulty, so there’s something for everyone. You can book a tour separately or as a package deal with your bike rental. For more details on tour options and to reserve your spot, please visit our website or contact us directly."
+            "content": "Yes, we offer guided mountain biking tours that cater to various skill levels, from beginners to advanced riders. Our tours are led by experienced guides who know the trails inside and out. They can show you the best spots, share riding techniques, and ensure a safe and memorable adventure. Tours vary in length and difficulty, so there’s something for everyone. You can book a tour separately or as a package deal with your bike rental. For more details on tour options and to reserve your spot, please visit our website or contact us directly.",
+            "heading": "Can I book a guided mountain biking tour through your service?"
           },
           "disabled": null
         }

@@ -29,10 +29,10 @@
         "show_transition_top": false,
         "text_position": "center",
         "text_position_mobile": "left",
+        "title": "ADVENTURES AWAIT: <br>RENT TODAY",
         "transition_color_bottom": "#7FACBF",
         "transition_color_top": "#7FACBF",
         "transition_style": "none",
-        "title": "ADVENTURES AWAIT: <br>RENT TODAY",
         "video_url": ""
       },
       "disabled": null
@@ -57,8 +57,8 @@
         "padding_top_mobile": "medium",
         "rounded_corners": "none",
         "show_overlay": false,
-        "show_transition_top": true,
         "show_transition_bottom": false,
+        "show_transition_top": true,
         "tag": "",
         "text_position": "middle",
         "title": "LET’S FIND THE PERFECT <br/> KAYAK FOR YOUR TRIP",
@@ -94,8 +94,8 @@
       ],
       "settings": {
         "color_scheme": "set-4",
-        "counter_singular": "Item",
         "counter_plural": "Items",
+        "counter_singular": "Item",
         "full_width": true,
         "grid": "three",
         "overlay_background": "#092025",
@@ -210,8 +210,8 @@
         "padding_top_mobile": "large",
         "rounded_corners": "none",
         "show_overlay": false,
-        "show_transition_top": true,
         "show_transition_bottom": false,
+        "show_transition_top": true,
         "tag": "HIGHLIGHT",
         "text_position": "middle",
         "title": "EXPLORE THE TRIP <br> OF YOUR LIFE",
@@ -229,8 +229,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-1.png",
             "description": "The staff at the rental location were incredibly helpful, providing us with safety tips and recommending the best routes to take for a scenic paddle.",
+            "image": "booqable://assets/image-avatar-1.png",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
           },
@@ -241,8 +241,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-2.png",
             "description": "The equipment was in excellent condition, making our trip both safe and enjoyable. I was thoroughly impressed with the overall quality and professionalism.",
+            "image": "booqable://assets/image-avatar-2.png",
             "name": "Ashley de Lotz",
             "position": "08-06-2023"
           },
@@ -253,8 +253,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-3.png",
             "description": "Their website is easy to navigate, and booking our kayaks is always a breeze. When we pick up the kayaks, they're always ready to go, clean, and in great shape.",
+            "image": "booqable://assets/image-avatar-3.png",
             "name": "Adrian Vajas",
             "position": "04-05-2023"
           },
@@ -318,11 +318,11 @@
       ],
       "settings": {
         "color_scheme": "set-3",
-        "title": "TRUSTED BY:",
         "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
         "padding_top": "small",
-        "padding_top_mobile": "small"
+        "padding_top_mobile": "small",
+        "title": "TRUSTED BY:"
       },
       "disabled": false
     },
@@ -383,10 +383,10 @@
         "rounded_corners": "none",
         "show_transition_bottom": true,
         "show_transition_top": true,
+        "title": "WHAT'S IN THE NEWS",
         "transition_color_bottom": "#F6F4F2",
         "transition_color_top": "#E06B48",
-        "transition_style": "none",
-        "title": "WHAT'S IN THE NEWS"
+        "transition_style": "none"
       },
       "disabled": null
     },
@@ -410,8 +410,8 @@
         "padding_top_mobile": "large",
         "rounded_corners": "none",
         "show_overlay": false,
-        "show_transition_top": true,
         "show_transition_bottom": false,
+        "show_transition_top": true,
         "tag": "",
         "text_position": "middle",
         "title": "GET READY AND RENT",
@@ -427,24 +427,24 @@
         "item_102587": {
           "type": "item",
           "settings": {
-            "heading": "What types of kayaks are available for rent?",
-            "content": "We provide a wide range of kayaks to meet various preferences and skill levels. Our selection includes single kayaks for solo adventures, tandem kayaks for two paddlers—great for couples or friends, fishing kayaks with rod holders and storage for anglers, and inflatable kayaks that are easy to transport and store, perfect for those with limited space. Each type of kayak is tailored for specific water conditions and activities, ensuring that whether you're enjoying a calm lake paddle or an adventurous fishing trip, we have the perfect kayak for your needs."
+            "content": "We provide a wide range of kayaks to meet various preferences and skill levels. Our selection includes single kayaks for solo adventures, tandem kayaks for two paddlers—great for couples or friends, fishing kayaks with rod holders and storage for anglers, and inflatable kayaks that are easy to transport and store, perfect for those with limited space. Each type of kayak is tailored for specific water conditions and activities, ensuring that whether you're enjoying a calm lake paddle or an adventurous fishing trip, we have the perfect kayak for your needs.",
+            "heading": "What types of kayaks are available for rent?"
           },
           "disabled": null
         },
         "item_102589": {
           "type": "item",
           "settings": {
-            "heading": "How does the rental process work?",
-            "content": "Renting a kayak from us is easy and convenient. Start by selecting your preferred kayak either online or by visiting our location in person. Next, book your rental through our website or onsite, specifying how long you need it and providing a valid ID and credit card for the security deposit. You can either pick up your kayak from our rental facility or choose delivery if it's available. We supply all necessary equipment like paddles and life vests. Once you’re done, simply return the kayak to us at the end of your rental or arrange for pickup if you opted for delivery. Enjoy your time on the water!"
+            "content": "Renting a kayak from us is easy and convenient. Start by selecting your preferred kayak either online or by visiting our location in person. Next, book your rental through our website or onsite, specifying how long you need it and providing a valid ID and credit card for the security deposit. You can either pick up your kayak from our rental facility or choose delivery if it's available. We supply all necessary equipment like paddles and life vests. Once you’re done, simply return the kayak to us at the end of your rental or arrange for pickup if you opted for delivery. Enjoy your time on the water!",
+            "heading": "How does the rental process work?"
           },
           "disabled": null
         },
         "item_102585": {
           "type": "item",
           "settings": {
-            "heading": "What should I bring on my kayaking trip?",
-            "content": "For a safe and enjoyable kayaking outing, consider packing the following essentials: wear quick-drying clothing appropriate for the weather and avoid cotton as it holds moisture. Protect yourself from the sun with sunscreen, sunglasses, and a hat, even on cloudy days. Bring along water and snacks to stay hydrated and energized, especially for longer trips. Use a waterproof bag to keep your valuables like phones and cameras dry. While we supply life vests, additional safety items like a whistle or waterproof flashlight could be beneficial. These items will help make your kayaking experience comfortable and memorable."
+            "content": "For a safe and enjoyable kayaking outing, consider packing the following essentials: wear quick-drying clothing appropriate for the weather and avoid cotton as it holds moisture. Protect yourself from the sun with sunscreen, sunglasses, and a hat, even on cloudy days. Bring along water and snacks to stay hydrated and energized, especially for longer trips. Use a waterproof bag to keep your valuables like phones and cameras dry. While we supply life vests, additional safety items like a whistle or waterproof flashlight could be beneficial. These items will help make your kayaking experience comfortable and memorable.",
+            "heading": "What should I bring on my kayaking trip?"
           },
           "disabled": null
         }

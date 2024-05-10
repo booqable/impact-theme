@@ -29,10 +29,10 @@
         "show_transition_top": false,
         "text_position": "center",
         "text_position_mobile": "left",
+        "title": "Discover outdoor fun<br>with our lawn games",
         "transition_color_bottom": "#53C787",
         "transition_color_top": "#53C787",
         "transition_style": "sketch",
-        "title": "Discover outdoor fun<br>with our lawn games",
         "video_url": ""
       },
       "disabled": null
@@ -100,8 +100,8 @@
       ],
       "settings": {
         "color_scheme": "set-4",
-        "counter_singular": "Item",
         "counter_plural": "Items",
+        "counter_singular": "Item",
         "full_width": true,
         "grid": "three",
         "overlay_background": "#1A3333",
@@ -259,8 +259,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-1.png",
             "description": "<p>Their selection of games brought everyone together, from the youngest cousins to the grandparents. The booking process was a breeze, and the staff were incredibly accommodating. </p>",
+            "image": "booqable://assets/image-avatar-1.png",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
           },
@@ -271,8 +271,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-2.png",
             "description": "<p>Their wide selection of lawn games offered something for every one of our employees. The quality of the equipment was top-notch, and their delivery and setup service was incredibly convenient. </p>",
+            "image": "booqable://assets/image-avatar-2.png",
             "name": "Ashley de Lotz",
             "position": "08-06-2023"
           },
@@ -283,8 +283,8 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "image": "booqable://assets/image-avatar-3.png",
             "description": "<p>Their selection added a playful touch that our guests absolutely loved. The lawn games provided a great way for guests to mingle and enjoy themselves during cocktail hour and beyond. </p>",
+            "image": "booqable://assets/image-avatar-3.png",
             "name": "Adrian Vajas",
             "position": "04-05-2023"
           },
@@ -365,10 +365,10 @@
         "rounded_corners": "none",
         "show_transition_bottom": false,
         "show_transition_top": false,
+        "title": "What's in the news",
         "transition_color_bottom": "#F6F4F2",
         "transition_color_top": "#E06B48",
-        "transition_style": "sketch",
-        "title": "What's in the news"
+        "transition_style": "sketch"
       },
       "disabled": null
     },
@@ -409,24 +409,24 @@
         "item_477778": {
           "type": "item",
           "settings": {
-            "heading": "What variety of lawn games do you offer for rental?",
-            "content": "<p>Our selection caters to all ages and preferences, featuring classic and contemporary lawn games. This includes bocce ball, croquet, lawn bowling, giant Jenga, cornhole, horseshoes, and more. Whether you're planning a family reunion, a corporate event, or just a weekend of fun, we have the perfect game to add excitement to your outdoor gathering. Detailed descriptions and recommended age groups for each game can be found on our website.</p>"
+            "content": "<p>Our selection caters to all ages and preferences, featuring classic and contemporary lawn games. This includes bocce ball, croquet, lawn bowling, giant Jenga, cornhole, horseshoes, and more. Whether you're planning a family reunion, a corporate event, or just a weekend of fun, we have the perfect game to add excitement to your outdoor gathering. Detailed descriptions and recommended age groups for each game can be found on our website.</p>",
+            "heading": "What variety of lawn games do you offer for rental?"
           },
           "disabled": null
         },
         "item_477779": {
           "type": "item",
           "settings": {
-            "heading": "How can I rent lawn games, and are there any requirements?",
-            "content": "<p>Renting is easy through our online booking system or by phone. You'll need to provide the date(s) of your event, select the games you'd like to rent, and give us your contact information. A valid ID and credit card are required for the rental deposit. We recommend booking in advance, especially for large events or during peak seasons, to ensure the availability of your preferred games.</p>"
+            "content": "<p>Renting is easy through our online booking system or by phone. You'll need to provide the date(s) of your event, select the games you'd like to rent, and give us your contact information. A valid ID and credit card are required for the rental deposit. We recommend booking in advance, especially for large events or during peak seasons, to ensure the availability of your preferred games.</p>",
+            "heading": "How can I rent lawn games, and are there any requirements?"
           },
           "disabled": null
         },
         "item_477775": {
           "type": "item",
           "settings": {
-            "heading": "Do you offer any packages or discounts for multiple game rentals?",
-            "content": "<p>Absolutely! We encourage mixing and matching games to create a custom package that suits your event. We offer discounted rates for multiple game rentals, and our packages can be tailored to accommodate small gatherings to large corporate events. For more information on packages and discounts, please visit our promotions page on our website or contact our customer service team for personalized assistance in planning your perfect event lineup.</p>"
+            "content": "<p>Absolutely! We encourage mixing and matching games to create a custom package that suits your event. We offer discounted rates for multiple game rentals, and our packages can be tailored to accommodate small gatherings to large corporate events. For more information on packages and discounts, please visit our promotions page on our website or contact our customer service team for personalized assistance in planning your perfect event lineup.</p>",
+            "heading": "Do you offer any packages or discounts for multiple game rentals?"
           },
           "disabled": null
         }

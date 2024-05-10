@@ -29,9 +29,9 @@
         "show_transition_top": false,
         "text_position": "left",
         "text_position_mobile": "left",
-        "title": "<p>You explore </p>\n<p>more on </p>\n<p>two wheels</p>",
-        "transition_color_top": "#B2B1F9",
+        "title": "You explore <br>more on <br>two wheels",
         "transition_color_bottom": "#B2B1F9",
+        "transition_color_top": "#B2B1F9",
         "transition_style": "none",
         "video_url": ""
       },
@@ -334,10 +334,10 @@
         "rounded_corners": "small",
         "show_transition_bottom": false,
         "show_transition_top": true,
+        "title": "What's in the news",
         "transition_color_bottom": "#1B1B1B",
         "transition_color_top": "#FFFFFF",
-        "transition_style": "none",
-        "title": "What's in the news"
+        "transition_style": "none"
       },
       "disabled": null
     },
