@@ -1,0 +1,549 @@
+{
+  "name": "Home",
+  "sections": {
+    "call-to-action_984098": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-4",
+        "button_primary_url": "",
+        "padding_top": "large",
+        "height": "large",
+        "transition_style": "none",
+        "padding_bottom_mobile": "large",
+        "button_primary_label": "",
+        "rounded_corners": "none",
+        "show_transition_top": false,
+        "show_overlay": true,
+        "transition_color_top": "#1B1B1B",
+        "transition_color_bottom": "#010714",
+        "show_transition_bottom": true,
+        "full_width": true,
+        "title": "Are you ready?",
+        "padding_bottom": "large",
+        "height_mobile": "auto",
+        "tag": "",
+        "padding_top_mobile": "large",
+        "image": "booqable://assets/clv2btd9u00uc3d7bdvjkbuv2camerabg1.png",
+        "text_position": "middle",
+        "overlay_opacity": 20,
+        "overlay_background": "#000000"
+      },
+      "disabled": null
+    },
+    "image-gallery": {
+      "type": "image-gallery",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/clv2c0vpb00wm3d7b4ux768wec78b0691692c484730d2e4a31bc14180.jpeg"
+          },
+          "disabled": null
+        },
+        "image_392756": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/clv2c150500wq3d7birueo6l52db87a041b30b1a93eaff4d95c399383.jpeg"
+          },
+          "disabled": null
+        },
+        "image_302407": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/clv2c1d6000wu3d7bxr6o8lddcd2559a5b5180461e537dae2e06e13a2.jpeg"
+          },
+          "disabled": null
+        },
+        "image_297518": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/clv2c1mfe00wy3d7bx32101wf22be25d7110779c4feae2dc53b87fba4.jpeg"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "image",
+        "image_392756",
+        "image_302407",
+        "image_297518"
+      ],
+      "settings": {
+        "color_scheme": "set-2",
+        "padding_top": "small",
+        "padding_bottom_mobile": "none",
+        "rounded_corners": "medium",
+        "full_width": false,
+        "title": "Express yourself with <br>#camerable on instagram",
+        "padding_bottom": "none",
+        "padding_top_mobile": "small"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_123744": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123745": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123746": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123747": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123748": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123749": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123750": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123751": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_123744",
+        "product_123745",
+        "product_123746",
+        "product_123747",
+        "product_123748",
+        "product_123749",
+        "product_123750",
+        "product_123751"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "button_outline_url": "booqable://products/",
+        "timer": 5,
+        "padding_top": "medium",
+        "borders": "full",
+        "padding_bottom_mobile": "medium",
+        "button_outline_label": "See all products",
+        "rounded_corners": "small",
+        "tag_image": "",
+        "show_navigation": true,
+        "title": "Popular products",
+        "padding_bottom": "medium",
+        "tag": "THIS WEEK",
+        "padding_top_mobile": "medium",
+        "image": "",
+        "show_pagination": true,
+        "show_excerpt": false
+      },
+      "disabled": null
+    },
+    "logos": {
+      "type": "logos",
+      "blocks": {
+        "logo_478790": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/clv2clqx3011m3d7bf7jcya8earri.png"
+          },
+          "disabled": null
+        },
+        "logo_478789": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/clv2cm3uh011p3d7bz3fwtu5ered.png"
+          },
+          "disabled": null
+        },
+        "logo_478788": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/clv2cmaq0011s3d7b57b5j2nwdji.png"
+          },
+          "disabled": null
+        },
+        "logo_478787": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/clv2cmivy011v3d7bhka84gp8sony.png"
+          },
+          "disabled": null
+        },
+        "logo_478786": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-3-black.png"
+          },
+          "disabled": true
+        }
+      },
+      "block_order": [
+        "logo_478790",
+        "logo_478789",
+        "logo_478788",
+        "logo_478787",
+        "logo_478786"
+      ],
+      "settings": {
+        "color_scheme": "set-5",
+        "title": "RENT CAMERA FROM:",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "small"
+      },
+      "disabled": false
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item_478546": {
+          "type": "item",
+          "settings": {
+            "heading": "What types of cameras and equipment are available for rental?",
+            "content": "<p>Our inventory includes a wide range of high-end cameras suitable for various photography styles and skill levels, from professional photographers to serious hobbyists. We offer digital SLRs, mirrorless cameras, medium format cameras, and cinematic video cameras. Our selection features the latest models from top brands like Canon, Nikon, Sony, and Hasselblad. Additionally, we provide a comprehensive selection of lenses, lighting equipment, tripods, and other essential accessories to complement your camera choice.</p>"
+          },
+          "disabled": null
+        },
+        "item_478549": {
+          "type": "item",
+          "settings": {
+            "heading": "How does the rental process work?",
+            "content": "<p>Renting from us is straightforward. You can browse our extensive catalog online, where each item lists detailed specifications and rental rates. Once you've selected your equipment, you can place your order directly through our website. We'll ask for details such as your rental duration and delivery preferences. A security deposit is required, and renters must provide identification and proof of insurance. We ship nationwide with options for next-day delivery, and we also offer in-store pickups for local customers.</p>"
+          },
+          "disabled": null
+        },
+        "item_478545": {
+          "type": "item",
+          "settings": {
+            "heading": "What support do you offer to renters?",
+            "content": "<p>We pride ourselves on our customer support. Our team of experienced photographers and videographers is available to help you choose the right equipment for your project and answer any technical questions. During your rental period, we offer 24/7 technical support to assist with any operational issues. Additionally, we provide tutorials and guides on our website to help you make the most of your rental. If an item malfunctions or doesn't meet your expectations, we offer immediate replacements to ensure your project stays on track.</p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_478546",
+        "item_478549",
+        "item_478545"
+      ],
+      "settings": {
+        "color_scheme": "set-5",
+        "show_borders": true,
+        "padding_top": "medium",
+        "padding_bottom_mobile": "medium",
+        "rounded_corners": "medium",
+        "behavior": "multiple",
+        "title": "FAQ",
+        "padding_bottom": "medium",
+        "padding_top_mobile": "medium",
+        "image": "",
+        "description": "<p>Expert insights on renting high-nd cameras and videography equipment</p>"
+      },
+      "disabled": null
+    },
+    "call-to-action_185352": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-4",
+        "button_primary_url": "booqable://products/",
+        "padding_top": "large",
+        "height": "auto",
+        "transition_style": "fade",
+        "padding_bottom_mobile": "large",
+        "button_primary_label": "Shop our products",
+        "rounded_corners": "none",
+        "show_transition_top": false,
+        "show_overlay": true,
+        "transition_color_top": "#FFFFFF",
+        "transition_color_bottom": "#000000",
+        "show_transition_bottom": true,
+        "full_width": true,
+        "title": "Everything for <br> Your Next Shoot",
+        "padding_bottom": "large",
+        "height_mobile": "auto",
+        "tag": "HIGHLIGHT",
+        "padding_top_mobile": "large",
+        "image": "booqable://assets/clv2bl84h00s13d7b2g8z0q8h8f608947635061fb7a8d4c93bf50fceb.jpeg",
+        "text_position": "middle",
+        "overlay_opacity": "40",
+        "overlay_background": "#000000"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_234027": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "image": "booqable://assets/image-avatar-1.png",
+            "description": "<p>Their inventory is impressive, featuring the latest models and all the necessary accessories. The condition of the equipment is always flawless, which is crucial for my work. </p>",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234025": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "image": "booqable://assets/image-avatar-2.png",
+            "description": "<p>The customer service team was exceptional, helping me choose the best camera and lens kit for my travel photography needs. They even provided useful tips on how to get the best out of my rental. </p>",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234026": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "image": "booqable://assets/image-avatar-3.png",
+            "description": "<p>The rental terms were flexible, allowing me to extend the rental period when my project timelines changed unexpectedly. The quality of the camera and accessories was exceptional.</p>",
+            "name": "Adrian Vajas",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_234027",
+        "testimonial_234025",
+        "testimonial_234026"
+      ],
+      "settings": {
+        "color_scheme": "set-5",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "small",
+        "show_navigation": true,
+        "title": "What people <br>say about us"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_256572": {
+          "type": "collection",
+          "settings": {
+            "collection": "fe9671ed-c4b5-4fdb-bfcf-580279bdf82f"
+          },
+          "disabled": null
+        },
+        "collection_243072": {
+        "type": "collection",
+        "settings": {
+          "collection": "45bf812d-94e4-451a-8f39-3f8281301390"
+        },
+        "disabled": null
+      },
+      "collection_230772": {
+        "type": "collection",
+        "settings": {
+          "collection": "f0af1030-4291-4ce2-b5aa-d1acd8fc35e3"
+        },
+        "disabled": null
+      }
+    },
+    "block_order": [
+      "collection_256572",
+      "collection_243072",
+      "collection_230772"
+    ],
+    "settings": {
+      "color_scheme": "set-1",
+      "spacing": "small",
+      "grid": "three",
+      "padding_top": "none",
+      "show_arrow": true,
+      "counter_plural": "Items",
+      "padding_bottom_mobile": "none",
+      "rounded_corners": "none",
+      "show_overlay": true,
+      "overlay_color": "#FFFFFF",
+      "full_width": true,
+      "padding_bottom": "none",
+      "counter_singular": "Item",
+      "padding_top_mobile": "none",
+      "show_amount": true,
+      "overlay_opacity": 100,
+      "overlay_background": "#1B1B1B",
+      "spacing_mobile": "none"
+    },
+    "disabled": null
+  },
+  "call-to-action": {
+    "type": "call-to-action",
+    "blocks": {},
+    "block_order": [],
+    "settings": {
+      "color_scheme": "set-2",
+      "button_primary_url": "booqable://products/",
+      "padding_top": "small",
+      "height": "auto",
+      "transition_style": "none",
+      "padding_bottom_mobile": "medium",
+      "button_primary_label": "Check out products",
+      "rounded_corners": "none",
+      "show_transition_top": true,
+      "show_overlay": false,
+      "transition_color_top": "#FFFFFF",
+      "transition_color_bottom": "#1A3333",
+      "show_transition_bottom": true,
+      "full_width": true,
+      "title": "Rent Luxury Cameras <br>for Your Shoot",
+      "padding_bottom": "small",
+      "height_mobile": "auto",
+      "tag": "",
+      "padding_top_mobile": "medium",
+      "image": "",
+      "text_position": "middle",
+      "overlay_opacity": 20,
+      "overlay_background": "#000000"
+    },
+    "disabled": null
+  },
+  "hero": {
+    "type": "hero",
+    "blocks": {},
+    "block_order": [],
+    "settings": {
+      "color_scheme": "set-3",
+      "button_primary_url": "booqable://products/",
+      "button_outline_url": "booqable://root/",
+      "image_mobile": "",
+      "text_position_mobile": "left",
+      "padding_top": "large",
+      "height": "medium",
+      "transition_style": "none",
+      "padding_bottom_mobile": "large",
+      "button_primary_label": "Check out products",
+      "button_outline_label": "More info",
+      "video_url": "",
+      "rounded_corners": "none",
+      "show_transition_top": false,
+      "show_overlay": true,
+      "transition_color_top": "#B2B1F9",
+      "transition_color_bottom": "#B2B1F9",
+      "show_transition_bottom": true,
+      "overlay_color": "#FFFFFF",
+      "full_width": true,
+      "title": "<p><span data-metadata=\"\"></span><span data-buffer=\"\"></span>Capture Every Detail<br> with&nbsp;Camerable</p>",
+      "padding_bottom": "large",
+      "padding_top_mobile": "small",
+      "image": "booqable://assets/clv2bdn6800op3d7b9nrhmqz9c3417eed3544134f4d860c07b3fd2e3b.jpeg",
+      "text_position": "left",
+      "overlay_opacity": 30,
+      "description": "<p>Elevate your videography with our high-end camera rentals. </p>\n<p>Experience the latest in technology and quality for every shot, every moment.</p>",
+      "overlay_background": "#1B1B1B"
+    },
+    "disabled": null
+  },
+  "articles": {
+    "type": "articles",
+    "blocks": {
+      "article_456851": {
+        "type": "article",
+        "settings": {
+          "article_btn": "Read more",
+          "article_btn_url": "booqable://root/",
+          "article_tag": "Guide",
+          "heading": "Choosing the Right High-End Camera for Your Project",
+          "image": "booqable://assets/clv2byanf00vy3d7b7eo0vir0cameraarticle03.png",
+          "text": "<p>Whether you're shooting a professional film, capturing a special event, or embarking on a photography journey, renting a high-end camera can elevate your visual storytelling. </p>"
+        },
+        "disabled": null
+      },
+      "article_456852": {
+        "type": "article",
+        "settings": {
+          "article_btn": "Read more",
+          "article_btn_url": "booqable://root/",
+          "article_tag": "Guide",
+          "heading": " The Advantages of Renting High-End Cameras",
+          "image": "booqable://assets/clv2bymzw00w63d7b2vw35ewkcameraarticle02.png",
+          "text": "<p>High-end photography equipment can be prohibitively expensive, but renting offers a cost-effective alternative.</p>"
+        },
+        "disabled": null
+      },
+      "article_456853": {
+        "type": "article",
+        "settings": {
+          "article_btn": "Read more",
+          "article_btn_url": "booqable://root/",
+          "article_tag": "Tips",
+          "heading": "Tips for Renting High-End Cameras",
+          "image": "booqable://assets/clv2bz4kz00wi3d7bnyw4u5d4cameraarticle01.png",
+          "text": "<p>Renting a high-end camera involves more than just picking a model and shooting. </p>"
+        },
+        "disabled": null
+      }
+    },
+    "block_order": [
+      "article_456851",
+      "article_456852",
+      "article_456853"
+    ],
+    "settings": {
+      "color_scheme": "set-5",
+      "button_outline_url": "booqable://root/",
+      "padding_top": "medium",
+      "transition_style": "none",
+      "padding_bottom_mobile": "medium",
+      "button_outline_label": "See all",
+      "rounded_corners": "small",
+      "show_transition_top": true,
+      "transition_color_top": "#FFFFFF",
+      "transition_color_bottom": "#1B1B1B",
+      "show_transition_bottom": false,
+      "full_width": true,
+      "title": "What's in the news",
+      "padding_bottom": "medium",
+      "padding_top_mobile": "medium"
+    },
+    "disabled": null
+  }
+},
+"order": [
+  "hero",
+  "call-to-action",
+  "collections",
+  "products",
+  "call-to-action_185352",
+  "testimonials",
+  "logos",
+  "articles",
+  "call-to-action_984098",
+  "accordion",
+  "image-gallery"
+  ]
+}
