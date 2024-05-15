@@ -1,0 +1,502 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks":{},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check products",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "Get in touch",
+        "button_outline_url": "booqable://pages/contact/",
+        "color_scheme": "set-4",
+        "description": "<p>A world of endless fun with our extensive collection of gaming rentals.  <br> From the latest consoles to classic favorites.</p>",
+        "full_width": false,
+        "height": "medium",
+        "image": "booqable://assets/image-hero.png",
+        "image_mobile": "",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "text_position": "left",
+        "text_position_mobile": "left",
+        "title": "Get Ready to Play. <br>Rent Games Today.",
+        "transition_color_bottom": "#FFFFFF",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "call-to-action_147851": {
+      "type": "call-to-action",
+      "blocks":{},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Discover products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "full_width": false,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
+        "show_overlay": false,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Game Rentals at Their Best",
+        "transition_color_bottom": "#2A292E",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_533421": {
+          "type": "collection",
+          "settings": {
+            "collection": "d984b3a9-cd2c-46b0-9121-b8a719b33c00"
+          },
+          "disabled": null
+        },
+        "collection_533422": {
+          "type": "collection",
+          "settings": {
+            "collection": "377ab65a-0436-4887-8cb7-2d35ad7d83df"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_533421",
+        "collection_533422"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "counter_plural": "Items",
+        "counter_singular": "Item",
+        "full_width": false,
+        "grid": "two",
+        "overlay_background": "#2A292E",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "large",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "medium",
+        "spacing_mobile": "medium"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_109856": {
+          "type": "product",
+          "settings":{},
+          "disabled": null
+        },
+        "product_109855": {
+          "type": "product",
+          "settings":{},
+          "disabled": null
+        },
+        "product_109854": {
+          "type": "product",
+          "settings":{},
+          "disabled": null
+        },
+        "product_109853": {
+          "type": "product",
+          "settings":{},
+          "disabled": null
+        },
+        "product_109852": {
+          "type": "product",
+          "settings":{},
+          "disabled": null
+        },
+        "product_109851": {
+          "type": "product",
+          "settings":{},
+          "disabled": null
+        },
+        "product_109850": {
+          "type": "product",
+          "settings":{},
+          "disabled": null
+        },
+        "product_109849": {
+          "type": "product",
+          "settings":{},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_109856",
+        "product_109855",
+        "product_109854",
+        "product_109853",
+        "product_109852",
+        "product_109851",
+        "product_109850",
+        "product_109849"
+      ],
+      "settings": {
+        "borders": "image",
+        "button_outline_label": "See all products",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "image": "",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "large",
+        "padding_top": "medium",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "THIS WEEK",
+        "tag_image": "",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "call-to-action_147854": {
+      "type": "call-to-action",
+      "blocks":{},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-4",
+        "full_width": false,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": "40",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "HIGHLIGHT",
+        "text_position": "middle",
+        "title": "For the best gaming <br> setup",
+        "transition_color_bottom": "#000000",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_218966": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The process is incredibly user-friendly—just select, rent, and play. I was particularly impressed by how quickly the games arrived, and the condition was just like new.</p>",
+            "image": "booqable://assets/image-avatar-1.png",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_218967": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The site offers a great selection of games, from the latest hits to classic titles, all at very reasonable prices. </p>",
+            "image": "booqable://assets/image-avatar-2.png",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_218968": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>Everything arrives on time and in perfect working order, which is crucial for planning game nights with friends.</p>",
+            "image": "booqable://assets/image-avatar-3.png",
+            "name": "Adrian Vajas",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_218966",
+        "testimonial_218967",
+        "testimonial_218968"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_navigation": true,
+        "title": "What people <br>say about us"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_465430": {
+          "type": "article",
+          "settings": {
+            "article_btn": "READ MORE",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "The Ultimate Guide to Gaming Console Rentals",
+            "image": "booqable://assets/image-articles-1.png",
+            "text": "<p>Hosting a gaming party or looking to try the latest consoles and games without the commitment of purchase? This guide dives into the world of gaming console rentals, covering everything from PlayStation, Xbox, to Nintendo systems. Learn how to select the right console based on the types of games you enjoy, the number of players, and your event needs. Plus, get tips on setting up a gaming station that will keep your guests entertained for hours.</p>"
+          },
+          "disabled": null
+        },
+        "article_465431": {
+          "type": "article",
+          "settings": {
+            "article_btn": "READ MORE",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Benefits of Renting Video Game Equipment",
+            "image": "booqable://assets/image-articles-2.jpeg",
+            "text": "<p>For many gamers, keeping up with the latest technology and game releases can be a costly affair.</p>"
+          },
+          "disabled": null
+        },
+        "article_465432": {
+          "type": "article",
+          "settings": {
+            "article_btn": "READ MORE",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Renting vs. Buying Games and Consoles",
+            "image": "booqable://assets/image-articles-3.jpeg",
+            "text": "<p>In the gaming world, the decision to rent or buy can depend on several factors, including your gaming habits, budget, and interest in the latest technology.</p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_465430",
+        "article_465431",
+        "article_465432"
+      ],
+      "settings": {
+        "button_outline_label": "See all",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-3",
+        "full_width": false,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "title": "What's in the news",
+        "transition_color_bottom": "#F6F4F2",
+        "transition_color_top": "#E06B48",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks":{},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "medium",
+        "size_mobile": "small"
+      },
+      "disabled": null
+    },
+    "call-to-action_147853": {
+      "type": "call-to-action",
+      "blocks":{},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-2",
+        "full_width": false,
+        "height": "small",
+        "height_mobile": "small",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "large",
+        "padding_top": "small",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "From Adventure to Action",
+        "transition_color_bottom": "#000000",
+        "transition_color_top": "#53C787",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item_472356": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Our selection includes the latest and most popular gaming consoles, including the PlayStation 5, Xbox Series X, Nintendo Switch, and more. We offer a wide variety of video games across all genres, from action and adventure to sports, strategy, and family-friendly titles. Whether you're looking to try out the newest releases or enjoy classic games, our inventory is constantly updated to ensure you have access to the best and latest in the gaming world.</p>",
+            "heading": "What types of gaming consoles and video games are available for rent?"
+          },
+          "disabled": null
+        },
+        "item_472359": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Renting gaming consoles and video games is easy:</p>\n<ol><li><strong>Browse our inventory:</strong> Visit our website to see our full selection of consoles and games.</li><li><strong>Choose your rental:</strong> Select the console and games you wish to rent and the rental duration, which can range from a single day to multiple weeks.</li><li><strong>Place your order:</strong> Complete your rental order by providing necessary details such as your contact information and delivery address. A valid credit card is required for a security deposit.</li><li><strong>Delivery and setup:</strong> We offer the option for delivery and setup to ensure your system is working correctly. Alternatively, you can pick up your rental from our store location.</li><li><strong>Enjoy your gaming:</strong> Play to your heart's content and return the console and games by the end of your rental period using the prepaid shipping materials provided or by dropping them off at our store.</li></ol>",
+            "heading": "How does the rental process work?"
+          },
+          "disabled": null
+        },
+        "item_472355": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Yes, you can easily extend your rental period if you need more time. Simply log into your account on our website and select the option to extend the rental. You can also contact our customer service team directly if you need assistance. Extensions are subject to availability and additional fees may apply. It's a great way to continue enjoying your game without the rush, especially if you're deep into a compelling story or a challenging level!</p>",
+            "heading": "Can I extend my rental period if I need more time with the games?"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_472356",
+        "item_472359",
+        "item_472355"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "color_scheme": "set-3",
+        "description": "<p>Essential information for gaming console and video game rentals</p>",
+        "image": "",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "medium",
+        "show_borders": true,
+        "title": "FAQ"
+      },
+      "disabled": null
+    },
+    "image-gallery": {
+      "type": "image-gallery",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-1.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_280247": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-2.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_162662": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-3.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_404141": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-4.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "image",
+        "image_280247",
+        "image_162662",
+        "image_404141"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "full_width": false,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "none",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "rounded_corners": "medium",
+        "title": "Express yourself with <br>these images"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero",
+    "call-to-action_147851",
+    "collections",
+    "products",
+    "call-to-action_147854",
+    "testimonials",
+    "articles",
+    "spacer",
+    "call-to-action_147853",
+    "accordion",
+    "image-gallery"
+  ]
+}

@@ -1,0 +1,473 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order":[],
+      "settings": {
+        "button_primary_label": "CHECK OUT PRODUCTS",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "GET IN TOUCH",
+        "button_outline_url": "booqable://pages/contact/",
+        "color_scheme": "set-4",
+        "description": "<p>Efficient and reliable dumpster rentals for any project—big or small.</p>\n<p> Streamline your clean up with ease and convenience</p>",
+        "full_width": false,
+        "height": "medium",
+        "image": "booqable://assets/image-hero.jpg",
+        "image_mobile": "",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "text_position": "left",
+        "text_position_mobile": "left",
+        "title": "RENT A CONTAINER<br>FOR DOOR DELIVERY.",
+        "transition_color_bottom": "#FFFFFF",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "spacer_328213": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order":[],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "medium",
+        "size_mobile": "medium"
+      },
+      "disabled": null
+    },
+    "call-to-action_147851": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order":[],
+      "settings": {
+        "button_primary_label": "CHECK OUR PRODUCTS",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-4",
+        "full_width": false,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
+        "show_overlay": false,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "EASILY ORDER YOUR WASTE <br>CONTAINER ONLINE!",
+        "transition_color_bottom": "#2A292E",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "spacer_259430": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order":[],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "medium",
+        "size_mobile": "medium"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_533421": {
+          "type": "collection",
+          "settings": {
+            "collection": "ceeea9a7-d9a9-4187-ab64-c16cb3e195ce"
+          },
+          "disabled": null
+        },
+        "collection_533422": {
+          "type": "collection",
+          "settings": {
+            "collection": "703e682d-13f9-4323-b861-542cf42494ea"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_533421",
+        "collection_533422"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "counter_plural": "Items",
+        "counter_singular": "Item",
+        "full_width": false,
+        "grid": "two",
+        "overlay_background": "#2A292E",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "large",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "medium",
+        "spacing_mobile": "medium"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_109856": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109855": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109854": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109853": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109852": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109851": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109850": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109849": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_109856",
+        "product_109855",
+        "product_109854",
+        "product_109853",
+        "product_109852",
+        "product_109851",
+        "product_109850",
+        "product_109849"
+      ],
+      "settings": {
+        "borders": "image",
+        "button_outline_label": "SEE ALL PRODUCTS",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "image": "",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "large",
+        "padding_top": "medium",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "THIS WEEK",
+        "tag_image": "",
+        "timer": 5,
+        "title": "POPULAR PRODUCTS"
+      },
+      "disabled": null
+    },
+    "call-to-action_147854": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order":[],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-2",
+        "full_width": false,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": "40",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "HIGHLIGHT",
+        "text_position": "middle",
+        "title": "YOUR LOCAL TRUSTED <br> PARTNER",
+        "transition_color_bottom": "#000000",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_218966": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "CHECK REVIEW ONLINE",
+            "button_outline_url": "booqable://root/",
+            "description": "<p> The delivery was prompt, and the placement was exactly where we needed it, minimizing any disruption to our daily activities.</p>",
+            "image": "booqable://assets/image-avatar-1.png",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_218967": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "CHECK REVIEW ONLINE",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The dumpster was clean and well-maintained. Additionally, the flexibility they offered regarding rental duration was a massive plus for us. </p>",
+            "image": "booqable://assets/image-avatar-2.png",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_218968": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "CHECK REVIEW ONLINE",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The dumpster arrived on schedule, and the driver was careful not to damage our driveway during placement.</p>",
+            "image": "booqable://assets/image-avatar-3.png",
+            "name": "Adrian Vajas",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_218966",
+        "testimonial_218967",
+        "testimonial_218968"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_navigation": true,
+        "title": "WHAT PEOPLE <br>SAY ABOUT US"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_465430": {
+          "type": "article",
+          "settings": {
+            "article_btn": "READ MORE",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guides",
+            "heading": "Choosing the Right Dumpster for Your Project",
+            "image": "booqable://assets/image-articles-1.jpeg",
+            "text": "<p>Whether you're tackling a home renovation, cleaning out a garage, or managing construction debris, selecting the right dumpster size and type is crucial to efficiently handle waste. </p>"
+          },
+          "disabled": null
+        },
+        "article_465431": {
+          "type": "article",
+          "settings": {
+            "article_btn": "READ MORE",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guides",
+            "heading": "Responsible Waste Management Tips",
+            "image": "booqable://assets/image-cta-1.jpeg",
+            "text": "<p>Renting a dumpster isn't just about waste removal—it's also an opportunity to contribute to environmental sustainability.</p>"
+          },
+          "disabled": null
+        },
+        "article_465432": {
+          "type": "article",
+          "settings": {
+            "article_btn": "READ MORE",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guides",
+            "heading": "What You Need to Know Before You Rent",
+            "image": "booqable://assets/image-hero.jpg",
+            "text": "<p>Renting a dumpster can simplify waste management for any project, but there are key factors to consider before making a rental decision.</p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_465430",
+        "article_465431",
+        "article_465432"
+      ],
+      "settings": {
+        "button_outline_label": "SEE ALL",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-5",
+        "full_width": false,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "title": "WHAT'S IN THE NEWS",
+        "transition_color_top": "#E06B48",
+        "transition_color_bottom": "#F6F4F2",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order":[],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "medium",
+        "size_mobile": "small"
+      },
+      "disabled": null
+    },
+    "call-to-action_147853": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order":[],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-2",
+        "full_width": false,
+        "height": "small",
+        "height_mobile": "small",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "large",
+        "padding_top": "small",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "RENT TODAY",
+        "transition_color_bottom": "#000000",
+        "transition_color_top": "#53C787",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item_472356": {
+          "type": "item",
+          "settings": {
+            "content": "<p>We offer a variety of dumpster sizes to accommodate different types of projects, whether residential, commercial, or industrial. Our range includes:</p>\n<ul><li><strong>10-yard dumpsters:</strong> Ideal for small renovations or clean-up projects.</li><li><strong>20-yard dumpsters:</strong> Suitable for medium-sized renovations and large home clean-up jobs.</li><li><strong>30-yard dumpsters:</strong> Best for new home construction or major home addition projects.</li><li><strong>40-yard dumpsters:</strong> Perfect for large construction and demolition debris.\nEach size has specific dimensions and capacity guidelines on our website to help you choose the right dumpster for your needs.</li></ul>",
+            "heading": "What sizes of dumpsters are available for rent?"
+          },
+          "disabled": null
+        },
+        "item_472359": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Renting a dumpster is straightforward:</p>\n<ol><li><strong>Choose your size:</strong> Select the appropriate dumpster size based on your project needs.</li><li><strong>Schedule delivery:</strong> Pick a delivery date that works best for you. We usually recommend scheduling at least a few days in advance to ensure availability.</li><li><strong>Fill it up:</strong> Load your dumpster within the rental period, making sure to follow the guidelines for what can and cannot be included.</li><li><strong>Pick-up:</strong> Once you're done, schedule a pick-up, and we'll handle the rest. We also offer extended rentals or swap-outs if your project takes longer than expected.</li><li><strong>Payment:</strong> Payment is typically required at the time of ordering, including a security deposit.</li></ol>",
+            "heading": "How does the rental process work?"
+          },
+          "disabled": null
+        },
+        "item_472355": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Yes, while dumpsters are versatile, certain materials are prohibited from being disposed of in them due to safety and environmental regulations. Restricted items typically include:</p>\n<ul><li><strong>Hazardous materials:</strong> Chemicals, asbestos, and flammable liquids.</li><li><strong>Electronics:</strong> TVs, computers, and other electronic waste.</li><li><strong>Appliances:</strong> Refrigerators, air conditioners, and anything containing Freon.</li><li><strong>Tires:</strong> Due to recycling regulations.\nWe provide a complete list of prohibited items on our website and with your rental agreement. If you have specific items and aren't sure if they can be disposed of in the dumpster, please contact us for guidance.</li></ul>",
+            "heading": "Are there any restrictions on what I can throw in the dumpster?"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_472356",
+        "item_472359",
+        "item_472355"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "color_scheme": "set-3",
+        "description": "<p>Everything you need to know about dumpster rentals for efficient waste management</p>",
+        "image": "",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "medium",
+        "show_borders": true,
+        "title": "FAQ"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero",
+    "spacer_328213",
+    "call-to-action_147851",
+    "spacer_259430",
+    "collections",
+    "products",
+    "call-to-action_147854",
+    "testimonials",
+    "articles",
+    "spacer",
+    "call-to-action_147853",
+    "accordion"
+  ]
+}

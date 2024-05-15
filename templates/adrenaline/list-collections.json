@@ -36,7 +36,7 @@
         "limit": 8,
         "overlay_background": "#2A292E",
         "overlay_color": "#FFFFFF",
-        "overlay_opacity":100,
+        "overlay_opacity": 100,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",

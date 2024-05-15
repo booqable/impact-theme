@@ -11,7 +11,7 @@
         "button_outline_label": "More info",
         "button_outline_url": "booqable://root/",
         "color_scheme": "set-3",
-        "description": "<p>Elevate your videography with our high-end camera rentals. </p>\n<p>Experience the latest in technology and quality for every shot, every moment.</p>",
+        "description": "<p>Seamlessly integrate with our top-tier IT hardware rentals. </p>\n<p>Equip your team with the tools needed for success.</p>",
         "full_width": true,
         "height": "medium",
         "image": "booqable://assets/image-hero.jpeg",
@@ -29,7 +29,7 @@
         "show_transition_top": false,
         "text_position": "left",
         "text_position_mobile": "left",
-        "title": "Capture Every Detail<br> with Camerable",
+        "title": "Simple, fast <br>and temporary <br>IT hardware rental",
         "transition_color_bottom": "#B2B1F9",
         "transition_color_top": "#B2B1F9",
         "transition_style": "none",
@@ -61,7 +61,7 @@
         "show_transition_top": true,
         "tag": "",
         "text_position": "middle",
-        "title": "Rent Luxury Cameras <br>for Your Shoot",
+        "title": "Large stock exclusively A-brands",
         "transition_color_bottom": "#1A3333",
         "transition_color_top": "#FFFFFF",
         "transition_style": "none"
@@ -74,14 +74,14 @@
         "collection_256572": {
           "type": "collection",
           "settings": {
-            "collection": "fe9671ed-c4b5-4fdb-bfcf-580279bdf82f"
+            "collection": "3965893e-b8c3-4c27-bca0-7891c73e2077"
           },
           "disabled": null
         },
         "collection_243072": {
           "type": "collection",
           "settings": {
-            "collection": "45bf812d-94e4-451a-8f39-3f8281301390"
+            "collection": "792a2de3-2c00-41cd-93a5-11fdec8a0acd"
           },
           "disabled": null
         },
@@ -105,8 +105,8 @@
         "full_width": true,
         "grid": "three",
         "overlay_background": "#1B1B1B",
-        "overlay_opacity": 100,
         "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
         "padding_bottom": "none",
         "padding_bottom_mobile": "none",
         "padding_top": "none",
@@ -178,7 +178,7 @@
         "borders": "full",
         "button_outline_label": "See all products",
         "button_outline_url": "booqable://products/",
-        "color_scheme": "set-1",
+        "color_scheme": "set-5",
         "image": "",
         "image_fit": "cover",
         "padding_bottom": "medium",
@@ -209,19 +209,19 @@
         "height_mobile": "auto",
         "image": "booqable://assets/image-cta-1.jpeg",
         "overlay_background": "#000000",
-        "overlay_opacity": "40",
+        "overlay_opacity": 20,
         "padding_bottom": "large",
         "padding_bottom_mobile": "large",
         "padding_top": "large",
         "padding_top_mobile": "large",
         "rounded_corners": "none",
         "show_overlay": true,
-        "show_transition_bottom": true,
+        "show_transition_bottom": false,
         "show_transition_top": false,
         "tag": "HIGHLIGHT",
         "text_position": "middle",
-        "title": "Everything for <br> Your Next Shoot",
-        "transition_color_bottom": "#000000",
+        "title": "For every moment",
+        "transition_color_bottom": "#E06B48",
         "transition_color_top": "#FFFFFF",
         "transition_style": "fade"
       },
@@ -235,7 +235,7 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "description": "<p>Their inventory is impressive, featuring the latest models and all the necessary accessories. The condition of the equipment is always flawless, which is crucial for my work. </p>",
+            "description": "<p>Their vast inventory included the latest PCs, laptops, and networking equipment, perfect for our setup. The rental process was straightforward, and their team was exceptional.</p>",
             "image": "booqable://assets/image-avatar-1.png",
             "name": "Rick Gebhardt",
             "position": "04-05-2023"
@@ -247,7 +247,7 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "description": "<p>The customer service team was exceptional, helping me choose the best camera and lens kit for my travel photography needs. They even provided useful tips on how to get the best out of my rental. </p>",
+            "description": "<p>The rental process was easy and flexible, allowing us to choose the duration and exact equipment specs we required. The quality and performance of the rented hardware were outstanding.</p>",
             "image": "booqable://assets/image-avatar-2.png",
             "name": "Ashley de Lotz",
             "position": "08-06-2023"
@@ -259,7 +259,7 @@
           "settings": {
             "button_outline_label": "Check review online",
             "button_outline_url": "booqable://root/",
-            "description": "<p>The rental terms were flexible, allowing me to extend the rental period when my project timelines changed unexpectedly. The quality of the camera and accessories was exceptional.</p>",
+            "description": "<p>Their selection of desktops, laptops, and networking devices was exactly what we needed to keep our operations running smoothly. The quality of the equipment was excellent.</p>",
             "image": "booqable://assets/image-avatar-3.png",
             "name": "Adrian Vajas",
             "position": "04-05-2023"
@@ -273,7 +273,7 @@
         "testimonial_234026"
       ],
       "settings": {
-        "color_scheme": "set-5",
+        "color_scheme": "set-2",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
@@ -323,12 +323,12 @@
         "logo_478787"
       ],
       "settings": {
-        "color_scheme": "set-5",
+        "color_scheme": "set-2",
         "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
         "padding_top": "small",
         "padding_top_mobile": "small",
-        "title": "RENT CAMERA FROM:"
+        "title": "RENT HARDWARE FROM:"
       },
       "disabled": false
     },
@@ -341,9 +341,9 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root/",
             "article_tag": "Guide",
-            "heading": "Choosing the Right High-End Camera for Your Project",
+            "heading": "A Guide to Hardware Rentals for Businesses",
             "image": "booqable://assets/image-articles-1.png",
-            "text": "<p>Whether you're shooting a professional film, capturing a special event, or embarking on a photography journey, renting a high-end camera can elevate your visual storytelling. </p>"
+            "text": "<p>For many businesses, purchasing and maintaining IT hardware can be a significant financial burden. This guide introduces the advantages of renting IT hardware such as servers, workstations, laptops, and network devices.</p>"
           },
           "disabled": null
         },
@@ -353,9 +353,9 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root/",
             "article_tag": "Guide",
-            "heading": " The Advantages of Renting High-End Cameras",
+            "heading": "How Renting IT Hardware Keeps Your Business Competitive",
             "image": "booqable://assets/image-articles-2.png",
-            "text": "<p>High-end photography equipment can be prohibitively expensive, but renting offers a cost-effective alternative.</p>"
+            "text": "<p>Technology evolves rapidly, and keeping up can be both crucial and costly. This article explores how renting IT hardware allows...</p>"
           },
           "disabled": null
         },
@@ -364,10 +364,10 @@
           "settings": {
             "article_btn": "Read more",
             "article_btn_url": "booqable://root/",
-            "article_tag": "Tips",
-            "heading": "Tips for Renting High-End Cameras",
+            "article_tag": "Guide",
+            "heading": "What to Know Before Signing the Agreement",
             "image": "booqable://assets/image-articles-3.png",
-            "text": "<p>Renting a high-end camera involves more than just picking a model and shooting. </p>"
+            "text": "<p>Renting IT hardware is an excellent option for many businesses, but it's important to understand the terms and conditions to avoid potential issues.</p>"
           },
           "disabled": null
         }
@@ -378,9 +378,9 @@
         "article_456853"
       ],
       "settings": {
-        "button_outline_label": "See all",
         "button_outline_url": "booqable://root/",
-        "color_scheme": "set-5",
+        "button_outline_label": "See all",
+        "color_scheme": "set-2",
         "full_width": true,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
@@ -407,7 +407,7 @@
         "full_width": true,
         "height": "large",
         "height_mobile": "auto",
-        "image": "booqable://assets/image-cta-2.png",
+        "image": "booqable://assets/image-cta-2.jpeg",
         "overlay_background": "#000000",
         "overlay_opacity": 20,
         "padding_bottom": "large",
@@ -416,12 +416,12 @@
         "padding_top_mobile": "large",
         "rounded_corners": "none",
         "show_overlay": true,
-        "show_transition_bottom": true,
-        "show_transition_top": false,
+        "show_transition_bottom": false,
+        "show_transition_top": true,
         "tag": "",
         "text_position": "middle",
-        "title": "Are you ready?",
-        "transition_color_bottom": "#010714",
+        "title": "Not found what you are <br>looking for?",
+        "transition_color_bottom": "#1B1B1B",
         "transition_color_top": "#1B1B1B",
         "transition_style": "none"
       },
@@ -433,15 +433,15 @@
         "item_478546": {
           "type": "item",
           "settings": {
-            "content": "<p>Our inventory includes a wide range of high-end cameras suitable for various photography styles and skill levels, from professional photographers to serious hobbyists. We offer digital SLRs, mirrorless cameras, medium format cameras, and cinematic video cameras. Our selection features the latest models from top brands like Canon, Nikon, Sony, and Hasselblad. Additionally, we provide a comprehensive selection of lenses, lighting equipment, tripods, and other essential accessories to complement your camera choice.</p>",
-            "heading": "What types of cameras and equipment are available for rental?"
+            "content": "<p>We offer a comprehensive range of IT hardware tailored to meet the needs of businesses, educational institutions, and event organizers. Our inventory includes desktop computers, laptops, servers, networking equipment, and storage solutions. We also provide peripherals like monitors, printers, and projectors. Our products come from trusted brands such as Apple, Dell, HP, and Cisco, ensuring you receive reliable and high-performance equipment for any task or event.</p>",
+            "heading": "What types of IT hardware are available for rental?"
           },
           "disabled": null
         },
         "item_478549": {
           "type": "item",
           "settings": {
-            "content": "<p>Renting from us is straightforward. You can browse our extensive catalog online, where each item lists detailed specifications and rental rates. Once you've selected your equipment, you can place your order directly through our website. We'll ask for details such as your rental duration and delivery preferences. A security deposit is required, and renters must provide identification and proof of insurance. We ship nationwide with options for next-day delivery, and we also offer in-store pickups for local customers.</p>",
+            "content": "<p>Renting IT hardware with us is a straightforward process designed to be as convenient as possible. You can browse our inventory online and select the items that best fit your requirements. To place a rental order, simply fill out our online form or contact our customer service team directly. We will then discuss the specifics of your needs, including rental duration and any additional support services you might require. A valid business ID and a security deposit are required for all rentals. We offer flexible rental terms, from a single day to long-term leases, and provide delivery, setup, and pickup services.</p>",
             "heading": "How does the rental process work?"
           },
           "disabled": null
@@ -449,8 +449,8 @@
         "item_478545": {
           "type": "item",
           "settings": {
-            "content": "<p>We pride ourselves on our customer support. Our team of experienced photographers and videographers is available to help you choose the right equipment for your project and answer any technical questions. During your rental period, we offer 24/7 technical support to assist with any operational issues. Additionally, we provide tutorials and guides on our website to help you make the most of your rental. If an item malfunctions or doesn't meet your expectations, we offer immediate replacements to ensure your project stays on track.</p>",
-            "heading": "What support do you offer to renters?"
+            "content": "<p>Yes, we provide full support and maintenance throughout the rental period. Our support team is available to help with installation, configuration, and troubleshooting any issues that may arise with the hardware. We ensure that all equipment is rigorously tested and updated with the latest software before delivery. In the event of hardware failure, we offer prompt replacements to minimize downtime. For long-term rentals, we also offer regular maintenance checks to keep the equipment running smoothly. This comprehensive support ensures that your operations are uninterrupted and your projects stay on track.</p>",
+            "heading": "Do you offer support and maintenance during the rental period?"
           },
           "disabled": null
         }
@@ -462,8 +462,8 @@
       ],
       "settings": {
         "behavior": "multiple",
-        "color_scheme": "set-5",
-        "description": "<p>Expert insights on renting high-nd cameras and videography equipment</p>",
+        "color_scheme": "set-2",
+        "description": "<p>Essential information for IT hardware rentals: solutions for every business need</p>",
         "image": "",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
@@ -472,60 +472,6 @@
         "rounded_corners": "medium",
         "show_borders": true,
         "title": "FAQ"
-      },
-      "disabled": null
-    },
-    "image-gallery": {
-      "type": "image-gallery",
-      "blocks": {
-        "image": {
-          "type": "image",
-          "settings": {
-            "image": "booqable://assets/image-gallery-1.jpeg",
-            "url": ""
-          },
-          "disabled": null
-        },
-        "image_392756": {
-          "type": "image",
-          "settings": {
-            "image": "booqable://assets/image-gallery-2.jpeg",
-            "url": ""
-          },
-          "disabled": null
-        },
-        "image_302407": {
-          "type": "image",
-          "settings": {
-            "image": "booqable://assets/image-gallery-3.jpeg",
-            "url": ""
-          },
-          "disabled": null
-        },
-        "image_297518": {
-          "type": "image",
-          "settings": {
-            "image": "booqable://assets/image-gallery-4.jpeg",
-            "url": ""
-          },
-          "disabled": null
-        }
-      },
-      "block_order": [
-        "image",
-        "image_392756",
-        "image_302407",
-        "image_297518"
-      ],
-      "settings": {
-        "color_scheme": "set-2",
-        "full_width": false,
-        "padding_bottom": "none",
-        "padding_bottom_mobile": "none",
-        "padding_top": "small",
-        "padding_top_mobile": "small",
-        "rounded_corners": "medium",
-        "title": "Express yourself with <br>#camerable on instagram"
       },
       "disabled": null
     }
@@ -540,7 +486,6 @@
     "logos",
     "articles",
     "call-to-action_984098",
-    "accordion",
-    "image-gallery"
+    "accordion"
   ]
 }
