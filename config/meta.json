@@ -27,6 +27,13 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/bounce_preview.png",
     "version": 1
   },
+  "capture": {
+    "detail_url": "https://booqable.com/themes/capture/",
+    "market": "AV / Camera",
+    "preview_url": "https://capture.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/capture_preview.png",
+    "version": 1
+  },
   "cruise": {
     "detail_url": "https://booqable.com/themes/cruise/",
     "market": "Bikes / Scooters",
@@ -62,6 +69,13 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/flow_preview.png",
     "version": 1
   },
+  "freedom": {
+    "detail_url": "https://booqable.com/themes/freedom/",
+    "market": "Vehicles / Trailers",
+    "preview_url": "https://freedom.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/freedom_preview.png",
+    "version": 1
+  },
   "giro": {
     "detail_url": "https://booqable.com/themes/giro/",
     "market": "Bikes / Scooters",
@@ -81,6 +95,13 @@
     "market": "Event / Party",
     "preview_url": "https://memories.booqable.shop/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/memories_preview.png",
+    "version": 1
+  },
+  "nite": {
+    "detail_url": "https://booqable.com/themes/nite/",
+    "market": "Technology / IT",
+    "preview_url": "https://nite.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/nite_preview.png",
     "version": 1
   },
   "peak": {
@@ -116,6 +137,20 @@
     "market": "Sports / Activities",
     "preview_url": "https://sunset.booqable.shop/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/sunset_preview.png",
+    "version": 1
+  },
+  "tough": {
+    "detail_url": "https://booqable.com/themes/tough/",
+    "market": "Tools / Construction",
+    "preview_url": "https://tough.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/tough_preview.png",
+    "version": 1
+  },
+  "vice": {
+    "detail_url": "https://booqable.com/themes/vice/",
+    "market": "Technology / IT",
+    "preview_url": "https://vice.booqable.shop/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/vice_preview.png",
     "version": 1
   }
 }

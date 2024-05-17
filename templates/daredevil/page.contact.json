@@ -45,7 +45,7 @@
           "settings": {
             "button_label": "+1 (555) 000-0000",
             "button_style": "secondary",
-            "button_url": "{{ \"tel:+1 (555) 000-0000\" }}",
+            "button_url": "{{ \"tel:+15550000000\" }}",
             "icon": "phone",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.",
             "title": "Phone"

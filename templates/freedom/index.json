@@ -1,0 +1,491 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "More info",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-3",
+        "description": "<p>Explore new horizons with our premium motorcycle rentals,<br>whether you’re cruising city streets or touring scenic backroads</p>",
+        "full_width": true,
+        "height": "medium",
+        "image": "booqable://assets/image-hero.jpeg",
+        "image_mobile": "",
+        "overlay_background": "#1B1B1B",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 30,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": false,
+        "text_position": "left",
+        "text_position_mobile": "left",
+        "title": "REV UP YOUR<br> ADVENTURE",
+        "transition_color_bottom": "#B2B1F9",
+        "transition_color_top": "#B2B1F9",
+        "transition_style": "none",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Rent now",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-3",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_overlay": false,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "YOUR RIDE YOUR RULES <br>GRANDPRIX RENTALS TAILORED TO YOU",
+        "transition_color_bottom": "#1A3333",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_256572": {
+          "type": "collection",
+          "settings": {
+            "collection": "b3ff69cc-de03-4979-bf60-5c47ff802640"
+          },
+          "disabled": null
+        },
+        "collection_243072": {
+          "type": "collection",
+          "settings": {
+            "collection": "3f85474f-f097-4e34-8070-378bb5e8ead5"
+          },
+          "disabled": null
+        },
+        "collection_230772": {
+          "type": "collection",
+          "settings": {
+            "collection": "f0af1030-4291-4ce2-b5aa-d1acd8fc35e3"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_256572",
+        "collection_243072",
+        "collection_230772"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "counter_plural": "Items",
+        "counter_singular": "Item",
+        "full_width": true,
+        "grid": "three",
+        "overlay_background": "#1B1B1B",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "small",
+        "spacing_mobile": "none"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_123744": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123745": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123746": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123747": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123748": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123749": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123750": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123751": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_123744",
+        "product_123745",
+        "product_123746",
+        "product_123747",
+        "product_123748",
+        "product_123749",
+        "product_123750",
+        "product_123751"
+      ],
+      "settings": {
+        "borders": "full",
+        "button_outline_label": "See all products",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "image": "",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "small",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "THIS WEEK",
+        "tag_image": "",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "call-to-action_185352": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Shop our products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-4",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": "40",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "tag": "HIGHLIGHT",
+        "text_position": "middle",
+        "title": "FROM CITY STREETS <br> TO MOUNTAIN TRIALS",
+        "transition_color_bottom": "#E06B48",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "fade"
+      },
+        "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_234027": {
+        "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The online booking process was a breeze, and their prices were very competitive. When I picked up the bike, I was impressed by how well-maintained it was—shiny, clean, and mechanically sound.</p>",
+            "image": "booqable://assets/image-avatar-1.png",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234025": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The process was simple, from reservation to return. The motorcycle I rented was in impeccable condition, which provided peace of mind and allowed me to focus on enjoying the ride.</p>",
+            "image": "booqable://assets/image-avatar-2.png",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234026": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The customer service was exceptional; the staff were friendly and genuinely interested in making my rental experience as enjoyable as possible. </p>",
+            "image": "booqable://assets/image-avatar-3.png",
+            "name": "Adrian Vajas",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_234027",
+        "testimonial_234025",
+        "testimonial_234026"
+      ],
+      "settings": {
+        "color_scheme": "set-5",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "small",
+        "show_navigation": true,
+        "title": "What people <br>say about us"
+      },
+      "disabled": null
+    },
+    "logos": {
+      "type": "logos",
+      "blocks": {
+        "logo_478790": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-1.png"
+          },
+          "disabled": null
+        },
+        "logo_478789": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-2.png"
+          },
+          "disabled": null
+        },
+        "logo_478788": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-3.png"
+          },
+          "disabled": null
+        },
+        "logo_478787": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-4.png"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "logo_478790",
+        "logo_478789",
+        "logo_478788",
+        "logo_478787"
+      ],
+      "settings": {
+        "color_scheme": "set-5",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "title": "RENT MOTORCYCLES FROM:"
+      },
+      "disabled": false
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_456851": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "How to Choose the Perfect Motorcycle Rental",
+            "image": "booqable://assets/image-articles-1.png",
+            "text": "<p>Ready to hit the open road on a motorcycle? This guide is your go-to resource for selecting the right motorcycle rental to match your riding style and journey type.</p>"
+          },
+          "disabled": null
+        },
+        "article_456852": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Motorcycle Rental Safety Tips",
+            "image": "booqable://assets/image-articles-2.png",
+            "text": "<p>Riding a motorcycle is exhilarating, but safety should never take a backseat. This article delves into essential safety tips for renting and riding a motorcycle. </p>"
+          },
+          "disabled": null
+        },
+        "article_456853": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Exploring Tourist Destinations by Motorcycle",
+            "image": "booqable://assets/image-articles-3.png",
+            "text": "<p>There's no better way to explore a new place than on the back of a motorcycle, offering flexibility and a thrilling perspective on your surroundings.</p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_456851",
+        "article_456852",
+        "article_456853"
+      ],
+      "settings": {
+        "button_outline_label": "See all",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-2",
+        "full_width": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "small",
+        "show_transition_bottom": false,
+        "show_transition_top": true,
+        "title": "WHATS IN THE NEWS",
+        "transition_color_bottom": "#1B1B1B",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "call-to-action_984098": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-4",
+        "full_width": true,
+        "height": "large",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "HIT THE ROAD WITH EASE",
+        "transition_color_bottom": "#1B1B1B",
+        "transition_color_top": "#1B1B1B",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item_478546": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Our diverse fleet includes a range of motorcycles to cater to different riding preferences and experience levels. We offer everything from cruisers and touring bikes to sport bikes and dual-sport models. Top brands like Harley-Davidson, BMW, Honda, and Ducati are all part of our lineup, ensuring high-quality rides. Each motorcycle listing on our website provides detailed specifications, including engine size, seating capacity, and recommended rider experience level, to help you choose the perfect bike for your adventure.</p>",
+            "heading": "What types of motorcycles are available for rent?"
+          },
+          "disabled": null
+        },
+        "item_478549": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Riders must be at least 21 years old and hold a valid motorcycle license. A security deposit is required at the time of rental, which can be made via credit card. Proof of personal motorcycle insurance is also needed, or you can opt for our insurance packages at the time of rental for additional coverage. Before heading out, all renters receive a comprehensive briefing on the motorcycle’s features and safety tips to ensure a smooth ride.</p>",
+            "heading": "What are the requirements to rent a motorcycle?"
+          },
+          "disabled": null
+        },
+        "item_478545": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Yes, we offer a range of additional gear and equipment for rent to make your ride as comfortable and safe as possible. Available items include helmets, gloves, jackets, GPS units, and saddlebags. We also offer intercoms and action cameras to capture your journey. These items can be selected during the booking process on our website or at our rental location. We recommend reserving these items in advance to ensure availability on your rental dates.</p>",
+            "heading": "Can I rent additional gear and equipment?"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_478546",
+        "item_478549",
+        "item_478545"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "color_scheme": "set-5",
+        "description": "<p>Key information for motorcycle rentals</p>",
+        "image": "",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "medium",
+        "show_borders": true,
+        "title": "FAQ"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero",
+    "call-to-action",
+    "collections",
+    "products",
+    "call-to-action_185352",
+    "testimonials",
+    "logos",
+    "articles",
+    "call-to-action_984098",
+    "accordion"
+  ]
+}

@@ -1,0 +1,491 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "More info",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-3",
+        "description": "<p>Seamlessly integrate with our top-tier IT hardware rentals. </p>\n<p>Equip your team with the tools needed for success.</p>",
+        "full_width": true,
+        "height": "medium",
+        "image": "booqable://assets/image-hero.jpeg",
+        "image_mobile": "",
+        "overlay_background": "#1B1B1B",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 30,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "small",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": false,
+        "text_position": "left",
+        "text_position_mobile": "left",
+        "title": "Simple, fast <br>and temporary <br>IT hardware rental",
+        "transition_color_bottom": "#B2B1F9",
+        "transition_color_top": "#B2B1F9",
+        "transition_style": "none",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check out products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-2",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_overlay": false,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Large stock exclusively A-brands",
+        "transition_color_bottom": "#1A3333",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_256572": {
+          "type": "collection",
+          "settings": {
+            "collection": "3965893e-b8c3-4c27-bca0-7891c73e2077"
+          },
+          "disabled": null
+        },
+        "collection_243072": {
+          "type": "collection",
+          "settings": {
+            "collection": "792a2de3-2c00-41cd-93a5-11fdec8a0acd"
+          },
+          "disabled": null
+        },
+        "collection_230772": {
+          "type": "collection",
+          "settings": {
+            "collection": "f0af1030-4291-4ce2-b5aa-d1acd8fc35e3"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_256572",
+        "collection_243072",
+        "collection_230772"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "counter_plural": "Items",
+        "counter_singular": "Item",
+        "full_width": true,
+        "grid": "three",
+        "overlay_background": "#1B1B1B",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "none",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": true,
+        "spacing": "small",
+        "spacing_mobile": "none"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_123744": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123745": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123746": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123747": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123748": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123749": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123750": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123751": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_123744",
+        "product_123745",
+        "product_123746",
+        "product_123747",
+        "product_123748",
+        "product_123749",
+        "product_123750",
+        "product_123751"
+      ],
+      "settings": {
+        "borders": "full",
+        "button_outline_label": "See all products",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-5",
+        "image": "",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "small",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "THIS WEEK",
+        "tag_image": "",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "call-to-action_185352": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Shop our products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-4",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "tag": "HIGHLIGHT",
+        "text_position": "middle",
+        "title": "For every moment",
+        "transition_color_bottom": "#E06B48",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "fade"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_234027": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>Their vast inventory included the latest PCs, laptops, and networking equipment, perfect for our setup. The rental process was straightforward, and their team was exceptional.</p>",
+            "image": "booqable://assets/image-avatar-1.png",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234025": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The rental process was easy and flexible, allowing us to choose the duration and exact equipment specs we required. The quality and performance of the rented hardware were outstanding.</p>",
+            "image": "booqable://assets/image-avatar-2.png",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_234026": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>Their selection of desktops, laptops, and networking devices was exactly what we needed to keep our operations running smoothly. The quality of the equipment was excellent.</p>",
+            "image": "booqable://assets/image-avatar-3.png",
+            "name": "Adrian Vajas",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_234027",
+        "testimonial_234025",
+        "testimonial_234026"
+      ],
+      "settings": {
+        "color_scheme": "set-2",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "small",
+        "show_navigation": true,
+        "title": "What people <br>say about us"
+      },
+      "disabled": null
+    },
+    "logos": {
+      "type": "logos",
+      "blocks": {
+        "logo_478790": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-1.png"
+          },
+          "disabled": null
+        },
+        "logo_478789": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-2.png"
+          },
+          "disabled": null
+        },
+        "logo_478788": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-3.png"
+          },
+          "disabled": null
+        },
+        "logo_478787": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-4.png"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "logo_478790",
+        "logo_478789",
+        "logo_478788",
+        "logo_478787"
+      ],
+      "settings": {
+        "color_scheme": "set-2",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "title": "RENT HARDWARE FROM:"
+      },
+      "disabled": false
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_456851": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "A Guide to Hardware Rentals for Businesses",
+            "image": "booqable://assets/image-articles-1.png",
+            "text": "<p>For many businesses, purchasing and maintaining IT hardware can be a significant financial burden. This guide introduces the advantages of renting IT hardware such as servers, workstations, laptops, and network devices.</p>"
+          },
+          "disabled": null
+        },
+        "article_456852": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "How Renting IT Hardware Keeps Your Business Competitive",
+            "image": "booqable://assets/image-articles-2.png",
+            "text": "<p>Technology evolves rapidly, and keeping up can be both crucial and costly. This article explores how renting IT hardware allows...</p>"
+          },
+          "disabled": null
+        },
+        "article_456853": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "What to Know Before Signing the Agreement",
+            "image": "booqable://assets/image-articles-3.png",
+            "text": "<p>Renting IT hardware is an excellent option for many businesses, but it's important to understand the terms and conditions to avoid potential issues.</p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_456851",
+        "article_456852",
+        "article_456853"
+      ],
+      "settings": {
+        "button_outline_url": "booqable://root/",
+        "button_outline_label": "See all",
+        "color_scheme": "set-2",
+        "full_width": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "small",
+        "show_transition_bottom": false,
+        "show_transition_top": true,
+        "title": "What's in the news",
+        "transition_color_bottom": "#1B1B1B",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "call-to-action_984098": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-4",
+        "full_width": true,
+        "height": "large",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "none",
+        "show_overlay": true,
+        "show_transition_bottom": false,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Not found what you are <br>looking for?",
+        "transition_color_bottom": "#1B1B1B",
+        "transition_color_top": "#1B1B1B",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item_478546": {
+          "type": "item",
+          "settings": {
+            "content": "<p>We offer a comprehensive range of IT hardware tailored to meet the needs of businesses, educational institutions, and event organizers. Our inventory includes desktop computers, laptops, servers, networking equipment, and storage solutions. We also provide peripherals like monitors, printers, and projectors. Our products come from trusted brands such as Apple, Dell, HP, and Cisco, ensuring you receive reliable and high-performance equipment for any task or event.</p>",
+            "heading": "What types of IT hardware are available for rental?"
+          },
+          "disabled": null
+        },
+        "item_478549": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Renting IT hardware with us is a straightforward process designed to be as convenient as possible. You can browse our inventory online and select the items that best fit your requirements. To place a rental order, simply fill out our online form or contact our customer service team directly. We will then discuss the specifics of your needs, including rental duration and any additional support services you might require. A valid business ID and a security deposit are required for all rentals. We offer flexible rental terms, from a single day to long-term leases, and provide delivery, setup, and pickup services.</p>",
+            "heading": "How does the rental process work?"
+          },
+          "disabled": null
+        },
+        "item_478545": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Yes, we provide full support and maintenance throughout the rental period. Our support team is available to help with installation, configuration, and troubleshooting any issues that may arise with the hardware. We ensure that all equipment is rigorously tested and updated with the latest software before delivery. In the event of hardware failure, we offer prompt replacements to minimize downtime. For long-term rentals, we also offer regular maintenance checks to keep the equipment running smoothly. This comprehensive support ensures that your operations are uninterrupted and your projects stay on track.</p>",
+            "heading": "Do you offer support and maintenance during the rental period?"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_478546",
+        "item_478549",
+        "item_478545"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "color_scheme": "set-2",
+        "description": "<p>Essential information for IT hardware rentals: solutions for every business need</p>",
+        "image": "",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "medium",
+        "show_borders": true,
+        "title": "FAQ"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero",
+    "call-to-action",
+    "collections",
+    "products",
+    "call-to-action_185352",
+    "testimonials",
+    "logos",
+    "articles",
+    "call-to-action_984098",
+    "accordion"
+  ]
+}
