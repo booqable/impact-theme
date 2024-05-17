@@ -8,6 +8,7 @@
 {%- assign grid                  = section.settings.grid -%}
 {%- assign image_fit             = section.settings.image_fit -%}
 {%- assign image_placeholder     = settings.image_placeholder -%}
+{%- assign is_focal              = false -%}
 {%- assign limit                 = section.settings.limit -%}
 {%- assign menu                  = false -%}
 {%- assign message               = section.settings.message -%}
@@ -19,10 +20,10 @@
 {%- assign rounded_corners       = section.settings.rounded_corners -%}
 {%- assign show_excerpt          = section.settings.show_excerpt -%}
 {%- assign sticky_sidebar        = section.settings.sticky_sidebar -%}
-{% assign is_focal = false %}
-{% if settings.use_focal_images and image_fit == 'cover' %}
-  {% assign is_focal = true %}
-{% endif %}
+
+{%- if settings.use_focal_images and image_fit == 'cover' -%}
+  {%- assign is_focal = true -%}
+{%- endif -%}
 
 {%- for block in section.blocks -%}
   {%- assign menu = block.settings.menu -%}
