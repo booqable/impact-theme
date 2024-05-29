@@ -50,6 +50,7 @@
     l - Image is wide as half of the viewport
     xl - Image is wide as 3/4 of the viewport
     xxl - Image is as wide as the whole viewport
+    flexible - Image is wide as the viewport on small screens but is smaller relative to the screen on larger screens
     logo - Image has the same size and quality on all resolutions
   {% endcomment %}
 
@@ -72,6 +73,9 @@
     {%- when 'xxl' -%}
       {%- assign image_width = '320, 480, 768, 1200, 1680, 2560' -%}
       {%- assign image_sizes = '(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 1200px) 1200px, (max-width: 1680px) 1680px, 2560px' -%}
+    {%- when 'flexible' -%}
+      {%- assign image_width = '320, 480, 576, 900, 840, 1280' -%}
+      {%- assign image_sizes = '(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 768px) 576px, (max-width: 1200px) 900px, (max-width: 1680px) 840px, 1280px' -%}
     {%- when 'logo' -%}
       {%- assign image_width = '420, 640' -%}
       {%- assign image_sizes = '(max-width: 360px) 420px, 640px' -%}
