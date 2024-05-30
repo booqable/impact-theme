@@ -102,6 +102,10 @@ html {
   padding: env(safe-area-inset);
 }
 
+.touch {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   background: var(--background-primary);
   color: var(--color-primary);
