@@ -65,6 +65,7 @@
 .collections__arrow {
   height: 55px;
   width: 55px;
+  flex: 0 0 55px;
   margin-bottom: 10px;
   border-radius: var(--border-radius);
   display: flex;
