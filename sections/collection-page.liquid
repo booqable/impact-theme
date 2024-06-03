@@ -88,10 +88,13 @@
   {%- case grid -%}
     {%- when 'two' -%}
       --grid-element: 2;
+      --item-min-width: 300px;
     {%- when 'three' -%}
       --grid-element: 3;
+      --item-min-width: 210px;
     {%- when 'four' -%}
       --grid-element: 4;
+      --item-min-width: 160px;
   {%- endcase -%}
 
   {%- case rounded_corners -%}
