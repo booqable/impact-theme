@@ -37,82 +37,6 @@
       },
       "disabled": null
     },
-    "call-to-action": {
-      "type": "call-to-action",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "button_primary_label": "Check out products",
-        "button_primary_url": "booqable://products/",
-        "color_scheme": "set-1",
-        "full_width": true,
-        "height": "auto",
-        "height_mobile": "auto",
-        "image": "booqable://assets/image-cta-1.png",
-        "overlay_background": "#000000",
-        "overlay_opacity": 20,
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "small",
-        "padding_top_mobile": "medium",
-        "rounded_corners": "none",
-        "show_overlay": false,
-        "show_transition_bottom": true,
-        "show_transition_top": true,
-        "tag": "",
-        "tag_image": null,
-        "text_position": "middle",
-        "title": "Let’s find the <br>perfect scooter for you",
-        "transition_color_bottom": "#1A3333",
-        "transition_color_top": "#FFFFFF",
-        "transition_style": "none"
-      },
-      "disabled": null
-    },
-    "collections": {
-      "type": "collections",
-      "blocks": {
-        "collection_256572": {
-          "type": "collection",
-          "settings": {
-            "collection": "db22659c-4de9-487b-8d8c-901baa99d349"
-          },
-          "disabled": null
-        },
-        "collection_243072": {
-          "type": "collection",
-          "settings": {
-            "collection": "3f85474f-f097-4e34-8070-378bb5e8ead5"
-          },
-          "disabled": null
-        }
-      },
-      "block_order": [
-        "collection_256572",
-        "collection_243072"
-      ],
-      "settings": {
-        "color_scheme": "set-1",
-        "counter_plural": "Items",
-        "counter_singular": "Item",
-        "full_width": true,
-        "grid": "two",
-        "overlay_background": "#1B1B1B",
-        "overlay_color": "#FFFFFF",
-        "overlay_opacity": 100,
-        "padding_bottom": "none",
-        "padding_bottom_mobile": "none",
-        "padding_top": "none",
-        "padding_top_mobile": "none",
-        "rounded_corners": "none",
-        "show_amount": true,
-        "show_arrow": true,
-        "show_overlay": true,
-        "spacing": "small",
-        "spacing_mobile": "none"
-      },
-      "disabled": null
-    },
     "products": {
       "type": "products",
       "blocks": {
@@ -477,8 +401,6 @@
   },
   "order": [
     "hero",
-    "call-to-action",
-    "collections",
     "products",
     "call-to-action_135712",
     "testimonials",
