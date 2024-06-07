@@ -103,6 +103,6 @@
 @media (min-width: 1080px) {
   .collection-page__products {
     gap: 20px 32px;
-    grid-template-columns: repeat(var(--grid-element), minmax(210px, 1fr));
+    grid-template-columns: repeat(var(--grid-element), minmax(var(--item-min-width), 1fr));
   }
 }
