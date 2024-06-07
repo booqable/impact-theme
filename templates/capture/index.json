@@ -37,37 +37,6 @@
       },
       "disabled": null
     },
-    "call-to-action": {
-      "type": "call-to-action",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "button_primary_label": "Check out products",
-        "button_primary_url": "booqable://products/",
-        "color_scheme": "set-2",
-        "full_width": true,
-        "height": "auto",
-        "height_mobile": "auto",
-        "image": "",
-        "overlay_background": "#000000",
-        "overlay_opacity": 20,
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "small",
-        "padding_top_mobile": "medium",
-        "rounded_corners": "none",
-        "show_overlay": false,
-        "show_transition_bottom": true,
-        "show_transition_top": true,
-        "tag": "",
-        "text_position": "middle",
-        "title": "Rent Luxury Cameras <br>for Your Shoot",
-        "transition_color_bottom": "#1A3333",
-        "transition_color_top": "#FFFFFF",
-        "transition_style": "none"
-      },
-      "disabled": null
-    },
     "collections": {
       "type": "collections",
       "blocks": {
@@ -193,37 +162,6 @@
         "tag_image": "",
         "timer": 5,
         "title": "Popular products"
-      },
-      "disabled": null
-    },
-    "call-to-action_185352": {
-      "type": "call-to-action",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "button_primary_label": "Shop our products",
-        "button_primary_url": "booqable://products/",
-        "color_scheme": "set-4",
-        "full_width": true,
-        "height": "auto",
-        "height_mobile": "auto",
-        "image": "booqable://assets/image-cta-1.jpeg",
-        "overlay_background": "#000000",
-        "overlay_opacity": "40",
-        "padding_bottom": "large",
-        "padding_bottom_mobile": "large",
-        "padding_top": "large",
-        "padding_top_mobile": "large",
-        "rounded_corners": "none",
-        "show_overlay": true,
-        "show_transition_bottom": true,
-        "show_transition_top": false,
-        "tag": "HIGHLIGHT",
-        "text_position": "middle",
-        "title": "Everything for <br> Your Next Shoot",
-        "transition_color_bottom": "#000000",
-        "transition_color_top": "#FFFFFF",
-        "transition_style": "fade"
       },
       "disabled": null
     },
@@ -532,10 +470,8 @@
   },
   "order": [
     "hero",
-    "call-to-action",
-    "collections",
     "products",
-    "call-to-action_185352",
+    "collections",
     "testimonials",
     "logos",
     "articles",

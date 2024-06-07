@@ -37,37 +37,6 @@
       },
       "disabled": null
     },
-    "call-to-action": {
-      "type": "call-to-action",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "button_primary_label": "Check out products",
-        "button_primary_url": "booqable://products/",
-        "color_scheme": "set-2",
-        "full_width": true,
-        "height": "auto",
-        "height_mobile": "auto",
-        "image": "",
-        "overlay_background": "#000000",
-        "overlay_opacity": 20,
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "small",
-        "padding_top_mobile": "medium",
-        "rounded_corners": "none",
-        "show_overlay": false,
-        "show_transition_bottom": true,
-        "show_transition_top": true,
-        "tag": "",
-        "text_position": "middle",
-        "title": "Let’s find the <br>perfect hiking gear <br>for your trip",
-        "transition_color_bottom": "#1A3333",
-        "transition_color_top": "#FFFFFF",
-        "transition_style": "none"
-      },
-      "disabled": null
-    },
     "collections": {
       "type": "collections",
       "blocks": {
@@ -526,9 +495,8 @@
   },
   "order": [
     "hero",
-    "call-to-action",
-    "collections",
     "products",
+    "collections",
     "call-to-action_185352",
     "testimonials",
     "logos",
