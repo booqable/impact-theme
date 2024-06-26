@@ -1,0 +1,523 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check our products",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "Get in touch",
+        "button_outline_url": "booqable://pages/contact/",
+        "color_scheme": "set-1",
+        "description": "<p>Explore our diverse selection of bounce houses </p><p>and slides to create lasting memories.</p>",
+        "full_width": true,
+        "height": "medium",
+        "image": "booqable://assets/image-hero.jpeg",
+        "image_mobile": "",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "text_position": "left",
+        "text_position_mobile": "left",
+        "title": "Unleash the<br>excitement",
+        "transition_color_bottom": "#FFFFFF",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "call-to-action_147871": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "Check our products",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-3",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": null,
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
+        "show_overlay": false,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "",
+        "text_position": "middle",
+        "title": "Your party’s ultimate <br>attraction awaits",
+        "transition_color_bottom": "#2A292E",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_533421": {
+          "type": "collection",
+          "settings": {
+            "collection": "a84e5a50-9e76-47ac-b5c6-17df8eebe3dd"
+          },
+          "disabled": null
+        },
+        "collection_533422": {
+          "type": "collection",
+          "settings": {
+            "collection": "ef90a64d-9d37-43fe-85f1-5607b7defbc6"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_533421",
+        "collection_533422"
+      ],
+      "settings": {
+        "color_scheme": "set-5",
+        "counter_plural": "Items",
+        "counter_singular": "Item",
+        "full_width": false,
+        "grid": "two",
+        "overlay_background": "#2A292E",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "rounded_corners": "large",
+        "show_amount": true,
+        "show_arrow": true,
+        "show_overlay": false,
+        "spacing": "medium",
+        "spacing_mobile": "medium"
+      },
+      "disabled": null
+    },
+    "title": {
+      "type": "title",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-5",
+        "custom_description": "",
+        "custom_title": "Products",
+        "full_width": true,
+        "image": "",
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "none",
+        "show_transition_bottom": false,
+        "show_transition_top": false,
+        "tag": "THIS WEEK",
+        "transition_color_bottom": "#000000",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "fade"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_109856": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109855": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109854": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109853": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109852": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109851": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109850": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_109849": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_109856",
+        "product_109855",
+        "product_109854",
+        "product_109853",
+        "product_109852",
+        "product_109851",
+        "product_109850",
+        "product_109849"
+      ],
+      "settings": {
+        "borders": "image",
+        "button_outline_label": "See all products",
+        "button_outline_url": "booqable://products/",
+        "color_scheme": "set-2",
+        "image": "",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "large",
+        "padding_top": "small",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "tag": "",
+        "tag_image": "",
+        "timer": 5,
+        "title": ""
+      },
+      "disabled": null
+    },
+    "call-to-action_142014": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "",
+        "color_scheme": "set-4",
+        "full_width": true,
+        "height": "auto",
+        "height_mobile": "auto",
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_overlay": true,
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "tag": "HIGHLIGHT",
+        "text_position": "middle",
+        "title": "Bounce into Fun: <br> Inflatable adventures",
+        "transition_color_bottom": "#000000",
+        "transition_color_top": "#FFFFFF",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_218966": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The variety of options they offered—from bounce houses to giant slides—meant there was something for every age group. </p>",
+            "image": "booqable://assets/image-avatar-1.png",
+            "name": "Rick Gebhardt",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_218967": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p> I wanted something special that would keep the kids entertained, and their selection of inflatables did not disappoint.</p>",
+            "image": "booqable://assets/image-avatar-2.png",
+            "name": "Ashley de Lotz",
+            "position": "08-06-2023"
+          },
+          "disabled": null
+        },
+        "testimonial_218968": {
+          "type": "testimonial",
+          "settings": {
+            "button_outline_label": "Check review online",
+            "button_outline_url": "booqable://root/",
+            "description": "<p>The entire experience was fantastic. Their website was easy to navigate, and the reservation process was clear and concise. </p>",
+            "image": "booqable://assets/image-avatar-3.png",
+            "name": "Adrian Vajas",
+            "position": "04-05-2023"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_218966",
+        "testimonial_218967",
+        "testimonial_218968"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "large",
+        "show_navigation": true,
+        "title": "What people <br>say about us"
+      },
+      "disabled": null
+    },
+    "logos": {
+      "type": "logos",
+      "blocks": {
+        "logo": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-1.png"
+          },
+          "disabled": null
+        },
+        "logo_331861": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-2.png"
+          },
+          "disabled": null
+        },
+        "logo_513500": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-3.png"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "logo",
+        "logo_331861",
+        "logo_513500"
+      ],
+      "settings": {
+        "color_scheme": "set-5",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "large",
+        "title": "Rent inflatables from:"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_465430": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "How to Pick the Perfect Inflatable for Your Party",
+            "image": "booqable://assets/image-articles-1.png",
+            "text": "<p>Whether it’s a child’s birthday party, a community festival, or a corporate event, inflatables can bring a fun and dynamic element to your gathering. This guide provides insights into selecting the perfect inflatable rentals, such as bounce houses, slides, and obstacle courses. </p>"
+          },
+          "disabled": null
+        },
+        "article_465431": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Exciting New Inflatables Now Available",
+            "image": "booqable://assets/image-articles-2.png",
+            "text": "<p>Ensuring the safety of guests is paramount when renting inflatables for any event. </p>"
+          },
+          "disabled": null
+        },
+        "article_465432": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root/",
+            "article_tag": "Guide",
+            "heading": "Maximize Your Fun with Bounce House Tips",
+            "image": "booqable://assets/image-articles-3.png",
+            "text": "<p>Explore the world of inflatable water slides, interactive games, sports arenas, and more that can cater to various ages and interests.</p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_465430",
+        "article_465431",
+        "article_465432"
+      ],
+      "settings": {
+        "button_outline_label": "See all",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-1",
+        "full_width": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "rounded_corners": "large",
+        "show_transition_bottom": true,
+        "show_transition_top": true,
+        "title": "What's in the news",
+        "transition_color_bottom": "#F6F4F2",
+        "transition_color_top": "#E06B48",
+        "transition_style": "none"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item_472356": {
+          "type": "item",
+          "settings": {
+            "content": "<p>We offer a wide range of inflatables that cater to all types of events, from children’s birthday parties to corporate gatherings. Our selection includes bouncy castles, inflatable obstacle courses, giant slides, and interactive games like inflatable basketball courts and jousting arenas. We also provide themed inflatables such as movie characters, animal kingdoms, and fantasy lands to add a special touch to any celebration. All our inflatables are made from high-quality, durable materials to ensure safety and fun.</p>",
+            "heading": "What types of inflatables are available for rent?"
+          },
+          "disabled": null
+        },
+        "item_472359": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Renting an inflatable is straightforward. You can browse our selection online, choose your favorite inflatable, and book directly through our website or over the phone. We'll ask for the date of your event, the duration of the rental, and the location for setup. A deposit is typically required to secure your reservation. We handle the delivery, setup, and takedown of the inflatable to ensure it’s properly installed and safe for use. We recommend booking at least a few weeks in advance, especially during busy seasons, to ensure the availability of your chosen inflatable.</p>",
+            "heading": "How does the rental process work?"
+          },
+          "disabled": null
+        },
+        "item_472355": {
+          "type": "item",
+          "settings": {
+            "content": "<p>Safety is our top priority. We ensure that all our inflatables meet safety standards and are regularly inspected and cleaned. Upon delivery, our trained staff will set up the inflatable and provide you with detailed safety instructions. It is important to supervise all children using the inflatable at all times and adhere to the specific guidelines, such as weight limits and the number of users allowed at one time. We also recommend setting up the inflatable on a flat, open area away from any hazards like trees, fences, or power lines. In case of bad weather, particularly high winds or lightning, use of the inflatables should be discontinued immediately.</p>",
+            "heading": "Are there safety guidelines I need to follow when using the inflatables?"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_472356",
+        "item_472359",
+        "item_472355"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "color_scheme": "set-3",
+        "description": "<p>Essential information for inflatable rentals: bouncy fun for every occasion</p>",
+        "image": "booqable://assets/image-background.png",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "large",
+        "rounded_corners": "medium",
+        "show_borders": true,
+        "title": "FAQ"
+      },
+      "disabled": null
+    },
+    "image-gallery": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_420741": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-1.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_420721": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-2.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_138272": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-3.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        },
+        "image_736419": {
+          "type": "image",
+          "settings": {
+            "image": "booqable://assets/image-gallery-4.jpeg",
+            "url": ""
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "image_420741",
+        "image_420721",
+        "image_138272",
+        "image_736419"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "full_width": false,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "none",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "rounded_corners": "medium",
+        "title": "Express yourself with <br>#inflatable on Instagram"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero",
+    "call-to-action_147871",
+    "collections",
+    "title",
+    "products",
+    "call-to-action_142014",
+    "testimonials",
+    "logos",
+    "articles",
+    "accordion",
+    "image-gallery"
+  ]
+}
