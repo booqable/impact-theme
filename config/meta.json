@@ -111,6 +111,13 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/peak_preview.png",
     "version": 1
   },
+  "play": {
+    "detail_url": "https://booqable.com/themes/play/",
+    "market": "Event / Party",
+    "preview_url": "https://play.booqable.store/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/play_preview.png",
+    "version": 1
+  },
   "pure": {
     "detail_url": "https://booqable.com/themes/pure/",
     "market": "Sports / Activities",
