@@ -8,7 +8,6 @@
   {%- assign padding_bottom        = section.settings.padding_bottom -%}
   {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
   {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-  {%- assign image_placeholder     = settings.image_placeholder -%}
 
   {% comment %} CSS variables start {% endcomment %}
   {%- capture variables -%}
@@ -63,22 +62,14 @@
         {%- for block in section.blocks -%}
           {%- assign image = block.settings.image -%}
 
-          {%- if image != blank -%}
-            {%- assign image = image -%}
-          {%- elsif image_placeholder != blank -%}
-            {%- assign image = image_placeholder -%}
-          {%- else -%}
-            {%- assign image = blank -%}
-          {%- endif -%}
-
-          <div class="logos__image-wrapper{% if image == blank %} no-image{% endif %}" id="{{- block.id -}}">
+          <div class="logos__image-wrapper" id="{{- block.id -}}">
             {%- if image.url != blank -%}
               {%- render 'image',
                 image: image,
                 loading: 'lazy',
                 class: 'logos__image',
-                custom_width: '256',
-                custom_size: '256px'
+                custom_width: '750',
+                custom_size: '750px'
               -%}
             {%- endif -%}
           </div>
@@ -226,7 +217,8 @@
           {
             "type": "image_picker",
             "id": "image",
-            "label": "Image"
+            "label": "Image",
+            "default": "booqable://assets/image-partner-logo-preview-black.png"
           }
         ]
       }
