@@ -31,20 +31,7 @@
 
 .logos__image-wrapper img {
   max-height: 100px;
-  max-width: 150px;
   margin: 0 auto;
-}
-
-.logos__image-wrapper.no-image {
-  width: 100%;
-  position: relative;
-}
-
-.logos__image-wrapper.no-image:after {
-  content: "";
-  display: block;
-  height: 64px;
-  background: var(--color-image-placeholder);
 }
 
 @media (min-width: 992px) {
@@ -67,6 +54,5 @@
 
   .logos__image-wrapper img {
     max-height: 150px;
-    max-width: 100%;
   }
 }
