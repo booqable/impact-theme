@@ -51,7 +51,7 @@
   {%- assign id      = product.id -%}
   {%- assign url     = product.url -%}
   {%- assign name    = product.name -%}
-  {%- assign excerpt = product.description | truncatewords: 20, " ..."  -%}
+  {%- assign excerpt = product.description | strip_html | truncatewords: 20, " ..."  -%}
   {%- assign price   = product | product_price -%}
   {%- assign period  = product | product_price_label -%}
 
