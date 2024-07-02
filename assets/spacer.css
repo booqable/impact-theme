@@ -3,6 +3,33 @@
   background: var(--background-primary);
 }
 
+.spacer__wrapper--preview {
+  position: relative;
+  margin: 16px;
+  background-image: repeating-linear-gradient(
+    315deg,
+    var(--background-primary),
+    var(--background-primary) 6px,
+    var(--color-border) 6px,
+    var(--color-border) 7px
+  ) !important;
+  border-radius: 12px;
+}
+
+.spacer__wrapper--preview span {
+  display: inline-block;
+
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  transform: translateY(-50%);
+
+  padding: 4px 6px;
+
+  background-color: var(--background-primary);
+  color: var(--color-primary);
+}
+
 .spacer__image {
   width: 100%;
 }
