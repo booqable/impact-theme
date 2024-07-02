@@ -39,7 +39,6 @@
   line-height: var(--line-height-md);
   font-weight: var(--font-weight-semibold);
   margin: 0;
-  word-break: break-word;
   color: var(--color-primary);
 }
 
