@@ -65,7 +65,7 @@
       "h2_size": 64,
       "h3_size": 40,
       "heading_font": "anton",
-      "image_placeholder": "booqable://assets/image-placeholder.jpg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -235,7 +235,7 @@
       "h2_size": 64,
       "h3_size": 56,
       "heading_font": "lora",
-      "image_placeholder": "booqable://assets/image-placeholder.jpg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -405,7 +405,7 @@
       "h2_size": 64,
       "h3_size": 56,
       "heading_font": "bai-jamjuree",
-      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -576,7 +576,7 @@
       "h2_size": 64,
       "h3_size": 40,
       "heading_font": "baloo-2",
-      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -747,7 +747,7 @@
       "h2_size": 64,
       "h3_size": 56,
       "heading_font": "inter",
-      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -918,7 +918,7 @@
       "h2_size": 64,
       "h3_size": 56,
       "heading_font": "poppins",
-      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -1089,7 +1089,7 @@
       "h2_size": 64,
       "h3_size": 56,
       "heading_font": "darker-grotesque",
-      "image_placeholder": "booqable://assets/image-placeholder.jpg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -1259,7 +1259,7 @@
       "h2_size": 64,
       "h3_size": 56,
       "heading_font": "dm-serif-display",
-      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -1430,7 +1430,7 @@
       "h2_size": 48,
       "h3_size": 40,
       "heading_font": "poppins",
-      "image_placeholder": "booqable://assets/image-placeholder.jpg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -1770,7 +1770,7 @@
       "h2_size": 64,
       "h3_size": 56,
       "heading_font": "anton",
-      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -1941,7 +1941,7 @@
       "h2_size": 64,
       "h3_size": 40,
       "heading_font": "poppins",
-      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -2283,7 +2283,7 @@
       "h2_size": 64,
       "h3_size": 56,
       "heading_font": "inter",
-      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -2454,7 +2454,7 @@
       "h2_size": 64,
       "h3_size": 40,
       "heading_font": "poppins",
-      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -2796,7 +2796,7 @@
       "h2_size": 64,
       "h3_size": 40,
       "heading_font": "baloo-2",
-      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -3137,7 +3137,7 @@
       "h2_size": 64,
       "h3_size": 56,
       "heading_font": "poppins",
-      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -3650,7 +3650,7 @@
       "h2_size": 64,
       "h3_size": 40,
       "heading_font": "anton",
-      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
@@ -3821,7 +3821,7 @@
       "h2_size": 64,
       "h3_size": 56,
       "heading_font": "barlow",
-      "image_placeholder": "booqable://assets/image-placeholder.jpeg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "large_text_size": 18,
       "regular_text_size": 16,
       "sections": {
