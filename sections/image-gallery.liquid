@@ -2,14 +2,15 @@
 
   {{ "image-gallery.css" | asset_url | stylesheet_tag }}
 
-  {%- assign title                 = section.settings.title -%}
   {%- assign color_scheme          = section.settings.color_scheme -%}
   {%- assign full_width            = section.settings.full_width -%}
-  {%- assign padding_top           = section.settings.padding_top -%}
+  {%- assign image_placeholder     = settings.image_placeholder -%}
   {%- assign padding_bottom        = section.settings.padding_bottom -%}
-  {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
   {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+  {%- assign padding_top           = section.settings.padding_top -%}
+  {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
   {%- assign rounded_corners       = section.settings.rounded_corners -%}
+  {%- assign title                 = section.settings.title -%}
 
   {% comment %} CSS variables start {% endcomment %}
   {%- capture variables -%}
@@ -83,6 +84,14 @@
           {%- for block in section.blocks -%}
             {%- assign image = block.settings.image -%}
             {%- assign url   = block.settings.url -%}
+
+            {%- if image != blank -%}
+              {%- assign image = image -%}
+            {%- elsif image_placeholder != blank -%}
+              {%- assign image = image_placeholder -%}
+            {%- else -%}
+              {%- assign image = blank -%}
+            {%- endif -%}
 
             {%- if image.url != blank -%}
               <div class="image-gallery__image-wrapper" id="{{- section.key -}}-{{- block.id -}}">

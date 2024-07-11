@@ -27,7 +27,7 @@
 {%- endcapture -%}
 {% comment %} CSS variables end {% endcomment %}
 
-<div class="spacer__wrapper color-{{ color_scheme.id }}"{% unless image.url != blank %} style="{{- variables | escape -}}"{% endunless %}>
+<div class="spacer__wrapper color-{{ color_scheme.id }}{% if section_preview %} spacer__wrapper--preview{% endif %}"{% unless image.url != blank %} style="{{- variables | escape -}}"{% endunless %}>
   {%- if image.url != blank -%}
     <div class="spacer__image-wrapper">
       {%- render 'image',
@@ -38,6 +38,9 @@
       -%}
     </div>
   {%- endif -%}
+  {% if section_preview %}
+    <span>This section will render an empty space</span>
+  {% endif %}
 </div>
 
 {% schema %}
@@ -60,7 +63,7 @@
       {
         "type": "image_picker",
         "id": "image",
-        "label": "Image"
+        "label": "Image (optional)"
       },
       {
         "type": "header",

@@ -10,6 +10,7 @@
 {%- assign height                  = section.settings.height -%}
 {%- assign image                   = section.settings.image -%}
 {%- assign image_mobile            = section.settings.image_mobile -%}
+{%- assign image_placeholder       = settings.image_placeholder -%}
 {%- assign overlay_background      = section.settings.overlay_background -%}
 {%- assign overlay_color           = section.settings.overlay_color -%}
 {%- assign overlay_opacity         = section.settings.overlay_opacity -%}
@@ -28,6 +29,14 @@
 {%- assign transition_color_top    = section.settings.transition_color_top -%}
 {%- assign transition_style        = section.settings.transition_style -%}
 {%- assign video_url               = section.settings.video_url | strip -%}
+
+{%- if image != blank -%}
+  {%- assign image = image -%}
+{%- elsif image_placeholder != blank -%}
+  {%- assign image = image_placeholder -%}
+{%- else -%}
+  {%- assign image = blank -%}
+{%- endif -%}
 
 {%- case transition_style -%}
   {%- when "sketch" -%}
@@ -428,7 +437,7 @@
         "type": "checkbox",
         "id": "show_transition_top",
         "label": "Show top transition",
-        "default": true
+        "default": false
       },
       {
         "type": "color",
@@ -446,7 +455,7 @@
         "type": "color",
         "id": "transition_color_bottom",
         "label": "Bottom transition color",
-        "default": "#000000"
+        "default": "#FFFFFF"
       },
       {
         "type": "header",
@@ -462,7 +471,8 @@
       {
         "type": "url",
         "id": "button_primary_url",
-        "label": "Button 1 link"
+        "label": "Button 1 link",
+        "default": "booqable://root"
       },
       {
         "type": "text",
@@ -474,7 +484,8 @@
       {
         "type": "url",
         "id": "button_outline_url",
-        "label": "Button 2 link"
+        "label": "Button 2 link",
+        "default": "booqable://root"
       },
       {
         "type": "header",
