@@ -1,27 +1,27 @@
 {{ "account.css" | asset_url | stylesheet_tag }}
 
-{%- assign account_type_label    = section.settings.account_type_label -%}
-{%- assign agree_label           = section.settings.agree_label -%}
-{%- assign button_accept_label   = section.settings.button_accept_label -%}
-{%- assign button_agrement_label = section.settings.button_agrement_label -%}
-{%- assign button_login_label    = section.settings.button_login_label -%}
-{%- assign button_signup_label   = section.settings.button_signup_label -%}
-{%- assign color_scheme          = section.settings.color_scheme -%}
-{%- assign company_label         = section.settings.company_label -%}
-{%- assign description           = section.settings.description -%}
-{%- assign email_label           = section.settings.email_label -%}
-{%- assign image                 = section.settings.image -%}
-{%- assign name_label            = section.settings.name_label -%}
-{%- assign password_label        = section.settings.password_label -%}
-{%- assign password_confirmation = section.settings.password_confirmation -%}
-{%- assign padding_top           = section.settings.padding_top -%}
-{%- assign padding_bottom        = section.settings.padding_bottom -%}
-{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
-{%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-{%- assign private_label         = section.settings.private_label -%}
-{%- assign rounded_corners       = section.settings.rounded_corners -%}
-{%- assign show_border           = section.settings.show_border -%}
-{%- assign title                 = section.settings.title -%}
+{%- assign account_type_label                       = section.settings.account_type_label -%}
+{%- assign i_agree_label                            = section.settings.i_agree_label -%}
+{%- assign terms_and_agreements_accept_button_label = section.settings.terms_and_agreements_accept_button_label -%}
+{%- assign terms_and_agreements_label               = section.settings.terms_and_agreements_label -%}
+{%- assign login_link_label                         = section.settings.login_link_label -%}
+{%- assign button_sign_up_label                     = section.settings.button_sign_up_label -%}
+{%- assign color_scheme                             = section.settings.color_scheme -%}
+{%- assign company_label                            = section.settings.company_label -%}
+{%- assign description                              = section.settings.description -%}
+{%- assign email_label                              = section.settings.email_label -%}
+{%- assign image                                    = section.settings.image -%}
+{%- assign name_label                               = section.settings.name_label -%}
+{%- assign password_label                           = section.settings.password_label -%}
+{%- assign password_confirmation_label              = section.settings.password_confirmation_label -%}
+{%- assign padding_top                              = section.settings.padding_top -%}
+{%- assign padding_bottom                           = section.settings.padding_bottom -%}
+{%- assign padding_top_mobile                       = section.settings.padding_top_mobile -%}
+{%- assign padding_bottom_mobile                    = section.settings.padding_bottom_mobile -%}
+{%- assign private_label                            = section.settings.private_label -%}
+{%- assign rounded_corners                          = section.settings.rounded_corners -%}
+{%- assign show_border                              = section.settings.show_border -%}
+{%- assign title                                    = section.settings.title -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -82,11 +82,11 @@
     <div class="account__inner{% if show_border %} account__inner--border{%- endif -%}">
       <div class="account__top">
         <span class="account__button button button--outlined button--large" style="pointer-events: none;">
-          {{- button_signup_label | default: "Sign up" -}}
+          {{- button_sign_up_label | default: "Sign up" -}}
         </span>
 
         <a href="{{ routes.login_url }}" class="account__button button button--primary button--large">
-          {{- button_login_label | default: "Log in" -}}
+          {{- login_link_label | default: "Log in" -}}
         </a>
       </div>
 
@@ -162,7 +162,7 @@
 
         <div class="account-fieldset__block{% if form.errors.password_confirmation %} account-fieldset--error{%- endif -%}">
           <label for="user_password_confirmation" class="account-fieldset__label">
-            {{- password_confirmation | default: "Password confirmation" | append: "*" -}}
+            {{- password_confirmation_label | default: "Password confirmation" | append: "*" -}}
           </label>
 
           <input
@@ -228,12 +228,12 @@
 
           <label class="account-checkbox__label{% unless form.agreement_accepted %} account-checkbox__label--error{% endunless %}" for="user_agreement_accepted">
             <span>
-              {{- agree_label | default: "I agree to the" -}}
+              {{- i_agree_label | default: "I agree to the" -}}
 
               <span class="account__agreement">
               <input type="checkbox" id="user_agreement_opener" style="display: none">
               <label for="user_agreement_opener" class="account__agreement-opener">
-                {{- button_agrement_label | default: "Terms and agreements" -}}
+                {{- terms_and_agreements_label | default: "Terms and agreements" -}}
               </label>
 
               <span class="account__agreement-modal bq-content rx-content" style="display: none">
@@ -246,7 +246,7 @@
 
                       <span class="account__agreement-buttons">
                         <label class="account-checkbox__button button button--primary button--large" for="user_agreement_opener">
-                          {{ button_accept_label | default: "Agree" }}
+                          {{ terms_and_agreements_accept_button_label | default: "Agree" }}
                         </label>
                       </span>
                     </span>
@@ -268,7 +268,7 @@
           name="commit"
           data-disable-with="Sign up"
         >
-          {{- button_signup_label | default: "Sign up" -}}
+          {{- button_sign_up_label | default: "Sign up" -}}
         </button>
       {%- endform -%}
     </div>
@@ -329,7 +329,7 @@
       },
       {
         "type": "text",
-        "id": "password_confirmation",
+        "id": "password_confirmation_label",
         "label": "Password confirmation label"
       },
       {
@@ -349,12 +349,12 @@
       },
       {
         "type": "text",
-        "id": "agree_label",
+        "id": "i_agree_label",
         "label": "I agree..."
       },
       {
         "type": "text",
-        "id": "button_agrement_label",
+        "id": "terms_and_agreements_label",
         "label": "Terms and agreements label"
       },
       {
@@ -398,17 +398,17 @@
       },
       {
         "type": "text",
-        "id": "button_login_label",
+        "id": "login_link_label",
         "label": "Log in button label"
       },
       {
         "type": "text",
-        "id": "button_signup_label",
+        "id": "button_sign_up_label",
         "label": "Sign up button label"
       },
       {
         "type": "text",
-        "id": "button_accept_label",
+        "id": "terms_and_agreements_accept_button_label",
         "label": "Accept agreement button label (in modal window)"
       },
       {
