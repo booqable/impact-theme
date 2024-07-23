@@ -12,6 +12,7 @@
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
 {%- assign rounded_corners       = section.settings.rounded_corners -%}
+{%- assign show_payments         = section.settings.show_payments -%}
 {%- assign facebook              = settings.social_facebook_link -%}
 {%- assign instagram             = settings.social_instagram_link -%}
 {%- assign twitter               = settings.social_twitter_link -%}
@@ -159,7 +160,7 @@
         </div>
       {%- endif -%}
 
-      {%- if payment_methods.size > 0 -%}
+      {%- if show_payments and payment_methods.size > 0 -%}
         <div class="footer__payments payments">
           {%- render 'payments', payments: payment_methods -%}
         </div>
@@ -325,6 +326,12 @@
         "type": "checkbox",
         "id": "full_width",
         "label": "Full-width background",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_payments",
+        "label": "Show payment icons",
         "default": true
       },
       {
