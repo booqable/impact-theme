@@ -124,9 +124,20 @@
   transform: translate(-50%, -50%);
 }
 
+.hero__vision--video {
+  container: hero-vision / size;
+}
+
 .hero__video {
   pointer-events: none;
-  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-width: none;
+  object-fit: cover;
 }
 
 .hero__text-area--color .hero__content,
@@ -196,17 +207,6 @@
     background: linear-gradient(var(--overlay-direction), var(--background-overlay) 25.94%, var(--background-overlay-00) 100%);
   }
 
-  .hero__video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: auto;
-    aspect-ratio: 16 / 9;
-    max-width: none;
-    object-fit: cover;
-  }
-
   .hero__text-area {
     justify-content: var(--text-justify-content);
     text-align: var(--text-align);
@@ -223,13 +223,6 @@
   }
 }
 
-@media (min-width: 992px) and (min-height: 1080px) {
-  .hero__wrapper-full-height .hero__video {
-    width: auto;
-    height: 100%;
-  }
-}
-
 @media (min-width: 1200px) {
   .hero__container .hero__wrapper {
     padding-right: var(--horizontal-padding);
@@ -237,15 +230,16 @@
   }
 }
 
-@media (min-width: 1920px) {
-  .hero__video {
+@container (aspect-ratio > 16 / 9) {
+  .hero__vision--video .hero__video {
     width: 100%;
+    height: auto;
   }
 }
 
-@media (min-width: 2230px) and (min-height: 1080px) {
-  .hero__wrapper-full-height .hero__video {
-    width: 100%;
-    height: auto;
+@container (aspect-ratio <= 16 / 9) {
+  .hero__vision--video .hero__video {
+    width: auto;
+    height: 100%;
   }
 }
