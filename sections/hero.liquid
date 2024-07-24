@@ -188,7 +188,7 @@
 {%- unless full_width -%}
   <div class="hero__container container">
 {%- endunless -%}
-    <div class="hero__wrapper hero__wrapper-{{- height -}}-height{% if padding_top != blank or padding_top_mobile != blank %} hero__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} hero__wrapper--padding-bottom{% endif %} color-{{- color_scheme.id -}}" style="{{- variables | escape -}}">
+    <div class="hero__wrapper{% if padding_top != blank or padding_top_mobile != blank %} hero__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} hero__wrapper--padding-bottom{% endif %} color-{{- color_scheme.id -}}" style="{{- variables | escape -}}">
       {%- if full_width -%}
         <div class="hero__container container">
       {%- endif -%}
@@ -220,7 +220,7 @@
         </div>
       {%- endif -%}
 
-      <div class="hero__vision">
+      <div class="hero__vision{% if video_url != blank %} hero__vision--video{%- endif -%}">
         {%- if video_url contains "youtube.com" -%}
           {%- assign video_drop = video_url | split: "?v=" -%}
           {%- assign video_id   = video_drop | last | strip -%}
