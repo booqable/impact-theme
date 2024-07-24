@@ -3,6 +3,7 @@
 {%- assign breadcrumbs_collections_label = section.settings.breadcrumbs_collections_label -%}
 {%- assign breadcrumbs_root_label        = section.settings.breadcrumbs_root_label -%}
 {%- assign breadcrumbs_root_url          = section.settings.breadcrumbs_root_url -%}
+{%- assign bundle                        = product.products -%}
 {%- assign color_scheme                  = section.settings.color_scheme -%}
 {%- assign description                   = product.description -%}
 {%- assign images                        = product.images -%}
@@ -114,6 +115,28 @@
 
         {%- else -%}
           <ul class="product-main__gallery">
+            {%- assign unique_image_urls = "" | split: "," -%}
+
+            {%- for item in bundle -%}
+              {%- for image in item.images -%}
+                {% if forloop.first %}
+                  {%- assign current_url = image.url -%}
+
+                  {%- unless unique_image_urls contains current_url -%}
+                    {%- assign unique_image_urls = unique_image_urls | append: current_url -%}
+
+                    <li class="product-main__gallery-item{% if show_border %} product-main__gallery-item--borders{%- endif -%}">
+                      {%- render 'image',
+                          image: image,
+                          loading: 'lazy',
+                          class: 'product-main__gallery-image',
+                          size: 'xl'
+                      -%}
+                    </li>
+                  {%- endunless -%}
+                {% endif %}
+              {%- endfor -%}
+            {%- endfor -%}
             {%- for image in images -%}
               <li class="product-main__gallery-item{% if show_border %} product-main__gallery-item--borders{%- endif -%}">
                 {%- render 'image',
