@@ -10,7 +10,7 @@
 {%- assign image_fit             = section.settings.image_fit -%}
 {%- assign image_placeholder     = settings.image_placeholder -%}
 {%- assign is_focal              = false -%}
-{%- assign limit                 = section.settings.limit -%}
+{%- assign limit                 = 8 -%}
 {%- assign menu                  = false -%}
 {%- assign message               = section.settings.message -%}
 {%- assign mobile_toggler        = section.settings.mobile_toggler -%}
@@ -18,6 +18,7 @@
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign results_limit         = section.settings.results_limit -%}
 {%- assign rounded_corners       = section.settings.rounded_corners -%}
 {%- assign show_excerpt          = section.settings.show_excerpt -%}
 {%- assign show_navigation       = section.settings.show_navigation -%}
@@ -41,6 +42,10 @@
   {{ "carousel.css" | asset_url | stylesheet_tag }}
 
   {%- assign items = collection.items -%}
+
+  {% unless show_pagination %}
+    {%- assign limit = nil -%}
+  {% endunless %}
 {%- endif -%}
 
 {%- case borders -%}
@@ -132,7 +137,7 @@
             </div>
         {%- endif -%}
 
-              {%- paginate results by limit -%}
+              {%- paginate results by results_limit -%}
                 <div class="search-results">
                   {%- for result in results -%}
                     {%- render 'product-card',
@@ -175,7 +180,7 @@
               <div class="search__carousel carousel carousel__pause" aria-role="Gallery">
                 <input class="carousel__timer" type="hidden" name="hidden" value="{{- timer -}}" aria-hidden="true">
                 <div class="carousel__wrapper">
-                  {%- for item in items limit: 8 -%}
+                  {%- for item in items limit: limit -%}
                     {% assign product = item %}
 
                     <div class="carousel__item">
@@ -207,7 +212,7 @@
 
                 {%- if show_pagination -%}
                   <div class="carousel__pagination hidden" aria-role="Carousel navigation">
-                    {%- for item in items limit: 8 -%}
+                    {%- for item in items limit: limit -%}
                       {%- assign first = forloop.first -%}
                       {%- assign index = forloop.index -%}
 
@@ -324,7 +329,7 @@
       },
       {
         "type": "number",
-        "id": "limit",
+        "id": "results_limit",
         "label": "Pagination limit",
         "min": 6,
         "max": 24,
