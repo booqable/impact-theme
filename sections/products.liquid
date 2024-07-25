@@ -1,8 +1,28 @@
+{%- assign blocks     = section.blocks -%}
 {%- assign collection = section.settings.collection -%}
-{%- assign blocks = section.blocks -%}
 
-{%- if blocks.size > 0 or collection.items_count > 0 -%}
+{%- if collection != blank -%}
+  {%- assign items         = collection.items -%}
+  {%- assign items_type    = "collection" -%}
+  {%- assign size          = collection.items_count -%}
+{%- else -%}
+  {%- assign items         = blocks -%}
+  {%- assign items_type    = "blocks" -%}
+  {%- assign product_items = "" -%}
 
+  {%- for item in items -%}
+    {%- if product_items == "" -%}
+      {%- assign product_items = item.id -%}
+    {%- else -%}
+      {%- assign product_items = product_items | append: ", " | append: item.id -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- assign product_items_arr = product_items | split: ", " -%}
+  {%- assign size = product_items_arr | size -%}
+{%- endif -%}
+
+{%- if size > 0 -%}
   {{ "products.css" | asset_url | stylesheet_tag }}
   {{ "product-card.css" | asset_url | stylesheet_tag }}
 
@@ -14,6 +34,7 @@
   {%- assign image_fit             = section.settings.image_fit -%}
   {%- assign image_placeholder     = settings.image_placeholder -%}
   {%- assign is_focal              = false -%}
+  {%- assign limit                 = 8 -%}
   {%- assign padding_top           = section.settings.padding_top -%}
   {%- assign padding_bottom        = section.settings.padding_bottom -%}
   {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
@@ -31,20 +52,16 @@
     {%- assign is_focal = true -%}
   {%- endif -%}
 
-  {%- if collection != blank -%}
-    {%- assign items = collection.items -%}
-    {%- assign items_type = "collection" -%}
-  {%- else -%}
-    {%- assign items = blocks -%}
-    {%- assign items_type = "blocks" -%}
-  {%- endif -%}
-
   {%- assign carousel = false -%}
 
-  {%- if blocks.size > 1 or collection.items_count > 1 -%}
+  {%- if size > 1 -%}
     {{ "carousel.css" | asset_url | stylesheet_tag }}
 
     {%- assign carousel = true -%}
+
+    {% unless show_pagination %}
+      {%- assign limit = nil -%}
+    {% endunless %}
   {%- endif -%}
 
   {%- assign border = false -%}
@@ -149,7 +166,7 @@
           <div class="carousel__wrapper">
         {%- endif -%}
 
-            {%- for item in items limit: 8 -%}
+            {%- for item in items limit: limit -%}
               {% case items_type %}
                 {% when "blocks" %}
                   {% assign product = item.settings.product %}
@@ -192,7 +209,7 @@
 
           {%- if show_pagination -%}
             <div class="carousel__pagination hidden" aria-role="Carousel navigation">
-              {%- for item in items limit: 8 -%}
+              {%- for item in items limit: limit -%}
                 {%- assign first = forloop.first -%}
                 {%- assign index = forloop.index -%}
 

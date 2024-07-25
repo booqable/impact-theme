@@ -16,7 +16,8 @@
 }
 
 .footer__container .footer__wrapper {
-  border-radius: var(--border-radius-rounded-blocks);
+  border-top-left-radius: var(--border-radius-rounded-blocks);
+  border-top-right-radius: var(--border-radius-rounded-blocks);
   padding-right: var(--horizontal-padding-mobile);
   padding-left: var(--horizontal-padding-mobile);
 }
