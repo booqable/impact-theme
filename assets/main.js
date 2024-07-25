@@ -3,8 +3,7 @@ class Main {
     this.body = body;
 
     this.selector = {
-      image: ".focal-image",
-      productDescription: ".product-card__description"
+      image: ".focal-image"
     }
 
     this.modifier = {
@@ -26,19 +25,13 @@ class Main {
   init() {
     if (!this.body) return false;
 
-    this.elements();
     this.events();
-  }
-
-  elements() {
-    this.productDescriptions = document.querySelectorAll(this.selector.productDescription);
   }
 
   events() {
     this.getBodyHeight();
     this.setLoadedClass();
     this.focalImages();
-    this.truncateDescription();
 
     window.addEventListener("resize", this.getBodyHeight.bind(this));
   }
@@ -88,48 +81,6 @@ class Main {
 
       image.style.opacity = 1;
     })
-  }
-
-  // truncate product description
-  truncateDescription() {
-    if (!this.productDescriptions.length) return false;
-
-    this.productDescriptions.forEach(description => this.truncateText(description, 125))
-  }
-
-  truncateText(element, maxLength) {
-    const text = element.innerHTML;
-    const truncatedText = this.truncateString(text, maxLength);
-    element.innerHTML = truncatedText;
-  }
-
-  truncateString(str, num) {
-    let totalLength = 0,
-        result = "";
-
-    for (let i = 0; i < str.length; i++) {
-      if (totalLength >= num) {
-        result += " ...";
-        break;
-      }
-
-      const char = str[i];
-
-      if (char === "<") {
-        const endTagIndex = str.indexOf(">", i);
-
-        if (endTagIndex !== -1) {
-          const tag = str.substring(i, endTagIndex + 1);
-          result += tag;
-          i = endTagIndex;
-        }
-      } else {
-        result += char;
-        totalLength++;
-      }
-    }
-
-    return result;
   }
 }
 

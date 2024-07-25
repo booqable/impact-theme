@@ -55,6 +55,16 @@
   {%- assign price   = product | product_price -%}
   {%- assign period  = product | product_price_label -%}
 
+  {%- unless excerpt.contains ";</li" or excerpt.contains ".</li" or excerpt.contains "; </li" or excerpt.contains ". </li" -%}
+    {%- assign excerpt = excerpt | replace: "</li", "; </li" -%}
+    {%- assign excerpt = excerpt | replace: ";;", "; " -%}
+    {%- assign excerpt = excerpt | replace: "; ;", "; " -%}
+    {%- assign excerpt = excerpt | replace: ".;", "." -%}
+    {%- assign excerpt = excerpt | replace: ". ;", ". " -%}
+  {%- endunless -%}
+
+  {%- assign excerpt = excerpt | strip_html | truncatewords: 25, "" -%}
+
 {%- else -%}
   {%- if placeholder != blank -%}
     {%- assign image = placeholder -%}
@@ -103,7 +113,7 @@
     </h3>
 
     {%- if excerpt != blank and show_excerpt -%}
-      <div class="product-card__description bq-content rx-content">{{- excerpt -}}</div>
+      <div class="product-card__description">{{- excerpt -}}</div>
     {%- endif -%}
 
     {%- if price != blank and period != blank -%}
