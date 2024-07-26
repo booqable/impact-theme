@@ -18,7 +18,10 @@ class Main {
     }
 
     this.cssVar = {
-      bodyHeight: '--body-height',
+      bodyHeight: '--body-height'
+    }
+
+    this.cssProp = {
       maxHeight: 'max-height',
       paddingTop: 'padding-top',
       paddingBottom: 'padding-bottom'
@@ -54,13 +57,14 @@ class Main {
     this.setCssVar(this.cssVar.bodyHeight, height);
   }
 
+  // set class for truncation product card description
   setTruncationClass() {
     if (!this.excerpts.length) return false;
 
     const styles = window.getComputedStyle(this.excerpts[0]),
-          paddingTop = parseInt(styles.getPropertyValue(this.cssVar.paddingTop)),
-          paddingBottom = parseInt(styles.getPropertyValue(this.cssVar.paddingBottom)),
-          maxHeight = parseInt(styles.getPropertyValue(this.cssVar.maxHeight)),
+          paddingTop = parseInt(styles.getPropertyValue(this.cssProp.paddingTop)),
+          paddingBottom = parseInt(styles.getPropertyValue(this.cssProp.paddingBottom)),
+          maxHeight = parseInt(styles.getPropertyValue(this.cssProp.maxHeight)),
           minHeight = maxHeight / 2 + paddingBottom + paddingTop;
 
     this.excerpts.forEach(excerpt => {
