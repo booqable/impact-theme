@@ -3,13 +3,11 @@ class Main {
     this.body = body;
 
     this.selector = {
-      image: ".focal-image",
-      excerpt: ".product-card__description"
+      image: ".focal-image"
     }
 
     this.modifier = {
-      loaded: "loaded",
-      truncated: "truncated"
+      loaded: "loaded"
     }
 
     this.data = {
@@ -21,59 +19,27 @@ class Main {
       bodyHeight: '--body-height'
     }
 
-    this.cssProp = {
-      maxHeight: 'max-height',
-      paddingTop: 'padding-top',
-      paddingBottom: 'padding-bottom'
-    }
-
     this.focalImageTimeout;
   }
 
   init() {
     if (!this.body) return false;
 
-    this.elements();
     this.events();
-  }
-
-  elements() {
-    this.excerpts = document.querySelectorAll(this.selector.excerpt);
   }
 
   events() {
     this.getBodyHeight();
     this.setLoadedClass();
     this.focalImages();
-    this.setTruncationClass();
 
     window.addEventListener("resize", this.getBodyHeight.bind(this));
-    window.addEventListener("resize", this.setTruncationClass.bind(this));
   }
 
   getBodyHeight() {
     const height = this.body.getBoundingClientRect().height
 
     this.setCssVar(this.cssVar.bodyHeight, height);
-  }
-
-  // set class for truncation product card description
-  setTruncationClass() {
-    if (!this.excerpts.length) return false;
-
-    const styles = window.getComputedStyle(this.excerpts[0]),
-          paddingTop = parseInt(styles.getPropertyValue(this.cssProp.paddingTop)),
-          paddingBottom = parseInt(styles.getPropertyValue(this.cssProp.paddingBottom)),
-          maxHeight = parseInt(styles.getPropertyValue(this.cssProp.maxHeight)),
-          minHeight = maxHeight / 2 + paddingBottom + paddingTop;
-
-    this.excerpts.forEach(excerpt => {
-      const height = excerpt.getBoundingClientRect().height
-
-      height > minHeight
-        ? excerpt.classList.add(this.modifier.truncated)
-        : excerpt.classList.remove(this.modifier.truncated)
-    })
   }
 
   setCssVar(key, val) {
