@@ -109,7 +109,7 @@
           </h2>
 
           <div class="title__description text-medium bq-content rx-content">
-            {{- custom_description | default: collection.description | default: page_description -}}
+            {{- custom_description | default: collection.description -}}
           </div>
         </div>
   {%- if full_width -%}
