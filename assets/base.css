@@ -440,8 +440,8 @@ img {
   }
 }
 
-.tippy-box *:not(label),
-.bq-modal *:not(label) {
+.tippy-box *:not(label):not(.DayPicker-Day):not([class*="MiniCart"] > [class*="Head-"]):not([class*="Services"]),
+.bq-modal *:not(label):not([class*="DateTimeInput"]):not([class*="DatePickerInput"] > div):not([class*="Select__control"]) {
   border-radius: var(--border-radius-rounded) !important;
 }
 
