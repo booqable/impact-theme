@@ -1,18 +1,19 @@
 {{ "account.css" | asset_url | stylesheet_tag }}
 
-{%- assign button_primary_label  = section.settings.button_primary_label | default: "Change my password" -%}
+{%- assign button_primary_label  = section.settings.button_primary_label | default: "Accept invite" -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
-{%- assign description           = section.settings.description -%}
 {%- assign image                 = section.settings.image -%}
-{%- assign padding_top           = section.settings.padding_top -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
-{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-{%- assign password_label        = section.settings.password_label | default: "New password" | append: "*" -%}
-{%- assign password_confirmation = section.settings.password_confirmation | default: "Confirm new password" | append: "*" -%}
+{%- assign padding_top           = section.settings.padding_top -%}
+{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+{%- assign password_confirmation = section.settings.password_confirmation | default: "Confirm new password" -%}
+{%- assign password_label        = section.settings.password_label | default: "New password" -%}
+{%- assign please_enter_password = section.settings.please_enter_password -%}
 {%- assign rounded_corners       = section.settings.rounded_corners -%}
 {%- assign show_border           = section.settings.show_border -%}
-{%- assign title                 = section.settings.title -%}
+{%- assign success_link_label    = section.settings.success_link_label -%}
+{%- assign you_are_invited       = section.settings.you_are_invited -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -71,27 +72,41 @@
 >
   <div class="account__container container">
     <div class="account__inner{% if show_border %} account__inner--border{%- endif -%}">
-      <h3 class="account__title text-center">
-        {{- title | default: "Change your password" -}}
-      </h3>
-
-      {%- if description != blank -%}
-        <div class="account__divider text-center">
-          {{- description -}}
-        </div>
+      {%- if alert -%}
+        <div class="account__alert account__alert--danger">{{ alert }}</div>
       {%- endif -%}
 
-      <hr class="account__separator">
+      {%- if notice -%}
+        <div class="account__alert account__alert--info">{{ notice }}</div>
+      {%- endif -%}
 
-      {%- form 'edit_password' -%}
-        {%- render 'form-password-session-pages',
-            form: form,
-            form_name: "edit_password",
-            password_label: password_label,
-            password_confirmation_label: password_confirmation,
-            button_label: button_primary_label
-        -%}
-      {%- endform -%}
+      {%- if success_link_url -%}
+        <a href="{{ success_link_url }}">{{ success_link_label }}</a>
+      {%- endif -%}
+
+      {%- unless hide_form -%}
+        {% if you_are_invited or please_enter_password %}
+          <div class="account__alert account__alert--info">
+            {% if you_are_invited %}
+              <p>{{ you_are_invited }}</p>
+            {% endif %}
+
+            {% if please_enter_password %}
+              <p>{{ please_enter_password }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {%- form 'accept_invitation' -%}
+          {%- render 'form-password-session-pages',
+              form: form,
+              form_name: "accept_invitation",
+              password_label: password_label,
+              password_confirmation_label: password_confirmation,
+              button_label: button_primary_label
+          -%}
+        {%- endform -%}
+      {%- endunless -%}
     </div>
   </div>
   {%- if image.url != blank -%}
@@ -107,11 +122,11 @@
 
 {% schema %}
   {
-    "name": "Edit password form",
+    "name": "Accept invitation form",
     "important": true,
     "unique": true,
     "tag": "section",
-    "templates": ["edit-password"],
+    "templates": ["accept-invitation"],
     "settings": [
       {
         "type": "header",
@@ -125,13 +140,13 @@
       },
       {
         "type": "text",
-        "id": "title",
-        "label": "Title"
+        "id": "you_are_invited",
+        "label": "Accept invitation title"
       },
       {
         "type": "text",
-        "id": "description",
-        "label": "Description"
+        "id": "please_enter_password",
+        "label": "Password instructions"
       },
       {
         "type": "text",
@@ -142,6 +157,11 @@
         "type": "text",
         "id": "password_confirmation",
         "label": "Password confirmation label"
+      },
+      {
+        "type": "text",
+        "id": "success_link_label",
+        "label": "Success link label"
       },
       {
         "type": "image_picker",
