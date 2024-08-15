@@ -107,8 +107,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": false
+            "show_transparency": false,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -277,8 +277,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -448,8 +448,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": false
+            "show_transparency": false,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -619,8 +619,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": false
+            "show_transparency": false,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -790,8 +790,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -961,8 +961,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -1131,8 +1131,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -1302,8 +1302,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -1472,8 +1472,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -1642,8 +1642,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -1813,8 +1813,8 @@
             "show_search": true,
             "show_payments": false,
             "show_payments_mobile": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -1984,8 +1984,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": false
+            "show_transparency": false,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -2155,8 +2155,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -2326,8 +2326,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -2497,8 +2497,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": false
+            "show_transparency": false,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -2668,8 +2668,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -2839,8 +2839,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": false
+            "show_transparency": false,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -3009,8 +3009,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -3180,8 +3180,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -3351,8 +3351,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": false
+            "show_transparency": false,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -3522,8 +3522,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -3693,8 +3693,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": false
+            "show_transparency": false,
+            "sticky_header": true
           },
           "disabled": null
         },
@@ -3864,8 +3864,8 @@
             "show_payments": false,
             "show_payments_mobile": true,
             "show_search": true,
-            "sticky_header": true,
-            "transparent_bg": true
+            "show_transparency": true,
+            "sticky_header": true
           },
           "disabled": null
         },

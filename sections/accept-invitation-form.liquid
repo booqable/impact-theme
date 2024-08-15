@@ -7,8 +7,8 @@
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
 {%- assign padding_top           = section.settings.padding_top -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
-{%- assign password_confirmation = section.settings.password_confirmation | default: "Confirm new password" -%}
-{%- assign password_label        = section.settings.password_label | default: "New password" -%}
+{%- assign password_confirmation = section.settings.password_confirmation | default: "Confirm new password" | append: "*" -%}
+{%- assign password_label        = section.settings.password_label | default: "New password" | append: "*" -%}
 {%- assign please_enter_password = section.settings.please_enter_password -%}
 {%- assign rounded_corners       = section.settings.rounded_corners -%}
 {%- assign show_border           = section.settings.show_border -%}

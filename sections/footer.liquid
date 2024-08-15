@@ -1,28 +1,28 @@
 {{ "footer.css" | asset_url | stylesheet_tag }}
 
 {%- assign app                   = section.blocks | where: "type", "app" | first -%}
-{%- assign full_width            = section.settings.full_width -%}
-{%- assign logo	                 = section.settings.logo -%}
-{%- assign custom_title	         = section.settings.custom_title -%}
-{%- assign bottom_text           = section.settings.bottom_text -%}
 {%- assign bottom_menu           = section.settings.bottom_menu -%}
+{%- assign bottom_text           = section.settings.bottom_text -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
-{%- assign padding_top           = section.settings.padding_top -%}
+{%- assign custom_title	         = section.settings.custom_title -%}
+{%- assign full_width            = section.settings.full_width -%}
+{%- assign link_facebook         = settings.social_facebook_link -%}
+{%- assign link_instagram        = settings.social_instagram_link -%}
+{%- assign link_linkedin         = settings.social_linkedin_link -%}
+{%- assign link_pinterest        = settings.social_pinterest_link -%}
+{%- assign link_snapchat         = settings.social_snapchat_link -%}
+{%- assign link_tiktok           = settings.social_tiktok_link -%}
+{%- assign link_tumblr           = settings.social_tumblr_link -%}
+{%- assign link_twitter          = settings.social_twitter_link -%}
+{%- assign link_vimeo            = settings.social_vimeo_link -%}
+{%- assign link_youtube          = settings.social_youtube_link -%}
+{%- assign logo	                 = section.settings.logo -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
-{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign padding_top           = section.settings.padding_top -%}
+{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign rounded_corners       = section.settings.rounded_corners -%}
 {%- assign show_payments         = section.settings.show_payments -%}
-{%- assign facebook              = settings.social_facebook_link -%}
-{%- assign instagram             = settings.social_instagram_link -%}
-{%- assign twitter               = settings.social_twitter_link -%}
-{%- assign linkedin              = settings.social_linkedin_link -%}
-{%- assign pinterest             = settings.social_pinterest_link -%}
-{%- assign tiktok                = settings.social_tiktok_link -%}
-{%- assign tumblr                = settings.social_tumblr_link -%}
-{%- assign snapchat              = settings.social_snapchat_link -%}
-{%- assign youtube               = settings.social_youtube_link -%}
-{%- assign vimeo                 = settings.social_vimeo_link -%}
 
 {%- case template -%}
   {%- when '404' -%}
@@ -146,7 +146,7 @@
 
 {% comment %} Payments and social component {% endcomment %}
 {%- capture footer_icons -%}
-  {%- if facebook != blank or instagram != blank or twitter != blank or linkedin != blank or pinterest != blank or tiktok != blank or tumblr != blank or snapchat != blank or youtube != blank or vimeo != blank or payment_methods.size > 0 or app != blank -%}
+  {%- if link_facebook != blank or link_instagram != blank or link_twitter != blank or link_linkedin != blank or link_pinterest != blank or link_tiktok != blank or link_tumblr != blank or link_snapchat != blank or link_youtube != blank or link_vimeo != blank or payment_methods.size > 0 or app != blank -%}
     <div class="footer__icons">
       {%- if app %}
         <div class="footer__app">
@@ -154,7 +154,7 @@
         </div>
       {%- endif -%}
 
-      {%- if facebook != blank or instagram != blank or twitter != blank or linkedin != blank or pinterest != blank or tiktok != blank or tumblr != blank or snapchat != blank or youtube != blank or vimeo != blank -%}
+      {%- if link_facebook != blank or link_instagram != blank or link_twitter != blank or link_linkedin != blank or link_pinterest != blank or link_tiktok != blank or link_tumblr != blank or link_snapchat != blank or link_youtube != blank or link_vimeo != blank -%}
         <div class="footer__social">
           {%- render 'socials', settings: settings -%}
         </div>
