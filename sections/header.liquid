@@ -33,6 +33,8 @@
 {%- assign supported_template    = true -%}
 
 {%- case template -%}
+  {%- when 'accept-invitation' -%}
+    {%- assign supported_template = false -%}
   {%- when 'activate-account' -%}
     {%- assign supported_template = false -%}
   {%- when 'edit-password' -%}
