@@ -1,40 +1,46 @@
 {
   "name": "Privacy policy",
   "sections": {
-    "text_1": {
+    "text_164839": {
       "type": "text",
       "blocks": {},
       "block_order": [],
       "settings": {
         "align": "left",
         "color_scheme": "set-4",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "large",
+        "padding_top_mobile": "medium",
         "text": "<p>Cookie policy by Booqable, 2024</p><p>Booqable collects cookies to deliver you the best possible user experience.</p>",
         "title": "Privacy policy"
       },
       "disabled": null
     },
-    "spacer": {
-      "type": "spacer",
-      "blocks": {},
-      "block_order": [],
+    "cookie-notice-preferences": {
+      "type": "cookie-notice-preferences",
       "settings": {
-        "color_scheme": "set-1",
-        "image": "",
-        "size": "medium",
-        "size_mobile": "small"
+        "background_color": "#FFFFFF",
+        "button_text": "Cookie preferences",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "paragraph_text": "<p>View or change your cookie preferences.</p>"
       },
       "disabled": null
     },
-    "cookie-notice-preferences": {
-      "type": "cookie-notice-preferences",
-      "settings": {}
-    },
-    "text_2": {
+    "text_164840": {
       "type": "text",
       "blocks": {},
       "block_order": [],
       "settings": {
         "align": "left",
+        "color_scheme": "set-1",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "large",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
         "text": "<p>Use this page to explain what data you collect, with which techniques and why you collect this data.</p>",
         "title": "How and why we use cookies"
       },
@@ -42,9 +48,8 @@
     }
   },
   "order": [
-    "text_1",
-    "spacer",
+    "text_164839",
     "cookie-notice-preferences",
-    "text_2"
+    "text_164840"
   ]
 }
