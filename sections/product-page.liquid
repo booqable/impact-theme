@@ -28,6 +28,7 @@
 {%- assign bundle_items                  = product | bundle_items -%}
 {%- assign quantity                      = product | product_button -%}
 {%- assign price                         = product | product_price -%}
+{%- assign period                        = product | product_price_label -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -152,7 +153,17 @@
 
       <div class="product-main__info">
         <h1 class="product-main__title">{{- title -}}</h1>
-        <div class="product-main__price">{{- price -}}</div>
+
+        {%- if price != blank -%}
+          <div class="product-main__price">
+            {{- price -}}
+
+            {%- if period != blank -%}
+              <span class="product-main__price-separator">/</span>
+              {{- period -}}
+            {%- endif -%}
+          </div>
+        {%- endif -%}
 
         {%- if description != blank -%}
           <div class="product-main__description bq-content rx-content">{{- description -}}</div>
