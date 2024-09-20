@@ -41,6 +41,10 @@
   margin: 0 0 20px;
 }
 
+.product-main__price-separator {
+  margin: 0 5px;
+}
+
 .product-main__price bq-product-price {
   font-size: 24px;
   font-family: var(--font-body);
