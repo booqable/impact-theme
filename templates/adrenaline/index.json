@@ -13,6 +13,7 @@
         "color_scheme": "set-4",
         "description": "Kick up some dirt with our high-performance ATVs and buggies, <br/> ready to elevate your outdoor adventures to adrenaline-pumping heights.",
         "full_width": false,
+        "full_width_content": true,
         "height": "medium",
         "image": "booqable://assets/image-hero.jpg",
         "image_mobile": "",

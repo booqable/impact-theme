@@ -13,6 +13,7 @@
         "color_scheme": "set-4",
         "description": "<p>Discover the perfect blend of performance and comfort with our</p>\n<p>premium ski rental gear, tailored for every skill level and adventure.</p>",
         "full_width": true,
+        "full_width_content": true,
         "height": "full",
         "image": "booqable://assets/image-hero.jpeg",
         "image_mobile": "",

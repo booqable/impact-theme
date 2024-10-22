@@ -13,6 +13,7 @@
         "color_scheme": "set-4",
         "description": "<p>A world of endless fun with our extensive collection of gaming rentals.  <br> From the latest consoles to classic favorites.</p>",
         "full_width": false,
+        "full_width_content": true,
         "height": "medium",
         "image": "booqable://assets/image-hero.png",
         "image_mobile": "",

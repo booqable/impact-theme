@@ -13,6 +13,7 @@
         "color_scheme": "set-2",
         "description": "<p>Rent a bike for your vacation and discover scenic routes at your own pace. Perfect for casual rides or adventurous explorations.</p>",
         "full_width": true,
+        "full_width_content": true,
         "height": "medium",
         "image": "booqable://assets/image-hero.jpeg",
         "image_mobile": "",

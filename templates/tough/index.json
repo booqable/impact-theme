@@ -13,6 +13,7 @@
         "color_scheme": "set-4",
         "description": "<p>Efficient and reliable dumpster rentals for any project—big or small.</p>\n<p> Streamline your clean up with ease and convenience</p>",
         "full_width": false,
+        "full_width_content": true,
         "height": "medium",
         "image": "booqable://assets/image-hero.jpg",
         "image_mobile": "",
