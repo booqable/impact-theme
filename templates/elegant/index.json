@@ -13,6 +13,7 @@
         "color_scheme": "set-3",
         "description": "<p>Find the perfect prom dress from our stunning collection. </p>\n<p>Affordable elegance to make you shine at your prom.</p>",
         "full_width": true,
+        "full_width_content": true,
         "height": "medium",
         "image": "booqable://assets/image-hero.jpg",
         "image_mobile": null,

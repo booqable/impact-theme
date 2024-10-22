@@ -13,6 +13,7 @@
         "color_scheme": "set-4",
         "description": "Discover the serene beauty of the waterways with our kayak rentals. Perfect for beginners and seasoned paddlers alike.",
         "full_width": true,
+        "full_width_content": true,
         "height": "medium",
         "image": "booqable://assets/image-hero.jpeg",
         "image_mobile": "",

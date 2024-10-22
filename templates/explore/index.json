@@ -13,6 +13,7 @@
         "color_scheme": "set-4",
         "description": "Embark on unforgettable journeys with our campervans, your home <br> away from home. Discover the perfect blend of comfort and adventure.",
         "full_width": true,
+        "full_width_content": true,
         "height": "medium",
         "image": "booqable://assets/image-hero.jpeg",
         "image_mobile": "",

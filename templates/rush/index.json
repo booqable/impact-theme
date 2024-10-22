@@ -13,6 +13,7 @@
         "color_scheme": "set-4",
         "description": "<p>Experience the thrill of speed and spray with our top-of-the-line </p><p>jet ski rentals. Perfect for adventure seekers.</p>",
         "full_width": false,
+        "full_width_content": true,
         "height": "medium",
         "image": "booqable://assets/image-hero.png",
         "image_mobile": "",
