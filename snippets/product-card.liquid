@@ -68,7 +68,7 @@
 {%- endif -%}
 
 <div class="product-card product-card--{{- border -}}-border" {% if id != blank %}id="{{- id -}}"{%- endif -%}>
-  <div class="product-card__vision{% unless image != blank %} no-image{%- endunless -%}">
+  <div class="product-card__vision{% unless image.url != blank %} no-image{%- endunless -%}">
     {%- if image.url != blank -%}
       {%- render 'image',
         image: image,

@@ -85,7 +85,7 @@
             {%- assign image = block.settings.image -%}
             {%- assign url   = block.settings.url -%}
 
-            {%- if image != blank -%}
+            {%- if image.url != blank -%}
               {%- assign image = image -%}
             {%- elsif image_placeholder != blank -%}
               {%- assign image = image_placeholder -%}
