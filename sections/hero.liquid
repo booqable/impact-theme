@@ -31,7 +31,7 @@
 {%- assign transition_style        = section.settings.transition_style -%}
 {%- assign video_url               = section.settings.video_url | strip -%}
 
-{%- if image != blank -%}
+{%- if image.url != blank -%}
   {%- assign image = image -%}
 {%- elsif image_placeholder != blank -%}
   {%- assign image = image_placeholder -%}
@@ -261,7 +261,7 @@
             ></iframe>
           </div>
 
-        {%- elsif image != blank or image_mobile != blank -%}
+        {%- elsif image.url != blank or image_mobile.url != blank -%}
           {%- if image.url != blank -%}
             <div class="hero__vision-wrapper{% if image_mobile != blank %} hero__vision-wrapper--desktop{% endif %}{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
               {%- render 'image',

@@ -138,7 +138,7 @@
   <div class="cta__container container">
 {%- endunless -%}
     <div class="cta__wrapper{% if padding_top != blank or padding_top_mobile != blank %} cta__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} cta__wrapper--padding-bottom{% endif %} color-{{- color_scheme.id -}}" style="{{- variables | escape -}}">
-      {%- if tag != blank or tag_image != blank or title != blank or button_primary_label != blank and button_primary_url != blank -%}
+      {%- if tag != blank or tag_image.url != blank or title != blank or button_primary_label != blank and button_primary_url != blank -%}
         {%- if full_width -%}
           <div class="cta__container container">
         {%- endif -%}
