@@ -7,7 +7,6 @@
 {%- assign color_scheme            = section.settings.color_scheme -%}
 {%- assign description             = section.settings.description -%}
 {%- assign full_width              = section.settings.full_width -%}
-{%- assign full_width_content      = section.settings.full_width_content -%}
 {%- assign height                  = section.settings.height -%}
 {%- assign image                   = section.settings.image -%}
 {%- assign image_mobile            = section.settings.image_mobile -%}
@@ -193,7 +192,7 @@
       {%- if full_width -%}
         <div class="hero__container container">
       {%- endif -%}
-          <div class="hero__text-area{% if full_width_content %} hero__text-area--full-width{% endif %}{% if show_overlay %} hero__text-area--color{%- endif -%}">
+          <div class="hero__text-area{% if show_overlay %} hero__text-area--color{%- endif -%}">
             <div class="hero__content">
               {%- if title != blank -%}
                 <h1 class="hero__title">{{- title -}}</h1>
@@ -329,12 +328,6 @@
         "id": "description",
         "label": "Description",
         "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <br> varius enim in eros elementum tristique."
-      },
-      {
-        "type": "checkbox",
-        "id": "full_width_content",
-        "label": "Full-width text content",
-        "default": true
       },
       {
         "type": "image_picker",
