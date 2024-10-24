@@ -27,7 +27,7 @@
 
 .error-404__title {
   font-size: clamp(72px, 12.5vw, 180px);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-h1);
   line-height: var(--line-height-sm);
   text-align: center;
   color: currentColor;

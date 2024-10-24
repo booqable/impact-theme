@@ -35,7 +35,6 @@
 
 .account__title {
   font-size: 40px;
-  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-md);
 }
 

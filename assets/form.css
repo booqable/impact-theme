@@ -7,7 +7,6 @@
 }
 
 .form__title {
-  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-md);
   margin-bottom: 22px;
 }

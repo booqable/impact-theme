@@ -68,7 +68,6 @@
 
 .accordion__heading {
   font-size: var(--font-size-large);
-  font-weight: var(--font-weight-extrabold);
   margin: 0;
   line-height: inherit;
   display: flex;

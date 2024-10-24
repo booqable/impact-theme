@@ -71,7 +71,6 @@
   display: block;
   color: inherit;
   margin-bottom: 15px;
-  font-weight: var(--font-weight-bold);
 }
 
 .columns__description {

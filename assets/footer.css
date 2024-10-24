@@ -47,7 +47,7 @@
   font-size: var(--font-size-regular);
   display: block;
   padding: 0 0 15px;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-headers);
   text-align: var(--footer-menu-align);
   color: var(--color-outline);
 }
