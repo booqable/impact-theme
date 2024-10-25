@@ -16,6 +16,7 @@
         "height": "medium",
         "image": "booqable://assets/image-hero.jpeg",
         "image_mobile": "",
+        "limit_content_width": false,
         "overlay_background": "#092025",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 60,
