@@ -20,7 +20,8 @@
 .menu__opener b {
   display: none;
   margin-right: 12px;
-  font-weight: var(--font-weight-extrabold);
+  white-space: nowrap;
+  font-weight: var(--font-weight-h2);
 }
 
 .menu__opener i {
@@ -154,7 +155,7 @@
 
 .menu__link {
   font-size: var(--font-size-large);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-headers);
   line-height: var(--line-height-lg);
   padding: 19px 0 13px 0;
   grid-area: item-1;
@@ -246,12 +247,17 @@
 .menu__dropdown-closer {
   display: none;
   font-size: 40px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-h2);
   line-height: var(--line-height-md);
   letter-spacing: -2px;
   padding: 0 0 38px;
   width: auto;
   height: auto;
+}
+
+.menu__label b,
+.menu__dropdown-closer b {
+  font-weight: inherit;
 }
 
 .menu__dropdown-closer .menu__item-icon {

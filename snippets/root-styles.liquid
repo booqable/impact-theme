@@ -31,16 +31,24 @@
   {% endfor %}
 
   :root {
-    --font-body:          "{{ settings.body_font.family | default: Open Sans }}", {{ settings.body_font.fallback_families | default: sans-serif }};
-    --font-tagline:       "{{ settings.tagline_font.family | default: Open Sans }}", {{ settings.tagline_font.fallback_families | default: sans-serif }};
-    --font-heading:       "{{ settings.heading_font.family | default: Darker Grotesque }}", {{ settings.heading_font.fallback_families | default: sans-serif }};
-    --font-size-h1:       {{ settings.h1_size | append: "px" | default: "80px" }};
-    --font-size-h2:       {{ settings.h2_size | append: "px" | default: "64px" }};
-    --font-size-h3:       {{ settings.h3_size | append: "px" | default: "56px" }};
-    --font-size-tagline:  {{ settings.tagline_size | append: "px" | default: "20px" }};
-    --font-size-large:    {{ settings.large_text_size | append: "px" | default: "18px" }};
-    --font-size-regular:  {{ settings.regular_text_size | append: "px" | default: "16px" }};
-    --animation-duration: {{ settings.animation_duration | append: "s" | default: "0.2s" }};
+    --font-body:           "{{ settings.body_font.family | default: Open Sans }}", {{ settings.body_font.fallback_families | default: sans-serif }};
+    --font-tagline:        "{{ settings.tagline_font.family | default: Open Sans }}", {{ settings.tagline_font.fallback_families | default: sans-serif }};
+    --font-heading:        "{{ settings.heading_font.family | default: Darker Grotesque }}", {{ settings.heading_font.fallback_families | default: sans-serif }};
+    --font-size-h1:        {{ settings.h1_size | append: "px" | default: "80px" }};
+    --font-size-h2:        {{ settings.h2_size | append: "px" | default: "64px" }};
+    --font-size-h3:        {{ settings.h3_size | append: "px" | default: "56px" }};
+    --font-size-tagline:   {{ settings.tagline_size | append: "px" | default: "20px" }};
+    --font-size-large:     {{ settings.large_text_size | append: "px" | default: "18px" }};
+    --font-size-regular:   {{ settings.regular_text_size | append: "px" | default: "16px" }};
+    --font-weight-h1:      {{ settings.font_weight_h1 | default: "800" }};
+    --font-weight-h2:      {{ settings.font_weight_h2 | default: "800" }};
+    --font-weight-h3:      {{ settings.font_weight_h3 | default: "800" }};
+    --font-weight-headers: {{ settings.font_weight_headers | default: "700" }};
+    {% if settings.animation_duration == "0" or settings.animation_duration == blank %}
+      --animation-duration:   0.2s;
+    {% else %}
+      --animation-duration:   {{ settings.animation_duration | append: "s" }};
+    {% endif %}
 
     {% if settings.corner_radius == 'square' %}
       --border-radius: 0;

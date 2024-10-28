@@ -123,7 +123,7 @@
 .bq-content.rx-content h6 {
   font-family: var(--font-heading);
   font-size: var(--font-size-regular);
-  font-weight: var(--font-weight-semibold);
+  font-weight: calc(var(--font-weight-headers) - 100);
   line-height: var(--line-height-lg);
   text-rendering: optimizeLegibility;
   letter-spacing: inherit;
@@ -190,7 +190,7 @@
 }
 
 .bq-content.rx-content dt {
-  font-weight: var(--font-weight-semibold);
+  font-weight: calc(var(--font-weight-headers) - 100);
 }
 
 .bq-content.rx-content dd + dt {
@@ -260,7 +260,7 @@
 }
 
 .bq-content.rx-content thead th {
-  font-weight: var(--font-weight-semibold);
+  font-weight: calc(var(--font-weight-headers) - 100);
 }
 
 .bq-content.rx-content address {
@@ -318,7 +318,7 @@
 
 .bq-content.rx-content b,
 .bq-content.rx-content strong {
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-headers);
 }
 
 .bq-content.rx-content dfn[title],
@@ -333,7 +333,7 @@
 
 .bq-content.rx-content cite {
   font-style: italic;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-headers);
 }
 
 .bq-content.rx-content cite small,
