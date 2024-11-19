@@ -71,6 +71,13 @@
         "content": "Works if 'Around whole product' border style is chosen"
       },
       {
+        "type": "checkbox",
+        "id": "use_card_color_scheme",
+        "label": "Use color scheme",
+        "default": false,
+        "info": "Use these colors instead of section ones"
+      },
+      {
         "type": "header",
         "content": "Image settings"
       },
@@ -88,7 +95,7 @@
             "label": "Contain"
           }
         ],
-        "default": "contain"
+        "default": "cover"
       },
       {
         "type": "checkbox",
@@ -102,7 +109,7 @@
         "id": "card_image_background",
         "label": "Use transparent background",
         "default": false,
-        "info": "Display gaps above and below image. Works with 'Contain' image fit option together"
+        "info": "Display gaps above and below image. Works together with 'Contain' image fit option and if using the color scheme"
       },
       {
         "type": "select",

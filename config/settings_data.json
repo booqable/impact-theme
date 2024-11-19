@@ -178,6 +178,7 @@
       "social_spacing": "md",
       "tagline_font": "open-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "adventure": {
@@ -358,6 +359,7 @@
       "social_spacing": "md",
       "tagline_font": "roboto",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "boost": {
@@ -539,6 +541,7 @@
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "bounce": {
@@ -720,6 +723,7 @@
       "social_spacing": "md",
       "tagline_font": "open-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "capture": {
@@ -901,6 +905,7 @@
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "cruise": {
@@ -1082,6 +1087,7 @@
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "daredevil": {
@@ -1262,6 +1268,7 @@
       "social_spacing": "md",
       "tagline_font": "open-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "elegant": {
@@ -1443,6 +1450,7 @@
       "social_spacing": "md",
       "tagline_font": "dm-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "explore": {
@@ -1623,6 +1631,7 @@
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "flow": {
@@ -1803,6 +1812,7 @@
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "freedom": {
@@ -1984,6 +1994,7 @@
       "social_spacing": "md",
       "tagline_font": "roboto",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "giro": {
@@ -2165,6 +2176,7 @@
       "social_spacing": "md",
       "tagline_font": "open-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "joy": {
@@ -2346,6 +2358,7 @@
       "social_spacing": "md",
       "tagline_font": "open-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "memories": {
@@ -2527,6 +2540,7 @@
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "nite": {
@@ -2708,6 +2722,7 @@
       "social_spacing": "md",
       "tagline_font": "poppins",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "peak": {
@@ -2889,6 +2904,7 @@
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "play": {
@@ -3070,6 +3086,7 @@
       "social_spacing": "md",
       "tagline_font": "baloo-2",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "pure": {
@@ -3250,6 +3267,7 @@
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "ride": {
@@ -3431,6 +3449,7 @@
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "rush": {
@@ -3612,6 +3631,7 @@
       "social_spacing": "md",
       "tagline_font": "poppins",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "sunset": {
@@ -3793,6 +3813,7 @@
       "social_spacing": "md",
       "tagline_font": "open-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "tough": {
@@ -3974,6 +3995,7 @@
       "social_spacing": "md",
       "tagline_font": "open-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "vice": {
@@ -4156,6 +4178,7 @@
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     }
   }
