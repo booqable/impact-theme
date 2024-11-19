@@ -191,18 +191,14 @@
         "product_109849"
       ],
       "settings": {
-        "borders": "image",
         "button_outline_label": "See all products",
         "button_outline_url": "booqable://products/",
         "color_scheme": "set-2",
         "image": "",
-        "image_fit": "cover",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "large",
         "padding_top": "small",
         "padding_top_mobile": "large",
-        "rounded_corners": "large",
-        "show_excerpt": false,
         "show_navigation": true,
         "show_pagination": true,
         "tag": "",

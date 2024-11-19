@@ -58,6 +58,109 @@
     ]
   },
   {
+    "name": "Product card",
+    "settings": [
+      {
+        "type": "color_scheme",
+        "id": "card_color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "paragraph",
+        "content": "Works if 'Around whole product' border style is chosen"
+      },
+      {
+        "type": "header",
+        "content": "Image settings"
+      },
+      {
+        "type": "select",
+        "id": "card_image_fit",
+        "label": "Image fit",
+        "options": [
+          {
+            "value": "cover",
+            "label": "Cover"
+          },
+          {
+            "value": "contain",
+            "label": "Contain"
+          }
+        ],
+        "default": "contain"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_focal_images",
+        "label": "Use focal image",
+        "default": true,
+        "info": "Display point focused image instead of full sized. Works with 'Cover' image fit option together"
+      },
+      {
+        "type": "checkbox",
+        "id": "card_image_background",
+        "label": "Use transparent background",
+        "default": false,
+        "info": "Display gaps above and below image. Works with 'Contain' image fit option together"
+      },
+      {
+        "type": "select",
+        "id": "card_borders",
+        "label": "Border style",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "image",
+            "label": "Around image"
+          },
+          {
+            "value": "full",
+            "label": "Around whole product"
+          }
+        ],
+        "default": "image"
+      },
+      {
+        "type": "select",
+        "id": "card_rounded_corners",
+        "label": "Rounded corners",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "header",
+        "content": "Text settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_card_excerpt",
+        "default": false,
+        "label": "Show description excerpt"
+      }
+    ]
+  },
+  {
     "name": "Typography",
     "settings": [
       {
@@ -310,13 +413,6 @@
   {
     "name": "Images",
     "settings": [
-      {
-        "type": "checkbox",
-        "id": "use_focal_images",
-        "label": "Use focal images",
-        "default": true,
-        "info": "Display point focused images for products instead of full sized"
-      },
       {
         "type": "image_picker",
         "id": "image_placeholder",

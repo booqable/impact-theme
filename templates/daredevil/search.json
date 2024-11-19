@@ -41,12 +41,10 @@
         "item_674326"
       ],
       "settings": {
-        "borders": "image",
         "collection": "all-products",
         "color_scheme": "set-1",
         "full_width": false,
         "grid": "three",
-        "image_fit": "cover",
         "limit": 18,
         "message": "",
         "mobile_toggler": "Menu",
@@ -54,8 +52,6 @@
         "padding_bottom_mobile": "small",
         "padding_top": "small",
         "padding_top_mobile": "small",
-        "rounded_corners": "none",
-        "show_excerpt": false,
         "show_navigation": true,
         "show_pagination": true,
         "sticky_sidebar": true,

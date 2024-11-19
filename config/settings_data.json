@@ -60,6 +60,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "large",
       "corner_radius": "fully_round",
       "font_weight_h1": "600",
       "font_weight_h2": "700",
@@ -168,6 +173,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
@@ -234,6 +240,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "rounded",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -342,6 +353,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "roboto",
@@ -408,6 +420,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "square",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -517,6 +534,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
@@ -583,6 +601,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "large",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -692,6 +715,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
@@ -758,6 +782,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -867,6 +896,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
@@ -933,6 +963,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "square",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -1042,6 +1077,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
@@ -1108,6 +1144,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -1216,6 +1257,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
@@ -1282,6 +1324,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -1391,6 +1438,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "dm-sans",
@@ -1457,6 +1505,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -1565,6 +1618,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
@@ -1631,6 +1685,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "square",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -1739,6 +1798,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
@@ -1805,6 +1865,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -1914,6 +1979,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "roboto",
@@ -1980,6 +2046,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "large",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -2089,6 +2160,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
@@ -2155,6 +2227,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -2264,6 +2341,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
@@ -2330,6 +2408,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -2439,6 +2522,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
@@ -2505,6 +2589,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "large",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -2614,6 +2703,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "poppins",
@@ -2680,6 +2770,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -2789,6 +2884,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
@@ -2855,6 +2951,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "large",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -2964,6 +3065,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "baloo-2",
@@ -3030,6 +3132,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -3138,6 +3245,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
@@ -3204,6 +3312,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -3313,6 +3426,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
@@ -3379,6 +3493,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "large",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -3488,6 +3607,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "poppins",
@@ -3554,6 +3674,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -3663,6 +3788,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
@@ -3729,6 +3855,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "large",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -3838,6 +3969,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
@@ -3904,6 +4036,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -4014,6 +4151,7 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",

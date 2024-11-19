@@ -1,35 +1,36 @@
 {% comment %}
 
-  This snippet is used for rendering the product
+  This snippet is used for rendering the product card
 
   product - { product } *required,
-  placeholder - image optional,
-  border - string optional,
-  focal - boolean optional,
   img_size - string optional,
-  show_excerpt - boolean *required
+  settings - { object } *required
 
   Usage:
 
   {%- render 'product-card',
-      product: your_id,
-      placeholder: your_id,
-      border: your_id,
-      focal: your_id,
-      img_size: your_string,
-      show_excerpt: true
+      settings: settings,
+      img_size: your_string
   -%}
 
 {% endcomment %}
 
-{%- assign id      = "" -%}
-{%- assign url     = "" -%}
-{%- assign image   = "" -%}
-{%- assign name    = "" -%}
-{%- assign excerpt = "" -%}
-{%- assign points  = nil -%}
-{%- assign price   = "" -%}
-{%- assign period  = "" -%}
+{%- assign border          = settings.card_borders -%}
+{%- assign color_scheme    = settings.card_color_scheme -%}
+{%- assign excerpt         = "" -%}
+{%- assign id              = "" -%}
+{%- assign image           = "" -%}
+{%- assign image_bg        = settings.card_image_background -%}
+{%- assign image_fit       = settings.card_image_fit -%}
+{%- assign name            = "" -%}
+{%- assign period          = "" -%}
+{%- assign placeholder     = settings.image_placeholder -%}
+{%- assign points          = nil -%}
+{%- assign price           = "" -%}
+{%- assign rounded_corners = settings.card_rounded_corners -%}
+{%- assign show_excerpt    = settings.show_card_excerpt -%}
+{%- assign url             = "" -%}
+{%- assign use_focal       = settings.use_focal_images -%}
 
 {%- if product != blank -%}
   {%- if product.images != blank -%}
@@ -44,9 +45,9 @@
     {%- assign img_size = 'flexible' -%}
   {%- endif -%}
 
-  {% if focal %}
+  {%- if use_focal and image_fit == 'cover' -%}
     {%- assign points = image.coordinates -%}
-  {% endif %}
+  {%- endif -%}
 
   {%- assign id      = product.id -%}
   {%- assign url     = product.url -%}
@@ -67,8 +68,30 @@
   {%- assign period  = "1 day" -%}
 {%- endif -%}
 
-<div class="product-card product-card--{{- border -}}-border" {% if id != blank %}id="{{- id -}}"{%- endif -%}>
-  <div class="product-card__vision{% unless image.url != blank %} no-image{%- endunless -%}">
+{% comment %} CSS variables start {% endcomment %}
+{%- capture card_variables -%}
+  {%- case image_fit -%}
+    {%- when 'cover' -%}
+      --object-fit: cover;
+    {%- when 'contain' -%}
+      --object-fit: contain;
+  {%- endcase -%}
+
+  {%- case rounded_corners -%}
+    {%- when 'none' -%}
+      --border-radius-rounded-blocks: 0px;
+    {%- when 'small' -%}
+      --border-radius-rounded-blocks: 8px;
+    {%- when 'medium' -%}
+      --border-radius-rounded-blocks: 16px;
+    {%- when 'large' -%}
+      --border-radius-rounded-blocks: 32px;
+  {%- endcase -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
+
+<div class="product-card product-card--{{- border -}}-border{% if border == "full" %} color-{{- color_scheme.id -}}{%- endif -%}"{% if id != blank %} id="{{- id -}}"{% endif %} style="{{- card_variables | escape -}}">
+  <div class="product-card__vision{% if image_fit == 'contain' %}{% unless image_bg %} product-card__vision--white{% endunless %}{% endif %}{% unless image.url != blank %} no-image{%- endunless -%}">
     {%- if image.url != blank -%}
       {%- render 'image',
         image: image,

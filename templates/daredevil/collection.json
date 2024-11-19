@@ -41,11 +41,9 @@
         "item"
       ],
       "settings": {
-        "borders": "image",
         "color_scheme": "set-1",
         "full_width": false,
         "grid": "three",
-        "image_fit": "cover",
         "limit": 18,
         "message": "Sorry, there are no products in this collection yet",
         "mobile_toggler": "Menu",
@@ -53,8 +51,6 @@
         "padding_bottom_mobile": "small",
         "padding_top": "small",
         "padding_top_mobile": "small",
-        "rounded_corners": "none",
-        "show_excerpt": false,
         "sticky_sidebar": true
       },
       "disabled": null

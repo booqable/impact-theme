@@ -1,14 +1,9 @@
 {{ "collection-page.css" | asset_url | stylesheet_tag }}
 {{ "product-card.css" | asset_url | stylesheet_tag }}
 
-{%- assign borders               = section.settings.borders -%}
-{%- assign border                = false -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
 {%- assign full_width            = section.settings.full_width -%}
 {%- assign grid                  = section.settings.grid -%}
-{%- assign image_fit             = section.settings.image_fit -%}
-{%- assign image_placeholder     = settings.image_placeholder -%}
-{%- assign is_focal              = false -%}
 {%- assign limit                 = section.settings.limit -%}
 {%- assign menu                  = false -%}
 {%- assign message               = section.settings.message -%}
@@ -17,13 +12,7 @@
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-{%- assign rounded_corners       = section.settings.rounded_corners -%}
-{%- assign show_excerpt          = section.settings.show_excerpt -%}
 {%- assign sticky_sidebar        = section.settings.sticky_sidebar -%}
-
-{%- if settings.use_focal_images and image_fit == 'cover' -%}
-  {%- assign is_focal = true -%}
-{%- endif -%}
 
 {%- for block in section.blocks -%}
   {%- assign menu = block.settings.menu -%}
@@ -33,13 +22,6 @@
     {%- break -%}
   {%- endif -%}
 {%- endfor -%}
-
-{%- case borders -%}
-  {%- when 'image' -%}
-    {%- assign border = "image" -%}
-  {%- when 'full' -%}
-    {%- assign border = "full" -%}
-{%- endcase -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -79,13 +61,6 @@
       --padding-bottom-mobile: 60px;
   {%- endcase -%}
 
-  {%- case image_fit -%}
-    {%- when 'cover' -%}
-      --object-fit: cover;
-    {%- when 'contain' -%}
-      --object-fit: contain;
-  {%- endcase -%}
-
   {%- case grid -%}
     {%- when 'two' -%}
       --grid-element: 2;
@@ -96,17 +71,6 @@
     {%- when 'four' -%}
       --grid-element: 4;
       --item-min-width: 160px;
-  {%- endcase -%}
-
-  {%- case rounded_corners -%}
-    {%- when 'none' -%}
-      --border-radius-rounded-blocks: 0px;
-    {%- when 'small' -%}
-      --border-radius-rounded-blocks: 8px;
-    {%- when 'medium' -%}
-      --border-radius-rounded-blocks: 16px;
-    {%- when 'large' -%}
-      --border-radius-rounded-blocks: 32px;
   {%- endcase -%}
 {%- endcapture -%}
 {% comment %} CSS variables end {% endcomment %}
@@ -134,10 +98,7 @@
               {%- for product in products -%}
                 {%- render 'product-card',
                     product: product,
-                    placeholder: image_placeholder,
-                    border: border,
-                    focal: is_focal,
-                    show_excerpt: show_excerpt
+                    settings: settings
                 -%}
               {%- endfor -%}
             </div>
@@ -183,72 +144,6 @@
         "id": "full_width",
         "label": "Stretch products to screen edges",
         "default": false
-      },
-      {
-        "type": "select",
-        "id": "rounded_corners",
-        "label": "Rounded corners",
-        "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
-          {
-            "value": "small",
-            "label": "Small"
-          },
-          {
-            "value": "medium",
-            "label": "Medium"
-          },
-          {
-            "value": "large",
-            "label": "Large"
-          }
-        ],
-        "default": "none"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_excerpt",
-        "default": true,
-        "label": "Show product description excerpt"
-      },
-      {
-        "type": "select",
-        "id": "image_fit",
-        "label": "Image fit",
-        "options": [
-          {
-            "value": "cover",
-            "label": "Cover"
-          },
-          {
-            "value": "contain",
-            "label": "Contain"
-          }
-        ],
-        "default": "cover"
-      },
-      {
-        "type": "select",
-        "id": "borders",
-        "label": "Border style",
-        "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
-          {
-            "value": "image",
-            "label": "Around image"
-          },
-          {
-            "value": "full",
-            "label": "Around whole product"
-          }
-        ],
-        "default": "image"
       },
       {
         "type": "number",
