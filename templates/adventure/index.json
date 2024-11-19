@@ -171,18 +171,14 @@
         "product_789649"
       ],
       "settings": {
-        "borders": "image",
         "button_outline_label": "See all products",
         "button_outline_url": "booqable://products/",
         "color_scheme": "set-1",
         "image": "booqable://assets/image-background-beige-dots.jpg",
-        "image_fit": "cover",
         "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
         "padding_top": "large",
         "padding_top_mobile": "medium",
-        "rounded_corners": "small",
-        "show_excerpt": false,
         "show_navigation": true,
         "show_pagination": true,
         "tag": "THIS WEEK",

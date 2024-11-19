@@ -60,6 +60,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "large",
       "corner_radius": "fully_round",
       "font_weight_h1": "600",
       "font_weight_h2": "700",
@@ -168,10 +173,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "adventure": {
@@ -234,6 +241,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "rounded",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -342,10 +354,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "roboto",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "boost": {
@@ -408,6 +422,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "square",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -517,10 +536,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "bounce": {
@@ -583,6 +604,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "large",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -692,10 +718,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "capture": {
@@ -758,6 +786,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -867,10 +900,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "cruise": {
@@ -933,6 +968,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "square",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -1042,10 +1082,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "daredevil": {
@@ -1108,6 +1150,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -1216,10 +1263,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "elegant": {
@@ -1282,6 +1331,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -1391,10 +1445,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "dm-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "explore": {
@@ -1457,6 +1513,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -1565,10 +1626,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "flow": {
@@ -1631,6 +1694,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "square",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -1739,10 +1807,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "freedom": {
@@ -1805,6 +1875,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -1914,10 +1989,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "roboto",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "giro": {
@@ -1980,6 +2057,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "large",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -2089,10 +2171,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "joy": {
@@ -2155,6 +2239,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -2264,10 +2353,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "memories": {
@@ -2330,6 +2421,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -2439,10 +2535,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "nite": {
@@ -2505,6 +2603,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "large",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -2614,10 +2717,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "poppins",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "peak": {
@@ -2680,6 +2785,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -2789,10 +2899,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "play": {
@@ -2855,6 +2967,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "large",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -2964,10 +3081,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "baloo-2",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "pure": {
@@ -3030,6 +3149,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -3138,10 +3262,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "ride": {
@@ -3204,6 +3330,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -3313,10 +3444,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "rush": {
@@ -3379,6 +3512,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "large",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -3488,10 +3626,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "poppins",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "sunset": {
@@ -3554,6 +3694,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "none",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -3663,10 +3808,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "tough": {
@@ -3729,6 +3876,11 @@
           }
         }
       },
+      "card_borders": "image",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "large",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -3838,10 +3990,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "open-sans",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "vice": {
@@ -3904,6 +4058,11 @@
           }
         }
       },
+      "card_borders": "full",
+      "card_color_scheme": "set-1",
+      "card_image_background": false,
+      "card_image_fit": "cover",
+      "card_rounded_corners": "small",
       "corner_radius": "fully_round",
       "font_weight_h1": "800",
       "font_weight_h2": "800",
@@ -4014,10 +4173,12 @@
           "disabled": null
         }
       },
+      "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
       "tagline_font": "darker-grotesque",
       "tagline_size": 20,
+      "use_card_color_scheme": false,
       "use_focal_images": true
     }
   }

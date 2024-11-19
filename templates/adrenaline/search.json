@@ -41,12 +41,10 @@
         "item_360279"
       ],
       "settings": {
-        "borders": "image",
         "collection": "all-products",
         "color_scheme": "set-1",
         "full_width": false,
         "grid": "three",
-        "image_fit": "cover",
         "limit": 18,
         "message": "",
         "mobile_toggler": "MENU",
@@ -54,8 +52,6 @@
         "padding_bottom_mobile": "small",
         "padding_top": "medium",
         "padding_top_mobile": "small",
-        "rounded_corners": "large",
-        "show_excerpt": false,
         "show_navigation": true,
         "show_pagination": true,
         "sticky_sidebar": true,
