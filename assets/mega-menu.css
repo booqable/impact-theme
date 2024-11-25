@@ -287,11 +287,11 @@
   padding: 0;
 }
 
-.touch[data-orientation='landscape'] .menu__bottom {
+.iphone.safari[data-orientation='landscape'] .menu__bottom {
   padding-bottom: 120px;
 }
 
-.touch[data-orientation='portrait'] .menu__bottom {
+.iphone.safari[data-orientation='landscape'] .menu__bottom {
   padding-bottom: 100px;
 }
 

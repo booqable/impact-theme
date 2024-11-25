@@ -178,11 +178,11 @@
   padding-top: calc(var(--header-height, 39px) - var(--top-bar-height, 0px) + 18px);
 }
 
-.touch[data-orientation='landscape'] .header__date-picker-wrapper {
+.iphone.safari[data-orientation='landscape'] .header__date-picker-wrapper {
   width: calc(100vw - var(--horizontal-padding-mobile, 16px) * 2 - 44px * 2);
 }
 
-.touch[data-orientation='landscape'] .header__search-inner {
+.iphone.safari[data-orientation='landscape'] .header__search-inner {
   padding-right: 62px;
   padding-left: 62px;
 }
