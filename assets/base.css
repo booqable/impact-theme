@@ -414,7 +414,7 @@ img {
   padding: 0 var(--horizontal-padding-mobile);
 }
 
-.iphone.safari[data-orientation='landscape'] .container {
+.iphone.notch.safari[data-orientation='landscape'] .container {
   padding-left: calc(44px + var(--horizontal-padding-mobile));
   padding-right: calc(44px + var(--horizontal-padding-mobile));
 }

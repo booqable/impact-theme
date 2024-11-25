@@ -2,6 +2,10 @@ class TouchDevice {
   constructor(block) {
     this.block = block;
 
+    this.modifier = {
+      notch: "notch"
+    }
+
     this.props = {
       portrait: "portrait",
       landscape: "landscape"
@@ -19,10 +23,18 @@ class TouchDevice {
     }
 
     this.devices = [
-      { name: "iPhone", regex: /iPhone/i },
+      { name: "Android Phone", regex: /Android/i },
+      { name: "Android Tablet", regex: /Android/i, exclude: /Mobile/i },
+      { name: "Chromebook", regex: /CrOS/i },
       { name: "iPad", regex: /iPad/i },
+      { name: "iPhone", regex: /iPhone/i },
       { name: "iPod", regex: /iPod/i },
-      { name: "Mac", regex: /Macintosh/i, exclude: /Mobile/i }
+      { name: "Linux", regex: /Linux/i, exclude: /Android|CrOS/i },
+      { name: "Mac", regex: /Macintosh/i, exclude: /Mobile/i },
+      { name: "Other Mobile", regex: /Mobile/i },
+      { name: "Other Tablet", regex: /Tablet/i },
+      { name: "Windows PC", regex: /Windows NT/i },
+      { name: "Windows Phone", regex: /Windows Phone/i }
     ]
 
     this.browsers = [
@@ -66,16 +78,19 @@ class TouchDevice {
   }
 
   addDeviceOrientation() {
-    if (this.deviceDetect() !== "iphone") return false;
+    if (!this.deviceDetect()) return false;
 
     const screen = {
       width: window.innerWidth,
       height: window.innerHeight
     }
     const hasNotch = this.checkDeviceNotch(),
-          isLandscape = hasNotch && screen.width > screen.height;
+          isLandscape = screen.width > screen.height;
 
     this.doc.setAttribute(this.data.orientation, isLandscape ? this.props.landscape : this.props.portrait);
+
+    if (!hasNotch) return false;
+    if (!this.doc.classList.contains(this.modifier.notch)) this.addClass(this.modifier.notch)
   }
 
   checkDeviceNotch() {
@@ -91,7 +106,9 @@ class TouchDevice {
   addClass(name) {
     if (!name) return false;
 
-    this.doc.classList.add(name)
+    const sanitizedName = name.replace(/\s+/g, '-')
+
+    this.doc.classList.add(sanitizedName)
   }
 
   getData(arr) {
