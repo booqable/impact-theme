@@ -113,6 +113,13 @@
 
 .bq-content.rx-content a {
   cursor: pointer;
+  text-decoration: none;
+  color: var(--color-outline);
+}
+
+.bq-content.rx-content a:hover,
+.bq-content.rx-content a:focus {
+  color: var(--color-outline-hover);
 }
 
 .bq-content.rx-content h1,
@@ -145,7 +152,6 @@
   line-height: var(--line-height-sm);
 }
 
-.bq-content.rx-content a,
 .bq-content.rx-content h1 a,
 .bq-content.rx-content h2 a,
 .bq-content.rx-content h3 a,
@@ -156,8 +162,6 @@
   color: var(--color-secondary);
 }
 
-.bq-content.rx-content a:hover,
-.bq-content.rx-content a:focus,
 .bq-content.rx-content h1 a:hover,
 .bq-content.rx-content h1 a:focus,
 .bq-content.rx-content h2 a:hover,
