@@ -564,14 +564,13 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
     display: block;
     position: absolute;
     right: calc(var(--horizontal-padding) - 10px);
-    bottom: 50%;
+    bottom: calc(50% + 1px);
     transform: translate(100%, 50%);
     z-index: 1;
   }
 
   .header:not(.header-transparent):has(.top-bar__wrapper) .header__app {
-    bottom: calc(50% - var(--top-bar-height));
-    transform: translate(100%, 0);
+    bottom: calc((var(--header-height) - var(--top-bar-height)) / 2 + 1px);
   }
 
   .header__buttons .header__app {
@@ -580,6 +579,7 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
 
   #section-header .header__app [data-short-names="true"] {
     width: auto;
+    height: auto;
   }
 
   #section-header .header__app .weglot-widget__wrapper {
@@ -663,6 +663,7 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
   }
 
   #section-header .header__app .weglot-widget__item {
+    white-space: nowrap;
     transition: all var(--animation-duration) var(--transition-function-ease-in-out);
     color: var(--color-primary);
   }

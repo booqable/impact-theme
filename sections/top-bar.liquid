@@ -60,9 +60,9 @@
   >
     <div class="top-bar__container container">
       <div class="top-bar__info">
-        {%- render 'icon', icon: icon, style: icon_style -%}
-
         {%- if bar_text != blank -%}
+          {%- render 'icon', icon: icon, style: icon_style -%}
+
           <span class="top-bar__text top-bar__message bq-content rx-content">
             {{- bar_text -}}
           </span>
