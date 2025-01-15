@@ -98,7 +98,7 @@
   max-height: 0;
   overflow-y: auto;
   transition-property: max-height;
-  transition-duration: var(--animation-duration, 200ms);
+  transition-duration: var(--animation-duration);
   transition-timing-function: var(--transition-function-ease-out);
 }
 
