@@ -24,7 +24,7 @@
   border-bottom: 1px solid var(--color-border);
 }
 
-.sidebar__menu:last-child{
+.sidebar__menu:last-child {
   margin: 0;
 }
 
@@ -34,6 +34,27 @@
 
 .sidebar__menu-item {
   margin: 0 0 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar__menu-item:last-child {
+  margin: 0;
+}
+
+.sidebar__menu > .sidebar__menu-list > .sidebar__menu-item:after {
+  content: "";
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(180deg, var(--background-primary-00) 0%, var(--background-primary) 100%);
+}
+
+.sidebar__menu > .sidebar__menu-list > .sidebar__menu-item--expanded:after {
+  visibility: visible;
 }
 
 .sidebar__menu-opener {
@@ -68,22 +89,15 @@
   background: var(--color-outline-hover);
 }
 
-.sidebar__menu-item {
-  overflow: hidden;
-  position: relative;
-}
-
-.sidebar__menu-item:last-child{
-  margin: 0;
-}
-
 .sidebar__menu-wrapper {
   position: relative;
   height: auto;
   pointer-events: none;
   max-height: 0;
   overflow-y: auto;
-  transition: max-height var(--animation-duration) var(--transition-function-ease-out);
+  transition-property: max-height;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--transition-function-ease-out);
 }
 
 .sidebar__menu-wrapper .sidebar__menu-list {
@@ -151,6 +165,18 @@
 
 [id^="side-menu-opener-"]:checked ~ .sidebar__menu-wrapper > .sidebar__menu-list {
   transform: translate(0, 0);
+}
+
+.sidebar__menu-item--expanded:has([id^="side-menu-opener-"]:checked) > .sidebar__menu-wrapper > .sidebar__menu-list > .sidebar__menu-item:last-child {
+  margin-bottom: 50px;
+}
+
+.sidebar__menu-item--expanded:has([id^="side-menu-opener-"]:checked) > .sidebar__menu-wrapper > .sidebar__menu-list > .sidebar__menu-item:last-child .sidebar__menu-item:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar__menu-item--expanded:has([id^="side-menu-opener-"]:checked) > .sidebar__menu-wrapper > .sidebar__menu-list > .sidebar__menu-item:last-child .sidebar__menu-list {
+  padding-bottom: 0;
 }
 
 .loaded .sidebar__menu-wrapper {
