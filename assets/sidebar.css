@@ -44,7 +44,6 @@
 
 .sidebar__menu > .sidebar__menu-list > .sidebar__menu-item:after {
   content: "";
-  opacity: 0;
   visibility: hidden;
   position: absolute;
   left: 0;
@@ -56,7 +55,6 @@
 
 .sidebar__menu > .sidebar__menu-list > .sidebar__menu-item--expanded:after {
   visibility: visible;
-  opacity: 1;
 }
 
 .sidebar__menu-opener {
