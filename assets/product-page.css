@@ -54,6 +54,10 @@
   padding: 0 0 25px;
 }
 
+.product-main__description:last-child {
+  padding: 40px 0 0;
+}
+
 .product-main__variant-label {
   margin-bottom: 6px;
 }
