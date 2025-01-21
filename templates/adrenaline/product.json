@@ -9,6 +9,7 @@
         "breadcrumbs_root_label": "",
         "breadcrumbs_root_url": "collections",
         "color_scheme": "set-1",
+        "description_placement": "top",
         "infinity_scroll": false,
         "message_label": "",
         "padding_bottom": "large",

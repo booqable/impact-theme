@@ -6,6 +6,7 @@
 {%- assign bundle                        = product.products -%}
 {%- assign color_scheme                  = section.settings.color_scheme -%}
 {%- assign description                   = product.description -%}
+{%- assign description_placement         = section.settings.description_placement -%}
 {%- assign images                        = product.images -%}
 {%- assign infinity_scroll               = section.settings.infinity_scroll -%}
 {%- assign message_label                 = section.settings.message_label -%}
@@ -165,7 +166,7 @@
           </div>
         {%- endif -%}
 
-        {%- if description != blank -%}
+        {%- if description != blank and description_placement == "top" -%}
           <div class="product-main__description bq-content rx-content">{{- description -}}</div>
         {%- endif -%}
 
@@ -190,6 +191,10 @@
           <div class="product-main__message">
             <span class="product-main__message-label">{{- message_label -}}</span>
           </div>
+        {%- endif -%}
+
+        {%- if description != blank and description_placement == "bottom" -%}
+          <div class="product-main__description bq-content rx-content">{{- description -}}</div>
         {%- endif -%}
       </div>
     </div>
@@ -229,6 +234,22 @@
         "id": "show_border",
         "label": "Image border",
         "default": false
+      },
+      {
+        "type": "select",
+        "id": "description_placement",
+        "label": "Product description placement",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          }
+        ],
+        "default": "top"
       },
       {
         "type": "select",
