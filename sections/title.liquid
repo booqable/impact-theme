@@ -104,7 +104,7 @@
           {%- endif -%}
 
           <h2 class="title__heading h4">
-            {{- custom_title | default: collection.title -}}
+            {{- custom_title | default: collection.title | default: page.title | default: cart.title -}}
 
             {% unless section_preview %}
               {%- if custom_title != blank and template == "search" and query != blank -%}
@@ -114,7 +114,7 @@
           </h2>
 
           <div class="title__description text-medium bq-content rx-content">
-            {{- custom_description | default: collection.description -}}
+            {{- custom_description | default: collection.description | default: page.content -}}
           </div>
         </div>
   {%- if full_width -%}
