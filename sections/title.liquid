@@ -107,6 +107,10 @@
             {%- if section_preview -%}
               Title
             {%- else -%}
+              {%- if custom_title == blank and collection.title == blank and page.title == blank and cart.title == blank -%}
+                {%- assign custom_title = "Title" -%}
+              {%- endif -%}
+
               {{- custom_title | default: collection.title | default: page.title | default: cart.title -}}
 
               {%- if custom_title != blank and template == "search" and query != blank -%}
