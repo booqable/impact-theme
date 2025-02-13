@@ -123,7 +123,7 @@
 .bq-content.rx-content h6 {
   font-family: var(--font-heading);
   font-size: var(--font-size-regular);
-  font-weight: calc(var(--font-weight-headers) - 100);
+  font-weight: var(--font-weight-headers);
   line-height: var(--line-height-lg);
   text-rendering: optimizeLegibility;
   letter-spacing: inherit;
@@ -132,19 +132,19 @@
 
 .bq-content.rx-content h1 {
   font-size: var(--font-size-h1);
-  font-weight: calc(var(--font-weight-h1) - 100);
+  font-weight: var(--font-weight-h1);
   line-height: var(--line-height-sm);
 }
 
 .bq-content.rx-content h2 {
   font-size: var(--font-size-h2);
-  font-weight: calc(var(--font-weight-h2) - 100);
+  font-weight: var(--font-weight-h2);
   line-height: var(--line-height-sm);
 }
 
 .bq-content.rx-content h3 {
   font-size: var(--font-size-h3);
-  font-weight: calc(var(--font-weight-h3) - 100);
+  font-weight: var(--font-weight-h3);
   line-height: var(--line-height-sm);
 }
 
