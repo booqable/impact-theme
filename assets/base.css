@@ -80,22 +80,6 @@
   font-family: var(--font-body);
 }
 
-* {
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
-}
-
-*::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-}
-
-*::-webkit-scrollbar-track,
-*::-webkit-scrollbar-thumb {
-  background: transparent;
-}
-
 html {
   overflow-x: clip;
   height: 100%;
