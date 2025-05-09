@@ -626,6 +626,7 @@
   }
 
   .menu__payments {
+    width: 100%;
     border-radius: var(--border-radius);
     padding: 16px 23px;
     margin: 60px 0 0;
@@ -635,6 +636,7 @@
 
   .menu__payments .payment {
     padding: 0;
+    justify-content: flex-end;
   }
 
   .menu__payments .payment span,
