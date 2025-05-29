@@ -24,6 +24,10 @@
 {%- assign rounded_corners       = section.settings.rounded_corners -%}
 {%- assign show_payments         = section.settings.show_payments -%}
 
+{%- if app %}
+  {{ "app.css" | asset_url | stylesheet_tag }}
+{%- endif -%}
+
 {%- case template -%}
   {%- when '404' -%}
     {%- assign full_width = true -%}
