@@ -8,6 +8,8 @@
   /* Sizes */
   --max-width: 1440px;
   --max-width-narrow: 770px;
+  --header-icon-width: 42px;
+  --header-icon-height: 42px;
   --horizontal-padding: 64px;
   --horizontal-padding-mobile: 16px;
   --button-margin-bottom: 16px;

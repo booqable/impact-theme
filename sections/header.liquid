@@ -32,6 +32,10 @@
 {%- assign sticky_header         = section.settings.sticky_header -%}
 {%- assign use_transparent       = true -%}
 
+{%- if app -%}
+  {{ "app.css" | asset_url | stylesheet_tag }}
+{%- endif -%}
+
 {%- case template -%}
   {%- when 'accept-invitation' -%}
     {%- assign use_transparent = false -%}
