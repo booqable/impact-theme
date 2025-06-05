@@ -1,62 +1,65 @@
-{%- assign app = section.blocks | where: "type", "app" | first -%}
+{{ "app.css" | asset_url | stylesheet_tag }}
 
-{%- if app != blank -%}
-  {{ "app.css" | asset_url | stylesheet_tag }}
+{%- assign app                   = section.blocks | where: "type", "app" | first -%}
+{%- assign color_scheme          = section.settings.color_scheme -%}
+{%- assign padding_bottom        = section.settings.padding_bottom -%}
+{%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign padding_top           = section.settings.padding_top -%}
+{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 
-  {%- assign color_scheme          = section.settings.color_scheme -%}
-  {%- assign padding_bottom        = section.settings.padding_bottom -%}
-  {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-  {%- assign padding_top           = section.settings.padding_top -%}
-  {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+{% comment %} CSS variables start {% endcomment %}
+{%- capture variables -%}
+  {%- case padding_top -%}
+    {%- when 'small' -%}
+      --padding-top: 40px;
+    {%- when 'medium' -%}
+      --padding-top: 80px;
+    {%- when 'large' -%}
+      --padding-top: 112px;
+  {%- endcase -%}
 
-  {% comment %} CSS variables start {% endcomment %}
-  {%- capture variables -%}
-    {%- case padding_top -%}
-      {%- when 'small' -%}
-        --padding-top: 40px;
-      {%- when 'medium' -%}
-        --padding-top: 80px;
-      {%- when 'large' -%}
-        --padding-top: 112px;
-    {%- endcase -%}
+  {%- case padding_bottom -%}
+    {%- when 'small' -%}
+      --padding-bottom: 40px;
+    {%- when 'medium' -%}
+      --padding-bottom: 80px;
+    {%- when 'large' -%}
+      --padding-bottom: 112px;
+  {%- endcase -%}
 
-    {%- case padding_bottom -%}
-      {%- when 'small' -%}
-        --padding-bottom: 40px;
-      {%- when 'medium' -%}
-        --padding-bottom: 80px;
-      {%- when 'large' -%}
-        --padding-bottom: 112px;
-    {%- endcase -%}
+  {%- case padding_top_mobile -%}
+    {%- when 'small' -%}
+      --padding-top-mobile: 24px;
+    {%- when 'medium' -%}
+      --padding-top-mobile: 40px;
+    {%- when 'large' -%}
+      --padding-top-mobile: 60px;
+  {%- endcase -%}
 
-    {%- case padding_top_mobile -%}
-      {%- when 'small' -%}
-        --padding-top-mobile: 24px;
-      {%- when 'medium' -%}
-        --padding-top-mobile: 40px;
-      {%- when 'large' -%}
-        --padding-top-mobile: 60px;
-    {%- endcase -%}
+  {%- case padding_bottom_mobile -%}
+    {%- when 'small' -%}
+      --padding-bottom-mobile: 24px;
+    {%- when 'medium' -%}
+      --padding-bottom-mobile: 40px;
+    {%- when 'large' -%}
+      --padding-bottom-mobile: 60px;
+  {%- endcase -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
 
-    {%- case padding_bottom_mobile -%}
-      {%- when 'small' -%}
-        --padding-bottom-mobile: 24px;
-      {%- when 'medium' -%}
-        --padding-bottom-mobile: 40px;
-      {%- when 'large' -%}
-        --padding-bottom-mobile: 60px;
-    {%- endcase -%}
-  {%- endcapture -%}
-  {% comment %} CSS variables end {% endcomment %}
-
-  <div class="app__wrapper color-{{- color_scheme.id -}}{% if padding_top != blank or padding_top_mobile != blank %} app__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} app__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
-    <div class="app__container container">
+<div class="app__wrapper color-{{- color_scheme.id -}}{% if padding_top != blank or padding_top_mobile != blank %} app__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} app__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
+  <div class="app__container container">
+    {%- unless section_preview -%}
       <div class="app__content">
         {% render 'app', block: app, section: section %}
       </div>
-    </div>
+    {%- else -%}
+      <div class="app__preview">
+        <span>The contents of this section vary by App.</span>
+      </div>
+    {%- endunless -%}
   </div>
-{%- endif -%}
+</div>
 
 {% schema %}
   {
