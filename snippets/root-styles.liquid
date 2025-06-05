@@ -30,10 +30,15 @@
     }
   {% endfor %}
 
+  {% assign default_body_font = "Open Sans" %}
+  {% assign default_tagline_font = "Open Sans" %}
+  {% assign default_heading_font = "Darker Grotesque" %}
+  {% assign default_fallback_families = "sans-serif" %}
+
   :root {
-    --font-body:           "{{ settings.body_font.family | default: Open Sans }}", {{ settings.body_font.fallback_families | default: sans-serif }};
-    --font-tagline:        "{{ settings.tagline_font.family | default: Open Sans }}", {{ settings.tagline_font.fallback_families | default: sans-serif }};
-    --font-heading:        "{{ settings.heading_font.family | default: Darker Grotesque }}", {{ settings.heading_font.fallback_families | default: sans-serif }};
+    --font-body:           "{{ settings.body_font.family | default: default_body_font }}", {{ settings.body_font.fallback_families | default: default_fallback_families }};
+    --font-tagline:        "{{ settings.tagline_font.family | default: default_tagline_font }}", {{ settings.tagline_font.fallback_families | default: default_fallback_families }};
+    --font-heading:        "{{ settings.heading_font.family | default: default_heading_font }}", {{ settings.heading_font.fallback_families | default: default_fallback_families }};
     --font-size-h1:        {{ settings.h1_size | append: "px" | default: "80px" }};
     --font-size-h2:        {{ settings.h2_size | append: "px" | default: "64px" }};
     --font-size-h3:        {{ settings.h3_size | append: "px" | default: "56px" }};
