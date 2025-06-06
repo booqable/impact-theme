@@ -2,6 +2,7 @@
 
 {%- assign app                   = section.blocks | where: "type", "app" | first -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
+{%- assign rounded_corners       = section.settings.rounded_corners -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
 {%- assign padding_top           = section.settings.padding_top -%}
@@ -44,6 +45,17 @@
     {%- when 'large' -%}
       --padding-bottom-mobile: 60px;
   {%- endcase -%}
+
+  {%- case rounded_corners -%}
+    {%- when 'none' -%}
+      --border-radius-rounded-blocks: 0px;
+    {%- when 'small' -%}
+      --border-radius-rounded-blocks: 8px;
+    {%- when 'medium' -%}
+      --border-radius-rounded-blocks: 16px;
+    {%- when 'large' -%}
+      --border-radius-rounded-blocks: 32px;
+  {%- endcase -%}
 {%- endcapture -%}
 {% comment %} CSS variables end {% endcomment %}
 
@@ -76,6 +88,30 @@
         "id": "color_scheme",
         "label": "Color scheme",
         "default": "set-1"
+      },
+      {
+        "type": "select",
+        "id": "rounded_corners",
+        "label": "Rounded corners",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
       },
       {
         "type": "header",

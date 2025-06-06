@@ -13,7 +13,7 @@
 
 .app__preview {
   height: 200px;
-  border-radius: var(--border-radius-block);
+  border-radius: var(--border-radius-rounded-blocks);
   background-image: repeating-linear-gradient(
     315deg,
     var(--background-primary),
