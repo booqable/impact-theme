@@ -26,7 +26,7 @@
   align-items: center;
 }
 
-.spacer__preview span {
+.app__preview span {
   display: block;
   padding: 8px 12px;
   background-color: var(--background-primary);
