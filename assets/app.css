@@ -11,6 +11,28 @@
   padding-bottom: var(--padding-bottom-mobile, 0);
 }
 
+.app__preview {
+  height: 200px;
+  border-radius: var(--border-radius-rounded-blocks);
+  background-image: repeating-linear-gradient(
+    315deg,
+    var(--background-primary),
+    var(--background-primary) 6px,
+    var(--color-border) 6px,
+    var(--color-border) 7px
+  ) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__preview span {
+  display: block;
+  padding: 8px 12px;
+  background-color: var(--background-primary);
+  color: var(--color-primary);
+}
+
 .app-desktop {
   display: none;
 }
