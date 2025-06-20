@@ -104,16 +104,33 @@
           {%- endif -%}
 
           <h2 class="title__heading h4">
+            {%- assign title = "Title" -%}
+            {%- assign description = "" -%}
+
+            {%- if custom_title != blank -%}
+              {%- assign title = custom_title -%}
+            {%- elsif collection.title != blank -%}
+              {%- assign title = collection.title -%}
+            {%- elsif page.title != blank -%}
+              {%- assign title = page.title -%}
+            {%- elsif cart.title != blank -%}
+              {%- assign title = cart.title -%}
+            {%- endif -%}
+
+            {%- if custom_description != blank -%}
+              {%- assign description = custom_description -%}
+            {%- elsif collection.description != blank -%}
+              {%- assign description = collection.description -%}
+            {%- elsif page.content != blank -%}
+              {%- assign description = page.content -%}
+            {%- endif -%}
+
             {%- if section_preview -%}
-              Title
+              {{- title -}}
             {%- else -%}
-              {%- if custom_title == blank and collection.title == blank and page.title == blank and cart.title == blank -%}
-                {%- assign custom_title = "Title" -%}
-              {%- endif -%}
+              {{- title -}}
 
-              {{- custom_title | default: collection.title | default: page.title | default: cart.title -}}
-
-              {%- if custom_title != blank and template == "search" and query != blank -%}
+              {%- if title != blank and template == "search" and query != blank -%}
                 : {{ query }}
               {%- endif -%}
             {%- endif -%}
@@ -121,9 +138,9 @@
 
           <div class="title__description text-medium bq-content rx-content">
             {%- if section_preview -%}
-              Lorem ipsum dolor sit amet.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Suspendisse varius enim in eros elementum tristique.
             {%- else -%}
-              {{- custom_description | default: collection.description | default: page.content -}}
+              {{- description -}}
             {%- endif -%}
           </div>
         </div>
