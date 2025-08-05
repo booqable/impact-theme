@@ -4,10 +4,11 @@
 
   items - { object } *required
   items_type - "string" *required,
-  show_amount: boolean optional,
-  show_arrow: boolean optional,
+  settings - { settings } *required,
+  show_amount - boolean optional,
+  show_arrow - boolean optional,
   placeholder - image optional,
-  counter_label: "string" optional
+  counter_label - "string" optional
 
   Usage:
 
@@ -17,13 +18,27 @@
       show_amount: boolean,
       show_arrow: boolean,
       placeholder: your_id,
+      settings: settings,
       counter_singular: your_id,
       counter_plural: your_id
   -%}
 
 {% endcomment %}
 
-<ul class="collections__list">
+{%- assign image_fit = settings.collection_card_image_fit -%}
+
+{% comment %} CSS variables start {% endcomment %}
+{%- capture image_variables -%}
+  {%- case image_fit -%}
+    {%- when 'cover' -%}
+      --object-fit: cover;
+    {%- when 'contain' -%}
+      --object-fit: contain;
+  {%- endcase -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
+
+<ul class="collections__list"{% if image_fit != blank %} style="{{- image_variables | escape -}}"{%- endif -%}>
   {%- for item in items -%}
     {%- case items_type -%}
       {%- when "blocks" -%}

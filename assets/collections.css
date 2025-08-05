@@ -124,7 +124,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: var(--object-fit);
 }
 
 .collection__wrapper--with-overlay .collections__image-item:after {
