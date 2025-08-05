@@ -21,8 +21,7 @@
         "show_border": false,
         "show_carousel": false,
         "show_controls": true,
-        "show_thumbnails": true,
-        "variation_label": "Variant"
+        "show_thumbnails": true
       },
       "disabled": null
     },
