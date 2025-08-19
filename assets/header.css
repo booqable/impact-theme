@@ -427,6 +427,11 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
     grid-template-columns: 230px 1fr 230px;
   }
 
+  .header__logo,
+  .header__logo-image {
+    max-width: 100%;
+  }
+
   .header__date-picker-wrapper {
     position: static;
     width: auto;
