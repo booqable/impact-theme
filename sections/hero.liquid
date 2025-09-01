@@ -222,9 +222,14 @@
       {%- endif -%}
 
       <div class="hero__vision{% if video_url != blank %} hero__vision--video{%- endif -%}">
-        {%- if video_url contains "youtube.com" -%}
+        {%- if video_url contains "youtube.com" or video_url contains "youtu.be/" -%}
+         {%- if video_url contains "youtube.com" -%}
           {%- assign video_drop = video_url | split: "?v=" -%}
           {%- assign video_id   = video_drop | last | strip -%}
+         {%- elsif video_url contains "youtu.be/" -%}
+          {%- assign video_drop = video_url | split: ".be/" -%}
+          {%- assign video_id   = video_drop | last | strip -%}
+         {%- endif -%}
 
           <div class="hero__vision-wrapper{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
             <iframe
