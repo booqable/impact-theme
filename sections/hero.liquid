@@ -222,9 +222,14 @@
       {%- endif -%}
 
       <div class="hero__vision{% if video_url != blank %} hero__vision--video{%- endif -%}">
-        {%- if video_url contains "youtube.com" -%}
-          {%- assign video_drop = video_url | split: "?v=" -%}
-          {%- assign video_id   = video_drop | last | strip -%}
+        {%- if video_url contains "youtube.com" or video_url contains "youtu.be/" -%}
+         {%- if video_url contains "youtube.com" -%}
+          {%- assign video_full_url = video_url | split: "?v=" -%}
+          {%- assign video_id       = video_full_url | last | strip -%}
+         {%- elsif video_url contains "youtu.be/" -%}
+          {%- assign video_full_url = video_url | split: ".be/" -%}
+          {%- assign video_id       = video_full_url | last | strip -%}
+         {%- endif -%}
 
           <div class="hero__vision-wrapper{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
             <iframe
@@ -243,8 +248,8 @@
           </div>
 
         {%- elsif video_url contains "vimeo.com" -%}
-          {%- assign video_drop = video_url | split: "/" -%}
-          {%- assign video_id   = video_drop | last | strip -%}
+          {%- assign video_full_url = video_url | split: "/" -%}
+          {%- assign video_id       = video_full_url | last | strip -%}
 
           <div class="hero__vision-wrapper{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
             <iframe
