@@ -25,13 +25,19 @@
   padding-top: 15px;
 }
 
-.logos__image-wrapper {
+.logos__images-wrapper {
   padding: 15px 0 6px;
 }
 
-.logos__image-wrapper img {
+.logos__images-wrapper img {
   max-height: 100px;
+  width: auto;
   margin: 0 auto;
+}
+
+.logos__image-placeholder,
+.logos__image-wrapper:has(.logos__image-placeholder) .logos__image {
+  height: 50px;
 }
 
 @media (min-width: 992px) {
@@ -48,11 +54,11 @@
     padding-top: 31px;
   }
 
-  .logos__image-wrapper {
+  .logos__images-wrapper {
     padding: 0;
   }
 
-  .logos__image-wrapper img {
+  .logos__images-wrapper img {
     max-height: 150px;
   }
 }

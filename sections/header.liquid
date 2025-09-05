@@ -104,9 +104,10 @@
       <span class="header__logo-inner">
         {%- render 'image',
             image: logo,
-            class: 'header__logo-image',
-            size: 'logo',
-            custom_alt: shop.name,
+            image_alt: shop.name,
+            image_class: 'header__logo-image',
+            image_size: 'logo',
+            loading: 'eager',
             keep_type: true
         -%}
       </span>
@@ -115,9 +116,10 @@
       <span class="header__logo-inner header__logo-inner--transparent">
         {%- render 'image',
             image: logo_transparent,
-            class: 'header__logo-image',
-            size: 'logo',
-            custom_alt: shop.name,
+            image_alt: shop.name,
+            image_class: 'header__logo-image',
+            image_size: 'logo',
+            loading: 'eager',
             keep_type: true
         -%}
       </span>

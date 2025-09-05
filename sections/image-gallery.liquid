@@ -82,8 +82,9 @@
 
         <div class="image-gallery__images">
           {%- for block in section.blocks -%}
-            {%- assign image = block.settings.image -%}
-            {%- assign url   = block.settings.url -%}
+            {%- assign image     = block.settings.image -%}
+            {%- assign image_alt = block.settings.image_alt -%}
+            {%- assign url.      = block.settings.url -%}
 
             {%- if image.url != blank -%}
               {%- assign image = image -%}
@@ -97,9 +98,9 @@
               <div class="image-gallery__image-wrapper" id="{{- section.key -}}-{{- block.id -}}">
                 {%- render 'image',
                   image: image,
-                  loading: 'lazy',
-                  class: 'image-gallery__image',
-                  size: 'l'
+                  image_alt: image_alt,
+                  image_class: 'image-gallery__image',
+                  image_size: 'l'
                 -%}
 
                 {%- if url != blank -%}
@@ -284,6 +285,12 @@
             "type": "image_picker",
             "id": "image",
             "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "image_alt",
+            "label": "Alternative text (optional)",
+            "info": "For SEO and Accessibility purposes"
           },
           {
             "type": "url",
