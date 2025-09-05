@@ -3,7 +3,8 @@
   grid-template-rows: max-content 1fr;
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: clip;
+  contain: content;
 }
 
 .product-card--full-border,
@@ -17,6 +18,7 @@
   overflow: hidden;
   position: relative;
   background: var(--background-primary);
+  contain: paint layout;
 }
 
 .product-card__vision--white {
@@ -40,6 +42,11 @@
 
 .product-card__vision.no-image {
   background: var(--color-image-placeholder);
+}
+
+.product-card__image-wrapper:has(.image-placeholder) {
+  position: static;
+  height: 100%;
 }
 
 .product-card__image {

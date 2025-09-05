@@ -24,6 +24,12 @@
   margin: 0 auto 8px;
 }
 
+.products__tag-image-placeholder {
+  width: auto;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
 .products__list {
   display: flex;
   padding-top: 18px;

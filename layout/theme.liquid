@@ -8,10 +8,8 @@
     {% comment %} Base stylesheets {% endcomment %}
     {{ "base.css" | asset_url | stylesheet_tag }}
     {{ "rx.css" | asset_url | stylesheet_tag }}
-    {% comment %} Fonts {% endcomment %}
-    <script src="https://kit.fontawesome.com/ff3b3de2b5.js" crossorigin="anonymous"></script>
-    {{ content_for_header }}
 
+    {% comment %} Fonts {% endcomment %}
     {% render 'fonts', settings: settings %}
     {% render 'root-styles', settings: settings %}
 
@@ -25,6 +23,9 @@
       shop: shop,
       locale: locale
     %}
+
+    {{ content_for_header }}
+    {{ sections_assets }}
   </head>
   <body>
 
@@ -39,7 +40,9 @@
 
     {% section 'footer' %}
 
-    <script src="{{ "lazysizes.min.js" | asset_url }}" defer></script>
+    {% comment %} Critical JavaScript files {% endcomment %}
+    <script src='{{ 'js-utils-core.js' | asset_url }}' defer></script>
+
     <script src="{{ "touch-device-notch.js" | asset_url }}" defer></script>
     <script src="{{ "main.js" | asset_url }}" defer></script>
     <script src="{{ "header.js" | asset_url }}" defer></script>
@@ -53,13 +56,8 @@
       })
     </script>
 
-    {%- if settings.color_schemes.first.settings.background_accent != blank -%}
-      {%- assign background_accent = settings.color_schemes.first.settings.background_accent -%}
-    {%- else -%}
-      {%- assign background_accent = branding_color -%}
-    {%- endif -%}
-
-    <bq-date-picker-modal branding-color="{{- background_accent -}}"></bq-date-picker-modal>
+    {% comment %} Non-Critical JavaScript files {% endcomment %}
+    {%- render 'scripts-loading', sections: sections, settings: settings -%}
 
     {%- if show_mini_cart -%}
       {%- render 'variables-mini-cart' -%}

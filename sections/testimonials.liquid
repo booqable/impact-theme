@@ -3,6 +3,7 @@
 {%- if blocks.size > 0 -%}
   {%- assign title                 = section.settings.title -%}
   {%- assign image_background      = section.settings.image_background -%}
+  {%- assign image_background_alt  = section.settings.image_background_alt -%}
   {%- assign rounded_corners       = section.settings.rounded_corners -%}
   {%- assign show_navigation       = section.settings.show_navigation -%}
   {%- assign color_scheme          = section.settings.color_scheme -%}
@@ -88,9 +89,9 @@
             <div class="testimonials__bg-image-wrapper">
               {%- render 'image',
                   image: image_background,
-                  loading: 'lazy',
-                  class: 'testimonials__bg-image',
-                  size: 'm'
+                  image_alt: image_background_alt,
+                  image_class: 'testimonials__bg-image',
+                  image_size: 'm'
               -%}
             </div>
           {%- endif -%}
@@ -104,6 +105,7 @@
 
             {%- for block in blocks -%}
               {%- assign image                = block.settings.image -%}
+              {%- assign image_alt            = block.settings.image_alt -%}
               {%- assign description          = block.settings.description -%}
               {%- assign name                 = block.settings.name -%}
               {%- assign position             = block.settings.position -%}
@@ -127,9 +129,9 @@
                                 <span class="testimonials__image-wrapper">
                                   {%- render 'image',
                                       image: image,
-                                      loading: 'lazy',
-                                      class: 'testimonials__image',
-                                      size: 'xs'
+                                      image_alt: image_alt,
+                                      image_class: 'testimonials__image',
+                                      image_size: 'xs'
                                   -%}
                                 </span>
                               {%- endif -%}
@@ -244,6 +246,12 @@
         "type": "image_picker",
         "id": "image_background",
         "label": "Image (optional)"
+      },
+      {
+        "type": "text",
+        "id": "image_background_alt",
+        "label": "Alternative text (optional)",
+        "info": "For SEO and Accessibility purposes"
       },
       {
         "type": "select",
@@ -375,6 +383,12 @@
             "id": "image",
             "label": "Picture",
             "default": "booqable://assets/image-avatar-1.png"
+          },
+          {
+            "type": "text",
+            "id": "image_alt",
+            "label": "Alternative text (optional)",
+            "info": "For SEO and Accessibility purposes"
           },
           {
             "type": "text",

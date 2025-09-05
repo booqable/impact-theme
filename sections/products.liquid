@@ -30,7 +30,9 @@
   {%- assign button_outline_url    = section.settings.button_outline_url -%}
   {%- assign color_scheme          = section.settings.color_scheme -%}
   {%- assign image                 = section.settings.image -%}
+  {%- assign image_alt             = section.settings.image_alt -%}
   {%- assign limit                 = 8 -%}
+  {%- assign loading_strategy      = 'lazy' -%}
   {%- assign padding_top           = section.settings.padding_top -%}
   {%- assign padding_bottom        = section.settings.padding_bottom -%}
   {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
@@ -39,6 +41,7 @@
   {%- assign show_pagination       = section.settings.show_pagination -%}
   {%- assign tag                   = section.settings.tag -%}
   {%- assign tag_image             = section.settings.tag_image -%}
+  {%- assign tag_image_alt         = section.settings.tag_image_alt -%}
   {%- assign timer                 = section.settings.timer -%}
   {%- assign title                 = section.settings.title -%}
 
@@ -105,8 +108,8 @@
             <div class="products__tag-image-wrapper">
               {%- render 'image',
                 image: tag_image,
-                loading: 'lazy',
-                class: 'products__tag-image',
+                image_alt: tag_image_alt,
+                image_class: 'products__tag-image',
                 custom_width: '100',
                 custom_size: '100px'
               -%}
@@ -143,7 +146,8 @@
               {%- endif -%}
                     {%- render 'product-card',
                         product: product,
-                        settings: settings
+                        settings: settings,
+                        image_loading: loading_strategy
                     -%}
               {%- if carousel -%}
                   </div>
@@ -194,10 +198,10 @@
     {%- if image.url != blank -%}
       <div class="products__background-wrapper">
         {%- render 'image',
-          image: image,
-          loading: 'lazy',
-          class: 'products__background',
-          size: 'xxl'
+            image: image,
+            image_alt: image_alt,
+            image_class: 'products__background',
+            image_size: 'xxl'
         -%}
       </div>
     {%- endif -%}
@@ -210,6 +214,14 @@
     "description": "Display individual products or items from a collection in a grid or sliding carousel",
     "tag": "section",
     "class": "products",
+    "css_assets": [
+      {
+        "file": "focal-image.css",
+        "include_if": [
+          "has_collection_or_blocks"
+        ]
+      }
+    ],
     "settings": [
       {
         "type": "header",
@@ -235,6 +247,12 @@
       },
       {
         "type": "text",
+        "id": "tag_image_alt",
+        "label": "Alternative text (optional)",
+        "info": "For SEO and Accessibility purposes"
+      },
+      {
+        "type": "text",
         "id": "title",
         "label": "Title",
         "default": "Popular products"
@@ -243,6 +261,12 @@
         "type": "image_picker",
         "id": "image",
         "label": "Background image"
+      },
+      {
+        "type": "text",
+        "id": "image_alt",
+        "label": "Alternative text (optional)",
+        "info": "For SEO and Accessibility purposes"
       },
       {
         "type": "header",

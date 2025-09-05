@@ -130,9 +130,8 @@
                     <li class="product-main__gallery-item{% if show_border %} product-main__gallery-item--borders{%- endif -%}">
                       {%- render 'image',
                           image: image,
-                          loading: 'lazy',
-                          class: 'product-main__gallery-image',
-                          size: 'xl'
+                          image_class: 'product-main__gallery-image',
+                          image_size: 'xl'
                       -%}
                     </li>
                   {%- endunless -%}
@@ -143,9 +142,8 @@
               <li class="product-main__gallery-item{% if show_border %} product-main__gallery-item--borders{%- endif -%}">
                 {%- render 'image',
                     image: image,
-                    loading: 'lazy',
-                    class: 'product-main__gallery-image',
-                    size: 'xl'
+                    image_class: 'product-main__gallery-image',
+                    image_size: 'xl'
                 -%}
               </li>
             {%- endfor -%}

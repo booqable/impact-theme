@@ -1200,7 +1200,7 @@
             "color_scheme": "set-1",
             "custom_title": "{{ shop.name }}",
             "follow_us": "Follow us on",
-            "logo": "booqable://assets/image-store-logo-white.png",
+            "logo": "booqable://assets/image-store-logo.png",
             "logo_transparent": "booqable://assets/image-store-logo-white.png",
             "menu": "main-menu",
             "menu_opener_label": "Menu",
