@@ -14,7 +14,7 @@
   margin: 0 0 50px;
 }
 
-.testimonials__bg-image-wrapper {
+.testimonials__bg-image-holder {
   display: none;
 }
 
@@ -123,16 +123,12 @@
     z-index: 1;
   }
 
-  .testimonials__side.testimonials__side--desktop-hidden {
-    display: none;
-  }
-
   .testimonials__container > .testimonials__content,
   .testimonials__side + .testimonials__content {
     max-width: var(--slide-width);
   }
 
-  .testimonials__side:not(.testimonials__side--desktop-hidden) + .testimonials__content {
+  .testimonials__side + .testimonials__content {
     margin-left: 40px;
   }
 
@@ -145,7 +141,7 @@
     margin-bottom: 110px;
   }
 
-  .testimonials__bg-image-wrapper {
+  .testimonials__bg-image-holder {
     display: block;
   }
 
@@ -154,7 +150,7 @@
     max-width: 100%;
   }
 
-  .testimonials:has(.carousel) .testimonials__bg-image-wrapper {
+  .testimonials:has(.carousel) .testimonials__bg-image-holder {
     padding-bottom: 110px;
   }
 
@@ -163,40 +159,30 @@
     height: auto;
   }
 
-  .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel {
-    padding: 0 40px;
-    width: calc(100% - var(--title-max-width) + 24px);
+  .testimonials__side + .carousel {
+    --carousel-indent: 40px;
+
+    margin: 0 var(--carousel-indent);
+    width: calc(100% - var(--title-max-width) - (var(--carousel-indent) * 2 - 24px));
   }
 
-  .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel .carousel__inner {
-    padding-right: 16px;
-  }
-
-  .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel .carousel__item:last-child {
-    min-width: calc(var(--slide-width) - 16px);
-  }
-
-  .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel .carousel__item:last-child .carousel__inner {
-    padding-right: 0;
-  }
-
-  .testimonials__wrapper .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel.controls .carousel__wrapper {
+  .testimonials__wrapper .testimonials__side + .carousel--controls:not(:has(.carousel__navigation.hidden)) .carousel__wrapper {
     padding: 0;
   }
 
-  .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel .carousel__navigation {
+  .testimonials__side + .carousel .carousel__navigation {
     left: calc(-1 * var(--title-max-width) - 32px);
   }
 }
 
 @media (min-width: 1200px) {
-  .testimonials__side:not(.testimonials__side--desktop-hidden) + .carousel {
-    width: calc(100% - var(--title-max-width) + 8px);
+  .testimonials__side + .carousel {
+    width: calc(100% - var(--title-max-width) - (var(--carousel-indent) * 2 - 8px));
   }
 }
 
 @media (max-width: 991px) {
-  .testimonials .carousel.controls .carousel__wrapper {
+  .testimonials .carousel--controls:not(:has(.carousel__navigation.hidden)) .carousel__wrapper {
     padding-bottom: 0;
   }
 
