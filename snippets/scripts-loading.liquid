@@ -1,0 +1,84 @@
+{% comment %}
+
+  This snippet is used for loading non-critical JavaScript files
+
+  settings - { obj } optional, - contains theme settings
+  sections - { obj } optional, - contains all sections
+  scripts - [ arr ] optional - contains custom scripts to load instead of the default ones
+
+  Usage:
+
+  {%- render 'scripts-non-critical',
+      settings: settings,                   <-- use these two variables
+      sections: sections,                       to load all scripts dynamically
+      scripts: 'js-file1.js, js-file2.js'   <-- or use this one to load scripts from your list (as example, the minimal and checkout layouts)
+  -%}
+
+{% endcomment %}
+
+{%- unless scripts or scripts != blank -%}
+  {%- assign sections_with_images = 'accept-invitation-form, accordion, activate-account, articles, call-to-action, collections, collection-page, columns, edit-password-form, footer, hero, image-gallery, login-form, logos, list-collections, product-page, products, register-form, reset-password, spacer, testimonials, title' | split: ', ' -%}
+  {%- assign sections_with_products = 'products, collection-page, search' | split: ', ' -%}
+  {%- assign script_image_loading = '' -%}
+  {%- assign script_focal_image = '' -%}
+
+  {%- for section in sections.all -%}
+    {%- for item in sections_with_images -%}
+      {%- if section.type == item -%}
+        {%- assign image_loading = 'js-image-loading.js' -%}
+
+        {%- unless script_image_loading contains image_loading -%}
+          {%- assign script_image_loading = image_loading -%}
+          {%- assign scripts = scripts | append: ', ' | append: script_image_loading -%}
+        {%- endunless -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- for item in sections_with_products -%}
+      {%- if section.type == item -%}
+        {%- assign focal_image = 'js-focal-image.js' -%}
+
+        {%- unless script_focal_image contains focal_image -%}
+          {%- assign script_focal_image = focal_image -%}
+          {%- assign scripts = scripts | append: ', ' | append: script_focal_image -%}
+        {%- endunless -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endunless -%}
+
+{%- if scripts != blank -%}
+  {%- assign array = scripts | split: ', ' -%}
+  {%- assign urls = '' -%}
+
+  {%- for script in array -%}
+    {%- assign url = script | strip | asset_url -%}
+    {%- if forloop.first -%}
+      {%- assign urls = url -%}
+    {%- else -%}
+      {%- assign urls = urls | append: ', ' | append: url -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  <script>
+    window.addEventListener('load', () => {
+      const loadScripts = () => {
+        const scriptsString = '{{ urls }}',
+              scripts = scriptsString.split(', ')
+
+        scripts.forEach(src => {
+          if (!src || src.trim() === '') return
+          const script = document.createElement('script')
+          script.src = src.trim()
+          script.defer = true
+          script.onerror = () => console.error(`Failed to load script: ${src}`)
+          document.body.appendChild(script)
+        })
+      }
+
+      'requestIdleCallback' in window ?
+        window.requestIdleCallback(loadScripts, { timeout: 3000 }) :
+        setTimeout(loadScripts, 200)
+    }, { once: true })
+  </script>
+{%- endif -%}

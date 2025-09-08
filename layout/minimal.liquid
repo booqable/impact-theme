@@ -11,16 +11,16 @@
     {% unless section_preview %}
       {{ "header.css" | asset_url | stylesheet_tag }}
     {% endunless %}
-    {% comment %} Fonts {% endcomment %}
-    <script src="https://kit.fontawesome.com/ff3b3de2b5.js" crossorigin="anonymous"></script>
 
     {% if section_preview %}
       {{ options_and_scripts }}
       {{ content_for_styles }}
+      {{ sections_assets }}
     {% else %}
       {{ content_for_header }}
     {% endif %}
 
+    {% comment %} Fonts {% endcomment %}
     {% render 'fonts', settings: settings %}
     {% render 'root-styles', settings: settings %}
 
@@ -60,7 +60,10 @@
 
     {{ content_for_body }}
 
-    <script src="{{ "lazysizes.min.js" | asset_url }}" defer></script>
+    {% comment %} Critical JavaScript files {% endcomment %}
+    <script src='{{ 'js-utils-core.js' | asset_url }}' defer></script>
 
+    {% comment %} Non-Critical JavaScript files {% endcomment %}
+    {%- render 'scripts-loading', settings: settings, sections: sections -%}
   </body>
 </html>

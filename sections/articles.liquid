@@ -127,6 +127,7 @@
               {%- assign article_btn     = block.settings.article_btn -%}
               {%- assign article_btn_url = block.settings.article_btn_url -%}
               {%- assign image           = block.settings.image -%}
+              {%- assign image_alt       = block.settings.image_alt -%}
 
               {%- if image.url != blank -%}
                 {%- assign image = image -%}
@@ -140,10 +141,10 @@
                 <div class="articles__image-wrapper{% if image == blank %} no-image{%- endif -%}">
                   {%- if image.url != blank -%}
                     {%- render 'image',
-                      image: image,
-                      loading: 'lazy',
-                      class: 'articles__image',
-                      size: 'l'
+                        image: image,
+                        image_alt: image_alt,
+                        image_class: 'articles__image',
+                        image_size: 'l'
                     -%}
                   {%- endif -%}
                 </div>
@@ -461,6 +462,12 @@
             "type": "image_picker",
             "id": "image",
             "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "image_alt",
+            "label": "Alternative text (optional)",
+            "info": "For SEO and Accessibility purposes"
           },
           {
             "type": "header",
