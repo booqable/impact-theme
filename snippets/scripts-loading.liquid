@@ -18,8 +18,10 @@
 
 {%- unless scripts or scripts != blank -%}
   {%- assign sections_with_images = 'accept-invitation-form, accordion, activate-account, articles, call-to-action, collections, collection-page, columns, edit-password-form, footer, hero, image-gallery, login-form, logos, list-collections, product-page, products, register-form, reset-password, spacer, testimonials, title' | split: ', ' -%}
+  {%- assign sections_with_carousel = 'products, search, testimonials' | split: ', ' -%}
   {%- assign sections_with_products = 'products, collection-page, search' | split: ', ' -%}
   {%- assign script_image_loading = '' -%}
+  {%- assign script_carousel = '' -%}
   {%- assign script_focal_image = '' -%}
 
   {%- for section in sections.all -%}
@@ -30,6 +32,17 @@
         {%- unless script_image_loading contains image_loading -%}
           {%- assign script_image_loading = image_loading -%}
           {%- assign scripts = scripts | append: ', ' | append: script_image_loading -%}
+        {%- endunless -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- for item in sections_with_carousel -%}
+      {%- if section.type == item -%}
+        {%- assign carousel = 'js-carousel.js' -%}
+
+        {%- unless script_carousel contains carousel -%}
+          {%- assign script_carousel = carousel -%}
+          {%- assign scripts = scripts | append: ', ' | append: script_carousel -%}
         {%- endunless -%}
       {%- endif -%}
     {%- endfor -%}

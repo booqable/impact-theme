@@ -1,6 +1,7 @@
 {%- assign blocks = section.blocks -%}
 
 {%- if blocks.size > 0 -%}
+  {%- assign carousel              = false -%}
   {%- assign title                 = section.settings.title -%}
   {%- assign image_background      = section.settings.image_background -%}
   {%- assign image_background_alt  = section.settings.image_background_alt -%}
@@ -12,21 +13,12 @@
   {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
   {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
 
-  {%- assign carousel = false -%}
-
   {%- if blocks.size > 1 -%}
-    {{ "carousel.css" | asset_url | stylesheet_tag }}
-
     {%- assign carousel = true -%}
   {%- endif -%}
 
-  {{ "testimonials.css" | asset_url | stylesheet_tag }}
-
   {% comment %} CSS variables start {% endcomment %}
   {%- capture variables -%}
-    --slide-width: 367px;
-    --slide-width-mobile: 364px;
-
     {%- case padding_top -%}
       {%- when 'small' -%}
         --padding-top: 40px;
@@ -74,6 +66,13 @@
         --border-radius-rounded-blocks: 32px;
     {%- endcase -%}
   {%- endcapture -%}
+
+  {%- if carousel -%}
+    {%- capture slide_variables -%}
+      --slide-width: 367px;
+      --slide-width-mobile: 364px;
+    {%- endcapture -%}
+  {%- endif -%}
   {% comment %} CSS variables end {% endcomment %}
 
   <div
@@ -99,8 +98,9 @@
       {%- endif -%}
 
       {%- if carousel -%}
-        <div class="carousel" aria-role="Gallery">
-          <div class="carousel__wrapper">
+        <div class="carousel{% if show_navigation %} carousel--controls{%- endif -%}" style="{{- slide_variables | escape -}}" aria-label="Carousel">
+          <div class="carousel__list">
+           <div class="carousel__wrapper">
       {%- endif -%}
 
             {%- for block in blocks -%}
@@ -165,20 +165,19 @@
             {%- endfor -%}
 
       {%- if carousel -%}
+            </div>
           </div>
 
-          {%- if show_navigation -%}
-            <div class="carousel__navigation hidden" aria-role="Carousel navigation">
-              <span class="carousel__btn prev" aria-label="Prev slide">
-                Previous slide
-                {%- render 'icon-arrow-right-full' -%}
-              </span>
-              <span class="carousel__btn next" aria-label="Next slide">
-                Next slide
-                {%- render 'icon-arrow-right-full' -%}
-              </span>
-            </div>
-          {%- endif -%}
+          <div class="carousel__navigation hidden"{% unless show_navigation %} style="display: none;"{% endunless %} role="navigation" aria-label="Carousel navigation">
+            <span class="carousel__btn prev" aria-label="Prev slide">
+              Previous slide
+              {%- render 'icon-arrow-right-full' -%}
+            </span>
+            <span class="carousel__btn next" aria-label="Next slide">
+              Next slide
+              {%- render 'icon-arrow-right-full' -%}
+            </span>
+          </div>
         </div>
       {%- endif -%}
     </div>
@@ -191,6 +190,17 @@
     "description": "Show testimonials from individual customers in a sliding carousel",
     "tag": "section",
     "class": "testimonials",
+    "css_assets": [
+      {
+        "file": "testimonials.css"
+      },
+      {
+        "file": "carousel.css",
+        "include_if": [
+          "has_multiple_collection_or_blocks"
+        ]
+      }
+    ],
     "settings": [
       {
         "type": "header",
