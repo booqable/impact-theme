@@ -119,8 +119,6 @@
     padding: 0 32px 0 0;
     margin: 0;
     border-right: 1px solid var(--background-accent);
-    position: relative;
-    z-index: 1;
   }
 
   .testimonials__container > .testimonials__content,
@@ -164,14 +162,22 @@
 
     margin: 0 var(--carousel-indent);
     width: calc(100% - var(--title-max-width) - (var(--carousel-indent) * 2 - 24px));
+    contain: layout;
+    z-index: 1;
   }
 
   .testimonials__wrapper .testimonials__side + .carousel--controls:not(:has(.carousel__navigation.hidden)) .carousel__wrapper {
     padding: 0;
   }
 
+  .testimonials__side + .carousel .carousel__list {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
   .testimonials__side + .carousel .carousel__navigation {
-    left: calc(-1 * var(--title-max-width) - 32px);
+    left: calc(-1 * var(--title-max-width) - var(--carousel-indent) * 2);
+    margin: 0;
   }
 }
 
