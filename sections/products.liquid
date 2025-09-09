@@ -44,9 +44,7 @@
 
   {%- if size > 1 -%}
     {%- assign carousel = true -%}
-  {%- endif -%}
 
-  {%- if carousel -%}
     {% unless show_pagination %}
       {%- assign limit = nil -%}
     {% endunless %}
