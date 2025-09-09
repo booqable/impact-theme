@@ -62,6 +62,10 @@ const CarouselConfig = {
   lifecycle: {
     poolSize: 10,
     idleTimeout: 2500 // 2.5 seconds before cleanup
+  },
+  timing: {
+    baseDelay: 2000,
+    increment: 2500
   }
 }
 
@@ -254,15 +258,13 @@ const CarouselViewportManager = {
       if (this.activeCarousels.has(carousel)) return
 
       // Smart activation: queue only on mobile restrictions or multiple visible carousels
-      const isMobile = $.viewportSize().width < CarouselConfig.viewport.mobileBreakpoint
-      const multipleVisible = this.visibleCarousels.size > 1
-      const systemBusy = isMobile && this.currentlyInitializing >= this.maxConcurrentMobile
+      const isMobile = $.viewportSize().width < CarouselConfig.viewport.mobileBreakpoint,
+        multipleVisible = this.visibleCarousels.size > 1,
+        systemBusy = isMobile && this.currentlyInitializing >= this.maxConcurrentMobile
 
-      if (multipleVisible || systemBusy) {
-        this.queueCarouselInitialization(carousel)
-      } else {
+      multipleVisible || systemBusy ?
+        this.queueCarouselInitialization(carousel) :
         this.initializeCarousel(carousel)
-      }
     } catch (error) {
       console.error('CarouselViewportManager: Failed to activate carousel', error)
     }
@@ -310,8 +312,8 @@ const CarouselViewportManager = {
       this.processingChunk = true
 
       // Process carousels in chunks based on available slots
-      const availableSlots = maxConcurrent - this.currentlyInitializing
-      const chunkSize = Math.min(availableSlots, this.initializationQueue.length)
+      const availableSlots = maxConcurrent - this.currentlyInitializing,
+        chunkSize = Math.min(availableSlots, this.initializationQueue.length)
 
       for (let i = 0; i < chunkSize; i++) {
         const carousel = this.initializationQueue.shift()
@@ -363,11 +365,9 @@ const CarouselViewportManager = {
         }
       }
 
-      if (delay > 0) {
-        setTimeout(initCarousel, delay)
-      } else {
+      delay > 0 ?
+        setTimeout(initCarousel, delay) :
         initCarousel()
-      }
     } catch (error) {
       console.error('CarouselViewportManager: Failed to initialize carousel with delay', error)
       this.currentlyInitializing--
@@ -603,11 +603,9 @@ const CarouselInstancePool = {
       instance.throttler = null
 
       Object.keys(instance.eventHandlers || {}).forEach((key) => {
-        if (Array.isArray(instance.eventHandlers[key])) {
-          instance.eventHandlers[key] = []
-        } else {
+        Array.isArray(instance.eventHandlers[key]) ?
+          instance.eventHandlers[key] = [] :
           instance.eventHandlers[key] = null
-        }
       })
     } catch (error) {
       console.error('CarouselInstancePool: Failed to reset instance state', error)
@@ -657,7 +655,6 @@ const CarouselDOM = {
 }
 
 const CarouselCalculator = {
-
   getSlideWidth (carousel) {
     const isMobile = $.viewportSize().width < CarouselConfig.viewport.mobileBreakpoint,
       widthDesktop = CarouselConfig.width.desktop,
@@ -1613,33 +1610,31 @@ const CarouselController = {
     CarouselDetection.setResizeObserver()
     CarouselViewportManager.init()
 
-    const carousels = CarouselDOM.elements.carousels
-    const isMobile = $.viewportSize().width < CarouselConfig.viewport.mobileBreakpoint
-
-    // Load carousels in chunks: immediate + lazy
-    const immediateCount = isMobile ? 2 : 4 // Load first 2 on mobile, 4 on desktop immediately
+    const carousels = CarouselDOM.elements.carousels,
+      isMobile = $.viewportSize().width < CarouselConfig.viewport.mobileBreakpoint,
+      immediateCount = isMobile ? 2 : 4
 
     carousels.forEach((carousel, index) => {
       carousel.dataset.carouselId = `carousel-${index}`
 
       if (index < immediateCount) {
-        // Load first few carousels immediately
+        // Load carousels immediately
         CarouselViewportManager.observe(carousel)
       } else {
         // Lazy load remaining carousels with device-specific delays
-        const carouselPosition = index - immediateCount // 0, 1, 2, 3...
-        
+        const carouselPosition = index - immediateCount
+
         let delay
         if (isMobile) {
           // Mobile: Progressive staggered delays - 2s, 4.5s, 7s, 9.5s...
-          const baseDelay = 2000 // Start at 2s
-          const increment = 2500 // Increase by 2.5s each time
+          const baseDelay = CarouselConfig.timing.baseDelay,
+            increment = CarouselConfig.timing.increment
           delay = baseDelay + (carouselPosition * increment)
         } else {
           // Desktop: Shorter, consistent delays - 1s, 2s, 3s, 4s...
           delay = (carouselPosition + 1) * 1000
         }
-        
+
         CarouselViewportManager.observeLazy(carousel, delay)
       }
     })
