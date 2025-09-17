@@ -82,9 +82,10 @@
 
         <div class="image-gallery__images">
           {%- for block in section.blocks -%}
-            {%- assign image     = block.settings.image -%}
-            {%- assign image_alt = block.settings.image_alt -%}
-            {%- assign url.      = block.settings.url -%}
+            {%- assign image           = block.settings.image -%}
+            {%- assign image_alt       = block.settings.image_alt -%}
+            {%- assign url             = block.settings.url -%}
+            {%- assign open_in_new_tab = block.settings.open_in_new_tab -%}
 
             {%- if image.url != blank -%}
               {%- assign image = image -%}
@@ -104,7 +105,7 @@
                 -%}
 
                 {%- if url != blank -%}
-                  <a class="image-gallery__link" href="{{ url }}" target="_blank">Link</a>
+                <a class="image-gallery__link" href="{{ url }}"{% if open_in_new_tab %} target="_blank"{%- endif -%}>Link</a>
                 {%- endif -%}
               </div>
             {%- endif -%}
@@ -296,6 +297,12 @@
             "type": "url",
             "id": "url",
             "label": "Link"
+          },
+          {
+            "type": "checkbox",
+            "id": "open_in_new_tab",
+            "label": "Open link in new tab",
+            "default": true
           }
         ]
       }
