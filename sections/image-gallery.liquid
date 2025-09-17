@@ -84,8 +84,8 @@
           {%- for block in section.blocks -%}
             {%- assign image           = block.settings.image -%}
             {%- assign image_alt       = block.settings.image_alt -%}
-            {%- assign url             = block.settings.url -%}
             {%- assign open_in_new_tab = block.settings.open_in_new_tab -%}
+            {%- assign url             = block.settings.url -%}
 
             {%- if image.url != blank -%}
               {%- assign image = image -%}
