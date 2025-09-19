@@ -53,6 +53,7 @@
     {%- assign url = "" -%}
     {%- assign name = "" -%}
     {%- assign image = "" -%}
+    {%- assign alt = "" -%}
 
     {%- if collection != blank -%}
       {%- assign url = collection.url -%}
@@ -62,8 +63,10 @@
 
       {%- if collection.image -%}
         {%- assign image = collection.image -%}
+        {%- assign alt   = name -%}
       {%- elsif first_product and first_product.images.first != empty -%}
         {%- assign image = first_product.images.first -%}
+        {%- assign alt   = first_product.name -%}
       {%- endif -%}
     {%- else -%}
       {%- assign image = placeholder -%}
@@ -73,7 +76,7 @@
       <span class="collections__image-item">
         {%- render 'image',
           image: image,
-          image_alt: name,
+          image_alt: alt,
           image_class: 'collections__image',
           image_size: 'm',
           use_ratio: image_ratio
