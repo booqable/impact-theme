@@ -2,6 +2,7 @@
 
 {%- assign color_scheme = section.settings.color_scheme -%}
 {%- assign image        = section.settings.image -%}
+{%- assign image_alt    = section.settings.image_alt -%}
 {%- assign size         = section.settings.size -%}
 {%- assign size_mobile  = section.settings.size_mobile -%}
 
@@ -32,9 +33,9 @@
     <div class="spacer__image-wrapper">
       {%- render 'image',
           image: image,
-          loading: 'lazy',
-          class: 'spacer__image',
-          size: 'xxl'
+          image_alt: image_alt,
+          image_class: 'spacer__image',
+          image_size: 'xxl'
       -%}
     </div>
   {%- endif -%}
@@ -65,6 +66,12 @@
         "id": "image",
         "label": "Image (optional)",
         "info": "Recommended: JPEG image, 2560x1440 pixels or larger."
+      },
+      {
+        "type": "text",
+        "id": "image_alt",
+        "label": "Alternative text (optional)",
+        "info": "For SEO and Accessibility purposes"
       },
       {
         "type": "header",

@@ -7,6 +7,7 @@
 {%- assign height                  = section.settings.height -%}
 {%- assign height_mobile           = section.settings.height_mobile -%}
 {%- assign image                   = section.settings.image -%}
+{%- assign image_alt               = section.settings.image_alt -%}
 {%- assign overlay_background      = section.settings.overlay_background -%}
 {%- assign overlay_opacity         = section.settings.overlay_opacity -%}
 {%- assign padding_top             = section.settings.padding_top -%}
@@ -19,6 +20,7 @@
 {%- assign show_transition_top     = section.settings.show_transition_top -%}
 {%- assign tag                     = section.settings.tag -%}
 {%- assign tag_image               = section.settings.tag_image -%}
+{%- assign tag_image_alt           = section.settings.tag_image_alt -%}
 {%- assign text_position           = section.settings.text_position -%}
 {%- assign title                   = section.settings.title -%}
 {%- assign transition_color_bottom = section.settings.transition_color_bottom -%}
@@ -146,11 +148,11 @@
             {%- if tag_image.url != blank -%}
               <div class="cta__tag-image-wrapper">
                 {%- render 'image',
-                  image: tag_image,
-                  loading: 'lazy',
-                  class: 'cta__tag-image',
-                  custom_width: '100',
-                  custom_size: '100px'
+                    image: tag_image,
+                    image_alt: tag_image_alt,
+                    image_class: 'cta__tag-image',
+                    custom_width: '100',
+                    custom_size: '100px'
                 -%}
               </div>
             {%- endif -%}
@@ -176,10 +178,10 @@
         {%- if image.url != blank -%}
           <div class="cta__vision{% if show_overlay %} cta__vision--overlay{%- endif -%}">
             {%- render 'image',
-              image: image,
-              loading: 'lazy',
-              class: 'cta__image',
-              size: 'xxl'
+                image: image,
+                image_alt: image_alt,
+                image_class: 'cta__image',
+                image_size: 'xxl'
             -%}
           </div>
         {%- endif -%}
@@ -231,6 +233,12 @@
       },
       {
         "type": "text",
+        "id": "tag_image_alt",
+        "label": "Alternative text (optional)",
+        "info": "For SEO and Accessibility purposes"
+      },
+      {
+        "type": "text",
         "id": "title",
         "label": "Title",
         "default": "Explore the ride <br> of your life"
@@ -264,6 +272,12 @@
         "label": "Image (optional)",
         "default": "booqable://assets/image-placeholder.png",
         "info": "Recommended: JPEG image, 2560x1440 pixels or larger."
+      },
+      {
+        "type": "text",
+        "id": "image_alt",
+        "label": "Alternative text (optional)",
+        "info": "For SEO and Accessibility purposes"
       },
       {
         "type": "checkbox",

@@ -471,6 +471,7 @@
           "type": "image",
           "settings": {
             "image": "booqable://assets/image-gallery-1.jpeg",
+            "open_in_new_tab": true,
             "url": ""
           },
           "disabled": null
@@ -479,6 +480,7 @@
           "type": "image",
           "settings": {
             "image": "booqable://assets/image-gallery-2.jpeg",
+            "open_in_new_tab": true,
             "url": ""
           },
           "disabled": null
@@ -487,6 +489,7 @@
           "type": "image",
           "settings": {
             "image": "booqable://assets/image-gallery-3.jpeg",
+            "open_in_new_tab": true,
             "url": ""
           },
           "disabled": null
@@ -495,6 +498,7 @@
           "type": "image",
           "settings": {
             "image": "booqable://assets/image-gallery-4.jpeg",
+            "open_in_new_tab": true,
             "url": ""
           },
           "disabled": null

@@ -4,10 +4,12 @@
 
   items - { object } *required
   items_type - "string" *required,
-  show_amount: boolean optional,
-  show_arrow: boolean optional,
+  settings - { settings } *required,
+  show_amount - boolean optional,
+  show_arrow - boolean optional,
   placeholder - image optional,
-  counter_label: "string" optional
+  counter_label - "string" optional,
+  image_ratio - boolean optional
 
   Usage:
 
@@ -17,13 +19,28 @@
       show_amount: boolean,
       show_arrow: boolean,
       placeholder: your_id,
+      settings: settings,
       counter_singular: your_id,
-      counter_plural: your_id
+      counter_plural: your_id,
+      image_ratio: your_id
   -%}
 
 {% endcomment %}
 
-<ul class="collections__list">
+{%- assign image_fit = settings.collection_card_image_fit -%}
+
+{% comment %} CSS variables start {% endcomment %}
+{%- capture image_variables -%}
+  {%- case image_fit -%}
+    {%- when 'cover' -%}
+      --object-fit: cover;
+    {%- when 'contain' -%}
+      --object-fit: contain;
+  {%- endcase -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
+
+<ul class="collections__list"{% if image_fit != blank %} style="{{- image_variables | escape -}}"{%- endif -%}>
   {%- for item in items -%}
     {%- case items_type -%}
       {%- when "blocks" -%}
@@ -36,6 +53,7 @@
     {%- assign url = "" -%}
     {%- assign name = "" -%}
     {%- assign image = "" -%}
+    {%- assign alt = "" -%}
 
     {%- if collection != blank -%}
       {%- assign url = collection.url -%}
@@ -45,8 +63,10 @@
 
       {%- if collection.image -%}
         {%- assign image = collection.image -%}
+        {%- assign alt   = name -%}
       {%- elsif first_product and first_product.images.first != empty -%}
         {%- assign image = first_product.images.first -%}
+        {%- assign alt   = first_product.name -%}
       {%- endif -%}
     {%- else -%}
       {%- assign image = placeholder -%}
@@ -56,9 +76,10 @@
       <span class="collections__image-item">
         {%- render 'image',
           image: image,
-          loading: 'lazy',
-          class: 'collections__image',
-          size: 'm'
+          image_alt: alt,
+          image_class: 'collections__image',
+          image_size: 'm',
+          use_ratio: image_ratio
         -%}
       </span>
 

@@ -72,6 +72,7 @@
 
 .header__logo-image {
   max-height: 64px;
+  width: auto;
 }
 
 .header__date-picker-wrapper {
@@ -425,6 +426,11 @@ body:has(#mobile-menu-opener:checked) .header:has(~ #main section:first-child > 
 @media (min-width: 992px) {
   .header__content-inner {
     grid-template-columns: 230px 1fr 230px;
+  }
+
+  .header__logo,
+  .header__logo-image {
+    max-width: 100%;
   }
 
   .header__date-picker-wrapper {

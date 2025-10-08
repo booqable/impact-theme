@@ -1,6 +1,4 @@
-{{ "search.css" | asset_url | stylesheet_tag }}
-{{ "product-card.css" | asset_url | stylesheet_tag }}
-
+{%- assign carousel              = false -%}
 {%- assign collection            = section.settings.collection -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
 {%- assign full_width            = section.settings.full_width -%}
@@ -29,13 +27,14 @@
 {%- endfor -%}
 
 {%- if collection != blank -%}
-  {{ "carousel.css" | asset_url | stylesheet_tag }}
-
+  {%- assign carousel = true -%}
   {%- assign items = collection.items -%}
 
   {% unless show_pagination %}
     {%- assign limit = nil -%}
   {% endunless %}
+
+  {%- assign timer_val = timer | plus: 0 -%}
 {%- endif -%}
 
 {% comment %} CSS variables start {% endcomment %}
@@ -85,6 +84,13 @@
       --grid-element: 4;
   {%- endcase -%}
 {%- endcapture -%}
+
+{%- if carousel -%}
+  {%- capture slide_variables -%}
+    --slide-width: 316px;
+    --slide-width-mobile: 248px;
+  {%- endcapture -%}
+{%- endif -%}
 {% comment %} CSS variables end {% endcomment %}
 
 <div class="search__wrapper search__wrapper-{{ grid }} color-{{- color_scheme.id -}}{% if padding_top != blank or padding_top_mobile != blank %} search__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} search__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
@@ -138,49 +144,46 @@
               {%- endif -%}
             </div>
 
-            {%- if collection != blank -%}
-              <div class="search__carousel carousel carousel__pause" aria-role="Gallery">
-                <input class="carousel__timer" type="hidden" name="hidden" value="{{- timer -}}" aria-hidden="true">
-                <div class="carousel__wrapper">
-                  {%- for item in items limit: limit -%}
-                    {% assign product = item %}
-
-                    <div class="carousel__item">
-                      <div class="carousel__inner">
-                        {%- render 'product-card',
-                            product: product,
-                            settings: settings
-                        -%}
-                      </div>
-                    </div>
-                  {%- endfor -%}
-                </div>
-
-                {%- if show_navigation -%}
-                  <div class="carousel__navigation hidden" aria-role="Carousel navigation">
-                    <span class="carousel__btn prev" aria-label="Prev slide">
-                      Previous slide
-                      {%- render 'icon-arrow-right-full' -%}
-                    </span>
-                    <span class="carousel__btn next" aria-label="Next slide">
-                      Next slide
-                      {%- render 'icon-arrow-right-full' -%}
-                    </span>
-                  </div>
-                {%- endif -%}
-
-                {%- if show_pagination -%}
-                  <div class="carousel__pagination hidden" aria-role="Carousel navigation">
+            {%- if carousel -%}
+              <div class="search__carousel carousel carousel__pause{% if show_pagination or show_navigation %} carousel--controls{%- endif -%}"{% if timer_val > 0 %} data-carousel-timer="{{- timer_val -}}"{% endif %} style="{{- slide_variables | escape -}}" aria-label="Carousel">
+                <div class="carousel__list">
+                  <div class="carousel__wrapper">
                     {%- for item in items limit: limit -%}
-                      {%- assign first = forloop.first -%}
-                      {%- assign index = forloop.index -%}
+                      {% assign product = item %}
 
-                      <span class="carousel__dot{% if first %} active{%- endif -%}" data-index="{{- index -}}" aria-label="Jump to slide {{ index }}">
-                        Go to slide {{ index }}
-                      </span>
+                      <div class="carousel__item">
+                        <div class="carousel__inner">
+                          {%- render 'product-card',
+                              product: product,
+                              settings: settings
+                          -%}
+                        </div>
+                      </div>
                     {%- endfor -%}
                   </div>
-                {%- endif -%}
+                </div>
+
+                <div class="carousel__navigation hidden"{% unless show_navigation %} style="display: none;"{% endunless %} role="navigation" aria-label="Carousel navigation">
+                  <span class="carousel__btn prev" aria-label="Prev slide">
+                    Previous slide
+                    {%- render 'icon-arrow-right-full' -%}
+                  </span>
+                  <span class="carousel__btn next" aria-label="Next slide">
+                    Next slide
+                    {%- render 'icon-arrow-right-full' -%}
+                  </span>
+                </div>
+
+                <div class="carousel__pagination hidden"{% unless show_pagination %} style="display: none;"{% endunless %} role="navigation" aria-label="Carousel pagination">
+                  {%- for item in items limit: limit -%}
+                    {%- assign first = forloop.first -%}
+                    {%- assign index = forloop.index -%}
+
+                    <span class="carousel__dot{% if first %} active{%- endif -%}" data-index="{{- index -}}" aria-label="Jump to slide {{ index }}">
+                      Go to slide {{ index }}
+                    </span>
+                  {%- endfor -%}
+                </div>
               </div>
             {%- endif -%}
 
@@ -199,6 +202,26 @@
     "tag": "section",
     "class": "search",
     "templates": ["search"],
+    "css_assets": [
+      {
+        "file": "search.css"
+      },
+      {
+        "file": "product-card.css"
+      },
+      {
+        "file": "focal-image.css"
+      },
+      {
+        "file": "pagination.css"
+      },
+      {
+        "file": "carousel.css",
+        "include_if": [
+          "has_collection_or_blocks"
+        ]
+      }
+    ],
     "settings": [
       {
         "type": "header",

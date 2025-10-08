@@ -89,9 +89,9 @@
   {%- if logo.url != blank -%}
     {%- render 'image',
         image: logo,
-        class: 'footer__logo-image',
-        size: 'logo',
-        custom_alt: shop.name,
+        image_alt: shop.name,
+        image_class: 'footer__logo-image',
+        image_size: 'logo',
         keep_type: true
     -%}
   {%- elsif custom_title != blank -%}
@@ -288,7 +288,7 @@
         "type": "text",
         "id": "bottom_text",
         "label": "Bottom message",
-        "default": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
+        "default": "{{ 'now' | date: '%Y' }} {{ shop.name }}. All right reserved.",
         "info": "This template keeps the year auto-updated and returns the name of your company. Leave blank to hide the text"
       },
       {

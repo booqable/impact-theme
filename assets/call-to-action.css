@@ -77,6 +77,10 @@
   margin: 0 auto 40px;
 }
 
+.cta__image-wrapper {
+  height: 100%;
+}
+
 @media (min-width: 992px) {
   .cta__wrapper {
     min-height: var(--min-height);

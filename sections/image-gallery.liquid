@@ -82,8 +82,10 @@
 
         <div class="image-gallery__images">
           {%- for block in section.blocks -%}
-            {%- assign image = block.settings.image -%}
-            {%- assign url   = block.settings.url -%}
+            {%- assign image           = block.settings.image -%}
+            {%- assign image_alt       = block.settings.image_alt -%}
+            {%- assign open_in_new_tab = block.settings.open_in_new_tab -%}
+            {%- assign url             = block.settings.url -%}
 
             {%- if image.url != blank -%}
               {%- assign image = image -%}
@@ -97,13 +99,13 @@
               <div class="image-gallery__image-wrapper" id="{{- section.key -}}-{{- block.id -}}">
                 {%- render 'image',
                   image: image,
-                  loading: 'lazy',
-                  class: 'image-gallery__image',
-                  size: 'l'
+                  image_alt: image_alt,
+                  image_class: 'image-gallery__image',
+                  image_size: 'l'
                 -%}
 
                 {%- if url != blank -%}
-                  <a class="image-gallery__link" href="{{ url }}" target="_blank">Link</a>
+                <a class="image-gallery__link" href="{{ url }}"{% if open_in_new_tab %} target="_blank"{%- endif -%}>Link</a>
                 {%- endif -%}
               </div>
             {%- endif -%}
@@ -287,9 +289,21 @@
             "info": "Recommended: JPEG image, 1280x1280 pixels or larger."
           },
           {
+            "type": "text",
+            "id": "image_alt",
+            "label": "Alternative text (optional)",
+            "info": "For SEO and Accessibility purposes"
+          },
+          {
             "type": "url",
             "id": "url",
             "label": "Link"
+          },
+          {
+            "type": "checkbox",
+            "id": "open_in_new_tab",
+            "label": "Open link in new tab",
+            "default": true
           }
         ]
       }

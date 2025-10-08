@@ -9,6 +9,7 @@
 {%- assign full_width              = section.settings.full_width -%}
 {%- assign height                  = section.settings.height -%}
 {%- assign image                   = section.settings.image -%}
+{%- assign image_alt               = section.settings.image_alt -%}
 {%- assign image_mobile            = section.settings.image_mobile -%}
 {%- assign image_placeholder       = settings.image_placeholder -%}
 {%- assign limit_content_width     = section.settings.limit_content_width -%}
@@ -222,9 +223,14 @@
       {%- endif -%}
 
       <div class="hero__vision{% if video_url != blank %} hero__vision--video{%- endif -%}">
-        {%- if video_url contains "youtube.com" -%}
-          {%- assign video_drop = video_url | split: "?v=" -%}
-          {%- assign video_id   = video_drop | last | strip -%}
+        {%- if video_url contains "youtube.com" or video_url contains "youtu.be/" -%}
+         {%- if video_url contains "youtube.com" -%}
+          {%- assign video_full_url = video_url | split: "?v=" -%}
+          {%- assign video_id       = video_full_url | last | strip -%}
+         {%- elsif video_url contains "youtu.be/" -%}
+          {%- assign video_full_url = video_url | split: ".be/" -%}
+          {%- assign video_id       = video_full_url | last | strip -%}
+         {%- endif -%}
 
           <div class="hero__vision-wrapper{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
             <iframe
@@ -243,8 +249,8 @@
           </div>
 
         {%- elsif video_url contains "vimeo.com" -%}
-          {%- assign video_drop = video_url | split: "/" -%}
-          {%- assign video_id   = video_drop | last | strip -%}
+          {%- assign video_full_url = video_url | split: "/" -%}
+          {%- assign video_id       = video_full_url | last | strip -%}
 
           <div class="hero__vision-wrapper{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
             <iframe
@@ -263,23 +269,15 @@
 
         {%- elsif image.url != blank or image_mobile.url != blank -%}
           {%- if image.url != blank -%}
-            <div class="hero__vision-wrapper{% if image_mobile != blank %} hero__vision-wrapper--desktop{% endif %}{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
+            <div class="hero__vision-wrapper{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
               {%- render 'image',
                 image: image,
-                loading: 'lazy',
-                class: 'hero__image',
-                size: 'xxl'
-              -%}
-            </div>
-          {%- endif -%}
-
-          {%- if image_mobile.url != blank -%}
-            <div class="hero__vision-wrapper hero__vision-wrapper--mobile{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
-              {%- render 'image',
-                image: image_mobile,
-                loading: 'lazy',
-                class: 'hero__image',
-                size: 'xxl'
+                image_mobile: image_mobile,
+                image_alt: image_alt,
+                image_class: 'hero__image',
+                image_size: 'xxl',
+                fetchpriority: 'high',
+                loading: 'eager'
               -%}
             </div>
           {%- endif -%}
@@ -347,6 +345,12 @@
         "id": "image_mobile",
         "label": "Image mobile (optional)",
         "info": "Recommended: JPEG image, 2560x1440 pixels or larger."
+      },
+      {
+        "type": "text",
+        "id": "image_alt",
+        "label": "Alternative text (optional)",
+        "info": "For SEO and Accessibility purposes"
       },
       {
         "type": "text",

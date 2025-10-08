@@ -3,6 +3,7 @@
 {%- assign custom_title            = section.settings.custom_title -%}
 {%- assign custom_description      = section.settings.custom_description -%}
 {%- assign image                   = section.settings.image -%}
+{%- assign image_alt               = section.settings.image_alt -%}
 {%- assign full_width              = section.settings.full_width -%}
 {%- assign color_scheme            = section.settings.color_scheme -%}
 {%- assign rounded_corners         = section.settings.rounded_corners -%}
@@ -152,9 +153,9 @@
       <div class="title__background">
         {%- render 'image',
             image: image,
-            loading: 'lazy',
-            class: 'title__background-image',
-            size: 'xxl'
+            image_alt: image_alt,
+            image_class: 'title__background-image',
+            image_size: 'xxl'
         -%}
       </div>
   {%- endif -%}
@@ -215,6 +216,12 @@
         "label": "Image (optional)",
         "default": "booqable://assets/image-placeholder.png",
         "info": "Recommended: JPEG image, 2560x1440 pixels or larger."
+      },
+      {
+        "type": "text",
+        "id": "image_alt",
+        "label": "Alternative text (optional)",
+        "info": "For SEO and Accessibility purposes"
       },
       {
         "type": "select",
