@@ -36,7 +36,7 @@
 }
 
 .products__list > .product-card {
-  max-width: var(--slide-width-mobile);
+  max-width: var(--slide-width-mobile, 248px);
 }
 
 .products__buttons {
@@ -75,7 +75,7 @@
   }
 
   .products__list > .product-card {
-    max-width: var(--slide-width);
+    max-width: var(--slide-width, 316px);
   }
 }
 
