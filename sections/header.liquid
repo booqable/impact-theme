@@ -1,7 +1,7 @@
 {{ "header.css" | asset_url | stylesheet_tag }}
 {{ "mega-menu.css" | asset_url | stylesheet_tag }}
 
-{%- assign app                   = section.blocks | where: "type", "app" | first -%}
+{%- assign apps                  = section.blocks | where: "type", "app" -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
 {%- assign custom_title          = section.settings.custom_title -%}
 {%- assign follow_us             = section.settings.follow_us -%}
@@ -32,7 +32,7 @@
 {%- assign sticky_header         = section.settings.sticky_header -%}
 {%- assign use_transparent       = true -%}
 
-{%- if app -%}
+{%- if apps.size > 0 -%}
   {{ "app.css" | asset_url | stylesheet_tag }}
 {%- endif -%}
 
@@ -137,11 +137,11 @@
 {%- capture menu_bottom -%}
   <div class="menu__bottom">
     <div class="menu__icons">
-      {%- if app -%}
+      {%- for app in apps -%}
         <div class="header__app">
           {%- render 'app', block: app, section: section, size: "mobile" -%}
         </div>
-      {%- endif -%}
+      {%- endfor -%}
 
       {%- if link_facebook != blank or link_instagram != blank or link_twitter != blank or link_linkedin != blank or link_pinterest != blank or link_tiktok != blank or link_tumblr != blank or link_snapchat != blank or link_youtube != blank or link_vimeo != blank -%}
         <div class="menu__social">
@@ -351,11 +351,11 @@
       </div>
     </div>
 
-    {%- if app -%}
+    {%- for app in apps -%}
       <div class="header__app">
         {%- render 'app', block: app, section: section, size: "desktop" -%}
       </div>
-    {%- endif -%}
+    {%- endfor -%}
   </div>
 </div>
 
