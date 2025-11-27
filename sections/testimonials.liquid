@@ -113,11 +113,11 @@
               {%- assign button_outline_url   = block.settings.button_outline_url -%}
 
               {%- if carousel -%}
-                <div class="carousel__item">
+                <div id="{{ block.id }}" class="carousel__item">
                   <div class="carousel__inner">
               {%- endif -%}
                     {%- if description != blank -%}
-                      <div class="testimonials__content">
+                      <div id="{{ block.id }}" class="testimonials__content">
                         <blockquote class="testimonials__blockquote text-medium">
                           <q class="testimonials__quote bq-content rx-content">
                             {{- description -}}
