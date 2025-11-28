@@ -143,10 +143,11 @@
                 {% endcase %}
 
                 {%- if carousel -%}
-                  <div class="carousel__item">
+                  <div id="{{ item.id }}" class="carousel__item">
                     <div class="carousel__inner">
                 {%- endif -%}
                       {%- render 'product-card',
+                          block_id: item.id,
                           product: product,
                           settings: settings
                       -%}
