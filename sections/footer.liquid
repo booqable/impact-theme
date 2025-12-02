@@ -1,6 +1,6 @@
 {{ "footer.css" | asset_url | stylesheet_tag }}
 
-{%- assign app                   = section.blocks | where: "type", "app" | first -%}
+{%- assign apps                  = section.blocks | where: "type", "app" -%}
 {%- assign bottom_menu           = section.settings.bottom_menu -%}
 {%- assign bottom_text           = section.settings.bottom_text -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
@@ -24,7 +24,7 @@
 {%- assign rounded_corners       = section.settings.rounded_corners -%}
 {%- assign show_payments         = section.settings.show_payments -%}
 
-{%- if app %}
+{%- if apps.size > 0 %}
   {{ "app.css" | asset_url | stylesheet_tag }}
 {%- endif -%}
 
@@ -150,13 +150,13 @@
 
 {% comment %} Payments and social component {% endcomment %}
 {%- capture footer_icons -%}
-  {%- if link_facebook != blank or link_instagram != blank or link_twitter != blank or link_linkedin != blank or link_pinterest != blank or link_tiktok != blank or link_tumblr != blank or link_snapchat != blank or link_youtube != blank or link_vimeo != blank or payment_methods.size > 0 or app != blank -%}
+  {%- if link_facebook != blank or link_instagram != blank or link_twitter != blank or link_linkedin != blank or link_pinterest != blank or link_tiktok != blank or link_tumblr != blank or link_snapchat != blank or link_youtube != blank or link_vimeo != blank or payment_methods.size > 0 or apps.size > 0 -%}
     <div class="footer__icons">
-      {%- if app %}
+      {%- for app in apps -%}
         <div class="footer__app">
           {%- render 'app', block: app, section: section -%}
         </div>
-      {%- endif -%}
+      {%- endfor -%}
 
       {%- if link_facebook != blank or link_instagram != blank or link_twitter != blank or link_linkedin != blank or link_pinterest != blank or link_tiktok != blank or link_tumblr != blank or link_snapchat != blank or link_youtube != blank or link_vimeo != blank -%}
         <div class="footer__social">
