@@ -7,9 +7,16 @@
 {%- assign color_scheme                  = section.settings.color_scheme -%}
 {%- assign description                   = product.description -%}
 {%- assign description_placement         = section.settings.description_placement -%}
+{%- assign enable_controls_desktop       = section.settings.show_controls -%}
+{%- assign enable_controls_mobile        = section.settings.enable_controls_mobile -%}
+{%- assign enable_thumbnails_desktop     = section.settings.show_thumbnails -%}
+{%- assign enable_thumbnails_mobile      = section.settings.enable_thumbnails_mobile -%}
 {%- assign images                        = product.images -%}
-{%- assign infinity_scroll               = section.settings.infinity_scroll -%}
+{%- assign infinite_scroll_desktop      = section.settings.infinity_scroll -%}
+{%- assign infinite_scroll_mobile       = section.settings.infinite_scroll_mobile -%}
 {%- assign message_label                 = section.settings.message_label -%}
+{%- assign object_fit_desktop            = section.settings.object_fit_desktop -%}
+{%- assign object_fit_mobile             = section.settings.object_fit_mobile -%}
 {%- assign padding_top                   = section.settings.padding_top -%}
 {%- assign padding_bottom                = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile            = section.settings.padding_top_mobile -%}
@@ -18,8 +25,6 @@
 {%- assign show_breadcrumbs              = section.settings.show_breadcrumbs -%}
 {%- assign show_border                   = section.settings.show_border -%}
 {%- assign show_carousel                 = section.settings.show_carousel -%}
-{%- assign show_controls                 = section.settings.show_controls -%}
-{%- assign show_thumbnails               = section.settings.show_thumbnails -%}
 {%- assign title                         = product.name -%}
 {%- assign variant_label                 = 'store.variant' | user_t -%}
 {%- assign variants                      = product.variants -%}
@@ -109,9 +114,14 @@
         {%- if show_carousel -%}
           <div class="product-main__gallery">
             {{ product | product_gallery:
-              enable_thumbnails: show_thumbnails,
-              enable_controls: show_controls,
-              infinite_scroll: infinity_scroll
+              image_fit_desktop: object_fit_desktop,
+              enable_thumbnails_desktop: enable_thumbnails_desktop,
+              infinite_scroll_desktop: infinite_scroll_desktop,
+              enable_controls_desktop: enable_controls_desktop,
+              image_fit_mobile: object_fit_mobile,
+              enable_thumbnails_mobile: enable_thumbnails_mobile,
+              infinite_scroll_mobile: infinite_scroll_mobile,
+              enable_controls_mobile: enable_controls_mobile
             }}
           </div>
 
@@ -311,7 +321,7 @@
       },
       {
         "type": "header",
-        "content": "Carousel settings"
+        "content": "Carousel"
       },
       {
         "type": "checkbox",
@@ -320,22 +330,80 @@
         "label": "Show product images in carousel"
       },
       {
+        "type": "paragraph",
+        "content": "These settings will apply to the carousel on desktop devices."
+      },
+      {
+        "type": "select",
+        "id": "image_fit_desktop",
+        "label": "Display images as",
+        "options": [
+          {
+            "value": "cover",
+            "label": "Square"
+          },
+          {
+            "value": "contain",
+            "label": "Full image"
+          }
+        ],
+        "default": "cover"
+      },
+      {
         "type": "checkbox",
         "id": "show_controls",
-        "default": true,
-        "label": "Show navigation buttons"
+        "label": "Show navigation buttons",
+        "default": true
       },
       {
         "type": "checkbox",
         "id": "show_thumbnails",
-        "default": true,
-        "label": "Show thumbnails"
+        "label": "Show thumbnails",
+        "default": true
       },
       {
         "type": "checkbox",
         "id": "infinity_scroll",
-        "default": true,
-        "label": "Infinity scroll"
+        "label": "Infinity scroll",
+        "default": true
+      },
+      {
+        "type": "paragraph",
+        "content": "These settings will apply to the carousel on mobile devices."
+      },
+      {
+        "type": "select",
+        "id": "image_fit_mobile",
+        "label": "Display images as",
+        "options": [
+          {
+            "value": "cover",
+            "label": "Square"
+          },
+          {
+            "value": "contain",
+            "label": "Full image"
+          }
+        ],
+        "default": "cover"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_controls_mobile",
+        "label": "Show navigation buttons",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_thumbnails_mobile",
+        "label": "Show thumbnails",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "infinite_scroll_mobile",
+        "label": "Infinity scroll",
+        "default": true
       },
       {
         "type": "header",
