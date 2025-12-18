@@ -21,8 +21,6 @@
 }
 
 .image-gallery__images {
-  overflow-x: scroll;
-  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-snap-stop: always;
   scroll-padding: 0 16px 0 0;
@@ -41,7 +39,6 @@
   width: 25%;
   min-width: 353px;
   aspect-ratio: 1;
-  overflow: hidden;
   border-radius: var(--border-radius-rounded-blocks);
   position: relative;
 }

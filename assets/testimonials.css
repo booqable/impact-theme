@@ -99,6 +99,10 @@
   background: var(--background-primary-hover);
 }
 
+.testimonials__side + .carousel .carousel__list {
+  padding: 12px 0;
+}
+
 @media (min-width: 992px) {
   .testimonials__wrapper--padding-top {
     padding-top: var(--padding-top, 0);
