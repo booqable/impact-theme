@@ -31,6 +31,8 @@
   scrollbar-width: none;
   scrollbar-color: transparent transparent;
   gap: 8px;
+  overflow-x: scroll;
+  padding: 12px 0;
 }
 
 .image-gallery__image-wrapper {
