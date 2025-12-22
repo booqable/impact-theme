@@ -96,7 +96,7 @@
             {%- endif -%}
 
             {%- if image.url != blank -%}
-              <div id="{{ block.id }}" class="image-gallery__image-wrapper" >
+              <div id="{{ block.id }}" data-block-key="{{ block.id }}" data-block-name="{{ block.name }}" class="image-gallery__image-wrapper" >
                 {%- render 'image',
                   image: image,
                   image_alt: image_alt,

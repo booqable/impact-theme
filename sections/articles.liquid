@@ -137,7 +137,7 @@
                 {%- assign image = blank -%}
               {%- endif -%}
 
-              <div class="articles__item" id="{{- block.id -}}">
+              <div class="articles__item" id="{{- block.id -}}" data-block-key="{{- block.id -}}" data-block-name="{{- block.name -}}">
                 <div class="articles__image-wrapper{% if image == blank %} no-image{%- endif -%}">
                   {%- if image.url != blank -%}
                     {%- render 'image',

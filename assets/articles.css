@@ -43,7 +43,6 @@
 }
 
 .articles__item {
-  overflow: hidden;
   min-width: 358px;
   max-width: 358px;
   display: grid;

@@ -99,6 +99,10 @@
   background: var(--background-primary-hover);
 }
 
+.testimonials__side + .carousel .carousel__list {
+  padding: 12px 0;
+}
+
 @media (min-width: 992px) {
   .testimonials__wrapper--padding-top {
     padding-top: var(--padding-top, 0);
@@ -117,7 +121,7 @@
     flex: 0 0 calc(var(--title-max-width) + 32px);
     max-width: calc(var(--title-max-width) + 32px);
     padding: 0 32px 0 0;
-    margin: 0;
+    margin: 12px 0;
     border-right: 1px solid var(--background-accent);
   }
 
@@ -177,6 +181,7 @@
 
   .testimonials__side + .carousel .carousel__navigation {
     left: calc(-1 * var(--title-max-width) - var(--carousel-indent) * 2);
+    bottom: 12px;
     margin: 0;
   }
 }
