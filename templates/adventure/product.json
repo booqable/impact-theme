@@ -10,7 +10,10 @@
         "breadcrumbs_root_url": "products",
         "color_scheme": "set-5",
         "description_placement": "top",
+        "image_fit_desktop": "cover",
+        "image_fit_mobile": "cover",
         "infinity_scroll": true,
+        "infinity_scroll_mobile": true,
         "message_label": "",
         "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
@@ -21,7 +24,9 @@
         "show_border": false,
         "show_carousel": false,
         "show_controls": true,
-        "show_thumbnails": true
+        "show_controls_mobile": true,
+        "show_thumbnails": true,
+        "show_thumbnails_mobile": true
       },
       "disabled": null
     },
