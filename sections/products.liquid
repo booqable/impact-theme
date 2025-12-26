@@ -142,23 +142,18 @@
                     {% assign product = item %}
                 {% endcase %}
 
-                {%- if carousel -%}
-                  <div id="{{ item.id }}"{% if items_type == "blocks" %} data-block-key="{{ item.id }}" data-block-name="{{ item.name }}"{% endif %} class="carousel__item">
+                <div class="products__item{% if carousel %} carousel__item{%- endif -%}" id="{{- item.id -}}"{% if items_type == "blocks" %} data-block-key="{{- item.id -}}" data-block-name="{{- item.name -}}"{%- endif -%}>
+                  {%- if carousel -%}
                     <div class="carousel__inner">
-                {%- else -%}
-                  <div id="{{ item.id }}"{% if items_type == "blocks" %} data-block-key="{{ item.id }}" data-block-name="{{ item.name }}"{% endif %}>
-                {%- endif -%}
+                  {%- endif -%}
                       {%- render 'product-card',
-                          block_id: item.id,
                           product: product,
                           settings: settings
                       -%}
-                {%- if carousel -%}
+                  {%- if carousel -%}
                     </div>
-                  </div>
-                {%- else -%}
-                  </div>
-                {%- endif -%}
+                  {%- endif -%}
+                </div>
               {%- endfor -%}
 
         {%- if carousel -%}
