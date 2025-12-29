@@ -1,14 +1,15 @@
 .carousel {
   height: 100%;
-  width: calc(100% + 2 * var(--horizontal-padding));
-  margin: 0 calc(-1 * var(--horizontal-padding));
+  width: calc(100% + 2 * var(--horizontal-padding-mobile));
+  margin: 0 calc(-1 * var(--horizontal-padding-mobile));
+  padding: 12px 0 0;
   position: relative;
   contain: content; /* Performance: Reduces the scope of layout recalculations */
 }
 
 .carousel__wrapper {
   height: 100%;
-  padding: 0 var(--horizontal-padding);
+  padding: 0 var(--horizontal-padding-mobile);
   display: flex;
   gap: 16px;
   align-items: stretch;
@@ -39,7 +40,7 @@
   right: 0;
   bottom: 0;
   display: flex;
-  margin: 0 calc(var(--horizontal-padding) - 4px);
+  margin: 0 calc(var(--horizontal-padding-mobile) - 4px);
   z-index: 2;
 }
 
@@ -83,7 +84,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  margin: 0 calc(var(--horizontal-padding) - 8px);
+  margin: 0 calc(var(--horizontal-padding-mobile) - 8px);
   display: flex;
   z-index: 2;
 }
@@ -127,9 +128,26 @@
 }
 
 @media (min-width: 992px) {
+  .carousel {
+    width: calc(100% + 2 * var(--horizontal-padding));
+    margin: 0 calc(-1 * var(--horizontal-padding));
+  }
+
+  .carousel__wrapper {
+    padding: 0 var(--horizontal-padding);
+  }
+
   .carousel__item {
     min-width: var(--slide-width);
     max-width: var(--slide-width);
+  }
+
+  .carousel__navigation {
+    margin: 0 calc(var(--horizontal-padding) - 8px);
+  }
+
+  .carousel__pagination {
+    margin: 0 calc(var(--horizontal-padding) - 4px);
   }
 }
 
